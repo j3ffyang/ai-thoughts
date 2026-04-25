@@ -2,7 +2,7 @@
 
 A collection of articles and essays covering two main themes: using AI tools to run a lean one-person business, and hands-on experience with [OpenClaw](https://openclaw.ai) — an open-source AI agent platform. Topics range from practical how-tos (building custom skills, hardening a self-hosted deployment) to more personal writing (motorcycle culture, solo entrepreneurship).
 
-Images for each article live in the [`img/`](img/) subdirectory and follow the same `YYMMDDHHММ_slug` naming convention as the articles themselves.
+Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the same `YYMMDDHHММ_slug` naming convention as the articles themselves.
 
 ---
 
@@ -10,29 +10,29 @@ Images for each article live in the [`img/`](img/) subdirectory and follow the s
 
 | Article | Description |
 |---|---|
-| [opc](2603140503_opc.md) | How to start a one-person company with AI — six executable steps, toolstack, and a 90-day roadmap (Chinese) |
-| [openclaw-thoughts](2603131145-openclaw-thoughts.md) | Personal notes on running OpenClaw as a local AI agent platform: composability, skills, and lessons learned (Chinese) |
-| [ai](2603141144-ai.md) | Polished guide to launching a solo business using AI automation for product, marketing, support, and finance (Chinese) |
-| [illustrated (v1)](2603141144-illustrated.md) | Illustrated edition of the one-person AI company guide, first rendering (Chinese) |
-| [illustrated (v2)](2603160502-illustrated.md) | Illustrated edition of the one-person AI company guide, second rendering (Chinese) |
-| [illustrated (v3)](2603171329-illustrated.md) | Illustrated edition of the one-person AI company guide, third rendering with hero image (Chinese) |
-| [polished](2603221200-polished.md) | Polished Chinese rendition of the motorcycle riding essay |
-| [the-timeless-allure-of-motorcycle-riding_eng](2603221228-the-timeless-allure-of-motorcycle-riding_eng.md) | English essay on motorcycle culture, history, and the personal experience of riding |
-| [the-timeless-allure-of-motorcycle-riding_chn](2603221228-the-timeless-allure-of-motorcycle-riding_chn.md) | Chinese translation of the motorcycle riding essay |
-| [polished_zh](2603221311-polished_zh.md) | Polished Chinese version of the motorcycle riding article with refined prose |
-| [timeless-allure-motorcycle-riding](2603230855-timeless-allure-motorcycle-riding.md) | Chinese rewrite of the motorcycle riding piece with per-section illustrations |
-| [the-timeless-allure-of-motorcycle-riding](2603231032-the-timeless-allure-of-motorcycle-riding.md) | English article on motorcycle culture, history, and riding styles, with image prompt reference sheet |
-| [openclaw-security](2603271113_openclaw-security.md) | Security audit of OpenClaw: real incidents, known vulnerabilities, and a tiered hardening checklist for self-hosters (Chinese) |
-| [writing-your-own-custom-skill-in-openclaw](2604060608-writing-your-own-custom-skill-in-openclaw.md) | Detailed guide on designing and publishing a custom SKILL.md for the OpenClaw agent runtime |
-| [writing-custom-skill-openclaw](2604060837_writing-custom-skill-openclaw.md) | Practical walkthrough for authoring OpenClaw skills: goal-first design, timestamped outputs, and deployment tips |
-| [openclaw-custom-skills](2604061410_openclaw-custom-skills.md) | Step-by-step tutorial for building, validating, testing, and publishing custom skills on ClawHub |
-| [openclaw-custom-skills_chn](2604070643_openclaw-custom-skills_chn.md) | Chinese translation of the OpenClaw custom skills tutorial |
-| [hermes-openrouter-elephant-alpha](Hermes%20integrates%20with%20Free%20OpenRouter's%20elephant-alpha%20model.md) | Practical guide to setting up Hermes with OpenRouter's free Elephant-Alpha model as an alternative to OpenClaw, including WhatsApp integration and multi-user configuration |
-| [hermes-openrouter-elephant-alpha_chn](Hermes%20integrates%20with%20Free%20OpenRouter's%20elephant-alpha%20model_chn.md) | Chinese guide: configuring Hermes with the free Elephant-Alpha model via OpenRouter |
-| [openclaw-security_eng](2603271113_openclaw-security_eng.md) | English version of the OpenClaw security audit: real incidents, known vulnerabilities, and a hardening checklist for self-hosters |
-| [openclawActivity2](260320_openclawActivity2.md) | What I've been up to in OpenClaw lately: setup, configuration, and recent activity log |
-| [hermes-connect-nvidiamodel-openrouter](260421-hermes-connect-nvidiamodel-openrouter.md) | Guide to connecting Hermes to Nvidia Nemotron free model via OpenRouter, with primary and fallback model configuration |
-| [engageOpenClaw](260420_engageOpenClaw.md) | Reflections after 3 months with OpenClaw and Hermes: orchestrating multi-step AI tasks and per-section image generation workflows |
-| [engage-ai](260420-engage-ai.md) | Notes and links on Claude tooling and AI productivity tips for developers |
-| [hermes-update-err](260423-hermes-update-err.md) | Debugging the Hermes TUI build failure caused by a malformed root package.json |
-| [enable-2nd-brain-obsidian](Enable%20My%202nd%20Brain%20with%20Obsidian.md) | Notes on integrating Obsidian with AI tools (OpenRouter, Claude) as a lightweight 2nd brain on Arch Linux |
+| [opc](docs/2603140503_opc.md) | How to start a one-person company with AI — six executable steps, toolstack, and a 90-day roadmap (Chinese) |
+| [openclaw-thoughts](docs/2603131145-openclaw-thoughts.md) | Personal notes on running OpenClaw as a local AI agent platform: composability, skills, and lessons learned (Chinese) |
+| [ai](docs/2603141144-ai.md) | Polished guide to launching a solo business using AI automation for product, marketing, support, and finance (Chinese) |
+| [illustrated (v1)](docs/2603141144-illustrated.md) | Illustrated edition of the one-person AI company guide, first rendering (Chinese) |
+| [illustrated (v2)](docs/2603160502-illustrated.md) | Illustrated edition of the one-person AI company guide, second rendering (Chinese) |
+| [illustrated (v3)](docs/2603171329-illustrated.md) | Illustrated edition of the one-person AI company guide, third rendering with hero image (Chinese) |
+| [polished](docs/2603221200-polished.md) | Polished Chinese rendition of the motorcycle riding essay |
+| [the-timeless-allure-of-motorcycle-riding_eng](docs/2603221228-the-timeless-allure-of-motorcycle-riding_eng.md) | English essay on motorcycle culture, history, and the personal experience of riding |
+| [the-timeless-allure-of-motorcycle-riding_chn](docs/2603221228-the-timeless-allure-of-motorcycle-riding_chn.md) | Chinese translation of the motorcycle riding essay |
+| [polished_zh](docs/2603221311-polished_zh.md) | Polished Chinese version of the motorcycle riding article with refined prose |
+| [timeless-allure-motorcycle-riding](docs/2603230855-timeless-allure-motorcycle-riding.md) | Chinese rewrite of the motorcycle riding piece with per-section illustrations |
+| [the-timeless-allure-of-motorcycle-riding](docs/2603231032-the-timeless-allure-of-motorcycle-riding.md) | English article on motorcycle culture, history, and riding styles, with image prompt reference sheet |
+| [openclaw-security](docs/2603271113_openclaw-security.md) | Security audit of OpenClaw: real incidents, known vulnerabilities, and a tiered hardening checklist for self-hosters (Chinese) |
+| [writing-your-own-custom-skill-in-openclaw](docs/2604060608-writing-your-own-custom-skill-in-openclaw.md) | Detailed guide on designing and publishing a custom SKILL.md for the OpenClaw agent runtime |
+| [writing-custom-skill-openclaw](docs/2604060837_writing-custom-skill-openclaw.md) | Practical walkthrough for authoring OpenClaw skills: goal-first design, timestamped outputs, and deployment tips |
+| [openclaw-custom-skills](docs/2604061410_openclaw-custom-skills.md) | Step-by-step tutorial for building, validating, testing, and publishing custom skills on ClawHub |
+| [openclaw-custom-skills_chn](docs/2604070643_openclaw-custom-skills_chn.md) | Chinese translation of the OpenClaw custom skills tutorial |
+| [hermes-openrouter-elephant-alpha](docs/Hermes%20integrates%20with%20Free%20OpenRouter's%20elephant-alpha%20model.md) | Practical guide to setting up Hermes with OpenRouter's free Elephant-Alpha model as an alternative to OpenClaw, including WhatsApp integration and multi-user configuration |
+| [hermes-openrouter-elephant-alpha_chn](docs/Hermes%20integrates%20with%20Free%20OpenRouter's%20elephant-alpha%20model_chn.md) | Chinese guide: configuring Hermes with the free Elephant-Alpha model via OpenRouter |
+| [openclaw-security_eng](docs/2603271113_openclaw-security_eng.md) | English version of the OpenClaw security audit: real incidents, known vulnerabilities, and a hardening checklist for self-hosters |
+| [openclawActivity2](docs/260320_openclawActivity2.md) | What I've been up to in OpenClaw lately: setup, configuration, and recent activity log |
+| [hermes-connect-nvidiamodel-openrouter](docs/260421-hermes-connect-nvidiamodel-openrouter.md) | Guide to connecting Hermes to Nvidia Nemotron free model via OpenRouter, with primary and fallback model configuration |
+| [engageOpenClaw](docs/260420_engageOpenClaw.md) | Reflections after 3 months with OpenClaw and Hermes: orchestrating multi-step AI tasks and per-section image generation workflows |
+| [engage-ai](docs/260420-engage-ai.md) | Notes and links on Claude tooling and AI productivity tips for developers |
+| [hermes-update-err](docs/260423-hermes-update-err.md) | Debugging the Hermes TUI build failure caused by a malformed root package.json |
+| [enable-2nd-brain-obsidian](docs/Enable%20My%202nd%20Brain%20with%20Obsidian.md) | Notes on integrating Obsidian with AI tools (OpenRouter, Claude) as a lightweight 2nd brain on Arch Linux |

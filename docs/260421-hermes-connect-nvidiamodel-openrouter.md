@@ -10,7 +10,7 @@
 - You can set OpenRouter with a primary model and fallback models
 - Setup should be almost the same if you use OpenClaw 🦞
 
-![hermes-tui](./img/260422_hermes_nvidia_main.png)
+![hermes-tui](../imgs/260422_hermes_nvidia_main.png)
 
 ## Register OpenRouter
 
@@ -31,7 +31,7 @@
 
 A quick comparison chart is attached to show differences between Nvidia Nemotron, Google Gemma, and Claude's current flagship model, Opus 4.7.
 
-![modelCompare](./img/260422_hermes_nvidia.png)
+![modelCompare](../imgs/260422_hermes_nvidia.png)
 
 There is also a short explanation of reasoning vs completion at the end of this article.
 
@@ -132,7 +132,7 @@ Core Definitions
 - 已安装 Hermes
 - 想测试几个免费模型
 
-![hermes-tui](./img/2026-04-23-113217_hyprshot.png)
+![hermes-tui](../imgs/2026-04-23-113217_hyprshot.png)
 
 ## 重点
 
@@ -157,7 +157,7 @@ Core Definitions
 
 这里附了一张对比图，展示 Nvidia Nemotron、Google Gemma 和 Claude 当前旗舰模型 Opus 4.7 之间的差异。
 
-![modelCompare](./img/260422_hermes_nvidia.png)
+![modelCompare](../imgs/260422_hermes_nvidia.png)
 
 文章最后还补充了一个简短说明，讲 reasoning 和 completion 的区别。
 

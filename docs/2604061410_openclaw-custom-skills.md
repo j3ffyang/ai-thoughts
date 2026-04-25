@@ -1,35 +1,24 @@
-# 在 OpenClaw 中编写自定义技能 🦞
+# Writing Your Own Custom Skill in OpenClaw 🦞
 
-![customSkill](img/2604061410_openclaw-custom-skills.png)
+![customSkill](../imgs/2604061410_openclaw-custom-skills.png)
 
-## 从想法到实现
+## Getting Started
 
-我最近帮助一位朋友理清思路，他经营几家便利店，想利用 AI 提高生产效率。我的想法是在 OpenClaw 中构建自己的自定义技能，而不是依赖预构建的功能呢？事实证明，这完全是可行的。
+I recently spent time helping a friend who manages several convenience stores figure out how to leverage AI to boost productivity. That conversation sparked an idea: what if I could build my own custom skills in OpenClaw instead of relying on pre-built ones? Turns out, it's totally doable.
 
-本指南将带你完整了解整个过程——从明确你想要构建的内容，到编写技能、测试，最后将其部署到 ClawHub。无论你是想自动化个人工作流，还是为开源社区贡献工具，这个过程都既直观又灵活。
+This guide walks you through the entire process—from defining what you want to build, to writing a skill, testing it, and deploying it on ClawHub.
 
-在开始之前，一个关键的建议是：**在写任何代码前，先坐下来用一份 markdown 文档明确表述你想要技能做什么**。这份文档应该包括输入、处理过程、需要保留的元素、输出格式，甚至视觉风格。我通常会用 Perplexity 或 Claude Code 来分析这份需求文档，确保我的思路清晰。
+## Configure Your Models First
 
-例如，如果你想构建一个技能来润色技术博客文章，你可能会这样记录：
+Before writing a skill, make sure your language and image models are properly configured. Most of the time, OpenClaw uses multi-modal models that handle both text and images. But if you want high-quality generated images, you should explicitly set an `imageGenerationModel`.
 
-- **输入：** 关于技术主题的原始 markdown 草稿（例如 Linux 文件同步工作流）
-- **处理：** 将草稿重写为 1,200-1,400 字的润色 zh-CN 简体中文，分为 4-5 个逻辑段落
-- **保留：** 精确保留所有技术术语、代码块、文件路径和命令示例
-- **输出：** 一份清晰的 markdown 文件和一张 hero image，在视觉上总结整篇文章
-- **风格：** 使用一致的视觉语言（例如"清洁平面矢量插图，极简等距"）
-- **分辨率：** 生成 16:9 宽高比的图像，适合作为博客头部
-
-## 配置你的模型
-
-在编写技能之前，确保你的语言和图像模型已正确配置。大多数情况下，OpenClaw 使用可以处理文本和图像的多模态模型。但如果你想生成高质量的图像，应该明确设置 `imageGenerationModel`。在2026.4.5 版本之前，这个参数为 `imageModel`。
-
-首先列出你当前的模型：
+Start by listing your current models:
 
 ```sh
 openclaw models list
 ```
 
-你应该看到类似这样的输出：
+You should see something like this:
 
 ```sh
 🦞 OpenClaw 2026.4.5 (3e72c03)
@@ -43,7 +32,7 @@ google/gemini-3-flash-preview              text       195k     no    yes   confi
 moonshot/kimi-k2.5                         text+image 250k     no    yes   configured,alias:Kimi
 ```
 
-在我的情况下，`openai/gpt-image-1` 被定义为 `agents.defaults.imageGenerationModel`。将你的 API 密钥存储在 `~/.openclaw/.env` 中——像对待信用卡一样对待这个文件。
+In my case, `openai/gpt-image-1` is defined as `agents.defaults.imageGenerationModel`. Store your API keys in `~/.openclaw/.env` — treat this file like your credit card and keep it secure.
 
 ```json
 openclaw config get agents.defaults.imageGenerationModel
@@ -60,11 +49,26 @@ openclaw config get agents.defaults.imageGenerationModel
 }
 ```
 
-## 编写技能定义
+## Think Before You Build
 
-现在是时候编写实际的技能定义了。这是你定义输入、输出和工作流程的地方。
+The most important step comes before you write any code. Sit down and write out exactly what you want your skill to do, all in one markdown document.
 
-一个典型的 `SKILL.md` 包含两部分：YAML 前置元数据和 markdown 文档。这是一个真实的例子：
+Let's say you want to build a skill that polishes a technical blog post. You might document it like this:
+
+- **Input:** A raw markdown draft about a technical topic (e.g., Linux file sync workflows)
+- **Processing:** Rewrite the draft into 1,000–1,200 words of polished en-US English, across 4–5 logical sections
+- **Preservation:** Keep all technical terms, code blocks, file paths, and command examples exactly as they are
+- **Output:** A cleaned-up markdown file and one hero image that visually summarizes the entire article
+- **Styling:** Use consistent visual language (e.g., "clean flat vector illustration, minimal isometric")
+- **Resolution:** Generate the image at 16:9 aspect ratio, suitable for a blog header
+
+Once you have that written out and analyzed by any AI tool (I personally prefer to use Perplexity), you've got a blueprint.
+
+## Create Your SKILL.md
+
+Now it's time to write the actual skill definition. This is where you define inputs, outputs, and the workflow.
+
+A typical SKILL.md has two parts: YAML frontmatter and markdown documentation. Here's a real example:
 
 ```yaml
 ---
@@ -241,60 +245,66 @@ The image must be written as a PNG file. It must use the same basename as the ma
 Generate the image using OpenClaw’s default image model (`agents.defaults.imageModel`) unless an explicit image generation model is provided by the environment.
 ```
 
-结构很简洁直观：名称、描述、版本、输入参数和输出结构。关于你的技能做什么，要保持清晰而具体。
+The structure is straightforward: name, description, version, input parameters, and output structure. Keep it clear and specific about what your skill does.
 
-## 验证和部署
+The complete SKILL.md can be found at https://clawhub.ai/j3ffyang/blog-polish-eng-single-image
 
-在发布之前，使用 Perplexity 或 Claude 之类的 AI 工具根据 OpenClaw 和 ClawHub 标准审核你的 `SKILL.md`。给它这个提示：
+## Validate and Iterate
+
+Before you publish, use an AI tool like Perplexity or Claude to review your SKILL.md against the OpenClaw and ClawHub standards. Give it this prompt:
 
 ```
-审核这个 SKILL.md 是否符合 OpenClaw 和 ClawHub 标准。
-检查 JSON schema、描述和工作流逻辑。
-建议对清晰度或结构进行任何改进。
+Review this SKILL.md for compliance with OpenClaw and ClawHub standards.
+Check the JSON schema, descriptions, and workflow logic.
+Suggest any improvements to clarity or structure.
 ```
 
-迭代几次，直到你确信技能是没有瑕疵的。现在的小错误会节省以后的调试时间。
+Iterate a few times until you're confident the skill is solid. Small mistakes in the schema now save debugging time later.
 
-一旦你对 `SKILL.md` 感到满意，安装它到本地：
+## Install and Test Locally
+
+Once you're happy with your SKILL.md, install it locally:
 
 ```sh
 cd ~/.openclaw/workspace/skills
 clawhub install your-skill-name
 ```
 
-列出已安装的技能来确认：
+List installed skills to confirm:
 
 ```sh
 clawhub list
 ```
 
-你应该在输出中看到你的技能。现在从你配置的频道（Discord、WhatsApp、Telegram 等）测试它：
+You should see your skill in the output. Now test it from your configured channel (Discord, WhatsApp, Telegram, etc.):
 
 ```
 trigger "your-skill-name"
 ```
 
-在你的工作区文件夹中观看输出，检查润色的 markdown 和生成的图像是否出现在你期望的位置。
+Watch the output in your workspace folder and check that the polished markdown and generated images appear where you expected them.
 
-当你确信你的技能有效时，将其上传到 ClawHub：
+## Deploy to ClawHub
+
+When you're confident your skill works, upload it to ClawHub:
 
 ```sh
 clawhub publish ~/.openclaw/workspace/skills/your-skill-name
 ```
 
-ClawHub 将验证 `SKILL.md` 并使其对社区可用。不要担心如果它将 shell 脚本标记为"Suspicious" —— 这只是一个警告。只要你信任你自己的代码，就没有问题。
+ClawHub will validate the SKILL.md and make it available to the community. Don't worry if it flags shell scripts as "suspicious"—it's just a warning. As long as you trust your own code, you're fine.
 
-发布后，任何人都可以用以下命令安装你的技能：
+Once published, anyone can install your skill with:
 
 ```sh
 clawhub install your-username/your-skill-name
 ```
 
-## 总结
+## Final Notes
 
-在 OpenClaw 中构建自定义技能一旦你理解了工作流就很直观：清楚地思考你的目标，编写一个与标准相匹配的稳健 `SKILL.md`，验证它，本地测试，当你准备好时发布。整个过程，从想法到社区共享工具，通常需要不到一小时。
+Building custom skills in OpenClaw is straightforward once you understand the workflow: think clearly about your goal, write a solid SKILL.md that matches the standards, validate it, test locally, and publish when you're ready. The whole process, from idea to community-shared tool, typically takes less than an hour.
 
-你的技能成为你的生产力工具包的一部分——如果它们很好，它们也成为社区工具包的一部分。
+Your skills become part of your productivity toolkit—and if they're good, they become part of the community's toolkit too.
 
 ---
 

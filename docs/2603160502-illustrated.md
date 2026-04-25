@@ -1,13 +1,26 @@
-![](img/2603171329-main.png)
+## Polished & Translated (zh-CN)
+
+![](2603160502-section1.svg)
+
+
+![](../imgs/2603141144-main.png)
+
 
 # 如何利用AI开始一人公司
 
-## 执行摘要
-利用 AI 和自动化工具，你可以把常见的公司职能（产品开发、营销、客户支持、财务与法律）自动化到最小可持续投入，做到"一个人管理公司"的可行性。核心在于明确价值主张、把重复工作交给工具、用低成本技术栈快速验证市场，并在边际增长点逐步付费升级。本文给出 6 个可执行步骤、优先技术栈、实操清单与内容策略，帮助创始人 90 天内从 MVP 到首批付费用户。
+![](2603160502-hero.svg)
 
-[image:0]
+
+## 执行摘要
+
+![](2603160502-section2.svg)
+
+利用 AI 和自动化工具，你可以把常见的公司职能（产品开发、营销、客户支持、财务与法律）自动化到最小可持续投入，做到“一个人管理公司”的可行性。核心在于明确价值主张、把重复工作交给工具、用低成本技术栈快速验证市场，并在边际增长点逐步付费升级。本文给出 6 个可执行步骤、优先技术栈、实操清单与内容策略，帮助创始人 90 天内从 MVP 到首批付费用户。
 
 ## 6 个可执行步骤
+
+![](2603160502-section3.svg)
+
 
 ### 步骤 A — 明确定位与价值假设（第 0 步，决策基础）
 - 子步骤：
@@ -16,14 +29,16 @@
 - 工具：Notion / Obsidian、ChatGPT / Claude。
 
 ### 步骤 B — 快速构建最低可行产品（MVP）
+
+![](../imgs/2603141144-section1.png)
 - 子步骤：
   1. 选择最小交付形态（单页落地页、带购买按钮的订阅表单、或微 SaaS）。
   2. 使用模板与无代码工具快速搭建并上线测试版。
 - 工具：Webflow / Carrd / Tilda，Bubble / Glide，Figma，GitHub Pages。
 
-[image:1]
-
 ### 步骤 C — 用 AI 加速内容与市场验证
+
+![](../imgs/2603141144-section2.png)
 - 子步骤：
   1. 生成测试用文案、FAQ、社媒帖、电子邮件序列。
   2. 执行小额广告或社区投放，观察转化与反馈。
@@ -34,8 +49,6 @@
   1. 将表单、支付、邮件、CRM 连通，实现从访客到付费的自动化路径。
   2. 使用 AI 聊天机器人处理常见问题与售前咨询。
 - 工具：Stripe / Paddle，ConvertKit / MailerLite / Brevo，Zapier / Make，Intercom / Crisp / ChatGPT 插件。
-
-[image:2]
 
 ### 步骤 E — 合法化与基础财务管理（降低风险）
 - 子步骤：
@@ -49,9 +62,10 @@
   2. 将非核心任务外包给自由职业者或通过低成本外包平台自动化。
 - 工具：Google Analytics / Plausible，Notion / Airtable，Upwork / Fiverr。
 
-[image:3]
-
 ## 优先级技术栈
+
+![](2603160502-section4.svg)
+
 
 ### 核心（启动0–30天）
 - 落地页：Carrd / Tilda / GitHub Pages + Netlify
@@ -75,6 +89,9 @@
 - Vector DB：Pinecone、Weaviate（用于 RAG）
 
 ## 常见陷阱与缓解策略
+
+![](2603160502-section5.svg)
+
 - 追求完美的产品而错过验证窗口 → 先做可测的最小版本，设定 1–2 周验证周期。
 - 工具/集成过多导致维护负担 → 选择 3–5 个核心服务。
 - 低估法律与税务风险 → 早期咨询本地会计/律师，保存记录并使用标准合同模板。
@@ -83,6 +100,9 @@
 - 没有价格验证直接打折促销 → 先做用户访谈，再设定价格测试。
 
 ## 30/60/90 天检查清单
+
+![](2603160502-section6.svg)
+
 
 ### 30 天：验证与上线
 - 明确价值主张与 3 个关键假设。
@@ -106,6 +126,9 @@
 - 制定 6 个月产品路线图与 12 个月收入目标。
 
 ## 建议的内容/SEO 主题
+
+![](2603160502-section7.svg)
+
 - 用 XX 工具在 24 小时内搭建在线课程/咨询页面
 - 一人公司税务/发票入门指南（国家/地区名）
 - 最佳 AI 工具合集：一人公司必备（持续更新）
@@ -114,6 +137,9 @@
 - 一人公司常见法律误区与解决方案
 
 ## 演示落地页文案（约 200 字）
+
+![](2603160502-section8.svg)
+
 **标题：** 用 AI 建站、自动化运营——为创始人的一人公司方案
 
 **副标题：** 在 30 天内从想法到首批付费用户，无需编码，低成本可扩展
@@ -121,6 +147,9 @@
 **正文：** 你是想把业余技能变成可持续收入的一人创始人吗？我们提供一套可复制的流程：从精简的价值定位、AI 生成文案与课程材料，到落地页、支付与客服的全自动化串联。无需大量技术投入，使用低成本工具和成熟模板，你可以在数周内验证市场、启动销售并把日常事务交给自动化工具处理。立即注册，获得 7 天免费模板包与 1 次免费 30 分钟启动咨询，开始把你的专业变成稳定的业务。
 
 ## 参考快速资源清单
+
+![](2603160502-section9.svg)
+
 - 落地页：Carrd / Tilda
 - 文案与内容：ChatGPT / Claude / Jasper
 - 支付：Stripe / Paddle
@@ -129,18 +158,6 @@
 - 会计：Wave / QuickBooks
 
 ---
-文件生成时间（UTC）：$(date -u +"%Y-%m-%d %H:%M")
+文件生成时间（UTC）：2026-03-14 05:03
 
-## Image Prompts
-
-**[Hero - image:0]**
-Clean flat vector illustration, minimal isometric, software-engineering diagram vibe. A solo entrepreneur working at a modern desk with multiple screens showing AI tools, automation flows, and business dashboards. Robot assistant helping. White background with subtle grid. Professional, tech-forward, empowering. 16:9 horizontal.
-
-**[Section 1 - image:1]**
-Clean flat vector illustration, minimal isometric. Visualizing MVP building process: wireframes, landing page mockups, no-code tools interface. Developer assembling building blocks. White background with subtle grid. 16:9.
-
-**[Section 2 - image:2]**
-Clean flat vector illustration, minimal isometric. AI content generation concept: marketing materials, social media posts, email sequences floating around a laptop. Content pipeline visualization. White background with subtle grid. 16:9.
-
-**[Section 3 - image:3]**
-Clean flat vector illustration, minimal isometric. Automation workflow: connected nodes showing customer journey from visitor to payment. CRM, chatbot, email automation icons. White background with subtle grid. 16:9.
+(translation simulated)

@@ -1,12 +1,11 @@
-## Polished & Translated (zh-CN)
-
-![](img/2603141144-main.png)
-
+![](../imgs/2603171329-main.png)
 
 # 如何利用AI开始一人公司
 
 ## 执行摘要
-利用 AI 和自动化工具，你可以把常见的公司职能（产品开发、营销、客户支持、财务与法律）自动化到最小可持续投入，做到“一个人管理公司”的可行性。核心在于明确价值主张、把重复工作交给工具、用低成本技术栈快速验证市场，并在边际增长点逐步付费升级。本文给出 6 个可执行步骤、优先技术栈、实操清单与内容策略，帮助创始人 90 天内从 MVP 到首批付费用户。
+利用 AI 和自动化工具，你可以把常见的公司职能（产品开发、营销、客户支持、财务与法律）自动化到最小可持续投入，做到"一个人管理公司"的可行性。核心在于明确价值主张、把重复工作交给工具、用低成本技术栈快速验证市场，并在边际增长点逐步付费升级。本文给出 6 个可执行步骤、优先技术栈、实操清单与内容策略，帮助创始人 90 天内从 MVP 到首批付费用户。
+
+[image:0]
 
 ## 6 个可执行步骤
 
@@ -17,16 +16,14 @@
 - 工具：Notion / Obsidian、ChatGPT / Claude。
 
 ### 步骤 B — 快速构建最低可行产品（MVP）
-
-![](img/2603141144-section1.png)
 - 子步骤：
   1. 选择最小交付形态（单页落地页、带购买按钮的订阅表单、或微 SaaS）。
   2. 使用模板与无代码工具快速搭建并上线测试版。
 - 工具：Webflow / Carrd / Tilda，Bubble / Glide，Figma，GitHub Pages。
 
-### 步骤 C — 用 AI 加速内容与市场验证
+[image:1]
 
-![](img/2603141144-section2.png)
+### 步骤 C — 用 AI 加速内容与市场验证
 - 子步骤：
   1. 生成测试用文案、FAQ、社媒帖、电子邮件序列。
   2. 执行小额广告或社区投放，观察转化与反馈。
@@ -37,6 +34,8 @@
   1. 将表单、支付、邮件、CRM 连通，实现从访客到付费的自动化路径。
   2. 使用 AI 聊天机器人处理常见问题与售前咨询。
 - 工具：Stripe / Paddle，ConvertKit / MailerLite / Brevo，Zapier / Make，Intercom / Crisp / ChatGPT 插件。
+
+[image:2]
 
 ### 步骤 E — 合法化与基础财务管理（降低风险）
 - 子步骤：
@@ -49,6 +48,8 @@
   1. 建立 KPI（CAC、LTV、转化率、留存）、每周复盘与迭代清单。
   2. 将非核心任务外包给自由职业者或通过低成本外包平台自动化。
 - 工具：Google Analytics / Plausible，Notion / Airtable，Upwork / Fiverr。
+
+[image:3]
 
 ## 优先级技术栈
 
@@ -128,6 +129,18 @@
 - 会计：Wave / QuickBooks
 
 ---
-文件生成时间（UTC）：2026-03-14 05:03
+文件生成时间（UTC）：$(date -u +"%Y-%m-%d %H:%M")
 
-(translation simulated)
+## Image Prompts
+
+**[Hero - image:0]**
+Clean flat vector illustration, minimal isometric, software-engineering diagram vibe. A solo entrepreneur working at a modern desk with multiple screens showing AI tools, automation flows, and business dashboards. Robot assistant helping. White background with subtle grid. Professional, tech-forward, empowering. 16:9 horizontal.
+
+**[Section 1 - image:1]**
+Clean flat vector illustration, minimal isometric. Visualizing MVP building process: wireframes, landing page mockups, no-code tools interface. Developer assembling building blocks. White background with subtle grid. 16:9.
+
+**[Section 2 - image:2]**
+Clean flat vector illustration, minimal isometric. AI content generation concept: marketing materials, social media posts, email sequences floating around a laptop. Content pipeline visualization. White background with subtle grid. 16:9.
+
+**[Section 3 - image:3]**
+Clean flat vector illustration, minimal isometric. Automation workflow: connected nodes showing customer journey from visitor to payment. CRM, chatbot, email automation icons. White background with subtle grid. 16:9.
