@@ -107,7 +107,7 @@ export BRAVE_API_KEY=xxxxxxxxxxxxxxxxxxxx
 export FIRECRAWL_API_KEY=yyyyyyyyyyyyyyyyyyyy
 ```
 
-## 6. 使用 skill
+## 5. 使用 skill
 
 Hermes 会根据用户意图，在终端 TUI 与桥接的聊天应用中路由到技能。除非你的部署或桥接另有约定，否则不需要特殊语法。
 
