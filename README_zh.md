@@ -20,16 +20,16 @@
 | [writing-your-own-custom-skill-in-openclaw](docs/2604060608-writing-your-own-custom-skill-in-openclaw.md) | 为OpenClaw代理运行时设计与发布自定义SKILL.md的详细指南 |
 | [writing-custom-skill-openclaw](docs/2604060837_writing-custom-skill-openclaw.md) | OpenClaw技能编写实战：目标优先设计、带时间戳输出与部署技巧 |
 | [openclaw-custom-skills](docs/2604061410_openclaw-custom-skills.md) | 在ClawHub上构建、校验、测试与发布自定义技能的完整教程 |
-| [openclaw-custom-skills_chn](docs/2604070643_openclaw-custom-skills_chn.md) | OpenClaw自定义技能教程的中文译版 |
-| [hermes-openrouter-elephant-alpha](docs/Hermes%20integrates%20with%20Free%20OpenRouter's%20elephant-alpha%20model.md) | 将Hermes接入OpenRouter免费Elephant-Alpha模型的实操指南，含WhatsApp集成与多用户配置 |
-| [hermes-openrouter-elephant-alpha_chn](docs/Hermes%20integrates%20with%20Free%20OpenRouter's%20elephant-alpha%20model_chn.md) | 通过OpenRouter配置Hermes接入免费Elephant-Alpha模型（中文） |
+| [openclaw-custom-skills_chn](docs/260406_openclaw-custom-skills-chn.md) | OpenClaw自定义技能教程的中文译版 |
+| [hermes-openrouter-elephant-alpha](docs/hermes-int-free-openrouter-elephant-alpha.md) | 将Hermes接入OpenRouter免费Elephant-Alpha模型的实操指南，含WhatsApp集成与多用户配置 |
+| [hermes-openrouter-elephant-alpha_chn](docs/hermes-int-free-openrouter-elephant-alpha-chn.md) | 通过OpenRouter配置Hermes接入免费Elephant-Alpha模型（中文） |
 | [openclaw-security_eng](docs/2603271113_openclaw-security_eng.md) | OpenClaw安全审计英文版：真实事件、已知漏洞及自托管用户加固清单 |
 | [openclawActivity2](docs/260320_openclawActivity2.md) | 近期OpenClaw使用记录：安装配置与日常活动日志 |
 | [hermes-connect-nvidiamodel-openrouter](docs/260421-hermes-connect-nvidiamodel-openrouter.md) | 将Hermes接入OpenRouter上的Nvidia Nemotron免费模型，含主备模型配置 |
 | [engageOpenClaw](docs/260420_engageOpenClaw.md) | 使用OpenClaw与Hermes三个月后的复盘：多步骤AI任务编排与章节配图生成工作流 |
 | [engage-ai](docs/260420-engage-ai.md) | Claude工具使用笔记与面向开发者的AI效率提升技巧 |
 | [hermes-update-err](docs/260423-hermes-update-err.md) | 排查Hermes TUI构建失败问题：根因为根目录package.json格式错误 |
-| [enable-2nd-brain-obsidian](docs/Enable%20My%202nd%20Brain%20with%20Obsidian.md) | 在Arch Linux上将Obsidian与AI工具（OpenRouter、Claude）集成，打造轻量级第二大脑 |
+| [enable-2nd-brain-obsidian](docs/enable-2nd-brain-with-obsidian.md) | 在Arch Linux上将Obsidian与AI工具（OpenRouter、Claude）集成，打造轻量级第二大脑 |
 | [hermes-custom-skill-install-chn](docs/260429-custom-skill-hermes-chn.md) | 从 GitHub 安装自定义 Hermes Skill 的完整可复现流程，含实际验证的命令与每一步详解 |
-| [hermes-soul](docs/260513-hermes-soul.md) | 关于配置Hermes Agent的SOUL.md以定义代理身份、语气和边界的实用指南 |
-| [opencode-vs-claude-code](docs/260513-chooseCC-openCode.md) | OpenCode与Claude Code的比较：用于运行Claude Opus和其他模型（中英双语） |
+| [hermes-soul](docs/260505-hermes-SOUL-chn.md) | 关于配置Hermes Agent的SOUL.md以定义代理身份、语气和边界的实用指南 |
+| [opencode-vs-claude-code](docs/260513-chooseCC-operCode-chn.md) | OpenCode与Claude Code的比较：用于运行Claude Opus和其他模型（中英双语） |

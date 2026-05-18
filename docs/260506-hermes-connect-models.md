@@ -2,43 +2,46 @@
 
 ![hermes-agent](../imgs/2026-05-06-180248_hyprshot.png)
 
-## Takeaways 
+## Takeaways
 
-2 brilliant free models that can be configured with your Hermes Agent via OpenRouter
+Two solid free models you can wire into Hermes via OpenRouter — Nemotron’s my daily driver, Hermes 405B’s the backup when limits or routing kick in.
+
 - `nvidia/nemotron-3-super-120b-a12b:free`
 - `nousresearch/hermes-3-llama-3.1-405b:free`
 
 ## Background
 
-- Installed Hermes Agent ⚕ while also having OpenClaw 🦞. Want to compare them in between, sometimes head-to-head. Wish to get myself familiar with the both so I can master both
-- I connect paid model, such as Claude and Gemini in OpenClaw and while free models in Hermes, so I can compare the quality of result from paid and free. Certainly the paid should work out much better. However want to see the difference
-- Have had WhatsApp, Telegram and Discord linked to both OpenClaw and Hermes with isolated and specific bot servers created respectively
+- Running Hermes Agent ⚕ alongside OpenClaw 🦞 so I can switch between them, sometimes head-to-head. Want to get comfy with both, not pick a religion.
+- Paid side: Claude + Gemini in OpenClaw. Free side: Hermes. Lets me eyeball how close the free stack gets — yeah, paid should win, but I’m curious how big the gap really is.
+- WhatsApp, Telegram, and Discord are hooked to both, each with its own isolated bot setup so they don’t step on each other.
 
-## Find an expected model at OpenRouter
+## Picking models on OpenRouter
+
 ![free-openrouter](../imgs/2026-05-06-182351_hyprshot.png)
-- In past months, I've tried **Elephant-Alpha** and **Nvidia-Nemotron** (`nvidia/nemotron-3-super-120b-a12b:free`). After practical testing, figured that **Nvidia-Nemotron** is pretty good. 
-    > I think **Nvidia-Nemotron** free model has been underrated much
-- Also tried `nousresearch/hermes-3-llama-3.1-405b:free` as 1st fallback model in Hermes Agent. 
 
-- Then I put Elephant-Alpha as secondary fallback model and keep Nvidia-Nomotron as primary in Hermes
+- Lately I’ve bounced between **Elephant-Alpha** and **Nvidia-Nemotron** (`nvidia/nemotron-3-super-120b-a12b:free`). In real use, **Nvidia-Nemotron** held up really well.
 
+  > tbh I think the free **Nvidia-Nemotron** is pretty underrated.
+
+- `nousresearch/hermes-3-llama-3.1-405b:free` is my first fallback in Hermes when I need a second string.
+- Stack now: **Nemotron** primary, Elephant-Alpha further down the chain, Hermes Llama as the early fallback (see config below).
 
 ## Configure Model in Hermes Agent
 
-- In NousResearch API portal, pay $10 credit to enable free model connection with 1000 requests/ day limit. You won't be charged when just using free model(s). 
-- In my most case, it's enough to execute some SKILL.md files, such as _searching_ and then _scraping_ based on pre-defined topic(s).
+- NousResearch’s API portal wants a **$10** credit line to unlock the free-tier path (something like **1000 requests/day**). You’re not burning paid $ if you stick to free models.
+- For how I use it, that’s plenty to run skills — e.g. `_search_` then `_scraping_` off a fixed topic list in a `SKILL.md`.
 
 ![hermes-insights](../imgs/2026-05-06-180817_hyprshot.png)
 
-- by the way, you can see `/jk line` to nevigate, which is exactly the same as `vim` and I love it ♥️ so much
+- Btw `/jk line` navigates like `vim` — huge win for me ♥️
 
 ## Configure Hermes Llama as Fallback Model
 
-Backup then edit `~/.hermes/config.yaml`
+Back up then edit `~/.hermes/config.yaml`
 
 ```sh
 fallback_providers:
-- provider: nousresearhc
+- provider: nousresearch
   model: hermes-3-llama-3.1-405b:free
 ```
 
@@ -50,7 +53,7 @@ hermes fallback
   Primary:   nvidia/nemotron-3-super-120b-a12b:free  (via openrouter)
 
   Fallback chain (3 entries):
-    1. hermes-3-llama-3.1-405b:free  (via nousresearhc)
+    1. hermes-3-llama-3.1-405b:free  (via nousresearch)
     2. openrouter/elephant-alpha  (via openrouter)
     3. openrouter/free  (via openrouter)
 ```

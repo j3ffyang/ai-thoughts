@@ -21,15 +21,15 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [writing-custom-skill-openclaw](docs/2604060837_writing-custom-skill-openclaw.md) | Practical walkthrough for authoring OpenClaw skills: goal-first design, timestamped outputs, and deployment tips |
 | [openclaw-custom-skills](docs/2604061410_openclaw-custom-skills.md) | Step-by-step tutorial for building, validating, testing, and publishing custom skills on ClawHub |
 | [openclaw-custom-skills_chn](docs/2604070643_openclaw-custom-skills_chn.md) | Chinese translation of the OpenClaw custom skills tutorial |
-| [hermes-openrouter-elephant-alpha](docs/Hermes%20integrates%20with%20Free%20OpenRouter's%20elephant-alpha%20model.md) | Practical guide to setting up Hermes with OpenRouter's free Elephant-Alpha model as an alternative to OpenClaw, including WhatsApp integration and multi-user configuration |
-| [hermes-openrouter-elephant-alpha_chn](docs/Hermes%20integrates%20with%20Free%20OpenRouter's%20elephant-alpha%20model_chn.md) | Chinese guide: configuring Hermes with the free Elephant-Alpha model via OpenRouter |
+| [hermes-openrouter-elephant-alpha](docs/hermes-int-free-openrouter-elephant-alpha.md) | Practical guide to setting up Hermes with OpenRouter's free Elephant-Alpha model as an alternative to OpenClaw, including WhatsApp integration and multi-user configuration |
+| [hermes-openrouter-elephant-alpha_chn](docs/hermes-int-free-openrouter-elephant-alpha-chn.md) | Chinese guide: configuring Hermes with the free Elephant-Alpha model via OpenRouter |
 | [openclaw-security_eng](docs/2603271113_openclaw-security_eng.md) | English version of the OpenClaw security audit: real incidents, known vulnerabilities, and a hardening checklist for self-hosters |
 | [openclawActivity2](docs/260320_openclawActivity2.md) | What I've been up to in OpenClaw lately: setup, configuration, and recent activity log |
 | [hermes-connect-nvidiamodel-openrouter](docs/260421-hermes-connect-nvidiamodel-openrouter.md) | Guide to connecting Hermes to Nvidia Nemotron free model via OpenRouter, with primary and fallback model configuration |
 | [engageOpenClaw](docs/260420_engageOpenClaw.md) | Reflections after 3 months with OpenClaw and Hermes: orchestrating multi-step AI tasks and per-section image generation workflows |
 | [engage-ai](docs/260420-engage-ai.md) | Notes and links on Claude tooling and AI productivity tips for developers |
 | [hermes-update-err](docs/260423-hermes-update-err.md) | Debugging the Hermes TUI build failure caused by a malformed root package.json |
-| [enable-2nd-brain-obsidian](docs/Enable%20My%202nd%20Brain%20with%20Obsidian.md) | Notes on integrating Obsidian with AI tools (OpenRouter, Claude) as a lightweight 2nd brain on Arch Linux |
+| [enable-2nd-brain-obsidian](docs/enable-2nd-brain-with-obsidian.md) | Notes on integrating Obsidian with AI tools (OpenRouter, Claude) as a lightweight 2nd brain on Arch Linux |
 | [hermes-custom-skill-install](docs/260429-custom-skill-hermes.md) | Tested end-to-end workflow: install a custom Hermes SKILL.md from GitHub, with verified commands, examples, and a live installation walkthrough |
-| [hermes-soul](docs/260513-hermes-soul.md) | Practical guide to configuring Hermes Agent's SOUL.md for personality customization |
+| [hermes-soul](docs/260513-hermes-persona-soul.md) | Practical guide to configuring Hermes Agent's SOUL.md for personality customization |
 | [choose-between-opencode-and-claude-code](docs/260513-chooseCC-openCode.md) | Comparison of OpenCode vs Claude Code for running Claude Opus and other models (English/Chinese) |
