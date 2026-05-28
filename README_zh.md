@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-文章与随笔合集，围绕两大主题：借助AI工具运营精简的一人企业，以及对 [OpenClaw](https://openclaw.ai) 和 [Hermes Agent](https://hermes-agent.nousresearch.com) 的实战体验——最近侧重于Hermes作为我的主要AI代理平台。内容涵盖实操指南（自定义技能开发、自托管部署加固），以及更具个人色彩的写作（摩托车文化、个人创业）。
+文章与随笔合集，围绕两大主题：借助AI工具运营精简的一人企业，以及对 [OpenClaw](https://openclaw.ai) 🦞 和 [Hermes Agent](https://hermes-agent.nousresearch.com) ⚕ 的实战体验——最近侧重于Hermes作为我的主要AI代理平台。内容涵盖实操指南（自定义技能开发、自托管部署加固），以及更具个人色彩的写作（摩托车文化、个人创业）。
 
 每篇文章的配图存放于 [`imgs/`](imgs/) 子目录，沿用与文章相同的 `YYMMDDHHММ_slug` 命名规范。
 
@@ -21,7 +21,7 @@
 | [enable-2nd-brain-obsidian](docs/enable-2nd-brain-with-obsidian.md) | 在Arch Linux上将Obsidian与AI工具（OpenRouter、Claude）集成，打造轻量级第二大脑 |
 | [tech-interview](docs/260521-tech-interview.md) | 技术面试准备指南和笔记 |
 
-### 二、OpenClaw 平台
+### 二、OpenClaw 🦞 平台
 
 | 文章 | 简介 |
 |---|---|
@@ -35,7 +35,7 @@
 | [openclawActivity2](docs/260320_openclawActivity2.md) | 近期OpenClaw使用记录：安装配置与日常活动日志 |
 | [openclaw-update](docs/260525-openclaw-update.md) | OpenClaw平台最近的更新和发展 |
 
-### 三、Hermes 代理
+### 三、Hermes Agent ⚕
 
 | 文章 | 简介 |
 |---|---|

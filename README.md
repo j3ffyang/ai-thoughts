@@ -2,7 +2,7 @@
 
 [中文版](README_zh.md)
 
-A collection of articles and essays covering two main themes: using AI tools to run a lean one-person business, and hands-on experience with [OpenClaw](https://openclaw.ai) and [Hermes Agent](https://hermes-agent.nousresearch.com) — with recent focus on Hermes as my primary AI agent platform. Topics range from practical how-tos (building custom skills, hardening a self-hosted deployment) to more personal writing (motorcycle culture, solo entrepreneurship).
+A collection of articles and essays covering two main themes: using AI tools to run a lean one-person business, and hands-on experience with [OpenClaw](https://openclaw.ai) 🦞 and [Hermes Agent](https://hermes-agent.nousresearch.com) ⚕ — with recent focus on Hermes as my primary AI agent platform. Topics range from practical how-tos (building custom skills, hardening a self-hosted deployment) to more personal writing (motorcycle culture, solo entrepreneurship).
 
 Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the same `YYMMDDHHММ_slug` naming convention as the articles themselves.
 
@@ -21,7 +21,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [enable-2nd-brain-obsidian](docs/enable-2nd-brain-with-obsidian.md) | Notes on integrating Obsidian with AI tools (OpenRouter, Claude) as a lightweight 2nd brain on Arch Linux |
 | [tech-interview](docs/260521-tech-interview.md) | Technical interview preparation guide and notes |
 
-### II. OpenClaw Platform
+### II. OpenClaw Platform 🦞
 
 | Article | Description |
 |---|---|
@@ -35,7 +35,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [openclawActivity2](docs/260320_openclawActivity2.md) | What I've been up to in OpenClaw lately: setup, configuration, and recent activity log |
 | [openclaw-update](docs/260525-openclaw-update.md) | Recent updates and developments in OpenClaw platform |
 
-### III. Hermes Agent
+### III. Hermes Agent ⚕
 
 | Article | Description |
 |---|---|
