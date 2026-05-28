@@ -1,5 +1,7 @@
 # How to Play with SOUL.md in Hermes Agent
 
+![querySOUL.md](../imgs/2026-05-19-102626_hyprshot.png)
+
 ## At a glance
 
 - **File:** `~/.hermes/SOUL.md` (or `$HERMES_HOME/SOUL.md`) — instance-wide persona, not per-repo.

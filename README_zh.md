@@ -31,5 +31,13 @@
 | [hermes-update-err](docs/260423-hermes-update-err.md) | 排查Hermes TUI构建失败问题：根因为根目录package.json格式错误 |
 | [enable-2nd-brain-obsidian](docs/enable-2nd-brain-with-obsidian.md) | 在Arch Linux上将Obsidian与AI工具（OpenRouter、Claude）集成，打造轻量级第二大脑 |
 | [hermes-custom-skill-install-chn](docs/260429-custom-skill-hermes-chn.md) | 从 GitHub 安装自定义 Hermes Skill 的完整可复现流程，含实际验证的命令与每一步详解 |
-| [hermes-soul](docs/260505-hermes-SOUL-chn.md) | 关于配置Hermes Agent的SOUL.md以定义代理身份、语气和边界的实用指南 |
+| [hermes-soul](docs/260513-hermes-persona-soul-chn.md) | 关于配置Hermes Agent的SOUL.md以定义代理身份、语气和边界的实用指南 |
 | [opencode-vs-claude-code](docs/260513-chooseCC-operCode-chn.md) | OpenCode与Claude Code的比较：用于运行Claude Opus和其他模型（中英双语） |
+| [hermes-github](docs/260504-hermes-github.md) | Hermes Agent: 10 GitHub Repos to Stress-Test It（英文） |
+| [hermes-connect-models](docs/260506-hermes-connect-models.md) | Treasure hunt: Hermes Agent ⚕ Connects to Free Models |
+| [hermes-connect-models_chn](docs/260506-hermes-connect-models-chn.md) | 寻宝：Hermes Agent ⚕ 连接免费模型 |
+| [hermes-perftips](docs/260518-hermes-perftips.md) | Hermes Agent Tips & Best Practices Summary |
+| [hermes-perftips_chn](docs/260518-hermes-perftips-chn.md) | Hermes Agent 提示与最佳实践总结（中文） |
+| [tech-interview](docs/260521-tech-interview.md) | 技术面试准备指南和笔记 |
+| [tech-interview_chn](docs/260521-tech-interview.zh-CN.md) | 技术面试准备指南和笔记（中文） |
+| [openclaw-update](docs/260525-openclaw-update.md) | OpenClaw平台最近的更新和发展 |

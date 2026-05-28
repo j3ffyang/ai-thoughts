@@ -33,3 +33,8 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [hermes-custom-skill-install](docs/260429-custom-skill-hermes.md) | Tested end-to-end workflow: install a custom Hermes SKILL.md from GitHub, with verified commands, examples, and a live installation walkthrough |
 | [hermes-soul](docs/260513-hermes-persona-soul.md) | Practical guide to configuring Hermes Agent's SOUL.md for personality customization |
 | [choose-between-opencode-and-claude-code](docs/260513-chooseCC-openCode.md) | Comparison of OpenCode vs Claude Code for running Claude Opus and other models (English/Chinese) |
+| [hermes-github](docs/260504-hermes-github.md) | Hermes Agent: 10 GitHub Repos to Stress-Test It |
+| [hermes-connect-models](docs/260506-hermes-connect-models.md) | Treasure hunt: Hermes Agent ⚕ Connects to Free Models |
+| [hermes-perftips](docs/260518-hermes-perftips.md) | Hermes Agent Tips & Best Practices Summary |
+| [tech-interview](docs/260521-tech-interview.md) | Technical interview preparation guide and notes |
+| [openclaw-update](docs/260525-openclaw-update.md) | Recent updates and developments in OpenClaw platform |
