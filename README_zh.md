@@ -20,7 +20,9 @@
 | [engage-ai](docs/260420-engage-ai.md) | Claude工具使用笔记与面向开发者的AI效率提升技巧 |
 | [enable-2nd-brain-obsidian](docs/enable-2nd-brain-with-obsidian.md) | 在Arch Linux上将Obsidian与AI工具（OpenRouter、Claude）集成，打造轻量级第二大脑 |
 | [tech-interview](docs/260521-tech-interview.md) | 技术面试准备指南和笔记 |
-
+| [五代十国](docs/260604-five-dynasties-ten-kingdoms-article.md) | 深入解读五代十国时期（907–979年）的历史，附时间线、关键事件与分析 |
+| [raindrop-bookmark-manager](docs/260606-raindrop.md) | Raindrop.io 书签管理工具的使用笔记——隐私、安全与开源客户端 |
+ 
 ### 二、OpenClaw 🦞 平台
 
 | 文章 | 简介 |
@@ -48,7 +50,9 @@
 | [hermes-github](docs/260504-hermes-github.md) | Hermes Agent: 10 GitHub Repos to Stress-Test It（英文） |
 | [hermes-connect-models](docs/260506-hermes-connect-models.md) | 寻宝：Hermes Agent ⚕ 连接免费模型 |
 | [hermes-perftips](docs/260518-hermes-perftips.md) | Hermes Agent Tips & Best Practices Summary |
-
+| [hermes-backup](docs/260528-hermes-backup.md) | 使用Hermes内置CLI备份数据的操作指南——全量快照、快速备份与恢复流程 |
+| [hermes-backup-chn](docs/260528-hermes-backup-chn.md) | 备份 Hermes Agent 的中文指南，涵盖全量快照、快速备份与恢复步骤 |
+ 
 ### 四、跨平台与比较
 
 | 文章 | 简介 |

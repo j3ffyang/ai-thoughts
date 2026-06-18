@@ -20,7 +20,9 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [engage-ai](docs/260420-engage-ai.md) | Notes and links on Claude tooling and AI productivity tips for developers |
 | [enable-2nd-brain-obsidian](docs/enable-2nd-brain-with-obsidian.md) | Notes on integrating Obsidian with AI tools (OpenRouter, Claude) as a lightweight 2nd brain on Arch Linux |
 | [tech-interview](docs/260521-tech-interview.md) | Technical interview preparation guide and notes |
-
+| [five-dynasties-ten-kingdoms](docs/260604-five-dynasties-ten-kingdoms-article.md) | Deep dive into the Five Dynasties and Ten Kingdoms period (907–979 CE) of Chinese history, with timeline, key events, and analysis (Chinese) |
+| [raindrop-bookmark-manager](docs/260606-raindrop.md) | Notes on Raindrop.io as a bookmark manager — privacy, security, and open-source clients |
+ 
 ### II. OpenClaw Platform 🦞
 
 | Article | Description |
@@ -48,7 +50,9 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [hermes-github](docs/260504-hermes-github.md) | Hermes Agent: 10 GitHub Repos to Stress-Test It |
 | [hermes-connect-models](docs/260506-hermes-connect-models.md) | Treasure hunt: Hermes Agent ⚕ Connects to Free Models |
 | [hermes-perftips](docs/260518-hermes-perftips.md) | Hermes Agent Tips & Best Practices Summary |
-
+| [hermes-backup](docs/260528-hermes-backup.md) | Guide to backing up Hermes Agent data using the built-in CLI — full snapshots, quick backups, and restore procedures |
+| [hermes-backup-chn](docs/260528-hermes-backup-chn.md) | Chinese guide: backing up Hermes Agent data with the built-in CLI |
+ 
 ### IV. Cross-Platform & Comparative
 
 | Article | Description |

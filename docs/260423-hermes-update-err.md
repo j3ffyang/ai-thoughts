@@ -33,10 +33,10 @@ done
 
 the output
 ```sh
-/home/negtivspaz/.hermes/hermes-agent/ui-tui/packages/hermes-ink/package.json
-/home/negtivspaz/.hermes/hermes-agent/ui-tui/package.json
-/home/negtivspaz/.hermes/hermes-agent/package.json
-/home/negtivspaz/package.json
+/home/negtivspace/.hermes/hermes-agent/ui-tui/packages/hermes-ink/package.json
+/home/negtivspace/.hermes/hermes-agent/ui-tui/package.json
+/home/negtivspace/.hermes/hermes-agent/package.json
+/home/negtivspace/package.json
 ```
 
 top level from `~/.hermes/hermes-agent/ui-tui/packages/hermes-ink/package.json` is `~/`. the culprit is `~/package.json`
