@@ -22,6 +22,8 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [tech-interview](docs/260521-tech-interview.md) | Technical interview preparation guide and notes |
 | [five-dynasties-ten-kingdoms](docs/260604-five-dynasties-ten-kingdoms-article.md) | Deep dive into the Five Dynasties and Ten Kingdoms period (907–979 CE) of Chinese history, with timeline, key events, and analysis (Chinese) |
 | [raindrop-bookmark-manager](docs/260606-raindrop.md) | Notes on Raindrop.io as a bookmark manager — privacy, security, and open-source clients |
+| [brave-browser-privacy](docs/260706-brave-post.md) | Deep dive into why I switched to Brave: local keychain, Shields, WebRTC control, Tor integration, and real-world privacy difference (English) |
+| [brave-browser-privacy_chn](docs/260706-brave-post-chn.md) | 為什麼我開始使用Brave的深度分析：本地密鑰管理、隱私防護、WebRTC控制及Tor整合（繁體中文） |
  
 ### II. OpenClaw Platform 🦞
 

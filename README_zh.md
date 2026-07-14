@@ -22,6 +22,8 @@
 | [tech-interview](docs/260521-tech-interview.md) | 技术面试准备指南和笔记 |
 | [五代十国](docs/260604-five-dynasties-ten-kingdoms-article.md) | 深入解读五代十国时期（907–979年）的历史，附时间线、关键事件与分析 |
 | [raindrop-bookmark-manager](docs/260606-raindrop.md) | Raindrop.io 书签管理工具的使用笔记——隐私、安全与开源客户端 |
+| [brave-browser-privacy](docs/260706-brave-post.md) | 为什么我选择Brave的深度分析：本地密钥管理、Shields隐私防护、WebRTC控制与Tor集成（英文） |
+| [brave-browser-privacy_chn](docs/260706-brave-post-chn.md) | 為什麼我開始使用Brave的深度分析：本地密鑰管理、隱私防護、WebRTC控制及Tor整合（繁體中文） |
  
 ### 二、OpenClaw 🦞 平台
 
