@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-文章与随笔合集，围绕两大主题：借助AI工具运营精简的一人企业，以及对 [OpenClaw](https://openclaw.ai) 🦞 和 [Hermes Agent](https://hermes-agent.nousresearch.com) ⚕ 的实战体验——最近侧重于Hermes作为我的主要AI代理平台。内容涵盖实操指南（自定义技能开发、自托管部署加固），以及更具个人色彩的写作（摩托车文化、个人创业）。
+中英双语（English · 中文）文章与随笔合集，涵盖三大领域：**技术**（OpenClaw 🦞 与 Hermes Agent ⚕ 的实战体验、隐私、知识管理）、**历史**（五代十国、丝绸、《红楼梦》）、以及**文化与哲思**（摩托车文化、不同文化如何面对死亡、"未知的未知"）。内容涵盖实操指南（自定义技能开发、自托管部署加固），以及更具个人色彩的写作（个人创业、骑行文化）。
 
 每篇文章的配图存放于 [`imgs/`](imgs/) 子目录，沿用与文章相同的 `YYMMDDHHММ_slug` 命名规范。
 
@@ -15,49 +15,100 @@
 | 文章 | 简介 |
 |---|---|
 | [一人公司](docs/2603171329-illustrated.md) | 借助AI创办一人企业的图文指南——六个步骤、推荐技术栈与90天路线图（中文） |
+| [the-timeless-allure-of-motorcycle-riding](docs/2603231032-the-timeless-allure-of-motorcycle-riding.md) | 摩托车文化、历史与骑行风格英文文章 |
 | [timeless-allure-motorcycle-riding](docs/2603230855-timeless-allure-motorcycle-riding.md) | 摩托车骑行主题文章中文重写版，附各章节配图 |
-| [the-timeless-allure-of-motorcycle-riding](docs/2603231032-the-timeless-allure-of-motorcycle-riding.md) | 摩托车文化、历史与骑行风格英文文章，含图片提示词参考表 |
 | [engage-ai](docs/260420-engage-ai.md) | Claude工具使用笔记与面向开发者的AI效率提升技巧 |
-| [enable-2nd-brain-obsidian](docs/enable-2nd-brain-with-obsidian.md) | 在Arch Linux上将Obsidian与AI工具（OpenRouter、Claude）集成，打造轻量级第二大脑 |
 | [tech-interview](docs/260521-tech-interview.md) | 技术面试准备指南和笔记 |
-| [五代十国](docs/260604-five-dynasties-ten-kingdoms-article.md) | 深入解读五代十国时期（907–979年）的历史，附时间线、关键事件与分析 |
+| [tech-interview](docs/260521-tech-interview.zh-CN.md) | 技术面试准备指南与笔记（简体中文） |
 | [raindrop-bookmark-manager](docs/260606-raindrop.md) | Raindrop.io 书签管理工具的使用笔记——隐私、安全与开源客户端 |
+| [raindrop-bookmark-manager](docs/260606-raindrop-chn.md) | 书签管理器 Raindrop.io 的隐私、安全与开源客户端使用笔记（简体中文） |
+
+### 二、历史、文化与哲思
+
+| 文章 | 简介 |
+|---|---|
+| [五代十国](docs/260604-five-dynasties-ten-kingdoms-article.md) | 深入解读五代十国时期（907–979年）的历史，附时间线、关键事件与分析（中文） |
+| [绫罗绸缎](docs/260620-silk-chn.md) | 绫罗绸缎：丝线上的文明密码——从考古到织机的丝绸史话，借《红楼梦》视角展开（中文原创） |
+| [洛神赋赏析](docs/260629-luoshenfu-literary-analysis.md) | 《洛神赋》文学赏析——曹植杰作、魏晋美学、"理想女性"范式，及其与《红楼梦》和禅宗的对话（中文） |
+| [脂砚斋是谁](docs/260723-whoszhiyanzhai.md) | 脂砚斋是谁——《红楼梦》匿名评点者三百年的谜团：五大身份假说与红学之争（中文） |
+| [unknown-unknowns](docs/260722-unknownUnknowns2.md) | 关于知识四种类型的个人随笔——已知的已知、已知的未知、未知的已知，以及塑造我们人生的"未知的未知" |
+| [unknown-unknowns](docs/260722-unknownUnknowns2-chn.md) | 不知道自己不知道的事——知识的四种类型（简体中文） |
+
+### 三、第二大脑与知识管理
+
+| 文章 | 简介 |
+|---|---|
+| [enable-2nd-brain-obsidian](docs/enable-2nd-brain-with-obsidian.md) | 在Arch Linux上将Obsidian与AI工具（OpenRouter、Claude）集成，打造轻量级第二大脑 |
+| [2nd-brain-design](docs/260710-2ndBrain-design.md) | 基于Obsidian的中英双语AI知识助手（"第二大脑"）设计文档——架构、里程碑与技术栈 |
+| [obsidian-karpathy-llm](docs/260721-obsidian-karpathy-llm.md) | 用 Obsidian + Karpathy LLM Wiki + Ollama 打造本地 AI 知识库，让个人笔记可被本地大模型检索问答 |
+| [obsidian-karpathy-llm](docs/260721-obsidian-karpathy-llm-chn.md) | 用 Obsidian + Karpathy LLM Wiki + Ollama 打造本地 AI 知识库（简体中文） |
+| [ollama-gpu](docs/260716-ollama-gpu.md) | 在Arch Linux上以AMD GPU（GPD Win 4）运行Ollama——排查GPU利用率过低并切换到ROCm版本 |
+
+### 四、个人技术、隐私与游戏
+
+| 文章 | 简介 |
+|---|---|
+| [immutable-os-strategy](docs/260622-immutable-os.md) | "不可变操作系统"选型策略——为何一位使用Linux四分之一世纪的老用户坚持原生Arch与Debian LTS，而非Bazzite/Silverblue |
 | [brave-browser-privacy](docs/260706-brave-post.md) | 为什么我选择Brave的深度分析：本地密钥管理、Shields隐私防护、WebRTC控制与Tor集成（英文） |
-| [brave-browser-privacy_chn](docs/260706-brave-post-chn.md) | 為什麼我開始使用Brave的深度分析：本地密鑰管理、隱私防護、WebRTC控制及Tor整合（繁體中文） |
- 
-### 二、OpenClaw 🦞 平台
+| [brave-browser-privacy](docs/260706-brave-post-chn.md) | 為什麼我開始使用Brave的深度分析：本地密鑰管理、隱私防護、WebRTC控制及Tor整合（繁體中文） |
+| [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | DCS World新手入门指南：VKB Gladiator NXT EVO摇杆 + 无数字键盘的键位映射、游戏模式飞行与摇杆轴调校 |
+
+### 五、OpenClaw 🦞 平台
 
 | 文章 | 简介 |
 |---|---|
 | [openclaw-thoughts](docs/2603131145-openclaw-thoughts.md) | 将OpenClaw作为本地AI代理平台运行的个人笔记：可组合性、技能与实战心得（中文） |
 | [openclaw-security](docs/2603271113_openclaw-security.md) | OpenClaw安全审计：真实事件、已知漏洞及面向自托管用户的分级加固清单（中文） |
-| [writing-your-own-custom-skill-in-openclaw](docs/2604060608-writing-your-own-custom-skill-in-openclaw.md) | 为OpenClaw代理运行时设计与发布自定义SKILL.md的详细指南 |
-| [writing-custom-skill-openclaw](docs/2604060837_writing-custom-skill-openclaw.md) | OpenClaw技能编写实战：目标优先设计、带时间戳输出与部署技巧 |
-| [openclaw-custom-skills](docs/2604061410_openclaw-custom-skills.md) | 在ClawHub上构建、校验、测试与发布自定义技能的完整教程 |
-| [openclaw-custom-skills_chn](docs/260406_openclaw-custom-skills-chn.md) | OpenClaw自定义技能教程的中文译版 |
 | [openclaw-security_eng](docs/2603271113_openclaw-security_eng.md) | OpenClaw安全审计英文版：真实事件、已知漏洞及自托管用户加固清单 |
+| [openclaw-custom-skills](docs/2604061410_openclaw-custom-skills.md) | 在ClawHub上构建、校验、测试与发布自定义技能的完整教程 |
+| [openclaw-custom-skills_chn](docs/2604070643_openclaw-custom-skills_chn.md) | OpenClaw 自定义技能从构建到发布 ClawHub 的完整教程（简体中文） |
 | [openclawActivity2](docs/260320_openclawActivity2.md) | 近期OpenClaw使用记录：安装配置与日常活动日志 |
 | [openclaw-update](docs/260525-openclaw-update.md) | OpenClaw平台最近的更新和发展 |
 
-### 三、Hermes Agent ⚕
+### 六、Hermes Agent ⚕
 
 | 文章 | 简介 |
 |---|---|
-| [hermes-openrouter-elephant-alpha](docs/hermes-int-free-openrouter-elephant-alpha.md) | 将Hermes接入OpenRouter免费Elephant-Alpha模型的实操指南，含WhatsApp集成与多用户配置 |
-| [hermes-openrouter-elephant-alpha_chn](docs/hermes-int-free-openrouter-elephant-alpha-chn.md) | 通过OpenRouter配置Hermes接入免费Elephant-Alpha模型（中文） |
+| [hermes-openrouter-elephant-alpha](docs/hermes-int-free-openrouter-elephant-alpha.md) | 将Hermes接入OpenRouter免费Elephant-Alpha模型的实操指南（作为OpenClaw的替代方案），含WhatsApp集成与多用户配置 |
+| [hermes-openrouter-elephant-alpha_chn](docs/hermes-int-free-openrouter-elephant-alpha-chn.md) | 使用 Hermes 连接 OpenRouter 免费 Elephant-Alpha 模型的配置指南（简体中文） |
 | [hermes-connect-nvidiamodel-openrouter](docs/260421-hermes-connect-nvidiamodel-openrouter.md) | 将Hermes接入OpenRouter上的Nvidia Nemotron免费模型，含主备模型配置 |
 | [hermes-update-err](docs/260423-hermes-update-err.md) | 排查Hermes TUI构建失败问题：根因为根目录package.json格式错误 |
-| [hermes-custom-skill-install-chn](docs/260429-custom-skill-hermes-chn.md) | 从 GitHub 安装自定义 Hermes Skill 的完整可复现流程，含实际验证的命令与每一步详解 |
-| [hermes-soul](docs/260513-hermes-persona-soul-chn.md) | 关于配置Hermes Agent的SOUL.md以定义代理身份、语气和边界的实用指南 |
-| [hermes-github](docs/260504-hermes-github.md) | Hermes Agent: 10 GitHub Repos to Stress-Test It（英文） |
+| [hermes-custom-skill-install](docs/260429-custom-skill-hermes.md) | 从GitHub安装自定义Hermes SKILL.md的端到端验证流程，含实测命令、示例与现场安装演练 |
+| [hermes-custom-skill-install_chn](docs/260429-custom-skill-hermes-chn.md) | 从 GitHub 安装自定义 Hermes SKILL.md 的完整实操流程（简体中文） |
+| [hermes-github](docs/260504-hermes-github.md) | Hermes Agent: 10 GitHub Repos to Stress-Test It |
+| [hermes-SOUL-annotated](docs/260505-hermes-SOUL.md) | Tony Simons 爆火的 170 行 SOUL.md 深度解读——为何 SOUL.md 让 Hermes 更像一个队友 |
+| [hermes-SOUL-annotated_chn](docs/260505-hermes-SOUL-chn.md) | Hermes 的 170 行 SOUL.md 深度解读（简体中文） |
 | [hermes-connect-models](docs/260506-hermes-connect-models.md) | 寻宝：Hermes Agent ⚕ 连接免费模型 |
+| [hermes-connect-models_chn](docs/260506-hermes-connect-models-chn.md) | 探索 Hermes Agent 连接免费模型的寻宝之旅（简体中文） |
+| [hermes-persona-soul](docs/260513-hermes-persona-soul.md) | 关于配置Hermes Agent的SOUL.md以定义代理身份、语气和边界的实用指南 |
+| [hermes-persona-soul_chn](docs/260513-hermes-persona-soul-chn.md) | Hermes Agent SOUL.md 人格配置实战指南（简体中文） |
 | [hermes-perftips](docs/260518-hermes-perftips.md) | Hermes Agent Tips & Best Practices Summary |
+| [hermes-perftips_chn](docs/260518-hermes-perftips-chn.md) | Hermes 使用技巧与最佳实践（简体中文） |
 | [hermes-backup](docs/260528-hermes-backup.md) | 使用Hermes内置CLI备份数据的操作指南——全量快照、快速备份与恢复流程 |
-| [hermes-backup-chn](docs/260528-hermes-backup-chn.md) | 备份 Hermes Agent 的中文指南，涵盖全量快照、快速备份与恢复步骤 |
- 
-### 四、跨平台与比较
+| [hermes-backup_chn](docs/260528-hermes-backup-chn.md) | 备份 Hermes Agent 的中文指南，涵盖全量快照、快速备份与恢复步骤（简体中文） |
+
+### 七、跨平台与比较
 
 | 文章 | 简介 |
 |---|---|
 | [engageOpenClaw](docs/260420_engageOpenClaw.md) | 使用OpenClaw与Hermes三个月后的复盘：多步骤AI任务编排与章节配图生成工作流 |
-| [opencode-vs-claude-code](docs/260513-chooseCC-operCode-chn.md) | OpenCode与Claude Code的比较：用于运行Claude Opus和其他模型（中英双语） |
+| [opencode-vs-claude-code](docs/260513-chooseCC-openCode.md) | OpenCode与Claude Code的比较：用于运行Claude Opus和其他模型（中英双语） |
+| [opencode-vs-claude-code_chn](docs/260513-chooseCC-operCode-chn.md) | OpenCode 与 Claude Code 对比（简体中文） |
+| [ai-combination](docs/260701-aiCombination2.md) | 优化AI使用方式：从豆包用户到进阶用户——组合 OpenRouter、OpenCode 与 Hermes/OpenClaw 的 SKILL.md 工作流 |
+| [ai-combination_chn](docs/260701-aiCombination2-chn.md) | 豆包用户到 AI 进阶用户：OpenRouter + OpenCode + AI Agent 组合策略（简体中文） |
+
+### 八、草稿与工作笔记
+
+旧版文章与其最终版并存，是为了让每一篇都展示从头脑风暴文档到成稿的演变过程。以下是促成（或正在促成）上述文章的草稿。
+
+| 草稿 | 说明 |
+|---|---|
+| [openclaw-custom-skills（早期草稿）](docs/2604060608-writing-your-own-custom-skill-in-openclaw.md) · [草稿2](docs/2604060837_writing-custom-skill-openclaw.md) · [中文草稿](docs/260406_openclaw-custom-skills-chn.md) | OpenClaw 自定义技能教程的早期迭代版本 |
+| [unknown-unknowns（草稿）](docs/260722-unknownUnknowns.md) | 《Unknown Unknowns》一文的初始头脑风暴笔记 |
+| [ai-combination（完整 v1.1）](docs/260701-aiCombination.md) · [模板](docs/260701-aiCombination_template.md) | 精炼版 ai-combination 文章背后的完整版与种子模板 |
+| [brave（草稿）](docs/260706-brave.md) | 促成 Brave 浏览器隐私一文的原始头脑风暴笔记 |
+| [obsidian-karpathy（草稿）](docs/260718-obsidian-karpath-localllm.md) | Obsidian + Karpathy LLM Wiki 指南的早期草稿 |
+| [death 系列](docs/260728-death.md) · [v1.0](docs/260728-death2.md) · [v1.1 视频](docs/260728-death3.md) | 计划中的《死亡》文章与纪录短片技能的 SKILL.md 草稿（墨西哥亡灵节 vs 藏传佛教） |
+| [web-search 简报](docs/260425_webSearch.md) | 基于 web_search 构建简报技能的笔记（OpenClaw/Hermes） |
+| [browser-cookies](docs/260619-browser-cookies.md) | 浏览器 Cookie 一文的空提纲 |
+| [hermes-cleanup](docs/260731-hermes-cleanup.md) | 退出 Hermes 捆绑技能的命令日志 |
