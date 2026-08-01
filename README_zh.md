@@ -112,3 +112,8 @@
 | [web-search 简报](docs/260425_webSearch.md) | 基于 web_search 构建简报技能的笔记（OpenClaw/Hermes） |
 | [browser-cookies](docs/260619-browser-cookies.md) | 浏览器 Cookie 一文的空提纲 |
 | [hermes-cleanup](docs/260731-hermes-cleanup.md) | 退出 Hermes 捆绑技能的命令日志 |
+
+---
+
+> **维护说明：** 编辑 [`articles.yaml`](articles.yaml)，然后运行 `python scripts/gen_readmes.py` 重新生成 `README.md` 与 [`README_zh.md`](README.md)。
+

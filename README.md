@@ -88,3 +88,8 @@ Earlier versions of articles are kept alongside their final versions so each pie
 | [web-search newsletter](docs/260425_webSearch.md) | Notes on building a newsletter skill with web_search (OpenClaw/Hermes) |
 | [browser-cookies](docs/260619-browser-cookies.md) | Empty outline for a browser-cookies article |
 | [hermes-cleanup](docs/260731-hermes-cleanup.md) | Command log for opting out of bundled Hermes skills |
+
+---
+
+> **Maintaining this index:** edit [`articles.yaml`](articles.yaml), then run `python scripts/gen_readmes.py` to regenerate `README.md` and [`README_zh.md`](README_zh.md).
+
