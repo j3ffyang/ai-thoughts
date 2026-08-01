@@ -18,8 +18,8 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [the-timeless-allure-of-motorcycle-riding](docs/2603231032-the-timeless-allure-of-motorcycle-riding.md) | English article on motorcycle culture, history, and riding styles |
 | [timeless-allure-motorcycle-riding](docs/2603230855-timeless-allure-motorcycle-riding.md) | Chinese rewrite of the motorcycle riding piece with per-section illustrations |
 | [engage-ai](docs/260420-engage-ai.md) | Notes and links on Claude tooling and AI productivity tips for developers |
-| [tech-interview](docs/260521-tech-interview.md) | Technical interview preparation guide and notes |
-| [tech-interview](docs/260521-tech-interview.zh-CN.md) | 技术面试准备指南与笔记（简体中文） |
+| [tech-conversation](docs/260521-tech-interview.md) | Tech Q&A conversation (not a job interview) on day-to-day AI agent workflows — mindset, environment, skills, prompts, work style, quality, and security |
+| [tech-conversation](docs/260521-tech-interview.zh-CN.md) | 技术问答对话（非面试）：AI Agent 日常工作流——思维模式、环境准备、技能、提示词、工作方式与安全（简体中文） |
 | [raindrop-bookmark-manager](docs/260606-raindrop.md) | Notes on Raindrop.io as a bookmark manager — privacy, security, and open-source clients |
 | [raindrop-bookmark-manager](docs/260606-raindrop-chn.md) | 书签管理器 Raindrop.io 的隐私、安全与开源客户端使用笔记（简体中文） |
 

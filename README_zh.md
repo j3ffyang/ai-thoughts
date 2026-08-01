@@ -18,8 +18,8 @@
 | [the-timeless-allure-of-motorcycle-riding](docs/2603231032-the-timeless-allure-of-motorcycle-riding.md) | 摩托车文化、历史与骑行风格英文文章 |
 | [timeless-allure-motorcycle-riding](docs/2603230855-timeless-allure-motorcycle-riding.md) | 摩托车骑行主题文章中文重写版，附各章节配图 |
 | [engage-ai](docs/260420-engage-ai.md) | Claude工具使用笔记与面向开发者的AI效率提升技巧 |
-| [tech-interview](docs/260521-tech-interview.md) | 技术面试准备指南和笔记 |
-| [tech-interview](docs/260521-tech-interview.zh-CN.md) | 技术面试准备指南与笔记（简体中文） |
+| [tech-conversation](docs/260521-tech-interview.md) | 技术问答对话（非面试）：AI Agent 日常工作流——思维模式、环境准备、技能、提示词、工作方式与安全 |
+| [tech-conversation](docs/260521-tech-interview.zh-CN.md) | 技术问答对话（非面试）：AI Agent 日常工作流（简体中文） |
 | [raindrop-bookmark-manager](docs/260606-raindrop.md) | Raindrop.io 书签管理工具的使用笔记——隐私、安全与开源客户端 |
 | [raindrop-bookmark-manager](docs/260606-raindrop-chn.md) | 书签管理器 Raindrop.io 的隐私、安全与开源客户端使用笔记（简体中文） |
 
