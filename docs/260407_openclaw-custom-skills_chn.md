@@ -1,6 +1,6 @@
 # 在 OpenClaw 中编写自定义技能 🦞
 
-![customSkill](../imgs/2604061410_openclaw-custom-skills.png)
+![customSkill](../imgs/260406-openclaw-custom-skills.png)
 
 ## 从想法到实现
 

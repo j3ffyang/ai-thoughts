@@ -8,7 +8,7 @@
 - 有得必有失，獲得利益的同時總有代價。
 
 ---
-![infograph](../imgs/openai_gpt-image-2-medium_20260709_102832_ed8ca1ae.png)
+![infograph](../imgs/260709-102832.png)
 
 ## 使用 Brave 之前
 

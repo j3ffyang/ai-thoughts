@@ -30,9 +30,9 @@ INTRO_EN = """\
 
 [中文版](README_zh.md)
 
-A bilingual (English · 中文) collection of articles and essays spanning three domains: **technology** (hands-on experience with OpenClaw 🦞 and Hermes Agent ⚕, privacy, knowledge management), **history** (Five Dynasties & Ten Kingdoms, silk, *Dream of the Red Chamber*), and **culture & philosophy** (motorcycle culture, how different cultures face death, the "unknown unknowns" of knowledge). This page indexes the English articles; Chinese-language articles (including most history & culture posts) are listed in the [中文版](README_zh.md).
+A bilingual (English · 中文) collection of articles and essays spanning three domains: **technology** (hands-on experience with OpenClaw 🦞 and Hermes Agent ⚕, privacy, knowledge management), **history**, and **culture & philosophy** (motorcycle culture, how different cultures face death, the "unknown unknowns" of knowledge). This page indexes the English articles; Chinese-language articles (including most culture posts) are listed in the [中文版](README_zh.md).
 
-Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the same `YYMMDDHHММ_slug` naming convention as the articles themselves.
+Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the same `YYMMDD-slug` naming convention as the articles themselves.
 
 ---
 """
@@ -42,9 +42,9 @@ INTRO_ZH = """\
 
 [English](README.md)
 
-中英双语（English · 中文）文章与随笔合集，涵盖三大领域：**技术**（OpenClaw 🦞 与 Hermes Agent ⚕ 的实战体验、隐私、知识管理）、**历史**（五代十国、丝绸、《红楼梦》）、以及**文化与哲思**（摩托车文化、不同文化如何面对死亡、"未知的未知"）。内容涵盖实操指南（自定义技能开发、自托管部署加固），以及更具个人色彩的写作（个人创业、骑行文化）。
+中英双语（English · 中文）文章与随笔合集，涵盖三大领域：**技术**（OpenClaw 🦞 与 Hermes Agent ⚕ 的实战体验、隐私、知识管理）、**历史**、以及**文化与哲思**（摩托车文化、不同文化如何面对死亡、"未知的未知"）。内容涵盖实操指南（自定义技能开发、自托管部署加固），以及更具个人色彩的写作（个人创业、骑行文化）。
 
-每篇文章的配图存放于 [`imgs/`](imgs/) 子目录，沿用与文章相同的 `YYMMDDHHММ_slug` 命名规范。
+每篇文章的配图存放于 [`imgs/`](imgs/) 子目录，沿用与文章相同的 `YYMMDD-slug` 命名规范。
 
 ---
 """

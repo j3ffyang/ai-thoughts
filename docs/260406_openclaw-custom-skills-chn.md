@@ -1,5 +1,5 @@
 
-![customSkill](../imgs/2604061410_openclaw-custom-skills.png)
+![customSkill](../imgs/260406-openclaw-custom-skills.png)
 
 ## 入门
 

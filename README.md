@@ -2,9 +2,9 @@
 
 [中文版](README_zh.md)
 
-A bilingual (English · 中文) collection of articles and essays spanning three domains: **technology** (hands-on experience with OpenClaw 🦞 and Hermes Agent ⚕, privacy, knowledge management), **history** (Five Dynasties & Ten Kingdoms, silk, *Dream of the Red Chamber*), and **culture & philosophy** (motorcycle culture, how different cultures face death, the "unknown unknowns" of knowledge). This page indexes the English articles; Chinese-language articles (including most history & culture posts) are listed in the [中文版](README_zh.md).
+A bilingual (English · 中文) collection of articles and essays spanning three domains: **technology** (hands-on experience with OpenClaw 🦞 and Hermes Agent ⚕, privacy, knowledge management), **history**, and **culture & philosophy** (motorcycle culture, how different cultures face death, the "unknown unknowns" of knowledge). This page indexes the English articles; Chinese-language articles (including most culture posts) are listed in the [中文版](README_zh.md).
 
-Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the same `YYMMDDHHММ_slug` naming convention as the articles themselves.
+Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the same `YYMMDD-slug` naming convention as the articles themselves.
 
 ---
 
@@ -14,7 +14,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 
 | Article | Description |
 |---|---|
-| [the-timeless-allure-of-motorcycle-riding](docs/2603231032-the-timeless-allure-of-motorcycle-riding.md) | English article on motorcycle culture, history, and riding styles |
+| [the-timeless-allure-of-motorcycle-riding](docs/260323-the-timeless-allure-of-motorcycle-riding.md) | English article on motorcycle culture, history, and riding styles |
 | [engage-ai](docs/260420-engage-ai.md) | Notes and links on Claude tooling and AI productivity tips for developers |
 | [tech-conversation](docs/260521-tech-interview.md) | Tech Q&A conversation (not a job interview) on day-to-day AI agent workflows — mindset, environment, skills, prompts, work style, quality, and security |
 | [raindrop-bookmark-manager](docs/260606-raindrop.md) | Notes on Raindrop.io as a bookmark manager — privacy, security, and open-source clients |
@@ -29,7 +29,6 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 
 | Article | Description |
 |---|---|
-| [enable-2nd-brain-obsidian](docs/enable-2nd-brain-with-obsidian.md) | Notes on integrating Obsidian with AI tools (OpenRouter, Claude) as a lightweight 2nd brain on Arch Linux |
 | [2nd-brain-design](docs/260710-2ndBrain-design.md) | Design doc for an AI-powered bilingual knowledge assistant ("2nd Brain") on Obsidian — architecture, milestones, and tech stack |
 | [obsidian-karpathy-llm](docs/260721-obsidian-karpathy-llm.md) | Build your own AI-powered wiki with Obsidian + Karpathy LLM Wiki + Ollama — query your personal vault with a local LLM |
 | [ollama-gpu](docs/260716-ollama-gpu.md) | Running Ollama on Arch Linux with AMD GPUs (GPD Win 4) — diagnosing low GPU utilization and switching to the ROCm build |
@@ -46,8 +45,8 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 
 | Article | Description |
 |---|---|
-| [openclaw-security](docs/2603271113_openclaw-security_eng.md) | Security audit of OpenClaw: real incidents, known vulnerabilities, and a tiered hardening checklist for self-hosters |
-| [openclaw-custom-skills](docs/2604061410_openclaw-custom-skills.md) | Step-by-step tutorial for building, validating, testing, and publishing custom skills on ClawHub |
+| [openclaw-security](docs/260327_openclaw-security_eng.md) | Security audit of OpenClaw: real incidents, known vulnerabilities, and a tiered hardening checklist for self-hosters |
+| [openclaw-custom-skills](docs/260406_openclaw-custom-skills.md) | Step-by-step tutorial for building, validating, testing, and publishing custom skills on ClawHub |
 | [openclawActivity2](docs/260320_openclawActivity2.md) | What I've been up to in OpenClaw lately: setup, configuration, and recent activity log |
 | [openclaw-update](docs/260525-openclaw-update.md) | Recent updates and developments in OpenClaw platform |
 
@@ -80,11 +79,8 @@ Earlier versions of articles are kept alongside their final versions so each pie
 
 | Draft | Notes |
 |---|---|
-| [openclaw-custom-skills (early drafts)](docs/2604060608-writing-your-own-custom-skill-in-openclaw.md) · [draft 2](docs/2604060837_writing-custom-skill-openclaw.md) | Earlier iterations of the OpenClaw custom-skills tutorial |
-| [unknown-unknowns (draft)](docs/260722-unknownUnknowns.md) | Initial brainstorming notes for the Unknown Unknowns essay |
+| [openclaw-custom-skills (early drafts)](docs/260406-writing-your-own-custom-skill-in-openclaw.md) · [draft 2](docs/260406_writing-custom-skill-openclaw.md) | Earlier iterations of the OpenClaw custom-skills tutorial |
 | [ai-combination (full v1.1)](docs/260701-aiCombination.md) · [template](docs/260701-aiCombination_template.md) | Full-length version and seed template behind the condensed ai-combination article |
-| [brave (draft)](docs/260706-brave.md) | Raw brainstorming notes that became the Brave browser privacy post |
-| [obsidian-karpathy (draft)](docs/260718-obsidian-karpath-localllm.md) | Early draft of the Obsidian + Karpathy LLM Wiki guide |
 | [web-search newsletter](docs/260425_webSearch.md) | Notes on building a newsletter skill with web_search (OpenClaw/Hermes) |
 | [browser-cookies](docs/260619-browser-cookies.md) | Empty outline for a browser-cookies article |
 | [hermes-cleanup](docs/260731-hermes-cleanup.md) | Command log for opting out of bundled Hermes skills |

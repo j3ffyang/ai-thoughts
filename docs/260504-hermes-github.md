@@ -1,7 +1,7 @@
 # Hermes Agent: 10 GitHub Repos to Stress-Test It
 
 **Source:** Tony Simons (@tonysimons_) — Twitter post, ~2026-05-04 (verbatim capture below)  
-**Related:** [SOUL.md notes](260505-hermes-SOUL-chn.md) · [connect free models](260506-hermes-connect-models.md) · [custom skills](260429-custom-skill-hermes.md) · [SOUL how-to](260513-hermes-soul.md)
+**Related:** [SOUL.md notes](260505-hermes-SOUL-chn.md) · [connect free models](260506-hermes-connect-models.md) · [custom skills](260429-custom-skill-hermes.md) · [SOUL how-to](260513-hermes-persona-soul.md)
 
 ## Takeaways
 
@@ -122,7 +122,7 @@ Light notes on when each repo earns your time (editorial; not from the original 
 
 ### Phase 1 — Learn (after core install)
 
-**1. Main body** — Clone, follow upstream README, configure models ([260506](260506-hermes-connect-models.md)). Define persona in `SOUL.md` ([260505](260505-hermes-SOUL-chn.md), [260513](260513-hermes-soul.md)).
+**1. Main body** — Clone, follow upstream README, configure models ([260506](260506-hermes-connect-models.md)). Define persona in `SOUL.md` ([260505](260505-hermes-SOUL-chn.md), [260513](260513-hermes-persona-soul.md)).
 
 **2. Hermes-Wiki** — Use when you want implementation context without spelunking every module cold.
 

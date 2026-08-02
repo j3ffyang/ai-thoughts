@@ -2,9 +2,9 @@
 
 [English](README.md)
 
-中英双语（English · 中文）文章与随笔合集，涵盖三大领域：**技术**（OpenClaw 🦞 与 Hermes Agent ⚕ 的实战体验、隐私、知识管理）、**历史**（五代十国、丝绸、《红楼梦》）、以及**文化与哲思**（摩托车文化、不同文化如何面对死亡、"未知的未知"）。内容涵盖实操指南（自定义技能开发、自托管部署加固），以及更具个人色彩的写作（个人创业、骑行文化）。
+中英双语（English · 中文）文章与随笔合集，涵盖三大领域：**技术**（OpenClaw 🦞 与 Hermes Agent ⚕ 的实战体验、隐私、知识管理）、**历史**、以及**文化与哲思**（摩托车文化、不同文化如何面对死亡、"未知的未知"）。内容涵盖实操指南（自定义技能开发、自托管部署加固），以及更具个人色彩的写作（个人创业、骑行文化）。
 
-每篇文章的配图存放于 [`imgs/`](imgs/) 子目录，沿用与文章相同的 `YYMMDDHHММ_slug` 命名规范。
+每篇文章的配图存放于 [`imgs/`](imgs/) 子目录，沿用与文章相同的 `YYMMDD-slug` 命名规范。
 
 ---
 
@@ -14,9 +14,9 @@
 
 | 文章 | 简介 |
 |---|---|
-| [一人公司](docs/2603171329-illustrated.md) | 借助AI创办一人企业的图文指南——六个步骤、推荐技术栈与90天路线图（中文） |
-| [the-timeless-allure-of-motorcycle-riding](docs/2603231032-the-timeless-allure-of-motorcycle-riding.md) | 摩托车文化、历史与骑行风格英文文章 |
-| [timeless-allure-motorcycle-riding](docs/2603230855-timeless-allure-motorcycle-riding.md) | 摩托车骑行主题文章中文重写版，附各章节配图 |
+| [一人公司](docs/260317-illustrated.md) | 借助AI创办一人企业的图文指南——六个步骤、推荐技术栈与90天路线图（中文） |
+| [the-timeless-allure-of-motorcycle-riding](docs/260323-the-timeless-allure-of-motorcycle-riding.md) | 摩托车文化、历史与骑行风格英文文章 |
+| [timeless-allure-motorcycle-riding](docs/260323-timeless-allure-motorcycle-riding.md) | 摩托车骑行主题文章中文重写版，附各章节配图 |
 | [engage-ai](docs/260420-engage-ai.md) | Claude工具使用笔记与面向开发者的AI效率提升技巧 |
 | [tech-conversation](docs/260521-tech-interview.md) | 技术问答对话（非面试）：AI Agent 日常工作流——思维模式、环境准备、技能、提示词、工作方式与安全 |
 | [tech-conversation](docs/260521-tech-interview.zh-CN.md) | 技术问答对话（非面试）：AI Agent 日常工作流（简体中文） |
@@ -27,10 +27,6 @@
 
 | 文章 | 简介 |
 |---|---|
-| [五代十国](docs/260604-five-dynasties-ten-kingdoms-article.md) | 深入解读五代十国时期（907–979年）的历史，附时间线、关键事件与分析（中文） |
-| [绫罗绸缎](docs/260620-silk-chn.md) | 绫罗绸缎：丝线上的文明密码——从考古到织机的丝绸史话，借《红楼梦》视角展开（中文原创） |
-| [洛神赋赏析](docs/260629-luoshenfu-literary-analysis.md) | 《洛神赋》文学赏析——曹植杰作、魏晋美学、"理想女性"范式，及其与《红楼梦》和禅宗的对话（中文） |
-| [脂砚斋是谁](docs/260723-whoszhiyanzhai.md) | 脂砚斋是谁——《红楼梦》匿名评点者三百年的谜团：五大身份假说与红学之争（中文） |
 | [unknown-unknowns](docs/260722-unknownUnknowns2.md) | 关于知识四种类型的个人随笔——已知的已知、已知的未知、未知的已知，以及塑造我们人生的"未知的未知" |
 | [unknown-unknowns](docs/260722-unknownUnknowns2-chn.md) | 不知道自己不知道的事——知识的四种类型（简体中文） |
 
@@ -38,7 +34,6 @@
 
 | 文章 | 简介 |
 |---|---|
-| [enable-2nd-brain-obsidian](docs/enable-2nd-brain-with-obsidian.md) | 在Arch Linux上将Obsidian与AI工具（OpenRouter、Claude）集成，打造轻量级第二大脑 |
 | [2nd-brain-design](docs/260710-2ndBrain-design.md) | 基于Obsidian的中英双语AI知识助手（"第二大脑"）设计文档——架构、里程碑与技术栈 |
 | [obsidian-karpathy-llm](docs/260721-obsidian-karpathy-llm.md) | 用 Obsidian + Karpathy LLM Wiki + Ollama 打造本地 AI 知识库，让个人笔记可被本地大模型检索问答 |
 | [obsidian-karpathy-llm](docs/260721-obsidian-karpathy-llm-chn.md) | 用 Obsidian + Karpathy LLM Wiki + Ollama 打造本地 AI 知识库（简体中文） |
@@ -57,11 +52,11 @@
 
 | 文章 | 简介 |
 |---|---|
-| [openclaw-thoughts](docs/2603131145-openclaw-thoughts.md) | 将OpenClaw作为本地AI代理平台运行的个人笔记：可组合性、技能与实战心得（中文） |
-| [openclaw-security](docs/2603271113_openclaw-security.md) | OpenClaw安全审计：真实事件、已知漏洞及面向自托管用户的分级加固清单（中文） |
-| [openclaw-security_eng](docs/2603271113_openclaw-security_eng.md) | OpenClaw安全审计英文版：真实事件、已知漏洞及自托管用户加固清单 |
-| [openclaw-custom-skills](docs/2604061410_openclaw-custom-skills.md) | 在ClawHub上构建、校验、测试与发布自定义技能的完整教程 |
-| [openclaw-custom-skills_chn](docs/2604070643_openclaw-custom-skills_chn.md) | OpenClaw 自定义技能从构建到发布 ClawHub 的完整教程（简体中文） |
+| [openclaw-thoughts](docs/260313-openclaw-thoughts.md) | 将OpenClaw作为本地AI代理平台运行的个人笔记：可组合性、技能与实战心得（中文） |
+| [openclaw-security](docs/260327_openclaw-security.md) | OpenClaw安全审计：真实事件、已知漏洞及面向自托管用户的分级加固清单（中文） |
+| [openclaw-security_eng](docs/260327_openclaw-security_eng.md) | OpenClaw安全审计英文版：真实事件、已知漏洞及自托管用户加固清单 |
+| [openclaw-custom-skills](docs/260406_openclaw-custom-skills.md) | 在ClawHub上构建、校验、测试与发布自定义技能的完整教程 |
+| [openclaw-custom-skills_chn](docs/260407_openclaw-custom-skills_chn.md) | OpenClaw 自定义技能从构建到发布 ClawHub 的完整教程（简体中文） |
 | [openclawActivity2](docs/260320_openclawActivity2.md) | 近期OpenClaw使用记录：安装配置与日常活动日志 |
 | [openclaw-update](docs/260525-openclaw-update.md) | OpenClaw平台最近的更新和发展 |
 
@@ -103,11 +98,8 @@
 
 | 草稿 | 说明 |
 |---|---|
-| [openclaw-custom-skills（早期草稿）](docs/2604060608-writing-your-own-custom-skill-in-openclaw.md) · [草稿2](docs/2604060837_writing-custom-skill-openclaw.md) · [中文草稿](docs/260406_openclaw-custom-skills-chn.md) | OpenClaw 自定义技能教程的早期迭代版本 |
-| [unknown-unknowns（草稿）](docs/260722-unknownUnknowns.md) | 《Unknown Unknowns》一文的初始头脑风暴笔记 |
+| [openclaw-custom-skills（早期草稿）](docs/260406-writing-your-own-custom-skill-in-openclaw.md) · [草稿2](docs/260406_writing-custom-skill-openclaw.md) · [中文草稿](docs/260406_openclaw-custom-skills-chn.md) | OpenClaw 自定义技能教程的早期迭代版本 |
 | [ai-combination（完整 v1.1）](docs/260701-aiCombination.md) · [模板](docs/260701-aiCombination_template.md) | 精炼版 ai-combination 文章背后的完整版与种子模板 |
-| [brave（草稿）](docs/260706-brave.md) | 促成 Brave 浏览器隐私一文的原始头脑风暴笔记 |
-| [obsidian-karpathy（草稿）](docs/260718-obsidian-karpath-localllm.md) | Obsidian + Karpathy LLM Wiki 指南的早期草稿 |
 | [death 系列](docs/260728-death.md) · [v1.0](docs/260728-death2.md) · [v1.1 视频](docs/260728-death3.md) | 计划中的《死亡》文章与纪录短片技能的 SKILL.md 草稿（墨西哥亡灵节 vs 藏传佛教） |
 | [web-search 简报](docs/260425_webSearch.md) | 基于 web_search 构建简报技能的笔记（OpenClaw/Hermes） |
 | [browser-cookies](docs/260619-browser-cookies.md) | 浏览器 Cookie 一文的空提纲 |

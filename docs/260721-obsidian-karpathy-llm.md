@@ -2,7 +2,7 @@
 
 [toc]
 
-![result](../imgs/260721_2053.png)
+![result](../imgs/260721-2053.png)
 
 ## Introduction
 
@@ -70,15 +70,15 @@ Obsidian settings > Community plugins > Options (gear icon) of Karpathy LLM Wiki
 - LLM Provider > select Ollama
 - Select Model > select the local LLM model
 
-![llmConf](../imgs/260721_1725.png)
+![llmConf](../imgs/260721-1725.png)
 
 ## 4. Usage & Experience
 
-![ingest](../imgs/260721_1737.png)
+![ingest](../imgs/260721-1737.png)
 
 Once set up, ingest (copy/ move) your files into the `raw/` folder. Press `Ctrl + P` > `Karpathy LLM Wiki ingest from folder` > select `raw/` folder.
 
-![spike](../imgs/260718_175347.png)
+![spike](../imgs/260718-175347.png)
 
 You should see GPU1 usage spike like the bottom-right screenshot above. The top-right is Graph View of my wiki built from 330+ documents—looks impressive.
 

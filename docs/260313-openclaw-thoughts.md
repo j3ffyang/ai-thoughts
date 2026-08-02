@@ -2,7 +2,7 @@
 
 > 免责声明：本文为个人观点，不保证完全准确，旨在分享使用心得与实践中的经验教训。
 
-![Hero image](../imgs/2603131145-main.png)
+![Hero image](../imgs/260313-main.png)
 
 ## 引言
 
@@ -10,7 +10,7 @@
 
 ## 为什么 OpenClaw 有价值
 
-![Why OpenClaw matters](../imgs/2603131145-section1.png)
+![Why OpenClaw matters](../imgs/260313-section1.png)
 
 OpenClaw 的核心优势在于可组合性与本地化控制：你可以自由选择“brain”（模型）与“method”（skills），并把 agent 的输入输出、存储与工具链全部接入到你自己的 workspace。对于强调隐私、审计与长期可维护性的团队，这种可控性往往比完全托管方案更重要。
 
@@ -24,7 +24,7 @@ OpenClaw 的核心优势在于可组合性与本地化控制：你可以自由�
 
 ## Skills、Plugins 与实操建议
 
-![Skills & plugins diagram](../imgs/2603131145-section2.png)
+![Skills & plugins diagram](../imgs/260313-section2.png)
 
 在 OpenClaw 的生态里，`skills` 与 `plugin` 扮演不同但互补的角色：
 - plugin 更偏向于系统级或 I/O 层的能力（比如 voice-call、channel bridge）；
@@ -41,7 +41,7 @@ OpenClaw 的核心优势在于可组合性与本地化控制：你可以自由�
 
 ## 常见问题与应对策略
 
-![Practical checklist](../imgs/2603131145-section3.png)
+![Practical checklist](../imgs/260313-section3.png)
 
 - 模型选择带来的不确定性：不同模型在推理风格、token 成本与能力上有明显差异。建议对关键任务做 A/B 测试，并把模型选择参数化（例如通过 `openclaw config get agents.defaults.models` 来管理）；
 - 渠道与搜索行为差异：注意不同 messaging 渠道（Telegram、WhatsApp、Discord）在字符转码、回传格式、网络限制上的差异，测试每条渠道的边界条件；

@@ -2,7 +2,7 @@
 
 **Source:** Tony Simons ([@tonysimons_](https://x.com/tonysimons_)) — Twitter/X article, 2026-05-04  
 **URL:** https://x.com/tonysimons_/status/2051473178682118241  
-**Related:** [SOUL how-to (local setup)](260513-hermes-soul.md) · [10 GitHub repos](260504-hermes-github.md) · [connect free models](260506-hermes-connect-models.md)
+**Related:** [SOUL how-to (local setup)](260513-hermes-persona-soul.md) · [10 GitHub repos](260504-hermes-github.md) · [connect free models](260506-hermes-connect-models.md)
 
 ## Takeaways
 
@@ -222,7 +222,7 @@ You get the idea.
 
 ## Explanation
 
-> **What SOUL.md is in practice:** In upstream Hermes, `SOUL.md` is injected early in the system prompt (persona slot). Tony’s version goes further than a one-line “be helpful” — it is a **living contract** you edit when priorities change. Pair this post with [260513-hermes-soul.md](260513-hermes-soul.md) for file location, Soul Forge, and `/personality` overlays.
+> **What SOUL.md is in practice:** In upstream Hermes, `SOUL.md` is injected early in the system prompt (persona slot). Tony’s version goes further than a one-line “be helpful” — it is a **living contract** you edit when priorities change. Pair this post with [260513-hermes-persona-soul.md](260513-hermes-persona-soul.md) for file location, Soul Forge, and `/personality` overlays.
 >
 > **Why each section matters:**
 >
@@ -245,7 +245,7 @@ You get the idea.
 >
 > 1. **Keep it short enough to maintain** — 170 lines works if you actually update it; if not, trim to identity + mission + boundaries first.
 > 2. **Version or date the mission block** so stale projects are obvious to you and the agent.
-> 3. **Separate SOUL (who/values) from AGENTS.md (project ops)** per Hermes conventions in [260513](260513-hermes-soul.md).
+> 3. **Separate SOUL (who/values) from AGENTS.md (project ops)** per Hermes conventions in [260513](260513-hermes-persona-soul.md).
 > 4. **Add 2–3 worked examples** of good pushback and bad pushback in your own domain.
 > 5. **Re-read autonomy quarterly** — especially if you add channels that can post on your behalf.
 >

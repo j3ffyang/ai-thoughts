@@ -1,6 +1,6 @@
 # How to Play with SOUL.md in Hermes Agent
 
-![querySOUL.md](../imgs/2026-05-19-102626_hyprshot.png)
+![querySOUL.md](../imgs/260519-102626.png)
 
 ## At a glance
 

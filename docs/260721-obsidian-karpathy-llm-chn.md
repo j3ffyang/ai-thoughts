@@ -2,7 +2,7 @@
 
 [toc]
 
-![result](../imgs/260721_2053.png)
+![result](../imgs/260721-2053.png)
 
 ## 背景
 
@@ -70,15 +70,15 @@ Obsidian settings > Community plugins > Karpathy LLM Wiki 的 Options (齿轮图
 - LLM Provider > 选择 Ollama
 - Select Model > 选择你的本地 LLM 模型
 
-![llmConf](../imgs/260721_1725.png)
+![llmConf](../imgs/260721-1725.png)
 
 ## 4. 使用与体验
 
-![ingest](../imgs/260721_1737.png)
+![ingest](../imgs/260721-1737.png)
 
 配置完成后，把你的文件 ingest（复制/移动）到 `raw/` 文件夹。按 `Ctrl + P` > `Karpathy LLM Wiki ingest from folder` > 选择 `raw/` 文件夹。
 
-![spike](../imgs/260718_175347.png)
+![spike](../imgs/260718-175347.png)
 
 你应该能看到 GPU1 使用率飙升，如右下角截图所示。右上角是我基于 330+ 文档生成的 Graph View——看起来很壮观。
 

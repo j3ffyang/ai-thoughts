@@ -1,6 +1,6 @@
 # Treasure hunt: Hermes Agent ⚕ Connects to Free Models
 
-![hermes-agent](../imgs/2026-05-06-180248_hyprshot.png)
+![hermes-agent](../imgs/260506-180248.png)
 
 ## Takeaways
 
@@ -17,7 +17,7 @@ Two solid free models you can wire into Hermes via OpenRouter — Nemotron’s m
 
 ## Picking models on OpenRouter
 
-![free-openrouter](../imgs/2026-05-06-182351_hyprshot.png)
+![free-openrouter](../imgs/260506-182351.png)
 
 - Lately I’ve bounced between **Elephant-Alpha** and **Nvidia-Nemotron** (`nvidia/nemotron-3-super-120b-a12b:free`). In real use, **Nvidia-Nemotron** held up really well.
 
@@ -31,7 +31,7 @@ Two solid free models you can wire into Hermes via OpenRouter — Nemotron’s m
 - NousResearch’s API portal wants a **$10** credit line to unlock the free-tier path (something like **1000 requests/day**). You’re not burning paid $ if you stick to free models.
 - For how I use it, that’s plenty to run skills — e.g. `_search_` then `_scraping_` off a fixed topic list in a `SKILL.md`.
 
-![hermes-insights](../imgs/2026-05-06-180817_hyprshot.png)
+![hermes-insights](../imgs/260506-180817.png)
 
 - Btw `/jk line` navigates like `vim` — huge win for me ♥️
 

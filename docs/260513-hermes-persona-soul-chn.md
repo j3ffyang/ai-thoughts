@@ -2,7 +2,7 @@
 
 **原文：** [260513-hermes-persona-soul.md](260513-hermes-persona-soul.md)
 
-![querySOUL.md](../imgs/2026-05-19-102626_hyprshot.png)
+![querySOUL.md](../imgs/260519-102626.png)
 
 ## 速览
 

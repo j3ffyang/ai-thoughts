@@ -17,7 +17,7 @@
 
 ## 我更倾向的几点
 
-![opencode_main](../imgs/2026-05-13-170852_hyprshot.png)
+![opencode_main](../imgs/260513-170852.png)
 
 - **开源**：代码可读、可 fork，透明度更高。
 - **模型与界面解耦**，便于在需要时使用 **免费或低成本** 模型，例如 [OpenRouter 上的 NVIDIA Nemotron 2 Super（免费档）](https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free)，而不只依赖 Opus。

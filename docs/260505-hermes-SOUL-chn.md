@@ -2,7 +2,7 @@
 
 **来源：** Tony Simons（[@tonysimons_](https://x.com/tonysimons_)）— Twitter/X 长文，2026-05-04  
 **URL：** https://x.com/tonysimons_/status/2051473178682118241  
-**相关：** [SOUL 实操（本地配置）](260513-hermes-soul.md) · [10 个 GitHub 仓库](260504-hermes-github.md) · [接入免费模型](260506-hermes-connect-models-chn.md)
+**相关：** [SOUL 实操（本地配置）](260513-hermes-persona-soul.md) · [10 个 GitHub 仓库](260504-hermes-github.md) · [接入免费模型](260506-hermes-connect-models-chn.md)
 
 ## 要点
 
@@ -222,7 +222,7 @@ SOUL.md。
 
 ## 说明
 
-> **SOUL.md 在 Hermes 里怎么用：** 上游 Hermes 会把 `SOUL.md` 较早注入系统提示（人格位）。Tony 的版本比一句「要有帮助」深得多——是**随优先级更新的活契约**。本地路径、Soul Forge、`/personality` 覆盖等见 [260513-hermes-soul.md](260513-hermes-soul.md)。
+> **SOUL.md 在 Hermes 里怎么用：** 上游 Hermes 会把 `SOUL.md` 较早注入系统提示（人格位）。Tony 的版本比一句「要有帮助」深得多——是**随优先级更新的活契约**。本地路径、Soul Forge、`/personality` 覆盖等见 [260513-hermes-persona-soul.md](260513-hermes-persona-soul.md)。
 >
 > **各段在解决什么：**
 >
@@ -245,7 +245,7 @@ SOUL.md。
 >
 > 1. **控制在能维护的长度** —— 170 行可行，前提是你会更新；否则先写身份 + 使命 + 边界。
 > 2. **给使命块加日期或版本**，让过气项目对你和智能体都显眼。
-> 3. **SOUL（是谁/价值观）与 AGENTS.md（项目操作）分开**，见 [260513](260513-hermes-soul.md)。
+> 3. **SOUL（是谁/价值观）与 AGENTS.md（项目操作）分开**，见 [260513](260513-hermes-persona-soul.md)。
 > 4. **加 2～3 个你领域里的「好顶回 / 烂顶回」范例**。
 > 5. **每季度重读自主边界**，尤其接入能代你发帖的渠道之后。
 >

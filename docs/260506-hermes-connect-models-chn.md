@@ -1,6 +1,6 @@
 # 寻宝：Hermes Agent ⚕ 接入免费模型
 
-![hermes-agent](../imgs/2026-05-06-180248_hyprshot.png)
+![hermes-agent](../imgs/260506-180248.png)
 
 ## 要点
 
@@ -17,7 +17,7 @@
 
 ## 在 OpenRouter 上挑选模型
 
-![free-openrouter](../imgs/2026-05-06-182351_hyprshot.png)
+![free-openrouter](../imgs/260506-182351.png)
 
 - 最近我在 **Elephant-Alpha** 和 **Nvidia-Nemotron**（`nvidia/nemotron-3-super-120b-a12b:free`）之间换来试。实际用起来 **Nvidia-Nemotron** 挺能打。
 
@@ -31,7 +31,7 @@
 - NousResearch 的 API 门户要先有一笔 **10 美元**额度，才能走免费档那条路（大约 **每天 1000 次请求**这类上限）。只要只用免费模型，就不会烧你付出去的那部分美金。
 - 按我的用法，这够跑技能了——比如在一个 `SKILL.md` 里，按预设主题列表先做 `_search_` 再做 `_scraping_`。
 
-![hermes-insights](../imgs/2026-05-06-180817_hyprshot.png)
+![hermes-insights](../imgs/260506-180817.png)
 
 - 顺便，`/jk line` 的移动跟 `vim` 一样——对我这种用户太加分了 ♥️
 
