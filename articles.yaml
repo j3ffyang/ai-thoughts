@@ -351,12 +351,6 @@ rows:
   - section: drafts
     status: draft
     links:
-      - { label: "browser-cookies", path: "docs/260619-browser-cookies.md", lang: en }
-    desc_en: "Empty outline for a browser-cookies article"
-    desc_zh: "浏览器 Cookie 一文的空提纲"
-  - section: drafts
-    status: draft
-    links:
       - { label: "hermes-cleanup", path: "docs/260731-hermes-cleanup.md", lang: en }
     desc_en: "Command log for opting out of bundled Hermes skills"
     desc_zh: "退出 Hermes 捆绑技能的命令日志"

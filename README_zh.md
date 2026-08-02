@@ -102,7 +102,6 @@
 | [ai-combination（完整 v1.1）](docs/260701-aiCombination.md) · [模板](docs/260701-aiCombination_template.md) | 精炼版 ai-combination 文章背后的完整版与种子模板 |
 | [death 系列](docs/260728-death.md) · [v1.0](docs/260728-death2.md) · [v1.1 视频](docs/260728-death3.md) | 计划中的《死亡》文章与纪录短片技能的 SKILL.md 草稿（墨西哥亡灵节 vs 藏传佛教） |
 | [web-search 简报](docs/260425_webSearch.md) | 基于 web_search 构建简报技能的笔记（OpenClaw/Hermes） |
-| [browser-cookies](docs/260619-browser-cookies.md) | 浏览器 Cookie 一文的空提纲 |
 | [hermes-cleanup](docs/260731-hermes-cleanup.md) | 退出 Hermes 捆绑技能的命令日志 |
 
 ---

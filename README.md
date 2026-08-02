@@ -82,7 +82,6 @@ Earlier versions of articles are kept alongside their final versions so each pie
 | [openclaw-custom-skills (early drafts)](docs/260406-writing-your-own-custom-skill-in-openclaw.md) · [draft 2](docs/260406_writing-custom-skill-openclaw.md) | Earlier iterations of the OpenClaw custom-skills tutorial |
 | [ai-combination (full v1.1)](docs/260701-aiCombination.md) · [template](docs/260701-aiCombination_template.md) | Full-length version and seed template behind the condensed ai-combination article |
 | [web-search newsletter](docs/260425_webSearch.md) | Notes on building a newsletter skill with web_search (OpenClaw/Hermes) |
-| [browser-cookies](docs/260619-browser-cookies.md) | Empty outline for a browser-cookies article |
 | [hermes-cleanup](docs/260731-hermes-cleanup.md) | Command log for opting out of bundled Hermes skills |
 
 ---

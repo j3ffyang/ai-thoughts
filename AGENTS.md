@@ -15,6 +15,20 @@ write-ups — with a YAML-driven README index.
 - **Commit only when asked.** Never commit, amend, or push unless the user
   explicitly requests it. When committing, stage only intended files.
 
+## Filename conventions
+
+Every file in `docs/` and `imgs/` follows a `YYMMDD-slug` pattern: a 6-digit
+date (`YYMMDD`, no `HHMM`, no `YYYY-MM-DD`), a hyphen, then a lowercase slug.
+No spaces.
+
+- **Articles** — `docs/<YYMMDD>-<slug>.md`, e.g. `260313-openclaw-thoughts.md`.
+- **Images** — `imgs/<YYMMDD>-<slug>.<ext>`, e.g. `260313-main.png`; images for
+  an article share the article's `YYMMDD` prefix.
+- **Screenshots / captures with no meaningful name** — keep the capture time
+  as the slug, e.g. `260506-180248.png` (from `2026-05-06-180248_hyprshot.png`).
+- **Renaming** — when a file is renamed, update every `../imgs/<file>` and doc
+  link that referenced the old name.
+
 ## README index workflow
 
 `README.md` and `README_zh.md` are **generated output** — never edit them by
@@ -26,7 +40,7 @@ python scripts/gen_readmes.py
 
 To add or update an article:
 
-1. Drop the file into `docs/` (follow the `YYMMDD-slug` naming).
+1. Drop the file into `docs/` (follow the rules in "Filename conventions").
 2. Add/update a row in `articles.yaml`:
    - English article → link with `lang: en` (+ `desc_en`)
    - Chinese article → link with `lang: zh` (+ `desc_zh`)
