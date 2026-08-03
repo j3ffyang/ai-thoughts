@@ -72,6 +72,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [engageOpenClaw](docs/260420_engageOpenClaw.md) | Reflections after 3 months with OpenClaw and Hermes: orchestrating multi-step AI tasks and per-section image generation workflows |
 | [choose-between-opencode-and-claude-code](docs/260513-chooseCC-openCode.md) | Comparison of OpenCode vs Claude Code for running Claude Opus and other models |
 | [ai-combination](docs/260701-aiCombination2.md) | Optimizing AI usage: from Doubao user to power user — combine OpenRouter, OpenCode, and Hermes/OpenClaw SKILL.md workflows |
+| [opencode-is-best](docs/260802-opencode-is-best.md) | Personal essay on why OpenCode is the best AI agent setup for me — vendor freedom, the big-pickle model, enforced conventions, and unified billing via OpenRouter |
 
 ### VIII. Drafts & Working Notes
 
@@ -79,6 +80,7 @@ Earlier versions of articles are kept alongside their final versions so each pie
 
 | Draft | Notes |
 |---|---|
+| [ollama-to-llamacpp](docs/260803-ollama-to-llamacpp.md) | Pushing the limit of a local LLM on Arch Linux (GPD): switching from Ollama to llama.cpp for finer VRAM control, higher efficiency, and better output quality with qwen2.5:14b |
 | [openclaw-custom-skills (early drafts)](docs/260406-writing-your-own-custom-skill-in-openclaw.md) · [draft 2](docs/260406_writing-custom-skill-openclaw.md) | Earlier iterations of the OpenClaw custom-skills tutorial |
 | [ai-combination (full v1.1)](docs/260701-aiCombination.md) · [template](docs/260701-aiCombination_template.md) | Full-length version and seed template behind the condensed ai-combination article |
 | [web-search newsletter](docs/260425_webSearch.md) | Notes on building a newsletter skill with web_search (OpenClaw/Hermes) |

@@ -91,6 +91,7 @@
 | [opencode-vs-claude-code_chn](docs/260513-chooseCC-operCode-chn.md) | OpenCode 与 Claude Code 对比（简体中文） |
 | [ai-combination](docs/260701-aiCombination2.md) | 优化AI使用方式：从豆包用户到进阶用户——组合 OpenRouter、OpenCode 与 Hermes/OpenClaw 的 SKILL.md 工作流 |
 | [ai-combination_chn](docs/260701-aiCombination2-chn.md) | 豆包用户到 AI 进阶用户：OpenRouter + OpenCode + AI Agent 组合策略（简体中文） |
+| [opencode-is-best](docs/260802-opencode-is-best.md) | 个人随笔：为什么 OpenCode 是我心中最好的 AI 代理方案——免供应商锁定、big-pickle 模型、可执行的规范约定与 OpenRouter 统一计费 |
 
 ### 八、草稿与工作笔记
 
@@ -98,6 +99,7 @@
 
 | 草稿 | 说明 |
 |---|---|
+| [ollama-to-llamacpp](docs/260803-ollama-to-llamacpp.md) | 在Arch Linux（GPD）上把本地LLM推到极限：从Ollama切换到llama.cpp，精细控制VRAM、提升效率与输出质量（qwen2.5:14b） |
 | [openclaw-custom-skills（早期草稿）](docs/260406-writing-your-own-custom-skill-in-openclaw.md) · [草稿2](docs/260406_writing-custom-skill-openclaw.md) · [中文草稿](docs/260406_openclaw-custom-skills-chn.md) | OpenClaw 自定义技能教程的早期迭代版本 |
 | [ai-combination（完整 v1.1）](docs/260701-aiCombination.md) · [模板](docs/260701-aiCombination_template.md) | 精炼版 ai-combination 文章背后的完整版与种子模板 |
 | [death 系列](docs/260728-death.md) · [v1.0](docs/260728-death2.md) · [v1.1 视频](docs/260728-death3.md) | 计划中的《死亡》文章与纪录短片技能的 SKILL.md 草稿（墨西哥亡灵节 vs 藏传佛教） |

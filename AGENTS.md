@@ -35,7 +35,8 @@ No spaces.
 hand. They are produced from the single source of truth `articles.yaml`:
 
 ```bash
-python scripts/gen_readmes.py
+python scripts/gen_readmes.py              # regenerate both READMEs
+python scripts/gen_readmes.py --check      # CI/verification: exit 1 if a README is stale
 ```
 
 To add or update an article:
@@ -44,11 +45,22 @@ To add or update an article:
 2. Add/update a row in `articles.yaml`:
    - English article → link with `lang: en` (+ `desc_en`)
    - Chinese article → link with `lang: zh` (+ `desc_zh`)
-   - Draft/working note → `status: draft` (lands in the drafts section)
+   - Draft/working note → set `section: drafts` (lands in the Drafts & Working
+     Notes section). Keep `status: draft` too — `status` is metadata only
+     (`draft` or `published`) and never affects placement; the generator routes
+     rows by `section`.
    - Optional `label_zh` on a link gives the Chinese display name in
      `README_zh.md` (Chinese articles usually get one).
 3. Run the generator, confirm the diff shows only the intended row, and
    commit `articles.yaml` + both regenerated READMEs together.
+
+**Note:** `gen_readmes.py` prints a warning for every `docs/*.md` not listed in
+`articles.yaml` (e.g. unregistered drafts). That's expected until the row is
+added — it's a reminder, not an error.
+
+The generator also **fails hard** on invalid manifests: unknown `section`,
+missing `desc_zh`, missing `desc_en` on any row with a `lang: en` link, or a
+`path` that points to a missing file. Fix those before committing.
 
 ### EN / ZH routing rule
 
@@ -60,5 +72,6 @@ To add or update an article:
 
 ## Repo conventions
 
-- Docs-only repository: no build, lint, or test steps.
+- Docs-only repository: no build/lint/test pipeline; only the README generator
+  and its `--check` validation mode.
 - Two remotes on `main`: `negtivspace` and `j3ffyang` — push to both.

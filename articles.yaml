@@ -10,7 +10,9 @@
 #   3. Run the generator and commit the regenerated READMEs.
 #
 # - status: "published"  -> article table section
-#           "draft"      -> "Drafts & Working Notes" section
+#           "draft"      -> metadata for Drafts & Working Notes
+# - Draft rows must also use `section: drafts` — the generator routes rows by
+#   `section`, not by `status`.
 # - links[].lang: "en" -> appears in README.md; "zh" -> appears only in README_zh.md
 #   (README_zh.md keeps ALL rows; README.md keeps rows with at least one en link.)
 # - Multiple links in one row are rendered joined by " · " (used to group drafts).
@@ -125,6 +127,12 @@ rows:
       - { label: "ollama-gpu", path: "docs/260716-ollama-gpu.md", lang: en }
     desc_en: "Running Ollama on Arch Linux with AMD GPUs (GPD Win 4) — diagnosing low GPU utilization and switching to the ROCm build"
     desc_zh: "在Arch Linux上以AMD GPU（GPD Win 4）运行Ollama——排查GPU利用率过低并切换到ROCm版本"
+  - section: drafts
+    status: draft
+    links:
+      - { label: "ollama-to-llamacpp", path: "docs/260803-ollama-to-llamacpp.md", lang: en }
+    desc_en: "Pushing the limit of a local LLM on Arch Linux (GPD): switching from Ollama to llama.cpp for finer VRAM control, higher efficiency, and better output quality with qwen2.5:14b"
+    desc_zh: "在Arch Linux（GPD）上把本地LLM推到极限：从Ollama切换到llama.cpp，精细控制VRAM、提升效率与输出质量（qwen2.5:14b）"
 
   # ---------------------------------------------------------- IV. personal
   - section: personal
@@ -318,6 +326,12 @@ rows:
     links:
       - { label: "ai-combination_chn", path: "docs/260701-aiCombination2-chn.md", lang: zh }
     desc_zh: "豆包用户到 AI 进阶用户：OpenRouter + OpenCode + AI Agent 组合策略（简体中文）"
+  - section: cross
+    status: published
+    links:
+      - { label: "opencode-is-best", path: "docs/260802-opencode-is-best.md", lang: en }
+    desc_en: "Personal essay on why OpenCode is the best AI agent setup for me — vendor freedom, the big-pickle model, enforced conventions, and unified billing via OpenRouter"
+    desc_zh: "个人随笔：为什么 OpenCode 是我心中最好的 AI 代理方案——免供应商锁定、big-pickle 模型、可执行的规范约定与 OpenRouter 统一计费"
 
   # ------------------------------------------------------------- VIII. drafts
   - section: drafts
