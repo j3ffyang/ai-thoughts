@@ -32,9 +32,7 @@ All code prioritizes **clarity over cleverness**: simple, readable, portable, an
 
 | Repo | Purpose | Type | Latest |
 |------|---------|------|--------|
-| **[sum2chn](https://github.com/negtivspace/sum2chn)** | Chrome extension: translate & summarize English web pages → Simplified Chinese Markdown | Chrome Ext | `Initial release` (Jul 2026) |
-| **[twitter2md](https://github.com/negtivspace/twitter2md)** | Extract Twitter/X posts as Markdown (Chrome Extension + Node.js CLI) | Chrome Ext + CLI | `Initial release` (May 2026) |
-| **[twitterBookmarkSum](https://github.com/negtivspace/twitterBookmarkSum)** | Chrome extension: summarize tweets on-demand via GPT-4o, save as Markdown | Chrome Ext | `Update README` (Jun 2024) |
+| **[chrome-extensions](https://github.com/negtivspace/chrome-extensions)** | Monorepo of Chrome extensions: [`sum2chn`](https://github.com/negtivspace/chrome-extensions/tree/main/sum2chn) (translate & summarize web pages → Simplified Chinese MD), [`twitter2md`](https://github.com/negtivspace/chrome-extensions/tree/main/twitter2md) (X post → Markdown, ext + Node CLI), [`twitter-bookmark-summarizer`](https://github.com/negtivspace/chrome-extensions/tree/main/twitter-bookmark-summarizer) (summarize tweets via GPT-4o) | Chrome Ext + CLI | `docs: add top-level README and MIT license` (Aug 2026) |
 
 ### Writing & Documentation
 
@@ -71,7 +69,7 @@ BOOKMARKS_FILE = SCRIPT_DIR / "bookmarks.json"
 ---
 
 ### Example: Claude API Integration for Translation
-**Repo:** `sum2chn` | **Language:** JavaScript | **Purpose:** Translate & summarize web pages using Claude Sonnet
+**Repo:** `chrome-extensions/sum2chn` | **Language:** JavaScript | **Purpose:** Translate & summarize web pages using Claude Sonnet
 
 ```javascript
 const CLAUDE_API_URL = 'https://api.anthropic.com/v1/messages';
@@ -95,6 +93,7 @@ Process the provided English web page content and produce a high-quality Chinese
 ## 📈 Activity Timeline
 
 ### Q3 2026 (Current)
+- **Aug 4:** Merged the three Chrome extensions (`sum2chn`, `twitter2md`, `twitter-bookmark-summarizer`) into a single `chrome-extensions` monorepo
 - **Jul 14:** Added Brave browser privacy analysis (bilingual) to `ai-thoughts`
 - **Jul 14:** Polished and committed two blog posts with bilingual README updates
 - **Early Jul:** Releasing v1 of `sum2chn` Chrome extension (translation + summarization)
@@ -179,15 +178,11 @@ cd ai-custom-skills
 
 ### Try a Tool
 ```bash
-# Twitter to Markdown
-git clone https://github.com/negtivspace/twitter2md
-cd twitter2md
+# Chrome extensions monorepo (twitter2md, sum2chn, twitter-bookmark-summarizer)
+git clone https://github.com/negtivspace/chrome-extensions
+cd chrome-extensions/twitter2md
 npm install
-npm run build  # or load extension manually in Chrome
-
-# Web page translator
-git clone https://github.com/negtivspace/sum2chn
-# Follow SETUP.md to load as Chrome extension
+npm run build  # or load the extension manually in Chrome
 ```
 
 ### Read Articles
@@ -205,4 +200,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** July 14, 2026 | Tracking: 8 active repos, 59 articles, 10+ published skills
+**Last Updated:** August 4, 2026 | Tracking: 6 active repos, 59 articles, 10+ published skills
