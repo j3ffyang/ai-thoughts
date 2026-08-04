@@ -23,6 +23,9 @@ rewriting image references to match the blog's conventions.
   guess, propose candidates, or sync articles on your own.
 - When the user names an article, still confirm the plan (target category,
   draft/featured, tags) before writing to the blog repo.
+- **Never commit or push without explicit user approval.** After writing the
+  post, ask for go-ahead first; only then stage the post + new images, commit,
+  and push. The blog repo (`astro_journal`) has a single remote `origin`.
 
 ## Blog conventions (source of truth: astro_journal/AGENTS.md)
 
@@ -97,7 +100,11 @@ rewriting image references to match the blog's conventions.
    `modDatetime` is optional and only set when updating an existing post.
 9. **Write the post** to `src/data/blog/<category>/<filename>` with the
    frontmatter followed by the polished body.
-10. **Report** `postPath` and `imagesCopied` to the user.
+ 10. **Report** `postPath` and `imagesCopied` to the user.
+ 11. **Commit & push (only after approval):** ask the user explicitly whether
+     to commit. On approval, stage the post and any new images in
+     `astro_journal`, commit with a concise message, and push to `origin`.
+     Without approval, leave the changes uncommitted and say so.
 
 ## Verification
 
@@ -109,6 +116,8 @@ rewriting image references to match the blog's conventions.
   `src/assets/images/` (verify with a glob/ls).
 - No `../imgs/` references remain in the post.
 - No hardcoded `/posts/...` links were introduced.
+- If committed: the post and new images are staged together, and `origin/main`
+  is up to date.
 - Optional: run `pnpm run astro -- check` in the blog repo to confirm no
   content/config errors.
 
