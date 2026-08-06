@@ -51,6 +51,13 @@ rewriting image references to match the blog's conventions.
   Optional. Default `tech`.
 - `draft` — `true`/`false`. Optional. Default `false` (published).
 - `featured` — `true`/`false`. Optional. Default `false`.
+  - `true`: homepage-worthy — a signature/opinion essay, deep dive, or
+    milestone post that defines the blog's voice. Use sparingly (aim ≤ 20%
+    of posts) so the homepage stays curated.
+  - `false`: everything else — how-tos, quick notes, release/changelog
+    posts, and `*-chn.md` translations of an already-published post.
+  - When the user doesn't specify, ask which it is (per Procedure step 2);
+    never auto-pick `true`.
 - `tags` — List of lowercase hyphen-separated tags. Optional. Default derived
   from the article topic.
 

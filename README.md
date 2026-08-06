@@ -64,6 +64,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [hermes-persona-soul](docs/260513-hermes-persona-soul.md) | Practical guide to configuring Hermes Agent's SOUL.md for personality customization |
 | [hermes-perftips](docs/260518-hermes-perftips.md) | Hermes Agent Tips & Best Practices Summary |
 | [hermes-backup](docs/260528-hermes-backup.md) | Guide to backing up Hermes Agent data using the built-in CLI — full snapshots, quick backups, and restore procedures |
+| [hermes-cleanup](docs/260731-hermes-cleanup.md) | Guide to cleaning up bloated skills & plugins in Hermes Agent — list enabled skills, opt out of bundled skills, and revert anytime |
 
 ### VII. Cross-Platform & Comparative
 
@@ -84,7 +85,6 @@ Earlier versions of articles are kept alongside their final versions so each pie
 | [openclaw-custom-skills (early drafts)](docs/260406-writing-your-own-custom-skill-in-openclaw.md) · [draft 2](docs/260406_writing-custom-skill-openclaw.md) | Earlier iterations of the OpenClaw custom-skills tutorial |
 | [ai-combination (full v1.1)](docs/260701-aiCombination.md) · [template](docs/260701-aiCombination_template.md) | Full-length version and seed template behind the condensed ai-combination article |
 | [web-search newsletter](docs/260425_webSearch.md) | Notes on building a newsletter skill with web_search (OpenClaw/Hermes) |
-| [hermes-cleanup](docs/260731-hermes-cleanup.md) | Command log for opting out of bundled Hermes skills |
 
 ---
 

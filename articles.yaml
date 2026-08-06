@@ -296,6 +296,13 @@ rows:
     links:
       - { label: "hermes-backup_chn", path: "docs/260528-hermes-backup-chn.md", lang: zh }
     desc_zh: "备份 Hermes Agent 的中文指南，涵盖全量快照、快速备份与恢复步骤（简体中文）"
+  - section: hermes
+    status: published
+    links:
+      - { label: "hermes-cleanup", path: "docs/260731-hermes-cleanup.md", lang: en }
+      - { label: "hermes-cleanup_chn", path: "docs/260731-hermes-cleanup-chn.md", lang: zh }
+    desc_en: "Guide to cleaning up bloated skills & plugins in Hermes Agent — list enabled skills, opt out of bundled skills, and revert anytime"
+    desc_zh: "清理 Hermes Agent 臃肿技能与插件的操作指南——查看已启用技能、退出内置技能、随时可回退"
 
   # -------------------------------------------------------------- VII. cross
   - section: cross
@@ -330,6 +337,7 @@ rows:
     status: published
     links:
       - { label: "opencode-is-best", path: "docs/260802-opencode-is-best.md", lang: en }
+      - { label: "opencode-is-best_chn", path: "docs/260802-opencode-is-best-chn.md", lang: zh }
     desc_en: "Personal essay on why OpenCode is the best AI agent setup for me — vendor freedom, the big-pickle model, enforced conventions, and unified billing via OpenRouter"
     desc_zh: "个人随笔：为什么 OpenCode 是我心中最好的 AI 代理方案——免供应商锁定、big-pickle 模型、可执行的规范约定与 OpenRouter 统一计费"
 
@@ -362,9 +370,3 @@ rows:
       - { label: "web-search newsletter", path: "docs/260425_webSearch.md", lang: en, label_zh: "web-search 简报" }
     desc_en: "Notes on building a newsletter skill with web_search (OpenClaw/Hermes)"
     desc_zh: "基于 web_search 构建简报技能的笔记（OpenClaw/Hermes）"
-  - section: drafts
-    status: draft
-    links:
-      - { label: "hermes-cleanup", path: "docs/260731-hermes-cleanup.md", lang: en }
-    desc_en: "Command log for opting out of bundled Hermes skills"
-    desc_zh: "退出 Hermes 捆绑技能的命令日志"

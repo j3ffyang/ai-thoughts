@@ -8,7 +8,7 @@ Therefore I decided to download a slightly bigger model to cover my daily docume
 
 ## The Reason of Switching to `llama.cpp` from `ollama`
 
-The performance and efficiency would be tremendously increased. There is more detailed explanation on the web; I'll just summarize the main points here
+The quality and efficiency would be tremendously increased. There is more detailed explanation on the web; I'll just summarize the main points here
 
 - Granular Hardware Control: llama.cpp lets you manually offload the exact number of model layers to maximize your shared AMD APU VRAM without playing it "too safe" like Ollama's automatic engine.
 - Peak Resource Efficiency: It eliminates background daemon overhead by running as a single, lightweight C++ binary that exits completely, saving battery and memory on your GPD device.

@@ -81,6 +81,7 @@
 | [hermes-perftips_chn](docs/260518-hermes-perftips-chn.md) | Hermes 使用技巧与最佳实践（简体中文） |
 | [hermes-backup](docs/260528-hermes-backup.md) | 使用Hermes内置CLI备份数据的操作指南——全量快照、快速备份与恢复流程 |
 | [hermes-backup_chn](docs/260528-hermes-backup-chn.md) | 备份 Hermes Agent 的中文指南，涵盖全量快照、快速备份与恢复步骤（简体中文） |
+| [hermes-cleanup](docs/260731-hermes-cleanup.md) · [hermes-cleanup_chn](docs/260731-hermes-cleanup-chn.md) | 清理 Hermes Agent 臃肿技能与插件的操作指南——查看已启用技能、退出内置技能、随时可回退 |
 
 ### 七、跨平台与比较
 
@@ -91,7 +92,7 @@
 | [opencode-vs-claude-code_chn](docs/260513-chooseCC-operCode-chn.md) | OpenCode 与 Claude Code 对比（简体中文） |
 | [ai-combination](docs/260701-aiCombination2.md) | 优化AI使用方式：从豆包用户到进阶用户——组合 OpenRouter、OpenCode 与 Hermes/OpenClaw 的 SKILL.md 工作流 |
 | [ai-combination_chn](docs/260701-aiCombination2-chn.md) | 豆包用户到 AI 进阶用户：OpenRouter + OpenCode + AI Agent 组合策略（简体中文） |
-| [opencode-is-best](docs/260802-opencode-is-best.md) | 个人随笔：为什么 OpenCode 是我心中最好的 AI 代理方案——免供应商锁定、big-pickle 模型、可执行的规范约定与 OpenRouter 统一计费 |
+| [opencode-is-best](docs/260802-opencode-is-best.md) · [opencode-is-best_chn](docs/260802-opencode-is-best-chn.md) | 个人随笔：为什么 OpenCode 是我心中最好的 AI 代理方案——免供应商锁定、big-pickle 模型、可执行的规范约定与 OpenRouter 统一计费 |
 
 ### 八、草稿与工作笔记
 
@@ -104,7 +105,6 @@
 | [ai-combination（完整 v1.1）](docs/260701-aiCombination.md) · [模板](docs/260701-aiCombination_template.md) | 精炼版 ai-combination 文章背后的完整版与种子模板 |
 | [death 系列](docs/260728-death.md) · [v1.0](docs/260728-death2.md) · [v1.1 视频](docs/260728-death3.md) | 计划中的《死亡》文章与纪录短片技能的 SKILL.md 草稿（墨西哥亡灵节 vs 藏传佛教） |
 | [web-search 简报](docs/260425_webSearch.md) | 基于 web_search 构建简报技能的笔记（OpenClaw/Hermes） |
-| [hermes-cleanup](docs/260731-hermes-cleanup.md) | 退出 Hermes 捆绑技能的命令日志 |
 
 ---
 
