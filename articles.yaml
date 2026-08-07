@@ -158,6 +158,13 @@ rows:
       - { label: "dcs-joystick-tuning", path: "docs/260620-dcs-joystick-tuning.md", lang: en }
     desc_en: "Beginner's guide to DCS World with a VKB Gladiator NXT EVO joystick and a no-numpad keyboard — game-mode flying, keybindings, and axis tuning"
     desc_zh: "DCS World新手入门指南：VKB Gladiator NXT EVO摇杆 + 无数字键盘的键位映射、游戏模式飞行与摇杆轴调校"
+  - section: personal
+    status: published
+    links:
+      - { label: "arch-hyprland-gpd-win4-egpu", path: "docs/260807-amd.md", lang: en }
+      - { label: "arch-hyprland-gpd-win4-egpu_chn", path: "docs/260807-amd-chn.md", lang: zh }
+    desc_en: "Arch Linux + Hyprland on GPD Win4 with dual AMD GPUs — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks"
+    desc_zh: "GPD Win4 上 Arch Linux + Hyprland 双 AMD GPU（iGPU + eGPU，OCuLink 连接 RX 7600M XT）渲染卸载指南——验证命令、稳定 DRM 符号链接与调整日志"
 
   # ------------------------------------------------------------ V. openclaw
   - section: openclaw

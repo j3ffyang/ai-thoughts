@@ -47,6 +47,7 @@
 | [brave-browser-privacy](docs/260706-brave-post.md) | 为什么我选择Brave的深度分析：本地密钥管理、Shields隐私防护、WebRTC控制与Tor集成（英文） |
 | [brave-browser-privacy](docs/260706-brave-post-chn.md) | 為什麼我開始使用Brave的深度分析：本地密鑰管理、隱私防護、WebRTC控制及Tor整合（繁體中文） |
 | [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | DCS World新手入门指南：VKB Gladiator NXT EVO摇杆 + 无数字键盘的键位映射、游戏模式飞行与摇杆轴调校 |
+| [arch-hyprland-gpd-win4-egpu](docs/260807-amd.md) · [arch-hyprland-gpd-win4-egpu_chn](docs/260807-amd-chn.md) | GPD Win4 上 Arch Linux + Hyprland 双 AMD GPU（iGPU + eGPU，OCuLink 连接 RX 7600M XT）渲染卸载指南——验证命令、稳定 DRM 符号链接与调整日志 |
 
 ### 五、OpenClaw 🦞 平台
 

@@ -40,6 +40,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [immutable-os-strategy](docs/260622-immutable-os.md) | Personal strategy on "immutable" OS choices — why a quarter-century Linux power user sticks with native Arch Linux and Debian LTS over Bazzite/Silverblue |
 | [brave-browser-privacy](docs/260706-brave-post.md) | Deep dive into why I switched to Brave: local keychain, Shields, WebRTC control, Tor integration, and real-world privacy difference |
 | [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | Beginner's guide to DCS World with a VKB Gladiator NXT EVO joystick and a no-numpad keyboard — game-mode flying, keybindings, and axis tuning |
+| [arch-hyprland-gpd-win4-egpu](docs/260807-amd.md) | Arch Linux + Hyprland on GPD Win4 with dual AMD GPUs — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks |
 
 ### V. OpenClaw Platform 🦞
 
