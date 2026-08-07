@@ -55,3 +55,6 @@ hermes skills opt-in --sync   # re-seed everything
 ```
 
 This removes the marker and re-seeds the bundled skills, bringing back the core set if you ever change your mind.
+
+btw, i use arch 
+![Arch Linux](https://shields.io)
