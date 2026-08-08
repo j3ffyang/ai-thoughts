@@ -59,7 +59,7 @@ rows:
   - section: solo
     status: published
     links:
-      - { label: "timeless-allure-motorcycle-riding", path: "docs/260323-timeless-allure-motorcycle-riding.md", lang: zh }
+      - { label: "timeless-allure-motorcycle-riding", path: "docs/260323-timeless-allure-motorcycle-riding-chn.md", lang: zh }
     desc_zh: "摩托车骑行主题文章中文重写版，附各章节配图"
   - section: solo
     status: published

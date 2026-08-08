@@ -16,7 +16,7 @@
 |---|---|
 | [一人公司](docs/260317-illustrated.md) | 借助AI创办一人企业的图文指南——六个步骤、推荐技术栈与90天路线图（中文） |
 | [the-timeless-allure-of-motorcycle-riding](docs/260323-the-timeless-allure-of-motorcycle-riding.md) | 摩托车文化、历史与骑行风格英文文章 |
-| [timeless-allure-motorcycle-riding](docs/260323-timeless-allure-motorcycle-riding.md) | 摩托车骑行主题文章中文重写版，附各章节配图 |
+| [timeless-allure-motorcycle-riding](docs/260323-timeless-allure-motorcycle-riding-chn.md) | 摩托车骑行主题文章中文重写版，附各章节配图 |
 | [engage-ai](docs/260420-engage-ai.md) | Claude工具使用笔记与面向开发者的AI效率提升技巧 |
 | [tech-conversation](docs/260521-tech-interview.md) | 技术问答对话（非面试）：AI Agent 日常工作流——思维模式、环境准备、技能、提示词、工作方式与安全 |
 | [tech-conversation](docs/260521-tech-interview.zh-CN.md) | 技术问答对话（非面试）：AI Agent 日常工作流（简体中文） |
