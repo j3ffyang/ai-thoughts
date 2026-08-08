@@ -41,7 +41,7 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Repo | Purpose | Articles | Latest |
 |------|---------|----------|--------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 64 docs | `essay: expand item 8 on terminal transparency and my wife's adoption` (Aug 2026) |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 64 docs | `ci: inline ClawHub publish to treat pending-publication as success` (Aug 2026) |
 
 ### Tools & Extensions
 
@@ -94,7 +94,7 @@ def glue(a: str, b: str) -> str:
 ---
 
 ### Example: Auto-Publish Skills to ClawHub with GitHub Actions
-**Repo:** `ai-thoughts` | **Language:** YAML | **Purpose:** Publish `.opencode/skills/` to ClawHub on every push — no local CLI
+**Repo:** `ai-thoughts` | **Language:** YAML + Python | **Purpose:** Publish `.opencode/skills/` to ClawHub on every push — no local CLI
 
 ```yaml
 name: ClawHub Skill Sync
@@ -103,23 +103,36 @@ on:
     branches: [main]
     paths:
       - ".opencode/skills/**"
+      - ".github/workflows/clawhub-skill-sync.yml"
   workflow_dispatch:
 
 jobs:
   publish:
-    if: github.repository_owner == 'j3ffyang'
+    if: github.event_name != 'pull_request' && github.repository_owner == 'j3ffyang'
+    runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write
-    uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v0.23.3
-    with:
-      root: .opencode/skills
-      dry_run: false
-    secrets:
-      clawhub_token: ${{ secrets.clawhub_token }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: oven-sh/setup-bun@<sha>
+        with:
+          bun-version: 1.3.10
+      - name: Checkout ClawHub CLI
+        uses: actions/checkout@v7.0.1
+        with:
+          repository: openclaw/clawhub
+          ref: v0.23.3
+          path: clawhub-source
+      - name: Install ClawHub CLI dependencies
+        working-directory: clawhub-source
+        run: bun install --frozen-lockfile
+      - name: Publish skills to ClawHub
+        env:
+          CLAWHUB_TOKEN: ${{ secrets.clawhub_token }}
+        run: python3 scripts/clawhub_publish.py
 ```
 
-**Why it matters:** A full CI publish pipeline — the `repository_owner` guard stops the two remotes from double-publishing the same skill to one ClawHub account.
+**Why it matters:** Publishing runs the ClawHub CLI directly instead of the reusable workflow, so the five real statuses the CLI can return — `unchanged`, `would-publish`, `submitted`, `published`, `pending-publication` — are all treated as success. (The upstream reusable workflow only maps three of them, so a successful async publish showed up as a red ✗.) The `repository_owner` guard still stops the two remotes from double-publishing to one ClawHub account.
 
 ---
 
