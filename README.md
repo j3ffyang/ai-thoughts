@@ -75,6 +75,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [choose-between-opencode-and-claude-code](docs/260513-chooseCC-openCode.md) | Comparison of OpenCode vs Claude Code for running Claude Opus and other models |
 | [ai-combination](docs/260701-aiCombination2.md) | Optimizing AI usage: from Doubao user to power user — combine OpenRouter, OpenCode, and Hermes/OpenClaw SKILL.md workflows |
 | [opencode-is-best](docs/260802-opencode-is-best.md) | Personal essay on why OpenCode is the best AI agent setup for me — vendor freedom, the big-pickle model, enforced conventions, and unified billing via OpenRouter |
+| [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) | A personal playbook from real practice — auto-publishing skills to ClawHub across three repos, and what it taught about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent |
 
 ### VIII. Drafts & Working Notes
 
