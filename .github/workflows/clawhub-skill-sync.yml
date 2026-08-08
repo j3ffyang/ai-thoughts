@@ -1,0 +1,29 @@
+name: ClawHub Skill Sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".opencode/skills/**"
+      - ".github/workflows/clawhub-skill-sync.yml"
+  pull_request:
+    paths:
+      - ".opencode/skills/**"
+  workflow_dispatch:
+
+jobs:
+  dry-run:
+    if: github.event_name == 'pull_request'
+    uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v1
+    with:
+      root: .opencode/skills
+      dry_run: true
+
+  publish:
+    if: github.event_name != 'pull_request'
+    uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v1
+    with:
+      root: .opencode/skills
+      dry_run: false
+    secrets:
+      clawhub_token: ${{ secrets.clawhub_token }}
