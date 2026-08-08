@@ -133,14 +133,10 @@
 
 ## Image Prompts
 
-**[Hero - image:0]**
-Clean flat vector illustration, minimal isometric, software-engineering diagram vibe. A solo entrepreneur working at a modern desk with multiple screens showing AI tools, automation flows, and business dashboards. Robot assistant helping. White background with subtle grid. Professional, tech-forward, empowering. 16:9 horizontal.
+**[Hero - image:0]** Clean flat vector illustration, minimal isometric, software-engineering diagram vibe. A solo entrepreneur working at a modern desk with multiple screens showing AI tools, automation flows, and business dashboards. Robot assistant helping. White background with subtle grid. Professional, tech-forward, empowering. 16:9 horizontal.
 
-**[Section 1 - image:1]**
-Clean flat vector illustration, minimal isometric. Visualizing MVP building process: wireframes, landing page mockups, no-code tools interface. Developer assembling building blocks. White background with subtle grid. 16:9.
+**[Section 1 - image:1]** Clean flat vector illustration, minimal isometric. Visualizing MVP building process: wireframes, landing page mockups, no-code tools interface. Developer assembling building blocks. White background with subtle grid. 16:9.
 
-**[Section 2 - image:2]**
-Clean flat vector illustration, minimal isometric. AI content generation concept: marketing materials, social media posts, email sequences floating around a laptop. Content pipeline visualization. White background with subtle grid. 16:9.
+**[Section 2 - image:2]** Clean flat vector illustration, minimal isometric. AI content generation concept: marketing materials, social media posts, email sequences floating around a laptop. Content pipeline visualization. White background with subtle grid. 16:9.
 
-**[Section 3 - image:3]**
-Clean flat vector illustration, minimal isometric. Automation workflow: connected nodes showing customer journey from visitor to payment. CRM, chatbot, email automation icons. White background with subtle grid. 16:9.
+**[Section 3 - image:3]** Clean flat vector illustration, minimal isometric. Automation workflow: connected nodes showing customer journey from visitor to payment. CRM, chatbot, email automation icons. White background with subtle grid. 16:9.

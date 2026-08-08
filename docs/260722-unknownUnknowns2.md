@@ -11,17 +11,13 @@ This reminds me of a framework that's stuck with me ever since—the idea that k
 
 ## The Four Types of Knowledge
 
-**1. Known Knowns**
-We both know what an apple is. It's red or green, crunchy, sweet or sour. When I say "apple," we're on the same page. This is simple shared knowledge—no surprises here.
+**1. Known Knowns** We both know what an apple is. It's red or green, crunchy, sweet or sour. When I say "apple," we're on the same page. This is simple shared knowledge—no surprises here.
 
-**2. Known Unknowns**
-We know we don't know something. UFOs, for example. We've seen the footage, heard the reports, but we can't explain them. We admit our ignorance. It's uncomfortable, but at least we're aware of the gap.
+**2. Known Unknowns** We know we don't know something. UFOs, for example. We've seen the footage, heard the reports, but we can't explain them. We admit our ignorance. It's uncomfortable, but at least we're aware of the gap.
 
-**3. Unknown Knowns**
-This one's strange. It's the stuff you know but don't *know* you know. Like hidden skills or buried instincts. You normally run 100 meters in 20 seconds—nothing impressive. But then you encounter a bear in the forest, and suddenly you're covering the same distance in 15 seconds. Your body knew something your mind didn't. It's fascinating, but not the point of this piece.
+**3. Unknown Knowns** This one's strange. It's the stuff you know but don't *know* you know. Like hidden skills or buried instincts. You normally run 100 meters in 20 seconds—nothing impressive. But then you encounter a bear in the forest, and suddenly you're covering the same distance in 15 seconds. Your body knew something your mind didn't. It's fascinating, but not the point of this piece.
 
-**4. Unknown Unknowns**
-This is the big one. **The territory you don't even know exists.** You can't seek what you can't name. You can't question what you can't imagine. **These are the blind spots that shape our lives without us ever realizing it.**
+**4. Unknown Unknowns** This is the big one. **The territory you don't even know exists.** You can't seek what you can't name. You can't question what you can't imagine. **These are the blind spots that shape our lives without us ever realizing it.**
 
 ## Why This Matters More Than You Think
 

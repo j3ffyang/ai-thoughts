@@ -38,11 +38,9 @@ OpenClaw agents can execute powerful actions on the host. That design is useful 
 
 The two biggest risk multipliers are:
 
-1. **Publicly exposed services**  
-   If gateway/API ports are reachable from the internet, attackers can scan, probe, and in some cases execute workflows or abuse control channels.
+1. **Publicly exposed services** If gateway/API ports are reachable from the internet, attackers can scan, probe, and in some cases execute workflows or abuse control channels.
 
-2. **Untrusted skills**  
-   Skills sourced from public hubs may include obfuscated or malicious behavior (credential theft, command downloaders, exfiltration logic). Even when removed, variants can reappear.
+2. **Untrusted skills** Skills sourced from public hubs may include obfuscated or malicious behavior (credential theft, command downloaders, exfiltration logic). Even when removed, variants can reappear.
 
 Treat OpenClaw as you would any high-privilege remote execution system: assume compromise is possible unless strict controls are in place.
 
@@ -59,8 +57,7 @@ In practice, compromise often starts with either a malicious skill install or an
 
 ## Real Incidents and Attack Chains
 
-- **ClawHub Malicious Activity (January-February 2026)**  
-  Dozens to hundreds of skills were reported with malicious payload patterns, including encoded obfuscation, fake dependencies, and unencrypted HTTP exfiltration.
+- **ClawHub Malicious Activity (January-February 2026)** Dozens to hundreds of skills were reported with malicious payload patterns, including encoded obfuscation, fake dependencies, and unencrypted HTTP exfiltration.
 
   ```bash
   # Clone skills repo for audit
@@ -80,8 +77,7 @@ In practice, compromise often starts with either a malicious skill install or an
   cp -r ~/openclaw-skills ~/openclaw-skills.bak
   ```
 
-- **Moltbook Leak Case (February 2026)**  
-  A widely shared report described config/API key exfiltration behavior via webhook-like outbound channels.
+- **Moltbook Leak Case (February 2026)** A widely shared report described config/API key exfiltration behavior via webhook-like outbound channels.
 
   ```bash
   # Scan local OpenClaw logs for exfil (Discord, external APIs)
@@ -95,8 +91,7 @@ In practice, compromise often starts with either a malicious skill install or an
   grep -r "api_key\|token\|webhook" ~/.openclaw/config.yaml
   ```
 
-- **Port Exposure and Remote Execution (Persistent Issue)**  
-  Publicly exposed defaults continue to be one of the most common root causes.
+- **Port Exposure and Remote Execution (Persistent Issue)** Publicly exposed defaults continue to be one of the most common root causes.
 
   ```bash
   # On Ubuntu/Debian (Linux)

@@ -18,7 +18,7 @@
 
 ## 3. Skills（个人看法）
 - 大多时候自己写
-- 使用别人的可以去 https://clawhub.ai、https://www.skills.sh、https://hermes-agent.nousresearch.com/docs/skills 
+- 使用别人的可以去 https://clawhub.ai、https://www.skills.sh、https://hermes-agent.nousresearch.com/docs/skills
 - 装了的 Skill 到底干啥，搞明白再用
 - skills 和 plugins **按需装** — 性能和安全的考虑。**Skills**：AI 自己决定啥时候用。**Plugins**：自动挂钩（比如邮件），不用 AI 选
 - **特别长的 Skill 文件** 多留个心眼；难审，也更容易藏你不想要的东西

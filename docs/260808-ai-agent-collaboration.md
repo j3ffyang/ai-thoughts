@@ -20,6 +20,50 @@ Every sub-repo has **two remotes**: `j3ffyang` (my personal GitHub account) and 
 
 The goal: when I push a change to a `SKILL.md`, a GitHub Action should detect what changed and publish the new or updated skill to ClawHub under my account — automatically, idempotently, and without me running any local tool.
 
+## The thought-flow: a high-level procedure for how we work together
+
+Here is the part of this essay worth reading first. Over several sessions, a **procedure emerged** for how we share ideas and decide — sometimes with disagreement, mostly in agreement — how and when to generate AGENTS.md and SKILL.md. It is not a rigid process. It is an **architecture of thought-flow**, a loop that converges. Keep it in mind as you read the practice that follows — every step of the story is a working example of one of these stages.
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│                                                              │
+│   1. INTENT         ──  what do I want? state it plainly     │
+│        │                                                   │
+│   2. CONSTRAINTS    ──  what must not change? boundaries,    │
+│        │              tools, remotes, conventions, approvals │
+│        │                                                   │
+│   3. PROPOSE        ──  agent drafts a plan + options +      │
+│        │              recommendation                        │
+│        │                                                   │
+│   4. PRESS          ──  I push back where it conflicts       │
+│        │              with my constraints; we negotiate       │
+│        │                                                   │
+│   5. PRACTICE       ──  approve, build, run, observe          │
+│        │              (this is where the real failures        │
+│        │              and the real boundary problems live)    │
+│        │                                                   │
+│   6. INVESTIGATE    ──  when it fails, verify against the     │
+│        │              real system before blaming the tool     │
+│        │                                                   │
+│   7. CODIFY         ──  distill the practice into            │
+│        │              AGENTS.md rules and SKILL.md steps      │
+│        │                                                   │
+│   8. BOUNDARY-CHECK ──  is this the right repo / worktree /   │
+│        │              scope for this knowledge? resize if not │
+│        │                                                   │
+│   └────────────── loop ── practice again, refine again ──────┘
+```
+
+A few notes on each stage, because the loop only works if the stages are understood:
+
+- **Intent (1) and Constraints (2) are the most expensive stages.** Everything downstream is cheaper. Spending ten minutes stating constraints saves an hour of rework. In this project, the phrase "no local installs" saved me from a whole class of problems, and "push to both remotes" created the collision that "publish from exactly one remote" then fixed.
+- **Propose (3) should always include options and a recommendation.** A plan with only one path is a demand, not a proposal. I want to see the tradeoffs so I can disagree meaningfully.
+- **Press (4) is not conflict; it is negotiation.** Disagreement is where the constraints I hold meet the system knowledge the agent holds. The `astro-sync` outcome — neither the agent's first idea nor mine — is the template for how I want disagreement to end.
+- **Practice (5) is where the loop is honest.** No plan survives contact with a real registry, real secrets, and two GitHub accounts. The failures at this stage are the ones that teach.
+- **Investigate (6) is the discipline that separates debugging from guessing.** Read the source. Hit the API. Verify the claim against the live system. This is what turned "the workflow is broken" into "the workflow has a race I designed."
+- **Codify (7) is the payoff.** The moment a procedure works twice, it becomes a candidate for a SKILL.md. The moment a rule is true for a whole repo, it becomes an AGENTS.md entry.
+- **Boundary-check (8) is the meta-skill.** Ask: does this knowledge belong at the parent level, at the sub-repo level, or nowhere? Too broad, and it dilutes. Too narrow, and it fragments. The worktree is my natural unit for AGENTS.md; the recurring procedure is my natural unit for SKILL.md.
+
 ## What actually happened, step by step
 
 ### Step 1 — the plan was approved, the boundary was set
@@ -190,50 +234,6 @@ I will say the obvious thing plainly: I love this tool in the terminal. The TUI 
 Part of the appeal is that the terminal **shows its work.** Every message the agent produces is printed out in front of me — the tool calls it runs, the reasoning it goes through, the thought flow and the logic it followed. I can watch the AI think, not just read its conclusions. And because I live on Linux, the error messages are mostly native system errors — `No such file or directory`, `error: failed to push some refs`, `startup_failure`, exit codes — which make instant sense to me. When something fails, I can see *exactly* what happened, no translation layer, no friendly-but-vague wrapper hiding the cause. To me, that transparency is the whole difference between trusting a tool and merely using it.
 
 I know the terminal is not for everyone. My wife, for example, complained the moment she saw it: it looked too much like a developer machine, and by default a terminal seemed to bring nothing but difficulty. Fair enough — I did not argue with her about it. What happened instead was slower and better: after several weeks of practice, with my help along the way, she started using OpenCode with `big-pickle` too. She used to spend most of her time with ChatGPT in a browser. Now she runs the terminal version as well. Not because I converted her with a sales pitch, but because the same features I value — the clarity of seeing exactly what is happening, the freedom from a subscription, the plain text workflow — worked for her once the initial wall of unfamiliarity came down. It took practice, but it took practice *with someone*, which is exactly how any skill is really learned.
-
-## The thought-flow: a high-level procedure for how we work together
-
-Finally, the part I was asked to write down explicitly. Over several sessions, a **procedure emerged** for how we share ideas and decide — sometimes with disagreement, mostly in agreement — how and when to generate AGENTS.md and SKILL.md. It is not a rigid process. It is an **architecture of thought-flow**, a loop that converges.
-
-```
-┌──────────────────────────────────────────────────────────────┐
-│                                                              │
-│   1. INTENT         ──  what do I want? state it plainly     │
-│        │                                                   │
-│   2. CONSTRAINTS    ──  what must not change? boundaries,    │
-│        │              tools, remotes, conventions, approvals │
-│        │                                                   │
-│   3. PROPOSE        ──  agent drafts a plan + options +      │
-│        │              recommendation                        │
-│        │                                                   │
-│   4. PRESS          ──  I push back where it conflicts       │
-│        │              with my constraints; we negotiate       │
-│        │                                                   │
-│   5. PRACTICE       ──  approve, build, run, observe          │
-│        │              (this is where the real failures        │
-│        │              and the real boundary problems live)    │
-│        │                                                   │
-│   6. INVESTIGATE    ──  when it fails, verify against the     │
-│        │              real system before blaming the tool     │
-│        │                                                   │
-│   7. CODIFY         ──  distill the practice into            │
-│        │              AGENTS.md rules and SKILL.md steps      │
-│        │                                                   │
-│   8. BOUNDARY-CHECK ──  is this the right repo / worktree /   │
-│        │              scope for this knowledge? resize if not │
-│        │                                                   │
-│   └────────────── loop ── practice again, refine again ──────┘
-```
-
-A few notes on each stage, because the loop only works if the stages are understood:
-
-- **Intent (1) and Constraints (2) are the most expensive stages.** Everything downstream is cheaper. Spending ten minutes stating constraints saves an hour of rework. In this project, the phrase "no local installs" saved me from a whole class of problems, and "push to both remotes" created the collision that "publish from exactly one remote" then fixed.
-- **Propose (3) should always include options and a recommendation.** A plan with only one path is a demand, not a proposal. I want to see the tradeoffs so I can disagree meaningfully.
-- **Press (4) is not conflict; it is negotiation.** Disagreement is where the constraints I hold meet the system knowledge the agent holds. The `astro-sync` outcome — neither the agent's first idea nor mine — is the template for how I want disagreement to end.
-- **Practice (5) is where the loop is honest.** No plan survives contact with a real registry, real secrets, and two GitHub accounts. The failures at this stage are the ones that teach.
-- **Investigate (6) is the discipline that separates debugging from guessing.** Read the source. Hit the API. Verify the claim against the live system. This is what turned "the workflow is broken" into "the workflow has a race I designed."
-- **Codify (7) is the payoff.** The moment a procedure works twice, it becomes a candidate for a SKILL.md. The moment a rule is true for a whole repo, it becomes an AGENTS.md entry.
-- **Boundary-check (8) is the meta-skill.** Ask: does this knowledge belong at the parent level, at the sub-repo level, or nowhere? Too broad, and it dilutes. Too narrow, and it fragments. The worktree is my natural unit for AGENTS.md; the recurring procedure is my natural unit for SKILL.md.
 
 ## The failure catalog — the raw material of the playbook
 

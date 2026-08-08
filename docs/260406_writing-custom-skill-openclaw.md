@@ -6,7 +6,7 @@ Building a custom skill for OpenClaw turns a repeated workflow into a single, re
 
 ## 1. Start with the goal, not the implementation
 
-Before you write code or a manifest, write a one-page description of the problem you want the skill to solve. Put it in plain English and keep it focused. For example, my friend — who runs several convenience stores — wanted a repeatable way to generate store-specific daily checklists and reorder suggestions. The goal wasn’t "write a script"; the goal was: "reduce morning prep time and avoid stockouts." 
+Before you write code or a manifest, write a one-page description of the problem you want the skill to solve. Put it in plain English and keep it focused. For example, my friend — who runs several convenience stores — wanted a repeatable way to generate store-specific daily checklists and reorder suggestions. The goal wasn’t "write a script"; the goal was: "reduce morning prep time and avoid stockouts."
 
 Capture: who benefits, what success looks like, and what inputs are required. This single markdown becomes the canonical source-of-truth you’ll use to design the SKILL.md.
 

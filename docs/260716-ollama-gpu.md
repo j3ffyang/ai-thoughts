@@ -2,7 +2,7 @@
 
 ## Objective
 
-- arch linux + hyprland on gpd win4 handheld (powerful beyond my initial expectation) with amd gpu + an external amd gpu. so 2 gpu 
+- arch linux + hyprland on gpd win4 handheld (powerful beyond my initial expectation) with amd gpu + an external amd gpu. so 2 gpu
 - install ollama in order to use local llm for obsidian with karpathy llm wiki (i'll write another blog abour llm wiki)
 
 ## hardware and operating system spec
@@ -34,7 +34,6 @@ remove ollama and its dependencies for amd gpu which came from arch official rep
 
 #### install utilities
 
-nvtop
-glxinfo
+nvtop glxinfo
 
 

@@ -39,9 +39,7 @@ The source repo: https://github.com/j3ffyang/ai-custom-skills
 
 You need two things before copying into `~/.hermes/skills`:
 
-1. **Raw URL** for `SKILL.md`. Easiest: on GitHub open `SKILL.md`, click **Raw**, copy the address bar. Alternatively build  
-   `https://raw.githubusercontent.com/<owner>/<repo>/<ref>/<path-to-SKILL.md>`  
-   (`<ref>` is usually `main` or `master`; use a tag or commit SHA if you pin a version).
+1. **Raw URL** for `SKILL.md`. Easiest: on GitHub open `SKILL.md`, click **Raw**, copy the address bar. Alternatively build `https://raw.githubusercontent.com/<owner>/<repo>/<ref>/<path-to-SKILL.md>` (`<ref>` is usually `main` or `master`; use a tag or commit SHA if you pin a version).
 
 2. **Local skill slug** — lowercase identifier (hyphens or underscores) for `~/.hermes/skills/<slug>/SKILL.md`. The slug is **your choice** and need not match the repo folder name; this walkthrough uses repo path `hermes/ai-newsletter-prompt/` but installs as `ai-newsletter-daily`.
 

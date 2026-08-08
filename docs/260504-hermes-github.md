@@ -1,7 +1,6 @@
 # Hermes Agent: 10 GitHub Repos to Stress-Test It
 
-**Source:** Tony Simons (@tonysimons_) — Twitter post, ~2026-05-04 (verbatim capture below)  
-**Related:** [SOUL.md notes](260505-hermes-SOUL-chn.md) · [connect free models](260506-hermes-connect-models.md) · [custom skills](260429-custom-skill-hermes.md) · [SOUL how-to](260513-hermes-persona-soul.md)
+**Source:** Tony Simons (@tonysimons_) — Twitter post, ~2026-05-04 (verbatim capture below) **Related:** [SOUL.md notes](260505-hermes-SOUL-chn.md) · [connect free models](260506-hermes-connect-models.md) · [custom skills](260429-custom-skill-hermes.md) · [SOUL how-to](260513-hermes-persona-soul.md)
 
 ## Takeaways
 
@@ -154,9 +153,9 @@ Light notes on when each repo earns your time (editorial; not from the original 
 
 **Suggested learning path** (overrides strict 1→10 for setup work):
 
-1. **1** → **2** → **10** → **3** (core, wiki, awesome list, atlas)  
-2. **4** or **8** (dashboard or HUD — pick one operator UI)  
-3. **5** → **6** (skill automation, then multi-agent if needed)  
+1. **1** → **2** → **10** → **3** (core, wiki, awesome list, atlas)
+2. **4** or **8** (dashboard or HUD — pick one operator UI)
+3. **5** → **6** (skill automation, then multi-agent if needed)
 4. **7** → **9** (security fork, then cloud template)
 
 **Defer or skip for now:** Skill Factory and Maestro until daily Hermes use is stable; Camel/Alpha until you have a concrete prod or deploy target.

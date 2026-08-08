@@ -1,13 +1,12 @@
 ### Takeaway
-Use **Hermes** as a drop-in alternative to **OpenClaw**.  
-Configure the free **Elephant-Alpha** model via **OpenRouter**.
+Use **Hermes** as a drop-in alternative to **OpenClaw**. Configure the free **Elephant-Alpha** model via **OpenRouter**.
 
 ![img](../imgs/260414-hermes_openrouter2.png)
 ### Background
 After using OpenClaw for several months, I grew curious about Hermes and decided to give it a try. This guide walks through integrating the free **Elephant-Alpha** model from OpenRouter.
 
 ### Register an Account on OpenRouter
-1. Create an account on [OpenRouter](https://openrouter.ai/).  
+1. Create an account on [OpenRouter](https://openrouter.ai/).
 2. Obtain your `API_KEY`.
 
 ### Set Up Hermes and Verify Status
@@ -69,8 +68,7 @@ hermes pairing approve whatsapp <PAIRING_CODE>
 ```
 
 ### Allow More Than Two Users to Access the Agent on WhatsApp
-In my case, I have only two users being able to interact with the Hermes Agent.  
-If additional users are unable to receive messages (e.g., pairing codes) when sending a DM, update your configuration manually:
+In my case, I have only two users being able to interact with the Hermes Agent. If additional users are unable to receive messages (e.g., pairing codes) when sending a DM, update your configuration manually:
 
 ```yaml
 whatsapp:

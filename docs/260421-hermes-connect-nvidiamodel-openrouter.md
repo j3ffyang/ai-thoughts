@@ -49,8 +49,7 @@ cp ~/.hermes/config.yaml ~/.hermes/config.yaml.backup
 hermes config show
 ```
 
-You should see any other configured model similar to this
-You should see a configured model similar to this:
+You should see any other configured model similar to this You should see a configured model similar to this:
 ```
 ◆ Model
   Model:        {'default': 'elephant-alpha', 'provider': 'openrouter', 'base_url': 'https://openrouter.ai/api/v1', 'api_mode': 'chat_completions'}
@@ -99,8 +98,7 @@ hermes gateway restart
 
 You can also browse free and paid models from OpenRouter and NousResearch here:
 
-https://openrouter.ai/models?q=free
-https://portal.nousresearch.com/models
+https://openrouter.ai/models?q=free https://portal.nousresearch.com/models
 
 #### Free usage limit
 
@@ -223,8 +221,7 @@ hermes gateway restart
 
 你也可以在下面这两个地方查看 OpenRouter 和 NousResearch 的免费或付费模型：
 
-https://openrouter.ai/models?q=free
-https://portal.nousresearch.com/models
+https://openrouter.ai/models?q=free https://portal.nousresearch.com/models
 
 
 ## Reasoning 和 Completion 的区别

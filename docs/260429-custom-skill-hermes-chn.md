@@ -39,9 +39,7 @@
 
 复制到 `~/.hermes/skills` 之前，你需要两样东西：
 
-1. **`SKILL.md` 的 raw URL**。最简单：在 GitHub 打开 `SKILL.md`，点 **Raw**，复制地址栏。也可自行拼  
-   `https://raw.githubusercontent.com/<owner>/<repo>/<ref>/<path-to-SKILL.md>`  
-   （`<ref>` 一般为 `main` 或 `master`；若要固定版本可用标签或提交 SHA）。
+1. **`SKILL.md` 的 raw URL**。最简单：在 GitHub 打开 `SKILL.md`，点 **Raw**，复制地址栏。也可自行拼 `https://raw.githubusercontent.com/<owner>/<repo>/<ref>/<path-to-SKILL.md>` （`<ref>` 一般为 `main` 或 `master`；若要固定版本可用标签或提交 SHA）。
 
 2. **本地技能 slug** — 小写标识（连字符或下划线），对应路径 `~/.hermes/skills/<slug>/SKILL.md`。slug **由你决定**，不必与仓库里的文件夹名一致；本文仓库路径为 `hermes/ai-newsletter-prompt/`，安装目录名为 `ai-newsletter-daily`。
 

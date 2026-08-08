@@ -1,15 +1,10 @@
-pair program, coach juniors, delegate work, help seniors avoid usual traps - you get better results. 
+pair program, coach juniors, delegate work, help seniors avoid usual traps - you get better results.
 
 
 
 https://www.reddit.com/r/AskVibecoders/comments/1sp5dnd/every_claude_tool_worth_knowing_dont_miss_out_by/?share_id=FIih4wu08I_yo__KDJhvI&utm_content=1&utm_medium=android_app&utm_name=androidcss&utm_source=share&utm_term=3
 
-Go to AskVibecoders
-r/AskVibecoders
-•
-3d ago
-No_Tomatillo2993
-Every Claude Tool Worth Knowing, Don't Miss out by Not Using it.
+Go to AskVibecoders r/AskVibecoders • 3d ago No_Tomatillo2993 Every Claude Tool Worth Knowing, Don't Miss out by Not Using it.
 
 Here's everything worth knowing about Claude Toolings, organized by how much it actually changes your output.
 
@@ -111,11 +106,7 @@ Most Claude Code users never set this up. It's the single biggest quality improv
 
 Example:
 
-This is a Next.js project using TypeScript and Tailwind.
-Always use functional components. Never use class components.
-Run npm run lint before committing any changes.
-All API calls go through the /lib/api folder. Never call APIs directly from components.
-Do not modify the /config folder without asking first.
+This is a Next.js project using TypeScript and Tailwind. Always use functional components. Never use class components. Run npm run lint before committing any changes. All API calls go through the /lib/api folder. Never call APIs directly from components. Do not modify the /config folder without asking first.
 
 Multi-agent mode
 

@@ -42,8 +42,7 @@ presentation:
 <!--
 ## 介绍
 - IT专业人员AI使用演进概述。
-- 日常AI集成用于文档和演示的挑战。
--->
+- 日常AI集成用于文档和演示的挑战。 -->
 
 <!-- slide -->
 
@@ -92,9 +91,7 @@ presentation:
 2. 与AI协作，**润色和头脑风暴**你的技能框架，完善为**生产级SKILL.md**。特别强调 SKILL.md 的标准 (standard) 和规则 (compliance)
 3. **安装**自定义技能到AI代理中。
 4. 使用AI代理**触发并执行**自定义技能。
-5. 案例 > 
-  https://clawhub.ai/j3ffyang/skills/luo-shen-fu
-  https://clawhub.ai/j3ffyang/skills/260620-silk-essay-chn
+5. 案例 > https://clawhub.ai/j3ffyang/skills/luo-shen-fu https://clawhub.ai/j3ffyang/skills/260620-silk-essay-chn
 
 
 <!--
@@ -103,14 +100,13 @@ presentation:
 2. 技能框架草拟（编写通用SKILL.md）
 3. AI协作与润色（头脑风暴与技能完善）
 4. 技能安装（在AI代理中安装自定义技能）
-5. 技能执行（触发并运行技能）
--->
+5. 技能执行（触发并运行技能） -->
 
 <!-- slide -->
 
 ## SKILL.md
 
-个人自定义SKILL.md 
+个人自定义SKILL.md
 - https://clawhub.ai/j3ffyang
 - https://github.com/j3ffyang/ai-custom-skills
 

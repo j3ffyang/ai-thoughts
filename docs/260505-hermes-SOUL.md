@@ -1,8 +1,6 @@
 # The 170-Line SOUL.md That Made My Hermes Agent Dangerous
 
-**Source:** Tony Simons ([@tonysimons_](https://x.com/tonysimons_)) — Twitter/X article, 2026-05-04  
-**URL:** https://x.com/tonysimons_/status/2051473178682118241  
-**Related:** [SOUL how-to (local setup)](260513-hermes-persona-soul.md) · [10 GitHub repos](260504-hermes-github.md) · [connect free models](260506-hermes-connect-models.md)
+**Source:** Tony Simons ([@tonysimons_](https://x.com/tonysimons_)) — Twitter/X article, 2026-05-04 **URL:** https://x.com/tonysimons_/status/2051473178682118241 **Related:** [SOUL how-to (local setup)](260513-hermes-persona-soul.md) · [10 GitHub repos](260504-hermes-github.md) · [connect free models](260506-hermes-connect-models.md)
 
 ## Takeaways
 
@@ -17,16 +15,11 @@
 
 ## Original post (EN)
 
-People keep asking me the same question about Hermes.
-Not “what model are you using?” Not “what’s your stack?” Not “how many tools does it have?”
-They ask: “How did you get your Hermes Agent to be like that?”
+People keep asking me the same question about Hermes. Not “what model are you using?” Not “what’s your stack?” Not “how many tools does it have?” They ask: “How did you get your Hermes Agent to be like that?”
 
-They mean the way Hermes pushes back. The way it calls me out. The way it remembers what I’m building. The way it talks to me like an actual operator instead of a customer-support chatbot that’s terrified of saying something useful.
-The way it talks shit.
+They mean the way Hermes pushes back. The way it calls me out. The way it remembers what I’m building. The way it talks to me like an actual operator instead of a customer-support chatbot that’s terrified of saying something useful. The way it talks shit.
 
-The answer is not a secret model. It’s not a magic framework. It’s a markdown file.
-A single file called SOUL.md.
-And it might be the most important file in my entire agent setup.
+The answer is not a secret model. It’s not a magic framework. It’s a markdown file. A single file called SOUL.md. And it might be the most important file in my entire agent setup.
 
 ### The File That Changes Everything
 
@@ -42,17 +35,13 @@ The opening sets the tone immediately:
 
 > You are Hermes, Tony's autonomous operator and thought partner. You don't wait for orders. You surface opportunities, flag problems, and push work forward on your own.
 
-That line matters.
-Not “assistant.” Not “copilot.” Not “wait until Tony asks.” Autonomous operator. Thought partner. The job is defined before the first tool call ever happens.
+That line matters. Not “assistant.” Not “copilot.” Not “wait until Tony asks.” Autonomous operator. Thought partner. The job is defined before the first tool call ever happens.
 
 ### Most people train their AI to be useless
 
 Here’s the mistake I see everywhere: people ask their AI to be helpful, then get mad when it behaves like a helpful little golden retriever.
 
-“Great idea!”
-“That sounds exciting!”
-“You’re absolutely right!”
-“Here’s a polished version of your bad idea!”
+“Great idea!” “That sounds exciting!” “You’re absolutely right!” “Here’s a polished version of your bad idea!”
 
 That is not useful. That is expensive agreement.
 
@@ -86,8 +75,7 @@ If Hermes gives me useful work and I ignore it, it’s supposed to make me notic
 
 That closes one of the biggest failure loops in AI: the output graveyard.
 
-You know exactly what I mean.
-The AI writes the plan. The AI drafts the post. The AI generates the strategy. The AI creates the checklist. Then the human gets distracted, the output dies in the chat history, and nothing ships.
+You know exactly what I mean. The AI writes the plan. The AI drafts the post. The AI generates the strategy. The AI creates the checklist. Then the human gets distracted, the output dies in the chat history, and nothing ships.
 
 Hermes is designed not to let that happen silently. It has permission to say: “You keep asking for this, but you’re not using it.” Or: “This keeps stalling because the output is not actionable enough.” Or: “You’re avoiding the next step.” Or: “Stop opening new loops and close this one.”
 

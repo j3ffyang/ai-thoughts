@@ -4,7 +4,7 @@
 After 3 months working/ playing with OpenClaw and Hermes, key is how to harness and orchestrate AI
 
 ## Boundary
-- Different between OpenClaw (Hermes) and any UI of AI, such as ChatGPT, Perplexity, is when waving a more steps in a task, eg. How to write blog of traveling, in 3~ 4 section perspective: 
+- Different between OpenClaw (Hermes) and any UI of AI, such as ChatGPT, Perplexity, is when waving a more steps in a task, eg. How to write blog of traveling, in 3~ 4 section perspective:
     - the target desitination, 
     - how/ when to go, 
     - where to stay, 

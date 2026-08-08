@@ -1,15 +1,15 @@
 # Mastering the Basics: A Beginner's Guide to DCS World with the Gladiator NXT EVO
 
-Stepping into DCS World can feel overwhelming, especially when confronted with massive keybinding menus. If you want to bypass the steep learning curve, fly casually, and get into the air quickly, you do not need a multi-thousand-dollar cockpit. 
+Stepping into DCS World can feel overwhelming, especially when confronted with massive keybinding menus. If you want to bypass the steep learning curve, fly casually, and get into the air quickly, you do not need a multi-thousand-dollar cockpit.
 
 This guide will show you how to configure DCS World for **easy, game-mode style flying** using just two pieces of gear: the **VKB Gladiator NXT EVO** joystick and a **standard tenkeyless (no numpad) keyboard**.
 
 ---
 
 ## 1. The Easy-Fly Core Philosophy
-To overcome the learning curve fast, we are ignoring complex combat systems and hyper-realistic click-pits. 
+To overcome the learning curve fast, we are ignoring complex combat systems and hyper-realistic click-pits.
 * **Enable Game Flight Mode**: Go to Options > Gameplay and check **Game Flight** and **Game Avionics**. This simplifies aerodynamics and stabilizes your aircraft.
-* **Focus on Civilians/Trainers**: We are focusing on basic aviation using your **Yak-52** (trainer), **P-51D** (civilian/prop), and the **Su-25T** (used strictly as a jet trainer here). 
+* **Focus on Civilians/Trainers**: We are focusing on basic aviation using your **Yak-52** (trainer), **P-51D** (civilian/prop), and the **Su-25T** (used strictly as a jet trainer here).
 
 ---
 
@@ -101,7 +101,7 @@ Joysticks can feel overly sensitive out of the box, leading to over-correction a
 1. Go to **Controls > Axis Assign**.
 2. Click on **Pitch**, then select **Axis Tune**.
 3. Set **Deadzone** to `2` (prevents accidental hand-shake inputs).
-4. Set **Curvature** between `15` and `25`. 
+4. Set **Curvature** between `15` and `25`.
 5. Repeat exactly for the **Roll** axis.
 
 > *Why this helps:* A higher curvature makes the center of your joystick less sensitive. Small physical movements translate to tiny, smooth changes in the air, preventing you from slamming your aircraft into the tarmac during final landing approach.
