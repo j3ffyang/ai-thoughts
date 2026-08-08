@@ -14,6 +14,9 @@ on:
 jobs:
   dry-run:
     if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+      id-token: write
     uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v0.23.3
     with:
       root: .opencode/skills
@@ -21,6 +24,9 @@ jobs:
 
   publish:
     if: github.event_name != 'pull_request'
+    permissions:
+      contents: read
+      id-token: write
     uses: openclaw/clawhub/.github/workflows/skill-publish.yml@v0.23.3
     with:
       root: .opencode/skills
