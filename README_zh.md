@@ -65,8 +65,8 @@
 
 | 文章 | 简介 |
 |---|---|
-| [hermes-openrouter-elephant-alpha](docs/hermes-int-free-openrouter-elephant-alpha.md) | 将Hermes接入OpenRouter免费Elephant-Alpha模型的实操指南（作为OpenClaw的替代方案），含WhatsApp集成与多用户配置 |
-| [hermes-openrouter-elephant-alpha_chn](docs/hermes-int-free-openrouter-elephant-alpha-chn.md) | 使用 Hermes 连接 OpenRouter 免费 Elephant-Alpha 模型的配置指南（简体中文） |
+| [hermes-openrouter-elephant-alpha](docs/260414-hermes-elephant-alpha.md) | 将Hermes接入OpenRouter免费Elephant-Alpha模型的实操指南（作为OpenClaw的替代方案），含WhatsApp集成与多用户配置 |
+| [hermes-openrouter-elephant-alpha_chn](docs/260414-hermes-elephant-alpha-chn.md) | 使用 Hermes 连接 OpenRouter 免费 Elephant-Alpha 模型的配置指南（简体中文） |
 | [hermes-connect-nvidiamodel-openrouter](docs/260421-hermes-connect-nvidiamodel-openrouter.md) | 将Hermes接入OpenRouter上的Nvidia Nemotron免费模型，含主备模型配置 |
 | [hermes-update-err](docs/260423-hermes-update-err.md) | 排查Hermes TUI构建失败问题：根因为根目录package.json格式错误 |
 | [hermes-custom-skill-install](docs/260429-custom-skill-hermes.md) | 从GitHub安装自定义Hermes SKILL.md的端到端验证流程，含实测命令、示例与现场安装演练 |

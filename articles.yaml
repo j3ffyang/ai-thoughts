@@ -211,13 +211,13 @@ rows:
   - section: hermes
     status: published
     links:
-      - { label: "hermes-openrouter-elephant-alpha", path: "docs/hermes-int-free-openrouter-elephant-alpha.md", lang: en }
+      - { label: "hermes-openrouter-elephant-alpha", path: "docs/260414-hermes-elephant-alpha.md", lang: en }
     desc_en: "Practical guide to setting up Hermes with OpenRouter's free Elephant-Alpha model as an alternative to OpenClaw, including WhatsApp integration and multi-user configuration"
     desc_zh: "将Hermes接入OpenRouter免费Elephant-Alpha模型的实操指南（作为OpenClaw的替代方案），含WhatsApp集成与多用户配置"
   - section: hermes
     status: published
     links:
-      - { label: "hermes-openrouter-elephant-alpha_chn", path: "docs/hermes-int-free-openrouter-elephant-alpha-chn.md", lang: zh }
+      - { label: "hermes-openrouter-elephant-alpha_chn", path: "docs/260414-hermes-elephant-alpha-chn.md", lang: zh }
     desc_zh: "使用 Hermes 连接 OpenRouter 免费 Elephant-Alpha 模型的配置指南（简体中文）"
   - section: hermes
     status: published

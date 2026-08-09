@@ -55,7 +55,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 
 | Article | Description |
 |---|---|
-| [hermes-openrouter-elephant-alpha](docs/hermes-int-free-openrouter-elephant-alpha.md) | Practical guide to setting up Hermes with OpenRouter's free Elephant-Alpha model as an alternative to OpenClaw, including WhatsApp integration and multi-user configuration |
+| [hermes-openrouter-elephant-alpha](docs/260414-hermes-elephant-alpha.md) | Practical guide to setting up Hermes with OpenRouter's free Elephant-Alpha model as an alternative to OpenClaw, including WhatsApp integration and multi-user configuration |
 | [hermes-connect-nvidiamodel-openrouter](docs/260421-hermes-connect-nvidiamodel-openrouter.md) | Guide to connecting Hermes to Nvidia Nemotron free model via OpenRouter, with primary and fallback model configuration |
 | [hermes-update-err](docs/260423-hermes-update-err.md) | Debugging the Hermes TUI build failure caused by a malformed root package.json |
 | [hermes-custom-skill-install](docs/260429-custom-skill-hermes.md) | Tested end-to-end workflow: install a custom Hermes SKILL.md from GitHub, with verified commands, examples, and a live installation walkthrough |
