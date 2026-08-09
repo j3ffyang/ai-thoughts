@@ -8,7 +8,7 @@ Usage:
 Template: scripts/portfolio_template.md. PORTFOLIO.md is generated output —
 never edit it by hand. Placeholders filled by this script:
 
-    {{ARTICLE_COUNT}}   number of docs/*.md files
+    {{ARTICLE_COUNT}}   number of unique published articles (by YYMMDD in articles.yaml)
     {{LATEST_COMMIT}}   subject + month of the latest commit on HEAD
     {{LATEST_ARTICLES}} top N published articles (title, month, description)
     {{LAST_UPDATED}}    today's date
@@ -39,8 +39,16 @@ def load_manifest() -> dict:
         return yaml.safe_load(fh)
 
 
-def article_count() -> int:
-    return len(list((ROOT / "docs").glob("*.md")))
+def article_count(data: dict) -> int:
+    dates = set()
+    for row in data["rows"]:
+        if row.get("status") != "published":
+            continue
+        for ln in row["links"]:
+            m = DATE_RE.match(ln["path"].rsplit("/", 1)[-1])
+            if m:
+                dates.add(m.group(1))
+    return len(dates)
 
 
 def latest_commit() -> str:
@@ -99,7 +107,7 @@ def last_updated() -> str:
 def render(data: dict) -> str:
     out = TEMPLATE.read_text(encoding="utf-8")
     values = {
-        "ARTICLE_COUNT": str(article_count()),
+        "ARTICLE_COUNT": str(article_count(data)),
         "LATEST_COMMIT": latest_commit(),
         "LATEST_ARTICLES": latest_articles(data),
         "LAST_UPDATED": last_updated(),

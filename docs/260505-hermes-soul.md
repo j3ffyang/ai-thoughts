@@ -223,7 +223,7 @@ You get the idea.
 > | Mission map | Gives situational awareness without re-briefing every turn |
 > | Four-approval boundary | Makes autonomy usable without constant permission pings |
 >
-> **Translation check:** The [Chinese version](260505-hermes-SOUL-chn.md) preserves the same section order, blockquotes, and meta blocks. Embedded tweets and Tony’s SOUL excerpts are translated for meaning, not word-for-word where English idioms do not land in zh-CN.
+> **Translation check:** The [Chinese version](260505-hermes-soul-chn.md) preserves the same section order, blockquotes, and meta blocks. Embedded tweets and Tony’s SOUL excerpts are translated for meaning, not word-for-word where English idioms do not land in zh-CN.
 
 ## Conclusion
 
@@ -237,4 +237,4 @@ You get the idea.
 > 4. **Add 2–3 worked examples** of good pushback and bad pushback in your own domain.
 > 5. **Re-read autonomy quarterly** — especially if you add channels that can post on your behalf.
 >
-> **Doc hygiene for this note:** English original above; full zh-CN mirror in [260505-hermes-SOUL-chn.md](260505-hermes-SOUL-chn.md). Source URL and related links stay in both files.
+> **Doc hygiene for this note:** English original above; full zh-CN mirror in [260505-hermes-soul-chn.md](260505-hermes-soul-chn.md). Source URL and related links stay in both files.

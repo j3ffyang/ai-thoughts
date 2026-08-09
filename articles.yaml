@@ -76,7 +76,7 @@ rows:
   - section: solo
     status: published
     links:
-      - { label: "tech-conversation", path: "docs/260521-tech-interview.zh-CN.md", lang: zh }
+      - { label: "tech-conversation", path: "docs/260521-tech-interview-chn.md", lang: zh }
     desc_zh: "技术问答对话（非面试）：AI Agent 日常工作流（简体中文）"
   - section: solo
     status: published
@@ -94,28 +94,28 @@ rows:
   - section: history
     status: published
     links:
-      - { label: "unknown-unknowns", path: "docs/260722-unknownUnknowns2.md", lang: en }
+      - { label: "unknown-unknowns", path: "docs/260722-unknown-unknowns2.md", lang: en }
     desc_en: "Personal essay on the four types of knowledge — known knowns, known unknowns, unknown knowns, and the unknown unknowns that shape our lives"
     desc_zh: "关于知识四种类型的个人随笔——已知的已知、已知的未知、未知的已知，以及塑造我们人生的\"未知的未知\""
   - section: history
     status: published
     links:
-      - { label: "unknown-unknowns", path: "docs/260722-unknownUnknowns2-chn.md", lang: zh }
+      - { label: "unknown-unknowns", path: "docs/260722-unknown-unknowns2-chn.md", lang: zh }
     desc_zh: "不知道自己不知道的事——知识的四种类型（简体中文）"
 
   # -------------------------------------------------------- III. second-brain
   - section: second-brain
     status: published
     links:
-      - { label: "2nd-brain-design", path: "docs/260710-2ndBrain-design.md", lang: en }
+      - { label: "2nd-brain-design", path: "docs/260710-2nd-brain-design.md", lang: en }
     desc_en: "Design doc for an AI-powered bilingual knowledge assistant (\"2nd Brain\") on Obsidian — architecture, milestones, and tech stack"
     desc_zh: "基于Obsidian的中英双语AI知识助手（\"第二大脑\"）设计文档——架构、里程碑与技术栈"
   - section: second-brain
     status: published
     links:
       - { label: "obsidian-karpathy-llm", path: "docs/260721-obsidian-karpathy-llm.md", lang: en }
-    desc_en: "Build your own AI-powered wiki with Obsidian + Karpathy LLM Wiki + Ollama — query your personal vault with a local LLM"
-    desc_zh: "用 Obsidian + Karpathy LLM Wiki + Ollama 打造本地 AI 知识库，让个人笔记可被本地大模型检索问答"
+    desc_en: "Query your personal vault with a local LLM — no cloud, no API keys"
+    desc_zh: "让个人笔记可被本地大模型检索问答——全程本地，无需云端与 API 密钥"
   - section: second-brain
     status: published
     links:
@@ -163,8 +163,8 @@ rows:
     links:
       - { label: "arch-hyprland-gpd-win4-egpu", path: "docs/260807-amd.md", lang: en }
       - { label: "arch-hyprland-gpd-win4-egpu_chn", path: "docs/260807-amd-chn.md", lang: zh }
-    desc_en: "Arch Linux + Hyprland on GPD Win4 with dual AMD GPUs — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks"
-    desc_zh: "GPD Win4 上 Arch Linux + Hyprland 双 AMD GPU（iGPU + eGPU，OCuLink 连接 RX 7600M XT）渲染卸载指南——验证命令、稳定 DRM 符号链接与调整日志"
+    desc_en: "Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks"
+    desc_zh: "掌机上的双 AMD GPU（iGPU + eGPU，OCuLink 连接 RX 7600M XT）渲染卸载指南——验证命令、稳定 DRM 符号链接与调整日志"
 
   # ------------------------------------------------------------ V. openclaw
   - section: openclaw
@@ -175,29 +175,29 @@ rows:
   - section: openclaw
     status: published
     links:
-      - { label: "openclaw-security", path: "docs/260327_openclaw-security.md", lang: zh }
+      - { label: "openclaw-security", path: "docs/260327-openclaw-security.md", lang: zh }
     desc_zh: "OpenClaw安全审计：真实事件、已知漏洞及面向自托管用户的分级加固清单（中文）"
   - section: openclaw
     status: published
     links:
-      - { label: "openclaw-security", path: "docs/260327_openclaw-security_eng.md", lang: en, label_zh: "openclaw-security_eng" }
+      - { label: "openclaw-security", path: "docs/260327-openclaw-security-eng.md", lang: en, label_zh: "openclaw-security_eng" }
     desc_en: "Security audit of OpenClaw: real incidents, known vulnerabilities, and a tiered hardening checklist for self-hosters"
     desc_zh: "OpenClaw安全审计英文版：真实事件、已知漏洞及自托管用户加固清单"
   - section: openclaw
     status: published
     links:
-      - { label: "openclaw-custom-skills", path: "docs/260406_openclaw-custom-skills.md", lang: en }
+      - { label: "openclaw-custom-skills", path: "docs/260406-openclaw-custom-skills.md", lang: en }
     desc_en: "Step-by-step tutorial for building, validating, testing, and publishing custom skills on ClawHub"
     desc_zh: "在ClawHub上构建、校验、测试与发布自定义技能的完整教程"
   - section: openclaw
     status: published
     links:
-      - { label: "openclaw-custom-skills_chn", path: "docs/260407_openclaw-custom-skills_chn.md", lang: zh }
+      - { label: "openclaw-custom-skills_chn", path: "docs/260407-openclaw-custom-skills-chn.md", lang: zh }
     desc_zh: "OpenClaw 自定义技能从构建到发布 ClawHub 的完整教程（简体中文）"
   - section: openclaw
     status: published
     links:
-      - { label: "openclawActivity2", path: "docs/260320_openclawActivity2.md", lang: en }
+      - { label: "openclawActivity2", path: "docs/260320-openclaw-activity2.md", lang: en }
     desc_en: "What I've been up to in OpenClaw lately: setup, configuration, and recent activity log"
     desc_zh: "近期OpenClaw使用记录：安装配置与日常活动日志"
   - section: openclaw
@@ -251,13 +251,13 @@ rows:
   - section: hermes
     status: published
     links:
-      - { label: "hermes-SOUL-annotated", path: "docs/260505-hermes-SOUL.md", lang: en }
+      - { label: "hermes-SOUL-annotated", path: "docs/260505-hermes-soul.md", lang: en }
     desc_en: "Annotated takeaways from Tony Simons' viral 170-line SOUL.md post — why SOUL.md makes Hermes feel like a teammate"
     desc_zh: "Tony Simons 爆火的 170 行 SOUL.md 深度解读——为何 SOUL.md 让 Hermes 更像一个队友"
   - section: hermes
     status: published
     links:
-      - { label: "hermes-SOUL-annotated_chn", path: "docs/260505-hermes-SOUL-chn.md", lang: zh }
+      - { label: "hermes-SOUL-annotated_chn", path: "docs/260505-hermes-soul-chn.md", lang: zh }
     desc_zh: "Hermes 的 170 行 SOUL.md 深度解读（简体中文）"
   - section: hermes
     status: published
@@ -308,66 +308,64 @@ rows:
     links:
       - { label: "hermes-cleanup", path: "docs/260731-hermes-cleanup.md", lang: en }
       - { label: "hermes-cleanup_chn", path: "docs/260731-hermes-cleanup-chn.md", lang: zh }
-    desc_en: "Guide to cleaning up bloated skills & plugins in Hermes Agent — list enabled skills, opt out of bundled skills, and revert anytime"
-    desc_zh: "清理 Hermes Agent 臃肿技能与插件的操作指南——查看已启用技能、退出内置技能、随时可回退"
+    desc_en: "List enabled skills, opt out of bundled skills, and revert anytime — debloat your agent"
+    desc_zh: "查看已启用技能、退出内置技能、随时可回退——给 Hermes Agent 减负"
 
   # -------------------------------------------------------------- VII. cross
   - section: cross
     status: published
     links:
-      - { label: "engageOpenClaw", path: "docs/260420_engageOpenClaw.md", lang: en }
+      - { label: "engageOpenClaw", path: "docs/260420-engage-openclaw.md", lang: en }
     desc_en: "Reflections after 3 months with OpenClaw and Hermes: orchestrating multi-step AI tasks and per-section image generation workflows"
     desc_zh: "使用OpenClaw与Hermes三个月后的复盘：多步骤AI任务编排与章节配图生成工作流"
   - section: cross
     status: published
     links:
-      - { label: "choose-between-opencode-and-claude-code", path: "docs/260513-chooseCC-openCode.md", lang: en, label_zh: "opencode-vs-claude-code" }
+      - { label: "choose-between-opencode-and-claude-code", path: "docs/260513-choose-cc-opencode.md", lang: en, label_zh: "opencode-vs-claude-code" }
     desc_en: "Comparison of OpenCode vs Claude Code for running Claude Opus and other models"
     desc_zh: "OpenCode与Claude Code的比较：用于运行Claude Opus和其他模型（中英双语）"
   - section: cross
     status: published
     links:
-      - { label: "choose-between-opencode-and-claude-code_chn", path: "docs/260513-chooseCC-operCode-chn.md", lang: zh, label_zh: "opencode-vs-claude-code_chn" }
+      - { label: "choose-between-opencode-and-claude-code_chn", path: "docs/260513-choose-cc-opencode-chn.md", lang: zh, label_zh: "opencode-vs-claude-code_chn" }
     desc_zh: "OpenCode 与 Claude Code 对比（简体中文）"
   - section: cross
     status: published
     links:
-      - { label: "ai-combination", path: "docs/260701-aiCombination2.md", lang: en }
+      - { label: "ai-combination", path: "docs/260701-ai-combination2.md", lang: en }
     desc_en: "Optimizing AI usage: from Doubao user to power user — combine OpenRouter, OpenCode, and Hermes/OpenClaw SKILL.md workflows"
     desc_zh: "优化AI使用方式：从豆包用户到进阶用户——组合 OpenRouter、OpenCode 与 Hermes/OpenClaw 的 SKILL.md 工作流"
   - section: cross
     status: published
     links:
-      - { label: "ai-combination_chn", path: "docs/260701-aiCombination2-chn.md", lang: zh }
+      - { label: "ai-combination_chn", path: "docs/260701-ai-combination2-chn.md", lang: zh }
     desc_zh: "豆包用户到 AI 进阶用户：OpenRouter + OpenCode + AI Agent 组合策略（简体中文）"
   - section: cross
     status: published
     links:
       - { label: "opencode-is-best", path: "docs/260802-opencode-is-best.md", lang: en }
       - { label: "opencode-is-best_chn", path: "docs/260802-opencode-is-best-chn.md", lang: zh }
-    desc_en: "Personal essay on why OpenCode is the best AI agent setup for me — vendor freedom, the big-pickle model, enforced conventions, and unified billing via OpenRouter"
-    desc_zh: "个人随笔：为什么 OpenCode 是我心中最好的 AI 代理方案——免供应商锁定、big-pickle 模型、可执行的规范约定与 OpenRouter 统一计费"
+    desc_en: "Vendor freedom, the big-pickle model, enforced conventions, and unified billing via OpenRouter — why this setup wins for me"
+    desc_zh: "免供应商锁定、big-pickle 模型、可执行的规范约定与 OpenRouter 统一计费——为什么这套方案最合我意"
   - section: cross
     status: published
     links:
       - { label: "ai-agent-collaboration", path: "docs/260808-ai-agent-collaboration.md", lang: en }
-    desc_en: "A personal playbook from real practice — auto-publishing skills to ClawHub across three repos, and what it taught about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent"
-    desc_zh: "基于真实实践的 AI 协作手册——跨三个仓库自动发布技能到 ClawHub，以及从中习得的关于 AGENTS.md、SKILL.md、项目边界与 AI 协作思想流的经验"
+    desc_en: "What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent"
+    desc_zh: "跨三个仓库自动发布技能到 ClawHub 的真实实践——关于 AGENTS.md、SKILL.md、项目边界与 AI 协作架构的启发"
 
   # ------------------------------------------------------------- VIII. drafts
   - section: drafts
     status: draft
     links:
       - { label: "openclaw-custom-skills (early drafts)", path: "docs/260406-writing-your-own-custom-skill-in-openclaw.md", lang: en, label_zh: "openclaw-custom-skills（早期草稿）" }
-      - { label: "draft 2", path: "docs/260406_writing-custom-skill-openclaw.md", lang: en, label_zh: "草稿2" }
-      - { label: "chn draft", path: "docs/260406_openclaw-custom-skills-chn.md", lang: zh, label_zh: "中文草稿" }
     desc_en: "Earlier iterations of the OpenClaw custom-skills tutorial"
     desc_zh: "OpenClaw 自定义技能教程的早期迭代版本"
   - section: drafts
     status: draft
     links:
-      - { label: "ai-combination (full v1.1)", path: "docs/260701-aiCombination.md", lang: en, label_zh: "ai-combination（完整 v1.1）" }
-      - { label: "template", path: "docs/260701-aiCombination_template.md", lang: en, label_zh: "模板" }
+      - { label: "ai-combination (full v1.1)", path: "docs/260701-ai-combination.md", lang: en, label_zh: "ai-combination（完整 v1.1）" }
+      - { label: "template", path: "docs/260701-ai-combination-template.md", lang: en, label_zh: "模板" }
     desc_en: "Full-length version and seed template behind the condensed ai-combination article"
     desc_zh: "精炼版 ai-combination 文章背后的完整版与种子模板"
   - section: drafts
@@ -380,6 +378,6 @@ rows:
   - section: drafts
     status: draft
     links:
-      - { label: "web-search newsletter", path: "docs/260425_webSearch.md", lang: en, label_zh: "web-search 简报" }
+      - { label: "web-search newsletter", path: "docs/260425-web-search.md", lang: en, label_zh: "web-search 简报" }
     desc_en: "Notes on building a newsletter skill with web_search (OpenClaw/Hermes)"
     desc_zh: "基于 web_search 构建简报技能的笔记（OpenClaw/Hermes）"
