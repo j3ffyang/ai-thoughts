@@ -61,9 +61,9 @@ python scripts/gen_portfolio.py              # regenerate PORTFOLIO.md
 python scripts/gen_portfolio.py --check      # CI/verification: exit 1 if stale
 ```
 
-Filled automatically: article count (number of `docs/*.md`), the ai-thoughts repo row's latest commit, the "Latest Articles" list (top N published articles by date, deduped by YYMMDD), and the "Last Updated" date. Editorial content (the Activity Timeline, repo tables, tech stack, etc.) lives in the template — edit the template, then regenerate.
+Filled automatically: article count (unique published articles by YYMMDD from `articles.yaml`), the ai-thoughts repo row's latest commit, the "Latest Articles" list (top N published articles by date, deduped by YYMMDD), and the "Last Updated" date. Editorial content (the Activity Timeline, repo tables, tech stack, etc.) lives in the template — edit the template, then regenerate.
 
 ## Repo conventions
 
 - Docs-only repository: no build/lint/test pipeline; only the README generator and its `--check` validation mode.
-- Two remotes on `main`: `negtivspace` and `j3ffyang` — push to both.
+- Two remotes on `main`: `negtivspace` and `j3ffyang` — push to both. `negtivspace` is a **normal GitHub user account** (a second personal account, "Negative Space 留白"), **not** an org. Editing `negtivspace/ai-thoughts` via `gh`/API (e.g. setting the About description/homepage) requires the `negtivspace` account's own token — the `j3ffyang` token gets 404 on that account's repos.
