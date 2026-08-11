@@ -39,6 +39,9 @@ sections:
   - id: cross
     title_en: "Cross-Platform & Comparative"
     title_zh: "跨平台与比较"
+  - id: skills
+    title_en: "Skills"
+    title_zh: "技能"
   - id: drafts
     title_en: "Drafts & Working Notes"
     title_zh: "草稿与工作笔记"
@@ -131,6 +134,7 @@ rows:
     status: draft
     links:
       - { label: "ollama-to-llamacpp", path: "docs/260803-ollama-to-llamacpp.md", lang: en }
+      - { label: "ollama-to-llamacpp", path: "docs/260803-ollama-to-llamacpp-chn.md", lang: zh, label_zh: "从Ollama切换到llama.cpp" }
     desc_en: "Pushing the limit of a local LLM on Arch Linux (GPD): switching from Ollama to llama.cpp for finer VRAM control, higher efficiency, and better output quality with qwen2.5:14b"
     desc_zh: "在Arch Linux（GPD）上把本地LLM推到极限：从Ollama切换到llama.cpp，精细控制VRAM、提升效率与输出质量（qwen2.5:14b）"
 
@@ -353,6 +357,14 @@ rows:
       - { label: "ai-agent-collaboration", path: "docs/260808-ai-agent-collaboration.md", lang: en }
     desc_en: "What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent"
     desc_zh: "跨三个仓库自动发布技能到 ClawHub 的真实实践——关于 AGENTS.md、SKILL.md、项目边界与 AI 协作架构的启发"
+
+  # ------------------------------------------------------------ IX. skills
+  - section: skills
+    status: published
+    links:
+      - { label: "baoyu-infographic", path: ".opencode/skills/baoyu-infographic/SKILL.md", lang: en, label_zh: "baoyu-infographic 技能" }
+    desc_en: "baoyu-infographic — professional infographic generator (21 layouts × 21 styles) by 宝玉 (JimLiu), ported by j3ffyang as an **opencode** skill (needs OPENROUTER_API_KEY)"
+    desc_zh: "baoyu-infographic——专业信息图生成 **opencode 技能**（21 种布局 × 21 种风格），原作者为宝玉（JimLiu），由 j3ffyang 移植（需要 OPENROUTER_API_KEY）"
 
   # ------------------------------------------------------------- VIII. drafts
   - section: drafts

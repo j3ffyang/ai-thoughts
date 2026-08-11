@@ -77,7 +77,13 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [opencode-is-best](docs/260802-opencode-is-best.md) | Vendor freedom, the big-pickle model, enforced conventions, and unified billing via OpenRouter — why this setup wins for me |
 | [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) | What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent |
 
-### VIII. Drafts & Working Notes
+### VIII. Skills
+
+| Article | Description |
+|---|---|
+| [baoyu-infographic](.opencode/skills/baoyu-infographic/SKILL.md) | baoyu-infographic — professional infographic generator (21 layouts × 21 styles) by 宝玉 (JimLiu), ported by j3ffyang as an **opencode** skill (needs OPENROUTER_API_KEY) |
+
+### IX. Drafts & Working Notes
 
 Earlier versions of articles are kept alongside their final versions so each piece shows the evolution from brainstorming doc to finished post. These are the drafts that became (or are becoming) the articles above.
 

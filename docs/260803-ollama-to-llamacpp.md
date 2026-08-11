@@ -1,16 +1,20 @@
-# Pushing the Limits of My Local LLM: Switching from Ollama to llama.cpp
+# Why I Switched from Ollama to llama.cpp — and What I Learned
 
-I'm running a local LLM on my Arch Linux + Hyprland setup, and already have `qwen2.5:7b` with Ollama.
+![Ollama to llama.cpp infographic](../imgs/260803-ollama-to-llamacpp.png)
+
+I'm running a local LLM on my Arch Linux  + Hyprland setup, and already have `qwen2.5:7b` with Ollama.
 
 I want to maximize the usage of my hardware.
 
 Therefore I decided to download a slightly bigger model to cover my daily document writing and Python coding work, and switch from Ollama to llama.cpp.
 
+My hardware: a GPD handheld running Arch  + Hyprland with an AMD Ryzen 7 7840U — a Radeon 780M integrated GPU plus a discrete Radeon RX 7600M XT (8GB each), driven through Vulkan/RADV. The exact specs don't matter; what matters is that it's a two-GPU machine (a shared-memory iGPU and a discrete dGPU), and the point of this article is how to control and tune llama.cpp on such a setup.
+
 ## The Reason of Switching to `llama.cpp` from `ollama`
 
-The quality and efficiency would be tremendously increased. There is more detailed explanation on the web; I'll just summarize the main points here
+The switch mainly buys efficiency and hardware control. Output quality is determined by the model itself, not the backend — the better answers in this article come from the larger 14B model, not from llama.cpp. There is more detailed explanation on the web; I'll just summarize the main points here
 
-- Granular Hardware Control: llama.cpp lets you manually offload the exact number of model layers to maximize your shared AMD APU VRAM without playing it "too safe" like Ollama's automatic engine.
+- Granular Hardware Control: llama.cpp lets you manually offload the exact number of model layers to maximize your shared AMD APU VRAM without playing it "too safe" like Ollama's automatic engine. (Ollama actually wraps llama.cpp and exposes a similar knob via `OLLAMA_GPU_LAYERS`, but llama.cpp gives you the direct, explicit control.)
 - Peak Resource Efficiency: It eliminates background daemon overhead by running as a single, lightweight C++ binary that exits completely, saving battery and memory on your GPD device.
 - Unix-Centric Minimalism: It integrates natively into Linux (and macOS) environment, allowing you to easily adjust memory context windows, flags, and script pipes on the fly.
 
@@ -26,6 +30,10 @@ Swap:           11Gi          0B        11Gi
     Dedicated video memory: 8192 MB
     Currently available dedicated video memory: 7079 MB
 ```
+
+This is an AMD APU with unified memory, so the 8GB "VRAM" is carved out of the same 23Gi system RAM that `free -h` shows — and the 7079MB currently available is what the GPU reports after the desktop has taken its share. That number is a good starting point for picking `-ngl` below.
+
+On a two-GPU machine, double-check which device llama.cpp actually picked before trusting those numbers — the GPU you measure with glxinfo isn't necessarily the one the server runs on. llama.cpp defaults to the first device it finds (Vulkan enumerates the iGPU first here, leaving the discrete GPU idle), and the "dedicated VRAM" figure is only what one API reports — on shared-memory devices llama.cpp may see a larger budget, so treat the `-ngl` math as a heuristic, not a hard limit. To list and override the device, use `--list-devices` / `--device` or the `GGML_VK_VISIBLE_DEVICES` (Vulkan), `HIP_VISIBLE_DEVICES` (ROCm), or `CUDA_VISIBLE_DEVICES` (CUDA) env vars — the same approach works whether the second GPU is internal or an eGPU. A smaller model that fits entirely in the discrete GPU's VRAM typically runs several times faster there.
 
 ## Download LLM using Ollama
 Download `qwen2.5:14b`
@@ -58,11 +66,15 @@ ln -s /var/lib/ollama/.ollama/models/blobs/./sha256-2049f5674b1e92b4464e5729975c
 
 Change the `sha256` hash to yours
 
+Also adjust the blob path if needed — it depends on how Ollama was installed (`/usr/share/ollama/.ollama/models/blobs` for the systemd package, `/root/.ollama/models/blobs` for the official installer). The blob is tied to that exact download: re-pulling a different quantization or `ollama rm` invalidates the hash. If you'd rather not depend on Ollama at all, download the GGUF directly with `hf download Qwen/Qwen2.5-14B-Instruct-GGUF qwen2.5-14b-instruct-q4_k_m.gguf --local-dir ~/llama.cpp/`
+
 Start the server (no `sudo` needed — it runs as your user and stays reachable at localhost)
 
 ```sh
 [jeff@gpd ~]$ llama-server -m ~/llama.cpp/qwen2.5-14b.gguf -ngl 32 -c 8192 --flash-attn on -np 1 --port 8080
 ```
+
+`-ngl 32` offloads the first 32 of Qwen2.5-14B's 48 layers to the GPU and leaves the rest on the CPU. Why 32? The Q4_K_M weights are ~9.04GB in total, so 32 layers ≈ 6.0GB of weights plus ~1.1GB of KV cache at `-c 8192` ≈ 7.1GB — just under the 7079MB available. Those leftover 16 layers running on CPU are exactly why generation speed in the log below lands around 6 tokens/s while prompt processing reaches ~120–136 t/s.
 
 You'd see something like
 ```sh
@@ -112,11 +124,22 @@ One strong reason to run everything through the command line is that any error (
 2.11.798.583 I slot print_timing: id  0 | task 0 | n_decoded =    118, tg =   5.86 t/s, tg_3s =   5.77 t/s
 ```
 
-We can see the local LLM handles roughly 5~6 tokens/second, which seems low, but it maintains better output quality than `qwen2.5:7b`. Certainly, if you prioritize faster processing — often a few times faster — you could try `qwen2.5:7b` for similar use cases like knowledge management with Karpathy LLM Wiki.
+A few notes on this log: the `control-looking token: 128247 '</s>'` warning is a known harmless artifact of some Qwen GGUF re-quants, so you can ignore it. The CORS + no-API-key warning is acceptable because llama-server binds to 127.0.0.1 by default — it's only reachable from your machine; if you ever expose it with `--host 0.0.0.0`, set `--api-key` first. And `-np 1` allows one parallel request — raising it to 2 keeps the UI responsive while generating, but the KV cache roughly doubles, so keep an eye on the 7079MB budget.
 
-## 14B is Better than 7B in Terms of Output Quality
+We can see the local LLM handles roughly 5~6 tokens/second, which seems low — the bottleneck is the 16 layers left on the CPU plus the shared memory bus on this APU — but it maintains better output quality than `qwen2.5:7b`. Certainly, if you prioritize faster processing — often a few times faster — you could try `qwen2.5:7b` for similar use cases like knowledge management with Karpathy LLM Wiki.
 
-Why the 14B Model Delivers Better Quality
-- Sharper Reasoning & Logic: The 14B model has a much deeper understanding of nuanced logic. It is far less likely to make logical leaps, misunderstand complex prompts, or hallucinate false information compared to the 7B model.
-- Superior Coding & Syntax: For text editing, scripting, or note organization, the 14B version has a much tighter grasp on programming syntax and structured formatting (like markdown or JSON). It can handle multi-step instructions without forgetting constraints.
-- Broader Knowledge Base: It retains significantly more factual information and context from its training data, making its answers more comprehensive, detailed, and accurate.
+One more check before blaming tuning: multiply your generation speed by the model size. At ~6 tokens/s the 14B model reads ~9GB per token, which works out to ~54GB/s — already near the effective shared-memory bandwidth of this APU, so pushing all 48 layers onto the iGPU wouldn't have changed much. On any machine, if t/s × model size is close to your memory bandwidth, you've hit the wall, not a config bug.
+
+## After 2 Weeks of Testing
+
+Two weeks of daily use later, the verdict is a trade-off between control and convenience.
+
+**llama.cpp — maximum control**
+- Very granular control: plenty of parameters to tune so the model maximizes its power and capability locally, specifically on your hardware.
+- The cost is a learning curve, with back-and-forth checks against Google and/or the official documentation.
+
+**Ollama — maximum convenience**
+- Much simpler: install, almost no further config, start using immediately.
+- The flip side: you hand the tuning decisions to an automatic engine and lose the fine-grained control.
+
+Neither is better in absolute terms — they simply optimize for different goals.

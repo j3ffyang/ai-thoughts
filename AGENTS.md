@@ -7,13 +7,16 @@ Personal repository of AI/tech articles and bilingual (Chinese / English) essays
 ## Working rules
 
 - **Get approval before any change.** Present the plan and wait for the user's explicit go-ahead before editing files, generating output, or running state-changing commands. If anything is unclear, ask rather than assume.
-- **Commit only when asked.** Never commit, amend, or push unless the user explicitly requests it. When committing, stage only intended files.
+- **Commit only when asked.** Never commit, amend, or push unless the user explicitly requests it. When committing, stage only intended files and follow the repo's `type: subject` commit style (e.g. `docs: ...`, `ci: ...`).
+- **Give HONEST answers.** Do not assume, do not guess. If you don't know or aren't sure, say so and verify before claiming.
+- **Find ground truth when possible.** Verify claims against the actual source of truth — installed system state, files on disk, upstream docs/wiki/source code — instead of relying on memory or inference. When verification isn't possible, say so explicitly.
+- **Ensure all changes can be rolled back.** If the change is wrong, there must be a clear way to revert it. Default in this repo: git-tracked files → `git restore` / `git revert`; generated output (`README.md`, `README_zh.md`, `PORTFOLIO.md`) → regenerate from its source of truth (`articles.yaml` / the portfolio template).
 
 ## Writing conventions
 
-- **No hard-wrap.** Avoid hard-wrap at all, including `docs/`, `.opencode/skills/`, and agents — prose is one paragraph per line.
-- **Chinese files are translations.** Every Chinese markdown file is translated from its English original — no need to search the Chinese file as a reference, unless otherwise specified.
-- **Chinese files mirror the English original.** A Chinese file is identical to its English version in content; only the language differs.
+- **No hard-wrap.** Avoid hard-wrap at all, including `docs/`, `.opencode/skills/`, and agents — prose is one paragraph per line. Verify with `python scripts/unwrap_md.py --check`, or run `python scripts/unwrap_md.py` to unwrap.
+- **Chinese files are translations of the English original.** Every Chinese markdown file is translated from, and identical in content to, its English counterpart — only the language differs. Don't search the Chinese file as a reference, unless otherwise specified.
+- **Brand glyph icons.** When an article mentions Arch Linux (or just "Arch"), append the Nerd Font Arch glyph `` (U+F303, `nf-linux-archlinux`); when it mentions Hermes Agent, append the rod-of-Asclepius glyph `⚕` (U+2695); when it mentions OpenClaw, append the lobster emoji `🦞` (U+1F99E).
 
 ## Filename conventions
 

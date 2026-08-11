@@ -96,13 +96,19 @@
 | [opencode-is-best](docs/260802-opencode-is-best.md) · [opencode-is-best_chn](docs/260802-opencode-is-best-chn.md) | 免供应商锁定、big-pickle 模型、可执行的规范约定与 OpenRouter 统一计费——为什么这套方案最合我意 |
 | [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) | 跨三个仓库自动发布技能到 ClawHub 的真实实践——关于 AGENTS.md、SKILL.md、项目边界与 AI 协作架构的启发 |
 
-### 八、草稿与工作笔记
+### 八、技能
+
+| 文章 | 简介 |
+|---|---|
+| [baoyu-infographic 技能](.opencode/skills/baoyu-infographic/SKILL.md) | baoyu-infographic——专业信息图生成 **opencode 技能**（21 种布局 × 21 种风格），原作者为宝玉（JimLiu），由 j3ffyang 移植（需要 OPENROUTER_API_KEY） |
+
+### 九、草稿与工作笔记
 
 旧版文章与其最终版并存，是为了让每一篇都展示从头脑风暴文档到成稿的演变过程。以下是促成（或正在促成）上述文章的草稿。
 
 | 草稿 | 说明 |
 |---|---|
-| [ollama-to-llamacpp](docs/260803-ollama-to-llamacpp.md) | 在Arch Linux（GPD）上把本地LLM推到极限：从Ollama切换到llama.cpp，精细控制VRAM、提升效率与输出质量（qwen2.5:14b） |
+| [ollama-to-llamacpp](docs/260803-ollama-to-llamacpp.md) · [从Ollama切换到llama.cpp](docs/260803-ollama-to-llamacpp-chn.md) | 在Arch Linux（GPD）上把本地LLM推到极限：从Ollama切换到llama.cpp，精细控制VRAM、提升效率与输出质量（qwen2.5:14b） |
 | [openclaw-custom-skills（早期草稿）](docs/260406-writing-your-own-custom-skill-in-openclaw.md) | OpenClaw 自定义技能教程的早期迭代版本 |
 | [ai-combination（完整 v1.1）](docs/260701-ai-combination.md) · [模板](docs/260701-ai-combination-template.md) | 精炼版 ai-combination 文章背后的完整版与种子模板 |
 | [death 系列](docs/260728-death.md) · [v1.0](docs/260728-death2.md) · [v1.1 视频](docs/260728-death3.md) | 计划中的《死亡》文章与纪录短片技能的 SKILL.md 草稿（墨西哥亡灵节 vs 藏传佛教） |
