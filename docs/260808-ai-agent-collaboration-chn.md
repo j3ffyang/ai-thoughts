@@ -1,8 +1,12 @@
 # AI 智能体协作：基于 AGENTS.md 与 SKILL.md 的 OpenCode 实战手册
 
+**原文：** [260808-ai-agent-collaboration.md](260808-ai-agent-collaboration.md)
+
 *我是如何学会与一个 AI 智能体协作的——用 ***OpenCode*** 与 `big-pickle` 模型——穿过一个混乱而真实的多仓库项目，以及它教给我的关于 AGENTS.md、SKILL.md、项目边界与思维流架构的东西。*
 
 ---
+
+![AI Agent 协作——思维流实战手册](../imgs/260808-ai-agent-collaboration.png)
 
 这篇文章是一个我与 AI 智能体真实完成的项目总结，加上从中得出的教训。它不是一条一帆风顺的教程。它是一份实践记录——包括错误、分歧，以及智能体对了而我错了的时刻，还有少数几个我对了而智能体错了的时刻。这种诚实很重要，因为大多数关于 AI 智能体的文章展示的都是打磨好的最终状态，而不是抵达那里的混乱过程。
 

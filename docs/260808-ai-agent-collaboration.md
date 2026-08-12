@@ -4,6 +4,8 @@
 
 ---
 
+![AI Agent Collaboration — The Thought-Flow Playbook](../imgs/260808-ai-agent-collaboration.png)
+
 This article is a summary of a project I actually did with an AI agent, plus the lessons that came out of it. It is not a tutorial with a happy, linear path. It is a record of practice — including the mistakes, the disagreements, and the moments where the agent was right and I was wrong, and a few where I was right and the agent was wrong. That honesty matters, because most writing about AI agents shows the polished final state, not the messy process of getting there.
 
 The project: auto-publish `SKILL.md` files from three GitHub repos to **ClawHub**, a skill registry, using GitHub Actions — without installing any CLI tool locally, without converting any existing skills, and without breaking a bilingual publishing pipeline that already worked. It sounds simple. It was not. And that is exactly why it is worth writing down. If you want the compressed version, the Quick takeaways section at the end distills it into five rules.
