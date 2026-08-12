@@ -1,4 +1,4 @@
-# AI Agent Collaboration: A Personal Playbook from Real Practice
+# AI Agent Collaboration: An OpenCode Playbook Built on AGENTS.md and SKILL.md
 
 *How I learned to work with an AI agent — ***OpenCode*** with the `big-pickle` model — through a messy, real multi-repo project, and what that taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of a thought-flow.*
 
@@ -8,15 +8,19 @@ This article is a summary of a project I actually did with an AI agent, plus the
 
 The project: auto-publish `SKILL.md` files from three GitHub repos to **ClawHub**, a skill registry, using GitHub Actions — without installing any CLI tool locally, without converting any existing skills, and without breaking a bilingual publishing pipeline that already worked. It sounds simple. It was not. And that is exactly why it is worth writing down. If you want the compressed version, the Quick takeaways section at the end distills it into five rules.
 
+> **How to read this.** The essay is layered on purpose: the **Steps** are the evidence, the **Highlights** and **Principles** are the reasoning, the **failure catalog** is the reference table, and the **Quick takeaways** are the five rules to actually use. Each layer is a different compression of the same lessons, so you can stop at any depth.
+
 ## The setup, in one paragraph
 
-I keep my skills and articles across three sub-repos under a superproject:
+At the time of this project, my skills and articles lived across three sub-repos under a superproject — the set has grown since:
 
 - `history/` — `.opencode/skills/` with two skills (`astro-sync`, `zh-history-literature-culture`)
 - `ai-thoughts/` — `.opencode/skills/` with three skills (`astro-sync`, `resize-for-banner`, `translate-to-chn`)
 - `ai-custom-skills/` — a bigger matrix of skills under `openclaw/`, `hermes/`, and `claude-code/` roots, plus one awkwardly nested skill
 
 Every sub-repo has **two remotes**: `j3ffyang` (my personal GitHub account) and `negtivspace` (a second personal account). Both are pushed to on every change. Everything is Linux, everything is terminal, everything is minimal.
+
+> **Two accounts, one author.** Both are mine: `j3ffyang` is my primary personal GitHub account; `negtivspace` ("Negative Space 留白") is a second personal account I use to mirror the same repos. Three sub-repos × two accounts is where "six repos" comes from, and pushing to both is why the Step 4 double-publish race existed. And don't confuse `negtivspace` the GitHub account with the `negtivSpace` superproject directory that holds everything.
 
 The goal: when I push a change to a `SKILL.md`, a GitHub Action should detect what changed and publish the new or updated skill to ClawHub under my account — automatically, idempotently, and without me running any local tool.
 
@@ -25,33 +29,33 @@ The goal: when I push a change to a `SKILL.md`, a GitHub Action should detect wh
 Here is the part of this essay worth reading first. Over several sessions, a **procedure emerged** for how we share ideas and decide — sometimes with disagreement, mostly in agreement — how and when to generate AGENTS.md and SKILL.md. It is not a rigid process. It is an **architecture of thought-flow**, a loop that converges. Keep it in mind as you read the practice that follows — every step of the story is a working example of one of these stages.
 
 ```
-┌──────────────────────────────────────────────────────────────┐
-│                                                              │
-│   1. INTENT         ──  what do I want? state it plainly     │
-│        │                                                   │
-│   2. CONSTRAINTS    ──  what must not change? boundaries,    │
-│        │              tools, remotes, conventions, approvals │
-│        │                                                   │
-│   3. PROPOSE        ──  agent drafts a plan + options +      │
-│        │              recommendation                        │
-│        │                                                   │
-│   4. PRESS          ──  I push back where it conflicts       │
-│        │              with my constraints; we negotiate       │
-│        │                                                   │
-│   5. PRACTICE       ──  approve, build, run, observe          │
-│        │              (this is where the real failures        │
-│        │              and the real boundary problems live)    │
-│        │                                                   │
-│   6. INVESTIGATE    ──  when it fails, verify against the     │
-│        │              real system before blaming the tool     │
-│        │                                                   │
-│   7. CODIFY         ──  distill the practice into            │
-│        │              AGENTS.md rules and SKILL.md steps      │
-│        │                                                   │
-│   8. BOUNDARY-CHECK ──  is this the right repo / worktree /   │
-│        │              scope for this knowledge? resize if not │
-│        │                                                   │
-│   └────────────── loop ── practice again, refine again ──────┘
+┌────────────────────────────────────────────────────────────────┐
+│                                                                │
+│  1. INTENT         ──  what do I want? state it plainly        │
+│          │                                                     │
+│  2. CONSTRAINTS    ──  what must not change? boundaries,       │
+│                       tools, remotes, conventions, approvals   │
+│          │                                                     │
+│  3. PROPOSE        ──  agent drafts a plan + options +         │
+│                       recommendation                           │
+│          │                                                     │
+│  4. PRESS          ──  I push back where it conflicts with     │
+│                       my constraints; we negotiate             │
+│          │                                                     │
+│  5. PRACTICE       ──  approve, build, run, observe            │
+│                       (real failures live here)                │
+│          │                                                     │
+│  6. INVESTIGATE    ──  when it fails, verify against the       │
+│                       real system before blaming the tool      │
+│          │                                                     │
+│  7. CODIFY         ──  distill the practice into AGENTS.md     │
+│                       rules and SKILL.md steps                 │
+│          │                                                     │
+│  8. BOUNDARY-CHECK ──  is this the right repo / worktree /     │
+│                       scope for this knowledge? resize if not  │
+│          │                                                     │
+│          └────── loop ── practice again, refine again ──────┘  │
+└────────────────────────────────────────────────────────────────┘
 ```
 
 A few notes on each stage, because the loop only works if the stages are understood:
@@ -73,8 +77,6 @@ The very first thing the agent did was not code. It was asking me to define the 
 Here is the first lesson, and I will say it plainly:
 
 > **The quality of the outcome depends more on how I describe the problem than on the model.**
-
-When I gave the agent a clear boundary, it produced a clear plan. When I was vague, it guessed — and guessing in a system with multiple remotes, multiple accounts, and an external registry produces collisions, not clean automation.
 
 ### Step 2 — the reusable workflow was pinned, and the first wall appeared
 
@@ -104,7 +106,7 @@ Now the workflows actually executed. The logs showed failures, but the failures 
 
 **Family A — `Version X.Y.Z already exists. Increment the version number and try again.`**
 
-`astro-sync`, `zh-history-literature-culture`, `blog-image-enricher`, `indepth-perspective`, `image-to-video-gen` all failed with this. I assumed the workflow was broken. The agent was not so sure, and dug into the ClawHub CLI source (`/tmp/opencode/publish-v0233.ts`) to read how version resolution actually works.
+`astro-sync` (in both `history` and `ai-thoughts`), `zh-history-literature-culture` (`history`), and `blog-image-enricher`, `indepth-perspective`, `image-to-video-gen` (`ai-custom-skills`) all failed with this. I assumed the workflow was broken. The agent was not so sure, and dug into the ClawHub CLI source (`/tmp/opencode/publish-v0233.ts`) to read how version resolution actually works.
 
 The root cause was beautiful and infuriating at the same time: **both remotes of every sub-repo run the same workflow, and both publish to the same ClawHub account.** `j3ffyang/history` and `negtivspace/history` were racing to publish `astro-sync` at the same time. Whoever landed first created `1.0.0`; the other got "Version 1.0.0 already exists." It was not a bug in my workflow at all. It was a **double-publish race** I had designed into the system by pushing to two remotes.
 
@@ -124,9 +126,7 @@ The fix for Family A was one condition, added to both jobs in all three workflow
 if: github.event_name != 'pull_request' && github.repository_owner == 'j3ffyang'
 ```
 
-`github.repository_owner` resolves at runtime from whichever repo runs the workflow. On `j3ffyang/*`, the owner matches, and the publish job runs. On `negtivspace/*`, the owner is `negtivspace`, the condition is false, and the job is skipped. The `negtivspace` copies keep the file — the mirrors stay in sync — but they become a **no-op by design**. One source publishes. The race is gone. Every run after that was green.
-
-This is the single most important engineering decision in the whole project, and it came from a small conversation: I described the symptom ("collisions"), the agent traced it to the design (two remotes), and I agreed to the fix (a guard) rather than trying to make both remotes coexist. The rule now lives in a skill, documented so neither of us forgets it.
+`github.repository_owner` resolves at runtime from whichever repo runs the workflow. On `j3ffyang/*`, the owner matches, and the publish job runs. On `negtivspace/*`, the owner is `negtivspace`, the condition is false, and the job is skipped. The `negtivspace` copies keep the file — the mirrors stay in sync — but they become a **no-op by design**. One source publishes. The race is gone. Every run after that was green. This is the single most important engineering decision in the whole project, and it came from a small conversation: I described the symptom ("collisions"), the agent traced it to the design (two remotes), and I agreed to the fix (a guard) rather than trying to make both remotes coexist. The rule now lives in a skill, documented so neither of us forgets it.
 
 ### Step 6 — the slug collision, and a disagreement that ended in a good compromise
 
@@ -144,9 +144,9 @@ Nothing was lost. The local skill stayed authentic, the registry stopped getting
 
 ### Step 7 — codifying what we learned
 
-The last step was turning the messy process into durable knowledge. We created a parent-level skill, `.opencode/skills/clawhub-publish/SKILL.md`, that documents the whole pipeline: the single-source rule, the owner guard, the version semantics, the `pending-publication` false alarm, the slug-collision policy, and how to verify a publish with the ClawHub API. The workflow files were committed to both remotes, submodule pointers were bumped, and every `j3ffyang` run went green.
+The last step was turning the messy process into durable knowledge. We created a skill, `.opencode/skills/clawhub-publish/SKILL.md`, that documents the whole pipeline: the single-source rule, the owner guard, the version semantics, the `pending-publication` false alarm, the slug-collision policy, and how to verify a publish with the ClawHub API. Our first instinct was to put it at the parent level — but a session opened inside a sub-repo cannot see a parent-level skill, so it landed in `ai-thoughts/.opencode/skills/`, where the publishing work actually happens. The workflow files were committed to both remotes, submodule pointers were bumped, and every `j3ffyang` run went green.
 
-The whole journey took a few sessions. Nothing in it was a single brilliant move. It was a loop of *propose → practice → fail → investigate → disagree → compromise → codify*, run enough times that the system became boring and reliable.
+The whole journey took a few sessions. Nothing in it was a single brilliant move. It was a loop of *intent → constraints → propose → press → practice → investigate → codify → boundary-check*, run enough times that the system became boring and reliable.
 
 ## The highlights — what I actually learned
 
@@ -154,15 +154,11 @@ Now the part I want to keep. These are the highlights, each one earned by practi
 
 ### 1. OpenCode with the `big-pickle` model is powerful — and surprisingly free
 
-I run **OpenCode** in the terminal, on Arch Linux. My default model is **`big-pickle`** — free, fast, and consistently good. I have paid a lot of money to various providers over the years. This combination does not ask for a subscription, and it does not throttle me into uselessness. The `big-pickle` model handled a multi-repo, multi-account, external-registry automation project without drama: it read the upstream workflow source, queried the live API to verify hypotheses, and reasoned about GitHub Actions permission quirks it had clearly seen before.
-
-Free and good is a rare combination. I now default to it and only reach for a paid model when `big-pickle` actually struggles — which is less often than I expected.
+I run **OpenCode** in the terminal, on Arch Linux. My default model is **`big-pickle`** — free, fast, and consistently good. This combination does not ask for a subscription, and it does not throttle me into uselessness. The `big-pickle` model handled a multi-repo, multi-account, external-registry automation project without drama: it read the upstream workflow source, queried the live API to verify hypotheses, and reasoned about GitHub Actions permission quirks it had clearly seen before.
 
 ### 2. It can do far more than I imagined — if I let it
 
-The moment that changed my attitude was in Step 4, when the agent said, in effect: "let me read the ClawHub CLI source to understand how version resolution works." I had assumed the version collisions were a config error on my side. The agent went a level deeper, downloaded the source, and read the actual resolution logic.
-
-That is not pattern-matching. That is investigation. The agent did not guess; it *verified*. And that is the point: a good agent with the right tools (bash, web fetch, file reads, git) can do genuine debugging across a system I had no visibility into. My imagination was the limit, not the model.
+The moment that changed my attitude was in Step 4, when the agent said, in effect: "let me read the ClawHub CLI source to understand how version resolution works." I had assumed the collisions were a config error; the agent went a level deeper, downloaded the source, and read the actual resolution logic. That is not pattern-matching — it is investigation, and it is the point: a good agent with the right tools (bash, web fetch, file reads, git) can do genuine debugging across a system I had no visibility into. My imagination was the limit, not the model.
 
 ### 3. When the result is not what I expected, it is usually me
 
@@ -208,7 +204,7 @@ The sweet spot I settled on: an AGENTS.md per git worktree (each sub-repo gets i
 
 ### 6. Let the AI recommend — but do not agree all the time
 
-I want to keep this short because it matters: the agent gave me a recommendation I initially accepted and later had to unwind. It also gave me a recommendation I rejected (moving `history`'s `astro-sync` to `.claude/skills/`, which I refused because the skill was written for **OpenCode**, not Claude) and a recommendation I eventually loved (the `skill_path` compromise).
+I want to keep this short because it matters: the agent recommended placing `clawhub-publish` at the parent level, and I initially accepted — only to unwind it once we found a session inside a sub-repo cannot see a parent-level skill. It also gave me a recommendation I rejected (moving `history`'s `astro-sync` to `.claude/skills/`, which I refused because the skill was written for **OpenCode**, not Claude) and a recommendation I eventually loved (the `skill_path` compromise).
 
 The skill is not in following every recommendation, and not in ignoring them all. The skill is in **treating the agent's proposal as the first draft of a decision, not the decision itself.** I hold the constraints (the `history` project still needs `astro-sync`; the skill must stay authentic; nothing gets installed locally; both remotes get pushed). The agent holds the system knowledge (how **OpenCode** loads skills, how ClawHub resolves versions, how the workflow maps statuses). The best decisions came from me stating the constraints and letting the agent find a path through them — then checking the path against my constraints before accepting it.
 
@@ -232,8 +228,6 @@ These are not technical instructions. They are *character*. And they change the 
 I will say the obvious thing plainly: I love this tool in the terminal. The TUI is where I live — fast, keyboard-driven, no tab-switching to a web app. It runs on my Linux box, it respects my constraints, it reads my AGENTS.md files, and it keeps my workflow in git. The `Tab` key toggles plan/build mode, which is how this whole project worked: plan, approve, build, verify, repeat. It feels less like "using a product" and more like "hiring a very fast, very literal colleague who remembers everything I write down."
 
 Part of the appeal is that the terminal **shows its work.** Every message the agent produces is printed out in front of me — the tool calls it runs, the reasoning it goes through, the thought flow and the logic it followed. I can watch the AI think, not just read its conclusions. And because I live on Linux, the error messages are mostly native system errors — `No such file or directory`, `error: failed to push some refs`, `startup_failure`, exit codes — which make instant sense to me. When something fails, I can see *exactly* what happened, no translation layer, no friendly-but-vague wrapper hiding the cause. To me, that transparency is the whole difference between trusting a tool and merely using it.
-
-I know the terminal is not for everyone. My wife, for example, complained the moment she saw it: it looked too much like a developer machine, and by default a terminal seemed to bring nothing but difficulty. Fair enough — I did not argue with her about it. What happened instead was slower and better: after several weeks of practice, with my help along the way, she started using **OpenCode** with `big-pickle` too. She used to spend most of her time with ChatGPT in a browser. Now she runs the terminal version as well. Not because I converted her with a sales pitch, but because the same features I value — the clarity of seeing exactly what is happening, the freedom from a subscription, the plain text workflow — worked for her once the initial wall of unfamiliarity came down. It took practice, but it took practice *with someone*, which is exactly how any skill is really learned.
 
 ## The failure catalog — the raw material of the playbook
 
@@ -301,6 +295,7 @@ description: Publish SKILL.md files to ClawHub and diagnose publish failures.
 1. Add/edit a skill in the correct root.
 2. Push to both remotes; the j3ffyang copy publishes.
 3. Wait for the run; check the summary for the slug.
+4. Verify on ClawHub with the API; check the latestVersion and owner.
 
 ## Error Handling
 - Version already exists → already published; next run marks it synced.
@@ -318,7 +313,7 @@ The method I ended up with is personal. I do not claim it is the right way, or t
 3. **Verify before blaming.** When the result is wrong, check the real system first — the failure catalog above is the same lesson in six rows. The version collisions looked like my bug and were my design; `pending-publication` looked like a failure and was a success. Neither was what it seemed.
 4. **Codify what works.** A lesson that is not written down is a lesson that will be paid for again. AGENTS.md and SKILL.md are how I make the agent stop relearning what I already know.
 5. **The agent is a colleague, not an oracle.** It recommends; I decide. Its proposals are drafts for me to check against my constraints. The best decisions came from that friction.
-6. **The right model matters, but so does the orchestration.** `big-pickle` is free and excellent, but it succeeded here because of the loop — plan, build, verify, codify — not because of the model alone. Orchestration and operation of the agent, wrapped in good conventions, is the real multiplier.
+6. **The right model matters, but so does the orchestration.** `big-pickle` is free and excellent, but it succeeded here because of the loop — propose, practice, investigate, codify — not because of the model alone. Orchestration and operation of the agent, wrapped in good conventions, is the real multiplier.
 
 ## Quick takeaways
 
@@ -336,8 +331,8 @@ If you remember only five things from this essay:
 
 ## Closing
 
-I started this project wanting to auto-publish skills. I ended up with a small, reliable pipeline, a set of conventions that make the next project faster, and a much clearer idea of how to work with an AI agent at all. The pipeline itself is almost boring now — which is exactly what I wanted. The interesting part is the loop that produced it: intent, constraints, proposal, negotiation, practice, investigation, codification, and the constant checking of boundaries.
+I started this project wanting to auto-publish skills. I ended up with a small, reliable pipeline, a set of conventions that make the next project faster, and a much clearer idea of how to work with an AI agent at all. The pipeline itself is almost boring now — which is exactly what I wanted. The interesting part is the loop that produced it.
 
-The tools that made it possible were free (`big-pickle`), open source (**OpenCode**), and terminal-native (both). The practice that made it work was writing down what I know — in AGENTS.md for the rules, in SKILL.md for the procedures, and now in this essay for the thinking.
+The practice that made it work was writing down what I know — in AGENTS.md for the rules, in SKILL.md for the procedures, and now in this essay for the thinking.
 
 If you take one thing from this, let it be this: **the agent is only as good as the boundary you give it, and the boundary only works if you write it down.** Everything else is just practice.

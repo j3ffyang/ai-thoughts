@@ -94,7 +94,7 @@
 | [ai-combination](docs/260701-ai-combination2.md) | 优化AI使用方式：从豆包用户到进阶用户——组合 OpenRouter、OpenCode 与 Hermes/OpenClaw 的 SKILL.md 工作流 |
 | [ai-combination_chn](docs/260701-ai-combination2-chn.md) | 豆包用户到 AI 进阶用户：OpenRouter + OpenCode + AI Agent 组合策略（简体中文） |
 | [opencode-is-best](docs/260802-opencode-is-best.md) · [opencode-is-best_chn](docs/260802-opencode-is-best-chn.md) | 免供应商锁定、big-pickle 模型、可执行的规范约定与 OpenRouter 统一计费——为什么这套方案最合我意 |
-| [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) | 跨三个仓库自动发布技能到 ClawHub 的真实实践——关于 AGENTS.md、SKILL.md、项目边界与 AI 协作架构的启发 |
+| [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) · [ai-agent-collaboration_chn](docs/260808-ai-agent-collaboration-chn.md) | 跨三个仓库自动发布技能到 ClawHub 的真实实践——关于 AGENTS.md、SKILL.md、项目边界与 AI 协作架构的启发 |
 
 ### 八、技能
 

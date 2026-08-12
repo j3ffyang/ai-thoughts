@@ -355,6 +355,7 @@ rows:
     status: published
     links:
       - { label: "ai-agent-collaboration", path: "docs/260808-ai-agent-collaboration.md", lang: en }
+      - { label: "ai-agent-collaboration_chn", path: "docs/260808-ai-agent-collaboration-chn.md", lang: zh }
     desc_en: "What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent"
     desc_zh: "跨三个仓库自动发布技能到 ClawHub 的真实实践——关于 AGENTS.md、SKILL.md、项目边界与 AI 协作架构的启发"
 
