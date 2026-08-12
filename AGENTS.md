@@ -14,6 +14,7 @@ The universal working rules (approval before changes, commit only when asked, ho
 
 - **No hard-wrap.** Avoid hard-wrap at all, including `docs/`, `.opencode/skills/`, and agents — prose is one paragraph per line. Verify with `python scripts/unwrap_md.py --check`, or run `python scripts/unwrap_md.py` to unwrap.
 - **Chinese files are translations of the English original.** Every Chinese markdown file is translated from, and identical in content to, its English counterpart — only the language differs. Don't search the Chinese file as a reference, unless otherwise specified.
+- **Arch sign-off.** Every article in `docs/` ends with the line `btw, i use arch ` as its final paragraph, unless the user explicitly says otherwise. It stays verbatim English in both EN and ZH versions; don't duplicate it if already present, and never add it to READMEs or `articles.yaml`.
 
 ## Filename conventions
 
