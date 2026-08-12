@@ -336,3 +336,5 @@ I started this project wanting to auto-publish skills. I ended up with a small, 
 The practice that made it work was writing down what I know — in AGENTS.md for the rules, in SKILL.md for the procedures, and now in this essay for the thinking.
 
 If you take one thing from this, let it be this: **the agent is only as good as the boundary you give it, and the boundary only works if you write it down.** Everything else is just practice.
+
+btw, i use arch 
