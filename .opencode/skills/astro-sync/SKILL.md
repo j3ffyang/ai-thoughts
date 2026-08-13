@@ -91,7 +91,7 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
 - No `../imgs/` references remain in the post.
 - No hardcoded `/posts/...` links were introduced.
 - If committed: the post and new images are staged together, and `origin/main` is up to date.
-- Optional: run `pnpm run astro -- check` in the blog repo to confirm no content/config errors.
+- Optional: run `npx astro check` in the blog repo to confirm no content/config errors. Use `npx` directly — `pnpm` is not installed on this machine and `pnpm run ...` fails with "command not found"; `npx` resolves the local `astro` binary fine.
 
 ## Error Handling
 
