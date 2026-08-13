@@ -137,7 +137,7 @@ jobs:
 ---
 
 ### Example: Verify a Published Skill with a Shell One-Liner
-**Repo:** `clawhub-publish` skill | **Language:** Shell | **Purpose:** Confirm what's live on ClawHub via the read-only skills API
+**Repo:** `skill-publish` skill | **Language:** Shell | **Purpose:** Confirm what's live on ClawHub via the read-only skills API
 
 ```bash
 # What's actually live? Check latestVersion + owner.handle

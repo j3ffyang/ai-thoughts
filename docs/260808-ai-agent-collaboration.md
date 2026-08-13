@@ -146,7 +146,7 @@ Nothing was lost. The local skill stayed authentic, the registry stopped getting
 
 ### Step 7 — codifying what we learned
 
-The last step was turning the messy process into durable knowledge. We created a skill, `.opencode/skills/clawhub-publish/SKILL.md`, that documents the whole pipeline: the single-source rule, the owner guard, the version semantics, the `pending-publication` false alarm, the slug-collision policy, and how to verify a publish with the ClawHub API. Our first instinct was to put it at the parent level — but a session opened inside a sub-repo cannot see a parent-level skill, so it landed in `ai-thoughts/.opencode/skills/`, where the publishing work actually happens. The workflow files were committed to both remotes, submodule pointers were bumped, and every `j3ffyang` run went green.
+The last step was turning the messy process into durable knowledge. We created a skill, `.opencode/skills/skill-publish/SKILL.md`, that documents the whole pipeline: the single-source rule, the owner guard, the version semantics, the `pending-publication` false alarm, the slug-collision policy, and how to verify a publish with the ClawHub API. Our first instinct was to put it at the parent level — but a session opened inside a sub-repo cannot see a parent-level skill, so it landed in `ai-thoughts/.opencode/skills/`, where the publishing work actually happens. The workflow files were committed to both remotes, submodule pointers were bumped, and every `j3ffyang` run went green.
 
 The whole journey took a few sessions. Nothing in it was a single brilliant move. It was a loop of *intent → constraints → propose → press → practice → investigate → codify → boundary-check*, run enough times that the system became boring and reliable.
 
@@ -189,13 +189,13 @@ Here is the claim I care most about:
 
 In this project, the AGENTS.md files did real work. The `history/AGENTS.md` tells the agent that every change needs approval, that facts need two sources, that filenames follow `YYMMDD-slug`. The parent `negtivSpace/AGENTS.md` tells it to push to both remotes and how the profile README sync works. Without them, the agent would have asked me the same questions every session, and the answers would have drifted.
 
-The skills did real work too. `astro-sync` turned a long editorial procedure into one request. `clawhub-publish` turned a hard-won debugging session into a checklist the agent can follow next time. The effort is front-loaded — but the payoff compounds, because the knowledge survives the session.
+The skills did real work too. `astro-sync` turned a long editorial procedure into one request. `skill-publish` turned a hard-won debugging session into a checklist the agent can follow next time. The effort is front-loaded — but the payoff compounds, because the knowledge survives the session.
 
 ### 5. Project boundary: too big is vague, too small is unmanageable
 
 The most subtle lesson was about **where a skill or an AGENTS.md should live**.
 
-I discovered, by practice, that **OpenCode** discovers skills by walking up from the current directory **until it reaches the git worktree root**, and it does not cross into the parent superproject. Proof: I created `.opencode/skills/clawhub-publish/` in the parent repo, and a session opened inside `history/` could not see it at all. The skill was invisible precisely because `history/` is its own git worktree.
+I discovered, by practice, that **OpenCode** discovers skills by walking up from the current directory **until it reaches the git worktree root**, and it does not cross into the parent superproject. Proof: I created `.opencode/skills/skill-publish/` in the parent repo, and a session opened inside `history/` could not see it at all. The skill was invisible precisely because `history/` is its own git worktree.
 
 This is the boundary problem in miniature:
 
@@ -206,7 +206,7 @@ The sweet spot I settled on: an AGENTS.md per git worktree (each sub-repo gets i
 
 ### 6. Let the AI recommend — but do not agree all the time
 
-I want to keep this short because it matters: the agent recommended placing `clawhub-publish` at the parent level, and I initially accepted — only to unwind it once we found a session inside a sub-repo cannot see a parent-level skill. It also gave me a recommendation I rejected (moving `history`'s `astro-sync` to `.claude/skills/`, which I refused because the skill was written for **OpenCode**, not Claude) and a recommendation I eventually loved (the `skill_path` compromise).
+I want to keep this short because it matters: the agent recommended placing `skill-publish` at the parent level, and I initially accepted — only to unwind it once we found a session inside a sub-repo cannot see a parent-level skill. It also gave me a recommendation I rejected (moving `history`'s `astro-sync` to `.claude/skills/`, which I refused because the skill was written for **OpenCode**, not Claude) and a recommendation I eventually loved (the `skill_path` compromise).
 
 The skill is not in following every recommendation, and not in ignoring them all. The skill is in **treating the agent's proposal as the first draft of a decision, not the decision itself.** I hold the constraints (the `history` project still needs `astro-sync`; the skill must stay authentic; nothing gets installed locally; both remotes get pushed). The agent holds the system knowledge (how **OpenCode** loads skills, how ClawHub resolves versions, how the workflow maps statuses). The best decisions came from me stating the constraints and letting the agent find a path through them — then checking the path against my constraints before accepting it.
 
@@ -277,7 +277,7 @@ A SKILL.md for a repeated procedure had this shape:
 
 ```markdown
 ---
-name: clawhub-publish
+name: skill-publish
 description: Publish SKILL.md files to ClawHub and diagnose publish failures.
 ---
 

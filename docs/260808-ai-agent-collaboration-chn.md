@@ -148,7 +148,7 @@ if: github.event_name != 'pull_request' && github.repository_owner == 'j3ffyang'
 
 ### 第 7 步——把我们学到的东西沉淀下来
 
-最后一步是把混乱的过程变成持久的知识。我们创建了一个技能 `.opencode/skills/clawhub-publish/SKILL.md`，记录整个流水线：单一来源规则、owner 守卫、版本语义、`pending-publication` 虚惊、slug 冲突策略，以及如何用 ClawHub API 验证一次发布。我们最初的直觉是把它放在父层——但一个在子仓库内打开的会话看不到父层的技能，所以它落在了 `ai-thoughts/.opencode/skills/`，也就是发布工作真正发生的地方。工作流文件提交到了两个 remote，子模块指针被更新，`j3ffyang` 的每次运行都变绿。
+最后一步是把混乱的过程变成持久的知识。我们创建了一个技能 `.opencode/skills/skill-publish/SKILL.md`，记录整个流水线：单一来源规则、owner 守卫、版本语义、`pending-publication` 虚惊、slug 冲突策略，以及如何用 ClawHub API 验证一次发布。我们最初的直觉是把它放在父层——但一个在子仓库内打开的会话看不到父层的技能，所以它落在了 `ai-thoughts/.opencode/skills/`，也就是发布工作真正发生的地方。工作流文件提交到了两个 remote，子模块指针被更新，`j3ffyang` 的每次运行都变绿。
 
 整个旅程花了几轮会话。其中没有任何一步是单次的妙手。它是一轮又一轮的 *intent → constraints → propose → press → practice → investigate → codify → boundary-check*，反复跑到系统变得无聊而可靠为止。
 
@@ -191,13 +191,13 @@ if: github.event_name != 'pull_request' && github.repository_owner == 'j3ffyang'
 
 在这个项目里，AGENTS.md 文件做了实打实的工作。`history/AGENTS.md` 告诉智能体每次改动都需要批准、事实需要两个来源、文件名遵循 `YYMMDD-slug`。父级 `negtivSpace/AGENTS.md` 告诉它推送到两个 remote 以及 profile README 同步怎么工作。没有它们，智能体就得每个会话都问我同样的问题，而答案会逐渐漂移。
 
-技能也做了实打实的工作。`astro-sync` 把一长串编辑流程变成了一次请求。`clawhub-publish` 把一场来之不易的调试会话变成了一张智能体下次可以照做的检查清单。努力是前置的——但回报是复利的，因为知识在会话结束后存活了下来。
+技能也做了实打实的工作。`astro-sync` 把一长串编辑流程变成了一次请求。`skill-publish` 把一场来之不易的调试会话变成了一张智能体下次可以照做的检查清单。努力是前置的——但回报是复利的，因为知识在会话结束后存活了下来。
 
 ### 5. 项目边界：太大则含糊，太小则难以维护
 
 最微妙的一课是关于**技能或 AGENTS.md 应该放在哪里**。
 
-我通过实践发现，**OpenCode** 发现技能的方式是从当前目录向上走，**直到到达 git worktree 根**，而且它不会跨入父级 superproject。证据：我在父仓库创建了 `.opencode/skills/clawhub-publish/`，而在 `history/` 内打开的会话根本看不到它。这个技能不可见，恰恰因为 `history/` 是它自己的 git worktree。
+我通过实践发现，**OpenCode** 发现技能的方式是从当前目录向上走，**直到到达 git worktree 根**，而且它不会跨入父级 superproject。证据：我在父仓库创建了 `.opencode/skills/skill-publish/`，而在 `history/` 内打开的会话根本看不到它。这个技能不可见，恰恰因为 `history/` 是它自己的 git worktree。
 
 这就是浓缩版边界问题：
 
@@ -208,7 +208,7 @@ if: github.event_name != 'pull_request' && github.repository_owner == 'j3ffyang'
 
 ### 6. 让 AI 提建议——但不要每次都同意
 
-我想把这个说得简短些，因为它很重要：智能体建议把 `clawhub-publish` 放在父层，我最初接受了——直到我们发现在子仓库里打开的会话看不到父层技能，才撤回了这个决定。它也给过我一个我拒绝的建议（把 `history` 的 `astro-sync` 移到 `.claude/skills/`，我拒绝是因为这个技能是为 **OpenCode** 写的，不是为 Claude 写的），还有一个我最终非常喜欢的建议（`skill_path` 折中方案）。
+我想把这个说得简短些，因为它很重要：智能体建议把 `skill-publish` 放在父层，我最初接受了——直到我们发现在子仓库里打开的会话看不到父层技能，才撤回了这个决定。它也给过我一个我拒绝的建议（把 `history` 的 `astro-sync` 移到 `.claude/skills/`，我拒绝是因为这个技能是为 **OpenCode** 写的，不是为 Claude 写的），还有一个我最终非常喜欢的建议（`skill_path` 折中方案）。
 
 本事不在于是不是每条建议都听，也不在于全都无视。本事在于**把智能体的提议当作一次决策的初稿，而不是决策本身。** 我握着约束（`history` 项目仍然需要 `astro-sync`；技能必须保持原汁原味；本地什么都不装；两个 remote 都要推）。智能体握着系统知识（**OpenCode** 如何加载技能、ClawHub 如何解析版本、工作流如何映射状态）。最好的决策来自我说出约束、然后让智能体在约束中找路——之后再对照我的约束检查这条路，才接受它。
 
@@ -279,7 +279,7 @@ Bilingual repository of articles on <topic>. Written in <language>.
 
 ```markdown
 ---
-name: clawhub-publish
+name: skill-publish
 description: Publish SKILL.md files to ClawHub and diagnose publish failures.
 ---
 

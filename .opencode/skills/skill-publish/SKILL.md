@@ -1,5 +1,5 @@
 ---
-name: clawhub-publish
+name: skill-publish
 description: >
   Publish SKILL.md files to ClawHub (clawhub.ai) and diagnose publish failures
   across the three skill repos (history, ai-custom-skills, ai-thoughts). Use
@@ -17,7 +17,7 @@ Publish and maintain the ClawHub skill registry. All skills are published to a s
 Skills come from three repos under the `negtivSpace` superproject. Each repo has its own `.github/workflows/clawhub-skill-sync.yml` that publishes its skills to ClawHub:
 
 - `history/` — publishes only `.opencode/skills/zh-history-literature-culture` (via a `skill_path` entry). The `astro-sync` skill in `history/.opencode/skills/` is **local-only**: it stays in the repo for opencode to load, but is not published to ClawHub.
-- `ai-thoughts/.opencode/skills/` — `astro-sync`, `baoyu-infographic`, `clawhub-publish`, `resize-for-banner`, `translate-to-chn`. All are published via a glob over `.opencode/skills/*/SKILL.md`, so `clawhub-publish` self-publishes like any other skill.
+- `ai-thoughts/.opencode/skills/` — `astro-sync`, `baoyu-infographic`, `skill-publish`, `resize-for-banner`, `translate-to-chn`. All are published via a glob over `.opencode/skills/*/SKILL.md`, so `skill-publish` self-publishes like any other skill.
 - `ai-custom-skills/` — roots `openclaw/`, `hermes/`, `claude-code/`, plus the nested `claude-code/perplexity-downloader/perplexity-downloader` handled via a matrix `skill_path` entry. Data folders without a `SKILL.md` (e.g. `openclaw/twitter-bookmarks-exporter`) are skipped automatically.
 
 ## Single-source rule — read before anything else
