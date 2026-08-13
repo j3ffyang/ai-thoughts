@@ -41,7 +41,7 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Repo | Purpose | Articles | Latest |
 |------|---------|----------|--------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 32 articles | `docs: record negtivspace as a normal account and fix portfolio count description` (Aug 2026) |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 34 articles | `docs: add thought-flow collaboration loop skill` (Aug 2026) |
 
 ### Tools & Extensions
 
@@ -215,7 +215,7 @@ curl -s -H "Authorization: Bearer $CLH_TOKEN" \
 ## 🔗 Quick Links
 
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
-- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 32 articles on AI, privacy, and entrepreneurship
+- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 34 articles on AI, privacy, and entrepreneurship
 - **Gists & Experiments:** [Personal gists](https://gist.github.com/j3ffyang)
 
 ---
@@ -224,14 +224,14 @@ curl -s -H "Authorization: Bearer $CLH_TOKEN" \
 
 From `ai-thoughts` (most recent published articles):
 
-1. **"AI Agent Collaboration: A Personal Playbook from Real Practice"** (Aug 2026) — What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent
-2. **"Arch Linux + Hyprland on GPD Win4 with iGPU + eGPU"** (Aug 2026) — Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks
-3. **"OpenCode is Best for Me"** (Aug 2026) — Vendor freedom, the big-pickle model, enforced conventions, and unified billing via OpenRouter — why this setup wins for me
-4. **"Clean Up Bloated Skills & Plugins in Hermes ⚚"** (Jul 2026) — List enabled skills, opt out of bundled skills, and revert anytime — debloat your agent
-5. **"Unknown Unknowns"** (Jul 2026) — Personal essay on the four types of knowledge — known knowns, known unknowns, unknown knowns, and the unknown unknowns that shape our lives
-6. **"Build Your Own AI-Powered Wiki with Obsidian + Karpathy LLM Wiki + Ollama"** (Jul 2026) — Query your personal vault with a local LLM — no cloud, no API keys
+1. **"The Terminal Is an Art"** (Aug 2026) — Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and standard for 50 years
+2. **"AI Agent Collaboration: An OpenCode Playbook Built on AGENTS.md and SKILL.md"** (Aug 2026) — What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent
+3. **"Arch Linux + Hyprland on GPD Win4 with iGPU + eGPU"** (Aug 2026) — Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks
+4. **"OpenCode is Best for Me"** (Aug 2026) — Vendor freedom, the big-pickle model, enforced conventions, and unified billing via OpenRouter — why this setup wins for me
+5. **"Clean Up Bloated Skills & Plugins in Hermes ⚚"** (Jul 2026) — List enabled skills, opt out of bundled skills, and revert anytime — debloat your agent
+6. **"Unknown Unknowns"** (Jul 2026) — Personal essay on the four types of knowledge — known knowns, known unknowns, unknown knowns, and the unknown unknowns that shape our lives
 
-👉 See all 32 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
+👉 See all 34 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
 
 ---
 
@@ -257,7 +257,7 @@ npm run build  # or load the extension manually in Chrome
 ```bash
 git clone https://github.com/negtivspace/ai-thoughts
 cd docs
-# 32 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
+# 34 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
 ```
 
 ---
@@ -268,4 +268,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** August 9, 2026 | Tracking: 6 active repos, 32 published articles, 10+ published skills
+**Last Updated:** August 13, 2026 | Tracking: 6 active repos, 34 published articles, 10+ published skills
