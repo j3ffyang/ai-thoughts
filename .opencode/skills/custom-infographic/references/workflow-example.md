@@ -1,10 +1,10 @@
 # Hermes Agent Infographic Workflow Example
 
-This document captures the complete workflow used to prepare an infographic for the "Technical Insight Interview Prep" document, demonstrating how to use the baoyu-infographic skill when image_generate is not available.
+This document captures the complete workflow used to prepare an infographic for the "Technical Insight Interview Prep" document, demonstrating how to use the custom-infographic skill when image_generate is not available.
 
 ## Workflow Overview
 
-When the `image_generate` tool is not available, the baoyu-infographic skill can still be used to:
+When the `image_generate` tool is not available, the custom-infographic skill can still be used to:
 1. Analyze source content
 2. Generate structured content for infographic creation
 3. Create a detailed prompt for external image generation services
@@ -49,7 +49,7 @@ When the `image_generate` tool is not available, the baoyu-infographic skill can
 
 ## How to Use This Workflow When image_generate is Unavailable
 
-1. **Complete Steps 1-5** of the baoyu-infographic workflow:
+1. **Complete Steps 1-5** of the custom-infographic workflow:
    - Analyze content → analysis.md
    - Generate structured content → structured-content.md
    - Generate prompt → prompts/infographic.md
@@ -79,4 +79,4 @@ Use this workflow when:
 - You need to preserve exact verbatim content from source documents
 - You're working in environments with restricted tool availability
 
-This approach ensures that even without automated image generation, the core value of the baoyu-infographic skill (content analysis, structuring, and prompt preparation) is still delivered.
+This approach ensures that even without automated image generation, the core value of the custom-infographic skill (content analysis, structuring, and prompt preparation) is still delivered.

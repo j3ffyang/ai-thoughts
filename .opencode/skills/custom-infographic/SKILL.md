@@ -1,6 +1,6 @@
 ---
-name: baoyu-infographic
-description: Generate a professional infographic from an article, document, URL, or topic, using the baoyu layout x style system (21 layouts x 21 styles). Use when the user asks to create an infographic, 信息图, visual summary, 可视化, or a high-density information image, or wants an article turned into a visual poster.
+name: custom-infographic
+description: Generate a professional infographic from an article, document, URL, or topic, using the baoyu layout x style system (21 layouts x 21 styles). Original author 宝玉 (JimLiu); ported & customized by j3ffyang. Use when the user asks to create an infographic, 信息图, visual summary, 可视化, or a high-density information image, or wants an article turned into a visual poster.
 license: MIT
 compatibility: opencode
 metadata:
@@ -11,7 +11,7 @@ metadata:
 
 # Infographic Generator
 
-Adapted from [baoyu-infographic](https://github.com/JimLiu/baoyu-skills) v1.56.1 (ported via Hermes Agent) for opencode. Skill ported by j3ffyang to comply with opencode standard. Image generation uses OpenRouter image models through the bundled `scripts/generate_image.py`, which requires `OPENROUTER_API_KEY` in the environment.
+Adapted from [baoyu-infographic](https://github.com/JimLiu/baoyu-skills) v1.56.1 (ported via Hermes Agent) for opencode, then customized by j3ffyang to comply with the opencode standard and this repo's `imgs/` convention. Image generation uses OpenRouter image models through the bundled `scripts/generate_image.py`, which requires `OPENROUTER_API_KEY` in the environment.
 
 Two dimensions: **layout** (information structure) × **style** (visual aesthetics). Freely combine any layout with any style.
 
@@ -219,7 +219,7 @@ Save the assembled prompt to `prompts/infographic.md` using `write`.
 Run the bundled generator with the prompt from Step 5, writing the final image directly to `imgs/` with the repo-convention filename:
 
 ```bash
-python .opencode/skills/baoyu-infographic/scripts/generate_image.py \
+python .opencode/skills/custom-infographic/scripts/generate_image.py \
   --prompt infographic/{topic-slug}/prompts/infographic.md \
   --output imgs/{YYMMDD}-{slug}.png \
   --aspect 16:9
@@ -252,3 +252,8 @@ Report: topic, layout, style, aspect, language, output path (`imgs/<YYMMDD>-<slu
 4. **Style consistency** — the style definition from the references file must be applied consistently across the entire infographic. Don't mix styles.
 5. **Aspect ratio support** — `image_config` aspect ratios are limited to what the selected model supports (Gemini: `16:9`, `9:16`, `1:1`, `3:4`, `4:3`, `21:9`, plus extended `1:4`, `4:1`, `1:8`, `8:1`); map custom ratios outside that set to the nearest named preset.
 6. **API availability** — generation fails without `OPENROUTER_API_KEY` or when the model cannot output images. Verify the key is set before starting; if generation is impossible, deliver the prompt-only outputs (`analysis.md`, `structured-content.md`, `prompts/infographic.md`) and tell the user.
+
+## Credits
+
+- **Original author**: 宝玉 (JimLiu) — the baoyu layout × style system, [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills) v1.56.1.
+- **Ported & customized by**: j3ffyang — OpenCode adaptation and this repo's `imgs/` output convention.

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Generate an image via the OpenRouter chat-completions image API.
 
-Used by the baoyu-infographic opencode skill. Reads the assembled prompt
+Used by the custom-infographic opencode skill (baoyu layout × style system by
+宝玉 (JimLiu), ported & customized by j3ffyang). Reads the assembled prompt
 from a text file and writes the generated image (base64 data URL or remote
 URL) to --output. Requires OPENROUTER_API_KEY in the environment.
 """
@@ -51,7 +52,7 @@ def main() -> int:
             "Authorization": "Bearer " + key,
             "Content-Type": "application/json",
             "HTTP-Referer": "https://github.com/negtivspace/ai-thoughts",
-            "X-Title": "baoyu-infographic opencode skill",
+            "X-Title": "custom-infographic opencode skill",
         },
     )
 
