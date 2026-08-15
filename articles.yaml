@@ -103,6 +103,11 @@ rows:
   - section: history
     status: published
     links:
+      - { label: "terminal-is-an-art", path: "docs/260811-terminal-is-an-art.md", lang: en }
+    desc_en: "Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and standard for 50 years"
+  - section: history
+    status: published
+    links:
       - { label: "unknown-unknowns", path: "docs/260722-unknown-unknowns2-chn.md", lang: zh }
     desc_zh: "不知道自己不知道的事——知识的四种类型（简体中文）"
 
@@ -363,9 +368,16 @@ rows:
   - section: skills
     status: published
     links:
-      - { label: "baoyu-infographic", path: ".opencode/skills/baoyu-infographic/SKILL.md", lang: en, label_zh: "baoyu-infographic 技能" }
-    desc_en: "baoyu-infographic — professional infographic generator (21 layouts × 21 styles) by 宝玉 (JimLiu), ported by j3ffyang as an **opencode** skill (needs OPENROUTER_API_KEY)"
-    desc_zh: "baoyu-infographic——专业信息图生成 **opencode 技能**（21 种布局 × 21 种风格），原作者为宝玉（JimLiu），由 j3ffyang 移植（需要 OPENROUTER_API_KEY）"
+      - { label: "custom-infographic", path: ".opencode/skills/custom-infographic/SKILL.md", lang: en, label_zh: "custom-infographic 技能" }
+    desc_en: "custom-infographic — professional infographic generator (21 layouts × 21 styles); original author 宝玉 (JimLiu), ported & customized by j3ffyang as an **opencode** skill (needs OPENROUTER_API_KEY)"
+    desc_zh: "custom-infographic——专业信息图生成 **opencode 技能**（21 种布局 × 21 种风格），原作者为宝玉（JimLiu），由 j3ffyang 移植并定制（需要 OPENROUTER_API_KEY）"
+  - section: skills
+    status: published
+    links:
+      - { label: "zhihu-skill-opencode", path: "docs/260815-zhihu-config-in-opencode.md", lang: en }
+      - { label: "zhihu-skill-opencode_chn", path: "docs/260815-zhihu-config-in-opencode-chn.md", lang: zh }
+    desc_en: "Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable"
+    desc_zh: "在 OpenCode 中安装 zhihu 技能与官方 zhihu-cli 的全程记录——包括无头环境下密钥链不可用时通过 ZHIHU_ACCESS_SECRET 完成认证的路径"
 
   # ------------------------------------------------------------- VIII. drafts
   - section: drafts
@@ -394,3 +406,9 @@ rows:
       - { label: "web-search newsletter", path: "docs/260425-web-search.md", lang: en, label_zh: "web-search 简报" }
     desc_en: "Notes on building a newsletter skill with web_search (OpenClaw/Hermes)"
     desc_zh: "基于 web_search 构建简报技能的笔记（OpenClaw/Hermes）"
+  - section: drafts
+    status: draft
+    links:
+      - { label: "agents-opencode-config", path: "docs/260811-agents-opencode-config.md", lang: en, label_zh: "AGENTS + opencode.jsonc 架构" }
+    desc_en: "Summary note on the OpenCode setup: how AGENTS.md and opencode.jsonc load, their precedence flows, the permission decision model, and a conflict/duplicate review"
+    desc_zh: "OpenCode 配置架构总结：AGENTS.md 与 opencode.jsonc 的加载与优先级流程、权限判定模型，以及冲突/重复排查笔记"

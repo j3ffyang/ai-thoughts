@@ -28,6 +28,7 @@
 | 文章 | 简介 |
 |---|---|
 | [unknown-unknowns](docs/260722-unknown-unknowns2.md) | 关于知识四种类型的个人随笔——已知的已知、已知的未知、未知的已知，以及塑造我们人生的"未知的未知" |
+| [terminal-is-an-art](docs/260811-terminal-is-an-art.md) | Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and standard for 50 years |
 | [unknown-unknowns](docs/260722-unknown-unknowns2-chn.md) | 不知道自己不知道的事——知识的四种类型（简体中文） |
 
 ### 三、第二大脑与知识管理
@@ -100,7 +101,8 @@
 
 | 文章 | 简介 |
 |---|---|
-| [baoyu-infographic 技能](.opencode/skills/baoyu-infographic/SKILL.md) | baoyu-infographic——专业信息图生成 **opencode 技能**（21 种布局 × 21 种风格），原作者为宝玉（JimLiu），由 j3ffyang 移植（需要 OPENROUTER_API_KEY） |
+| [custom-infographic 技能](.opencode/skills/custom-infographic/SKILL.md) | custom-infographic——专业信息图生成 **opencode 技能**（21 种布局 × 21 种风格），原作者为宝玉（JimLiu），由 j3ffyang 移植并定制（需要 OPENROUTER_API_KEY） |
+| [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) · [zhihu-skill-opencode_chn](docs/260815-zhihu-config-in-opencode-chn.md) | 在 OpenCode 中安装 zhihu 技能与官方 zhihu-cli 的全程记录——包括无头环境下密钥链不可用时通过 ZHIHU_ACCESS_SECRET 完成认证的路径 |
 
 ### 九、草稿与工作笔记
 
@@ -113,6 +115,7 @@
 | [ai-combination（完整 v1.1）](docs/260701-ai-combination.md) · [模板](docs/260701-ai-combination-template.md) | 精炼版 ai-combination 文章背后的完整版与种子模板 |
 | [death 系列](docs/260728-death.md) · [v1.0](docs/260728-death2.md) · [v1.1 视频](docs/260728-death3.md) | 计划中的《死亡》文章与纪录短片技能的 SKILL.md 草稿（墨西哥亡灵节 vs 藏传佛教） |
 | [web-search 简报](docs/260425-web-search.md) | 基于 web_search 构建简报技能的笔记（OpenClaw/Hermes） |
+| [AGENTS + opencode.jsonc 架构](docs/260811-agents-opencode-config.md) | OpenCode 配置架构总结：AGENTS.md 与 opencode.jsonc 的加载与优先级流程、权限判定模型，以及冲突/重复排查笔记 |
 
 ---
 

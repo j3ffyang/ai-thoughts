@@ -38,7 +38,7 @@ To add or update an article:
 
 1. Drop the file into `docs/` (follow the rules in "Filename conventions").
 2. Add/update a row in `articles.yaml`:
-   - English article → link with `lang: en` (+ `desc_en`)
+   - English article → link with `lang: en` (+ `desc_en`; no `desc_zh` until a `-chn.md` exists)
    - Chinese article → link with `lang: zh` (+ `desc_zh`)
    - Draft/working note → set `section: drafts` (lands in the Drafts & Working Notes section). Keep `status: draft` too — `status` is metadata only (`draft` or `published`) and never affects placement; the generator routes rows by `section`.
    - Optional `label_zh` on a link gives the Chinese display name in `README_zh.md` (Chinese articles usually get one).
@@ -46,7 +46,7 @@ To add or update an article:
 
 **Note:** `gen_readmes.py` prints a warning for every `docs/*.md` not listed in `articles.yaml` (e.g. unregistered drafts). That's expected until the row is added — it's a reminder, not an error.
 
-The generator also **fails hard** on invalid manifests: unknown `section`, missing `desc_zh`, missing `desc_en` on any row with a `lang: en` link, or a `path` that points to a missing file. Fix those before committing.
+The generator also **fails hard** on invalid manifests: unknown `section`, missing `desc_zh` on any row where the English article's `-chn.md` counterpart exists in `docs/` (or the row carries a `lang: zh` link), missing `desc_en` on any row with a `lang: en` link, or a `path` that points to a missing file. Fix those before committing. An EN-only row (no `-chn.md` file yet) may omit `desc_zh` — `README_zh.md` then falls back to its `desc_en`. The trigger for adding `desc_zh` is the `-chn.md` file existing in the same folder; add `desc_zh` together with that `-chn.md` version.
 
 ### EN / ZH routing rule
 

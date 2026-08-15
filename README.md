@@ -24,6 +24,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | Article | Description |
 |---|---|
 | [unknown-unknowns](docs/260722-unknown-unknowns2.md) | Personal essay on the four types of knowledge — known knowns, known unknowns, unknown knowns, and the unknown unknowns that shape our lives |
+| [terminal-is-an-art](docs/260811-terminal-is-an-art.md) | Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and standard for 50 years |
 
 ### III. Second Brain & Knowledge Management
 
@@ -81,7 +82,8 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 
 | Article | Description |
 |---|---|
-| [baoyu-infographic](.opencode/skills/baoyu-infographic/SKILL.md) | baoyu-infographic — professional infographic generator (21 layouts × 21 styles) by 宝玉 (JimLiu), ported by j3ffyang as an **opencode** skill (needs OPENROUTER_API_KEY) |
+| [custom-infographic](.opencode/skills/custom-infographic/SKILL.md) | custom-infographic — professional infographic generator (21 layouts × 21 styles); original author 宝玉 (JimLiu), ported & customized by j3ffyang as an **opencode** skill (needs OPENROUTER_API_KEY) |
+| [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) | Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable |
 
 ### IX. Drafts & Working Notes
 
@@ -93,6 +95,7 @@ Earlier versions of articles are kept alongside their final versions so each pie
 | [openclaw-custom-skills (early drafts)](docs/260406-writing-your-own-custom-skill-in-openclaw.md) | Earlier iterations of the OpenClaw custom-skills tutorial |
 | [ai-combination (full v1.1)](docs/260701-ai-combination.md) · [template](docs/260701-ai-combination-template.md) | Full-length version and seed template behind the condensed ai-combination article |
 | [web-search newsletter](docs/260425-web-search.md) | Notes on building a newsletter skill with web_search (OpenClaw/Hermes) |
+| [agents-opencode-config](docs/260811-agents-opencode-config.md) | Summary note on the OpenCode setup: how AGENTS.md and opencode.jsonc load, their precedence flows, the permission decision model, and a conflict/duplicate review |
 
 ---
 

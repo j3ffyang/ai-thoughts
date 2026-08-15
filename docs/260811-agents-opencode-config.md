@@ -87,7 +87,7 @@ it (last matching rule wins) — keep the prefixes of asks disjoint from allows.
 1. Edit `negtivSpace/opencode/opencode.jsonc` — the single source of truth; the symlink at `~/.config/opencode/opencode.jsonc` picks it up automatically.
 2. Restart opencode — the config is read once when a location opens, so changes need a restart.
 3. Verify with `opencode debug config` before trusting the new rules.
-4. For one-off tweaks, use the ask prompt's once / always / reject; "always" lasts only the current session, so permanent rules go in the config.
+4. For one-off tweaks, use the ask prompt's once / always ("Accept always") / reject; "always" lasts only the current session, so permanent rules go in the config.
 
 ## Conflict, confusion and duplication review
 
@@ -100,6 +100,8 @@ Doc drift already bit once: the AGENTS.md permission paragraph and the config co
 The main pitfall to avoid: a local `.opencode/opencode.jsonc` overrides the global config for that repo, so reintroducing a `"*": "ask"` catch-all there (the old style) silently restores the prompt flood in just that repo. Keep any future local config allow-driven, matching the global style.
 
 No genuine conflicts between the surfaces: AGENTS.md instructs behavior, the config gates tools, and they never fight because they operate on different things. The "commit only when asked" rule and the "push to both remotes" convention are complementary (commit is user-initiated, push follows the repo convention), and the config's read-only git allow list backs both. The read-only git/gh allow prefixes and the destructive ask prefixes were checked to be disjoint — the only near-misses (`git stash list`, `git tag -l`, `git config --get`, and friends) stay allowed because the ask patterns use explicit subcommands instead of a broad `git stash*` / `git tag*` catch-all.
+
+Prose wrapping is deliberately per-repo, not global. `ai-thoughts/AGENTS.md` mandates no hard-wrap (one paragraph per line, verified by `scripts/unwrap_md.py --check`), `history/AGENTS.md` auto-wraps, and the global `opencode/AGENTS.md` delegates to each repo — never assume a global wrapping rule. Reviewed on 2026-08-11: keep the rule. It's cheap (one line, no pipeline to maintain) and high-value — hard-wrapped prose turns a one-word edit into a 20-line diff and muddies CJK word boundaries. `unwrap_md.py` is insurance, not a gate: with no CI pipeline, `--check` is a manual hygiene check, and escalating it to a hook or CI gate isn't worth building.
 
 ## References
 

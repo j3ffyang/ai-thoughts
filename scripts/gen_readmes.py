@@ -84,9 +84,15 @@ def validate(data: dict) -> None:
     for i, row in enumerate(data["rows"]):
         if row["section"] not in sections:
             errors.append(f"row {i}: unknown section '{row['section']}'")
-        if "desc_zh" not in row or not row["desc_zh"]:
-            errors.append(f"row {i}: missing desc_zh")
         has_en = any(ln.get("lang") == "en" for ln in row["links"])
+        has_zh = any(ln.get("lang") == "zh" for ln in row["links"])
+        has_chn_file = any(
+            (ROOT / (ln["path"][:-3] + "-chn.md")).is_file()
+            for ln in row["links"]
+            if ln.get("lang") == "en"
+        )
+        if (has_zh or has_chn_file) and (not row.get("desc_zh") or not row["desc_zh"]):
+            errors.append(f"row {i}: missing desc_zh (a -chn.md exists for this article)")
         if has_en and (not row.get("desc_en") or not row["desc_en"]):
             errors.append(f"row {i}: has en link but missing desc_en")
         for ln in row["links"]:
@@ -133,7 +139,7 @@ def build(lang: str, data: dict, sections: list[dict]) -> str:
         out.append(sep)
         for r in sec_rows:
             links = render_links(r["links"], lang)
-            desc = r["desc_zh"] if is_zh else r["desc_en"]
+            desc = (r.get("desc_zh") or r["desc_en"]) if is_zh else r["desc_en"]
             out.append(f"| {links} | {desc} |")
 
     out.append(FOOTER_EN if lang == "en" else FOOTER_ZH)
