@@ -128,11 +128,15 @@ infographic/{topic-slug}/
 ├── source-{slug}.{ext}
 ├── analysis.md
 ├── structured-content.md
-├── prompts/infographic.md
-└── infographic.png
+└── prompts/infographic.md
+
+final image → imgs/<YYMMDD>-<slug>.png
 ```
 
-Slug: 2-4 words kebab-case from topic. Conflict: append `-YYYYMMDD-HHMMSS`.
+Working files live in `infographic/{topic-slug}/`; the final image always lands in `imgs/` following this repo's `YYMMDD-slug` filename convention (see `ai-thoughts/AGENTS.md`).
+
+- `{topic-slug}`: 2-4 words kebab-case from topic. Conflict: append `-YYYYMMDD-HHMMSS`.
+- Final image name: `imgs/<YYMMDD>-<slug>.png` where `<slug>` is a 2-4 word kebab-case name and `<YYMMDD>` is the current date — or, when the source is an ai-thoughts article, the article's own `YYMMDD` prefix so the image shares it.
 
 ## Core Principles
 
@@ -212,23 +216,24 @@ Save the assembled prompt to `prompts/infographic.md` using `write`.
 
 ### Step 6: Generate Image
 
-Run the bundled generator with the prompt from Step 5:
+Run the bundled generator with the prompt from Step 5, writing the final image directly to `imgs/` with the repo-convention filename:
 
 ```bash
 python .opencode/skills/baoyu-infographic/scripts/generate_image.py \
   --prompt infographic/{topic-slug}/prompts/infographic.md \
-  --output infographic/{topic-slug}/infographic.png \
+  --output imgs/{YYMMDD}-{slug}.png \
   --aspect 16:9
 ```
 
+- The final image goes to `imgs/<YYMMDD>-<slug>.png` (repo convention, see Output Structure) — never to `infographic/{topic-slug}/`.
 - Map aspect ratio to the `--aspect` value: landscape→`16:9`, portrait→`9:16`, square→`1:1`, custom ratios passed as-is (Gemini supports `3:4`, `4:3`, `21:9`, `1:4`, `4:1`, `1:8`, `8:1`; map anything else to the nearest named preset)
 - Requires `OPENROUTER_API_KEY` to be set; the default model is `google/gemini-3.1-flash-image`, override with `--model`
 - On failure, auto-retry once, then report the error to the user
-- **Backup rule**: If `infographic.png` exists, rename to `infographic-backup-YYYYMMDD-HHMMSS.png` before writing
+- **Backup rule**: If the target `imgs/<YYMMDD>-<slug>.png` already exists, rename it to `imgs/<YYMMDD>-<slug>-backup-YYYYMMDD-HHMMSS.png` before writing. Never overwrite silently.
 
 ### Step 7: Output Summary
 
-Report: topic, layout, style, aspect, language, output path, files created.
+Report: topic, layout, style, aspect, language, output path (`imgs/<YYMMDD>-<slug>.png`), files created.
 
 ## References
 
