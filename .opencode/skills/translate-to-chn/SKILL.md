@@ -41,6 +41,8 @@ Translate one article from `ai-thoughts/docs/` into Simplified Chinese and write
      naturally. Do not add, remove, or reorder content.
    - Write Simplified Chinese by default; Traditional Chinese only when the
      source was originally written that way.
+   - Apply the bilingual-gloss style below: gloss technical terms and section
+     titles, and add plain-language explanations for unfamiliar concepts.
 6. **Do not translate specific terms** — leave them verbatim:
    - Product, tool, and agent names: Hermes Agent, OpenCode, OpenClaw, Astro,
      etc.
@@ -51,6 +53,16 @@ Translate one article from `ai-thoughts/docs/` into Simplified Chinese and write
 7. **Preserve everything else exactly**: `../imgs/<file>` image references, links, HTML, tables, frontmatter (if any), and Markdown structure.
 8. **Write the output** to `docs/<same-filename>-chn.md` with the source link line followed by the translated body.
 9. **Report** `outputPath` to the user. Do not modify the source file, and do not touch `articles.yaml` or the READMEs (out of scope for this skill).
+
+## Bilingual-gloss style (default)
+
+Every `-chn.md` uses this style: Simplified Chinese is the primary text, and English is added as glosses so a Chinese-only reader still gets the technical vocabulary. The source article stays as-is; the glosses and explanations live only in the `-chn.md`.
+
+1. **Gloss technical terms inline.** The first meaningful time a technical term appears, follow it with the English in parentheses: `技能 (skill)`, `无头 (headless)`, `密钥链 (keychain)`, `接口额度 (API quota)`. Don't gloss every repetition or everyday words — only technical or specialized vocabulary.
+2. **Gloss section titles.** Add the gloss to headings that contain technical terms: `## 技能 (skill) 是什么`, `## 无头 (headless) 环境下的认证`.
+3. **Add plain-language explanations.** For concepts a general reader won't know (e.g. what 无头 (headless) 环境 means), add a short, simple explanation in plain Chinese at the first use. Understanding beats literal fidelity here — the explanation may be a small addition to the source, since the goal is a standalone readable article for a Chinese audience.
+
+The verbatim exceptions from Procedure step 6 still apply: code, commands, product names, and URLs stay untouched, and glosses never go inside code blocks.
 
 ## Quality rules
 
@@ -64,6 +76,7 @@ Translate one article from `ai-thoughts/docs/` into Simplified Chinese and write
 - The source link line `**原文：** [<source>](<source>)` is present right after the H1.
 - Every `../imgs/<file>` reference in the output matches one in the source (verify with a glob/ls against `ai-thoughts/imgs/`).
 - Code blocks, inline code, commands, and specific terms (e.g. Hermes Agent, OpenCode) are preserved verbatim.
+- The bilingual-gloss style is applied: technical terms and headings carry English glosses, and unfamiliar concepts get a plain-language explanation at first use.
 - The source file is unmodified (confirm via git status/diff).
 
 ## Error Handling
