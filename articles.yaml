@@ -363,6 +363,17 @@ rows:
       - { label: "ai-agent-collaboration_chn", path: "docs/260808-ai-agent-collaboration-chn.md", lang: zh }
     desc_en: "What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent"
     desc_zh: "跨三个仓库自动发布技能到 ClawHub 的真实实践——关于 AGENTS.md、SKILL.md、项目边界与 AI 协作架构的启发"
+  - section: cross
+    status: published
+    links:
+      - { label: "opencode-git-underrated", path: "docs/260809-opencode-git-underrated.md", lang: en }
+    desc_en: "How a 15-year git user produced more automation in two days with OpenCode than in most of those years — the 9-step thought-flow loop, division of labor, and the compounding architecture"
+    desc_zh: "一位用了十五年 git 的用户，如何在两天内用 OpenCode 产出比过去多数年份更多的自动化——9 步思维流循环、分工与复利架构"
+  - section: cross
+    status: published
+    links:
+      - { label: "opencode-git-underrated_chn", path: "docs/260809-opencode-git-underrated-chn.md", lang: zh }
+    desc_zh: "OpenCode + Git：被低估的组合——十五年 git 老手两天内构建的自动化系统与思维流循环（简体中文）"
 
   # ------------------------------------------------------------ IX. skills
   - section: skills

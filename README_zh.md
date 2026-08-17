@@ -96,6 +96,8 @@
 | [ai-combination_chn](docs/260701-ai-combination2-chn.md) | 豆包用户到 AI 进阶用户：OpenRouter + OpenCode + AI Agent 组合策略（简体中文） |
 | [opencode-is-best](docs/260802-opencode-is-best.md) · [opencode-is-best_chn](docs/260802-opencode-is-best-chn.md) | 免供应商锁定、big-pickle 模型、可执行的规范约定与 OpenRouter 统一计费——为什么这套方案最合我意 |
 | [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) · [ai-agent-collaboration_chn](docs/260808-ai-agent-collaboration-chn.md) | 跨三个仓库自动发布技能到 ClawHub 的真实实践——关于 AGENTS.md、SKILL.md、项目边界与 AI 协作架构的启发 |
+| [opencode-git-underrated](docs/260809-opencode-git-underrated.md) | 一位用了十五年 git 的用户，如何在两天内用 OpenCode 产出比过去多数年份更多的自动化——9 步思维流循环、分工与复利架构 |
+| [opencode-git-underrated_chn](docs/260809-opencode-git-underrated-chn.md) | OpenCode + Git：被低估的组合——十五年 git 老手两天内构建的自动化系统与思维流循环（简体中文） |
 
 ### 八、技能
 

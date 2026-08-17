@@ -77,6 +77,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [ai-combination](docs/260701-ai-combination2.md) | Optimizing AI usage: from Doubao user to power user — combine OpenRouter, OpenCode, and Hermes/OpenClaw SKILL.md workflows |
 | [opencode-is-best](docs/260802-opencode-is-best.md) | Vendor freedom, the big-pickle model, enforced conventions, and unified billing via OpenRouter — why this setup wins for me |
 | [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) | What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent |
+| [opencode-git-underrated](docs/260809-opencode-git-underrated.md) | How a 15-year git user produced more automation in two days with OpenCode than in most of those years — the 9-step thought-flow loop, division of labor, and the compounding architecture |
 
 ### VIII. Skills
 
