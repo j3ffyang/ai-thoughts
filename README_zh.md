@@ -105,6 +105,7 @@
 |---|---|
 | [custom-infographic 技能](.opencode/skills/custom-infographic/SKILL.md) | custom-infographic——专业信息图生成 **opencode 技能**（21 种布局 × 21 种风格），原作者为宝玉（JimLiu），由 j3ffyang 移植并定制（需要 OPENROUTER_API_KEY） |
 | [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) · [zhihu-skill-opencode_chn](docs/260815-zhihu-config-in-opencode-chn.md) | 在 OpenCode 中安装 zhihu 技能与官方 zhihu-cli 的全程记录——包括无头环境下密钥链不可用时通过 ZHIHU_ACCESS_SECRET 完成认证的路径 |
+| [port-skill-to-opencode](docs/260811-port-skill-to-opencode.md) | How to port an existing Hermes Agent skill to OpenCode — copy the folder, rewrite frontmatter, fix paths, and test the router |
 
 ### 九、草稿与工作笔记
 

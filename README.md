@@ -85,6 +85,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 |---|---|
 | [custom-infographic](.opencode/skills/custom-infographic/SKILL.md) | custom-infographic — professional infographic generator (21 layouts × 21 styles); original author 宝玉 (JimLiu), ported & customized by j3ffyang as an **opencode** skill (needs OPENROUTER_API_KEY) |
 | [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) | Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable |
+| [port-skill-to-opencode](docs/260811-port-skill-to-opencode.md) | How to port an existing Hermes Agent skill to OpenCode — copy the folder, rewrite frontmatter, fix paths, and test the router |
 
 ### IX. Drafts & Working Notes
 
