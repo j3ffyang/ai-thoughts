@@ -390,6 +390,12 @@ rows:
     desc_en: "Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable"
     desc_zh: "在 OpenCode 中安装 zhihu 技能与官方 zhihu-cli 的全程记录——包括无头环境下密钥链不可用时通过 ZHIHU_ACCESS_SECRET 完成认证的路径"
 
+  - section: skills
+    status: published
+    links:
+      - { label: "port-skill-to-opencode", path: "docs/260811-port-skill-to-opencode.md", lang: en }
+    desc_en: "How to port an existing Hermes Agent skill to OpenCode — copy the folder, rewrite frontmatter, fix paths, and test the router"
+
   # ------------------------------------------------------------- VIII. drafts
   - section: drafts
     status: draft
