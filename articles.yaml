@@ -396,13 +396,6 @@ rows:
   - section: drafts
     status: draft
     links:
-      - { label: "death-series", path: "docs/260728-death.md", lang: zh, label_zh: "death 系列" }
-      - { label: "v1.0", path: "docs/260728-death2.md", lang: zh, label_zh: "v1.0" }
-      - { label: "v1.1 video", path: "docs/260728-death3.md", lang: zh, label_zh: "v1.1 视频" }
-    desc_zh: "计划中的《死亡》文章与纪录短片技能的 SKILL.md 草稿（墨西哥亡灵节 vs 藏传佛教）"
-  - section: drafts
-    status: draft
-    links:
       - { label: "web-search newsletter", path: "docs/260425-web-search.md", lang: en, label_zh: "web-search 简报" }
     desc_en: "Notes on building a newsletter skill with web_search (OpenClaw/Hermes)"
     desc_zh: "基于 web_search 构建简报技能的笔记（OpenClaw/Hermes）"
@@ -412,3 +405,18 @@ rows:
       - { label: "agents-opencode-config", path: "docs/260811-agents-opencode-config.md", lang: en, label_zh: "AGENTS + opencode.jsonc 架构" }
     desc_en: "Summary note on the OpenCode setup: how AGENTS.md and opencode.jsonc load, their precedence flows, the permission decision model, and a conflict/duplicate review"
     desc_zh: "OpenCode 配置架构总结：AGENTS.md 与 opencode.jsonc 的加载与优先级流程、权限判定模型，以及冲突/重复排查笔记"
+  - section: drafts
+    status: draft
+    links:
+      - { label: "ai-video-pipeline", path: "docs/260816-ai-video-pipeline.md", lang: en }
+    desc_en: "How a 60-second AI video trailer was built from eight photos with five OpenCode skills, an 8-stage thought-flow loop, and two content-policy failures that became codified gates"
+  - section: drafts
+    status: draft
+    links:
+      - { label: "ai-video-recommendations", path: "docs/260816-ai-video-recommendations.md", lang: en }
+    desc_en: "Ten rules for making AI videos with image-to-video engines — story-first scripting, delegated vision, audio decoupling, and a resumable pipeline that turns failures into codified skills"
+  - section: drafts
+    status: draft
+    links:
+      - { label: "death-thought-flow", path: "docs/260817-death-thought-flow.md", lang: en }
+    desc_en: "Personal thought-flow master for the death-in-Mexico project — seven thinking points, six content sections, verified facts, and cultural guardrails; use with the story-telling skill to generate a narration script or essay"

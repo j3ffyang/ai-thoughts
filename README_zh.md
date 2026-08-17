@@ -113,9 +113,11 @@
 | [ollama-to-llamacpp](docs/260803-ollama-to-llamacpp.md) · [从Ollama切换到llama.cpp](docs/260803-ollama-to-llamacpp-chn.md) | 在Arch Linux（GPD）上把本地LLM推到极限：从Ollama切换到llama.cpp，精细控制VRAM、提升效率与输出质量（qwen2.5:14b） |
 | [openclaw-custom-skills（早期草稿）](docs/260406-writing-your-own-custom-skill-in-openclaw.md) | OpenClaw 自定义技能教程的早期迭代版本 |
 | [ai-combination（完整 v1.1）](docs/260701-ai-combination.md) · [模板](docs/260701-ai-combination-template.md) | 精炼版 ai-combination 文章背后的完整版与种子模板 |
-| [death 系列](docs/260728-death.md) · [v1.0](docs/260728-death2.md) · [v1.1 视频](docs/260728-death3.md) | 计划中的《死亡》文章与纪录短片技能的 SKILL.md 草稿（墨西哥亡灵节 vs 藏传佛教） |
 | [web-search 简报](docs/260425-web-search.md) | 基于 web_search 构建简报技能的笔记（OpenClaw/Hermes） |
 | [AGENTS + opencode.jsonc 架构](docs/260811-agents-opencode-config.md) | OpenCode 配置架构总结：AGENTS.md 与 opencode.jsonc 的加载与优先级流程、权限判定模型，以及冲突/重复排查笔记 |
+| [ai-video-pipeline](docs/260816-ai-video-pipeline.md) | How a 60-second AI video trailer was built from eight photos with five OpenCode skills, an 8-stage thought-flow loop, and two content-policy failures that became codified gates |
+| [ai-video-recommendations](docs/260816-ai-video-recommendations.md) | Ten rules for making AI videos with image-to-video engines — story-first scripting, delegated vision, audio decoupling, and a resumable pipeline that turns failures into codified skills |
+| [death-thought-flow](docs/260817-death-thought-flow.md) | Personal thought-flow master for the death-in-Mexico project — seven thinking points, six content sections, verified facts, and cultural guardrails; use with the story-telling skill to generate a narration script or essay |
 
 ---
 

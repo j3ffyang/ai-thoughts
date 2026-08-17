@@ -1,1 +1,4 @@
 .env
+
+# Generated video output (final MP4s + scratch work), regenerable via video-gen skill
+videos/

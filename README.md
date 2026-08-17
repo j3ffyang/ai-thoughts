@@ -96,6 +96,9 @@ Earlier versions of articles are kept alongside their final versions so each pie
 | [ai-combination (full v1.1)](docs/260701-ai-combination.md) · [template](docs/260701-ai-combination-template.md) | Full-length version and seed template behind the condensed ai-combination article |
 | [web-search newsletter](docs/260425-web-search.md) | Notes on building a newsletter skill with web_search (OpenClaw/Hermes) |
 | [agents-opencode-config](docs/260811-agents-opencode-config.md) | Summary note on the OpenCode setup: how AGENTS.md and opencode.jsonc load, their precedence flows, the permission decision model, and a conflict/duplicate review |
+| [ai-video-pipeline](docs/260816-ai-video-pipeline.md) | How a 60-second AI video trailer was built from eight photos with five OpenCode skills, an 8-stage thought-flow loop, and two content-policy failures that became codified gates |
+| [ai-video-recommendations](docs/260816-ai-video-recommendations.md) | Ten rules for making AI videos with image-to-video engines — story-first scripting, delegated vision, audio decoupling, and a resumable pipeline that turns failures into codified skills |
+| [death-thought-flow](docs/260817-death-thought-flow.md) | Personal thought-flow master for the death-in-Mexico project — seven thinking points, six content sections, verified facts, and cultural guardrails; use with the story-telling skill to generate a narration script or essay |
 
 ---
 
