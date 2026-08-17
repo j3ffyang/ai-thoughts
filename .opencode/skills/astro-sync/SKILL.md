@@ -63,10 +63,10 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
    ```yaml
    ---
    author: Jeff Yang
-   pubDatetime: <ISO-8601 datetime, e.g. 2026-08-03T12:00:00.000Z>
+   pubDatetime: <ISO-8601 datetime, e.g. 2026-08-03T08:00:00.000Z>
    title: <Post title>
    tags:
-     - <tag1>
+   - <tag1>
      - <tag2>
    description: <One-line summary>
    featured: false
@@ -74,7 +74,7 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
    ---
    ```
 
-   `pubDatetime` comes from the source date if present, otherwise now.
+   `pubDatetime` comes from the source date if present, otherwise now. **Always use a UTC time that has already passed** — the blog's `postFilter` hides posts whose `pubDatetime` is in the future (even by minutes). A future time means the post won't appear on the homepage or in recent posts, though search may still index it.
    `modDatetime` is optional and only set when updating an existing post.
 9. **Write the post** to `src/data/blog/<category>/<filename>` with the frontmatter followed by the polished body.
  10. **Report** `postPath` and `imagesCopied` to the user.
