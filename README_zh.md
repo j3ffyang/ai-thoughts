@@ -28,7 +28,7 @@
 | 文章 | 简介 |
 |---|---|
 | [unknown-unknowns](docs/260722-unknown-unknowns2.md) | 关于知识四种类型的个人随笔——已知的已知、已知的未知、未知的已知，以及塑造我们人生的"未知的未知" |
-| [terminal-is-an-art](docs/260811-terminal-is-an-art.md) | Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and standard for 50 years |
+| [terminal-is-an-art](docs/260811-terminal-is-an-art.md) · [terminal-is-an-art](docs/260811-terminal-is-an-art-chn.md) | 近30年Unix/Linux经验凝练：命令行为何是艺术——简单、直接、诚实、强大、通用，且作为AI智能体的原生界面仍在进化 |
 | [unknown-unknowns](docs/260722-unknown-unknowns2-chn.md) | 不知道自己不知道的事——知识的四种类型（简体中文） |
 
 ### 三、第二大脑与知识管理
@@ -105,7 +105,7 @@
 |---|---|
 | [custom-infographic 技能](.opencode/skills/custom-infographic/SKILL.md) | custom-infographic——专业信息图生成 **opencode 技能**（21 种布局 × 21 种风格），原作者为宝玉（JimLiu），由 j3ffyang 移植并定制（需要 OPENROUTER_API_KEY） |
 | [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) · [zhihu-skill-opencode_chn](docs/260815-zhihu-config-in-opencode-chn.md) | 在 OpenCode 中安装 zhihu 技能与官方 zhihu-cli 的全程记录——包括无头环境下密钥链不可用时通过 ZHIHU_ACCESS_SECRET 完成认证的路径 |
-| [port-skill-to-opencode](docs/260811-port-skill-to-opencode.md) | How to port an existing Hermes Agent skill to OpenCode — copy the folder, rewrite frontmatter, fix paths, and test the router |
+| [port-skill-to-opencode](docs/260811-port-skill-to-opencode.md) · [port-skill-to-opencode](docs/260811-port-skill-to-opencode-chn.md) | 将现有 Hermes Agent 技能移植到 OpenCode——复制文件夹、重写 frontmatter、修正路径并测试路由器 |
 
 ### 九、草稿与工作笔记
 

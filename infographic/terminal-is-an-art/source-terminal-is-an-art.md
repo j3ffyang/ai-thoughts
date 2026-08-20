@@ -2,8 +2,6 @@
 
 I've been using Unix and Linux for almost thirty years now, and I still spend most of my day inside a terminal. Not because I have to — because it's the closest thing to an art form this industry ever produced. Every year the desktop gets shinier, the apps get bigger, and I keep coming back to a blinking cursor and a prompt. Here's why.
 
-![The Terminal Is an Art — visual summary](../imgs/260811-terminal-is-an-art.png)
-
 ## Simple
 
 A terminal is the simplest thing there is: a prompt, a blinking cursor, and one line of input. No windows, no panels, no ribbons, no onboarding tour. Strip away the chrome and you're left with the pure act of telling a computer what to do. I am a minimalist, and I hate bloatware — the terminal starts from almost nothing and grows only with what you add. It runs anywhere, on anything: a fifteen-year-old laptop with no desktop environment becomes usable the moment it has a shell. The terminal doesn't care about your hardware, your RAM, your GPU — it asks for almost nothing and gives you everything. What you see is the essentials done perfectly — no feature bloat, no cruft, just the parts that matter.
@@ -68,4 +66,4 @@ Art isn't always about decoration — sometimes it's about craft. The terminal i
 **Media:** `ffmpeg`
 **Version control:** `git`
 
-btw, i use arch 
+btw, i use arch 

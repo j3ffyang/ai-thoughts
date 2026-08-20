@@ -24,7 +24,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | Article | Description |
 |---|---|
 | [unknown-unknowns](docs/260722-unknown-unknowns2.md) | Personal essay on the four types of knowledge — known knowns, known unknowns, unknown knowns, and the unknown unknowns that shape our lives |
-| [terminal-is-an-art](docs/260811-terminal-is-an-art.md) | Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and standard for 50 years |
+| [terminal-is-an-art](docs/260811-terminal-is-an-art.md) | Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and still growing as AI agents' natural interface |
 
 ### III. Second Brain & Knowledge Management
 

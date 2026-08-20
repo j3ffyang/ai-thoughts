@@ -104,7 +104,9 @@ rows:
     status: published
     links:
       - { label: "terminal-is-an-art", path: "docs/260811-terminal-is-an-art.md", lang: en }
-    desc_en: "Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and standard for 50 years"
+      - { label: "terminal-is-an-art", path: "docs/260811-terminal-is-an-art-chn.md", lang: zh }
+    desc_en: "Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and still growing as AI agents' natural interface"
+    desc_zh: "近30年Unix/Linux经验凝练：命令行为何是艺术——简单、直接、诚实、强大、通用，且作为AI智能体的原生界面仍在进化"
   - section: history
     status: published
     links:
@@ -394,7 +396,9 @@ rows:
     status: published
     links:
       - { label: "port-skill-to-opencode", path: "docs/260811-port-skill-to-opencode.md", lang: en }
+      - { label: "port-skill-to-opencode", path: "docs/260811-port-skill-to-opencode-chn.md", lang: zh }
     desc_en: "How to port an existing Hermes Agent skill to OpenCode — copy the folder, rewrite frontmatter, fix paths, and test the router"
+    desc_zh: "将现有 Hermes Agent 技能移植到 OpenCode——复制文件夹、重写 frontmatter、修正路径并测试路由器"
 
   # ------------------------------------------------------------- VIII. drafts
   - section: drafts

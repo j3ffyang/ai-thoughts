@@ -41,7 +41,7 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Repo | Purpose | Articles | Latest |
 |------|---------|----------|--------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 36 articles | `docs: register port-skill-to-opencode article, add sign-off insertion rule to AGENTS.md` (Aug 2026) |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 36 articles | `docs: update skill-publish scope to chinese-history-literature-culture` (Aug 2026) |
 
 ### Tools & Extensions
 
@@ -225,7 +225,7 @@ curl -s -H "Authorization: Bearer $CLH_TOKEN" \
 From `ai-thoughts` (most recent published articles):
 
 1. **"zhihu skill + CLI — install and configuration in OpenCode"** (Aug 2026) — Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable
-2. **"The Terminal Is an Art"** (Aug 2026) — Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and standard for 50 years
+2. **"The Terminal Is an Art"** (Aug 2026) — Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and still growing as AI agents' natural interface
 3. **"OpenCode + Git: The Underrated Duo"** (Aug 2026) — How a 15-year git user produced more automation in two days with OpenCode than in most of those years — the 9-step thought-flow loop, division of labor, and the compounding architecture
 4. **"AI Agent Collaboration: An OpenCode Playbook Built on AGENTS.md and SKILL.md"** (Aug 2026) — What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent
 5. **"Arch Linux + Hyprland on GPD Win4 with iGPU + eGPU"** (Aug 2026) — Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks
@@ -268,4 +268,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** August 17, 2026 | Tracking: 6 active repos, 36 published articles, 10+ published skills
+**Last Updated:** August 20, 2026 | Tracking: 6 active repos, 36 published articles, 10+ published skills
