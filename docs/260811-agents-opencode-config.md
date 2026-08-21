@@ -84,7 +84,7 @@ it (last matching rule wins) — keep the prefixes of asks disjoint from allows.
 
 ## Workflow: changing permissions
 
-1. Edit `negtivSpace/opencode/opencode.jsonc` — the single source of truth; the symlink at `~/.config/opencode/opencode.jsonc` picks it up automatically.
+1. Edit `negtivSpace/opencode/opencode.jsonc` — the single source of truth. `negtivSpace/` here is the local clone of the `negtivSpace/negtivSpace` GitHub repo (the folder and the repo share the same name), sitting outside any individual project tree. Two symlinks wire it into OpenCode: `~/.config/opencode/opencode.jsonc → …/negtivSpace/opencode/opencode.jsonc` and `~/.config/opencode/AGENTS.md → …/negtivSpace/opencode/AGENTS.md`. Edits to the repo propagate to both symlinks immediately; git history and rollback come for free.
 2. Restart opencode — the config is read once when a location opens, so changes need a restart.
 3. Verify with `opencode debug config` before trusting the new rules.
 4. For one-off tweaks, use the ask prompt's once / always ("Accept always") / reject; "always" lasts only the current session, so permanent rules go in the config.
@@ -108,3 +108,5 @@ Prose wrapping is deliberately per-repo, not global. `ai-thoughts/AGENTS.md` man
 - Source — config load order: `packages/core/src/config.ts`; AGENTS.md loading: `packages/core/src/instruction-context.ts`; permission evaluation and defaults: `packages/core/src/permission.ts`; built-in default agent rules: `packages/core/src/plugin/agent.ts`; config rules appended to agents: `packages/core/src/config/plugin/agent.ts`.
 - Docs — opencode.ai/docs/rules, opencode.ai/docs/config, opencode.ai/docs/permissions.
 - Local — `~/.config/opencode/opencode.jsonc` (symlink to `negtivSpace/opencode/opencode.jsonc`) and `~/.config/opencode/AGENTS.md` (symlink to `negtivSpace/opencode/AGENTS.md`).
+
+btw, i use arch 
