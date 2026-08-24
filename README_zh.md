@@ -98,6 +98,7 @@
 | [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) · [ai-agent-collaboration_chn](docs/260808-ai-agent-collaboration-chn.md) | 跨三个仓库自动发布技能到 ClawHub 的真实实践——关于 AGENTS.md、SKILL.md、项目边界与 AI 协作架构的启发 |
 | [opencode-git-underrated](docs/260809-opencode-git-underrated.md) | 一位用了十五年 git 的用户，如何在两天内用 OpenCode 产出比过去多数年份更多的自动化——9 步思维流循环、分工与复利架构 |
 | [opencode-git-underrated_chn](docs/260809-opencode-git-underrated-chn.md) | OpenCode + Git：被低估的组合——十五年 git 老手两天内构建的自动化系统与思维流循环（简体中文） |
+| [AGENTS + opencode.jsonc 架构](docs/260811-agents-opencode-config.md) · [AGENTS + opencode.jsonc 架构（中文）](docs/260811-agents-opencode-config-chn.md) | OpenCode AGENTS.md 与 opencode.jsonc 架构、优先级与工作流：双配置表面如何加载、消解冲突、评估权限并在子模块上下文隔离墙间运作；对照 anomalyco/opencode 源码 HEAD e11dbd0 严格复核。 |
 
 ### 八、技能
 
@@ -117,7 +118,6 @@
 | [openclaw-custom-skills（早期草稿）](docs/260406-writing-your-own-custom-skill-in-openclaw.md) | OpenClaw 自定义技能教程的早期迭代版本 |
 | [ai-combination（完整 v1.1）](docs/260701-ai-combination.md) · [模板](docs/260701-ai-combination-template.md) | 精炼版 ai-combination 文章背后的完整版与种子模板 |
 | [web-search 简报](docs/260425-web-search.md) | 基于 web_search 构建简报技能的笔记（OpenClaw/Hermes） |
-| [AGENTS + opencode.jsonc 架构](docs/260811-agents-opencode-config.md) | OpenCode 配置架构总结：AGENTS.md 与 opencode.jsonc 的加载与优先级流程、权限判定模型，以及冲突/重复排查笔记 |
 | [ai-video-pipeline](docs/260816-ai-video-pipeline.md) | How a 60-second AI video trailer was built from eight photos with five OpenCode skills, an 8-stage thought-flow loop, and two content-policy failures that became codified gates |
 | [ai-video-recommendations](docs/260816-ai-video-recommendations.md) | Ten rules for making AI videos with image-to-video engines — story-first scripting, delegated vision, audio decoupling, and a resumable pipeline that turns failures into codified skills |
 | [death-thought-flow](docs/260817-death-thought-flow.md) | Personal thought-flow master for the death-in-Mexico project — seven thinking points, six content sections, verified facts, and cultural guardrails; use with the story-telling skill to generate a narration script or essay |

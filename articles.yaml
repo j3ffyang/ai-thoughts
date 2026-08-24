@@ -376,6 +376,13 @@ rows:
     links:
       - { label: "opencode-git-underrated_chn", path: "docs/260809-opencode-git-underrated-chn.md", lang: zh }
     desc_zh: "OpenCode + Git：被低估的组合——十五年 git 老手两天内构建的自动化系统与思维流循环（简体中文）"
+  - section: cross
+    status: published
+    links:
+      - { label: "agents-opencode-config", path: "docs/260811-agents-opencode-config.md", lang: en, label_zh: "AGENTS + opencode.jsonc 架构" }
+      - { label: "agents-opencode-config", path: "docs/260811-agents-opencode-config-chn.md", lang: zh, label_zh: "AGENTS + opencode.jsonc 架构（中文）" }
+    desc_en: "OpenCode AGENTS.md + opencode.jsonc — architecture, precedence and workflow: how the two surfaces load, resolve conflicts, evaluate permissions, and isolate across submodule context walls; verified against anomalyco/opencode source HEAD e11dbd0."
+    desc_zh: "OpenCode AGENTS.md 与 opencode.jsonc 架构、优先级与工作流：双配置表面如何加载、消解冲突、评估权限并在子模块上下文隔离墙间运作；对照 anomalyco/opencode 源码 HEAD e11dbd0 严格复核。"
 
   # ------------------------------------------------------------ IX. skills
   - section: skills
@@ -420,12 +427,6 @@ rows:
       - { label: "web-search newsletter", path: "docs/260425-web-search.md", lang: en, label_zh: "web-search 简报" }
     desc_en: "Notes on building a newsletter skill with web_search (OpenClaw/Hermes)"
     desc_zh: "基于 web_search 构建简报技能的笔记（OpenClaw/Hermes）"
-  - section: drafts
-    status: draft
-    links:
-      - { label: "agents-opencode-config", path: "docs/260811-agents-opencode-config.md", lang: en, label_zh: "AGENTS + opencode.jsonc 架构" }
-    desc_en: "Summary note on the OpenCode setup: how AGENTS.md and opencode.jsonc load, their precedence flows, the permission decision model, and a conflict/duplicate review"
-    desc_zh: "OpenCode 配置架构总结：AGENTS.md 与 opencode.jsonc 的加载与优先级流程、权限判定模型，以及冲突/重复排查笔记"
   - section: drafts
     status: draft
     links:

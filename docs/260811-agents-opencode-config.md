@@ -1,5 +1,7 @@
 # OpenCode AGENTS.md + opencode.jsonc — architecture, precedence and workflow
 
+![OpenCode Configuration Architecture — Visual Summary](../imgs/260811-agents-opencode-config.png)
+
 A summary of how this machine's OpenCode is configured, how the pieces load, and how the precedence rules actually work. Facts were verified against the opencode source tree (anomalyco/opencode) and the official docs on 2026-08-11, and re-verified against source HEAD `e11dbd0` on 2026-08-21, not from memory.
 
 ## Overview: two configuration surfaces
@@ -112,9 +114,17 @@ No genuine conflicts between the surfaces: AGENTS.md instructs behavior, the con
 
 Prose wrapping is deliberately per-repo, not global. `ai-thoughts/AGENTS.md` mandates no hard-wrap (one paragraph per line, verified by `scripts/unwrap_md.py --check`), `history/AGENTS.md` auto-wraps, and the global `opencode/AGENTS.md` delegates to each repo — never assume a global wrapping rule. Reviewed on 2026-08-11: keep the rule. It's cheap (one line, no pipeline to maintain) and high-value — hard-wrapped prose turns a one-word edit into a 20-line diff and muddies CJK word boundaries. `unwrap_md.py` is insurance, not a gate: with no CI pipeline, `--check` is a manual hygiene check, and escalating it to a hook or CI gate isn't worth building.
 
+Centralized configuration trade-off: I personally prefer keeping all configuration — `AGENTS.md`, `opencode.jsonc`, and all `SKILL.md` files — centralized within the `ai-thoughts` repository. This allows focusing on managing, updating, and unifying all specific configurations in one place versioned and synchronized via git. While it might not be the theoretically optimal or purest layout across distinct repositories, for the current moment it is the simplest and most practical approach under the current setup.
+
 ## References
 
-- Source — config load order: `packages/core/src/config.ts`; AGENTS.md loading: `packages/core/src/instruction-context.ts`; permission evaluation and defaults: `packages/core/src/permission.ts`; built-in default agent rules: `packages/core/src/plugin/agent.ts`; config rules appended to agents: `packages/core/src/config/plugin/agent.ts`; v1 `permission` → `permissions` key migration: `packages/core/src/v1/config/migrate.ts`.
+- Source:
+  - Config load order: `packages/core/src/config.ts`
+  - AGENTS.md loading: `packages/core/src/instruction-context.ts`
+  - Permission evaluation and defaults: `packages/core/src/permission.ts`
+  - Built-in default agent rules: `packages/core/src/plugin/agent.ts`
+  - Config rules appended to agents: `packages/core/src/config/plugin/agent.ts`
+  - v1 `permission` → `permissions` key migration: `packages/core/src/v1/config/migrate.ts`
 - Docs — opencode.ai/docs/rules, opencode.ai/docs/config, opencode.ai/docs/permissions.
 - Local — `~/.config/opencode/opencode.jsonc` (symlink to `negtivSpace/opencode/opencode.jsonc`) and `~/.config/opencode/AGENTS.md` (symlink to `negtivSpace/opencode/AGENTS.md`).
 
