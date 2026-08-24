@@ -441,3 +441,8 @@ rows:
     links:
       - { label: "death-thought-flow", path: "docs/260817-death-thought-flow.md", lang: en }
     desc_en: "Personal thought-flow master for the death-in-Mexico project — seven thinking points, six content sections, verified facts, and cultural guardrails; use with the story-telling skill to generate a narration script or essay"
+  - section: drafts
+    status: draft
+    links:
+      - { label: "agents-md-not-a-persona", path: "docs/260821-agents-md-not-a-persona.md", lang: en }
+    desc_en: "AGENTS.md is not a persona but a constitution written in scars — every rule traced to a real incident (a self-cloned repo, lying docs, a prompt flood), agent-agnostic lessons for any AI coding agent"
