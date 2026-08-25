@@ -41,4 +41,4 @@ Access Secret 只通过标准输入 (stdin)（`auth set --secret-stdin`）或 `Z
 
 - [知乎开发者文档 —— zhihu CLI](https://developer.zhihu.com/docs?key=zhihu_cli)
 
-btw, i use arch 
+btw, i use arch 

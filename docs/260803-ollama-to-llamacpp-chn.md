@@ -4,13 +4,13 @@
 
 ![Ollama to llama.cpp infographic](../imgs/260803-ollama-to-llamacpp.png)
 
-我在我的 Arch Linux  + Hyprland 环境上运行本地 LLM，已经通过 Ollama 用上了 `qwen2.5:7b`。
+我在我的 Arch Linux + Hyprland 环境上运行本地 LLM，已经通过 Ollama 用上了 `qwen2.5:7b`。
 
 我想最大化利用我的硬件。
 
 因此我决定下载一个稍大的模型来覆盖日常文档写作和 Python 编码工作，并从 Ollama 切换到 llama.cpp。
 
-我的硬件：一台运行 Arch  + Hyprland 的 GPD 掌机，搭载 AMD Ryzen 7 7840U——一颗 Radeon 780M 集成显卡加一块独立 Radeon RX 7600M XT（各 8GB），通过 Vulkan/RADV 驱动。具体规格并不重要；重要的是这是一台双 GPU 机器（一块共享内存的核显和一块独立独显），而本文的重点是如何在这类机器上控制和调优 llama.cpp。
+我的硬件：一台运行 Arch   + Hyprland 的 GPD 掌机，搭载 AMD Ryzen 7 7840U——一颗 Radeon 780M 集成显卡加一块独立 Radeon RX 7600M XT（各 8GB），通过 Vulkan/RADV 驱动。具体规格并不重要；重要的是这是一台双 GPU 机器（一块共享内存的核显和一块独立独显），而本文的重点是如何在这类机器上控制和调优 llama.cpp。
 
 ## 为什么从 `ollama` 切换到 `llama.cpp`
 
