@@ -79,6 +79,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) | What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent |
 | [opencode-git-underrated](docs/260809-opencode-git-underrated.md) | How a 15-year git user produced more automation in two days with OpenCode than in most of those years — the 9-step thought-flow loop, division of labor, and the compounding architecture |
 | [agents-opencode-config](docs/260811-agents-opencode-config.md) | OpenCode AGENTS.md + opencode.jsonc — architecture, precedence and workflow: how the two surfaces load, resolve conflicts, evaluate permissions, and isolate across submodule context walls; verified against anomalyco/opencode source HEAD e11dbd0. |
+| [agents-md-not-a-persona](docs/260821-agents-md-not-a-persona.md) | AGENTS.md is not a persona but a constitution written in scars — every rule traced to a real incident (a self-cloned repo, lying docs, a prompt flood), agent-agnostic lessons for any AI coding agent |
 
 ### VIII. Skills
 
@@ -101,7 +102,6 @@ Earlier versions of articles are kept alongside their final versions so each pie
 | [ai-video-pipeline](docs/260816-ai-video-pipeline.md) | How a 60-second AI video trailer was built from eight photos with five OpenCode skills, an 8-stage thought-flow loop, and two content-policy failures that became codified gates |
 | [ai-video-recommendations](docs/260816-ai-video-recommendations.md) | Ten rules for making AI videos with image-to-video engines — story-first scripting, delegated vision, audio decoupling, and a resumable pipeline that turns failures into codified skills |
 | [death-thought-flow](docs/260817-death-thought-flow.md) | Personal thought-flow master for the death-in-Mexico project — seven thinking points, six content sections, verified facts, and cultural guardrails; use with the story-telling skill to generate a narration script or essay |
-| [agents-md-not-a-persona](docs/260821-agents-md-not-a-persona.md) | AGENTS.md is not a persona but a constitution written in scars — every rule traced to a real incident (a self-cloned repo, lying docs, a prompt flood), agent-agnostic lessons for any AI coding agent |
 
 ---
 

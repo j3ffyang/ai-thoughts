@@ -442,8 +442,12 @@ rows:
     links:
       - { label: "death-thought-flow", path: "docs/260817-death-thought-flow.md", lang: en }
     desc_en: "Personal thought-flow master for the death-in-Mexico project — seven thinking points, six content sections, verified facts, and cultural guardrails; use with the story-telling skill to generate a narration script or essay"
-  - section: drafts
-    status: draft
+
+  # -------------------------------------------------------------- VII. cross (cont.)
+  - section: cross
+    status: published
     links:
       - { label: "agents-md-not-a-persona", path: "docs/260821-agents-md-not-a-persona.md", lang: en }
+      - { label: "agents-md-not-a-persona", path: "docs/260821-agents-md-not-a-persona-chn.md", lang: zh, label_zh: "AGENTS.md 不是人格设定" }
     desc_en: "AGENTS.md is not a persona but a constitution written in scars — every rule traced to a real incident (a self-cloned repo, lying docs, a prompt flood), agent-agnostic lessons for any AI coding agent"
+    desc_zh: "AGENTS.md 不是人格设定——它是一部用伤疤写成的宪章：每条规则追溯到真实事故（自克隆仓库、撒谎的文档、提示洪水），不绑定特定工具的通用法则"

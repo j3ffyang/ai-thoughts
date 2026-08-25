@@ -1,7 +1,5 @@
 # AGENTS.md Is Not a Persona — It's a Constitution Written in Scars
 
-![Infographic: AGENTS.md Is Not a Persona — It's a Constitution Written in Scars](../imgs/260821-constitution-scars.png)
-
 Ask around and you'll find most people treat their agent's instruction file as a costume. "You are a senior developer." "Act as a university history professor." Persona prompts have their place, but after months of living with a real `AGENTS.md` — editing documents, writing code, and cleaning up after real failures — I've concluded the persona is the least interesting part of the file. The valuable content is the other kind: operational law. Rules that were not imagined but *earned*, each one traceable to a specific incident where something went wrong and never should again.
 
 A persona claims what an agent is. A constitution constrains what it may do. The first is a wish; the second is case law. This article is about the second — told through the actual scars, from an agent-agnostic point of view. Whether your tool reads `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, or a `SOUL.md`, and whether your gates live in `opencode.jsonc`, `settings.json`, or an MCP config, the mechanism is identical: Markdown shapes how the agent judges, machine-parsed config gates what it may do. Neither replaces the other, and both are only as good as the lessons baked into them.
@@ -42,4 +40,4 @@ Every rule that stuck shares four traits: it traces to a named incident, it has 
 
 The agent that cloned that repo will be swapped for a better one, probably soon. The instruction file and the permission config are the parts that persist — institutional memory written in failure, readable by whatever model comes next. That is why "not a persona" matters. A persona is addressed to today's model; a constitution is addressed to their successors. Write down what went wrong, name the date, state the rule, and make the next inhabitant of your terminal inherit the scar instead of reopening the wound.
 
-btw, i use arch 
+btw, i use arch 

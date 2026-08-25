@@ -207,6 +207,7 @@ Combine:
 3. Base template from `references/base-prompt.md`
 4. Structured content from Step 2
 5. All text in confirmed language
+6. **Text accuracy block**: After assembling all content, add a "CRITICAL: Text Accuracy" section at the top of the prompt. List every exact text string that must appear in the image, spell out known pitfalls, and instruct the model to favor fewer labels over garbled text. This block is mandatory — skip it and the image will garble text.
 
 **Aspect ratio resolution** for `{{ASPECT_RATIO}}`:
 - Named presets → ratio string: landscape→`16:9`, portrait→`9:16`, square→`1:1`
@@ -252,6 +253,7 @@ Report: topic, layout, style, aspect, language, output path (`imgs/<YYMMDD>-<slu
 4. **Style consistency** — the style definition from the references file must be applied consistently across the entire infographic. Don't mix styles.
 5. **Aspect ratio support** — `image_config` aspect ratios are limited to what the selected model supports (Gemini: `16:9`, `9:16`, `1:1`, `3:4`, `4:3`, `21:9`, plus extended `1:4`, `4:1`, `1:8`, `8:1`); map custom ratios outside that set to the nearest named preset.
 6. **API availability** — generation fails without `OPENROUTER_API_KEY` or when the model cannot output images. Verify the key is set before starting; if generation is impossible, deliver the prompt-only outputs (`analysis.md`, `structured-content.md`, `prompts/infographic.md`) and tell the user.
+7. **Text accuracy in image generation** — AI image models frequently garble, misspell, or double text. Every prompt MUST include an explicit "CRITICAL: Text Accuracy" block that (a) lists every exact text string the image must render, (b) spells out common pitfalls to avoid (doubled words, garbled section titles, similar-looking words), and (c) instructs the model to prioritize text accuracy over visual density — shrink the number of labels rather than shrinking font size or misspelling words. After generation, verify all text with a vision model (e.g. `opencode run` with `--model openrouter/z-ai/glm-4.6v --file`) against the expected text list before delivering to the user.
 
 ## Credits
 

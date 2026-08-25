@@ -99,6 +99,7 @@
 | [opencode-git-underrated](docs/260809-opencode-git-underrated.md) | 一位用了十五年 git 的用户，如何在两天内用 OpenCode 产出比过去多数年份更多的自动化——9 步思维流循环、分工与复利架构 |
 | [opencode-git-underrated_chn](docs/260809-opencode-git-underrated-chn.md) | OpenCode + Git：被低估的组合——十五年 git 老手两天内构建的自动化系统与思维流循环（简体中文） |
 | [AGENTS + opencode.jsonc 架构](docs/260811-agents-opencode-config.md) · [AGENTS + opencode.jsonc 架构（中文）](docs/260811-agents-opencode-config-chn.md) | OpenCode AGENTS.md 与 opencode.jsonc 架构、优先级与工作流：双配置表面如何加载、消解冲突、评估权限并在子模块上下文隔离墙间运作；对照 anomalyco/opencode 源码 HEAD e11dbd0 严格复核。 |
+| [agents-md-not-a-persona](docs/260821-agents-md-not-a-persona.md) · [AGENTS.md 不是人格设定](docs/260821-agents-md-not-a-persona-chn.md) | AGENTS.md 不是人格设定——它是一部用伤疤写成的宪章：每条规则追溯到真实事故（自克隆仓库、撒谎的文档、提示洪水），不绑定特定工具的通用法则 |
 
 ### 八、技能
 
@@ -121,7 +122,6 @@
 | [ai-video-pipeline](docs/260816-ai-video-pipeline.md) | How a 60-second AI video trailer was built from eight photos with five OpenCode skills, an 8-stage thought-flow loop, and two content-policy failures that became codified gates |
 | [ai-video-recommendations](docs/260816-ai-video-recommendations.md) | Ten rules for making AI videos with image-to-video engines — story-first scripting, delegated vision, audio decoupling, and a resumable pipeline that turns failures into codified skills |
 | [death-thought-flow](docs/260817-death-thought-flow.md) | Personal thought-flow master for the death-in-Mexico project — seven thinking points, six content sections, verified facts, and cultural guardrails; use with the story-telling skill to generate a narration script or essay |
-| [agents-md-not-a-persona](docs/260821-agents-md-not-a-persona.md) | AGENTS.md is not a persona but a constitution written in scars — every rule traced to a real incident (a self-cloned repo, lying docs, a prompt flood), agent-agnostic lessons for any AI coding agent |
 
 ---
 
