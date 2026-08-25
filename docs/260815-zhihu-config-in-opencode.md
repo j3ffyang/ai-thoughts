@@ -39,4 +39,4 @@ The Access Secret is only ever passed through stdin (`auth set --secret-stdin`) 
 
 - [Zhihu developer docs — zhihu CLI](https://developer.zhihu.com/docs?key=zhihu_cli)
 
-btw, i use arch 
+btw, i use arch

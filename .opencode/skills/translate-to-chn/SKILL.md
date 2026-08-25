@@ -52,7 +52,7 @@ Translate one article from `ai-thoughts/docs/` into Simplified Chinese and write
    - Existing proper nouns already in Latin script. Only translate the surrounding prose; never translate inside code.
 7. **Preserve everything else exactly**: `../imgs/<file>` image references (keep the path verbatim — Chinese files mirror English per AGENTS.md), links, HTML, tables, frontmatter (if any), and Markdown structure.
 8. **Write the output** to `docs/<same-filename>-chn.md` with the source link line followed by the translated body.
-9. **Arch sign-off**: if the source ends with `btw, i use arch ` (with the  glyph), append the identical line at the bottom of the `-chn.md`. Keep it verbatim English — do not translate.
+9. **Arch sign-off**: if the source ends with `btw, i use arch`, append the identical line at the bottom of the `-chn.md`. Keep it verbatim English — do not translate.
 10. **Report** `outputPath` to the user. Do not modify the source file, and do not touch `articles.yaml` or the READMEs (out of scope for this skill).
 
 ## Bilingual-gloss style (default)
@@ -79,7 +79,7 @@ The verbatim exceptions from Procedure step 6 still apply: code, commands, produ
 - Every `../imgs/<file>` reference in the output matches one in the source (verify with a glob/ls against `ai-thoughts/imgs/`).
 - Code blocks, inline code, commands, and specific terms (e.g. Hermes Agent, OpenCode) are preserved verbatim.
 - The bilingual-gloss style is applied: technical terms and headings carry English glosses, table cells are glossed on first appearance, and unfamiliar concepts get a plain-language explanation at first use.
-- If the source ends with the arch sign-off (`btw, i use arch `), the `-chn.md` carries the identical verbatim line.
+- If the source ends with the arch sign-off (`btw, i use arch`), the `-chn.md` carries the identical verbatim line.
 - The source file is unmodified (confirm via git status/diff).
 
 ## Error Handling

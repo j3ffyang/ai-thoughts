@@ -42,4 +42,4 @@ Every rule that stuck shares four traits: it traces to a named incident, it has 
 
 The agent that cloned that repo will be swapped for a better one, probably soon. The instruction file and the permission config are the parts that persist — institutional memory written in failure, readable by whatever model comes next. That is why "not a persona" matters. A persona is addressed to today's model; a constitution is addressed to their successors. Write down what went wrong, name the date, state the rule, and make the next inhabitant of your terminal inherit the scar instead of reopening the wound.
 
-btw, i use arch 
+btw, i use arch

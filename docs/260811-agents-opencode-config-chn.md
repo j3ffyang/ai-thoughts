@@ -129,4 +129,4 @@ OpenCode 由两个互补的配置表面共同驱动。`AGENTS.md` 文件将 Mark
 - 官方文档 —— opencode.ai/docs/rules、opencode.ai/docs/config、opencode.ai/docs/permissions。
 - 本地路径 —— `~/.config/opencode/opencode.jsonc`（软链接至 `negtivSpace/opencode/opencode.jsonc`）与 `~/.config/opencode/AGENTS.md`（软链接至 `negtivSpace/opencode/AGENTS.md`）。
 
-btw, i use arch 
+btw, i use arch

@@ -341,4 +341,4 @@ description: Publish SKILL.md files to ClawHub and diagnose publish failures.
 
 如果你只能带走一点，那就是这一点：**智能体有多好，取决于你给它的边界有多好；而边界只有在写下来之后才起作用。** 其余一切都是练习。
 
-btw, i use arch 
+btw, i use arch

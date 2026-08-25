@@ -79,4 +79,4 @@ I proposed three fixes: regenerate the two silent clips with audible-audio promp
 
 In the end, the trailer is less interesting than the way it was made: eight photos that a blind model orchestrated, a plan that broke twice against content policy and stochastic failure, and a loop that turned both breakages into skills. That is the part worth keeping.
 
-btw, i use arch 
+btw, i use arch

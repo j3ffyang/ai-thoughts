@@ -62,4 +62,4 @@ Principles are cheap; enforcement is the work. After one run, most of these rule
 
 The loop that made the trailer now guards the trailer's own making.
 
-btw, i use arch 
+btw, i use arch
