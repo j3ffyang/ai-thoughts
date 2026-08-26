@@ -41,7 +41,7 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Repo | Purpose | Articles | Latest |
 |------|---------|----------|--------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 36 articles | `docs: update astro-sync skill to support multi-repo sync and npx verification` (Aug 2026) |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 37 articles | `skill: add bold-highlights for scannable prose; add grow-with-agent article` (Aug 2026) |
 
 ### Tools & Extensions
 
@@ -215,7 +215,7 @@ curl -s -H "Authorization: Bearer $CLH_TOKEN" \
 ## 🔗 Quick Links
 
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
-- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 36 articles on AI, privacy, and entrepreneurship
+- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 37 articles on AI, privacy, and entrepreneurship
 - **Gists & Experiments:** [Personal gists](https://gist.github.com/j3ffyang)
 
 ---
@@ -224,14 +224,14 @@ curl -s -H "Authorization: Bearer $CLH_TOKEN" \
 
 From `ai-thoughts` (most recent published articles):
 
-1. **"zhihu skill + CLI — install and configuration in OpenCode"** (Aug 2026) — Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable
-2. **"The Terminal Is an Art"** (Aug 2026) — Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and still growing as AI agents' natural interface
-3. **"OpenCode + Git: The Underrated Duo"** (Aug 2026) — How a 15-year git user produced more automation in two days with OpenCode than in most of those years — the 9-step thought-flow loop, division of labor, and the compounding architecture
-4. **"AI Agent Collaboration: An OpenCode Playbook Built on AGENTS.md and SKILL.md"** (Aug 2026) — What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent
-5. **"Arch Linux + Hyprland on GPD Win4 with iGPU + eGPU"** (Aug 2026) — Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks
-6. **"OpenCode is Best for Me"** (Aug 2026) — Vendor freedom, the big-pickle model, enforced conventions, and unified billing via OpenRouter — why this setup wins for me
+1. **"AGENTS.md Is Not a Persona — It's a Constitution Written in Scars"** (Aug 2026) — AGENTS.md is not a persona but a constitution written in scars — every rule traced to a real incident (a self-cloned repo, lying docs, a prompt flood), agent-agnostic lessons for any AI coding agent
+2. **"zhihu skill + CLI — install and configuration in OpenCode"** (Aug 2026) — Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable
+3. **"The Terminal Is an Art"** (Aug 2026) — Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and still growing as AI agents' natural interface
+4. **"OpenCode + Git: The Underrated Duo"** (Aug 2026) — How a 15-year git user produced more automation in two days with OpenCode than in most of those years — the 9-step thought-flow loop, division of labor, and the compounding architecture
+5. **"AI Agent Collaboration: An OpenCode Playbook Built on AGENTS.md and SKILL.md"** (Aug 2026) — What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent
+6. **"Arch Linux + Hyprland on GPD Win4 with iGPU + eGPU"** (Aug 2026) — Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks
 
-👉 See all 36 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
+👉 See all 37 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
 
 ---
 
@@ -257,7 +257,7 @@ npm run build  # or load the extension manually in Chrome
 ```bash
 git clone https://github.com/negtivspace/ai-thoughts
 cd docs
-# 36 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
+# 37 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
 ```
 
 ---
@@ -268,4 +268,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** August 24, 2026 | Tracking: 6 active repos, 36 published articles, 10+ published skills
+**Last Updated:** August 26, 2026 | Tracking: 6 active repos, 37 published articles, 10+ published skills
