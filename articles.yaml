@@ -398,6 +398,11 @@ rows:
       - { label: "zhihu-skill-opencode_chn", path: "docs/260815-zhihu-config-in-opencode-chn.md", lang: zh }
     desc_en: "Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable"
     desc_zh: "在 OpenCode 中安装 zhihu 技能与官方 zhihu-cli 的全程记录——包括无头环境下密钥链不可用时通过 ZHIHU_ACCESS_SECRET 完成认证的路径"
+  - section: skills
+    status: published
+    links:
+      - { label: "bold-highlights", path: ".opencode/skills/bold-highlights/SKILL.md", lang: en }
+    desc_en: "bold-highlights — add bold highlights to key concepts in each paragraph for scannable prose; 1-2 words per paragraph, max, with verification that the bolded words alone tell the article's arc"
 
   - section: skills
     status: published
@@ -442,6 +447,11 @@ rows:
     links:
       - { label: "death-thought-flow", path: "docs/260817-death-thought-flow.md", lang: en }
     desc_en: "Personal thought-flow master for the death-in-Mexico project — seven thinking points, six content sections, verified facts, and cultural guardrails; use with the story-telling skill to generate a narration script or essay"
+  - section: drafts
+    status: draft
+    links:
+      - { label: "grow-with-agent", path: "docs/260825-grow-with-agent.md", lang: en }
+    desc_en: "Reflections on growing with AI agents — choosing OpenCode, learning the pace of AI collaboration, discovering Git automation, and finding meditative honesty in terminal-based computing"
 
   # -------------------------------------------------------------- VII. cross (cont.)
   - section: cross

@@ -107,6 +107,7 @@
 |---|---|
 | [custom-infographic 技能](.opencode/skills/custom-infographic/SKILL.md) | custom-infographic——专业信息图生成 **opencode 技能**（21 种布局 × 21 种风格），原作者为宝玉（JimLiu），由 j3ffyang 移植并定制（需要 OPENROUTER_API_KEY） |
 | [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) · [zhihu-skill-opencode_chn](docs/260815-zhihu-config-in-opencode-chn.md) | 在 OpenCode 中安装 zhihu 技能与官方 zhihu-cli 的全程记录——包括无头环境下密钥链不可用时通过 ZHIHU_ACCESS_SECRET 完成认证的路径 |
+| [bold-highlights](.opencode/skills/bold-highlights/SKILL.md) | bold-highlights — add bold highlights to key concepts in each paragraph for scannable prose; 1-2 words per paragraph, max, with verification that the bolded words alone tell the article's arc |
 | [port-skill-to-opencode](docs/260811-port-skill-to-opencode.md) · [port-skill-to-opencode](docs/260811-port-skill-to-opencode-chn.md) | 将现有 Hermes Agent 技能移植到 OpenCode——复制文件夹、重写 frontmatter、修正路径并测试路由器 |
 
 ### 九、草稿与工作笔记
@@ -122,6 +123,7 @@
 | [ai-video-pipeline](docs/260816-ai-video-pipeline.md) | How a 60-second AI video trailer was built from eight photos with five OpenCode skills, an 8-stage thought-flow loop, and two content-policy failures that became codified gates |
 | [ai-video-recommendations](docs/260816-ai-video-recommendations.md) | Ten rules for making AI videos with image-to-video engines — story-first scripting, delegated vision, audio decoupling, and a resumable pipeline that turns failures into codified skills |
 | [death-thought-flow](docs/260817-death-thought-flow.md) | Personal thought-flow master for the death-in-Mexico project — seven thinking points, six content sections, verified facts, and cultural guardrails; use with the story-telling skill to generate a narration script or essay |
+| [grow-with-agent](docs/260825-grow-with-agent.md) | Reflections on growing with AI agents — choosing OpenCode, learning the pace of AI collaboration, discovering Git automation, and finding meditative honesty in terminal-based computing |
 
 ---
 
