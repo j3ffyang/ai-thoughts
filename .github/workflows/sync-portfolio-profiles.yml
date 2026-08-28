@@ -10,6 +10,10 @@ on:
       - ".github/workflows/sync-portfolio-profiles.yml"
   workflow_dispatch: {}
 
+concurrency:
+  group: sync-portfolio-profiles
+  cancel-in-progress: false
+
 permissions:
   contents: read
 
@@ -18,7 +22,7 @@ jobs:
     if: github.repository == 'j3ffyang/ai-thoughts'
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatch to both profile repos
+      - name: Dispatch to profile repo
         env:
           SYNC_TOKEN: ${{ secrets.PROFILE_SYNC_TOKEN }}
         run: |
@@ -28,7 +32,7 @@ jobs:
             exit 1
           fi
 
-          for repo in j3ffyang/j3ffyang negtivspace/negtivspace; do
+          for repo in j3ffyang/j3ffyang; do
             curl -sS -f \
               -X POST \
               -H "Authorization: Bearer ${SYNC_TOKEN}" \

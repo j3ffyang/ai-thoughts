@@ -180,7 +180,9 @@ rows:
     status: published
     links:
       - { label: "happy-birthday-linux", path: "docs/260828-happy-birthday-linux-from-aix-to-arch.md", lang: en }
+      - { label: "happy-birthday-linux", path: "docs/260828-happy-birthday-linux-from-aix-to-arch-chn.md", lang: zh, label_zh: "生日快乐，Linux" }
     desc_en: "A 35-year Linux journey in one personal story — AIX at IBM, getting hacked and the security habit it forged, the distro years ending at Arch, and every machine now Arch Linux; with a visual summary infographic"
+    desc_zh: "三十五年的 Linux 个人旅程——从 IBM 的 AIX 起步、被入侵后养成安全习惯、兜兜转转的发行版岁月最终停在 Arch，如今每一台机器都是 Arch Linux；附视觉总结信息图"
 
   # ------------------------------------------------------------ V. openclaw
   - section: openclaw
