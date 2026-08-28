@@ -176,6 +176,11 @@ rows:
       - { label: "arch-hyprland-gpd-win4-egpu_chn", path: "docs/260807-amd-chn.md", lang: zh }
     desc_en: "Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks"
     desc_zh: "掌机上的双 AMD GPU（iGPU + eGPU，OCuLink 连接 RX 7600M XT）渲染卸载指南——验证命令、稳定 DRM 符号链接与调整日志"
+  - section: personal
+    status: published
+    links:
+      - { label: "happy-birthday-linux", path: "docs/260828-happy-birthday-linux-from-aix-to-arch.md", lang: en }
+    desc_en: "A 35-year Linux journey in one personal story — AIX at IBM, getting hacked and the security habit it forged, the distro years ending at Arch, and every machine now Arch Linux; with a visual summary infographic"
 
   # ------------------------------------------------------------ V. openclaw
   - section: openclaw
@@ -450,8 +455,10 @@ rows:
   - section: drafts
     status: draft
     links:
-      - { label: "grow-with-agent", path: "docs/260825-grow-with-agent.md", lang: en }
+      - { label: "ground-truth-and-growth", path: "docs/260825-ground-truth-and-growth.md", lang: en }
+      - { label: "ground-truth-and-growth", path: "docs/260825-ground-truth-and-growth-chn.md", lang: zh, label_zh: "真相与成长" }
     desc_en: "Reflections on growing with AI agents — choosing OpenCode, learning the pace of AI collaboration, discovering Git automation, and finding meditative honesty in terminal-based computing"
+    desc_zh: "与 AI 智能体共同成长的反思——选择 OpenCode、学习 AI 协作的节奏、发现 Git 自动化，在终端计算中找到冥想般的诚实"
 
   # -------------------------------------------------------------- VII. cross (cont.)
   - section: cross

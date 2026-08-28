@@ -1,4 +1,4 @@
-# Grow with AI Agents
+# Ground Truth and Growth
 
 I need to work with AI agents — writing tech documents, coding in Python and shell, producing YAML and markdown, mostly in English and occasionally in Chinese, and reviewing and organizing my ten-plus git repositories and projects. That's the workload. The question was which agent to pick. I chose **OpenCode**.
 
@@ -11,5 +11,21 @@ The deeper gift was learning Git itself, not just the surface commands. I've bee
 And somewhere in that honest exchange, something shifted. Working with the agent improved my writing — not just technical documentation, but literature. Describing, arguing, convincing with evidence. The discipline of making an agent understand what I meant forced me to write better. And there's a meditative quality to it: you speak calmly, you listen patiently, you iterate. It's not just productivity. It's **a practice**.
 
 The workflow settles into something like this: brainstorm the idea, list the bullets, polish by hand, polish with the agent, review and analyze together, update and change back and forth. It's not linear. It's **a loop**, and that loop is where the real work happens. It's also, somehow, fun.
+
+```
+    brainstorm
+         │
+         ▼
+    list bullets
+         │
+         ▼
+    polish by hand ◄──────────┐
+         │                    │
+         ▼                    │
+    polish with agent         │
+         │                    │
+         ▼                    │
+    review & analyze ──► update & change
+```
 
 btw, i use arch

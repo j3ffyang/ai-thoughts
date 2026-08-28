@@ -42,6 +42,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [brave-browser-privacy](docs/260706-brave-post.md) | Deep dive into why I switched to Brave: local keychain, Shields, WebRTC control, Tor integration, and real-world privacy difference |
 | [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | Beginner's guide to DCS World with a VKB Gladiator NXT EVO joystick and a no-numpad keyboard — game-mode flying, keybindings, and axis tuning |
 | [arch-hyprland-gpd-win4-egpu](docs/260807-amd.md) | Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks |
+| [happy-birthday-linux](docs/260828-happy-birthday-linux-from-aix-to-arch.md) | A 35-year Linux journey in one personal story — AIX at IBM, getting hacked and the security habit it forged, the distro years ending at Arch, and every machine now Arch Linux; with a visual summary infographic |
 
 ### V. OpenClaw Platform 🦞
 
@@ -103,7 +104,7 @@ Earlier versions of articles are kept alongside their final versions so each pie
 | [ai-video-pipeline](docs/260816-ai-video-pipeline.md) | How a 60-second AI video trailer was built from eight photos with five OpenCode skills, an 8-stage thought-flow loop, and two content-policy failures that became codified gates |
 | [ai-video-recommendations](docs/260816-ai-video-recommendations.md) | Ten rules for making AI videos with image-to-video engines — story-first scripting, delegated vision, audio decoupling, and a resumable pipeline that turns failures into codified skills |
 | [death-thought-flow](docs/260817-death-thought-flow.md) | Personal thought-flow master for the death-in-Mexico project — seven thinking points, six content sections, verified facts, and cultural guardrails; use with the story-telling skill to generate a narration script or essay |
-| [grow-with-agent](docs/260825-grow-with-agent.md) | Reflections on growing with AI agents — choosing OpenCode, learning the pace of AI collaboration, discovering Git automation, and finding meditative honesty in terminal-based computing |
+| [ground-truth-and-growth](docs/260825-ground-truth-and-growth.md) | Reflections on growing with AI agents — choosing OpenCode, learning the pace of AI collaboration, discovering Git automation, and finding meditative honesty in terminal-based computing |
 
 ---
 
