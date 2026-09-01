@@ -41,7 +41,7 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Repo | Purpose | Articles | Latest |
 |------|---------|----------|--------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 38 articles | `docs: publish happy-birthday-linux and ground-truth-and-growth articles with infographics and banners; add cloudflare note` (Aug 2026) |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 38 articles | `ci: dispatch portfolio sync only to j3ffyang profile; add happy-birthday-linux zh link and regen README/PORTFOLIO` (Aug 2026) |
 
 ### Tools & Extensions
 
@@ -268,4 +268,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** August 28, 2026 | Tracking: 6 active repos, 38 published articles, 10+ published skills
+**Last Updated:** September 1, 2026 | Tracking: 6 active repos, 38 published articles, 10+ published skills

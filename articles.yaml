@@ -172,8 +172,8 @@ rows:
   - section: personal
     status: published
     links:
-      - { label: "arch-hyprland-gpd-win4-egpu", path: "docs/260807-amd.md", lang: en }
-      - { label: "arch-hyprland-gpd-win4-egpu_chn", path: "docs/260807-amd-chn.md", lang: zh }
+      - { label: "arch-hyprland-gpd-win4-egpu", path: "docs/260807-gpd-dual-amd-gpu.md", lang: en }
+      - { label: "arch-hyprland-gpd-win4-egpu_chn", path: "docs/260807-gpd-dual-amd-gpu-chn.md", lang: zh }
     desc_en: "Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks"
     desc_zh: "掌机上的双 AMD GPU（iGPU + eGPU，OCuLink 连接 RX 7600M XT）渲染卸载指南——验证命令、稳定 DRM 符号链接与调整日志"
   - section: personal

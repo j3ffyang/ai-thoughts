@@ -4,15 +4,13 @@
 
 ## Document Objective
 
-Written for the GPD Win4's two AMD GPUs (iGPU + eGPU) on Arch Linux + hyprland.lua, offloading rendering onto the eGPU — but the approach generalizes, so it also serves as a reference for external-GPU setups on other hardware.
+Written as a reference for anyone using both an iGPU and an eGPU and wanting to maximize their capability while switching between them frequently. The concrete use case is specific to the GPD Win4 — two AMD GPUs on Arch Linux + hyprland.lua, offloading rendering onto the eGPU — but the approach generalizes: other hardware stacks and configurations, such as two NVIDIA GPUs, follow the same principles for consideration.
 
 - Configuration guidance (iGPU only / with eGPU) — Hardware Stack
 - Self-check commands to verify current state — Verification
 - All relevant commands in one place — distributed across sections
 - Tweak log: what's applied, what's proposed — Current State / Proposed
 - Searchable wiki for later reference — the whole doc
-
-> The objective doubles as the document structure: each bullet maps to a section below, in reading order.
 
 ## Hardware Stack
 - OS: Arch Linux + Hyprland 0.56.1 (Lua config officially supported)
@@ -54,7 +52,7 @@ lspci | grep -i 7600M                         # eGPU detected? bus id?
 # stable offload check (derived id, not DRI_PRIME=1 which is index-relative)
 DRI_PRIME="pci-0000_$(lspci | awk '/7600M/{print $1}' | tr '.:' '__')" glxinfo | grep -i renderer  # -> RX 7600M XT
 egpu glxinfo | grep -i renderer               # same via wrapper
-vulkaninfo --summary                          # both GPUs visible (--list-devices invalid)
+vulkaninfo --summary                          # both GPUs visible (verified; --list-devices is not a valid flag in this vulkaninfo)
 hyprctl monitors all                          # active monitors per output
 readlink -f ~/.config/hypr/cards/{egpu,igpu}  # symlink targets
 ```
@@ -99,9 +97,9 @@ for c in /dev/dri/by-path/pci-*-card; do
 done
 ```
 
-## Current State (Unchanged)
+## Current State
 
-`~/.bashrc` has an `egpu()` launcher — GL-only offload with a hardcoded PCI id:
+`~/.bashrc` has an `egpu()` launcher — GL/EGL-only offload, resolving the eGPU's PCI id at call time (no hardcoded id):
 
 ```sh
 # egpu
@@ -112,20 +110,23 @@ egpu() {
         echo "Example: egpu steam"
         return 1
     fi
-    echo "Launching $1 on AMD Radeon RX 7600M XT..."
-    # Explicitly target the eGPU's unchanging PCI identifier
-    env DRI_PRIME="pci-0000_03_00_0" "$@"
+    local id
+    id=$(lspci | awk '/7600M/ {print $1}')
+    if [ -z "$id" ]; then
+        echo "eGPU (RX 7600M XT) not detected" >&2
+        return 1
+    fi
+    env DRI_PRIME="pci-0000_${id//[.:]/_}" "$@"
 }
 ```
 
-Verified: `egpu glxinfo` -> `RX 7600M XT`; plain `glxinfo` -> `780M`.
+Verified: `egpu glxinfo` -> `RX 7600M XT`; plain `glxinfo` -> `780M`. A stale hardcoded `pci-0000_03_00_0` was replaced by this dynamic form — `lspci` emits `03:00.0` with a dot, so `/7600M/ {print $1}` output is rewritten with `${id//[.:]/_}` (`03:00.0` → `03_00_0`). One `lspci` call per run; clear "not detected" error if the eGPU is absent.
 
 How it works: `DRI_PRIME=pci-0000_<bus>_<dev>_<func>` renders GL/EGL on that GPU only; scanout is Hyprland's job. Per-command only — desktop stays on iGPU.
 
 Not covered:
-1. **Vulkan** — ignores `DRI_PRIME`; games enumerate both GPUs themselves.
+1. **Vulkan** — ignores `DRI_PRIME`; games enumerate both GPUs themselves (see Proposed #1).
 2. **Display driving** — compositor decides scanout; already works (see mapping).
-3. **Hardcoded PCI id** — matches now, may drift across boots.
 
 ## Stable DRM Symlinks (Set Up)
 
@@ -152,32 +153,14 @@ export AQ_DRM_DEVICES="$HOME/.config/hypr/cards/igpu:$HOME/.config/hypr/cards/eg
 
 ## Proposed `egpu()` Improvements (Not Applied)
 
-1. **Resolve PCI id at call time.** `lspci` emits `03:00.0` with a dot — replace `[.:]`, not just `:`.
+1. **Vulkan offload** — `DRI_PRIME` is GL/EGL-only; Vulkan apps ignore it and enumerate both GPUs themselves (usually offering their own in-game adapter picker). Two options:
 
-```sh
-egpu() {
-    if [ -z "$1" ]; then
-        echo "Usage: egpu <command>"
-        echo "Example: egpu steam"
-        return 1
-    fi
-    local id
-    id=$(lspci | awk '/7600M/ {print $1}')
-    if [ -z "$id" ]; then
-        echo "eGPU (RX 7600M XT) not detected" >&2
-        return 1
-    fi
-    env DRI_PRIME="pci-0000_${id//[.:]/_}" "$@"
-}
-```
-
-   Pros: no stale id, clear "not detected" error. Cons: one `lspci` call per run.
-
-2. **Vulkan offload.** `MESA_VK_DEVICE_SELECT=1002:7480` (layer installed). Verified: reorders eGPU to GPU0 but does **not** hide the other GPU. Helps apps defaulting to the first adapter; name-picking apps unaffected.
+   - `MESA_VK_DEVICE_SELECT=1002:7480` (layer installed). Verified: reorders the eGPU to GPU0 so apps that default to the first adapter pick it up, but it does **not** hide the other GPU. Name-picking apps (that list and let you choose) are unaffected.
+   - **Recommendation:** skip it. Most games with a visible adapter picker already let you choose the eGPU; `MESA_VK_DEVICE_SELECT` only helps apps that blindly default to adapter 0 without letting you change it. Only add it if a specific game mis-defaults to the iGPU and has no in-game picker.
 
 ## Open Questions (decided)
 
-- **Is `03:00.0` stable?** Stable in all eGPU-present boots (5/5); iGPU moves to `63:00.0` when eGPU absent. Dynamic resolution stays as the safe default.
-- **`MESA_VK_DEVICE_SELECT` in `egpu()`?** Optional nice-to-have — only helps Vulkan games without an in-game adapter picker. Not required.
+- **Is `03:00.0` stable?** Stable in all eGPU-present boots (5/5); iGPU moves to `63:00.0` when eGPU absent. The `egpu()` launcher now resolves dynamically at call time, so this no longer matters for offload.
+- **`MESA_VK_DEVICE_SELECT` in `egpu()`?** Optional nice-to-have — only helps Vulkan games without an in-game adapter picker. Not required; skip unless a specific game mis-defaults.
 - **Rename `egpu`?** Cosmetic only; keeping it is fine.
-- **Enable `AQ_DRM_DEVICES`?** No — everything works, and the `igpu` symlink dangles in eGPU-absent boots, so enabling it adds risk with no current benefit.
+- **Enable `AQ_DRM_DEVICES`?** No — everything works, and the `igpu` symlink dangles in eGPU-absent boots, so enabling it adds risk with no current benefit. Minimalism wins.

@@ -41,7 +41,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [immutable-os-strategy](docs/260622-immutable-os.md) | Personal strategy on "immutable" OS choices — why a quarter-century Linux power user sticks with native Arch Linux and Debian LTS over Bazzite/Silverblue |
 | [brave-browser-privacy](docs/260706-brave-post.md) | Deep dive into why I switched to Brave: local keychain, Shields, WebRTC control, Tor integration, and real-world privacy difference |
 | [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | Beginner's guide to DCS World with a VKB Gladiator NXT EVO joystick and a no-numpad keyboard — game-mode flying, keybindings, and axis tuning |
-| [arch-hyprland-gpd-win4-egpu](docs/260807-amd.md) | Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks |
+| [arch-hyprland-gpd-win4-egpu](docs/260807-gpd-dual-amd-gpu.md) | Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks |
 | [happy-birthday-linux](docs/260828-happy-birthday-linux-from-aix-to-arch.md) | A 35-year Linux journey in one personal story — AIX at IBM, getting hacked and the security habit it forged, the distro years ending at Arch, and every machine now Arch Linux; with a visual summary infographic |
 
 ### V. OpenClaw Platform 🦞
