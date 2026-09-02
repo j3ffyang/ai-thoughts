@@ -26,19 +26,16 @@
 
 ### 2. 带 eGPU
 
-```plantuml
-@startuml
-skinparam componentStyle rectangle
+```mermaid
+flowchart LR
+    subgraph GPD["GPD Win4"]
+        igpu["iGPU<br/>Radeon 780M"]
+    end
+    egpu["eGPU<br/>RX 7600M XT"]
+    monitor["External Monitor"]
 
-package "GPD Win4" {
-    component "iGPU\nRadeon 780M" as igpu
-}
-component "eGPU\nRX 7600M XT" as egpu
-component "External Monitor" as monitor
-
-igpu --> egpu : OCULINK (PCIe)
-egpu --> monitor : HDMI
-@enduml
+    igpu -- "OCULINK (PCIe)" --> egpu
+    egpu -- "HDMI" --> monitor
 ```
 
 预期效果：
@@ -65,9 +62,9 @@ eGPU 是否在承担负载？通过 `egpu <game>` 运行游戏时，观察 GPU �
 watch -n 1 'for g in egpu igpu; do n=/sys/class/drm/$(basename "$(readlink -f ~/.config/hypr/cards/$g)"); echo "$g: $(cat "$n/device/gpu_busy_percent")%"; done'
 ```
 
-如果 eGPU 那一行很高（真实游戏中 90% 以上）而 iGPU 保持低位，说明是 eGPU 在工作。更丰富的视图（已安装）：`amdgpu_top` 或 `amdgpu_top --smi`。
+如果 eGPU 那一行很高（真实游戏中 60% 以上）而 iGPU 保持低位，说明是 eGPU 在工作。更丰富的视图（已安装）：`amdgpu_top` 或 `amdgpu_top --smi`。
 
-示例——一个运行在 eGPU 上的 Steam 游戏（eGPU 占用约 25%）：
+示例——一个运行在 eGPU 上的轻量级 Steam 游戏（eGPU 占用约 25%，低于 60% 的阈值）：
 
 ![egpu](../imgs/260807-1815.png)
 
@@ -166,3 +163,5 @@ export AQ_DRM_DEVICES="$HOME/.config/hypr/cards/igpu:$HOME/.config/hypr/cards/eg
 - **把 `MESA_VK_DEVICE_SELECT` 放进 `egpu()`？** 可选的加分项——只对没有内置显卡选择器的 Vulkan 游戏有帮助。非必需；除非某款特定游戏误选，否则跳过。
 - **重命名 `egpu`？** 纯外观问题；保留即可。
 - **启用 `AQ_DRM_DEVICES`？** 不——一切正常，而且 `igpu` 符号链接在未接 eGPU 的启动中会悬空，启用它只会增加风险而没有任何当前收益。极简优先。
+
+btw, i use arch

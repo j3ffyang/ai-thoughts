@@ -24,19 +24,16 @@ Written as a reference for anyone using both an iGPU and an eGPU and wanting to 
 
 ### 2. With eGPU
 
-```plantuml
-@startuml
-skinparam componentStyle rectangle
+```mermaid
+flowchart LR
+    subgraph GPD["GPD Win4"]
+        igpu["iGPU<br/>Radeon 780M"]
+    end
+    egpu["eGPU<br/>RX 7600M XT"]
+    monitor["External Monitor"]
 
-package "GPD Win4" {
-    component "iGPU\nRadeon 780M" as igpu
-}
-component "eGPU\nRX 7600M XT" as egpu
-component "External Monitor" as monitor
-
-igpu --> egpu : OCULINK (PCIe)
-egpu --> monitor : HDMI
-@enduml
+    igpu -- "OCULINK (PCIe)" --> egpu
+    egpu -- "HDMI" --> monitor
 ```
 
 Expected:
@@ -63,9 +60,9 @@ Is the eGPU taking workload? While a game runs via `egpu <game>`, watch GPU busy
 watch -n 1 'for g in egpu igpu; do n=/sys/class/drm/$(basename "$(readlink -f ~/.config/hypr/cards/$g)"); echo "$g: $(cat "$n/device/gpu_busy_percent")%"; done'
 ```
 
-If the eGPU line is high (90%+ in a real game) while iGPU stays low, the eGPU is doing the work. Richer view (already installed): `amdgpu_top` or `amdgpu_top --smi`.
+If the eGPU line is high (60%+ in a real game) while iGPU stays low, the eGPU is doing the work. Richer view (already installed): `amdgpu_top` or `amdgpu_top --smi`.
 
-Example — a Steam game running on the eGPU (eGPU busy ~25%):
+Example — a lightweight Steam game running on the eGPU (eGPU busy ~25%, below the 60% bar):
 
 ![egpu](../imgs/260807-1815.png)
 
@@ -164,3 +161,5 @@ export AQ_DRM_DEVICES="$HOME/.config/hypr/cards/igpu:$HOME/.config/hypr/cards/eg
 - **`MESA_VK_DEVICE_SELECT` in `egpu()`?** Optional nice-to-have — only helps Vulkan games without an in-game adapter picker. Not required; skip unless a specific game mis-defaults.
 - **Rename `egpu`?** Cosmetic only; keeping it is fine.
 - **Enable `AQ_DRM_DEVICES`?** No — everything works, and the `igpu` symlink dangles in eGPU-absent boots, so enabling it adds risk with no current benefit. Minimalism wins.
+
+btw, i use arch
