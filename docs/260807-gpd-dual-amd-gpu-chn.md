@@ -2,7 +2,7 @@
 
 **原文：** [260807-gpd-dual-amd-gpu.md](260807-gpd-dual-amd-gpu.md)
 
-![fastfetch](../imgs/260807-2025.png)
+![GPD Win4 掌机](../imgs/260807-gpdwin4.png)
 
 ## 文档目标
 
@@ -13,6 +13,8 @@
 - 所有相关命令集中一处——分布在各章节
 - 调整日志：已应用 / 建议的内容——当前状态 / 建议
 - 供日后查阅的可搜索 wiki——全文
+
+![Fastfetch 系统概览](../imgs/260807-2025.png)
 
 ## 硬件堆栈
 - 操作系统：Arch Linux + Hyprland 0.56.1（官方支持 Lua 配置）
@@ -26,6 +28,8 @@
 
 ### 2. 带 eGPU
 
+![eGPU 连接示意图](../imgs/260807-gpd-egpu-diagram.png)
+
 ```mermaid
 flowchart LR
     subgraph GPD["GPD Win4"]
@@ -37,6 +41,8 @@ flowchart LR
     igpu -- "OCULINK (PCIe)" --> egpu
     egpu -- "HDMI" --> monitor
 ```
+
+上面的 Mermaid 代码块就是这张 PNG 图的源：iGPU → eGPU 经 OCULINK（PCIe），eGPU → 显示器经 HDMI。
 
 预期效果：
 - 在开机前先开启 eGPU
@@ -66,7 +72,7 @@ watch -n 1 'for g in egpu igpu; do n=/sys/class/drm/$(basename "$(readlink -f ~/
 
 示例——一个运行在 eGPU 上的轻量级 Steam 游戏（eGPU 占用约 25%，低于 60% 的阈值）：
 
-![egpu](../imgs/260807-1815.png)
+![eGPU 负载示例](../imgs/260807-1815.png)
 
 ## 已验证的硬件映射（2026 年 8 月，本次启动）
 
