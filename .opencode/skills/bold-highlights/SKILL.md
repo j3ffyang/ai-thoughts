@@ -1,21 +1,19 @@
 ---
 name: bold-highlights
 description: >
-  Add bold highlights to key concepts in each paragraph so readers can scan
-  and capture the article's core points. Use when polishing an article in
+  Add sparse, deliberate bold highlights to a few key concepts so readers can
+  scan and capture the article's core points. Use when polishing an article in
   ai-thoughts/docs/ or when the user asks to make an article more scannable
   or add highlights.
 ---
 
 # Bold Highlights — Scannable Prose
 
-Bold 1-2 words per paragraph to carry the paragraph's core concept. When read
-alone, the bolded words should tell the article's arc.
+Add bold highlights sparingly — a few key words that carry the article's arc. Bolding in most paragraphs defeats the purpose; a reader should notice a handful of highlights, not a shower.
 
 ## Inputs
 
-- `target` — path to the article in `ai-thoughts/docs/` (optional). If omitted,
-  apply to the article currently being worked on.
+- `target` — path to the article in `ai-thoughts/docs/` (optional). If omitted, apply to the article currently being worked on.
 
 ## Outputs
 
@@ -23,39 +21,32 @@ alone, the bolded words should tell the article's arc.
 
 ## Procedure
 
-1. Read the article and identify its overall arc (the story it tells from start
-   to finish).
-2. For each body paragraph (skip the title, sign-off, and image captions):
-   - Identify the 1-2 most essential concepts — the words that carry the
-     paragraph's core meaning.
-   - Bold them using `**word**` syntax.
-3. Verify: scan only the bolded words from top to bottom. Does the article's
-   story hold? If not, adjust which words are bolded.
-4. Regenerate READMEs if the article is registered in `articles.yaml`.
+1. Read the article and identify its overall arc (the story it tells from start to finish).
+2. Pick a handful of key arc moments — roughly 5-10 highlights for a full-length article. Good candidates: the opening thesis, one concept per major section, and the payoff or tip the author cares most about.
+3. Bold the single most essential concept at each chosen moment. Leave most paragraphs un-bolded, and never bold list items.
+4. Verify: scan only the bolded words from top to bottom. Does a sparse mini-story still hold? If not, move highlights to better moments.
+5. Regenerate READMEs if the article is registered in `articles.yaml`.
 
 ## Constraints
 
-- **Max 2 bold highlights per paragraph.** Fewer is better. Three or more
-  defeats the purpose.
-- **No adjacent-paragraph repeats.** Don't bold the same word in two consecutive
-  paragraphs — it dilutes the signal.
+- **Max 1 bold highlight per paragraph.** Most paragraphs should have none.
+- **Target roughly 5-10 highlights per article.** A handful the reader can count — fewer is always better. When in doubt, remove one.
+- **Space them out.** Don't bold in two adjacent paragraphs — the highlights should feel deliberate, not rhythmic.
 - **Keep bolded phrases short.** 1-3 words max. A single word is ideal.
-- **Don't bold proper nouns, tool names, or obvious context.** Bold the
-  *concept*, not the *thing*. Example: bold "ground truth" (the idea), not
-  "OpenCode" (already obvious from context).
+- **Don't bold proper nouns, tool names, or obvious context.** Bold the *concept*, not the *thing*. Example: bold "ground truth" (the idea), not "OpenCode" (already obvious from context).
+- **Never bold list items.** Bullets are already scannable; bolding each one is noise.
 - **Don't bold the title or sign-off.**
 
 ## Verification
 
-- Each body paragraph has 1-2 bold highlights (no more).
-- Scanning only the bold words tells a coherent mini-story.
-- No bold word appears in two adjacent paragraphs.
-- Article still reads naturally — highlights are additive, not disruptive.
+- Roughly 5-10 bold highlights across the whole article; never more than one per paragraph.
+- Scanning only the bold words tells a coherent, sparse mini-story.
+- No bold in two adjacent paragraphs; no bold inside any list.
+- Article reads naturally — the highlights are meant to be scarce.
 
 ## Error Handling
 
 - **User says no**: skip bolding; leave the article as-is.
-- **Article already has bold highlights**: verify they follow the constraints;
-  adjust if needed, don't add more.
-- **Not an article**: never apply to READMEs, `articles.yaml`, or files outside
-  `ai-thoughts/docs/`.
+- **Article already has bold highlights**: verify they follow the constraints; thin them out if they're too frequent, don't add more.
+- **User asks for a single highlight** (e.g. "highlight one thing"): honor that literally — bold just that concept and nothing else.
+- **Not an article**: never apply to READMEs, `articles.yaml`, or files outside `ai-thoughts/docs/`.
