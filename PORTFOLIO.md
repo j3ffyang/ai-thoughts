@@ -41,7 +41,7 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Repo | Purpose | Articles | Latest |
 |------|---------|----------|--------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 39 articles | `docs: publish essay on creating SKILL.md, AGENTS.md, and PERSONA.md on the fly` (Sep 2026) |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 39 articles | `docs: rename skill-publish skill to clawhub-publish (unique slug)` (Sep 2026) |
 
 ### Tools & Extensions
 
@@ -137,7 +137,7 @@ jobs:
 ---
 
 ### Example: Verify a Published Skill with a Shell One-Liner
-**Repo:** `clawhub-publish` skill | **Language:** Shell | **Purpose:** Confirm what's live on ClawHub via the read-only skills API
+**Repo:** `publish-skills` skill | **Language:** Shell | **Purpose:** Confirm what's live on ClawHub via the read-only skills API
 
 ```bash
 # What's actually live? Check latestVersion + owner.handle
