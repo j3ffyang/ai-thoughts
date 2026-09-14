@@ -80,6 +80,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 | [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) | What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent |
 | [opencode-git-underrated](docs/260809-opencode-git-underrated.md) | How a 15-year git user produced more automation in two days with OpenCode than in most of those years — the 9-step thought-flow loop, division of labor, and the compounding architecture |
 | [agents-opencode-config](docs/260811-agents-opencode-config.md) | OpenCode AGENTS.md + opencode.jsonc — architecture, precedence and workflow: how the two surfaces load, resolve conflicts, evaluate permissions, and isolate across submodule context walls; verified against anomalyco/opencode source HEAD e11dbd0. |
+| [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly.md) | Create SKILL.md, AGENTS.md, and PERSONA.md on the fly instead of hunting others' skills — three levels of customization, real benefits from daily use, and OpenCode as the daily agent |
 | [agents-md-not-a-persona](docs/260821-agents-md-not-a-persona.md) | AGENTS.md is not a persona but a constitution written in scars — every rule traced to a real incident (a self-cloned repo, lying docs, a prompt flood), agent-agnostic lessons for any AI coding agent |
 
 ### VIII. Skills
@@ -88,7 +89,7 @@ Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the
 |---|---|
 | [custom-infographic](.opencode/skills/custom-infographic/SKILL.md) | custom-infographic — professional infographic generator (21 layouts × 21 styles); original author 宝玉 (JimLiu), ported & customized by j3ffyang as an **opencode** skill (needs OPENROUTER_API_KEY) |
 | [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) | Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable |
-| [bold-highlights](.opencode/skills/bold-highlights/SKILL.md) | bold-highlights — add bold highlights to key concepts in each paragraph for scannable prose; 1-2 words per paragraph, max, with verification that the bolded words alone tell the article's arc |
+| [bold-highlights](.opencode/skills/bold-highlights/SKILL.md) | bold-highlights — add sparse, deliberate bold highlights (roughly 5-10 per article, max 1 per paragraph, list bolds only when decisive, on demand) so scanning the bold words alone tells the article's arc |
 | [port-skill-to-opencode](docs/260811-port-skill-to-opencode.md) | How to port an existing Hermes Agent skill to OpenCode — copy the folder, rewrite frontmatter, fix paths, and test the router |
 
 ### IX. Drafts & Working Notes

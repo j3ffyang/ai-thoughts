@@ -390,6 +390,11 @@ rows:
       - { label: "agents-opencode-config", path: "docs/260811-agents-opencode-config-chn.md", lang: zh, label_zh: "AGENTS + opencode.jsonc 架构（中文）" }
     desc_en: "OpenCode AGENTS.md + opencode.jsonc — architecture, precedence and workflow: how the two surfaces load, resolve conflicts, evaluate permissions, and isolate across submodule context walls; verified against anomalyco/opencode source HEAD e11dbd0."
     desc_zh: "OpenCode AGENTS.md 与 opencode.jsonc 架构、优先级与工作流：双配置表面如何加载、消解冲突、评估权限并在子模块上下文隔离墙间运作；对照 anomalyco/opencode 源码 HEAD e11dbd0 严格复核。"
+  - section: cross
+    status: published
+    links:
+      - { label: "opencode-create-skill-onfly", path: "docs/260906-opencode-create-skill-onfly.md", lang: en }
+    desc_en: "Create SKILL.md, AGENTS.md, and PERSONA.md on the fly instead of hunting others' skills — three levels of customization, real benefits from daily use, and OpenCode as the daily agent"
 
   # ------------------------------------------------------------ IX. skills
   - section: skills
@@ -409,7 +414,7 @@ rows:
     status: published
     links:
       - { label: "bold-highlights", path: ".opencode/skills/bold-highlights/SKILL.md", lang: en }
-    desc_en: "bold-highlights — add bold highlights to key concepts in each paragraph for scannable prose; 1-2 words per paragraph, max, with verification that the bolded words alone tell the article's arc"
+    desc_en: "bold-highlights — add sparse, deliberate bold highlights (roughly 5-10 per article, max 1 per paragraph, list bolds only when decisive, on demand) so scanning the bold words alone tells the article's arc"
 
   - section: skills
     status: published

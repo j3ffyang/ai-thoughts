@@ -100,6 +100,7 @@
 | [opencode-git-underrated](docs/260809-opencode-git-underrated.md) | 一位用了十五年 git 的用户，如何在两天内用 OpenCode 产出比过去多数年份更多的自动化——9 步思维流循环、分工与复利架构 |
 | [opencode-git-underrated_chn](docs/260809-opencode-git-underrated-chn.md) | OpenCode + Git：被低估的组合——十五年 git 老手两天内构建的自动化系统与思维流循环（简体中文） |
 | [AGENTS + opencode.jsonc 架构](docs/260811-agents-opencode-config.md) · [AGENTS + opencode.jsonc 架构（中文）](docs/260811-agents-opencode-config-chn.md) | OpenCode AGENTS.md 与 opencode.jsonc 架构、优先级与工作流：双配置表面如何加载、消解冲突、评估权限并在子模块上下文隔离墙间运作；对照 anomalyco/opencode 源码 HEAD e11dbd0 严格复核。 |
+| [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly.md) | Create SKILL.md, AGENTS.md, and PERSONA.md on the fly instead of hunting others' skills — three levels of customization, real benefits from daily use, and OpenCode as the daily agent |
 | [agents-md-not-a-persona](docs/260821-agents-md-not-a-persona.md) · [AGENTS.md 不是人格设定](docs/260821-agents-md-not-a-persona-chn.md) | AGENTS.md 不是人格设定——它是一部用伤疤写成的宪章：每条规则追溯到真实事故（自克隆仓库、撒谎的文档、提示洪水），不绑定特定工具的通用法则 |
 
 ### 八、技能
@@ -108,7 +109,7 @@
 |---|---|
 | [custom-infographic 技能](.opencode/skills/custom-infographic/SKILL.md) | custom-infographic——专业信息图生成 **opencode 技能**（21 种布局 × 21 种风格），原作者为宝玉（JimLiu），由 j3ffyang 移植并定制（需要 OPENROUTER_API_KEY） |
 | [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) · [zhihu-skill-opencode_chn](docs/260815-zhihu-config-in-opencode-chn.md) | 在 OpenCode 中安装 zhihu 技能与官方 zhihu-cli 的全程记录——包括无头环境下密钥链不可用时通过 ZHIHU_ACCESS_SECRET 完成认证的路径 |
-| [bold-highlights](.opencode/skills/bold-highlights/SKILL.md) | bold-highlights — add bold highlights to key concepts in each paragraph for scannable prose; 1-2 words per paragraph, max, with verification that the bolded words alone tell the article's arc |
+| [bold-highlights](.opencode/skills/bold-highlights/SKILL.md) | bold-highlights — add sparse, deliberate bold highlights (roughly 5-10 per article, max 1 per paragraph, list bolds only when decisive, on demand) so scanning the bold words alone tells the article's arc |
 | [port-skill-to-opencode](docs/260811-port-skill-to-opencode.md) · [port-skill-to-opencode](docs/260811-port-skill-to-opencode-chn.md) | 将现有 Hermes Agent 技能移植到 OpenCode——复制文件夹、重写 frontmatter、修正路径并测试路由器 |
 
 ### 九、草稿与工作笔记
