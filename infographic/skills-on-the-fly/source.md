@@ -1,7 +1,5 @@
 # Create SKILL.md, AGENTS.md, and PERSONA.md on the fly
 
-![Create SKILL.md, AGENTS.md, and PERSONA.md on the fly — visual summary](../imgs/260906-skills-on-the-fly.png)
-
 Many times, you don't actually need to go find or search someone else's custom SKILL.md. You can simply **create your own**. What follows is real, authentic experience from working with AI over the past few years.
 
 ## Objective
