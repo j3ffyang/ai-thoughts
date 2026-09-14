@@ -1,5 +1,5 @@
 ---
-name: skill-publish
+name: clawhub-publish
 description: >
   Publish SKILL.md files to ClawHub (clawhub.ai) and diagnose publish failures
   across the three skill repos (history, ai-custom-skills, ai-thoughts). Use
@@ -17,7 +17,7 @@ Publish and maintain the ClawHub skill registry. All skills are published to a s
 Skills come from three repos under the `negtivSpace` superproject. Each repo has its own `.github/workflows/clawhub-skill-sync.yml` that publishes its skills to ClawHub:
 
 - `history/` — publishes only `.opencode/skills/chinese-history-literature-culture` (via a `skill_path` entry). The `astro-sync` skill in `history/.opencode/skills/` is **local-only**: it stays in the repo for opencode to load, but is not published to ClawHub.
-- `ai-thoughts/.opencode/skills/` — `astro-sync`, `custom-infographic`, `skill-publish`, `resize-for-banner`, `translate-to-chn`. All are published via a glob over `.opencode/skills/*/SKILL.md`, so `skill-publish` self-publishes like any other skill.
+- `ai-thoughts/.opencode/skills/` — `astro-sync`, `custom-infographic`, `clawhub-publish`, `resize-for-banner`, `translate-to-chn`. All are published via a glob over `.opencode/skills/*/SKILL.md`, so `clawhub-publish` self-publishes like any other skill.
 - `ai-custom-skills/` — roots `openclaw/`, `hermes/`, `claude-code/`, plus the nested `claude-code/perplexity-downloader/perplexity-downloader` handled via a matrix `skill_path` entry. Data folders without a `SKILL.md` (e.g. `openclaw/twitter-bookmarks-exporter`) are skipped automatically.
 
 ## Single-source rule — read before anything else
@@ -55,7 +55,7 @@ Skills come from three repos under the `negtivSpace` superproject. Each repo has
 - **`pending-publication` reported as failure** — treat as success; verify via the skills API.
 - **`startup_failure` / `id-token: none`** — the caller job is missing `permissions: {contents: read, id-token: write}`; add it.
 - **Nested skill not found** — the matrix `skill_path` must point at the folder containing the `SKILL.md` (double-nested folders need the full path).
-- **Slug collision** — `astro-sync` exists in both `history` and `ai-thoughts` with different content. `ai-thoughts` publishes it (canonical); `history`'s copy is local-only, kept out of ClawHub via `skill_path`. Never publish the same slug from two repos to the same owner.
+- **Slug collision** — `astro-sync` exists in both `history` and `ai-thoughts` with different content. `ai-thoughts` publishes it (canonical); `history`'s copy is local-only, kept out of ClawHub via `skill_path`. Never publish the same slug from two repos to the same owner. This skill was renamed `skill-publish` → `clawhub-publish` because the old slug was ambiguous across owners (other users had their own `skill-publish`); the renamed slug is unique, and the legacy `@j3ffyang/skill-publish` stays on ClawHub (no delete-via-push).
 - **Token missing** — publish fails without `clawhub_token`; it must be set as a secret on the `j3ffyang/*` repo.
 
 ## Verification

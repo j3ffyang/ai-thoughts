@@ -41,7 +41,7 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Repo | Purpose | Articles | Latest |
 |------|---------|----------|--------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 38 articles | `ci: dispatch portfolio sync only to j3ffyang profile; add happy-birthday-linux zh link and regen README/PORTFOLIO` (Aug 2026) |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 39 articles | `docs: publish essay on creating SKILL.md, AGENTS.md, and PERSONA.md on the fly` (Sep 2026) |
 
 ### Tools & Extensions
 
@@ -137,7 +137,7 @@ jobs:
 ---
 
 ### Example: Verify a Published Skill with a Shell One-Liner
-**Repo:** `skill-publish` skill | **Language:** Shell | **Purpose:** Confirm what's live on ClawHub via the read-only skills API
+**Repo:** `clawhub-publish` skill | **Language:** Shell | **Purpose:** Confirm what's live on ClawHub via the read-only skills API
 
 ```bash
 # What's actually live? Check latestVersion + owner.handle
@@ -215,7 +215,7 @@ curl -s -H "Authorization: Bearer $CLH_TOKEN" \
 ## 🔗 Quick Links
 
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
-- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 38 articles on AI, privacy, and entrepreneurship
+- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 39 articles on AI, privacy, and entrepreneurship
 - **Gists & Experiments:** [Personal gists](https://gist.github.com/j3ffyang)
 
 ---
@@ -224,14 +224,14 @@ curl -s -H "Authorization: Bearer $CLH_TOKEN" \
 
 From `ai-thoughts` (most recent published articles):
 
-1. **"Happy Birthday, Linux — My Journey from AIX to Arch"** (Aug 2026) — A 35-year Linux journey in one personal story — AIX at IBM, getting hacked and the security habit it forged, the distro years ending at Arch, and every machine now Arch Linux; with a visual summary infographic
-2. **"AGENTS.md Is Not a Persona — It's a Constitution Written in Scars"** (Aug 2026) — AGENTS.md is not a persona but a constitution written in scars — every rule traced to a real incident (a self-cloned repo, lying docs, a prompt flood), agent-agnostic lessons for any AI coding agent
-3. **"zhihu skill + CLI — install and configuration in OpenCode"** (Aug 2026) — Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable
-4. **"The Terminal Is an Art"** (Aug 2026) — Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and still growing as AI agents' natural interface
-5. **"OpenCode + Git: The Underrated Duo"** (Aug 2026) — How a 15-year git user produced more automation in two days with OpenCode than in most of those years — the 9-step thought-flow loop, division of labor, and the compounding architecture
-6. **"AI Agent Collaboration: An OpenCode Playbook Built on AGENTS.md and SKILL.md"** (Aug 2026) — What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent
+1. **"Create SKILL.md, AGENTS.md, and PERSONA.md on the fly"** (Sep 2026) — Create SKILL.md, AGENTS.md, and PERSONA.md on the fly instead of hunting others' skills — three levels of customization, real benefits from daily use, and OpenCode as the daily agent
+2. **"Happy Birthday, Linux — My Journey from AIX to Arch"** (Aug 2026) — A 35-year Linux journey in one personal story — AIX at IBM, getting hacked and the security habit it forged, the distro years ending at Arch, and every machine now Arch Linux; with a visual summary infographic
+3. **"AGENTS.md Is Not a Persona — It's a Constitution Written in Scars"** (Aug 2026) — AGENTS.md is not a persona but a constitution written in scars — every rule traced to a real incident (a self-cloned repo, lying docs, a prompt flood), agent-agnostic lessons for any AI coding agent
+4. **"zhihu skill + CLI — install and configuration in OpenCode"** (Aug 2026) — Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable
+5. **"The Terminal Is an Art"** (Aug 2026) — Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and still growing as AI agents' natural interface
+6. **"OpenCode + Git: The Underrated Duo"** (Aug 2026) — How a 15-year git user produced more automation in two days with OpenCode than in most of those years — the 9-step thought-flow loop, division of labor, and the compounding architecture
 
-👉 See all 38 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
+👉 See all 39 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
 
 ---
 
@@ -257,7 +257,7 @@ npm run build  # or load the extension manually in Chrome
 ```bash
 git clone https://github.com/negtivspace/ai-thoughts
 cd docs
-# 38 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
+# 39 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
 ```
 
 ---
@@ -268,4 +268,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** September 1, 2026 | Tracking: 6 active repos, 38 published articles, 10+ published skills
+**Last Updated:** September 14, 2026 | Tracking: 6 active repos, 39 published articles, 10+ published skills
