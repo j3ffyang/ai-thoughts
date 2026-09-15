@@ -34,6 +34,8 @@ python scripts/gen_readmes.py              # regenerate both READMEs
 python scripts/gen_readmes.py --check      # CI/verification: exit 1 if a README is stale
 ```
 
+**Ordering is automatic — don't hand-order.** Article sections are sorted by their newest post (most recently updated first), rows are newest-first within each section, and drafts are pinned last. The `Published Skills on ClawHub` block is derived from `.opencode/skills/*/SKILL.md` frontmatter (no `articles.yaml` entry is needed for a skill) and sits between the articles and the drafts section. Section order drifting over time is intended — it's how the most active topics stay on top.
+
 To add or update an article:
 
 1. Drop the file into `docs/` (follow the rules in "Filename conventions").
