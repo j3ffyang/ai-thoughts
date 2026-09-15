@@ -39,9 +39,6 @@ sections:
   - id: cross
     title_en: "Cross-Platform & Comparative"
     title_zh: "跨平台与比较"
-  - id: skills
-    title_en: "Skills"
-    title_zh: "技能"
   - id: drafts
     title_en: "Drafts & Working Notes"
     title_zh: "草稿与工作笔记"
@@ -398,27 +395,14 @@ rows:
     desc_en: "Create SKILL.md, AGENTS.md, and PERSONA.md on the fly instead of hunting others' skills — three levels of customization, real benefits from daily use, and OpenCode as the daily agent"
     desc_zh: "随手创建 SKILL.md、AGENTS.md 和 PERSONA.md，而不是去淘别人的技能——三个自定义层次、日复一日使用得来的真实好处，以及作为日常智能体的 OpenCode"
 
-  # ------------------------------------------------------------ IX. skills
-  - section: skills
-    status: published
-    links:
-      - { label: "custom-infographic", path: ".opencode/skills/custom-infographic/SKILL.md", lang: en, label_zh: "custom-infographic 技能" }
-    desc_en: "custom-infographic — professional infographic generator (21 layouts × 21 styles); original author 宝玉 (JimLiu), ported & customized by j3ffyang as an **opencode** skill (needs OPENROUTER_API_KEY)"
-    desc_zh: "custom-infographic——专业信息图生成 **opencode 技能**（21 种布局 × 21 种风格），原作者为宝玉（JimLiu），由 j3ffyang 移植并定制（需要 OPENROUTER_API_KEY）"
-  - section: skills
+  - section: cross
     status: published
     links:
       - { label: "zhihu-skill-opencode", path: "docs/260815-zhihu-config-in-opencode.md", lang: en }
       - { label: "zhihu-skill-opencode_chn", path: "docs/260815-zhihu-config-in-opencode-chn.md", lang: zh }
     desc_en: "Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable"
     desc_zh: "在 OpenCode 中安装 zhihu 技能与官方 zhihu-cli 的全程记录——包括无头环境下密钥链不可用时通过 ZHIHU_ACCESS_SECRET 完成认证的路径"
-  - section: skills
-    status: published
-    links:
-      - { label: "bold-highlights", path: ".opencode/skills/bold-highlights/SKILL.md", lang: en }
-    desc_en: "bold-highlights — add sparse, deliberate bold highlights (roughly 5-10 per article, max 1 per paragraph, list bolds only when decisive, on demand) so scanning the bold words alone tells the article's arc"
-
-  - section: skills
+  - section: cross
     status: published
     links:
       - { label: "port-skill-to-opencode", path: "docs/260811-port-skill-to-opencode.md", lang: en }

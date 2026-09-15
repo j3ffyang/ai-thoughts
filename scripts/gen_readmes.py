@@ -12,6 +12,8 @@ directly is discouraged - change articles.yaml and regenerate instead.
 from __future__ import annotations
 
 import argparse
+import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -25,6 +27,20 @@ README_ZH = ROOT / "README_zh.md"
 ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
 CN_NUM = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"]
 
+SKILLS_DIR = ROOT / ".opencode" / "skills"
+CLAWHUB_SKILL_URL = "https://clawhub.ai/j3ffyang/skills/{slug}"
+
+SKILLS_TITLE_EN = "Published Skills on ClawHub"
+SKILLS_TITLE_ZH = "已发布技能（ClawHub）"
+SKILLS_NOTE_EN = (
+    "Developed in this repo and auto-published to "
+    "[ClawHub](https://clawhub.ai/j3ffyang) on every push."
+)
+SKILLS_NOTE_ZH = (
+    "在本仓库中开发，每次推送时自动发布到 "
+    "[ClawHub](https://clawhub.ai/j3ffyang) 上。"
+)
+
 INTRO_EN = """\
 # ai_thoughts
 
@@ -33,6 +49,8 @@ INTRO_EN = """\
 A bilingual (English · 中文) collection of articles and essays spanning three domains: **technology** (hands-on experience with OpenClaw 🦞 and Hermes Agent ⚕, privacy, knowledge management), **history**, and **culture & philosophy** (motorcycle culture, how different cultures face death, the "unknown unknowns" of knowledge). This page indexes the English articles; Chinese-language articles (including most culture posts) are listed in the [中文版](README_zh.md).
 
 Images for each article live in the [`imgs/`](imgs/) subdirectory and follow the same `YYMMDD-slug` naming convention as the articles themselves.
+
+Custom OpenCode skills developed here auto-publish to [ClawHub](https://clawhub.ai/j3ffyang) — the Published Skills table below lists each one.
 
 ---
 """
@@ -46,6 +64,8 @@ INTRO_ZH = """\
 
 每篇文章的配图存放于 [`imgs/`](imgs/) 子目录，沿用与文章相同的 `YYMMDD-slug` 命名规范。
 
+本仓库自研的 OpenCode 技能会在每次推送时自动发布到 [ClawHub](https://clawhub.ai/j3ffyang)——下方"已发布技能"表格逐项列出。
+
 ---
 """
 
@@ -53,12 +73,14 @@ FOOTER_EN = """
 ---
 
 > **Maintaining this index:** edit [`articles.yaml`](articles.yaml), then run `python scripts/gen_readmes.py` to regenerate `README.md` and [`README_zh.md`](README_zh.md).
+> The Published Skills table is auto-derived from each `.opencode/skills/*/SKILL.md` frontmatter, linking to its ClawHub page. Article sections are ordered by newest post; drafts stay last.
 """
 
 FOOTER_ZH = """
 ---
 
 > **维护说明：** 编辑 [`articles.yaml`](articles.yaml)，然后运行 `python scripts/gen_readmes.py` 重新生成 `README.md` 与 [`README_zh.md`](README.md)。
+> "已发布技能"表格根据各 `.opencode/skills/*/SKILL.md` 的 frontmatter 自动生成，并链接到对应 ClawHub 页面。文章分区按最新文章排序，草稿固定在末尾。
 """
 
 DRAFTS_INTRO_EN = (
@@ -113,18 +135,95 @@ def render_links(links: list[dict], lang: str) -> str:
     return " · ".join(parts)
 
 
-def build(lang: str, data: dict, sections: list[dict]) -> str:
+def row_date(row: dict) -> str:
+    for ln in row["links"]:
+        m = re.match(r"^(\d{6})", Path(ln["path"]).name)
+        if m:
+            return m.group(1)
+    return "000000"
+
+
+def ordered_sections(data: dict, sections: list[dict]) -> list[dict]:
+    rows = data["rows"]
+    arts = [s for s in sections if s["id"] != "drafts" and any(r["section"] == s["id"] for r in rows)]
+    drafts = [s for s in sections if s["id"] == "drafts"]
+    arts.sort(key=lambda s: max(row_date(r) for r in rows if r["section"] == s["id"]), reverse=True)
+    return arts + drafts
+
+
+def cell(text: str) -> str:
+    return text.replace("|", "\\|").replace("\n", " ")
+
+
+def skill_mtime(slug: str) -> int:
+    try:
+        proc = subprocess.run(
+            ["git", "log", "-1", "--format=%ct", "--", f".opencode/skills/{slug}"],
+            capture_output=True, text=True, cwd=ROOT, timeout=10,
+        )
+        return int(proc.stdout.strip()) if proc.returncode == 0 and proc.stdout.strip() else 0
+    except Exception:
+        return 0
+
+
+def load_skills() -> list[dict]:
+    skills = []
+    if not SKILLS_DIR.is_dir():
+        return skills
+    for folder in sorted(SKILLS_DIR.iterdir()):
+        if not folder.is_dir():
+            continue
+        md = folder / "SKILL.md"
+        if not md.is_file():
+            continue
+        text = md.read_text(encoding="utf-8")
+        m = re.match(r"^---\s*\n(.*?)\n---", text, re.S)
+        front = yaml.safe_load(m.group(1)) if m else {}
+        front = front or {}
+        skills.append(
+            {
+                "slug": folder.name,
+                "name": front.get("name") or folder.name,
+                "description": front.get("description") or "",
+            }
+        )
+    skills.sort(key=lambda s: (-skill_mtime(s["slug"]), s["slug"]))
+    return skills
+
+
+def skills_block(is_zh: bool, num: int, skills: list[dict]) -> list[str]:
+    title = SKILLS_TITLE_ZH if is_zh else SKILLS_TITLE_EN
+    note = SKILLS_NOTE_ZH if is_zh else SKILLS_NOTE_EN
+    heading = f"### {CN_NUM[num - 1]}、{title}" if is_zh else f"### {ROMAN[num - 1]}. {title}"
+    header, sep = ("| 技能 | 简介 |", "|---|---|") if is_zh else ("| Skill | Description |", "|---|---|")
+    out = ["", heading, "", note, "", header, sep]
+    for s in skills:
+        url = CLAWHUB_SKILL_URL.format(slug=s["slug"])
+        out.append(f"| [{cell(s['name'])}]({url}) | {cell(s['description'])} |")
+    return out
+
+
+def build(lang: str, data: dict, sections: list[dict], skills: list[dict]) -> str:
     rows = data["rows"]
     is_zh = lang == "zh"
     out: list[str] = [INTRO_ZH if is_zh else INTRO_EN, "## 目录" if is_zh else "## Contents"]
 
-    for idx, sec in enumerate(sections, start=1):
+    num = 0
+    for sec in ordered_sections(data, sections):
+        if sec["id"] == "drafts":
+            num += 1
+            out.extend(skills_block(is_zh, num, skills))
+
         sec_rows = [r for r in rows if r["section"] == sec["id"]]
+        sec_rows.sort(key=row_date, reverse=True)
         if not is_zh:
             sec_rows = [r for r in sec_rows if any(ln.get("lang") == "en" for ln in r["links"])]
+        if not sec_rows:
+            continue
 
+        num += 1
         title = sec["title_zh"] if is_zh else sec["title_en"]
-        heading = f"### {CN_NUM[idx - 1]}、{title}" if is_zh else f"### {ROMAN[idx - 1]}. {title}"
+        heading = f"### {CN_NUM[num - 1]}、{title}" if is_zh else f"### {ROMAN[num - 1]}. {title}"
         out.append("")
         out.append(heading)
         out.append("")
@@ -165,9 +264,10 @@ def main() -> int:
     validate(data)
     unlisted_warnings(data)
     sections = data["sections"]
+    skills = load_skills()
 
-    en = build("en", data, sections)
-    zh = build("zh", data, sections)
+    en = build("en", data, sections, skills)
+    zh = build("zh", data, sections, skills)
 
     if args.check:
         ok = True
