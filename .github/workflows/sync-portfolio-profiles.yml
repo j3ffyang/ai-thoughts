@@ -22,29 +22,52 @@ jobs:
     if: github.repository == 'j3ffyang/ai-thoughts'
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatch to profile repos
+      - name: Dispatch to j3ffyang profile
         env:
           SYNC_TOKEN: ${{ secrets.PROFILE_SYNC_TOKEN }}
         run: |
           if [ -z "$SYNC_TOKEN" ]; then
             echo "::error::PROFILE_SYNC_TOKEN secret not set."
-            echo "Create a PAT with access to both profile repos and add it as the PROFILE_SYNC_TOKEN repository secret."
+            echo "Add a PAT with access to j3ffyang/j3ffyang as the PROFILE_SYNC_TOKEN repository secret."
             exit 1
           fi
 
-          for repo in j3ffyang/j3ffyang negtivspace/negtivspace; do
-            code=$(curl -s -o /dev/null -w "%{http_code}" \
-              -H "Authorization: Bearer ${SYNC_TOKEN}" \
-              "https://api.github.com/repos/${repo}")
-            echo "dispatch token reachability: ${repo} -> HTTP ${code}"
-            if [ "$code" != "200" ]; then
-              echo "::error::PROFILE_SYNC_TOKEN cannot reach ${repo} (HTTP ${code}) — check token permissions/expiry."
-              exit 1
-            fi
-            curl -sS -f -X POST \
-              -H "Authorization: Bearer ${SYNC_TOKEN}" \
-              -H "Accept: application/vnd.github+json" \
-              "https://api.github.com/repos/${repo}/dispatches" \
-              -d "{\"event_type\": \"sync-portfolio\", \"client_payload\": {\"head_sha\": \"${GITHUB_SHA}\"}}"
-            echo "Dispatched sync-portfolio to ${repo}"
-          done
+          code=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer ${SYNC_TOKEN}" \
+            "https://api.github.com/repos/j3ffyang/j3ffyang")
+          echo "dispatch token reachability: j3ffyang/j3ffyang -> HTTP ${code}"
+          if [ "$code" != "200" ]; then
+            echo "::error::PROFILE_SYNC_TOKEN cannot reach j3ffyang/j3ffyang (HTTP ${code}) — check token permissions/expiry."
+            exit 1
+          fi
+          curl -sS -f -X POST \
+            -H "Authorization: Bearer ${SYNC_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/j3ffyang/j3ffyang/dispatches" \
+            -d "{\"event_type\": \"sync-portfolio\", \"client_payload\": {\"head_sha\": \"${GITHUB_SHA}\"}}"
+          echo "Dispatched sync-portfolio to j3ffyang/j3ffyang"
+
+      - name: Dispatch to negtivspace profile
+        env:
+          SYNC_TOKEN: ${{ secrets.NEGTIVSPACE_SYNC_TOKEN }}
+        run: |
+          if [ -z "$SYNC_TOKEN" ]; then
+            echo "::error::NEGTIVSPACE_SYNC_TOKEN secret not set."
+            echo "Add a PAT with access to negtivspace/negtivspace as the NEGTIVSPACE_SYNC_TOKEN repository secret."
+            exit 1
+          fi
+
+          code=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer ${SYNC_TOKEN}" \
+            "https://api.github.com/repos/negtivspace/negtivspace")
+          echo "dispatch token reachability: negtivspace/negtivspace -> HTTP ${code}"
+          if [ "$code" != "200" ]; then
+            echo "::error::NEGTIVSPACE_SYNC_TOKEN cannot reach negtivspace/negtivspace (HTTP ${code}) — check token permissions/expiry."
+            exit 1
+          fi
+          curl -sS -f -X POST \
+            -H "Authorization: Bearer ${SYNC_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/negtivspace/negtivspace/dispatches" \
+            -d "{\"event_type\": \"sync-portfolio\", \"client_payload\": {\"head_sha\": \"${GITHUB_SHA}\"}}"
+          echo "Dispatched sync-portfolio to negtivspace/negtivspace"
