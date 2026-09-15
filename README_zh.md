@@ -100,7 +100,7 @@
 | [opencode-git-underrated](docs/260809-opencode-git-underrated.md) | 一位用了十五年 git 的用户，如何在两天内用 OpenCode 产出比过去多数年份更多的自动化——9 步思维流循环、分工与复利架构 |
 | [opencode-git-underrated_chn](docs/260809-opencode-git-underrated-chn.md) | OpenCode + Git：被低估的组合——十五年 git 老手两天内构建的自动化系统与思维流循环（简体中文） |
 | [AGENTS + opencode.jsonc 架构](docs/260811-agents-opencode-config.md) · [AGENTS + opencode.jsonc 架构（中文）](docs/260811-agents-opencode-config-chn.md) | OpenCode AGENTS.md 与 opencode.jsonc 架构、优先级与工作流：双配置表面如何加载、消解冲突、评估权限并在子模块上下文隔离墙间运作；对照 anomalyco/opencode 源码 HEAD e11dbd0 严格复核。 |
-| [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly.md) | Create SKILL.md, AGENTS.md, and PERSONA.md on the fly instead of hunting others' skills — three levels of customization, real benefits from daily use, and OpenCode as the daily agent |
+| [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly.md) · [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly-chn.md) | 随手创建 SKILL.md、AGENTS.md 和 PERSONA.md，而不是去淘别人的技能——三个自定义层次、日复一日使用得来的真实好处，以及作为日常智能体的 OpenCode |
 | [agents-md-not-a-persona](docs/260821-agents-md-not-a-persona.md) · [AGENTS.md 不是人格设定](docs/260821-agents-md-not-a-persona-chn.md) | AGENTS.md 不是人格设定——它是一部用伤疤写成的宪章：每条规则追溯到真实事故（自克隆仓库、撒谎的文档、提示洪水），不绑定特定工具的通用法则 |
 
 ### 八、技能

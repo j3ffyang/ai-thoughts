@@ -394,7 +394,9 @@ rows:
     status: published
     links:
       - { label: "opencode-create-skill-onfly", path: "docs/260906-opencode-create-skill-onfly.md", lang: en }
+      - { label: "opencode-create-skill-onfly", path: "docs/260906-opencode-create-skill-onfly-chn.md", lang: zh }
     desc_en: "Create SKILL.md, AGENTS.md, and PERSONA.md on the fly instead of hunting others' skills — three levels of customization, real benefits from daily use, and OpenCode as the daily agent"
+    desc_zh: "随手创建 SKILL.md、AGENTS.md 和 PERSONA.md，而不是去淘别人的技能——三个自定义层次、日复一日使用得来的真实好处，以及作为日常智能体的 OpenCode"
 
   # ------------------------------------------------------------ IX. skills
   - section: skills

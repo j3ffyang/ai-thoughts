@@ -41,7 +41,7 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Repo | Purpose | Articles | Latest |
 |------|---------|----------|--------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 39 articles | `docs: rename skill to publish-skills (clawhub namespace is protected)` (Sep 2026) |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 39 articles | `docs: update GPD dual-AMD article Chinese translation with new hero, fastfetch, and eGPU diagram images` (Sep 2026) |
 
 ### Tools & Extensions
 
