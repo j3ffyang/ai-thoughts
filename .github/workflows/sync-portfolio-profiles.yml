@@ -22,22 +22,29 @@ jobs:
     if: github.repository == 'j3ffyang/ai-thoughts'
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatch to profile repo
+      - name: Dispatch to profile repos
         env:
           SYNC_TOKEN: ${{ secrets.PROFILE_SYNC_TOKEN }}
         run: |
           if [ -z "$SYNC_TOKEN" ]; then
             echo "::error::PROFILE_SYNC_TOKEN secret not set."
-            echo "Create a PAT with write access to both accounts and add it as the PROFILE_SYNC_TOKEN repository secret."
+            echo "Create a PAT with access to both profile repos and add it as the PROFILE_SYNC_TOKEN repository secret."
             exit 1
           fi
 
-          for repo in j3ffyang/j3ffyang; do
-            curl -sS -f \
-              -X POST \
+          for repo in j3ffyang/j3ffyang negtivspace/negtivspace; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" \
+              -H "Authorization: Bearer ${SYNC_TOKEN}" \
+              "https://api.github.com/repos/${repo}")
+            echo "dispatch token reachability: ${repo} -> HTTP ${code}"
+            if [ "$code" != "200" ]; then
+              echo "::error::PROFILE_SYNC_TOKEN cannot reach ${repo} (HTTP ${code}) — check token permissions/expiry."
+              exit 1
+            fi
+            curl -sS -f -X POST \
               -H "Authorization: Bearer ${SYNC_TOKEN}" \
               -H "Accept: application/vnd.github+json" \
               "https://api.github.com/repos/${repo}/dispatches" \
-              -d '{"event_type": "sync-portfolio"}'
+              -d "{\"event_type\": \"sync-portfolio\", \"client_payload\": {\"head_sha\": \"${GITHUB_SHA}\"}}"
             echo "Dispatched sync-portfolio to ${repo}"
           done
