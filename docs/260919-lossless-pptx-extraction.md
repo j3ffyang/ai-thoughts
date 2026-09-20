@@ -55,6 +55,11 @@ There is one deliberate exception, documented rather than hidden. A PDF of a dec
 
 The project also carries a skill, `pptx-extract`, that codifies the entire procedure — preflight, extract, audit, spot-check, report. One skill is the right count because there is exactly one procedure worth codifying; a second would only earn its place as a separate, independently-triggered workflow. It runs on `python-pptx` and encodes the project's specific requirements — full data, visible exclusions, deterministic output, machine-checked losslessness. The workflow becomes reproducible instead of tribal knowledge, and because the skill lives inside the folder, it travels with the project. In practice it is the procedure this folder follows: the same preflight, the same extract command, the same audit — so the workflow does not have to be re-derived each time.
 
+It is available in two places:
+
+- **Published (ClawHub):** [https://clawhub.ai/j3ffyang/skills/pptx-extract](https://clawhub.ai/j3ffyang/skills/pptx-extract)
+- **Source (GitHub):** [https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/pptx-extract](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/pptx-extract)
+
 ## The audit is the product
 
 It is tempting to treat the converter as the deliverable and the checker as an afterthought. Here it was the opposite. The pipeline ships a five-point audit that runs against the original `.pptx` and the generated files; the first four are hard gates that exit non-zero on failure, and the fifth is reported for review:
