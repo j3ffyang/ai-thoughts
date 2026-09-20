@@ -12,7 +12,18 @@ Custom OpenCode skills developed here auto-publish to [ClawHub](https://clawhub.
 
 ## Contents
 
-### I. Cross-Platform & Comparative
+### I. Personal Tech, Privacy & Gaming
+
+| Article | Description |
+|---|---|
+| [lossless-pptx-extraction](docs/260919-lossless-pptx-extraction.md) | Engineering deep-dive: extracting PowerPoint decks into full-data Markdown — OOXML shape walking, content vs layout chrome vs unrenderable objects, a 5-point losslessness audit, and why the pipeline stays local instead of running in CI |
+| [happy-birthday-linux](docs/260828-happy-birthday-linux-from-aix-to-arch.md) | A 35-year Linux journey in one personal story — AIX at IBM, getting hacked and the security habit it forged, the distro years ending at Arch, and every machine now Arch Linux; with a visual summary infographic |
+| [arch-hyprland-gpd-win4-egpu](docs/260807-gpd-dual-amd-gpu.md) | Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks |
+| [brave-browser-privacy](docs/260706-brave-post.md) | Deep dive into why I switched to Brave: local keychain, Shields, WebRTC control, Tor integration, and real-world privacy difference |
+| [immutable-os-strategy](docs/260622-immutable-os.md) | Personal strategy on "immutable" OS choices — why a quarter-century Linux power user sticks with native Arch Linux and Debian LTS over Bazzite/Silverblue |
+| [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | Beginner's guide to DCS World with a VKB Gladiator NXT EVO joystick and a no-numpad keyboard — game-mode flying, keybindings, and axis tuning |
+
+### II. Cross-Platform & Comparative
 
 | Article | Description |
 |---|---|
@@ -27,16 +38,6 @@ Custom OpenCode skills developed here auto-publish to [ClawHub](https://clawhub.
 | [ai-combination](docs/260701-ai-combination2.md) | Optimizing AI usage: from Doubao user to power user — combine OpenRouter, OpenCode, and Hermes/OpenClaw SKILL.md workflows |
 | [choose-between-opencode-and-claude-code](docs/260513-choose-cc-opencode.md) | Comparison of OpenCode vs Claude Code for running Claude Opus and other models |
 | [engageOpenClaw](docs/260420-engage-openclaw.md) | Reflections after 3 months with OpenClaw and Hermes: orchestrating multi-step AI tasks and per-section image generation workflows |
-
-### II. Personal Tech, Privacy & Gaming
-
-| Article | Description |
-|---|---|
-| [happy-birthday-linux](docs/260828-happy-birthday-linux-from-aix-to-arch.md) | A 35-year Linux journey in one personal story — AIX at IBM, getting hacked and the security habit it forged, the distro years ending at Arch, and every machine now Arch Linux; with a visual summary infographic |
-| [arch-hyprland-gpd-win4-egpu](docs/260807-gpd-dual-amd-gpu.md) | Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks |
-| [brave-browser-privacy](docs/260706-brave-post.md) | Deep dive into why I switched to Brave: local keychain, Shields, WebRTC control, Tor integration, and real-world privacy difference |
-| [immutable-os-strategy](docs/260622-immutable-os.md) | Personal strategy on "immutable" OS choices — why a quarter-century Linux power user sticks with native Arch Linux and Debian LTS over Bazzite/Silverblue |
-| [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | Beginner's guide to DCS World with a VKB Gladiator NXT EVO joystick and a no-numpad keyboard — game-mode flying, keybindings, and axis tuning |
 
 ### III. History, Culture & Philosophy
 
@@ -93,6 +94,8 @@ Developed in this repo and auto-published to [ClawHub](https://clawhub.ai/j3ffya
 
 | Skill | Description |
 |---|---|
+| [normalize-whitespace](https://clawhub.ai/j3ffyang/skills/normalize-whitespace) | Normalize indentation of a large reference text document (e.g. README.md) to a consistent TAB style while keeping content byte-identical. Use when asked to fix inconsistent leading spaces, align command blocks, or clean indentation spread across hundreds of lines in a prose-heavy, single-fence document. Built from the 2026-09 instguid README.md normalization session. |
+| [sync-config-with-sample](https://clawhub.ai/j3ffyang/skills/sync-config-with-sample) | Sync a production config file (e.g. hyprland.lua.gpd) against the latest upstream sample (e.g. hyprland.lua.260917) by copying only reference info/URL comments while preserving the user's actual configuration. Use when the user drops a freshly downloaded sample alongside a live config, mentions keeping the newest sample as the diff baseline, or wants only real config differences to remain visible in diff. |
 | [publish-skills](https://clawhub.ai/j3ffyang/skills/publish-skills) | Publish SKILL.md files to ClawHub (clawhub.ai) and diagnose publish failures across the three skill repos (history, ai-custom-skills, ai-thoughts). Use when the user wants to publish skills to ClawHub, manually trigger a publish, check why a publish failed or was skipped, or understand the ClawHub skill sync pipeline. |
 | [bold-highlights](https://clawhub.ai/j3ffyang/skills/bold-highlights) | Add sparse, deliberate bold highlights to a few key concepts so readers can scan and capture the article's core points. Use when polishing an article in ai-thoughts/docs/ or when the user asks to make an article more scannable or add highlights. |
 | [arch-sign-off](https://clawhub.ai/j3ffyang/skills/arch-sign-off) | Append the Arch Linux sign-off line `btw, i use arch` to the very bottom of an article in ai-thoughts/docs/ (EN or ZH). This is a standing default for every article: apply it unless the user explicitly says not to. Use when writing or finishing any new article, or when the user asks to add it. |
@@ -105,8 +108,7 @@ Developed in this repo and auto-published to [ClawHub](https://clawhub.ai/j3ffya
 | [story-telling](https://clawhub.ai/j3ffyang/skills/story-telling) | Generate a narration script (voiceover + shot list + per-clip visual prompts + music cues) for a personal travel-story video or essay, from a thought-flow master skill and the author's own photos. Use when the user wants "a script", "旁白脚本", a storytelling/故事化 script for a video, or asks to turn a personal travel story (e.g. the death-in-Mexico project) into a narrated video or essay. Output is Simplified Chinese first-person storytelling, engine-agnostic in voiceover and timing, engine-specific in clip prompts. Never runs automatically; acts only when the user asks for a script. |
 | [video-gen](https://clawhub.ai/j3ffyang/skills/video-gen) | Generate a video from a story-telling narration script plus the author's photos, using Seedance 2.0 image-to-video via OpenRouter's asynchronous video API: pre-render gates (face-scan, narrative order, risk-POC), then per-clip submit -> poll -> download, then ffmpeg assembly. Multi-clip projects default to silent clips plus one continuous soundtrack (synthesized or royalty-free/PD); subtitle voiceover is the fallback (no OpenRouter TTS). Verified working 2026-08-15 (POC: 4s 480p clip, $0.28, ~3 min). Use when the user asks to render a narration script into a video, generate a 视频, or run the death-in-Mexico project's video pipeline. Related terms: Seedance, 视频生成, OpenRouter, image-to-video. |
 | [thought-flow](https://clawhub.ai/j3ffyang/skills/thought-flow) | The 8-stage collaboration loop for working with the user: INTENT, CONSTRAINTS, PROPOSE, PRESS, PRACTICE, INVESTIGATE, CODIFY, BOUNDARY-CHECK. Use when starting a new task (state intent and constraints up front), when proposing a plan (include options + a recommendation), when the user pushes back on a proposal, when something fails or looks broken and needs investigation, or when deciding whether to codify knowledge into an AGENTS.md rule or a SKILL.md procedure. |
-| [normalize-whitespace](https://clawhub.ai/j3ffyang/skills/normalize-whitespace) | Normalize indentation of a large reference text document (e.g. README.md) to a consistent TAB style while keeping content byte-identical. Use when asked to fix inconsistent leading spaces, align command blocks, or clean indentation spread across hundreds of lines in a prose-heavy, single-fence document. Built from the 2026-09 instguid README.md normalization session. |
-| [sync-config-with-sample](https://clawhub.ai/j3ffyang/skills/sync-config-with-sample) | Sync a production config file (e.g. hyprland.lua.gpd) against the latest upstream sample (e.g. hyprland.lua.260917) by copying only reference info/URL comments while preserving the user's actual configuration. Use when the user drops a freshly downloaded sample alongside a live config, mentions keeping the newest sample as the diff baseline, or wants only real config differences to remain visible in diff. |
+| [pptx-extract](https://clawhub.ai/j3ffyang/skills/pptx-extract) | Extract a PowerPoint deck into full-data, page-delimited Markdown — every text run, table, speaker note, and image — with unextractable data (vector metafiles, charts, OLE embeds) skipped but visibly noted on its slide, then prove losslessness with a 5-point machine audit. Use when the user asks to extract/convert a PPTX to Markdown, add a new deck to an extraction project, or regenerate a stale extraction. Related terms: PPT, PowerPoint, PPTX, slide extraction, 提取. |
 
 ### IX. Drafts & Working Notes
 

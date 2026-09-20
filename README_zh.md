@@ -12,7 +12,19 @@
 
 ## 目录
 
-### 一、跨平台与比较
+### 一、个人技术、隐私与游戏
+
+| 文章 | 简介 |
+|---|---|
+| [lossless-pptx-extraction](docs/260919-lossless-pptx-extraction.md) | 工程深潜：把 PowerPoint 演示文稿完整提取为 Markdown——OOXML 形状遍历、内容与版式装饰及不可渲染对象的区分、五点无损审计，以及为何这条流水线选择本地运行而非 CI |
+| [happy-birthday-linux](docs/260828-happy-birthday-linux-from-aix-to-arch.md) · [生日快乐，Linux](docs/260828-happy-birthday-linux-from-aix-to-arch-chn.md) | 三十五年的 Linux 个人旅程——从 IBM 的 AIX 起步、被入侵后养成安全习惯、兜兜转转的发行版岁月最终停在 Arch，如今每一台机器都是 Arch Linux；附视觉总结信息图 |
+| [arch-hyprland-gpd-win4-egpu](docs/260807-gpd-dual-amd-gpu.md) · [arch-hyprland-gpd-win4-egpu_chn](docs/260807-gpd-dual-amd-gpu-chn.md) | 掌机上的双 AMD GPU（iGPU + eGPU，OCuLink 连接 RX 7600M XT）渲染卸载指南——验证命令、稳定 DRM 符号链接与调整日志 |
+| [brave-browser-privacy](docs/260706-brave-post.md) | 为什么我选择Brave的深度分析：本地密钥管理、Shields隐私防护、WebRTC控制与Tor集成（英文） |
+| [brave-browser-privacy](docs/260706-brave-post-chn.md) | 為什麼我開始使用Brave的深度分析：本地密鑰管理、隱私防護、WebRTC控制及Tor整合（繁體中文） |
+| [immutable-os-strategy](docs/260622-immutable-os.md) | "不可变操作系统"选型策略——为何一位使用Linux四分之一世纪的老用户坚持原生Arch与Debian LTS，而非Bazzite/Silverblue |
+| [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | DCS World新手入门指南：VKB Gladiator NXT EVO摇杆 + 无数字键盘的键位映射、游戏模式飞行与摇杆轴调校 |
+
+### 二、跨平台与比较
 
 | 文章 | 简介 |
 |---|---|
@@ -30,17 +42,6 @@
 | [opencode-vs-claude-code](docs/260513-choose-cc-opencode.md) | OpenCode与Claude Code的比较：用于运行Claude Opus和其他模型（中英双语） |
 | [opencode-vs-claude-code_chn](docs/260513-choose-cc-opencode-chn.md) | OpenCode 与 Claude Code 对比（简体中文） |
 | [engageOpenClaw](docs/260420-engage-openclaw.md) | 使用OpenClaw与Hermes三个月后的复盘：多步骤AI任务编排与章节配图生成工作流 |
-
-### 二、个人技术、隐私与游戏
-
-| 文章 | 简介 |
-|---|---|
-| [happy-birthday-linux](docs/260828-happy-birthday-linux-from-aix-to-arch.md) · [生日快乐，Linux](docs/260828-happy-birthday-linux-from-aix-to-arch-chn.md) | 三十五年的 Linux 个人旅程——从 IBM 的 AIX 起步、被入侵后养成安全习惯、兜兜转转的发行版岁月最终停在 Arch，如今每一台机器都是 Arch Linux；附视觉总结信息图 |
-| [arch-hyprland-gpd-win4-egpu](docs/260807-gpd-dual-amd-gpu.md) · [arch-hyprland-gpd-win4-egpu_chn](docs/260807-gpd-dual-amd-gpu-chn.md) | 掌机上的双 AMD GPU（iGPU + eGPU，OCuLink 连接 RX 7600M XT）渲染卸载指南——验证命令、稳定 DRM 符号链接与调整日志 |
-| [brave-browser-privacy](docs/260706-brave-post.md) | 为什么我选择Brave的深度分析：本地密钥管理、Shields隐私防护、WebRTC控制与Tor集成（英文） |
-| [brave-browser-privacy](docs/260706-brave-post-chn.md) | 為什麼我開始使用Brave的深度分析：本地密鑰管理、隱私防護、WebRTC控制及Tor整合（繁體中文） |
-| [immutable-os-strategy](docs/260622-immutable-os.md) | "不可变操作系统"选型策略——为何一位使用Linux四分之一世纪的老用户坚持原生Arch与Debian LTS，而非Bazzite/Silverblue |
-| [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | DCS World新手入门指南：VKB Gladiator NXT EVO摇杆 + 无数字键盘的键位映射、游戏模式飞行与摇杆轴调校 |
 
 ### 三、历史、文化与哲思
 
@@ -113,6 +114,8 @@
 
 | 技能 | 简介 |
 |---|---|
+| [normalize-whitespace](https://clawhub.ai/j3ffyang/skills/normalize-whitespace) | Normalize indentation of a large reference text document (e.g. README.md) to a consistent TAB style while keeping content byte-identical. Use when asked to fix inconsistent leading spaces, align command blocks, or clean indentation spread across hundreds of lines in a prose-heavy, single-fence document. Built from the 2026-09 instguid README.md normalization session. |
+| [sync-config-with-sample](https://clawhub.ai/j3ffyang/skills/sync-config-with-sample) | Sync a production config file (e.g. hyprland.lua.gpd) against the latest upstream sample (e.g. hyprland.lua.260917) by copying only reference info/URL comments while preserving the user's actual configuration. Use when the user drops a freshly downloaded sample alongside a live config, mentions keeping the newest sample as the diff baseline, or wants only real config differences to remain visible in diff. |
 | [publish-skills](https://clawhub.ai/j3ffyang/skills/publish-skills) | Publish SKILL.md files to ClawHub (clawhub.ai) and diagnose publish failures across the three skill repos (history, ai-custom-skills, ai-thoughts). Use when the user wants to publish skills to ClawHub, manually trigger a publish, check why a publish failed or was skipped, or understand the ClawHub skill sync pipeline. |
 | [bold-highlights](https://clawhub.ai/j3ffyang/skills/bold-highlights) | Add sparse, deliberate bold highlights to a few key concepts so readers can scan and capture the article's core points. Use when polishing an article in ai-thoughts/docs/ or when the user asks to make an article more scannable or add highlights. |
 | [arch-sign-off](https://clawhub.ai/j3ffyang/skills/arch-sign-off) | Append the Arch Linux sign-off line `btw, i use arch` to the very bottom of an article in ai-thoughts/docs/ (EN or ZH). This is a standing default for every article: apply it unless the user explicitly says not to. Use when writing or finishing any new article, or when the user asks to add it. |
@@ -125,8 +128,7 @@
 | [story-telling](https://clawhub.ai/j3ffyang/skills/story-telling) | Generate a narration script (voiceover + shot list + per-clip visual prompts + music cues) for a personal travel-story video or essay, from a thought-flow master skill and the author's own photos. Use when the user wants "a script", "旁白脚本", a storytelling/故事化 script for a video, or asks to turn a personal travel story (e.g. the death-in-Mexico project) into a narrated video or essay. Output is Simplified Chinese first-person storytelling, engine-agnostic in voiceover and timing, engine-specific in clip prompts. Never runs automatically; acts only when the user asks for a script. |
 | [video-gen](https://clawhub.ai/j3ffyang/skills/video-gen) | Generate a video from a story-telling narration script plus the author's photos, using Seedance 2.0 image-to-video via OpenRouter's asynchronous video API: pre-render gates (face-scan, narrative order, risk-POC), then per-clip submit -> poll -> download, then ffmpeg assembly. Multi-clip projects default to silent clips plus one continuous soundtrack (synthesized or royalty-free/PD); subtitle voiceover is the fallback (no OpenRouter TTS). Verified working 2026-08-15 (POC: 4s 480p clip, $0.28, ~3 min). Use when the user asks to render a narration script into a video, generate a 视频, or run the death-in-Mexico project's video pipeline. Related terms: Seedance, 视频生成, OpenRouter, image-to-video. |
 | [thought-flow](https://clawhub.ai/j3ffyang/skills/thought-flow) | The 8-stage collaboration loop for working with the user: INTENT, CONSTRAINTS, PROPOSE, PRESS, PRACTICE, INVESTIGATE, CODIFY, BOUNDARY-CHECK. Use when starting a new task (state intent and constraints up front), when proposing a plan (include options + a recommendation), when the user pushes back on a proposal, when something fails or looks broken and needs investigation, or when deciding whether to codify knowledge into an AGENTS.md rule or a SKILL.md procedure. |
-| [normalize-whitespace](https://clawhub.ai/j3ffyang/skills/normalize-whitespace) | Normalize indentation of a large reference text document (e.g. README.md) to a consistent TAB style while keeping content byte-identical. Use when asked to fix inconsistent leading spaces, align command blocks, or clean indentation spread across hundreds of lines in a prose-heavy, single-fence document. Built from the 2026-09 instguid README.md normalization session. |
-| [sync-config-with-sample](https://clawhub.ai/j3ffyang/skills/sync-config-with-sample) | Sync a production config file (e.g. hyprland.lua.gpd) against the latest upstream sample (e.g. hyprland.lua.260917) by copying only reference info/URL comments while preserving the user's actual configuration. Use when the user drops a freshly downloaded sample alongside a live config, mentions keeping the newest sample as the diff baseline, or wants only real config differences to remain visible in diff. |
+| [pptx-extract](https://clawhub.ai/j3ffyang/skills/pptx-extract) | Extract a PowerPoint deck into full-data, page-delimited Markdown — every text run, table, speaker note, and image — with unextractable data (vector metafiles, charts, OLE embeds) skipped but visibly noted on its slide, then prove losslessness with a 5-point machine audit. Use when the user asks to extract/convert a PPTX to Markdown, add a new deck to an extraction project, or regenerate a stale extraction. Related terms: PPT, PowerPoint, PPTX, slide extraction, 提取. |
 
 ### 九、草稿与工作笔记
 
