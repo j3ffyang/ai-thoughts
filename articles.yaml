@@ -147,6 +147,7 @@ rows:
     status: published
     links:
       - { label: "lossless-pptx-extraction", path: "docs/260919-lossless-pptx-extraction.md", lang: en }
+      - { label: "lossless-pptx-extraction", path: "docs/260919-lossless-pptx-extraction-chn.md", lang: zh, label_zh: "无损提取 PPTX" }
     desc_en: "Engineering deep-dive: extracting PowerPoint decks into full-data Markdown — OOXML shape walking, content vs layout chrome vs unrenderable objects, a 5-point losslessness audit, and why the pipeline stays local instead of running in CI"
     desc_zh: "工程深潜：把 PowerPoint 演示文稿完整提取为 Markdown——OOXML 形状遍历、内容与版式装饰及不可渲染对象的区分、五点无损审计，以及为何这条流水线选择本地运行而非 CI"
   - section: personal

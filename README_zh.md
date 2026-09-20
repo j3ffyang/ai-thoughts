@@ -16,7 +16,7 @@
 
 | 文章 | 简介 |
 |---|---|
-| [lossless-pptx-extraction](docs/260919-lossless-pptx-extraction.md) | 工程深潜：把 PowerPoint 演示文稿完整提取为 Markdown——OOXML 形状遍历、内容与版式装饰及不可渲染对象的区分、五点无损审计，以及为何这条流水线选择本地运行而非 CI |
+| [lossless-pptx-extraction](docs/260919-lossless-pptx-extraction.md) · [无损提取 PPTX](docs/260919-lossless-pptx-extraction-chn.md) | 工程深潜：把 PowerPoint 演示文稿完整提取为 Markdown——OOXML 形状遍历、内容与版式装饰及不可渲染对象的区分、五点无损审计，以及为何这条流水线选择本地运行而非 CI |
 | [happy-birthday-linux](docs/260828-happy-birthday-linux-from-aix-to-arch.md) · [生日快乐，Linux](docs/260828-happy-birthday-linux-from-aix-to-arch-chn.md) | 三十五年的 Linux 个人旅程——从 IBM 的 AIX 起步、被入侵后养成安全习惯、兜兜转转的发行版岁月最终停在 Arch，如今每一台机器都是 Arch Linux；附视觉总结信息图 |
 | [arch-hyprland-gpd-win4-egpu](docs/260807-gpd-dual-amd-gpu.md) · [arch-hyprland-gpd-win4-egpu_chn](docs/260807-gpd-dual-amd-gpu-chn.md) | 掌机上的双 AMD GPU（iGPU + eGPU，OCuLink 连接 RX 7600M XT）渲染卸载指南——验证命令、稳定 DRM 符号链接与调整日志 |
 | [brave-browser-privacy](docs/260706-brave-post.md) | 为什么我选择Brave的深度分析：本地密钥管理、Shields隐私防护、WebRTC控制与Tor集成（英文） |
