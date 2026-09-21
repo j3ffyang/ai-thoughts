@@ -62,6 +62,8 @@ joey/
 - **已发布 (ClawHub)：** [https://clawhub.ai/j3ffyang/skills/pptx-extract](https://clawhub.ai/j3ffyang/skills/pptx-extract)
 - **源码 (GitHub)：** [https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/pptx-extract](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/pptx-extract)
 
+（发布出去的那份是做了泛化 (genericized) 处理的副本，放在宿主仓库里，好让它的发布流水线能发现它。）
+
 ## 审计 (audit) 才是产品
 
 把转换器 (converter) 当成交付物、把检查器 (checker) 当成事后补充，是很有诱惑力的做法。在这里恰恰相反。流水线自带一套五点审计 (five-point audit)，它针对原始 `.pptx` 和生成的文件运行；前四点是硬性门槛 (hard gate)，任何失败都会以非零退出码结束，第五点则只作汇报供人复核：
@@ -94,7 +96,7 @@ joey/
 - 一个 `--check` 模式，把内容重新生成到临时目录里再 diff 结果——本地版的 CI 校验任务 (verify job)；
 - 一个可选的 pre-commit 钩子 (hook)。
 
-没有远端 (remote) 的诚实代价是备份 (backup)：什么都没推送出去，一份放在外部介质上的加密副本，就是防止丢失磁盘的唯一保护。还有第二个值得点名的托管 (hosting) 后果：项目住在一个更大的宿主仓库 (host repository) 里，却独立于它工作，而存放在它里面的技能*不会*被那个宿主仓库的发布流水线 (publishing pipeline) 拾取——所以以后要发布它，需要一条自己的、刻意的路径，而不是想当然。知识住在哪里，决定了它是否有用、以及维护它要花多少成本。
+没有远端 (remote) 的诚实代价是备份 (backup)：什么都没推送出去，一份放在外部介质上的加密副本，就是防止丢失磁盘的唯一保护。还有第二个值得点名的托管 (hosting) 后果：项目住在一个更大的宿主仓库 (host repository) 里，却独立于它工作，而存放在它里面的技能*不会*被那个宿主仓库的发布流水线 (publishing pipeline) 拾取——所以发布它走了一条自己的、刻意的路径：把一份副本放在那条流水线会看的地方，而不是想当然。知识住在哪里，决定了它是否有用、以及维护它要花多少成本。
 
 ## 我学到了什么
 

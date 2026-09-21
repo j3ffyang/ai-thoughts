@@ -41,7 +41,7 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Repo | Purpose | Articles | Latest |
 |------|---------|----------|--------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 40 articles | `docs: link published pptx-extract skill in the extraction article` (Sep 2026) |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 40 articles | `docs: add Chinese translation and Twitter banner for lossless-pptx-extraction` (Sep 2026) |
 
 ### Tools & Extensions
 
@@ -268,4 +268,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** September 20, 2026 | Tracking: 6 active repos, 40 published articles, 10+ published skills
+**Last Updated:** September 21, 2026 | Tracking: 6 active repos, 40 published articles, 10+ published skills

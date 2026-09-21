@@ -60,6 +60,8 @@ It is available in two places:
 - **Published (ClawHub):** [https://clawhub.ai/j3ffyang/skills/pptx-extract](https://clawhub.ai/j3ffyang/skills/pptx-extract)
 - **Source (GitHub):** [https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/pptx-extract](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/pptx-extract)
 
+(The published copy is a genericized duplicate kept in the host repository, so its publish pipeline can see it.)
+
 ## The audit is the product
 
 It is tempting to treat the converter as the deliverable and the checker as an afterthought. Here it was the opposite. The pipeline ships a five-point audit that runs against the original `.pptx` and the generated files; the first four are hard gates that exit non-zero on failure, and the fifth is reported for review:
@@ -92,7 +94,7 @@ The obvious next step was to automate this in GitHub Actions, and the decisive c
 - a `--check` mode that regenerates into a temporary directory and diffs the result — the local equivalent of a CI verify job;
 - an optional pre-commit hook.
 
-The honest cost of no remote is backup: with nothing pushed anywhere, an encrypted copy on external media is the only protection against losing the disk. And there is a second hosting consequence worth naming: the project sits inside a larger host repository but works independently of it, and a skill stored inside it is *not* picked up by that host repository's publishing pipeline — so publishing it later needs its own deliberate path, not an assumption. Where knowledge lives determines whether it is useful and how much it costs to maintain.
+The honest cost of no remote is backup: with nothing pushed anywhere, an encrypted copy on external media is the only protection against losing the disk. And there is a second hosting consequence worth naming: the project sits inside a larger host repository but works independently of it, and a skill stored inside it is *not* picked up by that host repository's publishing pipeline — so publishing it took its own deliberate path, a copy placed where that pipeline looks, rather than an assumption. Where knowledge lives determines whether it is useful and how much it costs to maintain.
 
 ## What I took away
 
