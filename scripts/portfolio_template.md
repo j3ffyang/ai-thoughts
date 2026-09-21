@@ -53,6 +53,8 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 ## 🔍 Code Highlights
 
+*Automation tooling that keeps this portfolio, its READMEs, and its ClawHub skills in sync.*
+
 ### Example: Generate the Portfolio with Python
 **Repo:** `ai-thoughts` | **Language:** Python | **Purpose:** Render PORTFOLIO.md from a template + `articles.yaml` + git log
 
@@ -145,6 +147,62 @@ curl -s -H "Authorization: Bearer $CLH_TOKEN" \
 ```
 
 **Why it matters:** Turns "the workflow failed" into a verified fact — the API call proves a skill published even when the upstream workflow's status mapping reports a false failure.
+
+---
+
+### Example: Auto-Publish Skills to ClawHub with Python
+**Repo:** `ai-thoughts` | **Language:** Python | **Purpose:** Drive the pinned ClawHub CLI to publish every `.opencode/skills/*` folder, treating all five real statuses as success
+
+```python
+OK_STATUSES = {"unchanged", "would-publish", "submitted", "published", "pending-publication"}
+...
+status = json.loads(completed.stdout).get("status")
+if status in OK_STATUSES:
+    ok.append({"slug": target.name, "status": status})
+else:
+    failed.append({"slug": target.name, "status": status, "message": f"Unknown publish status: {status}"})
+```
+
+**Why it matters:** The upstream reusable workflow only maps three of the five statuses, so a successful async publish (`pending-publication`) surfaced as a red ✗. This treats all five as success and prints an `ok`/`failed` JSON summary the workflow can trust — while the `repository_owner` guard still stops the two remotes from double-publishing to one ClawHub account.
+
+---
+
+### Example: Keep the Profile README's Numbers Honest with Python
+**Repo:** `negtivSpace` | **Language:** Python | **Purpose:** Recompute every derived number in the profile README (skills, repos, articles, Quick Links) from the nested repos
+
+```python
+def apply(pattern: str, repl: str, desc: str, flags: int = 0) -> None:
+    nonlocal text
+    new, n = re.subn(pattern, repl, text, flags=flags)
+    if n:
+        text = new
+        edits.append(desc)
+    else:
+        failures.append(desc)
+
+for pattern, repl, desc in subs:
+    apply(pattern, repl, desc)
+```
+
+**Why it matters:** Counts drift the moment a skill or article is added; one pass regenerates them, and the script exits non-zero if any expected section fails to match, so drift surfaces instead of shipping silently. Counting only git-tracked skill dirs keeps local leftovers from skewing the result versus CI.
+
+---
+
+### Example: Regenerate Repo READMEs from a Manifest with Python
+**Repo:** `ai-thoughts` | **Language:** Python | **Purpose:** Rebuild `README.md` and `README_zh.md` from `articles.yaml`, with a `--check` mode for CI
+
+```python
+if args.check:
+    ok = True
+    for target, generated in ((README_EN, en), (README_ZH, zh)):
+        current = target.read_text(encoding="utf-8") if target.exists() else None
+        if current != generated:
+            ok = False
+            print(f"stale: {target.name} is out of date")
+    return 0 if ok else 1
+```
+
+**Why it matters:** Both language READMEs come from one manifest, so the English and Chinese indexes can't diverge, and `--check` makes CI fail on a stale README rather than letting it drift.
 
 ---
 
