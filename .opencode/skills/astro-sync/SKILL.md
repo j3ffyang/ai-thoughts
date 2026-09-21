@@ -75,8 +75,9 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
    ---
    ```
 
-   `pubDatetime` comes from the source date if present, otherwise now. **Always use a UTC time that has already passed** — the blog's `postFilter` hides posts whose `pubDatetime` is in the future (even by minutes). A future time means the post won't appear on the homepage or in recent posts, though search may still index it.
-   `modDatetime` is optional and only set when updating an existing post.
+   `pubDatetime` comes from the source date if present, otherwise now. **Always use a UTC time that has already passed** — the blog's `postFilter` hides posts whose `pubDatetime` is in the future (even by minutes). A future time means the post won't appear on the homepage or in recent posts, though search may still index it. `modDatetime` is optional and only set when updating an existing post.
+
+   **MUST quote any frontmatter value containing YAML-special characters — especially `: ` (colon + space).** An unquoted `description: Foo: bar` is parsed as a mapping and fails the build at content sync (`bad indentation of a mapping entry` / `mapping values are not allowed in this context`); Cloudflare then keeps the **previous** deployment, so the post never appears and search can't find it. Wrap the whole value in double quotes: `description: "Foo: bar"`. Applies to every field (`title`, `description`, …). This has recurred several times.
 10. **Write the post** to `src/data/blog/<category>/<filename>` with the frontmatter followed by the polished body.
 11. **Report** `postPath` and `imagesCopied` to the user.
 12. **Commit & push (only after approval):** ask the user explicitly whether
@@ -88,11 +89,12 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
 
 - File is in `src/data/blog/<category>/` and named `yymmdd-lowercase-slug.md` (lowercase, hyphens only, 6-digit date prefix).
 - Frontmatter contains at least `author`, `pubDatetime`, `title`, `tags`, `description`; `draft`/`featured` present when applicable.
+- Any frontmatter value containing `: ` (or other YAML-special characters) is double-quoted.
 - Every image reference in the post points to an existing file in `src/assets/images/` (verify with a glob/ls).
 - No `../imgs/` references remain in the post.
 - No hardcoded `/posts/...` links were introduced.
 - If committed: the post and new images are staged together, and `origin/main` is up to date.
-- Optional: run `npx astro check` in the blog repo to confirm no content/config errors. Use `npx` directly — `pnpm` is not installed on this machine and `pnpm run ...` fails with "command not found"; `npx` resolves the local `astro` binary fine.
+- Optional but recommended: run `npx astro build` in the blog repo — it reproduces content-sync/YAML errors (which `astro check` can miss) and confirms the post renders into `dist/`. Use `npx` directly — `pnpm` is not installed on this machine and `pnpm run ...` fails with "command not found"; `npx` resolves the local `astro` binary fine.
 
 ## Error Handling
 
