@@ -245,7 +245,7 @@ if args.check:
 
 ## 🛠️ Tech Stack
 
-**Languages:** Python, JavaScript, TypeScript, Bash
+**Languages:** Python, JavaScript, TypeScript, Bash, YAML
 
 **AI Platforms:** 
 - [OpenCode](https://opencode.ai) — terminal-native AI coding agent; my daily driver
@@ -263,6 +263,7 @@ if args.check:
 
 **Tools:**
 - Git + GitHub
+- GitHub Actions — CI/CD automation (YAML workflows)
 - Node.js + npm
 - Python 3.10+
 - Markdown-first documentation
