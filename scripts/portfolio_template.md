@@ -211,6 +211,15 @@ if args.check:
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q3 2026 (Current)
+- **Sep 21:** Published the `rdr2-playthrough` skill to ClawHub; reworked the portfolio pipeline so each account self-publishes its own README (no cross-account PAT or mirror)
+- **Sep 21:** Expanded the portfolio Code Highlights with automation tooling (`clawhub_publish.py`, `sync_profile.py`, `gen_readmes.py`)
+- **Sep 20:** Published "Extracting PowerPoint to Markdown Without Losing a Byte" (EN + ZH) with infographic and the `pptx-extract` skill
+- **Sep 17:** Added the `normalize-whitespace` and `sync-config-with-sample` skills
+- **Sep 15:** Added an auto-generated ClawHub skills table and switched READMEs to recency ordering
+- **Sep 15:** Published the Chinese translation of the "create SKILL.md, AGENTS.md, and PERSONA.md on the fly" essay
+- **Sep 14:** Published "Create SKILL.md, AGENTS.md, and PERSONA.md on the fly" with hero infographic and Twitter banner; renamed the ClawHub publish skill to `publish-skills`
+- **Sep 14:** Refined the `bold-highlights` skill — sparser bolding, no list bolds
+- **Sep 2:** Reworked the GPD dual-AMD eGPU article with mermaid diagrams, new image assets, and an Arch sign-off
 - **Aug 8:** Added `scripts/unwrap_md.py` — auto-wraps article and skill prose to one-paragraph-per-line, preserving code fences, tables, and list nesting
 - **Aug 8:** Published the AI agent collaboration playbook — what a real multi-repo ClawHub auto-publish project taught about AGENTS.md, SKILL.md, and project boundaries
 - **Aug 7:** Published AMD iGPU + eGPU setup guide for GPD Win4 (bilingual EN/ZH) with verification commands and stable DRM symlinks
