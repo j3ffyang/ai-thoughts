@@ -9,7 +9,6 @@ Template: scripts/portfolio_template.md. PORTFOLIO.md is generated output —
 never edit it by hand. Placeholders filled by this script:
 
     {{ARTICLE_COUNT}}   number of unique published articles (by YYMMDD in articles.yaml)
-    {{LATEST_COMMIT}}   subject + month of the latest commit on HEAD
     {{LATEST_ARTICLES}} top N published articles (title, month, description)
     {{LAST_UPDATED}}    today's date
 """
@@ -18,7 +17,6 @@ from __future__ import annotations
 
 import argparse
 import re
-import subprocess
 import sys
 from datetime import datetime, date
 from pathlib import Path
@@ -49,18 +47,6 @@ def article_count(data: dict) -> int:
             if m:
                 dates.add(m.group(1))
     return len(dates)
-
-
-def latest_commit() -> str:
-    out = subprocess.run(
-        ["git", "log", "-1", "--date=format:%b %Y", "--format=%s|%ad"],
-        cwd=ROOT,
-        capture_output=True,
-        text=True,
-        check=True,
-    ).stdout.strip()
-    subject, _, stamp = out.partition("|")
-    return f"`{subject}` ({stamp})"
 
 
 def doc_title(path: Path, fallback: str) -> str:
@@ -108,7 +94,6 @@ def render(data: dict) -> str:
     out = TEMPLATE.read_text(encoding="utf-8")
     values = {
         "ARTICLE_COUNT": str(article_count(data)),
-        "LATEST_COMMIT": latest_commit(),
         "LATEST_ARTICLES": latest_articles(data),
         "LAST_UPDATED": last_updated(),
     }

@@ -39,9 +39,9 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 ### Writing & Documentation
 
-| Repo | Purpose | Articles | Latest |
-|------|---------|----------|--------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 40 articles | `docs: add Chinese translation and Twitter banner for lossless-pptx-extraction` (Sep 2026) |
+| Repo | Purpose | Articles |
+|------|---------|----------|
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 40 articles |
 
 ### Tools & Extensions
 
@@ -61,7 +61,6 @@ def render(data: dict) -> str:
     out = TEMPLATE.read_text(encoding="utf-8")
     values = {
         "ARTICLE_COUNT": str(article_count()),
-        "LATEST_COMMIT": latest_commit(),
         "LATEST_ARTICLES": latest_articles(data),
         "LAST_UPDATED": last_updated(),
     }
