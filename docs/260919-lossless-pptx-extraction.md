@@ -109,4 +109,8 @@ The honest cost of no remote is backup: with nothing pushed anywhere, an encrypt
 
 `joey` is the first name of a close friend. We ride motorcycles together often — the same two-wheeled thread that runs through this blog — and this project exists because he asked me to take his old decks and do the work properly, with his encouragement along the way. The folder carries his name because the work is his.
 
+![2 bikes](../imgs/260919_20201123_2bikes.jpg)
+
+*2 bikes*
+
 btw, i use arch
