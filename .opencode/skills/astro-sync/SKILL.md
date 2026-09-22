@@ -42,6 +42,7 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
     posts, and `*-chn.md` translations of an already-published post.
   - When the user doesn't specify, ask which it is (per Procedure step 2);
     never auto-pick `true`.
+  - See `astro_journal/AGENTS.md` → "Featured posts" for the full criteria, cap, and rotation rule; never flip `featured` without the user's explicit approval.
 - `tags` — List of lowercase hyphen-separated tags. Optional. Default derived from the article topic.
 
 ## Outputs
