@@ -153,6 +153,18 @@ rows:
   - section: personal
     status: published
     links:
+      - { label: "play-rdr2-with-opencode", path: "docs/260921-play-rdr2-with-opencode.md", lang: en }
+    desc_en: "Playing Red Dead Redemption 2 with an AI agent — documenting a playthrough in OpenCode with a custom skill and an AGENTS.md, on Arch Linux via Steam/Proton"
+    desc_zh: "用 AI 智能体玩《荒野大镖客 2》——在 OpenCode 中用自定义技能与 AGENTS.md 记录一次通关，运行于 Arch Linux + Steam/Proton"
+  - section: personal
+    status: published
+    links:
+      - { label: "rdr2-ch2-playthrough-notes", path: "docs/260921-rdr2-ch2-playthrough.md", lang: en }
+    desc_en: "Working reference: RDR2 Chapter 2 playthrough notes — gold bars, legendary animals, trinkets, robberies, and challenges, maintained with the rdr2-playthrough skill"
+    desc_zh: "工作参考：《荒野大镖客 2》第二章通关笔记——金条、传奇动物、饰品、抢劫与挑战，由 rdr2-playthrough 技能维护"
+  - section: personal
+    status: published
+    links:
       - { label: "immutable-os-strategy", path: "docs/260622-immutable-os.md", lang: en }
     desc_en: "Personal strategy on \"immutable\" OS choices — why a quarter-century Linux power user sticks with native Arch Linux and Debian LTS over Bazzite/Silverblue"
     desc_zh: "\"不可变操作系统\"选型策略——为何一位使用Linux四分之一世纪的老用户坚持原生Arch与Debian LTS，而非Bazzite/Silverblue"
@@ -459,6 +471,12 @@ rows:
       - { label: "ground-truth-and-growth", path: "docs/260825-ground-truth-and-growth-chn.md", lang: zh, label_zh: "真相与成长" }
     desc_en: "Reflections on growing with AI agents — choosing OpenCode, learning the pace of AI collaboration, discovering Git automation, and finding meditative honesty in terminal-based computing"
     desc_zh: "与 AI 智能体共同成长的反思——选择 OpenCode、学习 AI 协作的节奏、发现 Git 自动化，在终端计算中找到冥想般的诚实"
+  - section: drafts
+    status: draft
+    links:
+      - { label: "opencode-openrouter-model-selection", path: "docs/260922-opencode-openrouter-model-selection.md", lang: en }
+    desc_en: "Picking a model and provider for OpenCode via OpenRouter — separating model origin from serving jurisdiction, tiering data-privacy risk, comparing DeepSeek/Qwen/GLM/Kimi/Gemini/OpenAI prices, and reproducing live rates with curl and Python"
+    desc_zh: "通过 OpenRouter 为 OpenCode 选择模型与供应商——区分模型来源与推理服务所在地、数据隐私风险分级、DeepSeek/Qwen/GLM/Kimi/Gemini/OpenAI 价格对比，并附可复现的 curl/Python 取价脚本"
 
   # -------------------------------------------------------------- VII. cross (cont.)
   - section: cross

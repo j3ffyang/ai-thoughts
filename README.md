@@ -16,6 +16,8 @@ Custom OpenCode skills developed here auto-publish to [ClawHub](https://clawhub.
 
 | Article | Description |
 |---|---|
+| [play-rdr2-with-opencode](docs/260921-play-rdr2-with-opencode.md) | Playing Red Dead Redemption 2 with an AI agent — documenting a playthrough in OpenCode with a custom skill and an AGENTS.md, on Arch Linux via Steam/Proton |
+| [rdr2-ch2-playthrough-notes](docs/260921-rdr2-ch2-playthrough.md) | Working reference: RDR2 Chapter 2 playthrough notes — gold bars, legendary animals, trinkets, robberies, and challenges, maintained with the rdr2-playthrough skill |
 | [lossless-pptx-extraction](docs/260919-lossless-pptx-extraction.md) | Engineering deep-dive: extracting PowerPoint decks into full-data Markdown — OOXML shape walking, content vs layout chrome vs unrenderable objects, a 5-point losslessness audit, and why the pipeline stays local instead of running in CI |
 | [happy-birthday-linux](docs/260828-happy-birthday-linux-from-aix-to-arch.md) | A 35-year Linux journey in one personal story — AIX at IBM, getting hacked and the security habit it forged, the distro years ending at Arch, and every machine now Arch Linux; with a visual summary infographic |
 | [arch-hyprland-gpd-win4-egpu](docs/260807-gpd-dual-amd-gpu.md) | Dual AMD GPUs on a handheld — iGPU + eGPU (RX 7600M XT via OCuLink) rendering offload, verification commands, and stable DRM symlinks |
@@ -94,6 +96,7 @@ Developed in this repo and auto-published to [ClawHub](https://clawhub.ai/j3ffya
 
 | Skill | Description |
 |---|---|
+| [rdr2-playthrough](https://clawhub.ai/j3ffyang/skills/rdr2-playthrough) | Use when maintaining RDR2 (Red Dead Redemption 2) playthrough notes — logging an acquisition ("acquired X", "got N gold bars", "finished X"), answering in-game location/crafting questions, or reviewing the notes for duplicate or stale info. Triggers on RDR2, Red Dead Redemption, playthrough, legendary animal, talisman, trinket, valerian root, gold bar, horse, weapon, berry. |
 | [astro-sync](https://clawhub.ai/j3ffyang/skills/astro-sync) | Convert and polish a Markdown article into AstroPaper-compatible post format for the astro_journal blog (everbox.io). Use when the user wants to publish or sync an article (e.g. from ai-thoughts/docs/ or history/docs/) to the Astro blog, convert Markdown to Astro format, add AstroPaper frontmatter, or move images into src/assets/images/. |
 | [pptx-extract](https://clawhub.ai/j3ffyang/skills/pptx-extract) | Extract a PowerPoint deck into full-data, page-delimited Markdown — every text run, table, speaker note, and image — with unextractable data (vector metafiles, charts, OLE embeds) skipped but visibly noted on its slide, then prove losslessness with a 5-point machine audit. Use when the user asks to extract/convert a PPTX to Markdown, add a new deck to an extraction project, or regenerate a stale extraction. Related terms: PPT, PowerPoint, PPTX, slide extraction, 提取. |
 | [normalize-whitespace](https://clawhub.ai/j3ffyang/skills/normalize-whitespace) | Normalize indentation of a large reference text document (e.g. README.md) to a consistent TAB style while keeping content byte-identical. Use when asked to fix inconsistent leading spaces, align command blocks, or clean indentation spread across hundreds of lines in a prose-heavy, single-fence document. Built from the 2026-09 instguid README.md normalization session. |
@@ -116,6 +119,7 @@ Earlier versions of articles are kept alongside their final versions so each pie
 
 | Draft | Notes |
 |---|---|
+| [opencode-openrouter-model-selection](docs/260922-opencode-openrouter-model-selection.md) | Picking a model and provider for OpenCode via OpenRouter — separating model origin from serving jurisdiction, tiering data-privacy risk, comparing DeepSeek/Qwen/GLM/Kimi/Gemini/OpenAI prices, and reproducing live rates with curl and Python |
 | [ground-truth-and-growth](docs/260825-ground-truth-and-growth.md) | Reflections on growing with AI agents — choosing OpenCode, learning the pace of AI collaboration, discovering Git automation, and finding meditative honesty in terminal-based computing |
 | [death-thought-flow](docs/260817-death-thought-flow.md) | Personal thought-flow master for the death-in-Mexico project — seven thinking points, six content sections, verified facts, and cultural guardrails; use with the story-telling skill to generate a narration script or essay |
 | [ai-video-pipeline](docs/260816-ai-video-pipeline.md) | How a 60-second AI video trailer was built from eight photos with five OpenCode skills, an 8-stage thought-flow loop, and two content-policy failures that became codified gates |
