@@ -10,13 +10,14 @@ Platform: GPD Win4 (Arch Linux + Hyprland, via Steam/Proton) — used as a stand
 - [Horse and Equipment](#horse-and-equipment)
 - [Gold Bars](#gold-bars)
   - [Strange Statues Puzzle (3 gold bars)](#strange-statues-puzzle-3-gold-bars)
-  - [Jack Hall Gang Treasure (up to 4 gold bars)](#jack-hall-gang-treasure-up-to-4-gold-bars)
+  - [Jack Hall Gang Treasure (2 gold bars)](#jack-hall-gang-treasure-2-gold-bars)
   - [Poisonous Trail Treasure (4 gold bars)](#poisonous-trail-treasure-4-gold-bars)
 - [Valerian Root (Dead Eye XP)](#valerian-root-dead-eye-xp)
 - [Store Backroom (Illicit) Business Robberies](#store-backroom-illicit-business-robberies)
 - [Legendary Animal Pelts](#legendary-animal-pelts)
 - [Trinket Components](#trinket-components)
-- [Herbal Collection Challenge](#herbal-collection-challenge)
+- [Herbalist Challenge](#herbalist-challenge)
+- [Sharpshooter Challenge (7 Consecutive Headshots)](#sharpshooter-challenge-7-consecutive-headshots)
 - [Serial Killer "American Dreams"](#serial-killer-american-dreams)
 
 ## Progress Strategy
@@ -34,7 +35,7 @@ Platform: GPD Win4 (Arch Linux + Hyprland, via Steam/Proton) — used as a stand
 |--------|--------|--------|
 | Rolling Block Rifle | Hosea | Glitch |
 | Lancaster Repeater | Rhodes gunsmith | Robbery after releasing boy in basement |
-| Bolt Action Rifle | Sheriff Malloy, Valentine | Wait for the public hanging event; Malloy carries it on his shoulder. After the hanging ends, follow him away from the gallows, then murder him and pick up the rifle. ~$20 bounty |
+| Bolt Action Rifle | Sheriff Malloy, Valentine | Wait for the public hanging event; Malloy carries it on his shoulder. After the hanging ends, follow him away from the gallows, then murder him and pick up the rifle. ~\$20 bounty |
 | Schofield Revolver | Valentine Doctor's office backroom | Looted during the backroom robbery — see Store Backroom (Illicit) Business Robberies — acquired |
 | Flaco's Revolver | Flaco Hernandez, Cairn Lake cabin (Grizzlies West) | Duel in "The Noblest of Men, and a Woman" side quest; loot his body after. Rare, cannot be customized. Loot the cabin lockbox under the bed for the Poisonous Trail map 1 (see Gold Bars) — acquired |
 
@@ -64,6 +65,9 @@ Note: you'll need this rifle for a 660 ft long-scope kill
 |-----|-----------------|
 | 1x | Limpany |
 | 2x | Train Wreck, Cotorra Springs |
+| 3x | Strange Statues puzzle — cave east of Donner Falls (see below) |
+| 2x | Jack Hall Gang Treasure — O'Creagh's Run island (see below) |
+| 4x | Poisonous Trail Treasure — Elysian Pool waterfall (see below) |
 
 ### Strange Statues Puzzle (3 gold bars)
 
@@ -77,7 +81,7 @@ Note: you'll need this rifle for a 660 ft long-scope kill
 3. Harpy statue opens → take 3 gold bars
 4. To reset: press rear button on any statue
 
-### Jack Hall Gang Treasure (up to 4 gold bars)
+### Jack Hall Gang Treasure (2 gold bars)
 
 **Start:** Buy map 1 from Maximo near Flatneck Station (\$10), or find/kill him.
 
@@ -97,7 +101,7 @@ Note: you'll need this rifle for a 660 ft long-scope kill
 
 **Map 3 → Elysian Pool waterfall** (Roanoke Ridge): cave behind the falls, navigate the cavern (lantern required, past the abandoned campsite lockbox with a jewel) → **4 gold bars** on the ledge. ($500 each at any fence.)
 
-~~*Acquired — 4 gold bars collected.*~~
+*Acquired — 4 gold bars collected.*
 
 ## Valerian Root (Dead Eye XP)
 
@@ -130,8 +134,8 @@ Tip received: some stores at Strawberry are illicit — check for strange activi
 
 There are 4 backroom businesses (General Store, Gunsmith, Doctor's office). How to rob, same pattern (PC keyboard): confirm the tip, enter the store, aim weapon at the shopkeep (**right mouse button**), the "Rob Back Room" option appears — be close and stay out of sight. **Important: the option only appears AFTER you become "aware" of the illicit business** — peer through the covered rear window and observe the lawman taking a bribe from the back door / knock on the rear security door, or receive a tip from an NPC (e.g. Tilly at camp) / freed prisoner.
 
-- ~~**Rhodes Gunsmith**~~ - Lancaster Repeater in a weapon case opposite the bottom of the stairs. See Weapon Strategy
-- ~~**Strawberry General Store**~~ - flip on ("you can now rob the side business") by peering through the basement window beneath the walkway; ~\$50 cash + supplies in the basement. No Wanted level if you don't draw attention — the shopkeep can't report it (his business is illegal). Don't loot the store shelves on the way out while someone's watching
+- ~~**Rhodes Gunsmith**~~ - Lancaster Repeater in a weapon case opposite the bottom of the stairs. See Weapon Strategy (acquired)
+- ~~**Strawberry General Store**~~ - flip on ("you can now rob the side business") by peering through the basement window beneath the walkway; ~\$50 cash + supplies in the basement. No Wanted level if you don't draw attention — the shopkeep can't report it (his business is illegal). Don't loot the store shelves on the way out while someone's watching (acquired)
 - **Valentine Doctor's office** - Schofield Revolver + cash + locked safe. Always draws the law (Sheriff's office next door): rob the register, have him open the back, Dead Eye the O'Driscolls inside, grab the Schofield + cash, then run. Lowest bounty ~$5.
 - **Saint Denis Gunsmith** - high-stakes secret in the garden behind the shop
 
@@ -144,7 +148,7 @@ All legendary animal locations & info: https://www.shacknews.com/article/108175/
 | White Bison | Lake Isabella, west shore, Grizzlies West (Ambarino) | Hat (\$45), Coat (\$29) - Ghost Bison Set |
 | Coyote | West end of Dewberry Creek, NW of Rhodes, Scarlett Meadows | The Huntsman set (Coyote + Pronghorn pelts). Fang → Coyote Fang Trinket at a fence (+10% Dead Eye XP) |
 | Buck | Black Bone Forest, western foot of Mt. Shan, NW of Strawberry (Big Valley, West Elizabeth); north of Owanjila Dam, south of the "B" in BIG VALLEY. First clue NW of map icon, near "Black" in Black Bone Forest | Pelt → Trophy Buck set at trapper (Vest, Legendary Buck & Fox, Range Gloves). Antler → Buck Antler Trinket at fence (higher-quality skinning = perfect pelt boost) |
-| Boar | NW section of Bluewater Marsh, northern edge of Bayou Nwa, Lemoyne (north of Lagras; ~halfway between Saint Denis and Van Horn) | Pelt → The Dreamcatcher set at trapper (with Beaver + Tatanka Bison pelts; also Legendary Boar & Bison Fowlers boots). Tusk → Boar Tusk Talisman at fence (horse health & stamina core drain -10%, needs Cobalt Petrified Wood + Gold Earring) — shot |
+| Boar | NW section of Bluewater Marsh, northern edge of Bayou Nwa, Lemoyne (north of Lagras; ~halfway between Saint Denis and Van Horn) | Pelt → The Dreamcatcher set at trapper (with Beaver + Tatanka Bison pelts; also Legendary Boar & Bison Fowlers boots). Tusk → Boar Tusk Talisman (see Trinket Components) — shot |
 | Fox | Mattock Pond, just north of Rhodes, Scarlett Meadows, Lemoyne | Pelt → Legendary Fox Moccasins (\$40, + Perfect Elk Pelt) and Legendary Buck & Fox Range Gloves (\$28, Trophy Buck set). Claw → Fox Claw Trinket at fence (\$23.50: +5 sec Eagle Eye) — shot |
 
 ## Trinket Components
@@ -152,9 +156,9 @@ All legendary animal locations & info: https://www.shacknews.com/article/108175/
 | Item | Location |
 |------|----------|
 | Abalone Shell Fragment | Boarded-up house just north of the main street in Rhodes; small room on the south side, on the workbench on the far side. One of a kind. Used for Bison Horn Talisman (with Legendary Bison Horn + Silver Earring at a fence; -10% stamina core drain) — acquired |
-| Boar Tusk Talisman recipe | Legendary Boar Tusk (shot) + Cobalt Petrified Wood (pending — NW of Lake Isabella, chest on wagon under rock overhang) + Gold Earring → $31 at fence. Effect: horse health & stamina core drain -10% |
+| Boar Tusk Talisman recipe | Legendary Boar Tusk (shot) + Cobalt Petrified Wood (pending — NW of Lake Isabella, chest on wagon under rock overhang) + Gold Earring → \$31 at fence. Effect: horse health & stamina core drain -10% |
 
-## Herbal Collection Challenge
+## Herbalist Challenge
 
 **Herbalist 2: Pick and Eat 4 Species of Berry** (reward: $5, Health EXP)
 
@@ -178,6 +182,15 @@ Must pick and eat one of each of the 4 berry species. The only 4 in the game.
 
 Quick plan: Raspberry (~Heartlands/Scarlett) → Blackberry (Big Valley) → Evergreen Huckleberry (Kamassa River / Bayou Nwa) → Wintergreen (Cumberland Forest) — each is a different direction from camp, so one berry per trip unless you route them.
 
+## Sharpshooter Challenge (7 Consecutive Headshots)
+
+Sharpshooter 7 — get 7 headshots in a row (reward: Sharpshooter Off-Hand Holster). The hardest challenge so far: the counter resets to 0 on any non-headshot kill.
+
+- **O'Driscoll camp, Six Point Cabin (Cumberland Forest, NE of Valentine)** — raided 4 times; killed/lassoed at least 7 and dragged them a short distance. Too time-consuming, never completed.
+- **Train robbery** — 4 times. Buy a ticket to Riggs Station, wear a mask, carry a repeater + pistol with enough ammo, and kill all the lawmen (they keep coming even with the train stopped on the high bridge). Succeeded once — 7 consecutive headshots on the passengers — but the white Arabian jumped off the high bridge and died. Couldn't live without my white Arabian horse, so I had to restart — losing the achievement. Never got another chance; progress always read 0.
+- **Alligators (peaceful route)** — alligator headshots count too. Lagras and north of Saint Denis: killed 5, could not find a 6th. Then the pond in Bayou Nwa (north of Saint Denis / west of Lagras): found 6+ alligators and headshot them, then killed a boar eating a dead alligator.
+- **Completed.** Would not want to play this one again — 5 in a row would be plenty and far less punishing.
+
 ## Serial Killer "American Dreams"
 
 Stranger quest — find 3 murder scenes, each has a severed head holding a **map piece**. The map pieces reveal the killer's location; capture him alive and deliver to the **sheriff in Valentine**.
@@ -187,5 +200,3 @@ Stranger quest — find 3 murder scenes, each has a severed head holding a **map
 - **Big Valley, south of Wallace Station** — follow Little Creek River west from the Dakota River; body on a larger rock, head with the map on a smaller rock nearby
 
 Reward: when Lowry attacks Sheriff Malloy in the Valentine cell, kill him with Dead Eye to save Malloy → $20 + honor (varies slightly with honor). Don't kill him in the cabin fight — mission fails.
-
-btw, i use arch
