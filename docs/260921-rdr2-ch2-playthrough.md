@@ -12,6 +12,7 @@ Platform: GPD Win4 (Arch Linux + Hyprland, via Steam/Proton) — used as a stand
   - [Strange Statues Puzzle (3 gold bars)](#strange-statues-puzzle-3-gold-bars)
   - [Jack Hall Gang Treasure (2 gold bars)](#jack-hall-gang-treasure-2-gold-bars)
   - [Poisonous Trail Treasure (4 gold bars)](#poisonous-trail-treasure-4-gold-bars)
+  - [High Stakes Treasure (3 gold bars)](#high-stakes-treasure-3-gold-bars)
 - [Valerian Root (Dead Eye XP)](#valerian-root-dead-eye-xp)
 - [Store Backroom (Illicit) Business Robberies](#store-backroom-illicit-business-robberies)
 - [Legendary Animal Pelts](#legendary-animal-pelts)
@@ -68,6 +69,7 @@ Note: you'll need this rifle for a 660 ft long-scope kill
 | 3x | Strange Statues puzzle — cave east of Donner Falls (see below) |
 | 2x | Jack Hall Gang Treasure — O'Creagh's Run island (see below) |
 | 4x | Poisonous Trail Treasure — Elysian Pool waterfall (see below) |
+| 3x | High Stakes Treasure — cave near Fort Wallace (see below) |
 
 ### Strange Statues Puzzle (3 gold bars)
 
@@ -102,6 +104,16 @@ Note: you'll need this rifle for a 660 ft long-scope kill
 **Map 3 → Elysian Pool waterfall** (Roanoke Ridge): cave behind the falls, navigate the cavern (lantern required, past the abandoned campsite lockbox with a jewel) → **4 gold bars** on the ledge. ($500 each at any fence.)
 
 *Acquired — 4 gold bars collected.*
+
+### High Stakes Treasure (3 gold bars)
+
+**Map 1** — random-encounter treasure hunter, Heartlands (after "All That Glitters") — acquired
+
+**Map 2** — Cumberland Falls (east of Wallace Station): behind the waterfall — acquired
+
+**Map 3** — Barrow Lagoon (frozen lake, Ambarino): hole in the log to the NE islet — acquired
+
+**Treasure** — Fort Wallace: east path, down the cliffs, cave under the hanging rock → **3 gold bars** — pending
 
 ## Valerian Root (Dead Eye XP)
 
