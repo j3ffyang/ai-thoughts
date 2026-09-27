@@ -35,8 +35,8 @@ Translate one article from `ai-thoughts/docs/` into Simplified Chinese and write
 5. **Translate the body** into Simplified Chinese:
    - Keep the title as an H1 with the key term followed by a Chinese
      translation (match the style of existing `-chn.md` pairs).
-   - Right after the H1, add the source link line:
-     `**原文：** [<source-filename>](<source-filename>)`
+   - Right after the H1, add the source link line, using the **absolute GitHub URL** (the `j3ffyang` repo), not a relative link:
+     `**原文：** [<source-filename>](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/<source-filename>)`
    - Translate the running text, headings, and bullets faithfully and
      naturally. Do not add, remove, or reorder content.
    - Write Simplified Chinese by default; Traditional Chinese only when the
@@ -75,7 +75,7 @@ The verbatim exceptions from Procedure step 6 still apply: code, commands, produ
 ## Verification
 
 - Output is at `docs/<exact-source-filename>-chn.md`; the prefix and slug match the source filename exactly (only the `.md` → `-chn.md` suffix changed).
-- The source link line `**原文：** [<source>](<source>)` is present right after the H1.
+- The source link line is present right after the H1 and uses the **absolute GitHub URL**: `**原文：** [<source-filename>](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/<source-filename>)`.
 - Every `../imgs/<file>` reference in the output matches one in the source (verify with a glob/ls against `ai-thoughts/imgs/`).
 - Code blocks, inline code, commands, and specific terms (e.g. Hermes Agent, OpenCode) are preserved verbatim.
 - The bilingual-gloss style is applied: technical terms and headings carry English glosses, table cells are glossed on first appearance, and unfamiliar concepts get a plain-language explanation at first use.
