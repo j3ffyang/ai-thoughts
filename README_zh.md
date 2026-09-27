@@ -139,7 +139,7 @@
 
 | 草稿 | 说明 |
 |---|---|
-| [opencode-openrouter-model-selection](docs/260927-opencode-openrouter-model-selection.md) · [通过 OpenRouter 为 OpenCode 选择模型](docs/260927-opencode-openrouter-model-selection-chn.md) | 通过 OpenRouter 为 OpenCode 选择模型与供应商——区分模型来源与推理服务所在地、数据隐私风险分级、DeepSeek/Qwen/GLM/Kimi/Gemini/OpenAI 价格对比，并附可复现的 curl/Python 取价脚本 |
+| [opencode-openrouter-model-selection](docs/260927-opencode-openrouter-model-selection.md) | 通过 OpenRouter 为 OpenCode 选择模型与供应商——区分模型来源与推理服务所在地、数据隐私风险分级、DeepSeek/Qwen/GLM/Kimi/Gemini/OpenAI 价格对比，并附可复现的 curl/Python 取价脚本 |
 | [ground-truth-and-growth](docs/260825-ground-truth-and-growth.md) · [真相与成长](docs/260825-ground-truth-and-growth-chn.md) | 与 AI 智能体共同成长的反思——选择 OpenCode、学习 AI 协作的节奏、发现 Git 自动化，在终端计算中找到冥想般的诚实 |
 | [death-thought-flow](docs/260817-death-thought-flow.md) | Personal thought-flow master for the death-in-Mexico project — seven thinking points, six content sections, verified facts, and cultural guardrails; use with the story-telling skill to generate a narration script or essay |
 | [ai-video-pipeline](docs/260816-ai-video-pipeline.md) | How a 60-second AI video trailer was built from eight photos with five OpenCode skills, an 8-stage thought-flow loop, and two content-policy failures that became codified gates |

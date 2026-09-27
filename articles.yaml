@@ -476,7 +476,7 @@ rows:
   - section: drafts
     status: draft
     links:
-      - { label: "opencode-openrouter-model-selection", path: "docs/260922-opencode-openrouter-model-selection.md", lang: en }
+      - { label: "opencode-openrouter-model-selection", path: "docs/260927-opencode-openrouter-model-selection.md", lang: en }
     desc_en: "Picking a model and provider for OpenCode via OpenRouter — separating model origin from serving jurisdiction, tiering data-privacy risk, comparing DeepSeek/Qwen/GLM/Kimi/Gemini/OpenAI prices, and reproducing live rates with curl and Python"
     desc_zh: "通过 OpenRouter 为 OpenCode 选择模型与供应商——区分模型来源与推理服务所在地、数据隐私风险分级、DeepSeek/Qwen/GLM/Kimi/Gemini/OpenAI 价格对比，并附可复现的 curl/Python 取价脚本"
 
