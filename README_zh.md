@@ -16,6 +16,7 @@
 
 | 文章 | 简介 |
 |---|---|
+| [brisova-malware-analysis](docs/260929-brisova-malware-analysis.md) | Anatomy of a malicious GitHub repo invite: an obfuscated Tailwind/PostCSS plugin that runs npm install sql.js socket.io-client form-data axios at build time and loads a C2/credential-stealer toolset — static and sandboxed dynamic analysis, a zero-trust handling strategy, and full IoCs |
 | [play-rdr2-with-opencode](docs/260921-play-rdr2-with-opencode.md) · [用 AI 智能体玩《荒野大镖客 2》](docs/260921-play-rdr2-with-opencode-chn.md) | 用 AI 智能体玩《荒野大镖客 2》——在 OpenCode 中用自定义技能与 AGENTS.md 记录一次通关，运行于 Arch Linux + Steam/Proton |
 | [rdr2-ch2-playthrough-notes](docs/260921-rdr2-ch2-playthrough.md) · [《荒野大镖客 2》第二章通关笔记](docs/260921-rdr2-ch2-playthrough-chn.md) | 工作参考：《荒野大镖客 2》第二章通关笔记——金条、传奇动物、饰品、抢劫与挑战，由 rdr2-playthrough 技能维护 |
 | [lossless-pptx-extraction](docs/260919-lossless-pptx-extraction.md) · [无损提取 PPTX](docs/260919-lossless-pptx-extraction-chn.md) | 工程深潜：把 PowerPoint 演示文稿完整提取为 Markdown——OOXML 形状遍历、内容与版式装饰及不可渲染对象的区分、五点无损审计，以及为何这条流水线选择本地运行而非 CI |
@@ -30,6 +31,7 @@
 
 | 文章 | 简介 |
 |---|---|
+| [what-to-know-work-with-ai](docs/260922-what-to-know-work-with-ai.md) · [与 AI 智能体高效协作，你应该懂些什么？](docs/260922-what-to-know-work-with-ai-chn.md) | 与 AI 智能体高效协作真正需要知道什么——把期望说清是用户的责任；有用的技能（Markdown、技能、Python、YAML/GitHub Actions、Git、Linux、AGENTS.md/SKILL.md）；以及为何“补丁摞补丁”的智能体代码会变得无法维护 |
 | [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly.md) · [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly-chn.md) | 随手创建 SKILL.md、AGENTS.md 和 PERSONA.md，而不是去淘别人的技能——三个自定义层次、日复一日使用得来的真实好处，以及作为日常智能体的 OpenCode |
 | [agents-md-not-a-persona](docs/260821-agents-md-not-a-persona.md) · [AGENTS.md 不是人格设定](docs/260821-agents-md-not-a-persona-chn.md) | AGENTS.md 不是人格设定——它是一部用伤疤写成的宪章：每条规则追溯到真实事故（自克隆仓库、撒谎的文档、提示洪水），不绑定特定工具的通用法则 |
 | [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) · [zhihu-skill-opencode_chn](docs/260815-zhihu-config-in-opencode-chn.md) | 在 OpenCode 中安装 zhihu 技能与官方 zhihu-cli 的全程记录——包括无头环境下密钥链不可用时通过 ZHIHU_ACCESS_SECRET 完成认证的路径 |
@@ -116,6 +118,7 @@
 
 | 技能 | 简介 |
 |---|---|
+| [untrusted-code-safety](https://clawhub.ai/j3ffyang/skills/untrusted-code-safety) | Zero-trust procedure for reviewing or running code from an unknown source. Use when reviewing, vetting, cloning, installing, or running code from an untrusted source (repo invites, packages, scripts, executable config files), when asked whether code is safe or hazardous, when executed code may read secrets/files or reach the network, and when the user says "raise hands", "stop and alert", or "sandbox it". Also trigger on suspicion of malicious, harmful, deceptive, cheating, or stealing behavior. |
 | [translate-to-chn](https://clawhub.ai/j3ffyang/skills/translate-to-chn) | Translate a specific article from ai-thoughts/docs/ into Simplified Chinese, writing the output to an exactly-same-filename "-chn.md" file. Use when the user names a specific article and asks to translate it (e.g. "translate 260803-ollama-to-llamacpp", "翻译 xxx", "make a -chn.md version"). Never runs automatically; only acts on an explicitly chosen article. |
 | [custom-infographic](https://clawhub.ai/j3ffyang/skills/custom-infographic) | Generate a professional infographic from an article, document, URL, or topic, using the baoyu layout x style system (21 layouts x 21 styles). Original author 宝玉 (JimLiu); ported & customized by j3ffyang. Use when the user asks to create an infographic, 信息图, visual summary, 可视化, or a high-density information image, or wants an article turned into a visual poster. |
 | [astro-sync](https://clawhub.ai/j3ffyang/skills/astro-sync) | Convert and polish a Markdown article into AstroPaper-compatible post format for the astro_journal blog (everbox.io). Use when the user wants to publish or sync an article (e.g. from ai-thoughts/docs/ or history/docs/) to the Astro blog, convert Markdown to Astro format, add AstroPaper frontmatter, or move images into src/assets/images/. |

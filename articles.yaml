@@ -399,6 +399,13 @@ rows:
   - section: cross
     status: published
     links:
+      - { label: "what-to-know-work-with-ai", path: "docs/260922-what-to-know-work-with-ai.md", lang: en }
+      - { label: "what-to-know-work-with-ai", path: "docs/260922-what-to-know-work-with-ai-chn.md", lang: zh, label_zh: "与 AI 智能体高效协作，你应该懂些什么？" }
+    desc_en: "What you actually need to know to work well with an AI agent — clear description is the user's job, the skills that help (Markdown, skills, Python, YAML/GitHub Actions, Git, Linux, AGENTS.md/SKILL.md), and why patch-on-patch agent code becomes unmaintainable"
+    desc_zh: "与 AI 智能体高效协作真正需要知道什么——把期望说清是用户的责任；有用的技能（Markdown、技能、Python、YAML/GitHub Actions、Git、Linux、AGENTS.md/SKILL.md）；以及为何“补丁摞补丁”的智能体代码会变得无法维护"
+  - section: cross
+    status: published
+    links:
       - { label: "opencode-git-underrated", path: "docs/260809-opencode-git-underrated.md", lang: en }
     desc_en: "How a 15-year git user produced more automation in two days with OpenCode than in most of those years — the 9-step thought-flow loop, division of labor, and the compounding architecture"
     desc_zh: "一位用了十五年 git 的用户，如何在两天内用 OpenCode 产出比过去多数年份更多的自动化——9 步思维流循环、分工与复利架构"

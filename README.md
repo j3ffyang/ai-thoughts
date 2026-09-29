@@ -16,6 +16,7 @@ Custom OpenCode skills developed here auto-publish to [ClawHub](https://clawhub.
 
 | Article | Description |
 |---|---|
+| [brisova-malware-analysis](docs/260929-brisova-malware-analysis.md) | Anatomy of a malicious GitHub repo invite: an obfuscated Tailwind/PostCSS plugin that runs npm install sql.js socket.io-client form-data axios at build time and loads a C2/credential-stealer toolset — static and sandboxed dynamic analysis, a zero-trust handling strategy, and full IoCs |
 | [play-rdr2-with-opencode](docs/260921-play-rdr2-with-opencode.md) | Playing Red Dead Redemption 2 with an AI agent — documenting a playthrough in OpenCode with a custom skill and an AGENTS.md, on Arch Linux via Steam/Proton |
 | [rdr2-ch2-playthrough-notes](docs/260921-rdr2-ch2-playthrough.md) | Working reference: RDR2 Chapter 2 playthrough notes — gold bars, legendary animals, trinkets, robberies, and challenges, maintained with the rdr2-playthrough skill |
 | [lossless-pptx-extraction](docs/260919-lossless-pptx-extraction.md) | Engineering deep-dive: extracting PowerPoint decks into full-data Markdown — OOXML shape walking, content vs layout chrome vs unrenderable objects, a 5-point losslessness audit, and why the pipeline stays local instead of running in CI |
@@ -29,6 +30,7 @@ Custom OpenCode skills developed here auto-publish to [ClawHub](https://clawhub.
 
 | Article | Description |
 |---|---|
+| [what-to-know-work-with-ai](docs/260922-what-to-know-work-with-ai.md) | What you actually need to know to work well with an AI agent — clear description is the user's job, the skills that help (Markdown, skills, Python, YAML/GitHub Actions, Git, Linux, AGENTS.md/SKILL.md), and why patch-on-patch agent code becomes unmaintainable |
 | [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly.md) | Create SKILL.md, AGENTS.md, and PERSONA.md on the fly instead of hunting others' skills — three levels of customization, real benefits from daily use, and OpenCode as the daily agent |
 | [agents-md-not-a-persona](docs/260821-agents-md-not-a-persona.md) | AGENTS.md is not a persona but a constitution written in scars — every rule traced to a real incident (a self-cloned repo, lying docs, a prompt flood), agent-agnostic lessons for any AI coding agent |
 | [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) | Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable |
@@ -96,6 +98,7 @@ Developed in this repo and auto-published to [ClawHub](https://clawhub.ai/j3ffya
 
 | Skill | Description |
 |---|---|
+| [untrusted-code-safety](https://clawhub.ai/j3ffyang/skills/untrusted-code-safety) | Zero-trust procedure for reviewing or running code from an unknown source. Use when reviewing, vetting, cloning, installing, or running code from an untrusted source (repo invites, packages, scripts, executable config files), when asked whether code is safe or hazardous, when executed code may read secrets/files or reach the network, and when the user says "raise hands", "stop and alert", or "sandbox it". Also trigger on suspicion of malicious, harmful, deceptive, cheating, or stealing behavior. |
 | [translate-to-chn](https://clawhub.ai/j3ffyang/skills/translate-to-chn) | Translate a specific article from ai-thoughts/docs/ into Simplified Chinese, writing the output to an exactly-same-filename "-chn.md" file. Use when the user names a specific article and asks to translate it (e.g. "translate 260803-ollama-to-llamacpp", "翻译 xxx", "make a -chn.md version"). Never runs automatically; only acts on an explicitly chosen article. |
 | [custom-infographic](https://clawhub.ai/j3ffyang/skills/custom-infographic) | Generate a professional infographic from an article, document, URL, or topic, using the baoyu layout x style system (21 layouts x 21 styles). Original author 宝玉 (JimLiu); ported & customized by j3ffyang. Use when the user asks to create an infographic, 信息图, visual summary, 可视化, or a high-density information image, or wants an article turned into a visual poster. |
 | [astro-sync](https://clawhub.ai/j3ffyang/skills/astro-sync) | Convert and polish a Markdown article into AstroPaper-compatible post format for the astro_journal blog (everbox.io). Use when the user wants to publish or sync an article (e.g. from ai-thoughts/docs/ or history/docs/) to the Astro blog, convert Markdown to Astro format, add AstroPaper frontmatter, or move images into src/assets/images/. |
