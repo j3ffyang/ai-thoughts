@@ -10,11 +10,20 @@ The universal working rules (approval before changes, commit only when asked, ho
 
 - **Rollback defaults.** Git-tracked files → `git restore` / `git revert`; generated output (`README.md`, `README_zh.md`, `PORTFOLIO.md`) → regenerate from its source of truth (`articles.yaml` / the portfolio template).
 
+## Host safety (whole machine, not just this repo)
+
+Do not damage the machine to satisfy a tool.
+
+- **Never `sudo` a package install.** No `sudo npm`, `sudo npm install -g`, `sudo pip`, `sudo gem`, or similar. A stray `sudo` leaves root-owned files behind and can lock the desktop login (this happened once: a `sudo npm` install took Arch's login down). Install user-level instead — `nvm`, `~/.local`, `--prefix`, `pipx`.
+- **Never blanket-`chown`/`chmod` to "fix" a permission error.** Do not run `chown -R` / `chmod -R` over system paths or a home tree. If ownership is already broken, repair it precisely: find the owning package with `pacman -Qo <path>` (or the distro equivalent), then `chown` only the affected files back to `$USER`.
+- **A permission error is a clue, not a licence to escalate.** When unsure, stop and ask.
+
 ## Writing conventions
 
 - **No hard-wrap.** Avoid hard-wrap at all, including `docs/`, `.opencode/skills/`, and agents — prose is one paragraph per line. Verify with `python scripts/unwrap_md.py --check`, or run `python scripts/unwrap_md.py` to unwrap.
 - **Chinese files are translations of the English original.** Every Chinese markdown file is translated from, and identical in content to, its English counterpart — only the language differs. Don't search the Chinese file as a reference, unless otherwise specified.
 - **Arch sign-off.** Every article in `docs/` ends with the line `btw, i use arch` as its final paragraph, unless the user explicitly says otherwise. It stays verbatim English in both EN and ZH versions; don't duplicate it if already present, and never add it to READMEs or `articles.yaml`. See the `arch-sign-off` skill for the exact command.
+- **Box diagrams.** A fenced code block that draws a box (`┌ ┐ └ ┘ │ ─`) must be square: every content row's walls line up with the corners, and arrow connectors line up with the `┬` marks. Never hand-count a box — generate it programmatically, then verify with `python scripts/verify_md_boxes.py <file>` (add `--check` for CI). Blocks with genuinely nested / mixed-width boxes are out of scope for the check.
 
 ## Filename conventions
 

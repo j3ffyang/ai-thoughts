@@ -206,7 +206,9 @@ rows:
     status: published
     links:
       - { label: "brisova-malware-analysis", path: "docs/260929-brisova-malware-analysis.md", lang: en }
-    desc_en: "Anatomy of a malicious GitHub repo invite: an obfuscated Tailwind/PostCSS plugin that runs npm install sql.js socket.io-client form-data axios at build time and loads a C2/credential-stealer toolset — static and sandboxed dynamic analysis, a zero-trust handling strategy, and full IoCs"
+      - { label: "brisova-malware-analysis", path: "docs/260929-brisova-malware-analysis-chn.md", lang: zh, label_zh: "Brisova 恶意构建期载荷剖析" }
+    desc_en: "Anatomy of a malicious GitHub repo invite: an obfuscated Tailwind/PostCSS plugin that runs npm install sql.js socket.io-client form-data axios at build time and loads a C2/credential-stealer toolset — static and sandboxed dynamic analysis, a zero-trust handling strategy, and full IoCs; with a visual summary infographic"
+    desc_zh: "剖析一次恶意 GitHub 仓库邀请：一个混淆的 Tailwind/PostCSS 插件在构建期执行 npm install sql.js socket.io-client form-data axios，并加载 C2/凭据窃取工具集——含静态分析与沙箱动态分析、零信任处置策略及完整 IoC；附视觉总结信息图"
 
   # ------------------------------------------------------------ V. openclaw
   - section: openclaw
