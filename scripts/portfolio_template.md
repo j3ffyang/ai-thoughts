@@ -211,6 +211,9 @@ if args.check:
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q3 2026 (Current)
+- **Sep 30:** Added the `security-writeup-bad-effects` skill, a `verify_md_boxes.py` box-diagram verifier, and a global AGENTS.md "Host safety" rule; cross-posted the Brisova malware analysis to Medium and X (5:2 banner, plus a platform-filter-safe rewrite of one exploit-describing line)
+- **Sep 29:** Published "Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload" (EN + ZH) with infographic; added the `untrusted-code-safety` skill and its global AGENTS.md "Untrusted code safety" contract
+- **Sep 27:** Published "Choosing a Model for OpenCode via OpenRouter" with infographic and Twitter banner
 - **Sep 21:** Published the `rdr2-playthrough` skill to ClawHub; reworked the portfolio pipeline so each account self-publishes its own README (no cross-account PAT or mirror)
 - **Sep 21:** Expanded the portfolio Code Highlights with automation tooling (`clawhub_publish.py`, `sync_profile.py`, `gen_readmes.py`)
 - **Sep 20:** Published "Extracting PowerPoint to Markdown Without Losing a Byte" (EN + ZH) with infographic and the `pptx-extract` skill
