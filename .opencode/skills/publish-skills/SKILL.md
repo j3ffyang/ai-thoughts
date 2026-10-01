@@ -23,6 +23,7 @@ Skills come from three repos under the `negtivSpace` superproject. Each repo has
 ## Single-source rule — read before anything else
 
 - **Only the `j3ffyang/*` copies of these repos publish.** The `negtivspace/*` copies keep the same workflow file (mirrors stay in sync) but are a no-op: every job is guarded with `github.repository_owner == 'j3ffyang'`.
+- **Every skill update ships.** Whenever a `SKILL.md` is created or changed in any `negtivSpace` repo, commit it and push to **both** remotes (`j3ffyang` + `negtivspace`) in the same change — an unpushed skill is an unpublished one. The `j3ffyang` push runs `clawhub-skill-sync.yml`; afterwards, verify the new version is live via the skills API (`latestVersion`). Don't leave a skill edit uncommitted or only on one remote.
 - Both copies are pushed on every change, so both repos run the workflow on push. Without the owner guard they would both publish to the *same* ClawHub account and race, producing `Version X already exists` collisions.
 - Never create or run a manual publish path that could double-publish to ClawHub. If a skill edit is needed, edit it in the working repo, push to both remotes, and let the workflow publish once.
 - `clawhub_token` (the `j3ffyang` ClawHub token) is set as a repo secret in all six repo copies; only the `j3ffyang` ones ever use it.
