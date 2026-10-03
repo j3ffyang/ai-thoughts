@@ -206,8 +206,14 @@ Combine:
 2. Style definition from `references/styles/<style>.md`
 3. Base template from `references/base-prompt.md`
 4. Structured content from Step 2
-5. All text in confirmed language
-6. **Text accuracy block**: After assembling all content, add a "CRITICAL: Text Accuracy" section at the top of the prompt. List every exact text string that must appear in the image, spell out known pitfalls, and instruct the model to favor fewer labels over garbled text. For CJK (Chinese/Japanese/Korean) content the block must ALSO (a) name every rare or look-alike character explicitly with its forbidden substitutes (e.g. 菂 not 药、蔷 not 蓄、茄 not 茹、蕊 not 芯), and (b) state that every string and every card/element appears **exactly once** — no duplicated text, names, or imagery. This block is mandatory — skip it and the image will garble text.
+5. **One text-accuracy block — the only place strings are enumerated.** Every renderable string goes in the `CRITICAL: Text Accuracy` block near the top of the prompt, and **nowhere else**. The rules that make duplication impossible:
+   - Wrap every renderable string in backticks. Write every meta-reference to a string (a constraint sentence, a "spell X exactly" note, a per-cell imagery hint) as **plain text without backticks** — so backticked spans are exactly the renderable set and nothing more.
+   - Do **not** append a second label dump at the end of the prompt. The base template deliberately has no `Text labels:` tail; do not reintroduce one.
+   - Do **not** repeat cell headings in the layout/style guidance or in the per-cell imagery notes — refer to cells by position instead.
+   - Prose must carry *meaning*, not restate labels: if a sentence would contain an exact label string, rephrase it.
+   - State that each string appears **exactly once**, and that no word outside the block may be rendered as text.
+   - For CJK (Chinese/Japanese/Korean) content the block must ALSO (a) name every rare or look-alike character explicitly with its forbidden substitutes (e.g. 菂 not 药、蔷 not 蓄、茄 not 茹、蕊 not 芯), and (b) state that every string and every card/element appears **exactly once**.
+   - Never tell the model to "drop the least important label" without naming the protected lists — it will drop a required chip (this happened: `Markdown` vanished from a stack cell). Protect list cells explicitly instead.
 
 **Aspect ratio resolution** for `{{ASPECT_RATIO}}`:
 - Named presets → ratio string: landscape→`16:9`, portrait→`9:16`, square→`1:1`
@@ -216,6 +222,15 @@ Combine:
 Save the assembled prompt to `prompts/infographic.md` using `write`.
 
 ### Step 6: Generate Image
+
+**Pre-flight — no-duplicate gate (hard stop).** Before generating, run the checker on the assembled prompt:
+
+```bash
+python .opencode/skills/custom-infographic/scripts/check_prompt_text.py \
+  infographic/{topic-slug}/prompts/infographic.md
+```
+
+It fails (exit 1) when any backticked string appears more than once, when a second label enumeration is present, or — with `--strings <file>` — when an expected string is missing. **Do not generate on failure; fix the prompt and re-run the check.** Strings enumerated twice in the prompt are the leading cause of duplicated text in the image.
 
 Run the bundled generator with the prompt from Step 5, writing the final image directly to `imgs/` with the repo-convention filename:
 
@@ -244,6 +259,8 @@ Report: topic, layout, style, aspect, language, output path (`imgs/<YYMMDD>-<slu
 - `references/layouts/<layout>.md` — 21 layout definitions
 - `references/styles/<style>.md` — 21 style definitions
 - `references/workflow-example.md` — Example workflow when image generation is unavailable
+- `scripts/generate_image.py` — OpenRouter image generator (Step 6)
+- `scripts/check_prompt_text.py` — Pre-flight no-duplicate gate; fail the run instead of rendering a duplicate (Step 6)
 
 ## Pitfalls
 
@@ -255,7 +272,7 @@ Report: topic, layout, style, aspect, language, output path (`imgs/<YYMMDD>-<slu
 6. **API availability** — generation fails without `OPENROUTER_API_KEY` or when the model cannot output images. Verify the key is set before starting; if generation is impossible, deliver the prompt-only outputs (`analysis.md`, `structured-content.md`, `prompts/infographic.md`) and tell the user.
 7. **Text accuracy in image generation** — AI image models frequently garble, misspell, or double text. Every prompt MUST include an explicit "CRITICAL: Text Accuracy" block that (a) lists every exact text string the image must render, (b) spells out common pitfalls to avoid (doubled words, garbled section titles, similar-looking words), and (c) instructs the model to prioritize text accuracy over visual density — shrink the number of labels rather than shrinking font size or misspelling words. After generation, verify all text with a vision model (e.g. `opencode run` with `--model openrouter/z-ai/glm-4.6v --file`) against the expected text list before delivering to the user.
 8. **Chinese/CJK glyphs must be verified strictly, glyph by glyph** — treat CJK rendering as a hard gate, not a nice-to-have. After generation, compare every rendered glyph against the expected text list, character by character, using a vision model or by reading the image directly. Watch especially for: rare characters replaced by a common look-alike (菂→药、蔷→蓄、茄→茹), Simplified/Traditional swaps, dropped or doubled characters, and wrong-but-plausible variants. If any glyph is not exactly correct, the image is NOT deliverable as-is — stop and **discuss with the user**, offering: (a) accept the substitution only if it is a documented, acceptable variant, (b) re-render with a different image model, or (c) drop/rephrase the offending label. Never silently ship a mis-rendered name or character.
-9. **No duplicated data anywhere — text or image** — the final image must not repeat any text string (names, labels, sentences, the title, an arc line) or duplicate any imagery (echoed illustrations, cloned cells). Instruct the model that every string and every card appears exactly once, then after generation scan for: duplicated cells, a title/arc rendered in two places, names listed twice, and mirrored/echoed illustrations. If duplicates appear, regenerate or simplify the layout — never deliver with duplicated content.
+9. **No duplicated data anywhere — text or image** — the final image must not repeat any text string (names, labels, sentences, the title, an arc line) or duplicate any imagery (echoed illustrations, cloned cells). **Prevent it at the prompt, not at the image:** duplication is caused upstream, when the same string is enumerated twice (a text-accuracy block *plus* a trailing label dump) or repeated in the layout/style guidance. Keep exactly one enumeration (Step 5) and gate generation with `scripts/check_prompt_text.py` (Step 6) — it fails the run before any cost is incurred. Then verify after generation (Pitfalls #7, #8): scan for duplicated cells, a title/arc rendered twice, names listed twice, and mirrored/echoed illustrations. If duplicates appear, regenerate or simplify the layout — never deliver with duplicated content.
 
 ## Credits
 

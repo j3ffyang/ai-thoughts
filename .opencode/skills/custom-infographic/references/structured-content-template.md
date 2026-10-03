@@ -42,6 +42,7 @@ Verify all source data is:
 | **Tone** | Expert trainer | Knowledgeable, clear, encouraging |
 | **No new information** | Only source content | Don't add examples not in source |
 | **Verbatim data** | Exact copies | "73% increase" not "significant increase" |
+| **One enumeration** | Renderable strings are enumerated exactly once — in the prompt's `CRITICAL: Text Accuracy` block | Never restate the same strings in prose, a second list, or an appendix |
 
 ## Structured Content Format
 
@@ -100,7 +101,9 @@ The viewer will understand:
 
 ---
 
-## Data Points (Verbatim)
+## Data Points — REFERENCE ONLY (never copy into the prompt)
+
+> **Do not include this section in the assembled prompt, and never treat it as a second render list.** Every renderable string already lives in the per-section **Text Labels** above, and is enumerated once in the prompt's `CRITICAL: Text Accuracy` block. This section exists for data-integrity verification only. Restating the same strings a second time is what makes an image model render a label twice — it caused a duplicated `git init` in a real render (2026-10-03).
 
 All statistics, numbers, and quotes exactly as they appear in source:
 

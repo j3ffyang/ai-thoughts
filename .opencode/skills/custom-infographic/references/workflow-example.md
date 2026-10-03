@@ -34,7 +34,7 @@ When the `image_generate` tool is not available, the custom-infographic skill ca
   - Learning objectives
   - 8 detailed sections (Mindset, Environment, Skills, etc.)
   - For each section: Key Concept, Content (verbatim), Visual Element description, Text Labels
-  - Complete Data Points (Verbatim) section
+  - A Data Points (Verbatim) section for data-integrity verification only — never copied into the prompt
   - Design Instructions extracted from user preferences
 
 ### 4. prompts/infographic.md
@@ -44,7 +44,7 @@ When the `image_generate` tool is not available, the custom-infographic skill ca
   - Style guidelines (chalkboard)
   - Base prompt template
   - Structured content from Step 2
-  - All text labels
+  - The single canonical text-label list, enumerated exactly once in the CRITICAL block (never a second dump)
 - Ready for use with external image generation services
 
 ## How to Use This Workflow When image_generate is Unavailable
