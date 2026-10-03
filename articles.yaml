@@ -403,8 +403,8 @@ rows:
     links:
       - { label: "what-to-know-work-with-ai", path: "docs/260922-what-to-know-work-with-ai.md", lang: en }
       - { label: "what-to-know-work-with-ai", path: "docs/260922-what-to-know-work-with-ai-chn.md", lang: zh, label_zh: "与 AI 智能体高效协作，你应该懂些什么？" }
-    desc_en: "What you actually need to know to work well with an AI agent — clear description is the user's job, the skills that help (Markdown, skills, Python, YAML/GitHub Actions, Git, Linux, AGENTS.md/SKILL.md), and why patch-on-patch agent code becomes unmaintainable"
-    desc_zh: "与 AI 智能体高效协作真正需要知道什么——把期望说清是用户的责任；有用的技能（Markdown、技能、Python、YAML/GitHub Actions、Git、Linux、AGENTS.md/SKILL.md）；以及为何“补丁摞补丁”的智能体代码会变得无法维护"
+    desc_en: "What you actually need to know to work well with an AI agent — clear description is the user's job, the skills that help (Markdown, skills, Python, YAML/GitHub Actions, Git, Linux, AGENTS.md/SKILL.md), why patch-on-patch agent code becomes unmaintainable, and the four things never to delegate alone"
+    desc_zh: "与 AI 智能体高效协作真正需要知道什么——把期望说清是用户的责任；有用的技能（Markdown、技能、Python、YAML/GitHub Actions、Git、Linux、AGENTS.md/SKILL.md）；为何“补丁摞补丁”的智能体代码会变得无法维护；以及绝不单独交出去的四件事"
   - section: cross
     status: published
     links:
@@ -492,6 +492,7 @@ rows:
     status: draft
     links:
       - { label: "opencode-openrouter-model-selection", path: "docs/260927-opencode-openrouter-model-selection.md", lang: en }
+      - { label: "opencode-openrouter-model-selection", path: "docs/260927-opencode-openrouter-model-selection-chn.md", lang: zh, label_zh: "通过 OpenRouter 为 OpenCode 选择模型：隐私、价格与性能" }
     desc_en: "Picking a model and provider for OpenCode via OpenRouter — separating model origin from serving jurisdiction, tiering data-privacy risk, comparing DeepSeek/Qwen/GLM/Kimi/Gemini/OpenAI prices, and reproducing live rates with curl and Python"
     desc_zh: "通过 OpenRouter 为 OpenCode 选择模型与供应商——区分模型来源与推理服务所在地、数据隐私风险分级、DeepSeek/Qwen/GLM/Kimi/Gemini/OpenAI 价格对比，并附可复现的 curl/Python 取价脚本"
 
