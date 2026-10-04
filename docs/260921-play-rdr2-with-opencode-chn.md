@@ -1,4 +1,4 @@
-# 用 AI 智能体玩《荒野大镖客 2》
+# 和 AI 智能体一起玩《荒野大镖客 2》
 
 **原文：** [260921-play-rdr2-with-opencode.md](260921-play-rdr2-with-opencode.md)
 
