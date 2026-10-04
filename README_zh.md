@@ -17,7 +17,7 @@
 | 文章 | 简介 |
 |---|---|
 | [brisova-malware-analysis](docs/260929-brisova-malware-analysis.md) · [Brisova 恶意构建期载荷剖析](docs/260929-brisova-malware-analysis-chn.md) | 剖析一次恶意 GitHub 仓库邀请：一个混淆的 Tailwind/PostCSS 插件在构建期执行 npm install sql.js socket.io-client form-data axios，并加载 C2/凭据窃取工具集——含静态分析与沙箱动态分析、零信任处置策略及完整 IoC；附视觉总结信息图 |
-| [play-rdr2-with-opencode](docs/260921-play-rdr2-with-opencode.md) · [用 AI 智能体玩《荒野大镖客 2》](docs/260921-play-rdr2-with-opencode-chn.md) | 用 AI 智能体玩《荒野大镖客 2》——在 OpenCode 中用自定义技能与 AGENTS.md 记录一次通关，运行于 Arch Linux + Steam/Proton |
+| [play-rdr2-with-opencode](docs/260921-play-rdr2-with-opencode.md) · [和 AI 智能体一起玩《荒野大镖客 2》](docs/260921-play-rdr2-with-opencode-chn.md) | 和 AI 智能体一起玩《荒野大镖客 2》——在 OpenCode 中用自定义技能与 AGENTS.md 记录一次通关，运行于 Arch Linux + Steam/Proton |
 | [rdr2-ch2-playthrough-notes](docs/260921-rdr2-ch2-playthrough.md) · [《荒野大镖客 2》第二章通关笔记](docs/260921-rdr2-ch2-playthrough-chn.md) | 工作参考：《荒野大镖客 2》第二章通关笔记——金条、传奇动物、饰品、抢劫与挑战，由 rdr2-playthrough 技能维护 |
 | [lossless-pptx-extraction](docs/260919-lossless-pptx-extraction.md) · [无损提取 PPTX](docs/260919-lossless-pptx-extraction-chn.md) | 工程深潜：把 PowerPoint 演示文稿完整提取为 Markdown——OOXML 形状遍历、内容与版式装饰及不可渲染对象的区分、五点无损审计，以及为何这条流水线选择本地运行而非 CI |
 | [happy-birthday-linux](docs/260828-happy-birthday-linux-from-aix-to-arch.md) · [生日快乐，Linux](docs/260828-happy-birthday-linux-from-aix-to-arch-chn.md) | 三十五年的 Linux 个人旅程——从 IBM 的 AIX 起步、被入侵后养成安全习惯、兜兜转转的发行版岁月最终停在 Arch，如今每一台机器都是 Arch Linux；附视觉总结信息图 |

@@ -154,9 +154,9 @@ rows:
     status: published
     links:
       - { label: "play-rdr2-with-opencode", path: "docs/260921-play-rdr2-with-opencode.md", lang: en }
-      - { label: "play-rdr2-with-opencode", path: "docs/260921-play-rdr2-with-opencode-chn.md", lang: zh, label_zh: "用 AI 智能体玩《荒野大镖客 2》" }
+      - { label: "play-rdr2-with-opencode", path: "docs/260921-play-rdr2-with-opencode-chn.md", lang: zh, label_zh: "和 AI 智能体一起玩《荒野大镖客 2》" }
     desc_en: "Playing Red Dead Redemption 2 with an AI agent — documenting a playthrough in OpenCode with a custom skill and an AGENTS.md, on Arch Linux via Steam/Proton"
-    desc_zh: "用 AI 智能体玩《荒野大镖客 2》——在 OpenCode 中用自定义技能与 AGENTS.md 记录一次通关，运行于 Arch Linux + Steam/Proton"
+    desc_zh: "和 AI 智能体一起玩《荒野大镖客 2》——在 OpenCode 中用自定义技能与 AGENTS.md 记录一次通关，运行于 Arch Linux + Steam/Proton"
   - section: personal
     status: published
     links:
