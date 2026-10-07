@@ -211,7 +211,7 @@ if args.check:
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
-- **Oct 4:** Finished and published "Agent session persistence in OpenCode" (file-dated Sep 20, completed today) and "Encrypting Linux: from a hack 20+ years ago to LUKS and Veracrypt" — both bilingual (EN + ZH) with their own infographics — and refreshed the already-published "What Should You Know to Work Well with an AI Agent?"; all three registered in the article index and portfolio
+- **Oct 4:** Finished and published "Agent session persistence in OpenCode" (file-dated Sep 20, completed today) — bilingual (EN + ZH) with its own infographic — and refreshed the already-published "What Should You Know to Work Well with an AI Agent?"; both registered in the article index and portfolio
 
 ### Q3 2026
 - **Sep 30:** Added the `security-writeup-bad-effects` skill, a `verify_md_boxes.py` box-diagram verifier, and a global AGENTS.md "Host safety" rule; cross-posted the Brisova malware analysis to Medium and X (5:2 banner, plus a platform-filter-safe rewrite of one exploit-describing line)
