@@ -28,10 +28,11 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 - **`astro-sync`** — convert & polish an article into an AstroPaper post for the astro_journal blog (everbox.io), images included
 - **`resize-for-banner`** — 16:9 (LinkedIn) / 5:2 (X) social banners, padded black, never cropped, never overwrites the source
 - **`translate-to-zh-hans`** — translate an article into Simplified Chinese as a `-zh-hans.md` twin
+- **`simplified-to-traditional`** — generate and keep in sync the Traditional-Chinese `-zh-hant.md` twin of a `-zh-hans.md` article (OpenCC s2twp + cross-links + `--check`)
 
 | Platform | Repo | Purpose | Latest | Status |
 |----------|------|---------|--------|--------|
-| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`astro-sync`](https://clawhub.ai/j3ffyang) (article → AstroPaper post for everbox.io, images included), [`resize-for-banner`](https://clawhub.ai/j3ffyang) (16:9 / 5:2 social banners, padded never cropped), [`translate-to-zh-hans`](https://clawhub.ai/j3ffyang) (article → Simplified Chinese `-zh-hans.md` twin). Auto-published to ClawHub on every push. | `add auto-wrap tool` (Aug 2026) | 🔄 Active |
+| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`astro-sync`](https://clawhub.ai/j3ffyang) (article → AstroPaper post for everbox.io, images included), [`resize-for-banner`](https://clawhub.ai/j3ffyang) (16:9 / 5:2 social banners, padded never cropped), [`translate-to-zh-hans`](https://clawhub.ai/j3ffyang) (article → Simplified Chinese `-zh-hans.md` twin), [`simplified-to-traditional`](https://clawhub.ai/j3ffyang) (zh-hans → zh-hant twin sync). Auto-published to ClawHub on every push. | `add auto-wrap tool` (Aug 2026) | 🔄 Active |
 | **Hermes** ⚕ | **[hermes-custom-skills](https://github.com/negtivspace/hermes-custom-skills)** | Specialized skills for [Hermes Agent](https://hermes.ai) — autonomous workflows, content generation, task orchestration. | `docs: add README and CONTRIBUTING` (Jul 2026) | 🔄 Active |
 | **OpenClaw** 🦞 | **[openclaw-custom-skills](https://github.com/negtivspace/openclaw-custom-skills)** | Production skills for [OpenClaw](https://openclaw.ai) published to ClawHub. Multilingual blog publishing, media generation. | `add chinese edition` (Jul 2026) | 🔄 Active |
 | **Claude Code** | **[claude-custom-skills](https://github.com/negtivspace/claude-custom-skills)** | Automation skills for [Claude Code](https://claude.ai) — productivity hacks, data export, content workflows. | `add i18n support to README` (Jul 2026) | ✨ Stable |
@@ -211,6 +212,7 @@ if args.check:
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
+- **Oct 7:** Standardized the Simplified-Chinese suffix as `-zh-hans.md` across AGENTS.md, skills, and the README generator (legacy `-chn.md` files kept); renamed `translate-to-chn` → `translate-to-zh-hans` and published it to ClawHub 1.0.0; added the `simplified-to-traditional` skill (OpenCC s2twp zh-hans/zh-hant twin sync); published "What Should You Know to Work Well with an AI Agent?" in EN + Simplified + Traditional
 - **Oct 4:** Finished and published "Agent session persistence in OpenCode" (file-dated Sep 20, completed today) — bilingual (EN + ZH) with its own infographic — and refreshed the already-published "What Should You Know to Work Well with an AI Agent?"; both registered in the article index and portfolio
 
 ### Q3 2026
