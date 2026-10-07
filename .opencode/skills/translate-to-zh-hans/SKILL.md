@@ -1,22 +1,24 @@
 ---
-name: translate-to-chn
+name: translate-to-zh-hans
 description: >
   Translate a specific article from ai-thoughts/docs/ into Simplified Chinese,
-  writing the output to an exactly-same-filename "-chn.md" file. Use when the
+  writing the output to an exactly-same-filename "-zh-hans.md" file. Use when the
   user names a specific article and asks to translate it (e.g. "translate
-  260803-ollama-to-llamacpp", "翻译 xxx", "make a -chn.md version"). Never
+  260803-ollama-to-llamacpp", "翻译 xxx", "make a -zh-hans.md version" — or the
+  legacy "make a -chn.md version"). Never
   runs automatically; only acts on an explicitly chosen article.
 ---
 
-# Translate to Chinese (-chn.md)
+# Translate to Chinese (-zh-hans.md)
 
-Translate one article from `ai-thoughts/docs/` into Simplified Chinese and write it to a new file with the same filename plus a `-chn.md` suffix.
+Translate one article from `ai-thoughts/docs/` into Simplified Chinese and write it to a new file with the same filename plus a `-zh-hans.md` suffix.
 
 ## Approval gate — read before anything else
 
 - **Never translate, write, or create anything without explicit user approval.** This skill converts on demand only; it does not run automatically and it does not pick candidate articles on its own.
 - **No action if no article is specifically chosen.** The user must point out exactly one article (by filename, slug, or date). If they don't, do nothing except ask which one.
-- Before writing the output, confirm the plan with the user: the source file, the exact output path, and whether an existing `-chn.md` should be overwritten.
+- **Legacy naming:** files translated before this rule was standardized are named `<YYMMDD-slug>-chn.md` and keep that name until the user explicitly migrates them; every **new** translation uses `<YYMMDD-slug>-zh-hans.md`.
+- Before writing the output, confirm the plan with the user: the source file, the exact output path, and whether an existing `-zh-hans.md` should be overwritten.
 
 ## Inputs
 
@@ -24,17 +26,17 @@ Translate one article from `ai-thoughts/docs/` into Simplified Chinese and write
 
 ## Outputs
 
-- `outputPath` — Path to the translated article: `docs/<exact-same-filename>-chn.md` (replace the `.md` suffix with `-chn.md`, keeping the `YYMMDD-slug` prefix and all characters exactly). Example: `260803-ollama-to-llamacpp.md` → `260803-ollama-to-llamacpp-chn.md`.
+- `outputPath` — Path to the translated article: `docs/<exact-same-filename>-zh-hans.md` (replace the `.md` suffix with `-zh-hans.md`, keeping the `YYMMDD-slug` prefix and all characters exactly). Example: `260803-ollama-to-llamacpp.md` → `260803-ollama-to-llamacpp-zh-hans.md`.
 
 ## Procedure
 
 1. **Wait for the user to point out the article** to translate. Do not start until they name it explicitly.
 2. **Confirm the plan** with the user: the source file and the output path. Get their go-ahead before writing anything.
-3. **Check for an existing `-chn.md`.** If `docs/<same>-chn.md` already exists, stop and ask whether to overwrite it, diff against it, or skip. Never overwrite silently.
+3. **Check for an existing translation.** If `docs/<same>-zh-hans.md` — or the legacy `docs/<same>-chn.md` — already exists, stop and ask whether to overwrite, diff against it, or skip. Never overwrite silently.
 4. **Read the source** article from `source`. Understand the full content before translating.
 5. **Translate the body** into Simplified Chinese:
    - Keep the title as an H1 with the key term followed by a Chinese
-     translation (match the style of existing `-chn.md` pairs).
+     translation (match the style of existing Chinese pairs — most are still legacy `-chn.md`).
    - Right after the H1, add the source link line, using the **absolute GitHub URL** (the `j3ffyang` repo), not a relative link:
      `**原文：** [<source-filename>](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/<source-filename>)`
    - Translate the running text, headings, and bullets faithfully and
@@ -51,13 +53,13 @@ Translate one article from `ai-thoughts/docs/` into Simplified Chinese and write
    - Code blocks, inline code, CLI keystrokes (`Ctrl+C`, `Alt+Enter`).
    - Existing proper nouns already in Latin script. Only translate the surrounding prose; never translate inside code.
 7. **Preserve everything else exactly**: `../imgs/<file>` image references (keep the path verbatim — Chinese files mirror English per AGENTS.md), links, HTML, tables, frontmatter (if any), and Markdown structure.
-8. **Write the output** to `docs/<same-filename>-chn.md` with the source link line followed by the translated body.
-9. **Arch sign-off**: if the source ends with `btw, i use arch`, append the identical line at the bottom of the `-chn.md`. Keep it verbatim English — do not translate.
+8. **Write the output** to `docs/<same-filename>-zh-hans.md` with the source link line followed by the translated body.
+9. **Arch sign-off**: if the source ends with `btw, i use arch`, append the identical line at the bottom of the `-zh-hans.md`. Keep it verbatim English — do not translate.
 10. **Report** `outputPath` to the user. Do not modify the source file, and do not touch `articles.yaml` or the READMEs (out of scope for this skill).
 
 ## Bilingual-gloss style (default)
 
-Every `-chn.md` uses this style: Simplified Chinese is the primary text, and English is added as glosses so a Chinese-only reader still gets the technical vocabulary. The source article stays as-is; the glosses and explanations live only in the `-chn.md`.
+Every `-zh-hans.md` uses this style: Simplified Chinese is the primary text, and English is added as glosses so a Chinese-only reader still gets the technical vocabulary. The source article stays as-is; the glosses and explanations live only in the `-zh-hans.md`.
 
 1. **Gloss technical terms inline.** The first meaningful time a technical term appears, follow it with the English in parentheses: `技能 (skill)`, `无头 (headless)`, `密钥链 (keychain)`, `接口额度 (API quota)`. Don't gloss every repetition or everyday words — only technical or specialized vocabulary.
 2. **Gloss section titles.** Add the gloss to headings that contain technical terms: `## 技能 (skill) 是什么`, `## 无头 (headless) 环境下的认证`.
@@ -74,12 +76,12 @@ The verbatim exceptions from Procedure step 6 still apply: code, commands, produ
 
 ## Verification
 
-- Output is at `docs/<exact-source-filename>-chn.md`; the prefix and slug match the source filename exactly (only the `.md` → `-chn.md` suffix changed).
+- Output is at `docs/<exact-source-filename>-zh-hans.md`; the prefix and slug match the source filename exactly (only the `.md` → `-zh-hans.md` suffix changed).
 - The source link line is present right after the H1 and uses the **absolute GitHub URL**: `**原文：** [<source-filename>](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/<source-filename>)`.
 - Every `../imgs/<file>` reference in the output matches one in the source (verify with a glob/ls against `ai-thoughts/imgs/`).
 - Code blocks, inline code, commands, and specific terms (e.g. Hermes Agent, OpenCode) are preserved verbatim.
 - The bilingual-gloss style is applied: technical terms and headings carry English glosses, table cells are glossed on first appearance, and unfamiliar concepts get a plain-language explanation at first use.
-- If the source ends with the arch sign-off (`btw, i use arch`), the `-chn.md` carries the identical verbatim line.
+- If the source ends with the arch sign-off (`btw, i use arch`), the `-zh-hans.md` carries the identical verbatim line.
 - The source file is unmodified (confirm via git status/diff).
 
 ## Error Handling

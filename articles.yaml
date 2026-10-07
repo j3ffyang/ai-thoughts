@@ -141,6 +141,20 @@ rows:
       - { label: "ollama-to-llamacpp", path: "docs/260803-ollama-to-llamacpp-chn.md", lang: zh, label_zh: "从Ollama切换到llama.cpp" }
     desc_en: "Pushing the limit of a local LLM on Arch Linux (GPD): switching from Ollama to llama.cpp for finer VRAM control, higher efficiency, and better output quality with qwen2.5:14b"
     desc_zh: "在Arch Linux（GPD）上把本地LLM推到极限：从Ollama切换到llama.cpp，精细控制VRAM、提升效率与输出质量（qwen2.5:14b）"
+  - section: personal
+    status: published
+    links:
+      - { label: "encrypt-linux", path: "docs/261002-encrypt-linux.md", lang: en }
+      - { label: "encrypt-linux", path: "docs/261002-encrypt-linux-chn.md", lang: zh, label_zh: "加密 Linux：从入侵到 LUKS 与 Veracrypt" }
+    desc_en: "A personal account of Linux disk encryption — how a hack 20+ years ago pushed the author from detecting tampering (tripwire) to preventing it (LUKS for the OS, Veracrypt for USB disks), with a daily rsync backup, the header-backup gotcha, and the honest limits of encryption"
+    desc_zh: "一份个人 Linux 磁盘加密记述——20 多年前的一次入侵如何让作者从检测篡改（tripwire）转向预防（LUKS 加密系统、Veracrypt 加密 USB 磁盘），并附每日 rsync 备份、LUKS 头部备份这一坑，以及加密的老实边界"
+  - section: cross
+    status: published
+    links:
+      - { label: "agent-session-persistence", path: "docs/260920-agent-session-persistence.md", lang: en }
+      - { label: "agent-session-persistence", path: "docs/260920-agent-session-persistence-chn.md", lang: zh, label_zh: "OpenCode 中的智能体会话持久化" }
+    desc_en: "Where an OpenCode coding-agent session lives on disk and how it resumes — the single SQLite store, what it holds (schema and counts), the business data it becomes at team scale, context compaction, automatic pruning, and how to back it up"
+    desc_zh: "OpenCode 编码智能体的会话存在磁盘何处、如何恢复——单一 SQLite 存储及其内容（模式与计数）、在团队规模下它变成的业务数据、上下文压缩、自动清理，以及如何备份"
 
   # ---------------------------------------------------------- IV. personal
   - section: personal
@@ -402,7 +416,7 @@ rows:
     status: published
     links:
       - { label: "what-to-know-work-with-ai", path: "docs/260922-what-to-know-work-with-ai.md", lang: en }
-      - { label: "what-to-know-work-with-ai", path: "docs/260922-what-to-know-work-with-ai-chn.md", lang: zh, label_zh: "与 AI 智能体高效协作，你应该懂些什么？" }
+      - { label: "what-to-know-work-with-ai", path: "docs/260922-what-to-know-work-with-ai-zh-hans.md", lang: zh, label_zh: "与 AI 智能体高效协作，你应该懂些什么？" }
     desc_en: "What you actually need to know to work well with an AI agent — clear description is the user's job, the skills that help (Markdown, skills, Python, YAML/GitHub Actions, Git, Linux, AGENTS.md/SKILL.md), why patch-on-patch agent code becomes unmaintainable, and the four things never to delegate alone"
     desc_zh: "与 AI 智能体高效协作真正需要知道什么——把期望说清是用户的责任；有用的技能（Markdown、技能、Python、YAML/GitHub Actions、Git、Linux、AGENTS.md/SKILL.md）；为何“补丁摞补丁”的智能体代码会变得无法维护；以及绝不单独交出去的四件事"
   - section: cross

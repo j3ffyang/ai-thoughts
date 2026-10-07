@@ -108,13 +108,14 @@ def validate(data: dict) -> None:
             errors.append(f"row {i}: unknown section '{row['section']}'")
         has_en = any(ln.get("lang") == "en" for ln in row["links"])
         has_zh = any(ln.get("lang") == "zh" for ln in row["links"])
-        has_chn_file = any(
-            (ROOT / (ln["path"][:-3] + "-chn.md")).is_file()
+        has_zh_file = any(
+            (ROOT / (ln["path"][:-3] + suf)).is_file()
             for ln in row["links"]
             if ln.get("lang") == "en"
+            for suf in ("-zh-hans.md", "-chn.md")
         )
-        if (has_zh or has_chn_file) and (not row.get("desc_zh") or not row["desc_zh"]):
-            errors.append(f"row {i}: missing desc_zh (a -chn.md exists for this article)")
+        if (has_zh or has_zh_file) and (not row.get("desc_zh") or not row["desc_zh"]):
+            errors.append(f"row {i}: missing desc_zh (a -zh-hans.md/-chn.md exists for this article)")
         if has_en and (not row.get("desc_en") or not row["desc_en"]):
             errors.append(f"row {i}: has en link but missing desc_en")
         for ln in row["links"]:

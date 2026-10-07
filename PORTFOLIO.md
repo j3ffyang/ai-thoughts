@@ -27,11 +27,11 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 - **`astro-sync`** — convert & polish an article into an AstroPaper post for the astro_journal blog (everbox.io), images included
 - **`resize-for-banner`** — 16:9 (LinkedIn) / 5:2 (X) social banners, padded black, never cropped, never overwrites the source
-- **`translate-to-chn`** — translate an article into Simplified Chinese as a `-chn.md` twin
+- **`translate-to-zh-hans`** — translate an article into Simplified Chinese as a `-zh-hans.md` twin
 
 | Platform | Repo | Purpose | Latest | Status |
 |----------|------|---------|--------|--------|
-| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`astro-sync`](https://clawhub.ai/j3ffyang) (article → AstroPaper post for everbox.io, images included), [`resize-for-banner`](https://clawhub.ai/j3ffyang) (16:9 / 5:2 social banners, padded never cropped), [`translate-to-chn`](https://clawhub.ai/j3ffyang) (article → Simplified Chinese `-chn.md` twin). Auto-published to ClawHub on every push. | `add auto-wrap tool` (Aug 2026) | 🔄 Active |
+| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`astro-sync`](https://clawhub.ai/j3ffyang) (article → AstroPaper post for everbox.io, images included), [`resize-for-banner`](https://clawhub.ai/j3ffyang) (16:9 / 5:2 social banners, padded never cropped), [`translate-to-zh-hans`](https://clawhub.ai/j3ffyang) (article → Simplified Chinese `-zh-hans.md` twin). Auto-published to ClawHub on every push. | `add auto-wrap tool` (Aug 2026) | 🔄 Active |
 | **Hermes** ⚕ | **[hermes-custom-skills](https://github.com/negtivspace/hermes-custom-skills)** | Specialized skills for [Hermes Agent](https://hermes.ai) — autonomous workflows, content generation, task orchestration. | `docs: add README and CONTRIBUTING` (Jul 2026) | 🔄 Active |
 | **OpenClaw** 🦞 | **[openclaw-custom-skills](https://github.com/negtivspace/openclaw-custom-skills)** | Production skills for [OpenClaw](https://openclaw.ai) published to ClawHub. Multilingual blog publishing, media generation. | `add chinese edition` (Jul 2026) | 🔄 Active |
 | **Claude Code** | **[claude-custom-skills](https://github.com/negtivspace/claude-custom-skills)** | Automation skills for [Claude Code](https://claude.ai) — productivity hacks, data export, content workflows. | `add i18n support to README` (Jul 2026) | ✨ Stable |
@@ -41,7 +41,7 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Repo | Purpose | Articles |
 |------|---------|----------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 43 articles |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 45 articles |
 
 ### Tools & Extensions
 
@@ -210,7 +210,10 @@ if args.check:
 
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
-### Q3 2026 (Current)
+### Q4 2026 (Current)
+- **Oct 4:** Finished and published "Agent session persistence in OpenCode" (file-dated Sep 20, completed today) and "Encrypting Linux: from a hack 20+ years ago to LUKS and Veracrypt" — both bilingual (EN + ZH) with their own infographics — and refreshed the already-published "What Should You Know to Work Well with an AI Agent?"; all three registered in the article index and portfolio
+
+### Q3 2026
 - **Sep 30:** Added the `security-writeup-bad-effects` skill, a `verify_md_boxes.py` box-diagram verifier, and a global AGENTS.md "Host safety" rule; cross-posted the Brisova malware analysis to Medium and X (5:2 banner, plus a platform-filter-safe rewrite of one exploit-describing line)
 - **Sep 29:** Published "Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload" (EN + ZH) with infographic; added the `untrusted-code-safety` skill and its global AGENTS.md "Untrusted code safety" contract
 - **Sep 27:** Published "Choosing a Model for OpenCode via OpenRouter" with infographic and Twitter banner
@@ -286,7 +289,7 @@ if args.check:
 ## 🔗 Quick Links
 
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
-- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 43 articles on AI, privacy, and entrepreneurship
+- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 45 articles on AI, privacy, and entrepreneurship
 - **Gists & Experiments:** [Personal gists](https://gist.github.com/j3ffyang)
 
 ---
@@ -295,14 +298,14 @@ if args.check:
 
 From `ai-thoughts` (most recent published articles):
 
-1. **"Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload"** (Sep 2026) — Anatomy of a malicious GitHub repo invite: an obfuscated Tailwind/PostCSS plugin that runs npm install sql.js socket.io-client form-data axios at build time and loads a C2/credential-stealer toolset — static and sandboxed dynamic analysis, a zero-trust handling strategy, and full IoCs; with a visual summary infographic
-2. **"What Should You Know to Work Well with an AI Agent?"** (Sep 2026) — What you actually need to know to work well with an AI agent — clear description is the user's job, the skills that help (Markdown, skills, Python, YAML/GitHub Actions, Git, Linux, AGENTS.md/SKILL.md), and why patch-on-patch agent code becomes unmaintainable
-3. **"Play Red Dead Redemption 2 with an AI Agent"** (Sep 2026) — Playing Red Dead Redemption 2 with an AI agent — documenting a playthrough in OpenCode with a custom skill and an AGENTS.md, on Arch Linux via Steam/Proton
-4. **"Extracting PowerPoint to Markdown Without Losing a Byte"** (Sep 2026) — Engineering deep-dive: extracting PowerPoint decks into full-data Markdown — OOXML shape walking, content vs layout chrome vs unrenderable objects, a 5-point losslessness audit, and why the pipeline stays local instead of running in CI
-5. **"Create SKILL.md, AGENTS.md, and PERSONA.md on the fly"** (Sep 2026) — Create SKILL.md, AGENTS.md, and PERSONA.md on the fly instead of hunting others' skills — three levels of customization, real benefits from daily use, and OpenCode as the daily agent
-6. **"Happy Birthday, Linux — My Journey from AIX to Arch"** (Aug 2026) — A 35-year Linux journey in one personal story — AIX at IBM, getting hacked and the security habit it forged, the distro years ending at Arch, and every machine now Arch Linux; with a visual summary infographic
+1. **"Encrypting Linux: from a hack 20+ years ago to LUKS and Veracrypt"** (Oct 2026) — A personal account of Linux disk encryption — how a hack 20+ years ago pushed the author from detecting tampering (tripwire) to preventing it (LUKS for the OS, Veracrypt for USB disks), with a daily rsync backup, the header-backup gotcha, and the honest limits of encryption
+2. **"Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload"** (Sep 2026) — Anatomy of a malicious GitHub repo invite: an obfuscated Tailwind/PostCSS plugin that runs npm install sql.js socket.io-client form-data axios at build time and loads a C2/credential-stealer toolset — static and sandboxed dynamic analysis, a zero-trust handling strategy, and full IoCs; with a visual summary infographic
+3. **"What Should You Know to Work Well with an AI Agent?"** (Sep 2026) — What you actually need to know to work well with an AI agent — clear description is the user's job, the skills that help (Markdown, skills, Python, YAML/GitHub Actions, Git, Linux, AGENTS.md/SKILL.md), why patch-on-patch agent code becomes unmaintainable, and the four things never to delegate alone
+4. **"Play Red Dead Redemption 2 with an AI Agent"** (Sep 2026) — Playing Red Dead Redemption 2 with an AI agent — documenting a playthrough in OpenCode with a custom skill and an AGENTS.md, on Arch Linux via Steam/Proton
+5. **"Agent session persistence in OpenCode"** (Sep 2026) — Where an OpenCode coding-agent session lives on disk and how it resumes — the single SQLite store, what it holds (schema and counts), the business data it becomes at team scale, context compaction, automatic pruning, and how to back it up
+6. **"Extracting PowerPoint to Markdown Without Losing a Byte"** (Sep 2026) — Engineering deep-dive: extracting PowerPoint decks into full-data Markdown — OOXML shape walking, content vs layout chrome vs unrenderable objects, a 5-point losslessness audit, and why the pipeline stays local instead of running in CI
 
-👉 See all 43 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
+👉 See all 45 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
 
 ---
 
@@ -328,7 +331,7 @@ npm run build  # or load the extension manually in Chrome
 ```bash
 git clone https://github.com/negtivspace/ai-thoughts
 cd docs
-# 43 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
+# 45 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
 ```
 
 ---
@@ -339,4 +342,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** September 30, 2026 | Tracking: 6 active repos, 43 published articles, 10+ published skills
+**Last Updated:** October 7, 2026 | Tracking: 6 active repos, 45 published articles, 10+ published skills
