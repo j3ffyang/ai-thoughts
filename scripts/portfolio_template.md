@@ -212,7 +212,11 @@ if args.check:
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
-- **Oct 7:** Standardized the Simplified-Chinese suffix as `-zh-hans.md` across AGENTS.md, skills, and the README generator (legacy `-chn.md` files kept); renamed `translate-to-chn` → `translate-to-zh-hans` and published it to ClawHub 1.0.0; added the `simplified-to-traditional` skill (OpenCC s2twp zh-hans/zh-hant twin sync); published "What Should You Know to Work Well with an AI Agent?" in EN + Simplified + Traditional
+- **Oct 7:** Refreshed the portfolio timeline and skills list, and dropped the WIP `encrypt-linux` row from the article index until the articles are ready
+- **Oct 7:** Published "What Should You Know to Work Well with an AI Agent?" in three versions — English, Simplified Chinese, and its first Traditional-Chinese `-zh-hant.md` twin
+- **Oct 7:** Added the `simplified-to-traditional` skill — `-zh-hans` → `-zh-hant` twin sync with OpenCC (s2twp), permanent cross-links, and `--check`; published to ClawHub 1.0.0
+- **Oct 7:** Renamed the translation skill `translate-to-chn` → `translate-to-zh-hans` and published it to ClawHub 1.0.0
+- **Oct 7:** Standardized the Simplified-Chinese suffix as `-zh-hans.md` across AGENTS.md, the skills, and the README generator's `desc_zh` check — legacy `-chn.md` files kept as-is until explicitly migrated
 - **Oct 4:** Finished and published "Agent session persistence in OpenCode" (file-dated Sep 20, completed today) — bilingual (EN + ZH) with its own infographic — and refreshed the already-published "What Should You Know to Work Well with an AI Agent?"; both registered in the article index and portfolio
 
 ### Q3 2026
