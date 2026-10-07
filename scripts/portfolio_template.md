@@ -52,6 +52,54 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 ---
 
+## 📈 Activity Timeline
+
+*Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
+
+### Q4 2026 (Current)
+- **Oct 7:** Refreshed the portfolio timeline and skills list, and dropped the WIP `encrypt-linux` row from the article index until the articles are ready
+- **Oct 7:** Published "What Should You Know to Work Well with an AI Agent?" in three versions — English, Simplified Chinese, and its first Traditional-Chinese `-zh-hant.md` twin
+- **Oct 7:** Added the `simplified-to-traditional` skill — `-zh-hans` → `-zh-hant` twin sync with OpenCC (s2twp), permanent cross-links, and `--check`; published to ClawHub 1.0.0
+- **Oct 7:** Renamed the translation skill `translate-to-chn` → `translate-to-zh-hans` and published it to ClawHub 1.0.0
+- **Oct 7:** Standardized the Simplified-Chinese suffix as `-zh-hans.md` across AGENTS.md, the skills, and the README generator's `desc_zh` check — legacy `-chn.md` files kept as-is until explicitly migrated
+- **Oct 4:** Finished and published "Agent session persistence in OpenCode" (file-dated Sep 20, completed today) — bilingual (EN + ZH) with its own infographic — and refreshed the already-published "What Should You Know to Work Well with an AI Agent?"; both registered in the article index and portfolio
+
+### Q3 2026
+- **Sep 30:** Added the `security-writeup-bad-effects` skill, a `verify_md_boxes.py` box-diagram verifier, and a global AGENTS.md "Host safety" rule; cross-posted the Brisova malware analysis to Medium and X (5:2 banner, plus a platform-filter-safe rewrite of one exploit-describing line)
+- **Sep 29:** Published "Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload" (EN + ZH) with infographic; added the `untrusted-code-safety` skill and its global AGENTS.md "Untrusted code safety" contract
+- **Sep 27:** Published "Choosing a Model for OpenCode via OpenRouter" with infographic and Twitter banner
+- **Sep 21:** Published the `rdr2-playthrough` skill to ClawHub; reworked the portfolio pipeline so each account self-publishes its own README (no cross-account PAT or mirror)
+- **Sep 21:** Expanded the portfolio Code Highlights with automation tooling (`clawhub_publish.py`, `sync_profile.py`, `gen_readmes.py`)
+- **Sep 20:** Published "Extracting PowerPoint to Markdown Without Losing a Byte" (EN + ZH) with infographic and the `pptx-extract` skill
+- **Sep 17:** Added the `normalize-whitespace` and `sync-config-with-sample` skills
+- **Sep 15:** Added an auto-generated ClawHub skills table and switched READMEs to recency ordering
+- **Sep 15:** Published the Chinese translation of the "create SKILL.md, AGENTS.md, and PERSONA.md on the fly" essay
+- **Sep 14:** Published "Create SKILL.md, AGENTS.md, and PERSONA.md on the fly" with hero infographic and Twitter banner; renamed the ClawHub publish skill to `publish-skills`
+- **Sep 14:** Refined the `bold-highlights` skill — sparser bolding, no list bolds
+- **Sep 2:** Reworked the GPD dual-AMD eGPU article with mermaid diagrams, new image assets, and an Arch sign-off
+- **Aug 8:** Added `scripts/unwrap_md.py` — auto-wraps article and skill prose to one-paragraph-per-line, preserving code fences, tables, and list nesting
+- **Aug 8:** Published the AI agent collaboration playbook — what a real multi-repo ClawHub auto-publish project taught about AGENTS.md, SKILL.md, and project boundaries
+- **Aug 7:** Published AMD iGPU + eGPU setup guide for GPD Win4 (bilingual EN/ZH) with verification commands and stable DRM symlinks
+- **Aug 4:** Merged the three Chrome extensions (`sum2chn`, `twitter2md`, `twitter-bookmark-summarizer`) into a single `chrome-extensions` monorepo
+- **Early Aug:** Published "Why OpenCode is the best AI agent setup for me" essay and the Ollama → llama.cpp local-LLM deep-dive (draft)
+- **Jul 31:** Published the Hermes Agent skills/plugins cleanup guide (bilingual)
+- **Jul 21-22:** Published Obsidian + Karpathy LLM Wiki local search guide and the "unknown unknowns" essay (bilingual)
+- **Jul 14:** Added Brave browser privacy analysis (bilingual) to `ai-thoughts`
+- **Jul 14:** Polished and committed two blog posts with bilingual README updates
+- **Early Jul:** Releasing v1 of `sum2chn` Chrome extension (translation + summarization)
+
+### Q2 2026
+- **Jun:** Completed `twitter2md` Chrome extension and Node.js CLI tool
+- **Jun:** Refactored `twitterBookmarkSum` to use popup-triggered summarization
+- **May:** Released `twitter2md` for X post extraction as Markdown
+
+### Q1 2026
+- **Apr:** Published first Hermes Agent articles and tutorials in `ai-thoughts`
+- **Mar:** Established `openclaw-custom-skills` repo on ClawHub
+- **Feb:** Began deep-dive experimentation with OpenClaw and Hermes platforms
+
+---
+
 ## 🔍 Code Highlights
 
 *Automation tooling that keeps this portfolio, its READMEs, and its ClawHub skills in sync.*
@@ -204,54 +252,6 @@ if args.check:
 ```
 
 **Why it matters:** Both language READMEs come from one manifest, so the English and Chinese indexes can't diverge, and `--check` makes CI fail on a stale README rather than letting it drift.
-
----
-
-## 📈 Activity Timeline
-
-*Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
-
-### Q4 2026 (Current)
-- **Oct 7:** Refreshed the portfolio timeline and skills list, and dropped the WIP `encrypt-linux` row from the article index until the articles are ready
-- **Oct 7:** Published "What Should You Know to Work Well with an AI Agent?" in three versions — English, Simplified Chinese, and its first Traditional-Chinese `-zh-hant.md` twin
-- **Oct 7:** Added the `simplified-to-traditional` skill — `-zh-hans` → `-zh-hant` twin sync with OpenCC (s2twp), permanent cross-links, and `--check`; published to ClawHub 1.0.0
-- **Oct 7:** Renamed the translation skill `translate-to-chn` → `translate-to-zh-hans` and published it to ClawHub 1.0.0
-- **Oct 7:** Standardized the Simplified-Chinese suffix as `-zh-hans.md` across AGENTS.md, the skills, and the README generator's `desc_zh` check — legacy `-chn.md` files kept as-is until explicitly migrated
-- **Oct 4:** Finished and published "Agent session persistence in OpenCode" (file-dated Sep 20, completed today) — bilingual (EN + ZH) with its own infographic — and refreshed the already-published "What Should You Know to Work Well with an AI Agent?"; both registered in the article index and portfolio
-
-### Q3 2026
-- **Sep 30:** Added the `security-writeup-bad-effects` skill, a `verify_md_boxes.py` box-diagram verifier, and a global AGENTS.md "Host safety" rule; cross-posted the Brisova malware analysis to Medium and X (5:2 banner, plus a platform-filter-safe rewrite of one exploit-describing line)
-- **Sep 29:** Published "Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload" (EN + ZH) with infographic; added the `untrusted-code-safety` skill and its global AGENTS.md "Untrusted code safety" contract
-- **Sep 27:** Published "Choosing a Model for OpenCode via OpenRouter" with infographic and Twitter banner
-- **Sep 21:** Published the `rdr2-playthrough` skill to ClawHub; reworked the portfolio pipeline so each account self-publishes its own README (no cross-account PAT or mirror)
-- **Sep 21:** Expanded the portfolio Code Highlights with automation tooling (`clawhub_publish.py`, `sync_profile.py`, `gen_readmes.py`)
-- **Sep 20:** Published "Extracting PowerPoint to Markdown Without Losing a Byte" (EN + ZH) with infographic and the `pptx-extract` skill
-- **Sep 17:** Added the `normalize-whitespace` and `sync-config-with-sample` skills
-- **Sep 15:** Added an auto-generated ClawHub skills table and switched READMEs to recency ordering
-- **Sep 15:** Published the Chinese translation of the "create SKILL.md, AGENTS.md, and PERSONA.md on the fly" essay
-- **Sep 14:** Published "Create SKILL.md, AGENTS.md, and PERSONA.md on the fly" with hero infographic and Twitter banner; renamed the ClawHub publish skill to `publish-skills`
-- **Sep 14:** Refined the `bold-highlights` skill — sparser bolding, no list bolds
-- **Sep 2:** Reworked the GPD dual-AMD eGPU article with mermaid diagrams, new image assets, and an Arch sign-off
-- **Aug 8:** Added `scripts/unwrap_md.py` — auto-wraps article and skill prose to one-paragraph-per-line, preserving code fences, tables, and list nesting
-- **Aug 8:** Published the AI agent collaboration playbook — what a real multi-repo ClawHub auto-publish project taught about AGENTS.md, SKILL.md, and project boundaries
-- **Aug 7:** Published AMD iGPU + eGPU setup guide for GPD Win4 (bilingual EN/ZH) with verification commands and stable DRM symlinks
-- **Aug 4:** Merged the three Chrome extensions (`sum2chn`, `twitter2md`, `twitter-bookmark-summarizer`) into a single `chrome-extensions` monorepo
-- **Early Aug:** Published "Why OpenCode is the best AI agent setup for me" essay and the Ollama → llama.cpp local-LLM deep-dive (draft)
-- **Jul 31:** Published the Hermes Agent skills/plugins cleanup guide (bilingual)
-- **Jul 21-22:** Published Obsidian + Karpathy LLM Wiki local search guide and the "unknown unknowns" essay (bilingual)
-- **Jul 14:** Added Brave browser privacy analysis (bilingual) to `ai-thoughts`
-- **Jul 14:** Polished and committed two blog posts with bilingual README updates
-- **Early Jul:** Releasing v1 of `sum2chn` Chrome extension (translation + summarization)
-
-### Q2 2026
-- **Jun:** Completed `twitter2md` Chrome extension and Node.js CLI tool
-- **Jun:** Refactored `twitterBookmarkSum` to use popup-triggered summarization
-- **May:** Released `twitter2md` for X post extraction as Markdown
-
-### Q1 2026
-- **Apr:** Published first Hermes Agent articles and tutorials in `ai-thoughts`
-- **Mar:** Established `openclaw-custom-skills` repo on ClawHub
-- **Feb:** Began deep-dive experimentation with OpenClaw and Hermes platforms
 
 ---
 
