@@ -216,6 +216,13 @@ rows:
       - { label: "brisova-malware-analysis", path: "docs/260929-brisova-malware-analysis-chn.md", lang: zh, label_zh: "Brisova 恶意构建期载荷剖析" }
     desc_en: "Anatomy of a malicious GitHub repo invite: an obfuscated Tailwind/PostCSS plugin that runs npm install sql.js socket.io-client form-data axios at build time and loads a C2/credential-stealer toolset — static and sandboxed dynamic analysis, a zero-trust handling strategy, and full IoCs; with a visual summary infographic"
     desc_zh: "剖析一次恶意 GitHub 仓库邀请：一个混淆的 Tailwind/PostCSS 插件在构建期执行 npm install sql.js socket.io-client form-data axios，并加载 C2/凭据窃取工具集——含静态分析与沙箱动态分析、零信任处置策略及完整 IoC；附视觉总结信息图"
+  - section: personal
+    status: published
+    links:
+      - { label: "encrypt-linux", path: "docs/261002-encrypt-linux.md", lang: en }
+      - { label: "encrypt-linux", path: "docs/261002-encrypt-linux-zh-hans.md", lang: zh, label_zh: "加密 Linux：从一次入侵到 LUKS 与 Veracrypt" }
+    desc_en: "A personal Linux security story — how a break-in 20+ years ago pushed me from detecting tampering (tripwire) to preventing it: LUKS full-disk encryption (xfs root, cleartext /boot), Veracrypt USB volumes, the threat model and its honest limits, AES-NI overhead, TRIM, and a daily rsync backup between two encrypted disks; with a visual summary infographic"
+    desc_zh: "一段个人 Linux 安全故事——20 多年前的一次入侵如何把我从检测篡改（tripwire）推向预防它：LUKS 全盘加密（xfs 根分区、明文的 /boot）、Veracrypt USB 卷、威胁模型及其诚实的边界、AES-NI 开销、TRIM，以及两块加密磁盘之间的每日 rsync 备份；附视觉总结信息图"
 
   # ------------------------------------------------------------ V. openclaw
   - section: openclaw

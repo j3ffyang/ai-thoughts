@@ -42,7 +42,7 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Repo | Purpose | Articles |
 |------|---------|----------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 44 articles |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 45 articles |
 
 ### Tools & Extensions
 
@@ -295,7 +295,7 @@ if args.check:
 ## 🔗 Quick Links
 
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
-- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 44 articles on AI, privacy, and entrepreneurship
+- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 45 articles on AI, privacy, and entrepreneurship
 - **Gists & Experiments:** [Personal gists](https://gist.github.com/j3ffyang)
 
 ---
@@ -304,14 +304,14 @@ if args.check:
 
 From `ai-thoughts` (most recent published articles):
 
-1. **"Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload"** (Sep 2026) — Anatomy of a malicious GitHub repo invite: an obfuscated Tailwind/PostCSS plugin that runs npm install sql.js socket.io-client form-data axios at build time and loads a C2/credential-stealer toolset — static and sandboxed dynamic analysis, a zero-trust handling strategy, and full IoCs; with a visual summary infographic
-2. **"What Should You Know to Work Well with an AI Agent?"** (Sep 2026) — What you actually need to know to work well with an AI agent — clear description is the user's job, the skills that help (Markdown, skills, Python, YAML/GitHub Actions, Git, Linux, AGENTS.md/SKILL.md), why patch-on-patch agent code becomes unmaintainable, and the four things never to delegate alone
-3. **"Play Red Dead Redemption 2 with an AI Agent"** (Sep 2026) — Playing Red Dead Redemption 2 with an AI agent — documenting a playthrough in OpenCode with a custom skill and an AGENTS.md, on Arch Linux via Steam/Proton
-4. **"Agent session persistence in OpenCode"** (Sep 2026) — Where an OpenCode coding-agent session lives on disk and how it resumes — the single SQLite store, what it holds (schema and counts), the business data it becomes at team scale, context compaction, automatic pruning, and how to back it up
-5. **"Extracting PowerPoint to Markdown Without Losing a Byte"** (Sep 2026) — Engineering deep-dive: extracting PowerPoint decks into full-data Markdown — OOXML shape walking, content vs layout chrome vs unrenderable objects, a 5-point losslessness audit, and why the pipeline stays local instead of running in CI
-6. **"Create SKILL.md, AGENTS.md, and PERSONA.md on the fly"** (Sep 2026) — Create SKILL.md, AGENTS.md, and PERSONA.md on the fly instead of hunting others' skills — three levels of customization, real benefits from daily use, and OpenCode as the daily agent
+1. **"Encrypting Linux: from a hack 20+ years ago to LUKS and Veracrypt"** (Oct 2026) — A personal Linux security story — how a break-in 20+ years ago pushed me from detecting tampering (tripwire) to preventing it: LUKS full-disk encryption (xfs root, cleartext /boot), Veracrypt USB volumes, the threat model and its honest limits, AES-NI overhead, TRIM, and a daily rsync backup between two encrypted disks; with a visual summary infographic
+2. **"Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload"** (Sep 2026) — Anatomy of a malicious GitHub repo invite: an obfuscated Tailwind/PostCSS plugin that runs npm install sql.js socket.io-client form-data axios at build time and loads a C2/credential-stealer toolset — static and sandboxed dynamic analysis, a zero-trust handling strategy, and full IoCs; with a visual summary infographic
+3. **"What Should You Know to Work Well with an AI Agent?"** (Sep 2026) — What you actually need to know to work well with an AI agent — clear description is the user's job, the skills that help (Markdown, skills, Python, YAML/GitHub Actions, Git, Linux, AGENTS.md/SKILL.md), why patch-on-patch agent code becomes unmaintainable, and the four things never to delegate alone
+4. **"Play Red Dead Redemption 2 with an AI Agent"** (Sep 2026) — Playing Red Dead Redemption 2 with an AI agent — documenting a playthrough in OpenCode with a custom skill and an AGENTS.md, on Arch Linux via Steam/Proton
+5. **"Agent session persistence in OpenCode"** (Sep 2026) — Where an OpenCode coding-agent session lives on disk and how it resumes — the single SQLite store, what it holds (schema and counts), the business data it becomes at team scale, context compaction, automatic pruning, and how to back it up
+6. **"Extracting PowerPoint to Markdown Without Losing a Byte"** (Sep 2026) — Engineering deep-dive: extracting PowerPoint decks into full-data Markdown — OOXML shape walking, content vs layout chrome vs unrenderable objects, a 5-point losslessness audit, and why the pipeline stays local instead of running in CI
 
-👉 See all 44 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
+👉 See all 45 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
 
 ---
 
@@ -337,7 +337,7 @@ npm run build  # or load the extension manually in Chrome
 ```bash
 git clone https://github.com/negtivspace/ai-thoughts
 cd docs
-# 44 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
+# 45 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
 ```
 
 ---
@@ -348,4 +348,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** October 7, 2026 | Tracking: 6 active repos, 44 published articles, 10+ published skills
+**Last Updated:** October 8, 2026 | Tracking: 6 active repos, 45 published articles, 10+ published skills
