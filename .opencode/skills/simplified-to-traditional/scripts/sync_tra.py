@@ -30,8 +30,29 @@ OPENCC = ["opencc", "-c", "s2twp.json"]
 # between occurrences. Each (from, to) pair is applied in order to the converted
 # Traditional text. Keep this list small and specific; it survives every re-sync.
 OVERRIDES = [
-    # e.g. ("舊注", "舊註"),  # pin a mis-converted term; applied after OpenCC on every re-sync
+    ("作者自雲", "作者自云"),  # 云 = "says" (作者自云), not 雲 "cloud"
+    ("幹血之症", "乾血之症"),  # 乾 = dry (干血 = dry blood, a TCM condition); OpenCC picked 幹
 ]
+
+# One-Simplified-to-many-Traditional forms where OpenCC can pick the wrong
+# variant for a rare/literary/technical term (e.g. 云→雲, 干→幹). We never
+# auto-fix these; after each sync we print every occurrence so a reviewer can
+# verify it against the cited edition (or the intended meaning) and, if wrong,
+# pin a fix in OVERRIDES. Kept to forms whose wrong pick is plausible and
+# costly; common correct forms (與/後/裡/為/著…) are deliberately excluded so
+# the lint stays low-noise.
+HOT_LIST = "雲幹髮複隻係繫錶製鬥穀餘鬆瀋鍾劃衝儘麵臺噁鬱鹹纖兇僕"
+
+
+def lint_traditional(text: str) -> list[str]:
+    """Return one warning per risky Traditional form found, with context."""
+    warnings: list[str] = []
+    for i, line in enumerate(text.split("\n"), 1):
+        for j, ch in enumerate(line):
+            if ch in HOT_LIST:
+                lo, hi = max(0, j - 6), min(len(line), j + 7)
+                warnings.append(f"line {i}: {ch}  …{line[lo:hi]}…")
+    return warnings
 
 
 def apply_overrides(text: str) -> str:
@@ -108,6 +129,14 @@ def build(src: Path) -> tuple[str, str, Path, str]:
     return src_text, src_out, twin, twin_out
 
 
+def report_lint(warnings: list[str]) -> None:
+    if not warnings:
+        return
+    print(f"⚠ {len(warnings)} ambiguous form(s) to verify — pin a fix in OVERRIDES if wrong:")
+    for w in warnings:
+        print("  -", w)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("source", help="path to the <YYMMDD-slug>-zh-hans.md Simplified article")
@@ -119,6 +148,7 @@ def main() -> int:
         sys.exit(f"source not found: {src}")
 
     src_text, src_out, twin, twin_out = build(src)
+    lint = lint_traditional(twin_out)
 
     if args.check:
         problems: list[str] = []
@@ -132,8 +162,10 @@ def main() -> int:
             print("FAIL: not in sync")
             for p in problems:
                 print("  -", p)
+            report_lint(lint)
             return 1
         print(f"OK: {src.name} and {twin.name} are in sync")
+        report_lint(lint)
         return 0
 
     wrote: list[str] = []
@@ -143,6 +175,7 @@ def main() -> int:
     twin.write_text(twin_out, encoding="utf-8")
     wrote.append(twin.name)
     print("wrote:", ", ".join(wrote))
+    report_lint(lint)
     return 0
 
 

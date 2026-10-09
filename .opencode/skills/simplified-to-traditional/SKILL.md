@@ -43,7 +43,7 @@ Convert one Simplified-Chinese article into Traditional Chinese, and keep the pa
    python3 .opencode/skills/simplified-to-traditional/scripts/sync_tra.py docs/<slug>-zh-hans.md
    ```
    It (a) injects/updates the Simplified file's `繁體版` cross-link, (b) converts the body with `opencc -c s2twp`, (c) injects the Traditional file's `简体版` cross-link, and (d) writes `docs/<slug>-zh-hant.md`.
-5. **Review** the generated Traditional against the Simplified. OpenCC can miss proper nouns, rare characters, or archaic terms. Surface anything suspicious to the user; do not silently hand-fix — a hand-edit is drift and will fail the next `--check`.
+5. **Review** the generated Traditional against the Simplified, and clear the script's lint. OpenCC can pick the wrong form for a 一简对多繁 character (see "OpenCC pitfalls" below) and can rewrite characters inside a quote. `sync_tra.py` prints a `⚠ … ambiguous form(s) to verify` list after every run — check each against the cited edition (or the intended meaning) and pin any genuine fix in `OVERRIDES`. Surface anything else suspicious to the user; do not silently hand-fix — a hand-edit is drift and will fail the next `--check`.
 6. **Verify** the pair is in sync:
    ```bash
    python3 .opencode/skills/simplified-to-traditional/scripts/sync_tra.py docs/<slug>-zh-hans.md --check
@@ -57,11 +57,27 @@ Convert one Simplified-Chinese article into Traditional Chinese, and keep the pa
 - `--check` regenerates the Traditional in memory and diffs it against the file (ignoring the cross-link lines); non-zero exit means out of sync.
 - **Do not treat the Traditional file as an editable primary.** Edit the Simplified and re-sync. If a term is genuinely mis-converted by OpenCC, tell the user and decide together, then pin it as a `(from, to)` pair in `scripts/sync_tra.py` → `OVERRIDES` — it is applied after OpenCC on every re-sync, so it survives (a hand-edit would not).
 
+## OpenCC pitfalls (一简对多繁)
+
+`opencc -c s2twp` is deterministic but context-blind: when one Simplified character maps to several Traditional ones, it can pick the wrong one for a rare, literary, or technical term. Two failure modes:
+
+- **Ambiguous characters.** e.g. `云`（说）→ `雲`（cloud）; `干` → `乾`（dry）/ `幹`（do）. Rare terms err most. `sync_tra.py` prints a lint of every risky form（`雲 幹 髮 複 …`）after each run — verify each against the cited edition and pin a fix in `OVERRIDES` if wrong.
+- **Register normalization.** `s2twp` may rewrite characters its Taiwan dictionary prefers（e.g. `哄`→`鬨`, `背`→`揹`）. Acceptable in running prose, but **wrong inside a verbatim quote** taken from another edition.
+
+### Quotes must match the cited edition
+
+Never delegate quoted primary text to a converter. For every verbatim quote, compare its Traditional characters with the edition named in the article's 引用来源; where `s2twp` differs, pin the `(from, to)` pair in `OVERRIDES`. Quoted text is otherwise frozen — do not change its characters or punctuation.
+
+### Pinning fixes (`OVERRIDES`)
+
+`OVERRIDES` in `sync_tra.py` is applied to the converted Traditional text after OpenCC, in order, on every re-sync. Add a pair only when OpenCC is genuinely wrong for this corpus; keep the list small and specific. Never hand-edit `-zh-hant.md` — a hand-edit is drift and fails `--check`.
+
 ## Verification checklist
 
 - [ ] Traditional file exists at `docs/<slug>-zh-hant.md`.
 - [ ] Both files carry the correct cross-link line directly under the H1 (Chinese label, `j3ffyang` URL, pointing at the other file).
 - [ ] `sync_tra.py <source> --check` exits 0.
+- [ ] The script's ambiguous-form lint was reviewed; genuine miscodings pinned in `OVERRIDES` (never hand-edited), and quotes verified against the cited edition.
 - [ ] The infographic reference points at the shared (Simplified) image; no broken `../imgs/`.
 - [ ] The Simplified file's body is otherwise unchanged (only the cross-link line added).
 - [ ] Nothing committed (commit only on explicit approval).
