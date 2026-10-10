@@ -55,7 +55,7 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
 1. **Wait for the user to point out the article** to sync. Do not start until they name it explicitly.
 2. **Confirm the plan** with the user: target category, `draft`/`featured`, and tags. Get their go-ahead before writing anything to `astro_journal`.
 3. **Locate the blog**: confirm `astro_journal` is checked out at `/home/jeff/pool/git/astro_journal`.
-4. **Read the source** article from `source`. If it has no frontmatter, infer the title from the first `#`/`##` heading and the date from the filename (or today if none).
+4. **Read the source** article from `source`. If it has no frontmatter, infer the title from the first `#`/`##` heading. The `yymmdd` prefix in the filename is only a **file-creation record** — it does **not** set the publish date (see step 9).
 5. **Fact-check before sync (for history/culture articles).** If syncing from `history/docs/` and a matching corrections doc exists (e.g. `docs/260808-corrections-by-citation.md`), confirm the article's 已修正 (confirmed fixes) are already applied, and surface any 待核实 (unverified) items to the user. Historical/literary claims must be verified against at least two independent reliable sources.
 6. **Determine the filename**: `yymmdd-lowercase-slug.md`. Normalize the slug: lowercase, hyphens only, strip underscores/camelCase and any existing date prefix/timestamp. Keep the 6-digit `yymmdd` date prefix.
 7. **Polish** (light): fix grammar/spelling/clarity in English; preserve code blocks, inline code, and technical terms verbatim. Do not rewrite substance.
@@ -65,7 +65,7 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
    ```yaml
    ---
    author: Jeff Yang
-   pubDatetime: <ISO-8601 datetime, e.g. 2026-08-03T08:00:00.000Z>
+   pubDatetime: <ISO-8601 publish time, e.g. 2026-10-10T03:22:32.000Z>
    title: <Post title>
    tags:
      - <tag1>
@@ -76,7 +76,7 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
    ---
    ```
 
-   `pubDatetime` comes from the source date if present, otherwise now. **Always use a UTC time that has already passed** — the blog's `postFilter` hides posts whose `pubDatetime` is in the future (even by minutes). A future time means the post won't appear on the homepage or in recent posts, though search may still index it. `modDatetime` is optional and only set when updating an existing post.
+   `pubDatetime` is the moment the post is **published** — use the current time when astro-sync runs, not the filename date. The `yymmdd` prefix in the filename is only a **file-creation record** and must **not** be used as `pubDatetime`. **Always use a UTC time that has already passed** — the blog's `postFilter` hides posts whose `pubDatetime` is in the future (even by minutes). A future time means the post won't appear on the homepage or in recent posts, though search may still index it. `modDatetime` is optional and only set when updating an existing post.
 
    **MUST quote any frontmatter value containing YAML-special characters — especially `: ` (colon + space).** An unquoted `description: Foo: bar` is parsed as a mapping and fails the build at content sync (`bad indentation of a mapping entry` / `mapping values are not allowed in this context`); Cloudflare then keeps the **previous** deployment, so the post never appears and search can't find it. Wrap the whole value in double quotes: `description: "Foo: bar"`. Applies to every field (`title`, `description`, …). This has recurred several times.
 10. **Write the post** to `src/data/blog/<category>/<filename>` with the frontmatter followed by the polished body.
