@@ -32,6 +32,7 @@ OPENCC = ["opencc", "-c", "s2twp.json"]
 OVERRIDES = [
     ("作者自雲", "作者自云"),  # 云 = "says" (作者自云), not 雲 "cloud"
     ("幹血之症", "乾血之症"),  # 乾 = dry (干血 = dry blood, a TCM condition); OpenCC picked 幹
+    ("里加", "裡加"),  # 里 = "inside" (…里加), not the unit 里; OpenCC misses 里 after Latin text (e.g. "README.md 里加")
 ]
 
 # One-Simplified-to-many-Traditional forms where OpenCC can pick the wrong
