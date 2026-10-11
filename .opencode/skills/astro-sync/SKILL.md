@@ -43,7 +43,7 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
   - When the user doesn't specify, ask which it is (per Procedure step 2);
     never auto-pick `true`.
   - See `astro_journal/AGENTS.md` → "Featured posts" for the full criteria, cap, and rotation rule; never flip `featured` without the user's explicit approval.
-- `tags` — List of lowercase hyphen-separated tags. Optional. Default derived from the article topic.
+- `tags` — List of lowercase hyphen-separated tags. Optional. Default derived from the article topic. **When the source is from `history/`** (Chinese history / literature / culture), always also include the four base tags `chinese`, `history`, `culture`, `literature` alongside the topic-specific tags; dedupe against tags already present.
 
 ## Outputs
 
@@ -90,6 +90,7 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
 
 - File is in `src/data/blog/<category>/` and named `yymmdd-lowercase-slug.md` (lowercase, hyphens only, 6-digit date prefix).
 - Frontmatter contains at least `author`, `pubDatetime`, `title`, `tags`, `description`; `draft`/`featured` present when applicable.
+- For a `history/`-sourced post, the `tags` list includes `chinese`, `history`, `culture`, and `literature` (alongside any topic tags).
 - Any frontmatter value containing `: ` (or other YAML-special characters) is double-quoted.
 - Every image reference in the post points to an existing file in `src/assets/images/` (verify with a glob/ls).
 - No `../imgs/` references remain in the post.
