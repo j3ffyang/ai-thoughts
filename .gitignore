@@ -1,4 +1,14 @@
+# Secrets, credentials, keys — never commit or push
 .env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+secrets/
+credentials/
 
 # Generated video output (final MP4s + scratch work), regenerable via video-gen skill
 videos/
