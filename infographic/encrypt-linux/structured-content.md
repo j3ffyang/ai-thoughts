@@ -1,13 +1,14 @@
 # Encrypting Linux
 
 ## Overview
-From a hack 20+ years ago to a working setup: LUKS for the OS, Veracrypt for USB disks, and an rsync backup — plus the honest limits.
+From a hack 20+ years ago to a working setup: a firewall first, then LUKS for the OS, Veracrypt for USB disks, and an rsync backup — plus the honest limits.
 
 ## Learning Objectives
 The viewer will understand:
 1. How a break-in led from detecting tampering to preventing it.
-2. What LUKS and Veracrypt each cover, and the key gotchas.
-3. That encryption protects data at rest only — and is not a backup.
+2. Why the firewall comes before encryption.
+3. What LUKS and Veracrypt each cover, and the key gotchas.
+4. That encryption protects data at rest only — and is not a backup.
 
 ---
 
@@ -50,7 +51,27 @@ The viewer will understand:
 
 ---
 
-## Section 3: LUKS
+## Section 3: Firewall First
+
+**Key Concept**: Lock the network before the disk.
+
+**Content**:
+- the break-in came over the wire — the host itself was the perimeter
+- `ipchains` → `iptables` → `nftables`; default-deny
+- `ufw` on Debian years ago, then `firewalld` (zones and services)
+
+**Visual Element**:
+- Type: shield diagram with a command chip
+- Subject: a shield over an open port, a default-deny rule
+- Treatment: alert accent on the deny rule
+
+**Text Labels**:
+- Headline: "Firewall First"
+- Labels: "default-deny", "iptables", "firewalld"
+
+---
+
+## Section 4: LUKS
 
 **Key Concept**: LUKS encrypts the whole OS except `/boot`.
 
@@ -70,7 +91,7 @@ The viewer will understand:
 
 ---
 
-## Section 4: cryptsetup
+## Section 5: cryptsetup
 
 **Key Concept**: The commands that build and protect the encrypted root.
 
@@ -89,12 +110,12 @@ The viewer will understand:
 
 ---
 
-## Section 5: Overhead
+## Section 6: Overhead
 
 **Key Concept**: With hardware AES, the cost is negligible.
 
 **Content**:
-- `aes-xts` 512b benches at ~6.2 GiB/s
+- `aes-xts` 512b benches at ~6 GiB/s
 - expect near-zero lag on sequential I/O
 
 **Visual Element**:
@@ -104,11 +125,11 @@ The viewer will understand:
 
 **Text Labels**:
 - Headline: "Overhead"
-- Labels: "~6.2 GiB/s", "near-zero lag", "AES-NI"
+- Labels: "~6 GiB/s", "near-zero lag", "AES-NI"
 
 ---
 
-## Section 6: Veracrypt
+## Section 7: Veracrypt
 
 **Key Concept**: Veracrypt encrypts partitions and USB disks, applied any time.
 
@@ -128,7 +149,7 @@ The viewer will understand:
 
 ---
 
-## Section 7: rsync Backup
+## Section 8: rsync Backup
 
 **Key Concept**: Mirror the LUKS home onto the Veracrypt USB — encryption is not backup.
 
@@ -150,7 +171,7 @@ The viewer will understand:
 ## Data Points — REFERENCE ONLY (never copy into the prompt)
 
 ### Statistics
-- "aes-xts 512b at ~6.2 GiB/s"
+- "aes-xts 512b at ~6 GiB/s"
 - "about 20+ years ago"
 - "without AES acceleration the cost jumps to 2–3× or more"
 

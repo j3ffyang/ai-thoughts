@@ -13,7 +13,7 @@ Create a professional infographic following these specifications:
 The list below is the **complete and only** text that may appear in the image. Each string appears **exactly once** — no repeated labels, no echoed headings, no duplicated cells, no mirrored imagery. Do not render any word from the sections below this one.
 
 Main title: `Encrypting Linux`
-Subtitle: `From a hack 20+ years ago to LUKS + Veracrypt`
+Subtitle: `From a hack 20+ years ago to firewalls, LUKS + Veracrypt`
 
 Module 1 headline: `The Hack That Started It`
 Module 1 labels: `hack` · `ls lied` · `tripwire` · `hash baseline`
@@ -21,20 +21,23 @@ Module 1 labels: `hack` · `ls lied` · `tripwire` · `hash baseline`
 Module 2 headline: `Detect to Prevent`
 Module 2 labels: `at rest: safe` · `unlocked: exposed`
 
-Module 3 headline: `LUKS: the Whole OS`
-Module 3 labels: `except /boot` · `ESP = FAT32` · `header backup` · `key slots`
+Module 3 headline: `Firewall First`
+Module 3 labels: `default-deny` · `iptables` · `firewalld`
 
-Module 4 headline: `cryptsetup`
-Module 4 labels: `luksFormat` · `open` · `luksHeaderBackup`
+Module 4 headline: `LUKS: the Whole OS`
+Module 4 labels: `except /boot` · `ESP = FAT32` · `header backup` · `key slots`
 
-Module 5 headline: `Overhead`
-Module 5 labels: `~6.2 GiB/s` · `near-zero lag` · `AES-NI`
+Module 5 headline: `cryptsetup`
+Module 5 labels: `luksFormat` · `open` · `luksHeaderBackup`
 
-Module 6 headline: `Veracrypt: USB & Partitions`
-Module 6 labels: `USB disks` · `veracrypt -c` · `cross-platform`
+Module 6 headline: `Overhead`
+Module 6 labels: `~6 GiB/s` · `near-zero lag` · `AES-NI`
 
-Module 7 headline: `rsync Backup`
-Module 7 labels: `rsync -aAXH --delete` · `LUKS to Veracrypt USB` · `encryption is not backup`
+Module 7 headline: `Veracrypt: USB & Partitions`
+Module 7 labels: `USB disks` · `veracrypt -c` · `cross-platform`
+
+Module 8 headline: `rsync Backup`
+Module 8 labels: `rsync -aAXH --delete` · `LUKS to Veracrypt USB` · `encryption is not backup`
 
 ## Core Principles
 
@@ -57,7 +60,7 @@ Module 7 labels: `rsync -aAXH --delete` · `LUKS to Veracrypt USB` · `encryptio
 
 ## Layout Guidelines
 
-High-density modular layout with seven typed information modules packed with concrete data. Each module serves one function and contains real data points, not generic description. Minimal whitespace, compact spacing, smaller text acceptable to maximize density. Each module sits in its own clearly bounded cell with a small badge-style header. Use big highlighted numerals for counts and the throughput figure. Reading order runs left to right, top to bottom across the modules. No decorative-only empty space; every region carries information.
+High-density modular layout with eight typed information modules packed with concrete data. Each module serves one function and contains real data points, not generic description. Minimal whitespace, compact spacing, smaller text acceptable to maximize density. Each module sits in its own clearly bounded cell with a small badge-style header. Use big highlighted numerals for counts and the throughput figure. Reading order runs left to right, top to bottom across the modules. No decorative-only empty space; every region carries information.
 
 ## Style Guidelines
 
@@ -71,7 +74,9 @@ Everything below is guidance for imagery, composition and meaning only — do **
 
 Module at top left: a broken-list icon beside a small shield motif — the illustration itself contains no text.
 
-Module at top center: a two-state icon pair — a closed padlock over a disk, and an open padlock over a screen.
+Module at top center-left: a two-state icon pair — a closed padlock over a disk, and an open padlock over a screen.
+
+Module at top center-right: a shield standing over an open port, with a small deny-rule cross motif.
 
 Module at top right: a disk graphic split into a tiny unlocked segment and a large locked segment.
 

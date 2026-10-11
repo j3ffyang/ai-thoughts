@@ -3,17 +3,17 @@ title: "Encrypting Linux: LUKS + Veracrypt"
 topic: "technical / personal narrative"
 data_type: "process (story) + system/structure + data/metrics"
 complexity: "moderate"
-point_count: 7
+point_count: 8
 source_language: "en"
 user_language: "en"
 ---
 
 ## Main Topic
-A personal account of how a hack 20+ years ago pushed the author from detecting tampering to preventing it — and the practical setup that resulted: LUKS for the OS, Veracrypt for USB disks, and an rsync backup routine.
+A personal account of how a hack 20+ years ago pushed the author from detecting tampering to preventing it — and the practical setup that resulted: the firewall first, then LUKS for the OS, Veracrypt for USB disks, and an rsync backup routine.
 
 ## Learning Objectives
 After viewing this infographic, the viewer should understand:
-1. The journey from detection (tripwire) to prevention (disk encryption).
+1. The journey from detection (tripwire) to prevention (firewall first, then disk encryption).
 2. What LUKS and Veracrypt each protect, where they differ, and the key gotchas (header backup, `/boot` cleartext).
 3. That encryption protects data at rest only, and is not a backup.
 
@@ -25,13 +25,13 @@ After viewing this infographic, the viewer should understand:
 ## Content Type Analysis
 - **Data Structure**: A narrative arc (hack → prevention) wrapping a two-tool system (LUKS + Veracrypt) plus a backup routine.
 - **Key Relationships**: detection → prevention; LUKS ↔ fixed disk; Veracrypt ↔ removable media; both ↔ "at rest"; rsync ↔ durability.
-- **Visual Opportunities**: a timeline/story band, a two-column tool split, big numbers (6.2 GiB/s), command chips, a caution badge.
+- **Visual Opportunities**: a timeline/story band, a firewall shield, a two-column tool split, big numbers (~6 GiB/s), command chips, a caution badge.
 
 ## Key Data Points (Verbatim)
 - "My experience with Linux dates from about 20+ years ago."
 - "hacked several times. The tell was `ls` — the listing did not match the files I knew surely were there"
 - "LUKS encrypts the entire operating system **except `/boot`**"
-- "`aes-xts` 512b at ~6.2 GiB/s"
+- "`aes-xts` 512b at ~6 GiB/s"
 - "Expect **near-zero** lag on sequential I/O"
 - "without AES acceleration the cost jumps to 2–3× or more"
 - "`veracrypt -c` walks through volume type (partition vs container file), size, and algorithm"
@@ -42,7 +42,7 @@ After viewing this infographic, the viewer should understand:
 - Content type: personal journey + technical system → suggests linear-progression or dense-modules
 - Tone: technical but personal, some caution → suggests technical-schematic or pop-laboratory
 - Audience: intermediate Linux users → legible, precise, not cute
-- Complexity: moderate (7 points) → balanced density
+- Complexity: moderate (8 points) → balanced density
 
 ## Design Instructions (from user input)
 None specified — skill invoked with the article only.

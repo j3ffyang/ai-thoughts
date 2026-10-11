@@ -304,7 +304,7 @@ if args.check:
 
 From `ai-thoughts` (most recent published articles):
 
-1. **"Encrypting Linux: from a hack 20+ years ago to LUKS and Veracrypt"** (Oct 2026) — A personal Linux security story — how a break-in 20+ years ago pushed me from detecting tampering (tripwire) to preventing it: LUKS full-disk encryption (xfs root, cleartext /boot), Veracrypt USB volumes, the threat model and its honest limits, AES-NI overhead, TRIM, and a daily rsync backup between two encrypted disks; with a visual summary infographic
+1. **"Encrypting Linux: from a hack 20+ years ago to firewalls, LUKS and Veracrypt"** (Oct 2026) — A personal Linux security story — how a break-in 20+ years ago pushed me from detecting tampering (tripwire) to preventing it: LUKS full-disk encryption (xfs root, cleartext /boot), Veracrypt USB volumes, the threat model and its honest limits, AES-NI overhead, TRIM, and a daily rsync backup between two encrypted disks; with a visual summary infographic
 2. **"Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload"** (Sep 2026) — Anatomy of a malicious GitHub repo invite: an obfuscated Tailwind/PostCSS plugin that runs npm install sql.js socket.io-client form-data axios at build time and loads a C2/credential-stealer toolset — static and sandboxed dynamic analysis, a zero-trust handling strategy, and full IoCs; with a visual summary infographic
 3. **"What Should You Know to Work Well with an AI Agent?"** (Sep 2026) — What you actually need to know to work well with an AI agent — clear description is the user's job, the skills that help (Markdown, skills, Python, YAML/GitHub Actions, Git, Linux, AGENTS.md/SKILL.md), why patch-on-patch agent code becomes unmaintainable, and the four things never to delegate alone
 4. **"Play Red Dead Redemption 2 with an AI Agent"** (Sep 2026) — Playing Red Dead Redemption 2 with an AI agent — documenting a playthrough in OpenCode with a custom skill and an AGENTS.md, on Arch Linux via Steam/Proton
@@ -348,4 +348,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** October 8, 2026 | Tracking: 6 active repos, 45 published articles, 10+ published skills
+**Last Updated:** October 11, 2026 | Tracking: 6 active repos, 45 published articles, 10+ published skills
