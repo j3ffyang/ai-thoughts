@@ -16,9 +16,9 @@ Publish and maintain the ClawHub skill registry. All skills are published to a s
 
 Skills come from three repos under the `negtivSpace` superproject. Each repo has its own `.github/workflows/clawhub-skill-sync.yml` that publishes its skills to ClawHub:
 
-- `history/` — publishes only `.opencode/skills/chinese-history-literature-culture` (via a `skill_path` entry). The `astro-sync` skill in `history/.opencode/skills/` is **local-only**: it stays in the repo for opencode to load, but is not published to ClawHub.
-- `ai-thoughts/.opencode/skills/` — `astro-sync`, `custom-infographic`, `publish-skills`, `resize-for-banner`, `translate-to-zh-hans`. All are published via a glob over `.opencode/skills/*/SKILL.md`, so `publish-skills` self-publishes like any other skill.
-- `ai-custom-skills/` — roots `openclaw/`, `hermes/`, `claude-code/`, plus the nested `claude-code/perplexity-downloader/perplexity-downloader` handled via a matrix `skill_path` entry. Data folders without a `SKILL.md` (e.g. `openclaw/twitter-bookmarks-exporter`) are skipped automatically.
+- `history/` — publishes only `.opencode/skills/chinese-history-literature-culture` (via a `skill_path` entry). The other skills in `history/.opencode/skills/` (`character-name-literary-origins`, `simplified-to-traditional`) are **local-only**: they stay in the repo for opencode to load but are not published to ClawHub. (`simplified-to-traditional` is published from its canonical `ai-thoughts` copy.)
+- `ai-thoughts/.opencode/skills/` — publishes **every** `.opencode/skills/<slug>/SKILL.md` folder via a glob, so any new skill is published automatically and `publish-skills` self-publishes like any other. Untracked/uncommitted folders are not on ClawHub until they are committed and pushed.
+- `ai-custom-skills/` — roots `openclaw/`, `hermes/`, `claude-code/` (each publishes its `*/SKILL.md` subfolders), plus the double-nested `claude-code/perplexity-downloader/perplexity-downloader` handled via a matrix `skill_path` entry. Folders without a `SKILL.md` (e.g. `openclaw/twitter-bookmarks-exporter`) are skipped automatically.
 
 ## Single-source rule — read before anything else
 
@@ -30,9 +30,10 @@ Skills come from three repos under the `negtivSpace` superproject. Each repo has
 
 ## Pipeline
 
-- Workflow per repo: `clawhub-skill-sync.yml` with a `dry-run` job (pull requests only) and a `publish` job (pushes / workflow_dispatch), both calling the reusable workflow `openclaw/clawhub/.github/workflows/skill-publish.yml` pinned to tag `v0.23.3` (no `@v1` tag exists).
-- Both jobs need `permissions: {contents: read, id-token: write}`; callers of the reusable workflow fail with `startup_failure` (`id-token: none`) if the job-level permission is missing.
-- Publishing uses the caller repo's checkout; a new or changed skill is detected by fingerprint. Unchanged skills are skipped (`alreadySynced`).
+- Workflow per repo: `clawhub-skill-sync.yml` with a `dry-run` job (pull requests only) and a `publish` job (pushes / `workflow_dispatch`).
+- `history/` and `ai-custom-skills/` call the reusable workflow `openclaw/clawhub/.github/workflows/skill-publish.yml` pinned to tag `v0.23.3` (no `@v1` tag exists). Both their jobs need `permissions: {contents: read, id-token: write}`; callers fail with `startup_failure` (`id-token: none`) if the job-level permission is missing.
+- `ai-thoughts/` instead runs the in-repo `scripts/clawhub_publish.py`, which invokes the pinned ClawHub CLI (`clawhub-source`, v0.23.3) directly with `bun` and a config file written from `secrets.clawhub_token`; its jobs need only `permissions: {contents: read}`.
+- Publishing uses the caller repo's checkout; a new or changed skill is detected by fingerprint. Unchanged skills are skipped (`alreadySynced` / `unchanged`).
 
 ## Status & version semantics
 
@@ -56,7 +57,7 @@ Skills come from three repos under the `negtivSpace` superproject. Each repo has
 - **`pending-publication` reported as failure** — treat as success; verify via the skills API.
 - **`startup_failure` / `id-token: none`** — the caller job is missing `permissions: {contents: read, id-token: write}`; add it.
 - **Nested skill not found** — the matrix `skill_path` must point at the folder containing the `SKILL.md` (double-nested folders need the full path).
-- **Slug collision** — `astro-sync` exists in both `history` and `ai-thoughts` with different content. `ai-thoughts` publishes it (canonical); `history`'s copy is local-only, kept out of ClawHub via `skill_path`. Never publish the same slug from two repos to the same owner.
+- **Slug collision** — `simplified-to-traditional` exists in both `history` and `ai-thoughts`. `ai-thoughts` publishes the canonical copy; `history`'s copy is local-only, kept out of ClawHub via `skill_path`. Never publish the same slug from two repos to the same owner.
 - **Protected slug namespace** — ClawHub rejects any slug starting with `clawhub-` or ending with `-clawhub` (`Error: "... uses the protected "clawhub" slug namespace"`). This skill went `skill-publish` → `clawhub-publish` (rejected) → `publish-skills`. The original `skill-publish` slug is ambiguous across owners (other users have their own), so `publish-skills` is the canonical, unique slug; the legacy `@j3ffyang/skill-publish` stays on ClawHub (no delete-via-push).
 - **Token missing** — publish fails without `clawhub_token`; it must be set as a secret on the `j3ffyang/*` repo.
 
