@@ -12,3 +12,7 @@ credentials/
 
 # Generated video output (final MP4s + scratch work), regenerable via video-gen skill
 videos/
+
+# Regenerable image/infographic backups (auto-created when regenerating assets)
+imgs/*-backup-*
+infographic/**/*-backup-*
