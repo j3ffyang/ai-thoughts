@@ -223,6 +223,23 @@ rows:
       - { label: "encrypt-linux", path: "docs/261002-encrypt-linux-zh-hans.md", lang: zh, label_zh: "加密 Linux：从一次入侵到 LUKS 与 Veracrypt" }
     desc_en: "A personal Linux security story — how a break-in 20+ years ago pushed me from detecting tampering (tripwire) to preventing it: LUKS full-disk encryption (xfs root, cleartext /boot), Veracrypt USB volumes, the threat model and its honest limits, AES-NI overhead, TRIM, and a daily rsync backup between two encrypted disks; with a visual summary infographic"
     desc_zh: "一段个人 Linux 安全故事——20 多年前的一次入侵如何把我从检测篡改（tripwire）推向预防它：LUKS 全盘加密（xfs 根分区、明文的 /boot）、Veracrypt USB 卷、威胁模型及其诚实的边界、AES-NI 开销、TRIM，以及两块加密磁盘之间的每日 rsync 备份；附视觉总结信息图"
+  - section: personal
+    status: published
+    links:
+      - { label: "secret-handling", path: "docs/261009-secret-handling.md", lang: en }
+      - { label: "secret-handling", path: "docs/261009-secret-handling-zh-hans.md", lang: zh, label_zh: "把机密挡在 Git 之外" }
+    desc_en: "A short checklist for keeping secrets out of git — why a committed secret is already compromised, the .gitignore patterns to add, where to state the policy (README, AGENTS.md), and three commands to verify nothing is hiding; with a visual summary infographic"
+    desc_zh: "一份让机密远离 git 的简短清单——为什么已提交的机密就已泄露、该补上哪些 .gitignore 模式、该在哪里声明政策（README、AGENTS.md），以及三条用来验证没有东西在藏匿的命令；附视觉总结信息图"
+  - section: personal
+    status: published
+    links:
+      - { label: "unix-is-art", path: "docs/261011-unix-is-art.md", lang: en }
+    desc_en: "A personal essay on the Unix philosophy as an aesthetic — its history from 1974 to 2004 (Thompson and Ritchie, McIlroy, Kernighan and Pike, Raymond), the ideas behind it and the critics of it, a remembrance of Dennis Ritchie, and what Unix made me"
+  - section: personal
+    status: published
+    links:
+      - { label: "cursor-to-vscodium", path: "docs/261014-cursor-to-vscodium.md", lang: en }
+    desc_en: "Replacing Cursor with a minimal, self-contained VSCodium AppImage on Arch — no forced agent panel, no telemetry, no account; three Open VSX extensions (Vim, Markdown Preview Enhanced, Markdown PDF); built-in Mermaid and local PlantUML rendering; manual updates; and a measured footprint comparison; with a visual summary infographic"
 
   # ------------------------------------------------------------ V. openclaw
   - section: openclaw
@@ -509,6 +526,11 @@ rows:
       - { label: "opencode-openrouter-model-selection", path: "docs/260927-opencode-openrouter-model-selection-chn.md", lang: zh, label_zh: "通过 OpenRouter 为 OpenCode 选择模型：隐私、价格与性能" }
     desc_en: "Picking a model and provider for OpenCode via OpenRouter — separating model origin from serving jurisdiction, tiering data-privacy risk, comparing DeepSeek/Qwen/GLM/Kimi/Gemini/OpenAI prices, and reproducing live rates with curl and Python"
     desc_zh: "通过 OpenRouter 为 OpenCode 选择模型与供应商——区分模型来源与推理服务所在地、数据隐私风险分级、DeepSeek/Qwen/GLM/Kimi/Gemini/OpenAI 价格对比，并附可复现的 curl/Python 取价脚本"
+  - section: drafts
+    status: draft
+    links:
+      - { label: "brave-leo-local-data", path: "docs/261013-brave-leo-local-data.md", lang: en }
+    desc_en: "Inside Brave Leo's local store — the single AIChat SQLite database, its schema for conversations/pages/search sources, why its at-rest OSCrypt encryption falls back to a hardcoded key without a keyring, what that structured local data could be used for, and why harvesting it team-wide is not worth it"
 
   # -------------------------------------------------------------- VII. cross (cont.)
   - section: cross
