@@ -54,7 +54,7 @@ Skills come from three repos under the `negtivSpace` superproject. Each repo has
 ## Error Handling
 
 - **`Version X.Y.Z already exists`** — confirm the skill already exists (skills API) and let the next run mark it `alreadySynced`; if the local content is genuinely newer, the workflow's next-patch bump handles it on its own.
-- **`pending-publication` reported as failure** — treat as success; verify via the skills API.
+- **`pending-publication` reported as failure** — treat as success; the wrapper script (v0.23.3) does not map this CLI status, so the run shows a red `X` even though the upload went through. **Verification has propagation lag**: the skills API may keep serving the *previous* `latestVersion` (and old `description`) for a few minutes, so a first check looks like a real miss. Re-poll `.../skills/<slug>` and `.../skills/<slug>/versions` for a few minutes; confirm `latestVersion` bumped *and* the new text is in `description` before concluding failure.
 - **`startup_failure` / `id-token: none`** — the caller job is missing `permissions: {contents: read, id-token: write}`; add it.
 - **Nested skill not found** — the matrix `skill_path` must point at the folder containing the `SKILL.md` (double-nested folders need the full path).
 - **Slug collision** — `simplified-to-traditional` exists in both `history` and `ai-thoughts`. `ai-thoughts` publishes the canonical copy; `history`'s copy is local-only, kept out of ClawHub via `skill_path`. Never publish the same slug from two repos to the same owner.
