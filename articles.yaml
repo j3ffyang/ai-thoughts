@@ -234,7 +234,9 @@ rows:
     status: published
     links:
       - { label: "unix-is-art", path: "docs/261011-unix-is-art.md", lang: en }
+      - { label: "unix-is-art", path: "docs/261011-unix-is-art-zh-hans.md", lang: zh, label_zh: "Unix 是艺术" }
     desc_en: "A personal essay on the Unix philosophy as an aesthetic — its history from 1974 to 2004 (Thompson and Ritchie, McIlroy, Kernighan and Pike, Raymond), the ideas behind it and the critics of it, a remembrance of Dennis Ritchie, and what Unix made me"
+    desc_zh: "一篇把 Unix 哲学当作美学的个人随笔——它从 1974 到 2004 年的历史（Thompson 与 Ritchie、McIlroy、Kernighan 与 Pike、Raymond）、它背后的思想与对它的批评、对 Dennis Ritchie 的纪念，以及 Unix 如何塑造了我"
   - section: personal
     status: published
     links:

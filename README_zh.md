@@ -17,7 +17,7 @@
 | 文章 | 简介 |
 |---|---|
 | [cursor-to-vscodium](docs/261014-cursor-to-vscodium.md) | Replacing Cursor with a minimal, self-contained VSCodium AppImage on Arch — no forced agent panel, no telemetry, no account; three Open VSX extensions (Vim, Markdown Preview Enhanced, Markdown PDF); built-in Mermaid and local PlantUML rendering; manual updates; and a measured footprint comparison; with a visual summary infographic |
-| [unix-is-art](docs/261011-unix-is-art.md) | A personal essay on the Unix philosophy as an aesthetic — its history from 1974 to 2004 (Thompson and Ritchie, McIlroy, Kernighan and Pike, Raymond), the ideas behind it and the critics of it, a remembrance of Dennis Ritchie, and what Unix made me |
+| [unix-is-art](docs/261011-unix-is-art.md) · [Unix 是艺术](docs/261011-unix-is-art-zh-hans.md) | 一篇把 Unix 哲学当作美学的个人随笔——它从 1974 到 2004 年的历史（Thompson 与 Ritchie、McIlroy、Kernighan 与 Pike、Raymond）、它背后的思想与对它的批评、对 Dennis Ritchie 的纪念，以及 Unix 如何塑造了我 |
 | [secret-handling](docs/261009-secret-handling.md) · [把机密挡在 Git 之外](docs/261009-secret-handling-zh-hans.md) | 一份让机密远离 git 的简短清单——为什么已提交的机密就已泄露、该补上哪些 .gitignore 模式、该在哪里声明政策（README、AGENTS.md），以及三条用来验证没有东西在藏匿的命令；附视觉总结信息图 |
 | [encrypt-linux](docs/261002-encrypt-linux.md) · [加密 Linux：从一次入侵到 LUKS 与 Veracrypt](docs/261002-encrypt-linux-zh-hans.md) | 一段个人 Linux 安全故事——20 多年前的一次入侵如何把我从检测篡改（tripwire）推向预防它：LUKS 全盘加密（xfs 根分区、明文的 /boot）、Veracrypt USB 卷、威胁模型及其诚实的边界、AES-NI 开销、TRIM，以及两块加密磁盘之间的每日 rsync 备份；附视觉总结信息图 |
 | [brisova-malware-analysis](docs/260929-brisova-malware-analysis.md) · [Brisova 恶意构建期载荷剖析](docs/260929-brisova-malware-analysis-chn.md) | 剖析一次恶意 GitHub 仓库邀请：一个混淆的 Tailwind/PostCSS 插件在构建期执行 npm install sql.js socket.io-client form-data axios，并加载 C2/凭据窃取工具集——含静态分析与沙箱动态分析、零信任处置策略及完整 IoC；附视觉总结信息图 |
