@@ -33,6 +33,13 @@ OVERRIDES = [
     ("作者自雲", "作者自云"),  # 云 = "says" (作者自云), not 雲 "cloud"
     ("幹血之症", "乾血之症"),  # 乾 = dry (干血 = dry blood, a TCM condition); OpenCC picked 幹
     ("里加", "裡加"),  # 里 = "inside" (…里加), not the unit 里; OpenCC misses 里 after Latin text (e.g. "README.md 里加")
+    ("幹淨", "乾淨"),  # 干 = dry/clean (干净), not 幹 "to do"
+    ("可擴充套件性", "可擴充性"),  # 拡展性 → 擴充性; s2twp leaks 套件 into the term
+    # Note: 分区 → 分割槽 is left as OpenCC renders it, to stay consistent with
+    # the already-published 261002-encrypt-linux-zh-hant.md (re-syncing that
+    # article would otherwise churn it for this one term).
+    ("介面連線", "介面連接"),  # 连接 = "connected by" (not 連線 "online link")
+    ("介面與實現", "介面與實作"),  # 实现 = implementation; Taiwan says 實作, not 實現 "to realize"
 ]
 
 # One-Simplified-to-many-Traditional forms where OpenCC can pick the wrong
