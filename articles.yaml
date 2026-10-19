@@ -144,6 +144,11 @@ rows:
   - section: cross
     status: published
     links:
+      - { label: "ste100-agent-instructions", path: "docs/261019-ste100-agent-instructions.md", lang: en }
+    desc_en: "ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed measurement of three AGENTS.md files, and a skill that applies the rules without flattening essay voice"
+  - section: cross
+    status: published
+    links:
       - { label: "agent-session-persistence", path: "docs/260920-agent-session-persistence.md", lang: en }
       - { label: "agent-session-persistence", path: "docs/260920-agent-session-persistence-chn.md", lang: zh, label_zh: "OpenCode 中的智能体会话持久化" }
     desc_en: "Where an OpenCode coding-agent session lives on disk and how it resumes — the single SQLite store, what it holds (schema and counts), the business data it becomes at team scale, context compaction, automatic pruning, and how to back it up"
