@@ -73,10 +73,11 @@ Sentence length in my own rule files, paths relative to the `negtivSpace` repo, 
 |---|---|---|---|
 | `opencode/AGENTS.md` (before) | 94 | **21 (22%)** | 12 |
 | `opencode/AGENTS.md` (after) | 147 | **0** | 0 |
-| `ai-thoughts/AGENTS.md` | 77 | **17 (22%)** | 6 |
+| `ai-thoughts/AGENTS.md` (before) | 77 | **17 (22%)** | 6 |
+| `ai-thoughts/AGENTS.md` (after) | 116 | **0** | 0 |
 | `negtivSpace/AGENTS.md` | 130 | 1 (1%) | 1 |
 
-Before the pilot, about a fifth of the sentences in the two working-rule files broke the 20-word limit. The pilot took `opencode/AGENTS.md` to zero: no sentence over 20 words, and no semicolons. `ai-thoughts/AGENTS.md` is unchanged at 17 (22%). The root file was already nearly clean, because it is written as short bullets.
+Before the pass, about a fifth of the sentences in both working-rule files broke the 20-word limit. Both are now at zero: no sentence over 20 words, and no semicolons. The root file was already nearly clean, because it is written as short bullets.
 
 ### The worst offender
 
@@ -159,7 +160,7 @@ The linter is the part that makes this more than a style preference. Useful chec
 
 ## How to apply it
 
-1. **Pilot on one file.** Rewrite `opencode/AGENTS.md` only, and measure before and after. Do not touch `ai-thoughts/AGENTS.md` until the numbers justify it; much of it instructs the human, not the agent.
+1. **Pilot on one file.** The pilot ran on `opencode/AGENTS.md` and measured before and after. `ai-thoughts/AGENTS.md` followed once the numbers justified it.
 2. **Rewrite rules, not rationale.** Keep the "why" sentences as descriptions under the 25-word limit. Deleting reasoning to meet a word count is a net loss.
 3. **Start with `STOP and RAISE HANDS`.** It is the highest-stakes rule and the longest sentence. The pilot started there and ended at zero errors.
 4. **Use the skill.** It lives at `ai-thoughts/.opencode/skills/asd-ste100/` and loads in every session. Publish it only after it has proved itself twice.
@@ -167,7 +168,7 @@ The linter is the part that makes this more than a style preference. Useful chec
 
 ## What is still not done
 
-The pilot edited `opencode/AGENTS.md`. All 19 linter errors are gone, and every rule, condition, and exception survived. The [`asd-ste100`](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/asd-ste100) skill summarizes the rules and omits the dictionary; it is not the standard. `ai-thoughts/AGENTS.md` is unchanged at 17 sentences over 20 words. The open question is no longer whether the limits survive real rules. It is whether the rewritten file reads as clearly to a human as it does to the linter.
+The pass covered both working-rule files. `opencode/AGENTS.md` went from 19 linter errors to zero; `ai-thoughts/AGENTS.md` went from 15 to zero. Every rule, condition, and exception survived. The [`asd-ste100`](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/asd-ste100) skill summarizes the rules and omits the dictionary; it is not the standard. The open question is no longer whether the limits survive real rules. It is whether the rewritten files read as clearly to a human as they do to the linter.
 
 The next step is to use the rewritten rules for a week, then wire the linter into review. A rule that cannot be checked will drift back to its original shape within a month.
 
