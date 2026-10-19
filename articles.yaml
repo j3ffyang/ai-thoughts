@@ -137,6 +137,11 @@ rows:
   - section: drafts
     status: draft
     links:
+      - { label: "ste100-rewrite-log", path: "docs/261019-ste100-rewrite-log.md", lang: en }
+    desc_en: "Before/after record of the ASD-STE100 pass on opencode/AGENTS.md: the linter measurements, the patterns applied, and the full unified diff"
+  - section: drafts
+    status: draft
+    links:
       - { label: "ollama-to-llamacpp", path: "docs/260803-ollama-to-llamacpp.md", lang: en }
       - { label: "ollama-to-llamacpp", path: "docs/260803-ollama-to-llamacpp-chn.md", lang: zh, label_zh: "从Ollama切换到llama.cpp" }
     desc_en: "Pushing the limit of a local LLM on Arch Linux (GPD): switching from Ollama to llama.cpp for finer VRAM control, higher efficiency, and better output quality with qwen2.5:14b"
