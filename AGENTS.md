@@ -86,5 +86,5 @@ Filled automatically: article count (unique published articles by YYMMDD from `a
 
 ## Repo conventions
 
-- Docs-only repository: no build/lint/test pipeline; only the README generator and its `--check` validation mode.
+- Docs-only repository: no build or test pipeline. Scripts are utilities, and several expose `--check` for CI (`gen_readmes.py`, `gen_portfolio.py`, `unwrap_md.py`, `verify_md_boxes.py`). Skills ship their own scripts too.
 - Two remotes on `main`: `negtivspace` and `j3ffyang` — push to both. `negtivspace` is a **normal GitHub user account** (a second personal account, "Negative Space 留白"), **not** an org. Editing `negtivspace/ai-thoughts` via `gh`/API (e.g. setting the About description/homepage) requires the `negtivspace` account's own token — the `j3ffyang` token gets 404 on that account's repos.
