@@ -260,7 +260,7 @@ if args.check:
 
 **Languages:** Python, JavaScript, TypeScript, Bash, YAML
 
-**AI Platforms:** 
+**AI Platforms:**
 - [OpenCode](https://opencode.ai) — terminal-native AI coding agent; my daily driver
 - [OpenClaw](https://openclaw.ai) — local agent orchestration
 - [Hermes Agent](https://hermes.ai) — autonomous workflow automation
