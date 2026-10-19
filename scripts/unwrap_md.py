@@ -25,7 +25,8 @@ LIST_ITEM = re.compile(r"^\s*(?:[-*+]|\d+[.)])\s+\S")
 HEADING = re.compile(r"^#{1,6}\s")
 HR = re.compile(r"^(?:---|\*\*\*|___)\s*$")
 FENCE = re.compile(r"^\s*(?:```|~~~)")
-CLOSE_FENCE = re.compile(r"^\s*(?:```|~~~)\s*$")
+FENCE_OPEN = re.compile(r"^\s*(`{3,}|~{3,})")
+FENCE_CLOSE = re.compile(r"^\s*(`{3,}|~{3,})\s*$")
 TABLE = re.compile(r"^\s*\|")
 PIPE = re.compile(r"\|")
 
@@ -99,16 +100,21 @@ def unwrap(text: str) -> str:
             i += 1
 
     in_fence = False
+    fence = ("", 0)
     while i < n:
         ln = lines[i]
         s = ln.strip()
         if in_fence:
             out.append(ln)
-            if CLOSE_FENCE.match(ln):
+            close = FENCE_CLOSE.match(ln)
+            if close and close.group(1)[0] == fence[0] and len(close.group(1)) >= fence[1]:
                 in_fence = False
+                fence = ("", 0)
             i += 1
             continue
-        if FENCE.match(s):
+        opening = FENCE_OPEN.match(ln)
+        if opening:
+            fence = (opening.group(1)[0], len(opening.group(1)))
             in_fence = True
             out.append(ln)
             i += 1
