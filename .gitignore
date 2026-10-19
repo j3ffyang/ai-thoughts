@@ -16,3 +16,7 @@ videos/
 # Regenerable image/infographic backups (auto-created when regenerating assets)
 imgs/*-backup-*
 infographic/**/*-backup-*
+
+# Python bytecode from skill scripts (regenerated on every run)
+__pycache__/
+*.pyc
