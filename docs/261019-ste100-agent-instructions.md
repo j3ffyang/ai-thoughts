@@ -71,19 +71,20 @@ Sentence length in my own rule files, paths relative to the `negtivSpace` repo, 
 
 | File | Sentences | Over 20 words | Over 25 words |
 |---|---|---|---|
-| `opencode/AGENTS.md` | 94 | **21 (22%)** | 12 |
-| `ai-thoughts/AGENTS.md` | 75 | **17 (23%)** | 6 |
+| `opencode/AGENTS.md` (before) | 94 | **21 (22%)** | 12 |
+| `opencode/AGENTS.md` (after) | 147 | **0** | 0 |
+| `ai-thoughts/AGENTS.md` | 77 | **17 (22%)** | 6 |
 | `negtivSpace/AGENTS.md` | 130 | 1 (1%) | 1 |
 
-In the two working-rule files, about a fifth of the sentences break the 20-word procedural limit. Even against the looser 25-word descriptive limit, `opencode/AGENTS.md` has 12 offenders. The root `AGENTS.md` is nearly clean, because it is written as short bullets.
+Before the pilot, about a fifth of the sentences in the two working-rule files broke the 20-word limit. The pilot took `opencode/AGENTS.md` to zero: no sentence over 20 words, and no semicolons. `ai-thoughts/AGENTS.md` is unchanged at 17 (22%). The root file was already nearly clean, because it is written as short bullets.
 
 ### The worst offender
 
-The safety rule in `opencode/AGENTS.md` runs almost 60 words, with the trigger buried after three imperatives:
+The safety rule in `opencode/AGENTS.md` ran almost 60 words before the pilot, with the trigger buried after three imperatives:
 
 > "**STOP and RAISE HANDS immediately** — halt the run, do not continue, report to the user at once with what was attempted — if executed code reads the filesystem outside `/tmp`…"
 
-The sentence then continues with four more triggers: credentials, data exfiltration, child processes or network connections, and deceptive behavior. Apply Rule 5.4 (condition first) and Rule 5.2 (one action per sentence):
+The sentence continued with four more triggers: credentials, data exfiltration, child processes or network connections, and deceptive behavior. I applied Rule 5.4 (condition first) and Rule 5.2 (one action per sentence):
 
 ```
 If executed code does any of these things, stop:
@@ -95,7 +96,7 @@ If executed code does any of these things, stop:
 Do not continue the run. Report to the user now. Say what was attempted.
 ```
 
-Same policy, no dropped condition, four checkable actions, five flat triggers. Note that the rewrite is not shorter than the original. STE trades brevity for checkability, and that is the whole argument in one example.
+Same policy, no dropped condition, four checkable actions, five flat triggers. The rewrite is not shorter than the original. STE trades brevity for checkability, and the pilot confirms it: the file went from 19 linter errors to zero.
 
 ### What the constraint buys
 
@@ -160,14 +161,14 @@ The linter is the part that makes this more than a style preference. Useful chec
 
 1. **Pilot on one file.** Rewrite `opencode/AGENTS.md` only, and measure before and after. Do not touch `ai-thoughts/AGENTS.md` until the numbers justify it; much of it instructs the human, not the agent.
 2. **Rewrite rules, not rationale.** Keep the "why" sentences as descriptions under the 25-word limit. Deleting reasoning to meet a word count is a net loss.
-3. **Start with `STOP and RAISE HANDS`.** It is the highest-stakes rule and the longest sentence. If the rewrite works anywhere, it works there.
+3. **Start with `STOP and RAISE HANDS`.** It is the highest-stakes rule and the longest sentence. The pilot started there and ended at zero errors.
 4. **Use the skill.** It lives at `ai-thoughts/.opencode/skills/asd-ste100/` and loads in every session. Publish it only after it has proved itself twice.
 5. **Leave the articles alone.** If STE helps an article, it helps by removing ambiguity in technical steps, not by flattening the voice.
 
 ## What is still not done
 
-No `AGENTS.md` was edited for this article. The [`asd-ste100`](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/asd-ste100) skill now exists and is linked above. It summarizes the rules and omits the dictionary. It is not the standard. The measurement above is evidence for a later decision, not the decision itself. The open question is whether the 20/25-word limits survive contact with real rules that must name files, commands, and paths — the pilot answers that, not the argument.
+The pilot edited `opencode/AGENTS.md`. All 19 linter errors are gone, and every rule, condition, and exception survived. The [`asd-ste100`](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/asd-ste100) skill summarizes the rules and omits the dictionary; it is not the standard. `ai-thoughts/AGENTS.md` is unchanged at 17 sentences over 20 words. The open question is no longer whether the limits survive real rules. It is whether the rewritten file reads as clearly to a human as it does to the linter.
 
-If the pilot works, the next step is to wire the linter into review, because a rule that cannot be checked will drift back to its original shape within a month.
+The next step is to use the rewritten rules for a week, then wire the linter into review. A rule that cannot be checked will drift back to its original shape within a month.
 
 btw, i use arch
