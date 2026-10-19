@@ -23,7 +23,7 @@ All code prioritizes **clarity over cleverness**: simple, readable, portable, an
 
 **⚡ OpenCode — the growing collection, auto-published to ClawHub**
 
-My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawHub](https://clawhub.ai/j3ffyang) automatically on every push — no local installs, one owner account. The collection is growing fastest here:
+My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawHub](https://clawhub.ai/j3ffyang) automatically on every push to `j3ffyang` — no local installs, one owner account. The collection is growing fastest here:
 
 - **`astro-sync`** — convert & polish an article into an AstroPaper post for the astro_journal blog (everbox.io), images included
 - **`resize-for-banner`** — 16:9 (LinkedIn) / 5:2 (X) social banners, padded black, never cropped, never overwrites the source
@@ -32,11 +32,11 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Platform | Repo | Purpose | Latest | Status |
 |----------|------|---------|--------|--------|
-| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`astro-sync`](https://clawhub.ai/j3ffyang) (article → AstroPaper post for everbox.io, images included), [`resize-for-banner`](https://clawhub.ai/j3ffyang) (16:9 / 5:2 social banners, padded never cropped), [`translate-to-zh-hans`](https://clawhub.ai/j3ffyang) (article → Simplified Chinese `-zh-hans.md` twin), [`simplified-to-traditional`](https://clawhub.ai/j3ffyang) (zh-hans → zh-hant twin sync). Auto-published to ClawHub on every push. | `add auto-wrap tool` (Aug 2026) | 🔄 Active |
-| **Hermes** ⚕ | **[hermes-custom-skills](https://github.com/negtivspace/hermes-custom-skills)** | Specialized skills for [Hermes Agent](https://hermes.ai) — autonomous workflows, content generation, task orchestration. | `docs: add README and CONTRIBUTING` (Jul 2026) | 🔄 Active |
-| **OpenClaw** 🦞 | **[openclaw-custom-skills](https://github.com/negtivspace/openclaw-custom-skills)** | Production skills for [OpenClaw](https://openclaw.ai) published to ClawHub. Multilingual blog publishing, media generation. | `add chinese edition` (Jul 2026) | 🔄 Active |
-| **Claude Code** | **[claude-custom-skills](https://github.com/negtivspace/claude-custom-skills)** | Automation skills for [Claude Code](https://claude.ai) — productivity hacks, data export, content workflows. | `add i18n support to README` (Jul 2026) | ✨ Stable |
-| **Multi-platform** | **[ai-custom-skills](https://github.com/negtivspace/ai-custom-skills)** | Production-ready skills across platforms (Claude Code, Hermes, OpenClaw) — content creation, data export, workflow automation. | `add new skill and tidy up the repo` (Jul 2026) | 🔄 Active |
+| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`astro-sync`](https://clawhub.ai/j3ffyang) (article → AstroPaper post for everbox.io, images included), [`resize-for-banner`](https://clawhub.ai/j3ffyang) (16:9 / 5:2 social banners, padded never cropped), [`translate-to-zh-hans`](https://clawhub.ai/j3ffyang) (article → Simplified Chinese `-zh-hans.md` twin), [`simplified-to-traditional`](https://clawhub.ai/j3ffyang) (zh-hans → zh-hant twin sync). Auto-published to ClawHub on every push to `j3ffyang`. | `add auto-wrap tool` (Aug 2026) | 🔄 Active |
+| **Hermes** ⚕ | **[hermes-custom-skills](https://github.com/negtivspace/hermes-custom-skills)** | Specialized skills for [Hermes Agent](https://hermes.ai) — autonomous workflows, content generation, task orchestration. | `docs: add README and CONTRIBUTING` (Apr 2026) | 🔄 Active |
+| **OpenClaw** 🦞 | **[openclaw-custom-skills](https://github.com/negtivspace/openclaw-custom-skills)** | Production skills for [OpenClaw](https://openclaw.ai) published to ClawHub. Multilingual blog publishing, media generation. | `add chinese edition` (Apr 2026) | 🔄 Active |
+| **Claude Code** | **[claude-custom-skills](https://github.com/negtivspace/claude-custom-skills)** | Automation skills for [Claude Code](https://claude.ai) — productivity hacks, data export, content workflows. | `add i18n support to README` (Apr 2026) | ✨ Stable |
+| **Multi-platform** | **[ai-custom-skills](https://github.com/negtivspace/ai-custom-skills)** | Production-ready skills across platforms (Claude Code, Hermes, OpenClaw) — content creation, data export, workflow automation. | `docs: point all ClawHub links to clawhub.ai/j3ffyang` (Oct 2026) | 🔄 Active |
 
 ### Writing & Documentation
 
@@ -216,7 +216,8 @@ else:
 
 ---
 
-### Example: Keep the Profile README's Numbers Honest with Python
+### Example (legacy): Keep the Profile README's Numbers Honest with Python
+**Status:** legacy. The `PORTFOLIO.md` pipeline superseded this script; kept as a record.
 **Repo:** `negtivSpace` | **Language:** Python | **Purpose:** Recompute every derived number in the profile README (skills, repos, articles, Quick Links) from the nested repos
 
 ```python
@@ -343,4 +344,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** {{LAST_UPDATED}} | Tracking: 6 active repos, {{ARTICLE_COUNT}} published articles, 10+ published skills
+**Last Updated:** {{LAST_UPDATED}} | Tracking: 6 active repos, {{ARTICLE_COUNT}} published articles, 20+ published skills
