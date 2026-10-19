@@ -2,46 +2,46 @@
 
 ## Project
 
-Personal repository of AI/tech articles and bilingual (Chinese / English) essays — including OpenClaw/Hermes notes, history, culture, and second-brain write-ups — with a YAML-driven README index.
+Personal repository of AI/tech articles and bilingual (Chinese / English) essays. Topics include OpenClaw/Hermes notes, history, culture, and second-brain write-ups. A YAML-driven README index lists them.
 
 ## Working rules
 
-The universal working rules (approval before changes, commit only when asked, honesty, ground truth, rollback, brand conventions) are defined in the global `~/.config/opencode/AGENTS.md` and apply here too. This file adds only what is specific to this repo.
+The universal working rules are defined in the global `~/.config/opencode/AGENTS.md` and apply here too. They cover approval, commits, honesty, ground truth, rollback, and brand conventions. This file adds only what is specific to this repo.
 
-- **Rollback defaults.** Git-tracked files → `git restore` / `git revert`; generated output (`README.md`, `README_zh.md`, `PORTFOLIO.md`) → regenerate from its source of truth (`articles.yaml` / the portfolio template).
+- **Rollback defaults.** Git-tracked files → `git restore` / `git revert`. Generated output (`README.md`, `README_zh.md`, `PORTFOLIO.md`) → regenerate from its source of truth (`articles.yaml` / the portfolio template).
 
 ## Host safety (whole machine, not just this repo)
 
 Do not damage the machine to satisfy a tool.
 
-- **Never `sudo` a package install.** No `sudo npm`, `sudo npm install -g`, `sudo pip`, `sudo gem`, or similar. A stray `sudo` leaves root-owned files behind and can lock the desktop login (this happened once: a `sudo npm` install took Arch's login down). Install user-level instead — `nvm`, `~/.local`, `--prefix`, `pipx`.
-- **Never blanket-`chown`/`chmod` to "fix" a permission error.** Do not run `chown -R` / `chmod -R` over system paths or a home tree. If ownership is already broken, repair it precisely: find the owning package with `pacman -Qo <path>` (or the distro equivalent), then `chown` only the affected files back to `$USER`.
+- **Never `sudo` a package install.** No `sudo npm`, `sudo npm install -g`, `sudo pip`, `sudo gem`, or similar. A stray `sudo` leaves root-owned files behind and can lock the desktop login. This happened once: a `sudo npm` install took Arch's login down. Install user-level instead — `nvm`, `~/.local`, `--prefix`, `pipx`.
+- **Never blanket-`chown`/`chmod` to "fix" a permission error.** Do not run `chown -R` / `chmod -R` over system paths or a home tree. If ownership is already broken, repair it precisely. Find the owning package with `pacman -Qo <path>`, or the distro equivalent. Then `chown` only the affected files back to `$USER`.
 - **A permission error is a clue, not a licence to escalate.** When unsure, stop and ask.
 
 ## Writing conventions
 
 - **No hard-wrap.** Avoid hard-wrap at all, including `docs/`, `.opencode/skills/`, and agents — prose is one paragraph per line. Verify with `python scripts/unwrap_md.py --check`, or run `python scripts/unwrap_md.py` to unwrap.
 - **Chinese files are translations of the English original.** Every Chinese markdown file is translated from, and identical in content to, its English counterpart — only the language differs. Don't search the Chinese file as a reference, unless otherwise specified.
-- **Arch sign-off.** Every article in `docs/` ends with the line `btw, i use arch` as its final paragraph, unless the user explicitly says otherwise. It stays verbatim English in both EN and ZH versions; don't duplicate it if already present, and never add it to READMEs or `articles.yaml`. See the `arch-sign-off` skill for the exact command.
-- **Box diagrams.** A fenced code block that draws a box (`┌ ┐ └ ┘ │ ─`) must be square: every content row's walls line up with the corners, and arrow connectors line up with the `┬` marks. Never hand-count a box — generate it programmatically, then verify with `python scripts/verify_md_boxes.py <file>` (add `--check` for CI). Blocks with genuinely nested / mixed-width boxes are out of scope for the check.
+- **Arch sign-off.** Every article in `docs/` ends with the line `btw, i use arch` as its final paragraph, unless the user explicitly says otherwise. It stays verbatim English in both EN and ZH versions. Do not duplicate it if already present, and never add it to READMEs or `articles.yaml`. See the `arch-sign-off` skill for the exact command.
+- **Box diagrams.** A fenced code block that draws a box (`┌ ┐ └ ┘ │ ─`) must be square. Every content row's walls line up with the corners. Arrow connectors line up with the `┬` marks. Never hand-count a box — generate it programmatically, then verify with `python scripts/verify_md_boxes.py <file>` (add `--check` for CI). Blocks with genuinely nested / mixed-width boxes are out of scope for the check.
 
 ## Filename conventions
 
-Every file in `docs/` and `imgs/` follows a `YYMMDD-slug` pattern: a 6-digit date (`YYMMDD`, no `HHMM`, no `YYYY-MM-DD`), a hyphen, then a lowercase slug. No spaces.
+Every file in `docs/` and `imgs/` follows a `YYMMDD-slug` pattern. The date is 6 digits (`YYMMDD`, no `HHMM`, no `YYYY-MM-DD`). A hyphen follows, then a lowercase slug. No spaces.
 
 - **Articles** — `docs/<YYMMDD>-<slug>.md`, e.g. `260313-openclaw-thoughts.md`.
-- **Chinese translations** — Simplified: `docs/<YYMMDD>-<slug>-zh-hans.md`; its Traditional twin (generated by the `simplified-to-traditional` skill): `docs/<YYMMDD>-<slug>-zh-hant.md`. The legacy `-chn.md` suffix predates this rule — existing files keep it until the user explicitly migrates them, but new translations always use `-zh-hans.md`.
-- **Images** — `imgs/<YYMMDD>-<slug>.<ext>`, e.g. `260313-main.png`; images for an article share the article's `YYMMDD` prefix.
+- **Chinese translations** — Simplified: `docs/<YYMMDD>-<slug>-zh-hans.md`. Its Traditional twin, generated by the `simplified-to-traditional` skill: `docs/<YYMMDD>-<slug>-zh-hant.md`. The legacy `-chn.md` suffix predates this rule. Existing files keep it until the user explicitly migrates them. New translations always use `-zh-hans.md`.
+- **Images** — `imgs/<YYMMDD>-<slug>.<ext>`, e.g. `260313-main.png`. Images for an article share the article's `YYMMDD` prefix.
 - **Screenshots / captures with no meaningful name** — keep the capture time as the slug, e.g. `260506-180248.png` (from `2026-05-06-180248_hyprshot.png`).
 - **Renaming** — when a file is renamed, update every `../imgs/<file>` and doc link that referenced the old name.
 
 ## Image housekeeping
 
-`imgs/` holds assets that are not always referenced from a file in this repo — treat "unreferenced" as a question, never a delete signal on its own.
+`imgs/` holds assets that a file in this repo does not always reference. Treat "unreferenced" as a question, never as a delete signal.
 
-- **Social banner assets are consumed outside the repo.** Files like `imgs/*-banner-twitter.png` (and `*-xbanner`, `*-1500x600`, `*-5x2`) are generated by the `resize-for-banner` skill and uploaded manually (e.g. to twitter.com) when publishing an article. Nothing in the repo links them, so a reference-based "unreferenced images" sweep must **never** flag them as deletable.
-- **Auto-generated backups are disposable.** `imgs/*-backup-*` and `infographic/**/*-backup-*` are byproducts of regenerating an asset; they are gitignored and can be deleted freely.
-- **Before deleting any image, confirm it is genuinely unused** — check in-repo references *and* account for externally-consumed assets like the banners above.
+- **Social banner assets are consumed outside the repo.** Files like `imgs/*-banner-twitter.png` (and `*-xbanner`, `*-1500x600`, `*-5x2`) come from the `resize-for-banner` skill. They are uploaded manually, e.g. to twitter.com, when publishing an article. Nothing in the repo links them, so a reference-based "unreferenced images" sweep must **never** flag them as deletable.
+- **Auto-generated backups are disposable.** `imgs/*-backup-*` and `infographic/**/*-backup-*` are byproducts of regenerating an asset. They are gitignored and can be deleted freely.
+- **Before deleting any image, confirm it is genuinely unused.** Check in-repo references, and account for externally consumed assets like the banners above.
 
 ## README index workflow
 
@@ -52,26 +52,26 @@ python scripts/gen_readmes.py              # regenerate both READMEs
 python scripts/gen_readmes.py --check      # CI/verification: exit 1 if a README is stale
 ```
 
-**Ordering is automatic — don't hand-order.** Article sections are sorted by their newest post (most recently updated first), rows are newest-first within each section, and drafts are pinned last. The `Published Skills on ClawHub` block is derived from `.opencode/skills/*/SKILL.md` frontmatter (no `articles.yaml` entry is needed for a skill) and sits between the articles and the drafts section. Section order drifting over time is intended — it's how the most active topics stay on top.
+**Ordering is automatic — don't hand-order.** The generator sorts article sections by their newest post, most recently updated first. Rows are newest-first within each section. Drafts are pinned last. The `Published Skills on ClawHub` block comes from `.opencode/skills/*/SKILL.md` frontmatter. No `articles.yaml` entry is needed for a skill. That block sits between the articles and the drafts section. Section order drifting over time is intended — it's how the most active topics stay on top.
 
 To add or update an article:
 
 1. Drop the file into `docs/` (follow the rules in "Filename conventions").
 2. Add/update a row in `articles.yaml`:
-   - English article → link with `lang: en` (+ `desc_en`; no `desc_zh` until a `-zh-hans.md` — or a legacy `-chn.md` — exists)
+   - English article → link with `lang: en` (+ `desc_en`). Do not add `desc_zh` until a `-zh-hans.md`, or a legacy `-chn.md`, exists.
    - Chinese article → link with `lang: zh` (+ `desc_zh`)
-   - Draft/working note → set `section: drafts` (lands in the Drafts & Working Notes section). Keep `status: draft` too — `status` is metadata only (`draft` or `published`) and never affects placement; the generator routes rows by `section`.
+   - Draft/working note → set `section: drafts` (lands in the Drafts & Working Notes section). Keep `status: draft` too. `status` is metadata only (`draft` or `published`) and never affects placement. The generator routes rows by `section`.
    - Optional `label_zh` on a link gives the Chinese display name in `README_zh.md` (Chinese articles usually get one).
 3. Run the generator, confirm the diff shows only the intended row, and commit `articles.yaml` + both regenerated READMEs together.
 
 **Note:** `gen_readmes.py` prints a warning for every `docs/*.md` not listed in `articles.yaml` (e.g. unregistered drafts). That's expected until the row is added — it's a reminder, not an error.
 
-The generator also **fails hard** on invalid manifests: unknown `section`, missing `desc_zh` on any row where the English article's `-zh-hans.md` counterpart exists in `docs/` (or a legacy `-chn.md` counterpart, or the row carries a `lang: zh` link), missing `desc_en` on any row with a `lang: en` link, or a `path` that points to a missing file. Fix those before committing. An EN-only row (no Chinese counterpart yet) may omit `desc_zh` — `README_zh.md` then falls back to its `desc_en`. The trigger for adding `desc_zh` is the `-zh-hans.md` (or legacy `-chn.md`) file existing in the same folder; add `desc_zh` together with that Chinese version.
+The generator also **fails hard** on invalid manifests. It rejects an unknown `section`. It rejects a missing `desc_zh` when the English article has a `-zh-hans.md` or legacy `-chn.md` counterpart. It also rejects a `lang: zh` link without `desc_zh`. It rejects a missing `desc_en` on any row with a `lang: en` link. It rejects a `path` that points to a missing file. Fix those before you commit. An EN-only row may omit `desc_zh`, and `README_zh.md` then falls back to `desc_en`. Add `desc_zh` only when the `-zh-hans.md`, or legacy `-chn.md`, file exists in the same folder.
 
 ### EN / ZH routing rule
 
 - `README.md` keeps a row only if it has at least one `lang: en` link, and renders just those English links.
-- `README_zh.md` shows **all** rows (EN + ZH) with Chinese descriptions; Chinese display labels come from `label_zh` where set, English slugs otherwise.
+- `README_zh.md` shows **all** rows (EN + ZH) with Chinese descriptions. Chinese display labels come from `label_zh` where set, and English slugs otherwise.
 
 ## PORTFOLIO.md workflow
 
@@ -82,9 +82,9 @@ python scripts/gen_portfolio.py              # regenerate PORTFOLIO.md
 python scripts/gen_portfolio.py --check      # CI/verification: exit 1 if stale
 ```
 
-Filled automatically: article count (unique published articles by YYMMDD from `articles.yaml`), the ai-thoughts repo row's latest commit, the "Latest Articles" list (top N published articles by date, deduped by YYMMDD), and the "Last Updated" date. Editorial content (the Activity Timeline, repo tables, tech stack, etc.) lives in the template — edit the template, then regenerate.
+The generator fills four things automatically. It fills the article count, which is the unique published articles by YYMMDD from `articles.yaml`. It fills the ai-thoughts repo row's latest commit. It fills the "Latest Articles" list: the top N published articles by date, deduped by YYMMDD. It fills the "Last Updated" date. Editorial content (the Activity Timeline, repo tables, tech stack, etc.) lives in the template — edit the template, then regenerate.
 
 ## Repo conventions
 
 - Docs-only repository: no build or test pipeline. Scripts are utilities, and several expose `--check` for CI (`gen_readmes.py`, `gen_portfolio.py`, `unwrap_md.py`, `verify_md_boxes.py`). Skills ship their own scripts too.
-- Two remotes on `main`: `negtivspace` and `j3ffyang` — push to both. `negtivspace` is a **normal GitHub user account** (a second personal account, "Negative Space 留白"), **not** an org. Editing `negtivspace/ai-thoughts` via `gh`/API (e.g. setting the About description/homepage) requires the `negtivspace` account's own token — the `j3ffyang` token gets 404 on that account's repos.
+- Two remotes on `main`: `negtivspace` and `j3ffyang` — push to both. `negtivspace` is a **normal GitHub user account** (a second personal account, "Negative Space 留白"), **not** an org. Editing `negtivspace/ai-thoughts` via `gh`/API requires the `negtivspace` account's own token. This includes setting the About description or homepage. The `j3ffyang` token gets 404 on that account's repos.
