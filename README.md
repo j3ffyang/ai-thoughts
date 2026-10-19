@@ -12,7 +12,26 @@ Custom OpenCode skills developed here auto-publish to [ClawHub](https://clawhub.
 
 ## Contents
 
-### I. Personal Tech, Privacy & Gaming
+### I. Cross-Platform & Comparative
+
+| Article | Description |
+|---|---|
+| [ste100-agent-instructions](docs/261019-ste100-agent-instructions.md) | ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed measurement of three AGENTS.md files, and a skill that applies the rules without flattening essay voice |
+| [what-to-know-work-with-ai](docs/260922-what-to-know-work-with-ai.md) | What you actually need to know to work well with an AI agent — clear description is the user's job, the skills that help (Markdown, skills, Python, YAML/GitHub Actions, Git, Linux, AGENTS.md/SKILL.md), why patch-on-patch agent code becomes unmaintainable, and the four things never to delegate alone |
+| [agent-session-persistence](docs/260920-agent-session-persistence.md) | Where an OpenCode coding-agent session lives on disk and how it resumes — the single SQLite store, what it holds (schema and counts), the business data it becomes at team scale, context compaction, automatic pruning, and how to back it up |
+| [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly.md) | Create SKILL.md, AGENTS.md, and PERSONA.md on the fly instead of hunting others' skills — three levels of customization, real benefits from daily use, and OpenCode as the daily agent |
+| [agents-md-not-a-persona](docs/260821-agents-md-not-a-persona.md) | AGENTS.md is not a persona but a constitution written in scars — every rule traced to a real incident (a self-cloned repo, lying docs, a prompt flood), agent-agnostic lessons for any AI coding agent |
+| [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) | Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable |
+| [agents-opencode-config](docs/260811-agents-opencode-config.md) | OpenCode AGENTS.md + opencode.jsonc — architecture, precedence and workflow: how the two surfaces load, resolve conflicts, evaluate permissions, and isolate across submodule context walls; verified against anomalyco/opencode source HEAD e11dbd0. |
+| [port-skill-to-opencode](docs/260811-port-skill-to-opencode.md) | How to port an existing Hermes Agent skill to OpenCode — copy the folder, rewrite frontmatter, fix paths, and test the router |
+| [opencode-git-underrated](docs/260809-opencode-git-underrated.md) | How a 15-year git user produced more automation in two days with OpenCode than in most of those years — the 9-step thought-flow loop, division of labor, and the compounding architecture |
+| [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) | What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent |
+| [opencode-is-best](docs/260802-opencode-is-best.md) | Vendor freedom, the big-pickle model, enforced conventions, and unified billing via OpenRouter — why this setup wins for me |
+| [ai-combination](docs/260701-ai-combination2.md) | Optimizing AI usage: from Doubao user to power user — combine OpenRouter, OpenCode, and Hermes/OpenClaw SKILL.md workflows |
+| [choose-between-opencode-and-claude-code](docs/260513-choose-cc-opencode.md) | Comparison of OpenCode vs Claude Code for running Claude Opus and other models |
+| [engageOpenClaw](docs/260420-engage-openclaw.md) | Reflections after 3 months with OpenClaw and Hermes: orchestrating multi-step AI tasks and per-section image generation workflows |
+
+### II. Personal Tech, Privacy & Gaming
 
 | Article | Description |
 |---|---|
@@ -29,24 +48,6 @@ Custom OpenCode skills developed here auto-publish to [ClawHub](https://clawhub.
 | [brave-browser-privacy](docs/260706-brave-post.md) | Deep dive into why I switched to Brave: local keychain, Shields, WebRTC control, Tor integration, and real-world privacy difference |
 | [immutable-os-strategy](docs/260622-immutable-os.md) | Personal strategy on "immutable" OS choices — why a quarter-century Linux power user sticks with native Arch Linux and Debian LTS over Bazzite/Silverblue |
 | [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | Beginner's guide to DCS World with a VKB Gladiator NXT EVO joystick and a no-numpad keyboard — game-mode flying, keybindings, and axis tuning |
-
-### II. Cross-Platform & Comparative
-
-| Article | Description |
-|---|---|
-| [what-to-know-work-with-ai](docs/260922-what-to-know-work-with-ai.md) | What you actually need to know to work well with an AI agent — clear description is the user's job, the skills that help (Markdown, skills, Python, YAML/GitHub Actions, Git, Linux, AGENTS.md/SKILL.md), why patch-on-patch agent code becomes unmaintainable, and the four things never to delegate alone |
-| [agent-session-persistence](docs/260920-agent-session-persistence.md) | Where an OpenCode coding-agent session lives on disk and how it resumes — the single SQLite store, what it holds (schema and counts), the business data it becomes at team scale, context compaction, automatic pruning, and how to back it up |
-| [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly.md) | Create SKILL.md, AGENTS.md, and PERSONA.md on the fly instead of hunting others' skills — three levels of customization, real benefits from daily use, and OpenCode as the daily agent |
-| [agents-md-not-a-persona](docs/260821-agents-md-not-a-persona.md) | AGENTS.md is not a persona but a constitution written in scars — every rule traced to a real incident (a self-cloned repo, lying docs, a prompt flood), agent-agnostic lessons for any AI coding agent |
-| [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) | Installing the zhihu skill + official zhihu-cli in OpenCode — including the headless-environment auth path via ZHIHU_ACCESS_SECRET when the OS keychain is unavailable |
-| [agents-opencode-config](docs/260811-agents-opencode-config.md) | OpenCode AGENTS.md + opencode.jsonc — architecture, precedence and workflow: how the two surfaces load, resolve conflicts, evaluate permissions, and isolate across submodule context walls; verified against anomalyco/opencode source HEAD e11dbd0. |
-| [port-skill-to-opencode](docs/260811-port-skill-to-opencode.md) | How to port an existing Hermes Agent skill to OpenCode — copy the folder, rewrite frontmatter, fix paths, and test the router |
-| [opencode-git-underrated](docs/260809-opencode-git-underrated.md) | How a 15-year git user produced more automation in two days with OpenCode than in most of those years — the 9-step thought-flow loop, division of labor, and the compounding architecture |
-| [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) | What three repos of auto-published ClawHub skills taught me about AGENTS.md, SKILL.md, project boundaries, and the architecture of working with an AI agent |
-| [opencode-is-best](docs/260802-opencode-is-best.md) | Vendor freedom, the big-pickle model, enforced conventions, and unified billing via OpenRouter — why this setup wins for me |
-| [ai-combination](docs/260701-ai-combination2.md) | Optimizing AI usage: from Doubao user to power user — combine OpenRouter, OpenCode, and Hermes/OpenClaw SKILL.md workflows |
-| [choose-between-opencode-and-claude-code](docs/260513-choose-cc-opencode.md) | Comparison of OpenCode vs Claude Code for running Claude Opus and other models |
-| [engageOpenClaw](docs/260420-engage-openclaw.md) | Reflections after 3 months with OpenClaw and Hermes: orchestrating multi-step AI tasks and per-section image generation workflows |
 
 ### III. History, Culture & Philosophy
 
@@ -103,8 +104,8 @@ Developed in this repo and auto-published to [ClawHub](https://clawhub.ai/j3ffya
 
 | Skill | Description |
 |---|---|
-| [publish-skills](https://clawhub.ai/j3ffyang/skills/publish-skills) | Publish SKILL.md files to ClawHub (clawhub.ai) and diagnose publish failures across the three skill repos (history, ai-custom-skills, ai-thoughts). Use when the user wants to publish skills to ClawHub, manually trigger a publish, check why a publish failed or was skipped, or understand the ClawHub skill sync pipeline. |
 | [simplified-to-traditional](https://clawhub.ai/j3ffyang/skills/simplified-to-traditional) | Convert a Simplified-Chinese article in ai-thoughts/docs/ into its Traditional-Chinese twin, and keep the two in sync. The Simplified article is the source of truth and lives as <YYMMDD-slug>-zh-hans.md; the Traditional twin is generated to <YYMMDD-slug>-zh-hant.md with OpenCC (s2twp) plus a permanent cross-link. Use when the user asks to make, sync, or update the Traditional (繁體) version of a Chinese article — "convert to traditional", "做繁體版", "同步繁简", "zh-hant", "繁體". Never runs automatically; acts only on an explicitly named article. Future articles only — do NOT backfill existing files unless the user explicitly orders it. |
+| [publish-skills](https://clawhub.ai/j3ffyang/skills/publish-skills) | Publish SKILL.md files to ClawHub (clawhub.ai) and diagnose publish failures across the three skill repos (history, ai-custom-skills, ai-thoughts). Use when the user wants to publish skills to ClawHub, manually trigger a publish, check why a publish failed or was skipped, or understand the ClawHub skill sync pipeline. |
 | [astro-sync](https://clawhub.ai/j3ffyang/skills/astro-sync) | Convert and polish a Markdown article into AstroPaper-compatible post format for the astro_journal blog (everbox.io). Use when the user wants to publish or sync an article (e.g. from ai-thoughts/docs/ or history/docs/) to the Astro blog, convert Markdown to Astro format, add AstroPaper frontmatter, or move images into src/assets/images/. |
 | [arch-sign-off](https://clawhub.ai/j3ffyang/skills/arch-sign-off) | Append the Arch Linux sign-off line `btw, i use arch` to the very bottom of an article in ai-thoughts/docs/ (EN or ZH). This is a standing default for every article: apply it unless the user explicitly says not to. Use when writing or finishing any new article, or when the user asks to add it. |
 | [translate-to-zh-hans](https://clawhub.ai/j3ffyang/skills/translate-to-zh-hans) | Translate a specific article from ai-thoughts/docs/ into Simplified Chinese, writing the output to an exactly-same-filename "-zh-hans.md" file. Use when the user names a specific article and asks to translate it (e.g. "translate 260803-ollama-to-llamacpp", "翻译 xxx", "make a -zh-hans.md version" — or the legacy "make a -chn.md version"). Never runs automatically; only acts on an explicitly chosen article. |
@@ -122,6 +123,7 @@ Developed in this repo and auto-published to [ClawHub](https://clawhub.ai/j3ffya
 | [story-telling](https://clawhub.ai/j3ffyang/skills/story-telling) | Generate a narration script (voiceover + shot list + per-clip visual prompts + music cues) for a personal travel-story video or essay, from a thought-flow master skill and the author's own photos. Use when the user wants "a script", "旁白脚本", a storytelling/故事化 script for a video, or asks to turn a personal travel story (e.g. the death-in-Mexico project) into a narrated video or essay. Output is Simplified Chinese first-person storytelling, engine-agnostic in voiceover and timing, engine-specific in clip prompts. Never runs automatically; acts only when the user asks for a script. |
 | [video-gen](https://clawhub.ai/j3ffyang/skills/video-gen) | Generate a video from a story-telling narration script plus the author's photos, using Seedance 2.0 image-to-video via OpenRouter's asynchronous video API: pre-render gates (face-scan, narrative order, risk-POC), then per-clip submit -> poll -> download, then ffmpeg assembly. Multi-clip projects default to silent clips plus one continuous soundtrack (synthesized or royalty-free/PD); subtitle voiceover is the fallback (no OpenRouter TTS). Verified working 2026-08-15 (POC: 4s 480p clip, $0.28, ~3 min). Use when the user asks to render a narration script into a video, generate a 视频, or run the death-in-Mexico project's video pipeline. Related terms: Seedance, 视频生成, OpenRouter, image-to-video. |
 | [thought-flow](https://clawhub.ai/j3ffyang/skills/thought-flow) | The 8-stage collaboration loop for working with the user: INTENT, CONSTRAINTS, PROPOSE, PRESS, PRACTICE, INVESTIGATE, CODIFY, BOUNDARY-CHECK. Use when starting a new task (state intent and constraints up front), when proposing a plan (include options + a recommendation), when the user pushes back on a proposal, when something fails or looks broken and needs investigation, or when deciding whether to codify knowledge into an AGENTS.md rule or a SKILL.md procedure. |
+| [asd-ste100](https://clawhub.ai/j3ffyang/skills/asd-ste100) | Apply ASD-STE100 Simplified Technical English to written instructions: one action per sentence, imperative mood, condition first, one name per item, short sentences, no semicolons. Use before writing or when auditing prompts, AGENTS.md, SKILL.md, READMEs, runbooks, checklists, and the technical steps of an article. For articles, enforce structure only and keep the essay voice; never flatten narrative prose. Report contradictions between rule files instead of silently choosing one.  |
 | [lan-latency-triage](https://clawhub.ai/j3ffyang/skills/lan-latency-triage) | Use when diagnosing host-to-host reachability, latency, or packet-loss faults on the LAN — "can't ping the other machine", ping times out, ARP/neigh INCOMPLETE, huge or variable LAN RTT, WiFi power save, DTIM buffering, or an intermittent drop. Encodes the differential-measurement ladder (control group, ARP layer, firewall, AP isolation, rate sweep, per-packet ping trace) that separates a layer-2 fault from a firewall from a DTIM stall. Triggers on ping, latency, packet loss, neigh, arp, INCOMPLETE, FAILED, DTIM, power save, BSSID, RSSI, unreachable, timeouts, one host can't reach another. |
 
 ### IX. Drafts & Working Notes

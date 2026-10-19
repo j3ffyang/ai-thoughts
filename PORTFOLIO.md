@@ -23,7 +23,7 @@ All code prioritizes **clarity over cleverness**: simple, readable, portable, an
 
 **⚡ OpenCode — the growing collection, auto-published to ClawHub**
 
-My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawHub](https://clawhub.ai/j3ffyang) automatically on every push — no local installs, one owner account. The collection is growing fastest here:
+My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawHub](https://clawhub.ai/j3ffyang) automatically on every push to `j3ffyang` — no local installs, one owner account. The collection is growing fastest here:
 
 - **`astro-sync`** — convert & polish an article into an AstroPaper post for the astro_journal blog (everbox.io), images included
 - **`resize-for-banner`** — 16:9 (LinkedIn) / 5:2 (X) social banners, padded black, never cropped, never overwrites the source
@@ -32,17 +32,17 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Platform | Repo | Purpose | Latest | Status |
 |----------|------|---------|--------|--------|
-| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`astro-sync`](https://clawhub.ai/j3ffyang) (article → AstroPaper post for everbox.io, images included), [`resize-for-banner`](https://clawhub.ai/j3ffyang) (16:9 / 5:2 social banners, padded never cropped), [`translate-to-zh-hans`](https://clawhub.ai/j3ffyang) (article → Simplified Chinese `-zh-hans.md` twin), [`simplified-to-traditional`](https://clawhub.ai/j3ffyang) (zh-hans → zh-hant twin sync). Auto-published to ClawHub on every push. | `add auto-wrap tool` (Aug 2026) | 🔄 Active |
-| **Hermes** ⚕ | **[hermes-custom-skills](https://github.com/negtivspace/hermes-custom-skills)** | Specialized skills for [Hermes Agent](https://hermes.ai) — autonomous workflows, content generation, task orchestration. | `docs: add README and CONTRIBUTING` (Jul 2026) | 🔄 Active |
-| **OpenClaw** 🦞 | **[openclaw-custom-skills](https://github.com/negtivspace/openclaw-custom-skills)** | Production skills for [OpenClaw](https://openclaw.ai) published to ClawHub. Multilingual blog publishing, media generation. | `add chinese edition` (Jul 2026) | 🔄 Active |
-| **Claude Code** | **[claude-custom-skills](https://github.com/negtivspace/claude-custom-skills)** | Automation skills for [Claude Code](https://claude.ai) — productivity hacks, data export, content workflows. | `add i18n support to README` (Jul 2026) | ✨ Stable |
-| **Multi-platform** | **[ai-custom-skills](https://github.com/negtivspace/ai-custom-skills)** | Production-ready skills across platforms (Claude Code, Hermes, OpenClaw) — content creation, data export, workflow automation. | `add new skill and tidy up the repo` (Jul 2026) | 🔄 Active |
+| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`astro-sync`](https://clawhub.ai/j3ffyang) (article → AstroPaper post for everbox.io, images included), [`resize-for-banner`](https://clawhub.ai/j3ffyang) (16:9 / 5:2 social banners, padded never cropped), [`translate-to-zh-hans`](https://clawhub.ai/j3ffyang) (article → Simplified Chinese `-zh-hans.md` twin), [`simplified-to-traditional`](https://clawhub.ai/j3ffyang) (zh-hans → zh-hant twin sync). Auto-published to ClawHub on every push to `j3ffyang`. | `add auto-wrap tool` (Aug 2026) | 🔄 Active |
+| **Hermes** ⚕ | **[hermes-custom-skills](https://github.com/negtivspace/hermes-custom-skills)** | Specialized skills for [Hermes Agent](https://hermes.ai) — autonomous workflows, content generation, task orchestration. | `docs: add README and CONTRIBUTING` (Apr 2026) | 🔄 Active |
+| **OpenClaw** 🦞 | **[openclaw-custom-skills](https://github.com/negtivspace/openclaw-custom-skills)** | Production skills for [OpenClaw](https://openclaw.ai) published to ClawHub. Multilingual blog publishing, media generation. | `add chinese edition` (Apr 2026) | 🔄 Active |
+| **Claude Code** | **[claude-custom-skills](https://github.com/negtivspace/claude-custom-skills)** | Automation skills for [Claude Code](https://claude.ai) — productivity hacks, data export, content workflows. | `add i18n support to README` (Apr 2026) | ✨ Stable |
+| **Multi-platform** | **[ai-custom-skills](https://github.com/negtivspace/ai-custom-skills)** | Production-ready skills across platforms (Claude Code, Hermes, OpenClaw) — content creation, data export, workflow automation. | `docs: point all ClawHub links to clawhub.ai/j3ffyang` (Oct 2026) | 🔄 Active |
 
 ### Writing & Documentation
 
 | Repo | Purpose | Articles |
 |------|---------|----------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 48 articles |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 49 articles |
 
 ### Tools & Extensions
 
@@ -216,7 +216,8 @@ else:
 
 ---
 
-### Example: Keep the Profile README's Numbers Honest with Python
+### Example (legacy): Keep the Profile README's Numbers Honest with Python
+**Status:** legacy. The `PORTFOLIO.md` pipeline superseded this script; kept as a record.
 **Repo:** `negtivSpace` | **Language:** Python | **Purpose:** Recompute every derived number in the profile README (skills, repos, articles, Quick Links) from the nested repos
 
 ```python
@@ -295,7 +296,7 @@ if args.check:
 ## 🔗 Quick Links
 
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
-- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 48 articles on AI, privacy, and entrepreneurship
+- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 49 articles on AI, privacy, and entrepreneurship
 - **Gists & Experiments:** [Personal gists](https://gist.github.com/j3ffyang)
 
 ---
@@ -304,14 +305,14 @@ if args.check:
 
 From `ai-thoughts` (most recent published articles):
 
-1. **"Replace Cursor with a Minimal VSCodium AppImage"** (Oct 2026) — Replacing Cursor with a minimal, self-contained VSCodium AppImage on Arch — no forced agent panel, no telemetry, no account; three Open VSX extensions (Vim, Markdown Preview Enhanced, Markdown PDF); built-in Mermaid and local PlantUML rendering; manual updates; and a measured footprint comparison; with a visual summary infographic
-2. **"Unix Is Art"** (Oct 2026) — A personal essay on the Unix philosophy as an aesthetic — its history from 1974 to 2004 (Thompson and Ritchie, McIlroy, Kernighan and Pike, Raymond), the ideas behind it and the critics of it, a remembrance of Dennis Ritchie, and what Unix made me
-3. **"Keeping secrets out of Git"** (Oct 2026) — A short checklist for keeping secrets out of git — why a committed secret is already compromised, the .gitignore patterns to add, where to state the policy (README, AGENTS.md), and three commands to verify nothing is hiding; with a visual summary infographic
-4. **"Encrypting Linux: from a hack 20+ years ago to firewalls, LUKS and Veracrypt"** (Oct 2026) — A personal Linux security story — how a break-in 20+ years ago pushed me from detecting tampering (tripwire) to preventing it: LUKS full-disk encryption (xfs root, cleartext /boot), Veracrypt USB volumes, the threat model and its honest limits, AES-NI overhead, TRIM, and a daily rsync backup between two encrypted disks; with a visual summary infographic
-5. **"Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload"** (Sep 2026) — Anatomy of a malicious GitHub repo invite: an obfuscated Tailwind/PostCSS plugin that runs npm install sql.js socket.io-client form-data axios at build time and loads a C2/credential-stealer toolset — static and sandboxed dynamic analysis, a zero-trust handling strategy, and full IoCs; with a visual summary infographic
-6. **"What Should You Know to Work Well with an AI Agent?"** (Sep 2026) — What you actually need to know to work well with an AI agent — clear description is the user's job, the skills that help (Markdown, skills, Python, YAML/GitHub Actions, Git, Linux, AGENTS.md/SKILL.md), why patch-on-patch agent code becomes unmaintainable, and the four things never to delegate alone
+1. **"The Rules, Not the Words: ASD-STE100 for Agent Instructions"** (Oct 2026) — ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed measurement of three AGENTS.md files, and a skill that applies the rules without flattening essay voice
+2. **"Replace Cursor with a Minimal VSCodium AppImage"** (Oct 2026) — Replacing Cursor with a minimal, self-contained VSCodium AppImage on Arch — no forced agent panel, no telemetry, no account; three Open VSX extensions (Vim, Markdown Preview Enhanced, Markdown PDF); built-in Mermaid and local PlantUML rendering; manual updates; and a measured footprint comparison; with a visual summary infographic
+3. **"Unix Is Art"** (Oct 2026) — A personal essay on the Unix philosophy as an aesthetic — its history from 1974 to 2004 (Thompson and Ritchie, McIlroy, Kernighan and Pike, Raymond), the ideas behind it and the critics of it, a remembrance of Dennis Ritchie, and what Unix made me
+4. **"Keeping secrets out of Git"** (Oct 2026) — A short checklist for keeping secrets out of git — why a committed secret is already compromised, the .gitignore patterns to add, where to state the policy (README, AGENTS.md), and three commands to verify nothing is hiding; with a visual summary infographic
+5. **"Encrypting Linux: from a hack 20+ years ago to firewalls, LUKS and Veracrypt"** (Oct 2026) — A personal Linux security story — how a break-in 20+ years ago pushed me from detecting tampering (tripwire) to preventing it: LUKS full-disk encryption (xfs root, cleartext /boot), Veracrypt USB volumes, the threat model and its honest limits, AES-NI overhead, TRIM, and a daily rsync backup between two encrypted disks; with a visual summary infographic
+6. **"Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload"** (Sep 2026) — Anatomy of a malicious GitHub repo invite: an obfuscated Tailwind/PostCSS plugin that runs npm install sql.js socket.io-client form-data axios at build time and loads a C2/credential-stealer toolset — static and sandboxed dynamic analysis, a zero-trust handling strategy, and full IoCs; with a visual summary infographic
 
-👉 See all 48 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
+👉 See all 49 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
 
 ---
 
@@ -337,7 +338,7 @@ npm run build  # or load the extension manually in Chrome
 ```bash
 git clone https://github.com/negtivspace/ai-thoughts
 cd docs
-# 48 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
+# 49 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
 ```
 
 ---
@@ -348,4 +349,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** October 14, 2026 | Tracking: 6 active repos, 48 published articles, 10+ published skills
+**Last Updated:** October 19, 2026 | Tracking: 6 active repos, 49 published articles, 20+ published skills

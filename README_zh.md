@@ -12,7 +12,29 @@
 
 ## 目录
 
-### 一、个人技术、隐私与游戏
+### 一、跨平台与比较
+
+| 文章 | 简介 |
+|---|---|
+| [ste100-agent-instructions](docs/261019-ste100-agent-instructions.md) | ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed measurement of three AGENTS.md files, and a skill that applies the rules without flattening essay voice |
+| [what-to-know-work-with-ai](docs/260922-what-to-know-work-with-ai.md) · [与 AI 智能体高效协作，你应该懂些什么？](docs/260922-what-to-know-work-with-ai-zh-hans.md) | 与 AI 智能体高效协作真正需要知道什么——把期望说清是用户的责任；有用的技能（Markdown、技能、Python、YAML/GitHub Actions、Git、Linux、AGENTS.md/SKILL.md）；为何“补丁摞补丁”的智能体代码会变得无法维护；以及绝不单独交出去的四件事 |
+| [agent-session-persistence](docs/260920-agent-session-persistence.md) · [OpenCode 中的智能体会话持久化](docs/260920-agent-session-persistence-chn.md) | OpenCode 编码智能体的会话存在磁盘何处、如何恢复——单一 SQLite 存储及其内容（模式与计数）、在团队规模下它变成的业务数据、上下文压缩、自动清理，以及如何备份 |
+| [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly.md) · [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly-chn.md) | 随手创建 SKILL.md、AGENTS.md 和 PERSONA.md，而不是去淘别人的技能——三个自定义层次、日复一日使用得来的真实好处，以及作为日常智能体的 OpenCode |
+| [agents-md-not-a-persona](docs/260821-agents-md-not-a-persona.md) · [AGENTS.md 不是人格设定](docs/260821-agents-md-not-a-persona-chn.md) | AGENTS.md 不是人格设定——它是一部用伤疤写成的宪章：每条规则追溯到真实事故（自克隆仓库、撒谎的文档、提示洪水），不绑定特定工具的通用法则 |
+| [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) · [zhihu-skill-opencode_chn](docs/260815-zhihu-config-in-opencode-chn.md) | 在 OpenCode 中安装 zhihu 技能与官方 zhihu-cli 的全程记录——包括无头环境下密钥链不可用时通过 ZHIHU_ACCESS_SECRET 完成认证的路径 |
+| [AGENTS + opencode.jsonc 架构](docs/260811-agents-opencode-config.md) · [AGENTS + opencode.jsonc 架构（中文）](docs/260811-agents-opencode-config-chn.md) | OpenCode AGENTS.md 与 opencode.jsonc 架构、优先级与工作流：双配置表面如何加载、消解冲突、评估权限并在子模块上下文隔离墙间运作；对照 anomalyco/opencode 源码 HEAD e11dbd0 严格复核。 |
+| [port-skill-to-opencode](docs/260811-port-skill-to-opencode.md) · [port-skill-to-opencode](docs/260811-port-skill-to-opencode-chn.md) | 将现有 Hermes Agent 技能移植到 OpenCode——复制文件夹、重写 frontmatter、修正路径并测试路由器 |
+| [opencode-git-underrated](docs/260809-opencode-git-underrated.md) | 一位用了十五年 git 的用户，如何在两天内用 OpenCode 产出比过去多数年份更多的自动化——9 步思维流循环、分工与复利架构 |
+| [opencode-git-underrated_chn](docs/260809-opencode-git-underrated-chn.md) | OpenCode + Git：被低估的组合——十五年 git 老手两天内构建的自动化系统与思维流循环（简体中文） |
+| [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) · [ai-agent-collaboration_chn](docs/260808-ai-agent-collaboration-chn.md) | 跨三个仓库自动发布技能到 ClawHub 的真实实践——关于 AGENTS.md、SKILL.md、项目边界与 AI 协作架构的启发 |
+| [opencode-is-best](docs/260802-opencode-is-best.md) · [opencode-is-best_chn](docs/260802-opencode-is-best-chn.md) | 免供应商锁定、big-pickle 模型、可执行的规范约定与 OpenRouter 统一计费——为什么这套方案最合我意 |
+| [ai-combination](docs/260701-ai-combination2.md) | 优化AI使用方式：从豆包用户到进阶用户——组合 OpenRouter、OpenCode 与 Hermes/OpenClaw 的 SKILL.md 工作流 |
+| [ai-combination_chn](docs/260701-ai-combination2-chn.md) | 豆包用户到 AI 进阶用户：OpenRouter + OpenCode + AI Agent 组合策略（简体中文） |
+| [opencode-vs-claude-code](docs/260513-choose-cc-opencode.md) | OpenCode与Claude Code的比较：用于运行Claude Opus和其他模型（中英双语） |
+| [opencode-vs-claude-code_chn](docs/260513-choose-cc-opencode-chn.md) | OpenCode 与 Claude Code 对比（简体中文） |
+| [engageOpenClaw](docs/260420-engage-openclaw.md) | 使用OpenClaw与Hermes三个月后的复盘：多步骤AI任务编排与章节配图生成工作流 |
+
+### 二、个人技术、隐私与游戏
 
 | 文章 | 简介 |
 |---|---|
@@ -30,27 +52,6 @@
 | [brave-browser-privacy](docs/260706-brave-post-chn.md) | 為什麼我開始使用Brave的深度分析：本地密鑰管理、隱私防護、WebRTC控制及Tor整合（繁體中文） |
 | [immutable-os-strategy](docs/260622-immutable-os.md) | "不可变操作系统"选型策略——为何一位使用Linux四分之一世纪的老用户坚持原生Arch与Debian LTS，而非Bazzite/Silverblue |
 | [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | DCS World新手入门指南：VKB Gladiator NXT EVO摇杆 + 无数字键盘的键位映射、游戏模式飞行与摇杆轴调校 |
-
-### 二、跨平台与比较
-
-| 文章 | 简介 |
-|---|---|
-| [what-to-know-work-with-ai](docs/260922-what-to-know-work-with-ai.md) · [与 AI 智能体高效协作，你应该懂些什么？](docs/260922-what-to-know-work-with-ai-zh-hans.md) | 与 AI 智能体高效协作真正需要知道什么——把期望说清是用户的责任；有用的技能（Markdown、技能、Python、YAML/GitHub Actions、Git、Linux、AGENTS.md/SKILL.md）；为何“补丁摞补丁”的智能体代码会变得无法维护；以及绝不单独交出去的四件事 |
-| [agent-session-persistence](docs/260920-agent-session-persistence.md) · [OpenCode 中的智能体会话持久化](docs/260920-agent-session-persistence-chn.md) | OpenCode 编码智能体的会话存在磁盘何处、如何恢复——单一 SQLite 存储及其内容（模式与计数）、在团队规模下它变成的业务数据、上下文压缩、自动清理，以及如何备份 |
-| [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly.md) · [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly-chn.md) | 随手创建 SKILL.md、AGENTS.md 和 PERSONA.md，而不是去淘别人的技能——三个自定义层次、日复一日使用得来的真实好处，以及作为日常智能体的 OpenCode |
-| [agents-md-not-a-persona](docs/260821-agents-md-not-a-persona.md) · [AGENTS.md 不是人格设定](docs/260821-agents-md-not-a-persona-chn.md) | AGENTS.md 不是人格设定——它是一部用伤疤写成的宪章：每条规则追溯到真实事故（自克隆仓库、撒谎的文档、提示洪水），不绑定特定工具的通用法则 |
-| [zhihu-skill-opencode](docs/260815-zhihu-config-in-opencode.md) · [zhihu-skill-opencode_chn](docs/260815-zhihu-config-in-opencode-chn.md) | 在 OpenCode 中安装 zhihu 技能与官方 zhihu-cli 的全程记录——包括无头环境下密钥链不可用时通过 ZHIHU_ACCESS_SECRET 完成认证的路径 |
-| [AGENTS + opencode.jsonc 架构](docs/260811-agents-opencode-config.md) · [AGENTS + opencode.jsonc 架构（中文）](docs/260811-agents-opencode-config-chn.md) | OpenCode AGENTS.md 与 opencode.jsonc 架构、优先级与工作流：双配置表面如何加载、消解冲突、评估权限并在子模块上下文隔离墙间运作；对照 anomalyco/opencode 源码 HEAD e11dbd0 严格复核。 |
-| [port-skill-to-opencode](docs/260811-port-skill-to-opencode.md) · [port-skill-to-opencode](docs/260811-port-skill-to-opencode-chn.md) | 将现有 Hermes Agent 技能移植到 OpenCode——复制文件夹、重写 frontmatter、修正路径并测试路由器 |
-| [opencode-git-underrated](docs/260809-opencode-git-underrated.md) | 一位用了十五年 git 的用户，如何在两天内用 OpenCode 产出比过去多数年份更多的自动化——9 步思维流循环、分工与复利架构 |
-| [opencode-git-underrated_chn](docs/260809-opencode-git-underrated-chn.md) | OpenCode + Git：被低估的组合——十五年 git 老手两天内构建的自动化系统与思维流循环（简体中文） |
-| [ai-agent-collaboration](docs/260808-ai-agent-collaboration.md) · [ai-agent-collaboration_chn](docs/260808-ai-agent-collaboration-chn.md) | 跨三个仓库自动发布技能到 ClawHub 的真实实践——关于 AGENTS.md、SKILL.md、项目边界与 AI 协作架构的启发 |
-| [opencode-is-best](docs/260802-opencode-is-best.md) · [opencode-is-best_chn](docs/260802-opencode-is-best-chn.md) | 免供应商锁定、big-pickle 模型、可执行的规范约定与 OpenRouter 统一计费——为什么这套方案最合我意 |
-| [ai-combination](docs/260701-ai-combination2.md) | 优化AI使用方式：从豆包用户到进阶用户——组合 OpenRouter、OpenCode 与 Hermes/OpenClaw 的 SKILL.md 工作流 |
-| [ai-combination_chn](docs/260701-ai-combination2-chn.md) | 豆包用户到 AI 进阶用户：OpenRouter + OpenCode + AI Agent 组合策略（简体中文） |
-| [opencode-vs-claude-code](docs/260513-choose-cc-opencode.md) | OpenCode与Claude Code的比较：用于运行Claude Opus和其他模型（中英双语） |
-| [opencode-vs-claude-code_chn](docs/260513-choose-cc-opencode-chn.md) | OpenCode 与 Claude Code 对比（简体中文） |
-| [engageOpenClaw](docs/260420-engage-openclaw.md) | 使用OpenClaw与Hermes三个月后的复盘：多步骤AI任务编排与章节配图生成工作流 |
 
 ### 三、历史、文化与哲思
 
@@ -123,8 +124,8 @@
 
 | 技能 | 简介 |
 |---|---|
-| [publish-skills](https://clawhub.ai/j3ffyang/skills/publish-skills) | Publish SKILL.md files to ClawHub (clawhub.ai) and diagnose publish failures across the three skill repos (history, ai-custom-skills, ai-thoughts). Use when the user wants to publish skills to ClawHub, manually trigger a publish, check why a publish failed or was skipped, or understand the ClawHub skill sync pipeline. |
 | [simplified-to-traditional](https://clawhub.ai/j3ffyang/skills/simplified-to-traditional) | Convert a Simplified-Chinese article in ai-thoughts/docs/ into its Traditional-Chinese twin, and keep the two in sync. The Simplified article is the source of truth and lives as <YYMMDD-slug>-zh-hans.md; the Traditional twin is generated to <YYMMDD-slug>-zh-hant.md with OpenCC (s2twp) plus a permanent cross-link. Use when the user asks to make, sync, or update the Traditional (繁體) version of a Chinese article — "convert to traditional", "做繁體版", "同步繁简", "zh-hant", "繁體". Never runs automatically; acts only on an explicitly named article. Future articles only — do NOT backfill existing files unless the user explicitly orders it. |
+| [publish-skills](https://clawhub.ai/j3ffyang/skills/publish-skills) | Publish SKILL.md files to ClawHub (clawhub.ai) and diagnose publish failures across the three skill repos (history, ai-custom-skills, ai-thoughts). Use when the user wants to publish skills to ClawHub, manually trigger a publish, check why a publish failed or was skipped, or understand the ClawHub skill sync pipeline. |
 | [astro-sync](https://clawhub.ai/j3ffyang/skills/astro-sync) | Convert and polish a Markdown article into AstroPaper-compatible post format for the astro_journal blog (everbox.io). Use when the user wants to publish or sync an article (e.g. from ai-thoughts/docs/ or history/docs/) to the Astro blog, convert Markdown to Astro format, add AstroPaper frontmatter, or move images into src/assets/images/. |
 | [arch-sign-off](https://clawhub.ai/j3ffyang/skills/arch-sign-off) | Append the Arch Linux sign-off line `btw, i use arch` to the very bottom of an article in ai-thoughts/docs/ (EN or ZH). This is a standing default for every article: apply it unless the user explicitly says not to. Use when writing or finishing any new article, or when the user asks to add it. |
 | [translate-to-zh-hans](https://clawhub.ai/j3ffyang/skills/translate-to-zh-hans) | Translate a specific article from ai-thoughts/docs/ into Simplified Chinese, writing the output to an exactly-same-filename "-zh-hans.md" file. Use when the user names a specific article and asks to translate it (e.g. "translate 260803-ollama-to-llamacpp", "翻译 xxx", "make a -zh-hans.md version" — or the legacy "make a -chn.md version"). Never runs automatically; only acts on an explicitly chosen article. |
@@ -142,6 +143,7 @@
 | [story-telling](https://clawhub.ai/j3ffyang/skills/story-telling) | Generate a narration script (voiceover + shot list + per-clip visual prompts + music cues) for a personal travel-story video or essay, from a thought-flow master skill and the author's own photos. Use when the user wants "a script", "旁白脚本", a storytelling/故事化 script for a video, or asks to turn a personal travel story (e.g. the death-in-Mexico project) into a narrated video or essay. Output is Simplified Chinese first-person storytelling, engine-agnostic in voiceover and timing, engine-specific in clip prompts. Never runs automatically; acts only when the user asks for a script. |
 | [video-gen](https://clawhub.ai/j3ffyang/skills/video-gen) | Generate a video from a story-telling narration script plus the author's photos, using Seedance 2.0 image-to-video via OpenRouter's asynchronous video API: pre-render gates (face-scan, narrative order, risk-POC), then per-clip submit -> poll -> download, then ffmpeg assembly. Multi-clip projects default to silent clips plus one continuous soundtrack (synthesized or royalty-free/PD); subtitle voiceover is the fallback (no OpenRouter TTS). Verified working 2026-08-15 (POC: 4s 480p clip, $0.28, ~3 min). Use when the user asks to render a narration script into a video, generate a 视频, or run the death-in-Mexico project's video pipeline. Related terms: Seedance, 视频生成, OpenRouter, image-to-video. |
 | [thought-flow](https://clawhub.ai/j3ffyang/skills/thought-flow) | The 8-stage collaboration loop for working with the user: INTENT, CONSTRAINTS, PROPOSE, PRESS, PRACTICE, INVESTIGATE, CODIFY, BOUNDARY-CHECK. Use when starting a new task (state intent and constraints up front), when proposing a plan (include options + a recommendation), when the user pushes back on a proposal, when something fails or looks broken and needs investigation, or when deciding whether to codify knowledge into an AGENTS.md rule or a SKILL.md procedure. |
+| [asd-ste100](https://clawhub.ai/j3ffyang/skills/asd-ste100) | Apply ASD-STE100 Simplified Technical English to written instructions: one action per sentence, imperative mood, condition first, one name per item, short sentences, no semicolons. Use before writing or when auditing prompts, AGENTS.md, SKILL.md, READMEs, runbooks, checklists, and the technical steps of an article. For articles, enforce structure only and keep the essay voice; never flatten narrative prose. Report contradictions between rule files instead of silently choosing one.  |
 | [lan-latency-triage](https://clawhub.ai/j3ffyang/skills/lan-latency-triage) | Use when diagnosing host-to-host reachability, latency, or packet-loss faults on the LAN — "can't ping the other machine", ping times out, ARP/neigh INCOMPLETE, huge or variable LAN RTT, WiFi power save, DTIM buffering, or an intermittent drop. Encodes the differential-measurement ladder (control group, ARP layer, firewall, AP isolation, rate sweep, per-packet ping trace) that separates a layer-2 fault from a firewall from a DTIM stall. Triggers on ping, latency, packet loss, neigh, arp, INCOMPLETE, FAILED, DTIM, power save, BSSID, RSSI, unreachable, timeouts, one host can't reach another. |
 
 ### 九、草稿与工作笔记
