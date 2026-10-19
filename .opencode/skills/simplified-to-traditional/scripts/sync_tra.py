@@ -40,6 +40,7 @@ OVERRIDES = [
     # article would otherwise churn it for this one term).
     ("介面連線", "介面連接"),  # 连接 = "connected by" (not 連線 "online link")
     ("介面與實現", "介面與實作"),  # 实现 = implementation; Taiwan says 實作, not 實現 "to realize"
+    ("沒有隻向", "沒有只向"),  # 只 = "only", not the classifier 隻 (OpenCC s2twp mispicks)
 ]
 
 # One-Simplified-to-many-Traditional forms where OpenCC can pick the wrong
