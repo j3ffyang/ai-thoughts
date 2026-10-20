@@ -24,6 +24,7 @@ Do not damage the machine to satisfy a tool.
 - **Chinese files are translations of the English original.** Every Chinese markdown file is translated from, and identical in content to, its English counterpart — only the language differs. Don't search the Chinese file as a reference, unless otherwise specified.
 - **Arch sign-off.** Every article in `docs/` ends with the line `btw, i use arch` as its final paragraph, unless the user explicitly says otherwise. It stays verbatim English in both EN and ZH versions. Do not duplicate it if already present, and never add it to READMEs or `articles.yaml`. See the `arch-sign-off` skill for the exact command.
 - **Box diagrams.** A fenced code block that draws a box (`┌ ┐ └ ┘ │ ─`) must be square. Every content row's walls line up with the corners. Arrow connectors line up with the `┬` marks. Never hand-count a box — generate it programmatically, then verify with `python scripts/verify_md_boxes.py <file>` (add `--check` for CI). Blocks with genuinely nested / mixed-width boxes are out of scope for the check.
+- **Precision is per genre.** A personal essay or opinion piece needs an approximate figure or date ("estimated 900", "1 October 2026"). Do not chase an exact count, a timezone, or a commit hash unless the user asks for it. Exactness belongs in code, tests, and measurements. When the user settles a point, do not raise it again in a later review.
 
 ## Filename conventions
 
