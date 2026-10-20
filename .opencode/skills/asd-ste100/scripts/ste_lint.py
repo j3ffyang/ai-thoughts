@@ -14,6 +14,7 @@ Usage:
     python3 ste_lint.py PATH...
     python3 ste_lint.py --check PATH...
     python3 ste_lint.py --json PATH...
+    python3 ste_lint.py --stats PATH...
     python3 ste_lint.py --limit 25 PATH...
 
 Exit code is 1 with --check when at least one error is found.
@@ -126,83 +127,112 @@ def iter_lines(path: Path):
         yield number, clean(raw)
 
 
-def lint(path: Path, error_limit: int, warn_limit: int) -> list[dict]:
-    findings: list[dict] = []
+def iter_sentences(path: Path):
+    """Yield (line_number, sentence, words) for each sentence in prose lines."""
     for number, text in iter_lines(path):
         if not text:
             continue
         for sentence in sentences(text):
-            words = WORD.findall(sentence)
-            if len(words) > error_limit:
-                findings.append(
-                    {
-                        "file": str(path),
-                        "line": number,
-                        "level": "error",
-                        "rule": "5.1/6.3",
-                        "message": f"{len(words)} words (limit {error_limit}): {sentence}",
-                    }
-                )
-            elif len(words) > warn_limit:
-                findings.append(
-                    {
-                        "file": str(path),
-                        "line": number,
-                        "level": "warning",
-                        "rule": "5.1/6.3",
-                        "message": f"{len(words)} words (warning above {warn_limit}): {sentence}",
-                    }
-                )
+            yield number, sentence, WORD.findall(sentence)
 
-            if ";" in sentence:
-                findings.append(
-                    {
-                        "file": str(path),
-                        "line": number,
-                        "level": "error",
-                        "rule": "8.1",
-                        "message": f"semicolon: {sentence}",
-                    }
-                )
 
-            lower = sentence.lower()
-            for bad, good in BANNED.items():
-                pattern = r"\b" + re.escape(bad) + r"\b" if " " not in bad else re.escape(bad)
-                if re.search(pattern, lower):
-                    findings.append(
-                        {
-                            "file": str(path),
-                            "line": number,
-                            "level": "warning",
-                            "rule": "1.1",
-                            "message": f"'{bad}' -> '{good}': {sentence}",
-                        }
-                    )
+def lint(path: Path, error_limit: int, warn_limit: int) -> list[dict]:
+    findings: list[dict] = []
+    for number, sentence, words in iter_sentences(path):
+        if len(words) > error_limit:
+            findings.append(
+                {
+                    "file": str(path),
+                    "line": number,
+                    "level": "error",
+                    "rule": "5.1/6.3",
+                    "message": f"{len(words)} words (limit {error_limit}): {sentence}",
+                }
+            )
+        elif len(words) > warn_limit:
+            findings.append(
+                {
+                    "file": str(path),
+                    "line": number,
+                    "level": "warning",
+                    "rule": "5.1/6.3",
+                    "message": f"{len(words)} words (warning above {warn_limit}): {sentence}",
+                }
+            )
 
-            match = PASSIVE.search(sentence)
-            if match:
+        if ";" in sentence:
+            findings.append(
+                {
+                    "file": str(path),
+                    "line": number,
+                    "level": "error",
+                    "rule": "8.1",
+                    "message": f"semicolon: {sentence}",
+                }
+            )
+
+        lower = sentence.lower()
+        for bad, good in BANNED.items():
+            pattern = r"\b" + re.escape(bad) + r"\b" if " " not in bad else re.escape(bad)
+            if re.search(pattern, lower):
                 findings.append(
                     {
                         "file": str(path),
                         "line": number,
                         "level": "warning",
-                        "rule": "3.6",
-                        "message": f"possible passive voice ('{match.group(0)}'): {sentence}",
+                        "rule": "1.1",
+                        "message": f"'{bad}' -> '{good}': {sentence}",
                     }
                 )
 
-            for phrase in PHRASAL:
-                if phrase in lower:
-                    findings.append(
-                        {
-                            "file": str(path),
-                            "line": number,
-                            "level": "warning",
-                            "rule": "9.3",
-                            "message": f"phrasal verb '{phrase}': {sentence}",
-                        }
-                    )
+        match = PASSIVE.search(sentence)
+        if match:
+            findings.append(
+                {
+                    "file": str(path),
+                    "line": number,
+                    "level": "warning",
+                    "rule": "3.6",
+                    "message": f"possible passive voice ('{match.group(0)}'): {sentence}",
+                }
+            )
+
+        for phrase in PHRASAL:
+            if phrase in lower:
+                findings.append(
+                    {
+                        "file": str(path),
+                        "line": number,
+                        "level": "warning",
+                        "rule": "9.3",
+                        "message": f"phrasal verb '{phrase}': {sentence}",
+                    }
+                )
     return findings
+
+
+def stats(path: Path, error_limit: int, warn_limit: int) -> dict:
+    """Count sentences, length breaches, semicolons, errors, and warnings."""
+    total = over_warn = over_error = semicolons = 0
+    for _number, sentence, words in iter_sentences(path):
+        total += 1
+        if len(words) > warn_limit:
+            over_warn += 1
+        if len(words) > error_limit:
+            over_error += 1
+        if ";" in sentence:
+            semicolons += 1
+    findings = lint(path, error_limit, warn_limit)
+    errors = sum(1 for f in findings if f["level"] == "error")
+    return {
+        "file": str(path),
+        "sentences": total,
+        "over_20": over_warn,
+        "over_25": over_error,
+        "semicolons": semicolons,
+        "errors": errors,
+        "warnings": len(findings) - errors,
+    }
 
 
 def main() -> int:
@@ -213,6 +243,7 @@ def main() -> int:
         "--warn", type=int, default=20, help="warning limit (default 20)"
     )
     parser.add_argument("--json", action="store_true", help="machine-readable output")
+    parser.add_argument("--stats", action="store_true", help="per-file summary table")
     parser.add_argument("--check", action="store_true", help="exit 1 on errors")
     args = parser.parse_args()
 
@@ -225,7 +256,20 @@ def main() -> int:
     for path in args.paths:
         all_findings.extend(lint(path, args.limit, args.warn))
 
-    if args.json:
+    if args.stats and not args.json:
+        header = (
+            f"{'file':<40}{'sentences':>10}{'over20':>8}"
+            f"{'over25':>8}{'semicolons':>12}{'errors':>8}{'warnings':>10}"
+        )
+        print(header)
+        for path in args.paths:
+            row = stats(path, args.limit, args.warn)
+            print(
+                f"{row['file']:<40}{row['sentences']:>10}{row['over_20']:>8}"
+                f"{row['over_25']:>8}{row['semicolons']:>12}"
+                f"{row['errors']:>8}{row['warnings']:>10}"
+            )
+    elif args.json:
         print(json.dumps(all_findings, indent=2))
     else:
         for finding in all_findings:

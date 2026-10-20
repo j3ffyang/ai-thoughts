@@ -14,12 +14,12 @@ The article argues that the STE rules make agent instructions checkable. This fi
 
 | Measure | Before | After |
 |---|---:|---:|
-| Sentences | 94 | 147 |
-| Over 20 words | 21 (22%) | **0** |
-| Over 25 words | 12 | **0** |
+| Sentences | 98 | 147 |
+| Over 20 words | 21 (21%) | **0** |
+| Over 25 words | 11 | **0** |
 | Semicolons | 7 | **0** |
-| Linter errors | 19 | **0** |
-| Linter warnings | 17 | 5 |
+| Linter errors | 18 | **0** |
+| Linter warnings | 18 | 5 |
 | Words | 1,444 | 1,437 |
 
 ### `ai-thoughts/AGENTS.md`
@@ -43,9 +43,10 @@ Both files ended close to their original length: `opencode` lost 7 words, `ai-th
 Run from the `ai-thoughts` repo root:
 
 ```bash
-python3 .opencode/skills/asd-ste100/scripts/ste_lint.py ../opencode/AGENTS.md
-python3 .opencode/skills/asd-ste100/scripts/ste_lint.py AGENTS.md
+python3 .opencode/skills/asd-ste100/scripts/ste_lint.py --stats ../opencode/AGENTS.md AGENTS.md
 ```
+
+`--stats` prints one row per file: sentences, over 20 words, over 25 words, semicolons, errors, and warnings. These rows were re-measured against the committed pre-state (`b229c82^` for `opencode/AGENTS.md`, `8dc597d^` for `ai-thoughts/AGENTS.md`). An earlier run reported 94 sentences, 12 over 25 words, 19 errors, and 17 warnings for `opencode/AGENTS.md`; those figures do not reproduce from the committed files, so the table above replaces them.
 
 The linter strips bold markers, excludes code fences, headings, and table rows, counts a code span as one word, and reports sentences over 25 words as errors, over 20 as warnings, plus semicolons and non-approved words.
 

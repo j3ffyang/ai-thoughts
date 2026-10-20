@@ -12,11 +12,31 @@
 
 ## 目录
 
-### 一、跨平台与比较
+### 一、个人技术、隐私与游戏
 
 | 文章 | 简介 |
 |---|---|
-| [ste100-agent-instructions](docs/261019-ste100-agent-instructions.md) | ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed measurement of three AGENTS.md files, and a skill that applies the rules without flattening essay voice |
+| [arch-package-usage-audit](docs/261020-package-usage-audit.md) | Two audits on Arch Linux — which VLC plugin packages are actually needed beyond the base/extra split (the vlc-plugin-ffmpeg trap), and whether pacman can name the packages that were never executed (the atime-versus-ctime method, its two proven blind spots under hardened units and upgrades, and 31 candidates out of 1,070) |
+| [cursor-to-vscodium](docs/261014-cursor-to-vscodium.md) | Replacing Cursor with a minimal, self-contained VSCodium AppImage on Arch — no forced agent panel, no telemetry, no account; three Open VSX extensions (Vim, Markdown Preview Enhanced, Markdown PDF); built-in Mermaid and local PlantUML rendering; manual updates; and a measured footprint comparison; with a visual summary infographic |
+| [unix-is-art](docs/261011-unix-is-art.md) · [Unix 是艺术](docs/261011-unix-is-art-zh-hans.md) | 一篇把 Unix 哲学当作美学的个人随笔——它从 1974 到 2004 年的历史（Thompson 与 Ritchie、McIlroy、Kernighan 与 Pike、Raymond）、它背后的思想与对它的批评、对 Dennis Ritchie 的纪念，以及 Unix 如何塑造了我 |
+| [secret-handling](docs/261009-secret-handling.md) · [把机密挡在 Git 之外](docs/261009-secret-handling-zh-hans.md) | 一份让机密远离 git 的简短清单——为什么已提交的机密就已泄露、该补上哪些 .gitignore 模式、该在哪里声明政策（README、AGENTS.md），以及三条用来验证没有东西在藏匿的命令；附视觉总结信息图 |
+| [encrypt-linux](docs/261002-encrypt-linux.md) · [加密 Linux：从一次入侵到 LUKS 与 Veracrypt](docs/261002-encrypt-linux-zh-hans.md) | 一段个人 Linux 安全故事——20 多年前的一次入侵如何把我从检测篡改（tripwire）推向预防它：LUKS 全盘加密（xfs 根分区、明文的 /boot）、Veracrypt USB 卷、威胁模型及其诚实的边界、AES-NI 开销、TRIM，以及两块加密磁盘之间的每日 rsync 备份；附视觉总结信息图 |
+| [brisova-malware-analysis](docs/260929-brisova-malware-analysis.md) · [Brisova 恶意构建期载荷剖析](docs/260929-brisova-malware-analysis-chn.md) | 剖析一次恶意 GitHub 仓库邀请：一个混淆的 Tailwind/PostCSS 插件在构建期执行 npm install sql.js socket.io-client form-data axios，并加载 C2/凭据窃取工具集——含静态分析与沙箱动态分析、零信任处置策略及完整 IoC；附视觉总结信息图 |
+| [play-rdr2-with-opencode](docs/260921-play-rdr2-with-opencode.md) · [和 AI 智能体一起玩《荒野大镖客 2》](docs/260921-play-rdr2-with-opencode-chn.md) | 和 AI 智能体一起玩《荒野大镖客 2》——在 OpenCode 中用自定义技能与 AGENTS.md 记录一次通关，运行于 Arch Linux + Steam/Proton |
+| [rdr2-ch2-playthrough-notes](docs/260921-rdr2-ch2-playthrough.md) · [《荒野大镖客 2》第二章通关笔记](docs/260921-rdr2-ch2-playthrough-chn.md) | 工作参考：《荒野大镖客 2》第二章通关笔记——金条、传奇动物、饰品、抢劫与挑战，由 rdr2-playthrough 技能维护 |
+| [lossless-pptx-extraction](docs/260919-lossless-pptx-extraction.md) · [无损提取 PPTX](docs/260919-lossless-pptx-extraction-chn.md) | 工程深潜：把 PowerPoint 演示文稿完整提取为 Markdown——OOXML 形状遍历、内容与版式装饰及不可渲染对象的区分、五点无损审计，以及为何这条流水线选择本地运行而非 CI |
+| [happy-birthday-linux](docs/260828-happy-birthday-linux-from-aix-to-arch.md) · [生日快乐，Linux](docs/260828-happy-birthday-linux-from-aix-to-arch-chn.md) | 三十五年的 Linux 个人旅程——从 IBM 的 AIX 起步、被入侵后养成安全习惯、兜兜转转的发行版岁月最终停在 Arch，如今每一台机器都是 Arch Linux；附视觉总结信息图 |
+| [arch-hyprland-gpd-win4-egpu](docs/260807-gpd-dual-amd-gpu.md) · [arch-hyprland-gpd-win4-egpu_chn](docs/260807-gpd-dual-amd-gpu-chn.md) | 掌机上的双 AMD GPU（iGPU + eGPU，OCuLink 连接 RX 7600M XT）渲染卸载指南——验证命令、稳定 DRM 符号链接与调整日志 |
+| [brave-browser-privacy](docs/260706-brave-post.md) | 为什么我选择Brave的深度分析：本地密钥管理、Shields隐私防护、WebRTC控制与Tor集成（英文） |
+| [brave-browser-privacy](docs/260706-brave-post-chn.md) | 為什麼我開始使用Brave的深度分析：本地密鑰管理、隱私防護、WebRTC控制及Tor整合（繁體中文） |
+| [immutable-os-strategy](docs/260622-immutable-os.md) | "不可变操作系统"选型策略——为何一位使用Linux四分之一世纪的老用户坚持原生Arch与Debian LTS，而非Bazzite/Silverblue |
+| [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | DCS World新手入门指南：VKB Gladiator NXT EVO摇杆 + 无数字键盘的键位映射、游戏模式飞行与摇杆轴调校 |
+
+### 二、跨平台与比较
+
+| 文章 | 简介 |
+|---|---|
+| [ste100-agent-instructions](docs/261019-ste100-agent-instructions.md) · [ASD-STE100：规则，而非词语](docs/261019-ste100-agent-instructions-zh-hans.md) | 面向智能体指令的 ASD-STE100 简化技术英语——标准的历史与规则、三个实例、对两份规则文件所做的 linter 前后测量，以及一个不把散文语感压平的技能；附视觉总结信息图 |
 | [what-to-know-work-with-ai](docs/260922-what-to-know-work-with-ai.md) · [与 AI 智能体高效协作，你应该懂些什么？](docs/260922-what-to-know-work-with-ai-zh-hans.md) | 与 AI 智能体高效协作真正需要知道什么——把期望说清是用户的责任；有用的技能（Markdown、技能、Python、YAML/GitHub Actions、Git、Linux、AGENTS.md/SKILL.md）；为何“补丁摞补丁”的智能体代码会变得无法维护；以及绝不单独交出去的四件事 |
 | [agent-session-persistence](docs/260920-agent-session-persistence.md) · [OpenCode 中的智能体会话持久化](docs/260920-agent-session-persistence-chn.md) | OpenCode 编码智能体的会话存在磁盘何处、如何恢复——单一 SQLite 存储及其内容（模式与计数）、在团队规模下它变成的业务数据、上下文压缩、自动清理，以及如何备份 |
 | [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly.md) · [opencode-create-skill-onfly](docs/260906-opencode-create-skill-onfly-chn.md) | 随手创建 SKILL.md、AGENTS.md 和 PERSONA.md，而不是去淘别人的技能——三个自定义层次、日复一日使用得来的真实好处，以及作为日常智能体的 OpenCode |
@@ -33,25 +53,6 @@
 | [opencode-vs-claude-code](docs/260513-choose-cc-opencode.md) | OpenCode与Claude Code的比较：用于运行Claude Opus和其他模型（中英双语） |
 | [opencode-vs-claude-code_chn](docs/260513-choose-cc-opencode-chn.md) | OpenCode 与 Claude Code 对比（简体中文） |
 | [engageOpenClaw](docs/260420-engage-openclaw.md) | 使用OpenClaw与Hermes三个月后的复盘：多步骤AI任务编排与章节配图生成工作流 |
-
-### 二、个人技术、隐私与游戏
-
-| 文章 | 简介 |
-|---|---|
-| [cursor-to-vscodium](docs/261014-cursor-to-vscodium.md) | Replacing Cursor with a minimal, self-contained VSCodium AppImage on Arch — no forced agent panel, no telemetry, no account; three Open VSX extensions (Vim, Markdown Preview Enhanced, Markdown PDF); built-in Mermaid and local PlantUML rendering; manual updates; and a measured footprint comparison; with a visual summary infographic |
-| [unix-is-art](docs/261011-unix-is-art.md) · [Unix 是艺术](docs/261011-unix-is-art-zh-hans.md) | 一篇把 Unix 哲学当作美学的个人随笔——它从 1974 到 2004 年的历史（Thompson 与 Ritchie、McIlroy、Kernighan 与 Pike、Raymond）、它背后的思想与对它的批评、对 Dennis Ritchie 的纪念，以及 Unix 如何塑造了我 |
-| [secret-handling](docs/261009-secret-handling.md) · [把机密挡在 Git 之外](docs/261009-secret-handling-zh-hans.md) | 一份让机密远离 git 的简短清单——为什么已提交的机密就已泄露、该补上哪些 .gitignore 模式、该在哪里声明政策（README、AGENTS.md），以及三条用来验证没有东西在藏匿的命令；附视觉总结信息图 |
-| [encrypt-linux](docs/261002-encrypt-linux.md) · [加密 Linux：从一次入侵到 LUKS 与 Veracrypt](docs/261002-encrypt-linux-zh-hans.md) | 一段个人 Linux 安全故事——20 多年前的一次入侵如何把我从检测篡改（tripwire）推向预防它：LUKS 全盘加密（xfs 根分区、明文的 /boot）、Veracrypt USB 卷、威胁模型及其诚实的边界、AES-NI 开销、TRIM，以及两块加密磁盘之间的每日 rsync 备份；附视觉总结信息图 |
-| [brisova-malware-analysis](docs/260929-brisova-malware-analysis.md) · [Brisova 恶意构建期载荷剖析](docs/260929-brisova-malware-analysis-chn.md) | 剖析一次恶意 GitHub 仓库邀请：一个混淆的 Tailwind/PostCSS 插件在构建期执行 npm install sql.js socket.io-client form-data axios，并加载 C2/凭据窃取工具集——含静态分析与沙箱动态分析、零信任处置策略及完整 IoC；附视觉总结信息图 |
-| [play-rdr2-with-opencode](docs/260921-play-rdr2-with-opencode.md) · [和 AI 智能体一起玩《荒野大镖客 2》](docs/260921-play-rdr2-with-opencode-chn.md) | 和 AI 智能体一起玩《荒野大镖客 2》——在 OpenCode 中用自定义技能与 AGENTS.md 记录一次通关，运行于 Arch Linux + Steam/Proton |
-| [rdr2-ch2-playthrough-notes](docs/260921-rdr2-ch2-playthrough.md) · [《荒野大镖客 2》第二章通关笔记](docs/260921-rdr2-ch2-playthrough-chn.md) | 工作参考：《荒野大镖客 2》第二章通关笔记——金条、传奇动物、饰品、抢劫与挑战，由 rdr2-playthrough 技能维护 |
-| [lossless-pptx-extraction](docs/260919-lossless-pptx-extraction.md) · [无损提取 PPTX](docs/260919-lossless-pptx-extraction-chn.md) | 工程深潜：把 PowerPoint 演示文稿完整提取为 Markdown——OOXML 形状遍历、内容与版式装饰及不可渲染对象的区分、五点无损审计，以及为何这条流水线选择本地运行而非 CI |
-| [happy-birthday-linux](docs/260828-happy-birthday-linux-from-aix-to-arch.md) · [生日快乐，Linux](docs/260828-happy-birthday-linux-from-aix-to-arch-chn.md) | 三十五年的 Linux 个人旅程——从 IBM 的 AIX 起步、被入侵后养成安全习惯、兜兜转转的发行版岁月最终停在 Arch，如今每一台机器都是 Arch Linux；附视觉总结信息图 |
-| [arch-hyprland-gpd-win4-egpu](docs/260807-gpd-dual-amd-gpu.md) · [arch-hyprland-gpd-win4-egpu_chn](docs/260807-gpd-dual-amd-gpu-chn.md) | 掌机上的双 AMD GPU（iGPU + eGPU，OCuLink 连接 RX 7600M XT）渲染卸载指南——验证命令、稳定 DRM 符号链接与调整日志 |
-| [brave-browser-privacy](docs/260706-brave-post.md) | 为什么我选择Brave的深度分析：本地密钥管理、Shields隐私防护、WebRTC控制与Tor集成（英文） |
-| [brave-browser-privacy](docs/260706-brave-post-chn.md) | 為什麼我開始使用Brave的深度分析：本地密鑰管理、隱私防護、WebRTC控制及Tor整合（繁體中文） |
-| [immutable-os-strategy](docs/260622-immutable-os.md) | "不可变操作系统"选型策略——为何一位使用Linux四分之一世纪的老用户坚持原生Arch与Debian LTS，而非Bazzite/Silverblue |
-| [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | DCS World新手入门指南：VKB Gladiator NXT EVO摇杆 + 无数字键盘的键位映射、游戏模式飞行与摇杆轴调校 |
 
 ### 三、历史、文化与哲思
 
@@ -145,6 +146,7 @@
 | [video-gen](https://clawhub.ai/j3ffyang/skills/video-gen) | Generate a video from a story-telling narration script plus the author's photos, using Seedance 2.0 image-to-video via OpenRouter's asynchronous video API: pre-render gates (face-scan, narrative order, risk-POC), then per-clip submit -> poll -> download, then ffmpeg assembly. Multi-clip projects default to silent clips plus one continuous soundtrack (synthesized or royalty-free/PD); subtitle voiceover is the fallback (no OpenRouter TTS). Verified working 2026-08-15 (POC: 4s 480p clip, $0.28, ~3 min). Use when the user asks to render a narration script into a video, generate a 视频, or run the death-in-Mexico project's video pipeline. Related terms: Seedance, 视频生成, OpenRouter, image-to-video. |
 | [thought-flow](https://clawhub.ai/j3ffyang/skills/thought-flow) | The 8-stage collaboration loop for working with the user: INTENT, CONSTRAINTS, PROPOSE, PRESS, PRACTICE, INVESTIGATE, CODIFY, BOUNDARY-CHECK. Use when starting a new task (state intent and constraints up front), when proposing a plan (include options + a recommendation), when the user pushes back on a proposal, when something fails or looks broken and needs investigation, or when deciding whether to codify knowledge into an AGENTS.md rule or a SKILL.md procedure. |
 | [lan-latency-triage](https://clawhub.ai/j3ffyang/skills/lan-latency-triage) | Use when diagnosing host-to-host reachability, latency, or packet-loss faults on the LAN — "can't ping the other machine", ping times out, ARP/neigh INCOMPLETE, huge or variable LAN RTT, WiFi power save, DTIM buffering, or an intermittent drop. Encodes the differential-measurement ladder (control group, ARP layer, firewall, AP isolation, rate sweep, per-packet ping trace) that separates a layer-2 fault from a firewall from a DTIM stall. Triggers on ping, latency, packet loss, neigh, arp, INCOMPLETE, FAILED, DTIM, power save, BSSID, RSSI, unreachable, timeouts, one host can't reach another. |
+| [pkg-usage-audit](https://clawhub.ai/j3ffyang/skills/pkg-usage-audit) | Use when the user asks which installed packages have never been used, which packages can be removed, or whether pacman tracks execution — on an Arch Linux host. Encodes the atime-versus-ctime method, its two proven false-positive classes (read-only mounts under systemd hardening, and atime resets by package upgrades), and the script that produces the report. Triggers on unused packages, never executed, never run, last used, package cleanup, remove packages, disk space, pacman usage tracking, atime, orphans, Qdtq, what can I uninstall. |
 
 ### 九、草稿与工作笔记
 

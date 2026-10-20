@@ -42,7 +42,7 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 | Repo | Purpose | Articles |
 |------|---------|----------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 49 articles |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 50 articles |
 
 ### Tools & Extensions
 
@@ -296,7 +296,7 @@ if args.check:
 ## 🔗 Quick Links
 
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
-- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 49 articles on AI, privacy, and entrepreneurship
+- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 50 articles on AI, privacy, and entrepreneurship
 - **Gists & Experiments:** [Personal gists](https://gist.github.com/j3ffyang)
 
 ---
@@ -305,14 +305,14 @@ if args.check:
 
 From `ai-thoughts` (most recent published articles):
 
-1. **"The Rules, Not the Words: ASD-STE100 for Agent Instructions"** (Oct 2026) — ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed measurement of three AGENTS.md files, and a skill that applies the rules without flattening essay voice
-2. **"Replace Cursor with a Minimal VSCodium AppImage"** (Oct 2026) — Replacing Cursor with a minimal, self-contained VSCodium AppImage on Arch — no forced agent panel, no telemetry, no account; three Open VSX extensions (Vim, Markdown Preview Enhanced, Markdown PDF); built-in Mermaid and local PlantUML rendering; manual updates; and a measured footprint comparison; with a visual summary infographic
-3. **"Unix Is Art"** (Oct 2026) — A personal essay on the Unix philosophy as an aesthetic — its history from 1974 to 2004 (Thompson and Ritchie, McIlroy, Kernighan and Pike, Raymond), the ideas behind it and the critics of it, a remembrance of Dennis Ritchie, and what Unix made me
-4. **"Keeping secrets out of Git"** (Oct 2026) — A short checklist for keeping secrets out of git — why a committed secret is already compromised, the .gitignore patterns to add, where to state the policy (README, AGENTS.md), and three commands to verify nothing is hiding; with a visual summary infographic
-5. **"Encrypting Linux: from a hack 20+ years ago to firewalls, LUKS and Veracrypt"** (Oct 2026) — A personal Linux security story — how a break-in 20+ years ago pushed me from detecting tampering (tripwire) to preventing it: LUKS full-disk encryption (xfs root, cleartext /boot), Veracrypt USB volumes, the threat model and its honest limits, AES-NI overhead, TRIM, and a daily rsync backup between two encrypted disks; with a visual summary infographic
-6. **"Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload"** (Sep 2026) — Anatomy of a malicious GitHub repo invite: an obfuscated Tailwind/PostCSS plugin that runs npm install sql.js socket.io-client form-data axios at build time and loads a C2/credential-stealer toolset — static and sandboxed dynamic analysis, a zero-trust handling strategy, and full IoCs; with a visual summary infographic
+1. **"261020 — Which VLC plugins are needed, and which packages have never run"** (Oct 2026) — Two audits on Arch Linux — which VLC plugin packages are actually needed beyond the base/extra split (the vlc-plugin-ffmpeg trap), and whether pacman can name the packages that were never executed (the atime-versus-ctime method, its two proven blind spots under hardened units and upgrades, and 31 candidates out of 1,070)
+2. **"The Rules, Not the Words: ASD-STE100 for Agent Instructions"** (Oct 2026) — ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed before-and-after measurement of two rule files, and a skill that applies the rules without flattening essay voice; with a visual summary infographic
+3. **"Replace Cursor with a Minimal VSCodium AppImage"** (Oct 2026) — Replacing Cursor with a minimal, self-contained VSCodium AppImage on Arch — no forced agent panel, no telemetry, no account; three Open VSX extensions (Vim, Markdown Preview Enhanced, Markdown PDF); built-in Mermaid and local PlantUML rendering; manual updates; and a measured footprint comparison; with a visual summary infographic
+4. **"Unix Is Art"** (Oct 2026) — A personal essay on the Unix philosophy as an aesthetic — its history from 1974 to 2004 (Thompson and Ritchie, McIlroy, Kernighan and Pike, Raymond), the ideas behind it and the critics of it, a remembrance of Dennis Ritchie, and what Unix made me
+5. **"Keeping secrets out of Git"** (Oct 2026) — A short checklist for keeping secrets out of git — why a committed secret is already compromised, the .gitignore patterns to add, where to state the policy (README, AGENTS.md), and three commands to verify nothing is hiding; with a visual summary infographic
+6. **"Encrypting Linux: from a hack 20+ years ago to firewalls, LUKS and Veracrypt"** (Oct 2026) — A personal Linux security story — how a break-in 20+ years ago pushed me from detecting tampering (tripwire) to preventing it: LUKS full-disk encryption (xfs root, cleartext /boot), Veracrypt USB volumes, the threat model and its honest limits, AES-NI overhead, TRIM, and a daily rsync backup between two encrypted disks; with a visual summary infographic
 
-👉 See all 49 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
+👉 See all 50 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
 
 ---
 
@@ -338,7 +338,7 @@ npm run build  # or load the extension manually in Chrome
 ```bash
 git clone https://github.com/negtivspace/ai-thoughts
 cd docs
-# 49 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
+# 50 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
 ```
 
 ---
@@ -349,4 +349,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** October 19, 2026 | Tracking: 6 active repos, 49 published articles, 20+ published skills
+**Last Updated:** October 20, 2026 | Tracking: 6 active repos, 50 published articles, 20+ published skills

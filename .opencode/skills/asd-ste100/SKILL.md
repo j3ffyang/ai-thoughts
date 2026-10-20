@@ -14,7 +14,7 @@ metadata:
 
 # ASD-STE100 — Simplified Technical English for Instructions
 
-ASD-STE100 is a controlled language built for aircraft maintenance manuals. Its value here is not the 900-word dictionary. It is the discipline: an agent cannot ask a follow-up question, so every instruction must survive being read once, literally, at 2am.
+ASD-STE100 is a controlled language built for aircraft maintenance manuals. Its value here is not the 875-word dictionary. It is the discipline: an agent cannot ask a follow-up question, so every instruction must survive being read once, literally, at 2am.
 
 This skill applies that discipline to text an agent must obey or parse.
 
@@ -86,6 +86,8 @@ Run these commands from the `ai-thoughts` repo root:
 ```bash
 python3 .opencode/skills/asd-ste100/scripts/ste_lint.py PATH...
 python3 .opencode/skills/asd-ste100/scripts/ste_lint.py --check PATH...
+python3 .opencode/skills/asd-ste100/scripts/ste_lint.py --stats PATH...
+python3 .opencode/skills/asd-ste100/scripts/ste_lint.py --json PATH...
 ```
 
 It reports:
@@ -98,6 +100,10 @@ It reports:
 It does **not** check meaning, one-instruction-per-sentence, synonym drift, or whether a rewrite preserved a condition. Those stay with the reader.
 
 Counts exclude fenced code, inline code, URLs, table rows, and headings. A code span counts as one word.
+
+`--stats` prints one summary row per file: sentences, over 20 words, over 25 words, semicolons, errors, warnings. `--json` prints the findings as JSON for another tool.
+
+One blind spot: a sentence that ends in a bare URL merges with the next sentence. The URL token consumes the full stop, so the two sentences count as one and can raise a false long-sentence finding. End the sentence with a word, or put the URL on its own line.
 
 In article mode, treat semicolon and vocabulary findings in narrative prose as advisory. The structural rules still apply to steps, commands, conditions, and tables.
 

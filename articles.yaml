@@ -150,7 +150,9 @@ rows:
     status: published
     links:
       - { label: "ste100-agent-instructions", path: "docs/261019-ste100-agent-instructions.md", lang: en }
-    desc_en: "ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed measurement of three AGENTS.md files, and a skill that applies the rules without flattening essay voice"
+      - { label: "ste100-agent-instructions", path: "docs/261019-ste100-agent-instructions-zh-hans.md", lang: zh, label_zh: "ASD-STE100：规则，而非词语" }
+    desc_en: "ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed before-and-after measurement of two rule files, and a skill that applies the rules without flattening essay voice; with a visual summary infographic"
+    desc_zh: "面向智能体指令的 ASD-STE100 简化技术英语——标准的历史与规则、三个实例、对两份规则文件所做的 linter 前后测量，以及一个不把散文语感压平的技能；附视觉总结信息图"
   - section: cross
     status: published
     links:
@@ -252,6 +254,12 @@ rows:
     links:
       - { label: "cursor-to-vscodium", path: "docs/261014-cursor-to-vscodium.md", lang: en }
     desc_en: "Replacing Cursor with a minimal, self-contained VSCodium AppImage on Arch — no forced agent panel, no telemetry, no account; three Open VSX extensions (Vim, Markdown Preview Enhanced, Markdown PDF); built-in Mermaid and local PlantUML rendering; manual updates; and a measured footprint comparison; with a visual summary infographic"
+
+  - section: personal
+    status: published
+    links:
+      - { label: "arch-package-usage-audit", path: "docs/261020-package-usage-audit.md", lang: en }
+    desc_en: "Two audits on Arch Linux — which VLC plugin packages are actually needed beyond the base/extra split (the vlc-plugin-ffmpeg trap), and whether pacman can name the packages that were never executed (the atime-versus-ctime method, its two proven blind spots under hardened units and upgrades, and 31 candidates out of 1,070)"
 
   # ------------------------------------------------------------ V. openclaw
   - section: openclaw
