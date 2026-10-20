@@ -257,6 +257,7 @@ rows:
 
   - section: personal
     status: published
+    portfolio_latest: false   # doc not yet committed; drop this line when it lands
     links:
       - { label: "arch-package-usage-audit", path: "docs/261020-package-usage-audit.md", lang: en }
     desc_en: "Two audits on Arch Linux — which VLC plugin packages are actually needed beyond the base/extra split (the vlc-plugin-ffmpeg trap), and whether pacman can name the packages that were never executed (the atime-versus-ctime method, its two proven blind spots under hardened units and upgrades, and 31 candidates out of 1,070)"

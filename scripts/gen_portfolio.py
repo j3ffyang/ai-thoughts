@@ -9,7 +9,9 @@ Template: scripts/portfolio_template.md. PORTFOLIO.md is generated output —
 never edit it by hand. Placeholders filled by this script:
 
     {{ARTICLE_COUNT}}   number of unique published articles (by YYMMDD in articles.yaml)
-    {{LATEST_ARTICLES}} top N published articles (title, month, description)
+    {{LATEST_ARTICLES}} top N published articles (title, month, description). A row
+                        with `portfolio_latest: false` keeps its article count but
+                        is left out of this list until the flag is removed.
     {{LAST_UPDATED}}    today's date
 """
 
@@ -64,6 +66,8 @@ def latest_articles(data: dict, n: int = LATEST_N) -> str:
     seen_dates = set()
     for row in data["rows"]:
         if row.get("status") != "published":
+            continue
+        if row.get("portfolio_latest") is False:
             continue
         en = next((ln for ln in row["links"] if ln.get("lang") == "en"), None)
         ln = en or row["links"][0]
