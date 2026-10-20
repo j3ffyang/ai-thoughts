@@ -23,16 +23,15 @@ All code prioritizes **clarity over cleverness**: simple, readable, portable, an
 
 **⚡ OpenCode — the growing collection, auto-published to ClawHub**
 
-My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawHub](https://clawhub.ai/j3ffyang) automatically on every push to `j3ffyang` — no local installs, one owner account. The collection is growing fastest here:
+My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawHub](https://clawhub.ai/j3ffyang) automatically on every push to `j3ffyang` — no local installs, one owner account. The one to open first:
 
-- **`astro-sync`** — convert & polish an article into an AstroPaper post for the astro_journal blog (everbox.io), images included
-- **`resize-for-banner`** — 16:9 (LinkedIn) / 5:2 (X) social banners, padded black, never cropped, never overwrites the source
-- **`translate-to-zh-hans`** — translate an article into Simplified Chinese as a `-zh-hans.md` twin
-- **`simplified-to-traditional`** — generate and keep in sync the Traditional-Chinese `-zh-hant.md` twin of a `-zh-hans.md` article (OpenCC s2twp + cross-links + `--check`)
+- **[`asd-ste100`](https://clawhub.ai/j3ffyang/skills/asd-ste100)** — write and audit agent instructions in ASD-STE100's rules: one action per sentence, condition first, one name per item. Ships a deterministic linter for sentence length, semicolons, banned words, and passive voice.
+
+The rest of the collection — article translation, Traditional-Chinese twin sync, banner resizing, Astro sync — is in the repo linked below.
 
 | Platform | Repo | Purpose | Latest | Status |
 |----------|------|---------|--------|--------|
-| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`astro-sync`](https://clawhub.ai/j3ffyang) (article → AstroPaper post for everbox.io, images included), [`resize-for-banner`](https://clawhub.ai/j3ffyang) (16:9 / 5:2 social banners, padded never cropped), [`translate-to-zh-hans`](https://clawhub.ai/j3ffyang) (article → Simplified Chinese `-zh-hans.md` twin), [`simplified-to-traditional`](https://clawhub.ai/j3ffyang) (zh-hans → zh-hant twin sync). Auto-published to ClawHub on every push to `j3ffyang`. | `add auto-wrap tool` (Aug 2026) | 🔄 Active |
+| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`asd-ste100`](https://clawhub.ai/j3ffyang/skills/asd-ste100) — ASD-STE100 rules for agent instructions, with a linter (`--stats`, `--check`). Auto-published to ClawHub on every push to `j3ffyang`. | `docs: publish STE100 article` (Oct 2026) | 🔄 Active |
 | **Hermes** ⚕ | **[hermes-custom-skills](https://github.com/negtivspace/hermes-custom-skills)** | Specialized skills for [Hermes Agent](https://hermes.ai) — autonomous workflows, content generation, task orchestration. | `docs: add README and CONTRIBUTING` (Apr 2026) | 🔄 Active |
 | **OpenClaw** 🦞 | **[openclaw-custom-skills](https://github.com/negtivspace/openclaw-custom-skills)** | Production skills for [OpenClaw](https://openclaw.ai) published to ClawHub. Multilingual blog publishing, media generation. | `add chinese edition` (Apr 2026) | 🔄 Active |
 | **Claude Code** | **[claude-custom-skills](https://github.com/negtivspace/claude-custom-skills)** | Automation skills for [Claude Code](https://claude.ai) — productivity hacks, data export, content workflows. | `add i18n support to README` (Apr 2026) | ✨ Stable |
@@ -57,6 +56,9 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
+- **Oct 20:** Published "The Rules, Not the Words: ASD-STE100 for Agent Instructions" — English plus Simplified and Traditional Chinese twins, a 16:9 infographic, and a 5:2 banner
+- **Oct 20:** Added the `asd-ste100` skill and a `--stats` summary mode to its linter; rewrote both working-rule AGENTS.md files to the same standard (18 and 15 linter errors to zero) and logged the diffs
+- **Oct 20:** Added a `portfolio_latest: false` opt-out, so an article whose doc is not committed yet stays counted but off the front-page list; recorded a per-genre precision rule (approximate figures in essays, exactness in code and measurements)
 - **Oct 7:** Refreshed the portfolio timeline and skills list, and dropped the WIP `encrypt-linux` row from the article index until the articles are ready
 - **Oct 7:** Published "What Should You Know to Work Well with an AI Agent?" in three versions — English, Simplified Chinese, and its first Traditional-Chinese `-zh-hant.md` twin
 - **Oct 7:** Added the `simplified-to-traditional` skill — `-zh-hans` → `-zh-hant` twin sync with OpenCC (s2twp), permanent cross-links, and `--check`; published to ClawHub 1.0.0
