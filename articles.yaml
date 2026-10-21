@@ -561,3 +561,12 @@ rows:
       - { label: "agents-md-not-a-persona", path: "docs/260821-agents-md-not-a-persona-chn.md", lang: zh, label_zh: "AGENTS.md 不是人格设定" }
     desc_en: "AGENTS.md is not a persona but a constitution written in scars — every rule traced to a real incident (a self-cloned repo, lying docs, a prompt flood), agent-agnostic lessons for any AI coding agent"
     desc_zh: "AGENTS.md 不是人格设定——它是一部用伤疤写成的宪章：每条规则追溯到真实事故（自克隆仓库、撒谎的文档、提示洪水），不绑定特定工具的通用法则"
+
+  # -------------------------------------------------------------- IV. personal (cont.)
+  - section: personal
+    status: published
+    links:
+      - { label: "medical-record-review", path: "docs/261021-medical-record-review.md", lang: en }
+      - { label: "medical-record-review", path: "docs/261021-medical-record-review-zh-hans.md", lang: zh, label_zh: "智能体可以审计的健康档案" }
+    desc_en: "A two-layer skill for AI-assisted review of personal and family medical records: append-only data, conflict protocol, change gate, evidence grading — and the honest list of what it still cannot do"
+    desc_zh: "一套两层技能，用于 AI 辅助复阅个人与家庭病历：只追加的数据行、冲突协议、变更闸门、证据分级——以及它仍然做不到什么的诚实清单"
