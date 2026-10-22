@@ -17,6 +17,7 @@ Platform: GPD Win4 (Arch Linux + Hyprland, via Steam/Proton) — used as a stand
 - [Sharpshooter Challenge](#sharpshooter-challenge)
   - [7 Consecutive Headshots](#7-consecutive-headshots)
   - [Disarm 3 Enemies Without Reloading/Switching](#disarm-3-enemies-without-reloadingswitching)
+- [Master Hunter Challenge](#master-hunter-challenge)
 - [Serial Killer "American Dreams"](#serial-killer-american-dreams)
 
 ## Progress Strategy
@@ -113,20 +114,41 @@ There are 4 backroom businesses (General Store, Gunsmith, Doctor's office). How 
 
 All legendary animal locations & info: https://www.shacknews.com/article/108175/all-legendary-animal-locations-in-red-dead-redemption-2
 
+Chapter 2 scope: 12 of the 16 legendary animals are huntable right now — 11 unlocked by "Exit, Pursued by a Bruised Ego", plus Giaguaro via Master Hunter rank 9 — all 12 are marked shot below. Kill quality does not matter on legendaries, so use Dead Eye freely — any kill yields the full pelt. Track 3 clues (2 for the bear), then the animal spawns close by. If it kills you it flees and you come back later; it never respawns once killed. A pelt lost in the field still reaches the Trapper, but it must be sold to him before any legendary craft unlocks.
+
+| Not huntable in Chapter 2 | Gate |
+|---|---|
+| Bullgator | Chapter 4 mission "Country Pursuits" |
+| Tatanka Bison | New Austin (Hennigan's Stead) — Epilogue |
+| Pronghorn | New Austin (Rio del Lobo Rock) — Epilogue |
+| Cougar | New Austin (Gaptooth Ridge, west of Tumbleweed) — Epilogue |
+
 | Animal | Location | Trapper Crafting |
 |--------|----------|------------------|
-| White Bison | Lake Isabella, west shore, Grizzlies West (Ambarino) | Hat (\$45), Coat (\$29) - Ghost Bison Set |
-| Coyote | West end of Dewberry Creek, NW of Rhodes, Scarlett Meadows | The Huntsman set (Coyote + Pronghorn pelts). Fang → Coyote Fang Trinket at a fence (+10% Dead Eye XP) |
-| Buck | Black Bone Forest, western foot of Mt. Shan, NW of Strawberry (Big Valley, West Elizabeth); north of Owanjila Dam, south of the "B" in BIG VALLEY. First clue NW of map icon, near "Black" in Black Bone Forest | Pelt → Trophy Buck set at trapper (Vest, Legendary Buck & Fox, Range Gloves). Antler → Buck Antler Trinket at fence (higher-quality skinning = perfect pelt boost) |
-| Boar | NW section of Bluewater Marsh, northern edge of Bayou Nwa, Lemoyne (north of Lagras; ~halfway between Saint Denis and Van Horn) | Pelt → The Dreamcatcher set at trapper (with Beaver + Tatanka Bison pelts; also Legendary Boar & Bison Fowlers boots). Tusk → Boar Tusk Talisman (see Trinket Components) |
-| Fox | Mattock Pond, just north of Rhodes, Scarlett Meadows, Lemoyne | Pelt → Legendary Fox Moccasins (\$40, + Perfect Elk Pelt) and Legendary Buck & Fox Range Gloves (\$28, Trophy Buck set). Claw → Fox Claw Trinket at fence (\$23.50: +5 sec Eagle Eye) |
+| White Bison | Lake Isabella, west shore, Grizzlies West (Ambarino) | Hat (\$45), Coat (\$29) - Ghost Bison Set — shot |
+| Coyote | West end of Dewberry Creek, NW of Rhodes, Scarlett Meadows | The Huntsman set (Coyote + Pronghorn pelts). Fang → Coyote Fang Trinket at a fence (+10% Dead Eye XP) — shot |
+| Buck | Black Bone Forest, western foot of Mt. Shan, NW of Strawberry (Big Valley, West Elizabeth); north of Owanjila Dam, south of the "B" in BIG VALLEY. First clue NW of map icon, near "Black" in Black Bone Forest | Pelt → Trophy Buck set at trapper (Vest, Legendary Buck & Fox, Range Gloves). Antler → Buck Antler Trinket at fence (higher-quality skinning = perfect pelt boost) — shot |
+| Boar | NW section of Bluewater Marsh, northern edge of Bayou Nwa, Lemoyne (north of Lagras; ~halfway between Saint Denis and Van Horn) | Pelt → The Dreamcatcher set at trapper (with Beaver + Tatanka Bison pelts; also Legendary Boar & Bison Fowlers boots). Tusk → Boar Tusk Talisman (see Trinket Components) — shot |
+| Fox | Mattock Pond, just north of Rhodes, Scarlett Meadows, Lemoyne | Pelt → Legendary Fox Moccasins (\$40, + Perfect Elk Pelt) and Legendary Buck & Fox Range Gloves (\$28, Trophy Buck set). Claw → Fox Claw Trinket at fence (\$23.50: +5 sec Eagle Eye) — shot |
+| Elk | East of Fort Wallace, Cumberland Forest (New Hanover) | — shot |
+| Big Horn Ram | Rock hill by Cattail Pond, west of Valentine (Ambarino) | — shot |
+| Wolf | Cotorra Springs, west of Bacchus Bridge (Ambarino) | — shot |
+| Beaver | Pond south of Elysian Pool, due west of Van Horn (New Hanover) | — shot |
+| Moose | North of Brandywine Drop, Roanoke Ridge (New Hanover) | — shot |
+| Bharati Grizzly Bear | Grizzlies East, north of O'Creagh's Run, between the "L" and "S" in GRIZZLIES EAST (Ambarino); only 2 clues | Pelt → Legendary Bear Coat (\$28, + Perfect Bison Pelt), Head Hat (\$40), Roper (\$34) — shot |
+| Giaguaro Panther | South of Bolger Glade, Scarlett Meadows, Lemoyne — SE of the glade, E of Braithwaite Manor, W of Shady Belle, almost to the coast. Gated by Master Hunter rank 9 (see Master Hunter Challenge) | Pelt → Legendary Panther Cloak (\$45, pelt only) and Range Gloves (\$30, + Perfect Gila Monster Skin). Eye → Panther's Eye Trinket at a fence (\$24.50: Dead Eye drain -10% for the first 3 sec) — shot |
+
+Hunted status: check the Compendium (Esc → Progress → Compendium → Animals → Legendary) — Studied / Killed / Skinned checkmarks. Camp satchels prove nothing, they use ordinary perfect pelts only.
 
 ## Trinket Components
 
+All Chapter-2 fence crafts are done — trinkets: Beaver Tooth, Buck Antler, Coyote Fang, Elk Antler, Fox Claw, Moose Antler, Panther's Eye, Ram Horn, Wolf Heart; talismans: Bear Claw, Boar Tusk, Bison Horn. Legendary keepsakes are crafted at a **Fence**, while pelts and carcasses go to the **Trapper** — different vendors; the keepsake is consumed by the craft, the pelt stays usable for clothing. Still out of reach in Chapter 2: Cougar Fang, Pronghorn Horn and Tatanka Bison Horn (New Austin / Epilogue) and the Alligator Tooth Talisman (Bullgator, Chapter 4).
+
 | Item | Location |
 |------|----------|
-| Abalone Shell Fragment | Boarded-up house just north of the main street in Rhodes; small room on the south side, on the workbench on the far side. One of a kind. Used for Bison Horn Talisman (with Legendary Bison Horn + Silver Earring at a fence; -10% stamina core drain) |
-| Boar Tusk Talisman recipe | Legendary Boar Tusk + Cobalt Petrified Wood (NW of Lake Isabella, chest on wagon under rock overhang) + Gold Earring → \$31 at fence. Effect: horse health & stamina core drain -10% |
+| Abalone Shell Fragment | Boarded-up house just north of the main street in Rhodes; small room on the south side, on the workbench on the far side. One of a kind. Used for Bison Horn Talisman (with Legendary Bison Horn + Silver Earring at a fence; -10% stamina core drain) — acquired |
+| Boar Tusk Talisman recipe | Legendary Boar Tusk + Cobalt Petrified Wood (NW of Lake Isabella, chest on wagon under rock overhang) + Gold Earring → \$31 at fence. Effect: horse health & stamina core drain -10% — acquired |
+| Panther's Eye Trinket recipe | Legendary Panther Eye → \$24.50 at fence. Effect: Dead Eye bar drains 10% slower for the first 3 seconds. Eye comes from the Giaguaro Panther (see Legendary Animal Pelts) — acquired |
 
 ## Herbalist Challenge
 
@@ -157,6 +179,25 @@ Sharpshooter 7 — get 7 headshots in a row (reward: Sharpshooter Off-Hand Holst
 ### Disarm 3 Enemies Without Reloading/Switching
 
 Sharpshooter 8 — use the **Varmint Rifle** (low damage, avoids killing the targets) on the hill of the **northwest oil field compound**.
+
+## Master Hunter Challenge
+
+Ranks 1–10 completed in Chapter 2 — full set earned along the way (Off-Hand Holster → Bandolier → Gun Belt → Holster). Ranks run strictly in order; work done before a rank is active does not count.
+
+| Rank | Objective | Reward |
+|------|-----------|--------|
+| 1 | Skin 3 deer | Master Hunter Off-Hand Holster |
+| 2 | 3 perfect rabbit pelts | \$5 + Health XP |
+| 3 | Track 10 different species with binoculars | Master Hunter Bandolier |
+| 4 | Call an animal, then 5 clean kills | \$10 + Health XP |
+| 5 | Skin 3 black or grizzly bears | \$10 + Health XP |
+| 6 | Kill 5 cougars with a bow, then skin them | \$15 + Health XP |
+| 7 | Bait and kill a herbivore and a predator | Master Hunter Gun Belt |
+| 8 | Catch 3 small fish without a fishing rod | \$15 + Health XP |
+| 9 | Kill an opossum playing possum | \$20 + Health XP — unlocks Giaguaro |
+| 10 | Kill the legendary panther Giaguaro | Master Hunter Holster |
+
+Notes: rabbit pelts want a clean Varmint Rifle headshot. Rank 6 is the grind — 5 cougars, bow only, so bait and high ground help. Rank 8 fish can be shot and picked up; the Granite Pass waterfall drops them on the bank. Rank 9 opossums spawn at night — spook one until it plays dead, then shoot it. Rank 10 is the only legendary animal that is challenge-gated rather than chapter-gated, so it is reachable inside Chapter 2 (see Legendary Animal Pelts). Giaguaro is aggressive: save manually before entering the territory, track 3 clues to the carcass pile, and expect it to charge — Dead Eye + a repeater/shotgun, it can kill in one hit.
 
 ## Serial Killer "American Dreams"
 
