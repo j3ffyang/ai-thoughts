@@ -14,11 +14,17 @@
   - [奇异雕像谜题 Strange Statues Puzzle](#奇异雕像谜题-strange-statues-puzzle)
   - [杰克霍尔帮宝藏 Jack Hall Gang Treasure](#杰克霍尔帮宝藏-jack-hall-gang-treasure)
   - [毒径宝藏 Poisonous Trail Treasure](#毒径宝藏-poisonous-trail-treasure)
+  - [高风险宝藏 High Stakes Treasure](#高风险宝藏-high-stakes-treasure)
+  - [富饶地标宝藏 Landmarks of Riches Treasure](#富饶地标宝藏-landmarks-of-riches-treasure)
 - [缬草根 Valerian Root](#缬草根-valerian-root)
 - [商店后室抢劫 Store Backroom Robberies](#商店后室抢劫-store-backroom-robberies)
 - [传奇动物皮毛 Legendary Animal Pelts](#传奇动物皮毛-legendary-animal-pelts)
 - [饰品部件 Trinket Components](#饰品部件-trinket-components)
 - [草药收集挑战 Herbal Collection Challenge](#草药收集挑战-herbal-collection-challenge)
+- [神射手挑战 Sharpshooter Challenge](#神射手挑战-sharpshooter-challenge)
+  - [连续 7 次爆头 7 Consecutive Headshots](#连续-7-次爆头-7-consecutive-headshots)
+  - [不换弹不换枪卸除 3 名敌人的武器 Disarm 3 Enemies](#不换弹不换枪卸除-3-名敌人的武器-disarm-3-enemies)
+- [大师猎人挑战 Master Hunter Challenge](#大师猎人挑战-master-hunter-challenge)
 - [连环杀手 American Dreams](#连环杀手-american-dreams)
 
 ## 进度策略 Progress Strategy
@@ -31,6 +37,7 @@
 
 - 自由、耐心地收集，享受过程
 - 永远不要在枪械店购买，除非是免费的
+- **对“不进第三章”的存档来说很重要**——这一节基本是必做项：几把武器（Bolt Action、Rolling Block）后面很难便宜拿到，所以就在第二章拿到。下面的 Rolling Block Rifle 刷枪是早期免费获取的办法。
 
 | 武器 Weapon | 来源 Source | 方法 Method |
 |--------|--------|--------|
@@ -101,6 +108,14 @@
 
 ~~*已获取——4 根金条已收集。*~~
 
+### 高风险宝藏 High Stakes Treasure
+
+**地图 1 →** Heartlands 的宝藏猎人 → **地图 2 →** Cumberland Falls → **地图 3 →** Barrow Lagoon → Fort Wallace 洞穴：**3 根金条**。
+
+### 富饶地标宝藏 Landmarks of Riches Treasure
+
+**地图 1 →** Obelisk（方尖碑）→ **地图 2 →** Tiny Church（小教堂）→ **地图 3 →** Mysterious Hill Home（神秘山间小屋）→ **地图 4 →** Bolger Glade（博尔杰林地）→ Mount Shann 的日晷 (sundial)：**6 根金条**。
+
 ## 缬草根 Valerian Root
 
 每根约给下一级“死眼 (Dead Eye)”阈值的 ~25%。固定刷新的拾取物，过一段游戏内时间后会重生。
@@ -141,6 +156,15 @@
 
 所有传奇动物地点与信息：https://www.shacknews.com/article/108175/all-legendary-animal-locations-in-red-dead-redemption-2
 
+第二章范围：16 种传奇动物里现在有 12 种可以猎——11 种由 "Exit, Pursued by a Bruised Ego" 解锁，另外加上通过大师猎人 9 级解锁的 Giaguaro——下面 12 种全部标为已射杀。传奇动物的击杀质量不重要，所以可以随意用死眼——任何击杀都给完整皮毛。追踪 3 条线索（熊只要 2 条），动物就会在附近出现。如果它杀了你，它会逃走，你过一段时间再来；一旦被杀就不会重生。掉在野外的皮毛仍会送到捕兽人那里，但必须先卖给他，任何传奇制作才会解锁。
+
+| 第二章无法猎取 Not huntable in Chapter 2 | 门槛 Gate |
+|---|---|
+| Bullgator | 第四章任务 "Country Pursuits" |
+| Tatanka Bison | New Austin (Hennigan's Stead) —— 尾声 (Epilogue) |
+| Pronghorn | New Austin (Rio del Lobo Rock) —— 尾声 (Epilogue) |
+| Cougar | New Austin (Gaptooth Ridge, west of Tumbleweed) —— 尾声 (Epilogue) |
+
 | 动物 Animal | 地点 Location | 捕兽人制作 Trapper Crafting |
 |--------|----------|------------------|
 | White Bison | Lake Isabella，西岸，Grizzlies West (Ambarino) | 帽子 (\$45)、外套 (\$29) - Ghost Bison Set |
@@ -148,13 +172,25 @@
 | Buck | Black Bone Forest，Mt. Shan 西麓，Strawberry 西北（Big Valley, West Elizabeth）；Owanjila 大坝以北，BIG VALLEY 的 “B” 以南。第一条线索在地图图标西北，Black Bone Forest 里 “Black” 附近 | 皮 → 在捕兽人处做 Trophy Buck 套装（马甲、传奇鹿与狐、射程手套）。鹿角 → 在销赃点做鹿角饰品（更高质量的剥皮 = 完美皮毛加成） |
 | Boar | Bluewater Marsh 西北部，Bayou Nwa 北缘，Lemoyne（Lagras 以北；约在 Saint Denis 与 Van Horn 之间） | 皮 → 在捕兽人处做 The Dreamcatcher 套装（配河狸 + Tatanka Bison 皮；还有传奇野猪与野牛 Fowler 靴）。獠牙 → 在销赃点做野猪獠牙护符（马匹生命与体力核心消耗 -10%，需要钴石化木 + 金耳环）——已射杀 |
 | Fox | Mattock Pond，Rhodes 正北，Scarlett Meadows, Lemoyne | 皮 → 传奇狐软皮鞋 (\$40，+ 完美麋鹿皮) 和传奇鹿与狐射程手套 (\$28，Trophy Buck 套装)。爪 → 在销赃点做狐爪饰品 (\$23.50：鹰眼 +5 秒)——已射杀 |
+| Elk | Fort Wallace 以东，Cumberland Forest (New Hanover) | —— 已射杀 |
+| Big Horn Ram | Cattail Pond 旁的岩丘，Valentine 以西 (Ambarino) | —— 已射杀 |
+| Wolf | Cotorra Springs，Bacchus Bridge 以西 (Ambarino) | —— 已射杀 |
+| Beaver | Elysian Pool 以南的池塘，Van Horn 正西 (New Hanover) | —— 已射杀 |
+| Moose | Brandywine Drop 以北，Roanoke Ridge (New Hanover) | —— 已射杀 |
+| Bharati Grizzly Bear | Grizzlies East，O'Creagh's Run 以北，地图上 GRIZZLIES EAST 的 "L" 与 "S" 之间 (Ambarino)；只有 2 条线索 | 皮 → 传奇熊外套 (\$28，+ 完美野牛皮)、头帽 (\$40)、Roper (\$34)——已射杀 |
+| Giaguaro Panther | Bolger Glade 以南，Scarlett Meadows, Lemoyne——林地东南、Braithwaite 庄园以东、Shady Belle 以西，几乎到海岸。由大师猎人 9 级解锁（见“大师猎人挑战”） | 皮 → 传奇黑豹斗篷 (\$45，只需皮) 和射程手套 (\$30，+ 完美吉拉毒蜥皮)。眼 → 在销赃点做黑豹之眼饰品 (\$24.50：死眼条前 3 秒消耗 -10%)——已射杀 |
+
+查询猎杀状态：图鉴 (Esc → Progress → Compendium → Animals → Legendary)——Studied / Killed / Skinned 三个勾。营地背包里的成品不能作证，它们只用普通完美皮毛。
 
 ## 饰品部件 Trinket Components
+
+所有第二章可在销赃点 (fence) 制作的项目都已完成——饰品：Beaver Tooth、Buck Antler、Coyote Fang、Elk Antler、Fox Claw、Moose Antler、Panther's Eye、Ram Horn、Wolf Heart；护符：Bear Claw、Boar Tusk、Bison Horn。传奇动物的“信物”在**销赃点 (Fence)** 制作，皮毛和尸体则交给**捕兽人 (Trapper)**——两个不同的商人；信物在制作时会被消耗，皮毛仍可用于制作衣物。第二章还够不到的：Cougar Fang、Pronghorn Horn、Tatanka Bison Horn（New Austin / 尾声）和 Alligator Tooth Talisman（Bullgator，第四章）。
 
 | 物品 Item | 地点 Location |
 |------|----------|
 | Abalone Shell Fragment | Rhodes 主街正北的封板房屋；南侧小房间，最里侧的工作台上。独一无二。用于野牛角护符（配传奇野牛角 + 银耳环在销赃点制作；体力核心消耗 -10%）——已获取 |
-| Boar Tusk Talisman recipe | 传奇野猪獠牙（已射杀）+ 钴石化木（待获取——Lake Isabella 西北，岩石悬垂下马车上的箱子）+ 金耳环 → 销赃点 \$31。效果：马匹生命与体力核心消耗 -10% |
+| Boar Tusk Talisman recipe | 传奇野猪獠牙（已射杀）+ 钴石化木（Lake Isabella 西北，岩石悬垂下马车上的箱子）+ 金耳环 → 销赃点 \$31。效果：马匹生命与体力核心消耗 -10% ——已获取 |
+| Panther's Eye Trinket recipe | 传奇黑豹之眼 → 销赃点 \$24.50。效果：死眼条前 3 秒消耗 -10%。眼睛来自 Giaguaro 黑豹（见“传奇动物皮毛”）——已获取 |
 
 ## 草药收集挑战 Herbal Collection Challenge
 
@@ -179,6 +215,42 @@
   - **Lucky's Cabin（Heartlands）**——这里也长黑莓，旁边还有 Indian Tobacco、Bay Bolete、Creeping Thyme、Oregano
 
 快速计划：Raspberry（~Heartlands/Scarlett）→ Blackberry（Big Valley）→ Evergreen Huckleberry（Kamassa River / Bayou Nwa）→ Wintergreen（Cumberland Forest）——每个方向都离营地不同，所以除非规划路线，一次出行只能拿一种浆果。
+
+## 神射手挑战 Sharpshooter Challenge
+
+### 连续 7 次爆头 7 Consecutive Headshots
+
+神射手 7——连续拿到 7 次爆头（奖励：Sharpshooter Off-Hand Holster）。目前为止最难的挑战——只要出现一次非爆头的击杀，计数就归零。
+
+**鳄鱼（和平路线）——真正有效的办法：** 打鳄鱼头也算。Lagras 和 Saint Denis 以北：打了 5 条，找不到第 6 条。Bayou Nwa 的池塘（Saint Denis 以北 / Lagras 以西）有 6 条以上的鳄鱼——逐个爆头，然后还有一头野猪在啃死鳄鱼。**已完成**——不想再玩一次；连续 5 次其实就够了，也没这么折磨。
+
+**失败的尝试（不推荐）：**
+
+- **O'Driscoll 营地，Six Point Cabin（Cumberland Forest，Valentine 东北）**——打了 4 次；至少击杀/套索 7 人并拖行一小段距离。太费时间，从未完成。
+- **抢火车**——4 次。买票到 Riggs Station，戴面罩，带上连发步枪 + 手枪和足够弹药，杀光所有执法人员（即使火车停在高架桥上，他们也源源不断）。成功过一次——对乘客连拿 7 次爆头——但白色阿拉伯马从高架桥上跳下去摔死了。没有白色阿拉伯马就活不下去，只好重开——成就也丢了。之后再没机会；进度一直显示 0。
+
+### 不换弹不换枪卸除 3 名敌人的武器 Disarm 3 Enemies Without Reloading/Switching
+
+神射手 8——用 **Varmint Rifle**（伤害低，避免把人打死）在**西北油田营地**的小山上完成。
+
+## 大师猎人挑战 Master Hunter Challenge
+
+第二章已完成 1–10 全部等级——整套装备顺便拿齐（Off-Hand Holster → Bandolier → Gun Belt → Holster）。等级必须严格按顺序完成；在某一等级激活之前做的同类工作不算数。
+
+| 等级 Rank | 目标 Objective | 奖励 Reward |
+|------|-----------|--------|
+| 1 | 剥 3 张鹿皮 | Master Hunter Off-Hand Holster |
+| 2 | 3 张完美兔皮 | \$5 + 生命经验 |
+| 3 | 用望远镜追踪 10 种不同动物 | Master Hunter Bandolier |
+| 4 | 呼唤动物后完成 5 次干净击杀 | \$10 + 生命经验 |
+| 5 | 剥 3 张黑熊或灰熊皮 | \$10 + 生命经验 |
+| 6 | 用弓猎杀 5 只美洲狮并剥皮 | \$15 + 生命经验 |
+| 7 | 用诱饵引来并猎杀一头食草动物和一头食肉动物 | Master Hunter Gun Belt |
+| 8 | 不用钓竿抓到 3 条小鱼 | \$15 + 生命经验 |
+| 9 | 猎杀装死的负鼠 (opossum) | \$20 + 生命经验——解锁 Giaguaro |
+| 10 | 猎杀传奇黑豹 (panther) Giaguaro | Master Hunter Holster |
+
+要点：兔皮要用 Varmint Rifle 干净爆头。6 级最磨人——5 只美洲狮、只能用弓，所以放诱饵和占据高处都有帮助。8 级的小鱼可以直接射杀再捡；Granite Pass 瀑布会把鱼冲到岸上。9 级的负鼠夜里出没——惊它直到它装死，再开枪。10 级是唯一按挑战而不是按章节解锁的传奇动物，所以在第二章就能做（见“传奇动物皮毛”）。Giaguaro 很有攻击性：进入它领地前手动存档，追踪 3 条线索到那堆尸体，然后等它扑上来——用死眼 + 连发步枪/霰弹枪，它一击就能杀你。
 
 ## 连环杀手 American Dreams
 
