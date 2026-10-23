@@ -41,6 +41,7 @@ Skills come from three repos under the `negtivSpace` superproject. Each repo has
 - New skill — first publish is version `1.0.0`.
 - Changed skill — next patch version of the latest published version.
 - `Error: Version X.Y.Z already exists. Increment the version number...` — the skill is already on ClawHub at that version (usually from a prior publish or a dual-remote race). Do not re-publish; the workflow will report it `alreadySynced` on the next run.
+- **`pending-moderation`** — a slug on `scripts/clawhub_publish.py` → `KNOWN_PENDING`, failing with that exact "already exists" message. It means the upload is parked in ClawHub's moderation queue: the version row exists, so re-publishing collides, while `/api/v1/resolve` returns 404 (pending skills are not public), so the CLI derives `1.0.0` again on every run. Reported as pending, exit 0. Remove the entry once the skill is public — any other error on that slug still fails the run.
 - `Invalid publish output: 'pending-publication'` — a false alarm. The publish actually succeeded; the upstream workflow's status map (v0.23.3) does not recognize the `pending-publication` status string and reports it as failed. Verify with the skills API before assuming a problem.
 
 ## Procedure

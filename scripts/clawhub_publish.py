@@ -29,6 +29,17 @@ SITE = "https://clawhub.ai"
 REGISTRY = "https://clawhub.ai"
 OK_STATUSES = {"unchanged", "would-publish", "submitted", "published", "pending-publication"}
 
+# Slugs blocked in ClawHub's moderation queue. The upload reserved a version, but
+# the skill is not public, so the resolve endpoint returns 404. The CLI then
+# derives 1.0.0 again and the registry rejects it with "Version 1.0.0 already
+# exists" — forever, until a moderator approves or the record is removed.
+# A run that hits this exact condition is not a regression, so it is reported as
+# pending-moderation instead of failing the job. Delete an entry once the skill
+# is public; anything else on the slug still fails loudly.
+KNOWN_PENDING = {
+    "medical-record-review": "awaiting moderator review; 1.0.0 reserved, not yet public",
+}
+
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
@@ -54,7 +65,7 @@ def main() -> int:
     source_repo = os.environ["SOURCE_REPOSITORY"]
     source_ref = os.environ["SOURCE_REF"]
 
-    ok, failed = [], []
+    ok, pending, failed = [], [], []
     for target in targets:
         rel = target.relative_to(workspace).as_posix()
         cmd = [
@@ -76,6 +87,15 @@ def main() -> int:
         completed = subprocess.run(cmd, cwd=workspace, capture_output=True, text=True)
         if completed.returncode != 0:
             message = completed.stderr.strip() or completed.stdout.strip() or f"exit {completed.returncode}"
+            if target.name in KNOWN_PENDING and "already exists" in message:
+                pending.append(
+                    {
+                        "slug": target.name,
+                        "status": "pending-moderation",
+                        "message": KNOWN_PENDING[target.name],
+                    }
+                )
+                continue
             failed.append({"slug": target.name, "status": "cli-error", "message": message})
             continue
         try:
@@ -87,7 +107,12 @@ def main() -> int:
         except json.JSONDecodeError as exc:
             failed.append({"slug": target.name, "status": "invalid-output", "message": f"Invalid publish output: {exc}"})
 
-    print(json.dumps({"dryRun": args.dry_run, "ok": ok, "failed": failed}, indent=2))
+    print(
+        json.dumps(
+            {"dryRun": args.dry_run, "ok": ok, "pending": pending, "failed": failed},
+            indent=2,
+        )
+    )
     return 1 if failed else 0
 
 
