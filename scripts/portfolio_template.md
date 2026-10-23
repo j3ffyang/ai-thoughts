@@ -27,7 +27,7 @@ My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawH
 
 - **[`asd-ste100`](https://clawhub.ai/j3ffyang/skills/asd-ste100)** — write and audit agent instructions in ASD-STE100's rules: one action per sentence, condition first, one name per item. Ships a deterministic linter for sentence length, semicolons, banned words, and passive voice.
 
-The rest of the collection — article translation, Traditional-Chinese twin sync, banner resizing, Astro sync — is in the repo linked below.
+The rest of the collection — article translation, Traditional-Chinese twin sync, Astro sync, and `resize-for-banner` for Twitter/X headers only (LinkedIn and blog headers take the original image) — is in the repo linked below.
 
 | Platform | Repo | Purpose | Latest | Status |
 |----------|------|---------|--------|--------|
@@ -56,6 +56,8 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
+- **Oct 23:** Published "Where Does Brave's Leo AI Keep Your Data?" — English plus Simplified and Traditional Chinese twins, a 16:9 infographic, and a 5:2 banner; the local store turns out to be decryptable with Chromium's public `peanuts` key on a machine with no keyring
+- **Oct 23:** Restricted `resize-for-banner` to Twitter/X only — LinkedIn and blog headers accept the original image — and codified "register an article only after it is committed and pushed" in AGENTS.md, which removed three uncommitted rows from the manifest
 - **Oct 20:** Published "The Rules, Not the Words: ASD-STE100 for Agent Instructions" — English plus Simplified and Traditional Chinese twins, a 16:9 infographic, and a 5:2 banner
 - **Oct 20:** Added the `asd-ste100` skill and a `--stats` summary mode to its linter; rewrote both working-rule AGENTS.md files to the same standard (18 and 15 linter errors to zero) and logged the diffs
 - **Oct 20:** Added a `portfolio_latest: false` opt-out, so an article whose doc is not committed yet stays counted but off the front-page list; recorded a per-genre precision rule (approximate figures in essays, exactness in code and measurements)
