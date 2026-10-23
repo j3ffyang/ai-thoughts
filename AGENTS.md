@@ -40,7 +40,7 @@ Every file in `docs/` and `imgs/` follows a `YYMMDD-slug` pattern. The date is 6
 
 `imgs/` holds assets that a file in this repo does not always reference. Treat "unreferenced" as a question, never as a delete signal.
 
-- **Social banner assets are consumed outside the repo.** Files like `imgs/*-banner-twitter.png` (and `*-xbanner`, `*-1500x600`, `*-5x2`) come from the `resize-for-banner` skill. They are uploaded manually, e.g. to twitter.com, when publishing an article. Nothing in the repo links them, so a reference-based "unreferenced images" sweep must **never** flag them as deletable.
+- **Social banner assets are consumed outside the repo.** Files like `imgs/*-banner-twitter.png` (and `*-xbanner`, `*-1500x600`, `*-5x2`) come from the `resize-for-banner` skill. That skill produces Twitter/X banners only: LinkedIn and blog headers accept the original image, so never generate a derivative for them. They are uploaded manually, e.g. to twitter.com, when publishing an article. Nothing in the repo links them, so a reference-based "unreferenced images" sweep must **never** flag them as deletable.
 - **Auto-generated backups are disposable.** `imgs/*-backup-*` and `infographic/**/*-backup-*` are byproducts of regenerating an asset. They are gitignored and can be deleted freely.
 - **Before deleting any image, confirm it is genuinely unused.** Check in-repo references, and account for externally consumed assets like the banners above.
 
@@ -55,15 +55,18 @@ python scripts/gen_readmes.py --check      # CI/verification: exit 1 if a README
 
 **Ordering is automatic — don't hand-order.** The generator sorts article sections by their newest post, most recently updated first. Rows are newest-first within each section. Drafts are pinned last. The `Published Skills on ClawHub` block comes from `.opencode/skills/*/SKILL.md` frontmatter. No `articles.yaml` entry is needed for a skill. That block sits between the articles and the drafts section. Section order drifting over time is intended — it's how the most active topics stay on top.
 
-To add or update an article:
+**Registering is the last step, never the first.** An untracked file must not appear in `articles.yaml`, and therefore must not appear in either README. A row that points at an untracked file publishes a dead link to both profile READMEs, and the generated files then disagree with what is actually on GitHub.
 
-1. Drop the file into `docs/` (follow the rules in "Filename conventions").
-2. Add/update a row in `articles.yaml`:
+To publish an article:
+
+1. Write the file in `docs/` (follow the rules in "Filename conventions"). Leave it untracked.
+2. Commit **and push** the article on its own. It is invisible to the manifest until then. Do not add a row, and do not run the generator, to "reserve" a place for it. Do not use a `portfolio_latest: false`-style flag to work around this: the fix is not to register it yet.
+3. Only after the push, add/update its row in `articles.yaml`:
    - English article → link with `lang: en` (+ `desc_en`). Do not add `desc_zh` until a `-zh-hans.md`, or a legacy `-chn.md`, exists.
    - Chinese article → link with `lang: zh` (+ `desc_zh`)
-   - Draft/working note → set `section: drafts` (lands in the Drafts & Working Notes section). Keep `status: draft` too. `status` is metadata only (`draft` or `published`) and never affects placement. The generator routes rows by `section`.
+   - Draft/working note → set `section: drafts` (lands in the Drafts & Working Notes section). Keep `status: draft` too. `status` is metadata only (`draft` or `published`) and never affects placement. The generator routes rows by `section`. The push gate applies to drafts too: a draft earns its row when its file is tracked and pushed, not before.
    - Optional `label_zh` on a link gives the Chinese display name in `README_zh.md` (Chinese articles usually get one).
-3. Run the generator, confirm the diff shows only the intended row, and commit `articles.yaml` + both regenerated READMEs together.
+4. Run the generator, confirm the diff shows only the intended row, and commit `articles.yaml` + both regenerated READMEs together.
 
 **Note:** `gen_readmes.py` prints a warning for every `docs/*.md` not listed in `articles.yaml` (e.g. unregistered drafts). That's expected until the row is added — it's a reminder, not an error.
 

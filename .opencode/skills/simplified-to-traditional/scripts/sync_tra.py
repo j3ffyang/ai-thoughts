@@ -41,6 +41,7 @@ OVERRIDES = [
     ("介面連線", "介面連接"),  # 连接 = "connected by" (not 連線 "online link")
     ("介面與實現", "介面與實作"),  # 实现 = implementation; Taiwan says 實作, not 實現 "to realize"
     ("沒有隻向", "沒有只向"),  # 只 = "only", not the classifier 隻 (OpenCC s2twp mispicks)
+    ("還是隻看到", "還是只看到"),  # 只 = "only" (還是只看到了一部分), not the classifier 隻
 ]
 
 # One-Simplified-to-many-Traditional forms where OpenCC can pick the wrong
