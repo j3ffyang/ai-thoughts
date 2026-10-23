@@ -2,13 +2,17 @@
 """Unwrap hard-wrapped Markdown prose into single-line paragraphs (auto-wrap).
 
 Usage:
-    python scripts/unwrap_md.py [path ...]    # unwrap given .md files (default: docs/ + .opencode/skills)
-    python scripts/unwrap_md.py --check       # exit 1 if any scanned file still needs unwrapping
+    python scripts/unwrap_md.py [path ...]        # unwrap given .md files (default: docs/ + .opencode/skills)
+    python scripts/unwrap_md.py --dry-run [path]  # list files that would change, write nothing
+    python scripts/unwrap_md.py --check           # exit 1 if any scanned file still needs unwrapping
 
-Structural elements are preserved verbatim: fenced code blocks, tables,
-headings, horizontal rules, blockquotes, list items, and YAML frontmatter.
+Structural elements are preserved verbatim: fenced code blocks, indented code at the start of a
+paragraph, tables, headings, setext headings, horizontal rules, blockquotes, HTML comments, images,
+and YAML frontmatter. Hard line breaks (two trailing spaces or a trailing backslash) are kept.
 Paragraph prose and wrapped list-item continuations are joined into one line;
-CJK-to-CJK joins use no space, everything else a single space.
+CJK-to-CJK joins use no space, everything else a single space. CRLF line endings are preserved.
+
+Exit codes: 0 done, 1 a file needs unwrapping (--check only), 2 bad input or a file could not be read.
 """
 
 from __future__ import annotations
@@ -24,11 +28,28 @@ CJK = re.compile(r"[\u4e00-\u9fff\u3040-\u30ff\uac00-\ud7af]")
 LIST_ITEM = re.compile(r"^\s*(?:[-*+]|\d+[.)])\s+\S")
 HEADING = re.compile(r"^#{1,6}\s")
 HR = re.compile(r"^(?:---|\*\*\*|___)\s*$")
+SETEXT = re.compile(r"^\s{0,3}=+\s*$")
 FENCE = re.compile(r"^\s*(?:```|~~~)")
 FENCE_OPEN = re.compile(r"^\s*(`{3,}|~{3,})")
 FENCE_CLOSE = re.compile(r"^\s*(`{3,}|~{3,})\s*$")
 TABLE = re.compile(r"^\s*\|")
 PIPE = re.compile(r"\|")
+
+
+def is_structural(s: str) -> bool:
+    return bool(
+        HEADING.match(s)
+        or HR.match(s)
+        or TABLE.match(s)
+        or PIPE.search(s)
+        or s.startswith(">")
+        or s.startswith("<!--")
+        or s.startswith("![")
+    )
+
+
+def hard_break(raw: str) -> bool:
+    return raw.endswith("  ") or raw.endswith("\\")
 
 
 def glue(a: str, b: str) -> str:
@@ -42,19 +63,23 @@ def glue(a: str, b: str) -> str:
 def join_prose(run: list[str]) -> list[str]:
     out: list[str] = []
     acc = ""
+    lead = ""
+    prev = ""
     for ln in run:
-        if ln.startswith("    "):
-            if acc:
-                out.append(acc)
+        if not acc and ln.startswith("    "):
             out.append(ln)
-            acc = ""
+            prev = ln
             continue
+        s = ln.strip()
         if not acc:
             lead = ln[: len(ln) - len(ln.lstrip())]
-            acc = lead + ln.strip()
+            acc = lead + s
+        elif hard_break(prev):
+            out.append(acc + ("  " if prev.endswith("  ") else ""))
+            acc = s
         else:
-            s = ln.strip()
             acc += glue(acc, s) + s
+        prev = ln
     if acc:
         out.append(acc)
     return out
@@ -63,29 +88,32 @@ def join_prose(run: list[str]) -> list[str]:
 def join_list_run(run: list[str]) -> list[str]:
     out: list[str] = []
     cur: str | None = None
+    prev = ""
     for ln in run:
-        if ln.startswith("    "):
-            if cur is not None:
-                out.append(cur)
-            out.append(ln)
-            cur = None
-            continue
+        s = ln.strip()
         if LIST_ITEM.match(ln):
             if cur is not None:
                 out.append(cur)
-            cur = ln.rstrip()
-        elif cur is not None:
-            s = ln.strip()
-            cur += glue(cur, s) + s
-        else:
+            cur = ln
+        elif cur is None:
             out.extend(join_prose([ln]))
+        elif hard_break(prev):
+            out.append(cur.rstrip() + ("  " if prev.endswith("  ") else ""))
+            cur = s
+        else:
+            body = cur.rstrip()
+            cur = body + glue(body, s) + s
+        prev = ln
     if cur is not None:
         out.append(cur)
     return out
 
 
 def unwrap(text: str) -> str:
-    lines = text.splitlines()
+    lines = text.split("\n")
+    trailing = text.endswith("\n")
+    if trailing:
+        lines = lines[:-1]
     out: list[str] = []
     i, n = 0, len(lines)
 
@@ -119,33 +147,22 @@ def unwrap(text: str) -> str:
             out.append(ln)
             i += 1
             continue
-        if not s:
+        if not s or is_structural(s):
             out.append(ln)
             i += 1
             continue
-        if HEADING.match(s) or HR.match(s) or TABLE.match(s) or PIPE.search(s) or s.startswith("<!--") or s.startswith("!["):
+        if i + 1 < n and SETEXT.match(lines[i + 1]):
             out.append(ln)
-            i += 1
+            out.append(lines[i + 1])
+            i += 2
             continue
-        if s.startswith(">"):
-            out.append(ln)
-            i += 1
-            continue
-        run = []
+        run: list[str] = []
         while i < n:
             li = lines[i]
             si = li.strip()
-            if (
-                not si
-                or HEADING.match(si)
-                or HR.match(si)
-                or TABLE.match(si)
-                or PIPE.search(si)
-                or FENCE.match(si)
-                or si.startswith(">")
-                or si.startswith("<!--")
-                or si.startswith("![")
-            ):
+            if not si or is_structural(si) or FENCE.match(si):
+                break
+            if run and i + 1 < n and SETEXT.match(lines[i + 1]):
                 break
             run.append(li)
             i += 1
@@ -153,40 +170,81 @@ def unwrap(text: str) -> str:
             out.extend(join_list_run(run))
         else:
             out.extend(join_prose(run))
-    return "\n".join(out) + ("\n" if text.endswith("\n") else "")
+
+    result = "\n".join(out)
+    return result + "\n" if trailing else result
 
 
-def scan() -> list[Path]:
-    paths = [*(ROOT / "docs").glob("*.md"), *(ROOT / ".opencode" / "skills").glob("*/SKILL.md")]
-    return [p for p in paths if unwrap(p.read_text(encoding="utf-8")) != p.read_text(encoding="utf-8")]
+def process(text: str) -> str:
+    crlf = "\r\n" in text
+    new = unwrap(text.replace("\r\n", "\n") if crlf else text)
+    return new.replace("\n", "\r\n") if crlf else new
+
+
+def scan_source() -> list[Path]:
+    return [*(ROOT / "docs").glob("*.md"), *(ROOT / ".opencode" / "skills").glob("*/SKILL.md")]
+
+
+def read(p: Path) -> str:
+    with p.open("r", encoding="utf-8", newline="") as f:
+        return f.read()
+
+
+def write(p: Path, text: str) -> None:
+    with p.open("w", encoding="utf-8", newline="") as f:
+        f.write(text)
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("paths", nargs="*", help="files to unwrap (default: all docs/ and .opencode/skills)")
     ap.add_argument("--check", action="store_true", help="exit 1 if any scanned file still needs unwrapping")
+    ap.add_argument("--dry-run", action="store_true", help="list files that would change, write nothing")
     args = ap.parse_args()
 
-    targets = [ROOT / p for p in args.paths] if args.paths else scan_source()
-    changed = [p for p in targets if p.exists() and unwrap(p.read_text(encoding="utf-8")) != p.read_text(encoding="utf-8")]
+    raw_targets = [ROOT / p for p in args.paths] if args.paths else scan_source()
+    files: list[Path] = []
+    failed = False
+    for p in raw_targets:
+        if p.is_file():
+            files.append(p)
+        else:
+            print(f"error: not found: {p}", file=sys.stderr)
+            failed = True
+
+    changed: list[Path] = []
+    for p in files:
+        try:
+            text = read(p)
+        except (UnicodeDecodeError, OSError) as exc:
+            print(f"error: cannot read {p}: {exc}", file=sys.stderr)
+            failed = True
+            continue
+        if process(text) == text:
+            continue
+        changed.append(p)
+        rel = p.relative_to(ROOT) if ROOT in p.parents else p
+        if args.check:
+            print(f"wrapped: {rel}")
+        elif args.dry_run:
+            print(f"would unwrap: {rel}")
+        else:
+            try:
+                write(p, process(text))
+            except OSError as exc:
+                print(f"error: cannot write {p}: {exc}", file=sys.stderr)
+                failed = True
+                continue
+            print(f"unwrapped {rel}")
 
     if args.check:
-        if changed:
-            for p in changed:
-                print(f"wrapped: {p.relative_to(ROOT)}")
-            return 1
-        return 0
+        if failed:
+            return 2
+        return 1 if changed else 0
 
-    for p in changed:
-        p.write_text(unwrap(p.read_text(encoding="utf-8")), encoding="utf-8")
-        rel = p.relative_to(ROOT) if ROOT in p.parents else p
-        print(f"unwrapped {rel}")
-    print(f"{len(changed)} file(s) updated")
-    return 0
-
-
-def scan_source() -> list[Path]:
-    return [*(ROOT / "docs").glob("*.md"), *(ROOT / ".opencode" / "skills").glob("*/SKILL.md")]
+    verb = "would be updated" if args.dry_run else "updated"
+    print(f"{len(changed)} file(s) {verb}")
+    return 2 if failed else 0
 
 
 if __name__ == "__main__":

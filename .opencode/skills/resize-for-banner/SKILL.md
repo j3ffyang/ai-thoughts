@@ -50,14 +50,10 @@ If the user does not specify a platform, default to Twitter (1500x600).
      -extent <W>x<H> imgs/<base>-banner-<platform>.png
    ```
 
-   - `-resize "WxH"` (no bang) scales to fit inside the box, preserving the
-     aspect ratio — the image is never distorted or cropped.
-   - `-extent WxH` then pads the leftover space; `-background black` makes the
-     padding dark and `-gravity center` centers the image.
-   - If the source is taller/narrower than the target ratio, padding appears on
-     the left and right; if it is wider, padding appears on top and bottom.
-   - Padding color is black by default; ask the user if they want a different
-      background.
+   - `-resize "WxH"` (no bang) scales to fit inside the box, preserving the aspect ratio — the image is never distorted or cropped.
+   - `-extent WxH` then pads the leftover space; `-background black` makes the padding dark and `-gravity center` centers the image.
+   - If the source is taller/narrower than the target ratio, padding appears on the left and right; if it is wider, padding appears on top and bottom.
+   - Padding color is black by default; ask the user if they want a different background.
 4. **Verify** every output with `identify` — dimensions must match the target size exactly.
 5. **Report** the output paths and confirm the original is untouched (git status shows the new files as untracked, the original unmodified).
 

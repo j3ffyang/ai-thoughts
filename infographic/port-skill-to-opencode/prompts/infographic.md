@@ -8,6 +8,48 @@ Create a professional infographic following these specifications:
 - **Aspect Ratio**: 16:9
 - **Language**: English
 
+## CRITICAL: Text Accuracy
+
+The list below is the **complete and only** text that may appear in the image. Every string is wrapped in backticks and appears **exactly once**: no repeated labels, no echoed headings, no duplicated cells, no mirrored imagery. No word outside this block may be rendered as text. Spell every token exactly as written — especially the application names, the frontmatter field names, and the command flag. If a cell feels crowded, prefer fewer labels over smaller, illegible text.
+
+### Title
+- `Porting a Skill: Hermes Agent → OpenCode`
+
+### Step 1
+- `Same Structure, Different Frontmatter`
+- `Hermes Agent Skill`
+- `OpenCode Skill`
+- `2 optional fields added`
+- `compatibility is informational only — loader ignores it`
+
+### Step 2
+- `Copy, Rename, Rewrite`
+- `Copy the folder`
+- `Rename to avoid confusion`
+- `Rewrite description for the router`
+- `Add metadata for attribution`
+- `Router matches description text, not filename`
+
+### Step 3
+- `Watch for Paths & Dependencies`
+- `Relative paths stay working`
+- `Worktree boundary: paths outside repo break`
+- `Check commands, packages, API keys`
+- `chmod +x bundled scripts`
+
+### Step 4
+- `Test End-to-End`
+- `Start a new session`
+- `Trigger with keywords`
+- `Fix description if not picked up`
+- `Run full workflow once`
+- `A ported skill that's been battle-tested is more reliable than a new one written from scratch`
+
+### Step 5
+- `Licensing: Preserve Attribution`
+- `Keep original license + author name in metadata`
+- `Republishing without attribution creates confusion`
+
 ## Core Principles
 
 - Follow the layout structure precisely for information architecture
@@ -25,7 +67,7 @@ Create a professional infographic following these specifications:
 - Labels should be clear and appropriately sized
 - Use the specified language for all text content
 
-## Layout Guidelines
+## Layout Guidelines (linear-progression)
 
 Linear progression showing steps, timeline, or chronological events.
 
@@ -56,7 +98,7 @@ Linear progression showing steps, timeline, or chronological events.
 - Brief descriptions below nodes
 - Dates or numbers clearly visible
 
-## Style Guidelines
+## Style Guidelines (craft-handmade)
 
 Hand-drawn and paper craft aesthetic with warm, organic feel.
 
@@ -86,161 +128,12 @@ Hand-drawn and paper craft aesthetic with warm, organic feel.
 - Keywords emphasized with larger/bolder text
 - Cut-out letter style for paper variant
 
----
+## Visual and content notes (imagery only — do NOT render any word from this section)
 
-Generate the infographic based on the content below:
+- Step 1: Split screen contrasts the two skill formats: a short three-field frontmatter block on the left, a longer five-field block on the right, with two of those fields flagged as newly optional; a small note icon signals that the extra field is purely informational and ignored by the loader.
+- Step 2: A left-to-right arrow flow shows copying a folder, giving it a new name, editing the description so a router can match it, and adding an attribution block; a callout stresses that matching keys off the description wording rather than the folder name.
+- Step 3: A caution checklist with warning triangles shows relative references still resolving, a boundary where out-of-repo paths fail, checks for commands, packages and keys, and an executable bit applied to bundled scripts.
+- Step 4: A clean four-beat sequence with play and test icons walks through opening a fresh session, invoking via trigger words, tightening the description when the router misses it, and running the whole workflow once, ending on a success badge.
+- Step 5: A subtle footer sidebar with a license and attribution symbol explains that MIT terms are fine to reuse when credit and the original license are preserved, and that omitting credit causes confusion.
 
-# Porting a Skill from Hermes Agent to OpenCode
-
-## Overview
-A practical 4-step guide to port existing Hermes Agent skills to OpenCode — reuse tested logic, only adjust what OpenCode needs.
-
-## Learning Objectives
-The viewer will understand:
-1. Hermes and OpenCode skills share the same structure — porting is mostly frontmatter changes
-2. The 4-step porting workflow: understand formats → copy & rewrite → fix paths → test
-3. Key pitfalls: description rewriting for the skill router, worktree boundary, licensing
-
----
-
-## Section 1: Understand the Two Formats
-
-**Key Concept**: Hermes and OpenCode skills are structurally identical — both are a `SKILL.md` with frontmatter, plus optional `references/` and `scripts/` folders.
-
-**Content**:
-- Hermes skill frontmatter: `name`, `description`, `license`
-- OpenCode adds two optional fields: `metadata` (credits original author, useful for publishing) and `compatibility` (informational — OpenCode's loader ignores it, but it documents the skill's target platform)
-- The layout is identical — porting is mostly frontmatter + a quick test
-
-**Visual Element**:
-- Type: side-by-side comparison
-- Left: Hermes frontmatter block (3 fields)
-- Right: OpenCode frontmatter block (5 fields, 2 highlighted as optional)
-- Treatment: split screen with highlighted differences
-
-**Text Labels**:
-- Headline: "Same Structure, Different Frontmatter"
-- Left label: "Hermes Agent Skill"
-- Right label: "OpenCode Skill"
-- Highlight: "2 optional fields added"
-- Note: "compatibility is informational only — loader ignores it"
-
----
-
-## Section 2: Copy & Rewrite the Frontmatter
-
-**Key Concept**: Copy the skill folder, rename it, and rewrite the `description` so the skill router can find it.
-
-**Content**:
-- Copy folder: `cp -r ~/.hermes/skills/some-skill .opencode/skills/`
-- Rename the folder (e.g. `baoyu-infographic` → `custom-infographic`)
-- The `name` field follows the folder name
-- Keep original `description` and `license`
-- Add `compatibility: opencode` (optional, informational)
-- Rewrite `description` with trigger keywords (English + Chinese if relevant)
-- Add `metadata` block crediting the original author and upstream repo
-
-**Visual Element**:
-- Type: numbered steps with icons
-- Subject: folder copy → rename → edit frontmatter
-- Treatment: left-to-right flow with arrows
-
-**Text Labels**:
-- Headline: "Copy, Rename, Rewrite"
-- Step 1: "Copy the folder"
-- Step 2: "Rename to avoid confusion"
-- Step 3: "Rewrite `description` for the router"
-- Step 4: "Add `metadata` for attribution"
-- Key callout: "Router matches description text, not filename"
-
----
-
-## Section 3: Fix Paths & Dependencies
-
-**Key Concept**: The skill body rarely changes — but paths and environment dependencies need attention. OpenCode only loads from inside the project worktree.
-
-**Content**:
-- `references/` and `scripts/` live beside `SKILL.md` — relative references keep working if you copy the whole folder
-- Worktree boundary: OpenCode only loads skills from inside the project worktree — references to `~/.hermes/...` or paths outside the repo will break
-- Check hard-coded paths: Hermes may assume `~/.hermes/...`; OpenCode runs from the project
-- Check external dependencies: commands, Python packages, API keys
-- `chmod +x` any bundled scripts
-
-**Visual Element**:
-- Type: checklist with warning icons
-- Subject: path symbols, dependency icons (terminal, package, key), warning triangle for worktree
-- Treatment: caution-style with highlights for pitfalls
-
-**Text Labels**:
-- Headline: "Watch for Paths & Dependencies"
-- Item 1: "Relative paths stay working"
-- Item 2: "Worktree boundary: paths outside repo break"
-- Item 3: "Check commands, packages, API keys"
-- Item 4: "`chmod +x` bundled scripts"
-
----
-
-## Section 4: Test in OpenCode
-
-**Key Concept**: Start a new session, trigger, and run end-to-end to catch issues early. Skills are loaded at session start, not hot-reloaded.
-
-**Content**:
-- Start a new OpenCode session (skills are loaded at session start, not hot-reloaded)
-- Ask for the skill's job using its trigger words (e.g. "make an infographic about X")
-- If not triggered, tighten the `description` — the router matches that text
-- Run the skill's own workflow end to end once
-
-**Visual Element**:
-- Type: numbered steps with play/test icons
-- Subject: session start → trigger → test → success
-- Treatment: clean flow with success indicator
-
-**Text Labels**:
-- Headline: "Test End-to-End"
-- Step 1: "Start a new session"
-- Step 2: "Trigger with keywords"
-- Step 3: "Fix description if not picked up"
-- Step 4: "Run full workflow once"
-- Closing: "A ported skill that's been battle-tested is more reliable than a new one written from scratch"
-
----
-
-## Section 5: Licensing Note
-
-**Key Concept**: Porting MIT-licensed skills is fine — preserve the license and author attribution, especially when publishing to ClawHub.
-
-**Content**:
-- Porting an MIT-licensed skill is fine as long as you preserve the original license and author attribution
-- If you plan to publish the port to ClawHub, keep the original author's name in the `metadata` block
-- Republishing without attribution creates confusion even if the license allows it
-
-**Visual Element**:
-- Type: callout / info box
-- Subject: license icon, attribution symbol
-- Treatment: subtle sidebar or footer note
-
-**Text Labels**:
-- Headline: "Licensing: Preserve Attribution"
-- Body: "Keep original license + author name in `metadata`"
-- Warning: "Republishing without attribution creates confusion"
-
----
-
-## Data Points (Verbatim)
-
-### Key Facts
-- "structurally the same thing: a `SKILL.md` with frontmatter, plus optional `references/` and `scripts/` folders"
-- "The router matches this text, not the filename — a vague description means the skill never gets picked up"
-- "OpenCode only loads skills from inside the project worktree — if the original skill references paths outside the repo (e.g. `~/.hermes/...`), those references will break"
-- "skills are loaded at session start, not hot-reloaded"
-- "porting an MIT-licensed skill is fine as long as you preserve the original license and author attribution"
-- "republishing without attribution creates confusion even if the license allows it"
-
-Text labels (in English):
-- Main title: "Porting a Skill: Hermes Agent → OpenCode"
-- Section 1 headline: "Same Structure, Different Frontmatter"
-- Section 2 headline: "Copy, Rename, Rewrite"
-- Section 3 headline: "Watch for Paths & Dependencies"
-- Section 4 headline: "Test End-to-End"
-- Section 5 headline: "Licensing: Preserve Attribution"
-- Closing: "Battle-tested beats written from scratch"
+Generate a single 16:9 infographic using exactly the strings in the CRITICAL: Text Accuracy list, each appearing once, and nothing else.

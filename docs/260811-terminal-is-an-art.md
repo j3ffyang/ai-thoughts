@@ -60,12 +60,6 @@ Art isn't always about decoration — sometimes it's about craft. The terminal i
 
 ## Commands in This Essay
 
-**Getting started:** `echo`, `date`, `whoami`
-**File & directory:** `ls`, `cp`, `mv`, `mkdir -p`, `chmod`, `touch`
-**Search & text:** `grep`, `awk`, `sed`, `find`, `xargs`, `sort`, `uniq`, `cut`, `head`, `wc`
-**Networking:** `ssh`, `wget`, `rsync`, `iwctl`
-**System:** `dmesg`, `strace`, `journalctl`, `systemctl`, `crontab`, `make`, `ps`
-**Media:** `ffmpeg`
-**Version control:** `git`
+**Getting started:** `echo`, `date`, `whoami` **File & directory:** `ls`, `cp`, `mv`, `mkdir -p`, `chmod`, `touch` **Search & text:** `grep`, `awk`, `sed`, `find`, `xargs`, `sort`, `uniq`, `cut`, `head`, `wc` **Networking:** `ssh`, `wget`, `rsync`, `iwctl` **System:** `dmesg`, `strace`, `journalctl`, `systemctl`, `crontab`, `make`, `ps` **Media:** `ffmpeg` **Version control:** `git`
 
 btw, i use arch

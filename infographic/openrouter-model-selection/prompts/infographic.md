@@ -10,32 +10,22 @@ Create a professional infographic following these specifications:
 
 ## CRITICAL: Text Accuracy
 
-Render EXACTLY these strings, spelled correctly, no duplicates, no extra words:
+The list below is the complete and only text that may appear in the image, organized by region. Each string appears exactly once — no repeated labels, no echoed headings, no duplicated cells, no mirrored imagery. No word outside this list may be rendered as text. Spell the model-id strings and the floor-variant routing token exactly as written, and keep the not-equal sign and the arrows exact. Prefer fewer labels over shrinking text into illegibility: if space runs short, drop a non-essential label rather than misspelling any number.
 
-- Title: `CHOOSING A MODEL FOR OPENCODE VIA OPENROUTER`
-- Subtitle: `Privacy · price · performance · 2026-09-27`
-- `MODEL ≠ SERVICE`
-- `open weights — no inherent risk` / `the endpoint — jurisdiction is the risk`
-- Privacy ladder: `HIGHEST — China-jurisdiction endpoint` / `MEDIUM — aggregator → China endpoint` / `LOWER — non-China host, no-retention` / `LOWEST — self-host / BYOC`
-- Matrix header: `FAMILY` / `CHEAPEST (in/out per M)` / `FLAGSHIP (in/out per M)`
-- Rows:
-  - `DeepSeek` `$0.047 / $0.094` `$0.348 / $0.696`
-  - `Qwen` `$0.15 / $0.47` `$4 / $12`
-  - `GLM` `$0.04 / $0.50` `$0.24 / $0.75`
-  - `Kimi` `$0.45 / $2.25` `$3 / $15`
-  - `Gemini` `$0.10 / $0.40` `$2 / $12`
-  - `OpenAI` `$0.25 / $2` `$1.75 / $14`
-- Decision: `SECRETS → self-host / ZDR` / `OPEN-SOURCE → V4 Flash or Qwen3.8 Flash` / `BALANCED → V4 Pro on a non-China host`
-- Config: `model: deepseek-v4-pro` / `small_model: deepseek-v4-flash`
-- Controls: `enforce ZDR` / `no training` / `pin / exclude by jurisdiction`
-- Warning: `avoid :floor (fp4)`
-- Footer note: `Prices change frequently`
-
-Pitfalls to avoid:
-- Do NOT double words or repeat a label.
-- Decimal prices must be exact: `$0.047`, `$0.094`, `$0.348`, `$0.696`, `$0.04`, `$3`, `$15`, `$1.75`, `$14`.
-- `≠` must be the not-equal sign; `→` the arrow.
-- Prefer FEWER labels over shrinking text into illegibility. If space runs short, drop the least important label rather than misspelling any number.
+- Title band: title `CHOOSING A MODEL FOR OPENCODE VIA OPENROUTER`; subtitle `Privacy · price · performance · 2026-09-27`
+- Model-vs-service panel: headline `MODEL ≠ SERVICE`; left note `open weights — no inherent risk`; right note `the endpoint — jurisdiction is the risk`
+- Privacy ladder: headline `THE PRIVACY LADDER`; tiers `HIGHEST — China-jurisdiction endpoint`, `MEDIUM — aggregator → China endpoint`, `LOWER — non-China host, no-retention`, `LOWEST — self-host / BYOC`
+- Price matrix: headline `THE PRICE LANDSCAPE`; note `input / output per million tokens — 2026-09-27`; callout `open-weight families win on output; frontier costs ~20× more`; column headers `FAMILY`, `CHEAPEST (in/out per M)`, `FLAGSHIP (in/out per M)`
+- Matrix rows (name, cheapest, flagship):
+  - `DeepSeek` and `$0.047 / $0.094` and `$0.348 / $0.696`
+  - `Qwen` and `$0.15 / $0.47` and `$4 / $12`
+  - `GLM` and `$0.04 / $0.50` and `$0.24 / $0.75`
+  - `Kimi` and `$0.45 / $2.25` and `$3 / $15`
+  - `Gemini` and `$0.10 / $0.40` and `$2 / $12`
+  - `OpenAI` and `$0.25 / $2` and `$1.75 / $14`
+- Decision fork: headline `WHAT SHOULD YOU USE?`; branches `SECRETS → self-host / ZDR / Western frontier`, `OPEN-SOURCE → V4 Flash or Qwen3.8 Flash`, `BALANCED → V4 Pro on a non-China host`
+- Config card: headline `LOCK IT IN`; fields `model: deepseek-v4-pro`, `small_model: deepseek-v4-flash`; controls `enforce ZDR`, `no training`, `pin / exclude by jurisdiction`; warning `avoid :floor (fp4)`
+- Footer: `Prices change frequently`
 
 ## Core Principles
 
@@ -45,7 +35,7 @@ Pitfalls to avoid:
 ## Layout Guidelines (comparison-matrix)
 
 - A clear grid: first column = item names, header row = criteria.
-- Cells hold short values (prices), with color coding; highlight the recommended row (DeepSeek).
+- Cells hold short values (prices), with color coding; highlight the recommended row (the cheapest open-weight family).
 - Leave a header band for the title/subtitle, and a side band for the privacy ladder.
 - A legend/footer for the note.
 
@@ -55,32 +45,23 @@ Pitfalls to avoid:
 - Clean geometry, consistent stroke weights, technical annotations.
 - All-caps sans-serif labels.
 - Regions:
-  - Top: title band (`CHOOSING A MODEL FOR OPENCODE VIA OPENROUTER`) + subtitle.
-  - Upper-left: `MODEL ≠ SERVICE` with the two-panel note.
-  - Left column: `THE PRIVACY LADDER` — four stacked tiers (HIGHEST → LOWEST), color-graded.
-  - Center/right: the `THE PRICE LANDSCAPE` matrix (6 families × cheapest/flagship), DeepSeek row highlighted.
-  - Bottom-left: `WHAT SHOULD YOU USE?` — three outcome cards.
-  - Bottom-right: `LOCK IT IN` config card + controls, with `avoid :floor (fp4)`.
-  - Footer: `Prices change frequently`.
+  - Top: a wide banner for the headline and subtitle.
+  - Upper-left: a two-panel conceptual note.
+  - Left column: a four-tier descending ladder, color-graded.
+  - Center/right: the six-row comparison matrix, with the recommended row highlighted.
+  - Bottom-left: three outcome cards.
+  - Bottom-right: a config card with controls and a caution marker.
+  - Bottom: a thin footer rule.
+
+## Visual and content notes (imagery only — do NOT render any word from this section)
+
+- Core distinction: a split two-panel diagram. The left panel shows an abstract stack of downloadable file blocks, drawn inert and neutral; the right panel shows a server rack with a jurisdiction flag and a warning glow. A long arrow crosses the panels to show the files can be moved anywhere. Convey that the files themselves carry no exposure and that the risk comes from where they are hosted and which law governs the host.
+- Privacy ladder: a four-tier staircase descending, exposure decreasing from top to bottom. Color-grade the top tier red and the bottom tier green; each tier is a stacked bar with a small chip for its label.
+- Price landscape: a six-row comparison grid. The first column holds family names, the next two columns hold the cheapest-tier and flagship-tier input/output figures, set in monospace. Highlight the row whose output price is lowest, and add a bar accent showing the flagship end sitting far above the cheap end.
+- Decision: a single question node on the left forks into three routes, each ending in an outcome card on the right.
+- Lock it in: a config card with a monospace code block beside three control toggles, with a small caution marker on the routing token.
+- Footer: a thin rule carrying the note.
 
 ---
 
-Generate the infographic based on the content below:
-
-## The core distinction
-An open-weight model is just files — no inherent data risk. The risk is the serving endpoint's jurisdiction. `MODEL ≠ SERVICE`.
-
-## Privacy ladder (highest exposure → lowest)
-HIGHEST — China-jurisdiction endpoint (receiving your code/secrets). MEDIUM — non-China aggregator routing to a China endpoint. LOWER — non-China host under no-retention terms. LOWEST — self-host (Ollama, llama.cpp, vLLM) or BYOC.
-
-## Price landscape (input/output per million tokens, 2026-09-27)
-DeepSeek (cheapest $0.047/$0.094 → flagship V4 Pro $0.348/$0.696); Qwen ($0.15/$0.47 → $4/$12); GLM ($0.04/$0.50 → $0.24/$0.75); Kimi ($0.45/$2.25 → $3/$15); Gemini ($0.10/$0.40 → $2/$12); OpenAI ($0.25/$2 → $1.75/$14). Price winners: DeepSeek, with Qwen and GLM close; Kimi is not a price leader.
-
-## Decision
-Secrets → self-host / ZDR / Western frontier. Open-source → DeepSeek V4 Flash or Qwen3.8 Flash. Balanced default → DeepSeek V4 Pro on a non-China host.
-
-## Lock it in
-OpenCode config: model `deepseek-v4-pro`, small_model `deepseek-v4-flash`. OpenRouter controls: enforce Zero Data Retention, opt out of training, pin/exclude providers by jurisdiction. For tool-calling, prefer `:exacto`; avoid `:floor` (fp4).
-
-Text labels (in English):
-CHOOSING A MODEL FOR OPENCODE VIA OPENROUTER · Privacy · price · performance · 2026-09-27 · MODEL ≠ SERVICE · open weights — no inherent risk · the endpoint — jurisdiction is the risk · THE PRIVACY LADDER · HIGHEST — China-jurisdiction endpoint · MEDIUM — aggregator → China endpoint · LOWER — non-China host, no-retention · LOWEST — self-host / BYOC · THE PRICE LANDSCAPE · FAMILY · CHEAPEST (in/out per M) · FLAGSHIP (in/out per M) · DeepSeek · $0.047 / $0.094 · $0.348 / $0.696 · Qwen · $0.15 / $0.47 · $4 / $12 · GLM · $0.04 / $0.50 · $0.24 / $0.75 · Kimi · $0.45 / $2.25 · $3 / $15 · Gemini · $0.10 / $0.40 · $2 / $12 · OpenAI · $0.25 / $2 · $1.75 / $14 · WHAT SHOULD YOU USE? · SECRETS → self-host / ZDR · OPEN-SOURCE → V4 Flash or Qwen3.8 Flash · BALANCED → V4 Pro on a non-China host · LOCK IT IN · model: deepseek-v4-pro · small_model: deepseek-v4-flash · enforce ZDR · no training · pin / exclude by jurisdiction · avoid :floor (fp4) · Prices change frequently
+Generate a single 16:9 infographic using exactly the strings in the CRITICAL: Text Accuracy list, each appearing once, and nothing else.

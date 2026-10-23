@@ -64,4 +64,4 @@ metadata:
 
 关于许可 (license) 的说明：移植 MIT 许可的技能没有问题，只要保留原始许可和作者归属。如果你计划将移植版发布到 ClawHub，请在 `metadata` 块中保留原作者姓名——即使许可允许，重新发布时不注明归属也会造成混乱。
 
-btw, i use arch 
+btw, i use arch

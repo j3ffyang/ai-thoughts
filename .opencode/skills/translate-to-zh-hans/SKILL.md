@@ -35,21 +35,14 @@ Translate one article from `ai-thoughts/docs/` into Simplified Chinese and write
 3. **Check for an existing translation.** If `docs/<same>-zh-hans.md` — or the legacy `docs/<same>-chn.md` — already exists, stop and ask whether to overwrite, diff against it, or skip. Never overwrite silently.
 4. **Read the source** article from `source`. Understand the full content before translating.
 5. **Translate the body** into Simplified Chinese:
-   - Keep the title as an H1 with the key term followed by a Chinese
-     translation (match the style of existing Chinese pairs — most are still legacy `-chn.md`).
-   - Right after the H1, add the source link line, using the **absolute GitHub URL** (the `j3ffyang` repo), not a relative link:
-     `**原文：** [<source-filename>](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/<source-filename>)`
-   - Translate the running text, headings, and bullets faithfully and
-     naturally. Do not add, remove, or reorder content.
-   - Write Simplified Chinese by default; Traditional Chinese only when the
-     source was originally written that way.
-   - Apply the bilingual-gloss style below: gloss technical terms and section
-     titles, and add plain-language explanations for unfamiliar concepts.
+   - Keep the title as an H1 with the key term followed by a Chinese translation (match the style of existing Chinese pairs — most are still legacy `-chn.md`).
+   - Right after the H1, add the source link line, using the **absolute GitHub URL** (the `j3ffyang` repo), not a relative link: `**原文：** [<source-filename>](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/<source-filename>)`
+   - Translate the running text, headings, and bullets faithfully and naturally. Do not add, remove, or reorder content.
+   - Write Simplified Chinese by default; Traditional Chinese only when the source was originally written that way.
+   - Apply the bilingual-gloss style below: gloss technical terms and section titles, and add plain-language explanations for unfamiliar concepts.
 6. **Do not translate specific terms** — leave them verbatim:
-   - Product, tool, and agent names: Hermes Agent, OpenCode, OpenClaw, Astro,
-     etc.
-   - Technical terms, commands, flags, config and file names (`AGENTS.md`,
-     `SOUL.md`, `.cursorrules`, `hermes -c`), environment variables, URLs.
+   - Product, tool, and agent names: Hermes Agent, OpenCode, OpenClaw, Astro, etc.
+   - Technical terms, commands, flags, config and file names (`AGENTS.md`, `SOUL.md`, `.cursorrules`, `hermes -c`), environment variables, URLs.
    - Code blocks, inline code, CLI keystrokes (`Ctrl+C`, `Alt+Enter`).
    - Existing proper nouns already in Latin script. Only translate the surrounding prose; never translate inside code.
 7. **Preserve everything else exactly**: `../imgs/<file>` image references (keep the path verbatim — Chinese files mirror English per AGENTS.md), links, HTML, tables, frontmatter (if any), and Markdown structure.

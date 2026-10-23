@@ -50,12 +50,6 @@
 
 ## 本文涉及的命令 (Commands in This Essay)
 
-**入门：** `echo`、`date`、`whoami`
-**文件与目录：** `ls`、`cp`、`mv`、`mkdir -p`、`chmod`、`touch`
-**搜索与文本：** `grep`、`awk`、`sed`、`find`、`xargs`、`sort`、`uniq`、`cut`、`head`、`wc`
-**网络：** `ssh`、`wget`、`rsync`、`iwctl`
-**系统：** `dmesg`、`strace`、`journalctl`、`systemctl`、`crontab`、`make`、`ps`
-**媒体：** `ffmpeg`
-**版本控制：** `git`
+**入门：** `echo`、`date`、`whoami` **文件与目录：** `ls`、`cp`、`mv`、`mkdir -p`、`chmod`、`touch` **搜索与文本：** `grep`、`awk`、`sed`、`find`、`xargs`、`sort`、`uniq`、`cut`、`head`、`wc` **网络：** `ssh`、`wget`、`rsync`、`iwctl` **系统：** `dmesg`、`strace`、`journalctl`、`systemctl`、`crontab`、`make`、`ps` **媒体：** `ffmpeg` **版本控制：** `git`
 
-btw, i use arch 
+btw, i use arch

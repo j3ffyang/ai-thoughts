@@ -1,33 +1,5 @@
 Create a professional infographic following these specifications:
 
-## CRITICAL: Text Accuracy
-
-The image MUST render these exact text strings. Spell each one correctly, word for word. Do NOT double, garble, mix up, or abbreviate them. If the canvas gets crowded, DELETE labels rather than shrink or misspell them — fewer labels beats broken text.
-
-NEVER render any style-guide, instruction, or specification text inside the image (no "aspect ratio", "max colors", "crisp", "style", "layout" words). The only text allowed is the content labels listed below.
-
-Exact strings that must appear:
-- "Create SKILL.md, AGENTS.md, and PERSONA.md on the fly" (main title)
-- "Write it yourself" / "exactly what you want" / "because you wrote it"
-- "Three levels of customization"
-- "SKILL.md" / "AGENTS.md" / "PERSONA.md"
-- "The loop, in practice, is always the same"
-- "1 Spot" / "2 Write" / "3 Use" / "4 Tighten" / "5 Own"
-- "on the fly"
-- "SKILL.md — one task, one file"
-- "100% automated"
-- "blog sync" / "publish-skills" / "bold-highlights"
-- "btw, i use arch"
-- "AGENTS.md — the repo's constitution"
-- "approval first" / "commit when asked" / "never commit secrets" / "honest answers" / "rollback always"
-- "ground truth"
-- "PERSONA.md — a voice that sounds like you"
-- "simple" / "secure" / "independent" / "accurate" / "smarter"
-- "not good enough" / "don't fit your exact requirements"
-- "Make the agent truly yours"
-
-Known pitfalls to avoid: do not spell "skill" as "skil"; do not write "SKI LL.md"; do not double words (e.g. "the the loop"); keep "btw, i use arch" lowercase as shown; keep macaron pastel zones distinct. Prefer correct, sparing labels over dense text.
-
 ## Image Specifications
 
 - **Type**: Infographic
@@ -35,6 +7,71 @@ Known pitfalls to avoid: do not spell "skill" as "skil"; do not write "SKI LL.md
 - **Style**: hand-drawn-edu
 - **Aspect Ratio**: 16:9
 - **Language**: English
+
+## CRITICAL: Text Accuracy
+
+The list below is the complete and only text that may appear in the image. Each string appears exactly once — no repeated labels, no echoed headings, no duplicated cells, no mirrored imagery. Never render any word from the other sections of this prompt as text. Spell every tricky token exactly: do not write skill as skil, do not split an acronym with a space, do not double a word, and keep the lowercase sign-off lowercase. If the canvas gets crowded, drop a whole label rather than shrink or misspell it — fewer labels beats broken text.
+
+**Main title (top banner):**
+- `Create SKILL.md, AGENTS.md, and PERSONA.md`
+
+**Center of the ring:**
+- `on the fly`
+
+**Five ring nodes (clockwise):**
+- `1 Spot`
+- `2 Write`
+- `3 Use`
+- `4 Tighten`
+- `5 Own`
+
+**Ring headline (above the ring):**
+- `The loop, in practice, is always the same`
+
+**Satellite zone — objective:**
+- `Write it yourself`
+- `exactly what you want`
+- `because you wrote it`
+
+**Satellite zone — three levels (stacked cards):**
+- `Three levels of customization`
+- `SKILL.md — procedure`
+- `AGENTS.md — rules`
+- `PERSONA.md — personality`
+
+**Satellite zone — example skill (file card + chips):**
+- `SKILL.md — one task, one file`
+- `blog sync`
+- `publish-skills`
+- `bold-highlights`
+
+**Satellite zone — repo rules panel:**
+- `AGENTS.md — the repo's constitution`
+- `approval first`
+- `commit when asked`
+- `never commit secrets`
+- `honest answers`
+- `rollback always`
+- `ground truth`
+
+**Satellite zone — voice / mirror card:**
+- `PERSONA.md — a voice that sounds like you`
+- `consistent personality`
+- `restart to pick up`
+
+**Benefit chips:**
+- `simple`
+- `secure`
+- `independent`
+- `accurate`
+- `smarter`
+- `not good enough (others)`
+
+**Call to action banner:**
+- `Make the agent truly yours`
+
+**Sign-off chip:**
+- `btw, i use arch`
 
 ## Core Principles
 
@@ -50,83 +87,43 @@ Known pitfalls to avoid: do not spell "skill" as "skil"; do not write "SKI LL.md
 - Main titles should be prominent and readable
 - Key concepts should be visually emphasized
 - Labels should be clear and appropriately sized
+- Use the specified language for all text content
+- Every listed string appears exactly once; if two zones seem to need the same word, rephrase one or drop it — never repeat it
 
 ## Layout Guidelines (circular-flow)
 
-- Cyclic process showing a continuous, recurring 5-step workflow — no hard start/end, arrows returning to step 1
-- Circular arrangement: 5 step nodes evenly spaced around a ring, directional arrows between them
-- The center of the circle carries the main concept: "on the fly"
+- Cyclic process showing a continuous, recurring workflow — no hard start/end, arrows returning to the first step
+- Circular arrangement: five step nodes evenly spaced around a ring, directional arrows between them
+- The center of the circle carries the main concept as a short tagline
 - Title at top, brief descriptions near nodes, optional small icons per step
-- Surround the circle with a few satellite zones for supporting content (levels, example skills), keeping generous whitespace
+- Surround the circle with a few satellite zones for supporting content (customization levels, example skills), keeping generous whitespace
 
 ## Style Guidelines (hand-drawn-edu)
 
 - Warm cream paper background (#F5F0E8) with subtle grain; deep charcoal (#2D2D2D) text
-- Macaron pastel cards as information zones — max 4 colors: Macaron Blue #A8D8EA, Macaron Mint #B5E5CF, Macaron Lavender #D5C6E0, Macaron Peach #FFD5C2; Coral Red #E8655A only for key emphasis (e.g. "ground truth", center)
+- Macaron pastel cards as information zones — max 4 colors: Macaron Blue #A8D8EA, Macaron Mint #B5E5CF, Macaron Lavender #D5C6E0, Macaron Peach #FFD5C2; Coral Red #E8655A only for key emphasis (highlighted keyword, center)
 - Hand-drawn wobbly lines and arrows everywhere — no perfect geometry, no straight tool-like lines
 - At least one simple stick-figure or cartoon character
 - Doodle decorations: small stars, spirals, sparkles, underlines
 - Colors don't fully fill outlines — casual hand-drawn feel; dashed borders for secondary zones
 - Bold hand-drawn lettering for the main title; handwritten print for body
 - Generous whitespace — zones must breathe; do not overcrowd
-- IMPORTANT: render ONLY the content labels from this prompt. Never draw spec/instruction text such as "max 4 colors", "aspect ratio", "style", "layout", "CRITICAL", or any heading words that are not listed in the exact strings above.
+- Render only the listed content strings; never draw specification, instruction, or heading words inside the image
 
 ## Avoid
 
 - Perfect geometric shapes, straight lines, photorealistic elements, flat vector/digital icons, pure white background, corporate or clinical aesthetic
 
----
+## Visual and content notes (imagery only — do NOT render any word from this section)
 
-Generate the infographic based on the content below:
+- Overall meaning: instead of searching skill marketplaces for something that only half-fits, the maker authors the needed file on the spot, so it behaves precisely as intended because every line is their own.
+- Motivation scene: a person weighing a large market shelf holding one mismatched puzzle piece against simply drawing the matching piece themselves — a small side-by-side doodle.
+- Customization levels: three tidy, color-coded stacked cards, one per file type, moving from a concrete procedure to standing rules to an optional voice.
+- Centerpiece: a recurring five-stage cycle drawn as a big ring — spot the repeating task, write the file, let it take over next time, tighten it as edge cases appear, then own it. Big clear numerals and curving return arrows convey an endless rotation.
+- Worked examples: a doodled document with a small automation pipeline and three example chips — a content-sync pipeline with an automation arrow, a skill-publishing chip, and a highlighting chip — plus a lowercase sign-off written at the foot of a post.
+- Repo constitution panel: an authoritative but friendly document carrying several short rule chips (approval before edits, committing only on request, protecting secrets, candid answers, always reversible) and one highlighted keyword about checking claims against the source.
+- Voice card: a mirror showing a distinctive personal voice on one side versus a generic assistant on the other, with warm quote bubbles; an adjacent note about needing a restart before a new file takes effect.
+- Benefit row: a strip of six short chips, each with a tiny icon, expressing that self-authored tooling is uncomplicated, safe because every line is known, self-reliant rather than borrowed, exact so nothing must be re-explained, and mind-sharpening because writing it forces understanding the logic; one chip notes that community offerings are often unsatisfying and miss exact requirements.
+- Closing banner: a small terminal window with one bold call to action urging the reader to author their own config file as they work, plus a lowercase personal sign-off.
 
-### Main title
-Create SKILL.md, AGENTS.md, and PERSONA.md on the fly
-
-### Section 1 — Objective
-Write the skill you need while you work instead of hunting half-fitting ones in marketplaces.
-- "exactly what you want, because you wrote it"
-
-### Section 2 — Three levels of customization
-- SKILL.md — a procedure for a specific task (one task, one file at .opencode/skills/<skill-name>/SKILL.md)
-- AGENTS.md — the repo's constitution: standing rules every session (approval first, commit when asked, never commit secrets, honest answers, rollback always)
-- PERSONA.md — optional; a consistent personality and voice that sounds like you
-
-### Section 3 — The loop (centerpiece, circular)
-"The loop, in practice, is always the same:" — five steps around the circle:
-1. Spot the loop — a task that keeps showing up while you work.
-2. Write the file — a SKILL.md (or an AGENTS.md rule, or a PERSONA.md voice) describing it precisely.
-3. Use it the next time it appears — the agent matches the description and takes over.
-4. Tighten it on the fly — add stricter conditions, handle edge cases, check duplicates.
-5. Own it — every line is yours, so it's exact and safe.
-Center concept: "on the fly" — the loop repeats endlessly.
-
-### Section 4 — Example skills
-- blog sync — everbox.io, "100% automated" without human touch
-- publish-skills — automatically publish custom skills to ClawHub
-- bold-highlights — the bold highlights in this article come from a skill
-- sign-off — add "btw, i use arch" at the end of each blog post
-Modify them "on the fly" whenever you find a stricter condition.
-
-### Section 5 — Benefits (six short chips)
-- simple
-- secure — you wrote every line
-- independent — you use your own, not someone else's
-- accurate — the agent remembers and knows, no re-explaining
-- smarter — writing it forces understanding
-- not good enough — some community skills don't fit your exact requirements
-
-### Section 6 — Reason + call to action
-- OpenCode: no AI provider lock-in, switch between hundreds of models on demand, runs in the terminal — the lowest dependency footprint
-- Call to action: "Make the agent truly yours" — write your own SKILL.md, AGENTS.md, or PERSONA.md on the fly.
-- Sign-off line: "btw, i use arch"
-
-Text labels (in English):
-Title: "Create SKILL.md, AGENTS.md, and PERSONA.md on the fly"
-Center: "on the fly"
-Steps: "1 Spot" "2 Write" "3 Use" "4 Tighten" "5 Own"
-Levels: "SKILL.md" "AGENTS.md" "PERSONA.md"
-Examples: "blog sync" "100% automated" "publish-skills" "bold-highlights" "btw, i use arch"
-Rules: "approval first" "commit when asked" "never commit secrets" "honest answers" "rollback always"
-Keyword: "ground truth"
-Benefits: "simple" "secure" "independent" "accurate" "smarter"
-CTA: "Make the agent truly yours"
+Generate a single 16:9 infographic using exactly the strings in the CRITICAL: Text Accuracy list, each appearing once, and nothing else.

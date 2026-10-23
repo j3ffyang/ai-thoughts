@@ -35,13 +35,9 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
 - `category` — Blog category: `tech`, `travel`, `photo`, `philosophy`, or `culture`. Optional. Default `tech`.
 - `draft` — `true`/`false`. Optional. Default `false` (published).
 - `featured` — `true`/`false`. Optional. Default `false`.
-  - `true`: homepage-worthy — a signature/opinion essay, deep dive, or
-    milestone post that defines the blog's voice. Use sparingly (aim ≤ 20%
-    of posts) so the homepage stays curated.
-  - `false`: everything else — how-tos, quick notes, release/changelog
-    posts, and `*-zh-hans.md` (legacy `*-chn.md`) translations of an already-published post.
-  - When the user doesn't specify, ask which it is (per Procedure step 2);
-    never auto-pick `true`.
+  - `true`: homepage-worthy — a signature/opinion essay, deep dive, or milestone post that defines the blog's voice. Use sparingly (aim ≤ 20% of posts) so the homepage stays curated.
+  - `false`: everything else — how-tos, quick notes, release/changelog posts, and `*-zh-hans.md` (legacy `*-chn.md`) translations of an already-published post.
+  - When the user doesn't specify, ask which it is (per Procedure step 2); never auto-pick `true`.
   - See `astro_journal/AGENTS.md` → "Featured posts" for the full criteria, cap, and rotation rule; never flip `featured` without the user's explicit approval.
 - `tags` — List of lowercase hyphen-separated tags. Optional. Default derived from the article topic. **When the source is from `history/`** (Chinese history / literature / culture), always also include the four base tags `chinese`, `history`, `culture`, `literature` alongside the topic-specific tags; dedupe against tags already present.
 
@@ -81,10 +77,7 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
    **MUST quote any frontmatter value containing YAML-special characters — especially `: ` (colon + space).** An unquoted `description: Foo: bar` is parsed as a mapping and fails the build at content sync (`bad indentation of a mapping entry` / `mapping values are not allowed in this context`); Cloudflare then keeps the **previous** deployment, so the post never appears and search can't find it. Wrap the whole value in double quotes: `description: "Foo: bar"`. Applies to every field (`title`, `description`, …). This has recurred several times.
 10. **Write the post** to `src/data/blog/<category>/<filename>` with the frontmatter followed by the polished body.
 11. **Report** `postPath` and `imagesCopied` to the user.
-12. **Commit & push (only after approval):** ask the user explicitly whether
-    to commit. On approval, stage the post and any new images in
-    `astro_journal`, commit with a concise message, and push to `origin`.
-    Without approval, leave the changes uncommitted and say so.
+12. **Commit & push (only after approval):** ask the user explicitly whether to commit. On approval, stage the post and any new images in `astro_journal`, commit with a concise message, and push to `origin`. Without approval, leave the changes uncommitted and say so.
 
 ## Verification
 
