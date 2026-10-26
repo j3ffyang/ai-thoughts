@@ -35,6 +35,12 @@ FENCE_CLOSE = re.compile(r"^\s*(`{3,}|~{3,})\s*$")
 TABLE = re.compile(r"^\s*\|")
 PIPE = re.compile(r"\|")
 
+MARKDOWN_SUFFIXES = {".md", ".markdown", ".mdown"}
+
+
+def is_markdown(p: Path) -> bool:
+    return p.suffix.lower() in MARKDOWN_SUFFIXES
+
 
 def is_structural(s: str) -> bool:
     return bool(
@@ -206,8 +212,13 @@ def main() -> int:
     files: list[Path] = []
     failed = False
     for p in raw_targets:
-        if p.is_file():
+        if p.is_dir():
+            files.extend(sorted(q for q in p.rglob("*.md") if q.is_file()))
+        elif p.is_file() and is_markdown(p):
             files.append(p)
+        elif p.is_file():
+            print(f"error: not a Markdown file: {p}", file=sys.stderr)
+            failed = True
         else:
             print(f"error: not found: {p}", file=sys.stderr)
             failed = True
