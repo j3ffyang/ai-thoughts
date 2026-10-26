@@ -70,6 +70,7 @@ Exit codes: 0 means done, 1 means a file needs unwrapping (`--check` only), and 
 ## Limits
 
 - The script does not check meaning. It only changes line breaks.
+- Only Markdown files are accepted (`.md`, `.markdown`, `.mdown`). A path to any other file type is refused with exit 2, so a script or config file is never mangled by accident.
 - A line that contains a `|` character is treated as a table line. It stays on its own line and breaks the paragraph around it, so a prose line with a pipe is not unwrapped. Check these by hand.
 - An HTML block that spans several lines is not recognized as a block. Its prose lines can be joined. Check these by hand.
 - Deeply nested or unusual list layouts are not tested. Check these by hand.

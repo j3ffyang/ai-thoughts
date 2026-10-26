@@ -36,6 +36,12 @@ FENCE_CLOSE = re.compile(r"^\s*(`{3,}|~{3,})\s*$")
 TABLE = re.compile(r"^\s*\|")
 PIPE = re.compile(r"\|")
 
+MARKDOWN_SUFFIXES = {".md", ".markdown", ".mdown"}
+
+
+def is_markdown(p: Path) -> bool:
+    return p.suffix.lower() in MARKDOWN_SUFFIXES
+
 
 def is_structural(s: str) -> bool:
     return bool(
@@ -184,19 +190,24 @@ def process(text: str) -> str:
 
 def collect(paths: list[str]) -> tuple[list[Path], list[str]]:
     found: list[Path] = []
-    missing: list[str] = []
+    rejected: list[str] = []
     for raw in paths:
         p = Path(raw)
         if p.is_dir():
-            for md in sorted(p.rglob("*.md")):
+            for md in sorted(p.rglob("*")):
+                if not md.is_file() or not is_markdown(md):
+                    continue
                 if any(part.startswith(".") for part in md.relative_to(p).parts):
                     continue
                 found.append(md)
         elif p.is_file():
-            found.append(p)
+            if is_markdown(p):
+                found.append(p)
+            else:
+                rejected.append(f"not a Markdown file: {raw}")
         else:
-            missing.append(raw)
-    return found, missing
+            rejected.append(f"not found: {raw}")
+    return found, rejected
 
 
 def read(p: Path) -> str:
@@ -220,10 +231,10 @@ def main() -> int:
     if not args.paths and not scanning:
         ap.error("writing needs explicit paths; use --check or --dry-run to scan the current directory")
 
-    files, missing = collect(args.paths or ["."])
-    failed = bool(missing)
-    for raw in missing:
-        print(f"error: not found: {raw}", file=sys.stderr)
+    files, rejected = collect(args.paths or ["."])
+    failed = bool(rejected)
+    for raw in rejected:
+        print(f"error: {raw}", file=sys.stderr)
 
     changed: list[Path] = []
     for p in files:
