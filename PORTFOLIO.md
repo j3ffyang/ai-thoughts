@@ -41,7 +41,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 
 | Repo | Purpose | Articles |
 |------|---------|----------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 50 articles |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 51 articles |
 
 ### Tools & Extensions
 
@@ -56,6 +56,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
+- **Oct 26:** Published "Replace Cursor with a Minimal VSCodium AppImage" — English plus Simplified and Traditional Chinese twins, a 16:9 infographic, and a 5:2 banner, and synced to the Astro blog; a 3-function editor (git-tagged tree, Vim keys, Mermaid + local PlantUML) in one AppImage, with the honest 795 MiB Electron footprint and a one-step uninstall
 - **Oct 23:** Published "Where Does Brave's Leo AI Keep Your Data?" — English plus Simplified and Traditional Chinese twins, a 16:9 infographic, and a 5:2 banner; the local store turns out to be decryptable with Chromium's public `peanuts` key on a machine with no keyring
 - **Oct 23:** Restricted `resize-for-banner` to Twitter/X only — LinkedIn and blog headers accept the original image — and codified "register an article only after it is committed and pushed" in AGENTS.md, which removed three uncommitted rows from the manifest
 - **Oct 20:** Published "The Rules, Not the Words: ASD-STE100 for Agent Instructions" — English plus Simplified and Traditional Chinese twins, a 16:9 infographic, and a 5:2 banner
@@ -300,7 +301,7 @@ if args.check:
 ## 🔗 Quick Links
 
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
-- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 50 articles on AI, privacy, and entrepreneurship
+- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 51 articles on AI, privacy, and entrepreneurship
 - **Gists & Experiments:** [Personal gists](https://gist.github.com/j3ffyang)
 
 ---
@@ -311,12 +312,12 @@ From `ai-thoughts` (most recent published articles):
 
 1. **"Health Records an Agent Can Audit"** (Oct 2026) — A two-layer skill for AI-assisted review of personal and family medical records: append-only data, conflict protocol, change gate, evidence grading — and the honest list of what it still cannot do
 2. **"The Rules, Not the Words: ASD-STE100 for Agent Instructions"** (Oct 2026) — ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed before-and-after measurement of two rule files, and a skill that applies the rules without flattening essay voice; with a visual summary infographic
-3. **"Where Does Brave's Leo AI Keep Your Data?"** (Oct 2026) — Inside Brave Leo's local store — the single AIChat SQLite database, its schema for conversations/pages/search sources, why its at-rest OSCrypt encryption falls back to a hardcoded key without a keyring, what that structured local data could be used for, and why harvesting it team-wide is not worth it
-4. **"Unix Is Art"** (Oct 2026) — A personal essay on the Unix philosophy as an aesthetic — its history from 1974 to 2004 (Thompson and Ritchie, McIlroy, Kernighan and Pike, Raymond), the ideas behind it and the critics of it, a remembrance of Dennis Ritchie, and what Unix made me
-5. **"Keeping secrets out of Git"** (Oct 2026) — A short checklist for keeping secrets out of git — why a committed secret is already compromised, the .gitignore patterns to add, where to state the policy (README, AGENTS.md), and three commands to verify nothing is hiding; with a visual summary infographic
-6. **"Encrypting Linux: from a hack 20+ years ago to firewalls, LUKS and Veracrypt"** (Oct 2026) — A personal Linux security story — how a break-in 20+ years ago pushed me from detecting tampering (tripwire) to preventing it: LUKS full-disk encryption (xfs root, cleartext /boot), Veracrypt USB volumes, the threat model and its honest limits, AES-NI overhead, TRIM, and a daily rsync backup between two encrypted disks; with a visual summary infographic
+3. **"Replace Cursor with a Minimal VSCodium AppImage"** (Oct 2026) — Replacing Cursor with a VSCodium AppImage and three Open VSX extensions — git status tags in the file tree, Vim keys, Mermaid in the built-in preview and local PlantUML; why Cursor's forced agent and backend routing are the real problem, what telemetry surface remains, the settings that make the editor inert, and an honest 795 MiB Electron footprint with a one-step uninstall; with a visual summary infographic
+4. **"Where Does Brave's Leo AI Keep Your Data?"** (Oct 2026) — Inside Brave Leo's local store — the single AIChat SQLite database, its schema for conversations/pages/search sources, why its at-rest OSCrypt encryption falls back to a hardcoded key without a keyring, what that structured local data could be used for, and why harvesting it team-wide is not worth it
+5. **"Unix Is Art"** (Oct 2026) — A personal essay on the Unix philosophy as an aesthetic — its history from 1974 to 2004 (Thompson and Ritchie, McIlroy, Kernighan and Pike, Raymond), the ideas behind it and the critics of it, a remembrance of Dennis Ritchie, and what Unix made me
+6. **"Keeping secrets out of Git"** (Oct 2026) — A short checklist for keeping secrets out of git — why a committed secret is already compromised, the .gitignore patterns to add, where to state the policy (README, AGENTS.md), and three commands to verify nothing is hiding; with a visual summary infographic
 
-👉 See all 50 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
+👉 See all 51 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
 
 ---
 
@@ -342,7 +343,7 @@ npm run build  # or load the extension manually in Chrome
 ```bash
 git clone https://github.com/negtivspace/ai-thoughts
 cd docs
-# 50 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
+# 51 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
 ```
 
 ---
@@ -353,4 +354,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** October 23, 2026 | Tracking: 6 active repos, 50 published articles, 20+ published skills
+**Last Updated:** October 26, 2026 | Tracking: 6 active repos, 51 published articles, 20+ published skills

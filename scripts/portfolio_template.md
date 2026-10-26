@@ -56,6 +56,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
+- **Oct 26:** Published "Replace Cursor with a Minimal VSCodium AppImage" — English plus Simplified and Traditional Chinese twins, a 16:9 infographic, and a 5:2 banner, and synced to the Astro blog; a 3-function editor (git-tagged tree, Vim keys, Mermaid + local PlantUML) in one AppImage, with the honest 795 MiB Electron footprint and a one-step uninstall
 - **Oct 23:** Published "Where Does Brave's Leo AI Keep Your Data?" — English plus Simplified and Traditional Chinese twins, a 16:9 infographic, and a 5:2 banner; the local store turns out to be decryptable with Chromium's public `peanuts` key on a machine with no keyring
 - **Oct 23:** Restricted `resize-for-banner` to Twitter/X only — LinkedIn and blog headers accept the original image — and codified "register an article only after it is committed and pushed" in AGENTS.md, which removed three uncommitted rows from the manifest
 - **Oct 20:** Published "The Rules, Not the Words: ASD-STE100 for Agent Instructions" — English plus Simplified and Traditional Chinese twins, a 16:9 infographic, and a 5:2 banner

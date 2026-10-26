@@ -560,3 +560,10 @@ rows:
       - { label: "medical-record-review", path: "docs/261021-medical-record-review-zh-hans.md", lang: zh, label_zh: "智能体可以审计的健康档案" }
     desc_en: "A two-layer skill for AI-assisted review of personal and family medical records: append-only data, conflict protocol, change gate, evidence grading — and the honest list of what it still cannot do"
     desc_zh: "一套两层技能，用于 AI 辅助复阅个人与家庭病历：只追加的数据行、冲突协议、变更闸门、证据分级——以及它仍然做不到什么的诚实清单"
+  - section: personal
+    status: published
+    links:
+      - { label: "cursor-to-vscodium", path: "docs/261014-cursor-to-vscodium.md", lang: en }
+      - { label: "cursor-to-vscodium", path: "docs/261014-cursor-to-vscodium-zh-hans.md", lang: zh, label_zh: "用一个最小化的 VSCodium AppImage 取代 Cursor" }
+    desc_en: "Replacing Cursor with a VSCodium AppImage and three Open VSX extensions — git status tags in the file tree, Vim keys, Mermaid in the built-in preview and local PlantUML; why Cursor's forced agent and backend routing are the real problem, what telemetry surface remains, the settings that make the editor inert, and an honest 795 MiB Electron footprint with a one-step uninstall; with a visual summary infographic"
+    desc_zh: "用 VSCodium AppImage 加三个 Open VSX 扩展取代 Cursor——文件树里的 git 状态标记、Vim 键位、内置预览中的 Mermaid 与本地 PlantUML；为什么 Cursor 的强制智能体与后端路由才是真正的问题、还剩多少遥测面、让编辑器保持惰性的设置，以及诚实的 795 MiB Electron 体积与一步卸载；附视觉总结信息图"
