@@ -6,18 +6,18 @@ description: >
   Triggers: health record, medical record, lab result, bloodtest, imaging, prescription, medication, symptom, trend, review, analysis, intake, index, registry, merge, rename, audit, 健康档案, 化验, 处方, 用药, 趋势, 复阅, 分析, 建档, 整理, 合并, 更名, 审计, 注册表.
   Never diagnose, never prescribe, never edit source data.
 metadata:
-  version: "1.5.0"
+  version: "1.5.3"
   language: en
   created: "2026-10-21"
-  updated: "2026-10-21"
+  updated: "2026-10-27"
   source-article: "https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261021-medical-record-review.md"
-  changelog: "1.5.0 — ship a patient-free AUTHORITY starter at references/AGENTS.example.md, and require a dedicated record folder. 1.4.2 — separate verbatim values from de-identification in §2. 1.4.1 — link the companion article. 1.4.0 — ASD-STE100 pass: one action per sentence, condition first, no semicolons, one name per item. 1.3.0 — four-phase map, fast path, provenance stamp, derived-value rule. 1.2.0 — AI+medical disclaimer. 1.1.0 — English body."
+  changelog: "1.5.3 — add the companion-article alignment appendix and precision notes; correct 'no paths' to 'no patient paths'; record the hand-maintained index contract and non-metric series schema in 1.3.0. 1.5.2 — align the evidence-grading consequence with the article: a failed test drops to `low-confidence`. 1.5.1 — narrow the cross-person comparison claim from 'clinically meaningless' to 'out of scope for this procedure'. 1.5.0 — ship a patient-free AUTHORITY starter at references/AGENTS.example.md, and require a dedicated record folder. 1.4.2 — separate verbatim values from de-identification in §2. 1.4.1 — link the companion article. 1.4.0 — ASD-STE100 pass: one action per sentence, condition first, no semicolons, one name per item. 1.3.0 — four-phase map, fast path, provenance stamp, derived-value rule, hand-maintained index contract, non-metric series schema. 1.2.0 — AI+medical disclaimer. 1.1.0 — English body."
   disclaimer: "Practice of AI + medical combination, not a medical device. Output is not official medical advice, diagnosis, prescription, or treatment decision. No warranty; the author assumes no responsibility for consequences of use or misuse."
 ---
 
 # Medical Record Review — Generic Health-Record Review
 
-> **This is the generic layer.** It carries no patient data, no paths, and no values. The project layer injects the profile and the directory layout (see §0).
+> **This is the generic layer.** It carries no patient data, no patient paths, and no patient values. The project layer injects the profile and the directory layout (see §0).
 > **Authority chain**: project `AGENTS.md` > project-layer skill > this generic skill. If they conflict, the higher layer wins. Name the conflicting clause.
 > **One record folder = one person.** Multiple people means multiple folders. Folders never reference each other.
 > **Terms.** A **record** is one file in `DOCS_DIR`. The **person** is the subject of the record. The **user** is the operator of this skill. Use these three names only.
@@ -171,7 +171,7 @@ Never do these three things. Never pick one value silently. Never "fix" the orig
 
 ## 8. Evidence grading (output discipline)
 
-Every external claim passes five tests. If a claim fails one test, it drops a grade.
+Every external claim passes five tests. If a claim fails one test, it drops to `low-confidence`.
 
 1. **Safety** — an uncertain detail means stop and verify. Never trade correctness for speed.
 2. **Factuality** — the source exists and says what you claim. Never invent studies, guidelines, or numbers.
@@ -365,7 +365,7 @@ This skill deliberately embeds no precedents. Precedents belong to specific reco
 - This skill does not diagnose. It does not assign a disease subtype. It does not prescribe. It does not adjust doses. It does not replace a clinic visit.
 - Output is informational. Any change to medication or treatment belongs to a clinician.
 - Egress responsibility sits with the user. A hosted model means egress, and egress cannot be recalled. Before you share a record folder, settle who may read it and where it may travel.
-- One folder per person. The project layer injects configuration and profile per folder. **Never reference across folders.** Cross-person comparison is clinically meaningless, and it leaks.
+- One folder per person. The project layer injects configuration and profile per folder. **Never reference across folders.** Cross-person comparison is out of scope for this procedure, and it leaks.
 - Record version changes in the frontmatter `version` field and in the project layer's change log. A structural change also updates the completion checklist.
 
 ## Appendix E · Locale profiles
@@ -386,3 +386,42 @@ The workflow is language-neutral. Set `LANG` in the project layer, then apply th
 
 - Mixed-language records are allowed only when the project layer says so. Otherwise pick one language per record.
 - The escape rules apply in every locale. Markdown renderers interpret the characters, not the language.
+
+## Appendix F · Companion article alignment (precision notes)
+
+> **This appendix aligns vocabulary. It does not add authority.** The companion article [Health Records an Agent Can Audit](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261021-medical-record-review.md) is a reference. It explains why the procedure exists and what it cannot do. This skill is the procedure. Where the article's shorthand and this skill differ, this skill wins. Nothing in either document is a medical device, official medical advice, a diagnosis, a prescription, or a treatment decision. The user carries the risk. If either document and a clinician disagree, the clinician wins.
+
+**Term map.** The article names the rules informally. Use these sections.
+
+| Article term | Where this skill defines it |
+|---|---|
+| Append-only data rows | §4 |
+| Conflict protocol | §7 |
+| Change gate | §7 |
+| Exemption scope | §7 |
+| Evidence five | §8 |
+| Applicability | §6 (applicability check) |
+| Attribution timeline | §6 (attribution gate) |
+| Single copy | §13 steps 3–4; Appendix B |
+| Derived-value arithmetic | §5 |
+| Provenance stamp | §11 |
+
+**Shorthands that need a precise reading.**
+
+- **"Conflict gate"** in the article means the conflict protocol **and** the change gate. Both are never skipped. They are separate steps in §7.
+- **"No paths"** in the article means no **patient** paths. This skill uses `{{DOCS_DIR}}` path templates and default `docs/` and `imgs/` folders. It carries no patient paths and no patient values.
+- **"The template carries rules and configuration"** means it does not carry the profile values. The profile lives in the file `PROFILE` names. `AGENTS.example.md` also carries a profile section, boundaries, and the completeness check; those are instructions, not patient data.
+- **"The starter"** is `references/AGENTS.example.md`. It is a template, not an active authority file. Copy it, or point `AUTHORITY` at an existing rules file.
+- **"Project layer"** is the project-layer skill, or the `AGENTS.md` section that `AUTHORITY` names. The nine keys live in one place, not both.
+- **"Clinical judgement"** in the article means the clinician's judgement. This skill structures evidence and flags risks. It does not own clinical authority. The clinician's judgement wins.
+- **"Actionable"** in the risk block means actionable **by a clinician**. This skill does not authorize a dose change, a treatment change, or a self-treatment decision.
+
+**Precision notes.**
+
+1. **A pure append is still a write.** It skips the old→new comparison. It still needs permission to write the record, and it must carry its source. §7.
+2. **The change gate applies to changes to existing data rows.** Pure appends are handled by note 1. §7.
+3. **A hand-maintained index is a hint, not machine truth.** Its first line must read `hand-maintained: true`. Readers re-verify every field against the record. Appendix B.
+4. **A failed evidence test drops the claim to `low-confidence`.** A missing element of the citation trio also demotes it to `low-confidence`. A demoted claim goes to clinician review. §8.
+5. **The output skeleton does not repeat the disclaimer.** The disclaimer sits at the top of this skill. A generated review can omit it. The companion article flags this as a strain. §10.
+6. **The template's rule sections are five, not four.** Privacy, egress, evidence, measurement conditions, and data changes. `AGENTS.example.md` §2–§6.
+7. **The index contract and the non-metric schema came from the same review as the provenance stamp and the derived-value rule.** See the 1.3.0 changelog entry. This is why the article says "four gaps."
