@@ -21,7 +21,11 @@ import subprocess
 import sys
 from pathlib import Path
 
-GITHUB = "https://github.com/j3ffyang/ai-thoughts/blob/main/docs/"
+def github_base(src: Path) -> str:
+    """j3ffyang/<repo>/blob/main/docs/ — docs/ sits at the repo root, so the
+    repo name is the parent directory of src's directory. Covers ai-thoughts
+    and history without hardcoding either."""
+    return f"https://github.com/j3ffyang/{src.resolve().parent.parent.name}/blob/main/docs/"
 LINK_RE = re.compile(r"^>\s*(?:繁體版|簡體版|繁体版|简体版)\s*[：:]")
 H1_RE = re.compile(r"^#\s+(\S.*\S|\S)\s*$")
 OPENCC = ["opencc", "-c", "s2twp.json"]
@@ -42,6 +46,12 @@ OVERRIDES = [
     ("介面與實現", "介面與實作"),  # 实现 = implementation; Taiwan says 實作, not 實現 "to realize"
     ("沒有隻向", "沒有只向"),  # 只 = "only", not the classifier 隻 (OpenCC s2twp mispicks)
     ("還是隻看到", "還是只看到"),  # 只 = "only" (還是只看到了一部分), not the classifier 隻
+    # 261011-baochai (《红楼梦》引文，甲戌 / 庚辰 / 程甲本): meaning-level miscodings
+    ("曬幹", "曬乾"),  # 干 = dry (晒干), not 幹 "to do"
+    ("餘則深知", "余則深知"),  # 余 = "I" in 脂批 (余则深知), not 餘 "remaining"
+    ("餘閱", "余閱"),  # 余 = "I" (余阅送花一回)
+    ("薛姨媽雲", "薛姨媽云"),  # 云 = "says" (薛姨妈云…), not 雲 "cloud"
+    ("麵皮", "面皮"),  # 面 = face (面皮嘴唇烧的紫绛皱裂), not 麵 "noodles"
 ]
 
 # One-Simplified-to-many-Traditional forms where OpenCC can pick the wrong
@@ -126,14 +136,15 @@ def build(src: Path) -> tuple[str, str, Path, str]:
     src_text = read(src)
     twin = twin_path(src)
 
+    base = github_base(src)
     src_title = h1_title(src_text)
-    src_link = f"> 繁体版：[{src_title}]({GITHUB}{twin.name})"
+    src_link = f"> 繁体版：[{src_title}]({base}{twin.name})"
     src_out = with_link(src_text, src_link)
 
     body = strip_link_lines(src_text)
     tra_body = apply_overrides(to_traditional(body))
     tra_title = h1_title(tra_body)
-    tra_link = f"> 簡體版：[{tra_title}]({GITHUB}{src.name})"
+    tra_link = f"> 簡體版：[{tra_title}]({base}{src.name})"
     twin_out = with_link(tra_body, tra_link)
 
     return src_text, src_out, twin, twin_out
