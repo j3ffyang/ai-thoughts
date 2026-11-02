@@ -81,6 +81,7 @@ OVERRIDES = [
     ("餘閱", "余閱"),
     ("薛姨媽雲", "薛姨媽云"),
     ("麵皮", "面皮"),
+    ("製表符", "制表符"),  # ai-thoughts: tab character (制表符), not 製 (manufacture)
 ]
 
 # One-Simplified-to-many-Traditional forms where OpenCC can pick the wrong
