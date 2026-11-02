@@ -13,8 +13,8 @@ license: MIT
 compatibility: opencode
 metadata:
   author: j3ffyang
-  version: "1.0.8"
-  changelog: "1.0.8 — pin 製表符 → 制表符 so tab characters stop converting to the manufacture character."
+  version: "1.0.7"
+  changelog: "1.0.7 — pin 製表符 → 制表符 so tab characters stop converting to the manufacture character."
 ---
 
 # Simplified → Traditional (zh-hans → zh-hant)
