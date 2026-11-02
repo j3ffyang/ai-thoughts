@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Sync a Simplified-Chinese ai-thoughts article to its Traditional-Chinese twin.
+"""Sync a Simplified-Chinese article to its Traditional-Chinese twin.
+The same file is used by both history and ai-thoughts (keep them byte-identical).
 
-Source of truth : docs/<YYMMDD-slug>-zh-hans.md   (bare .md here is English; -chn.md is legacy)
+Source of truth : docs/<YYMMDD-slug>-zh-hans.md   (bare .md is English in ai-thoughts)
 Generated twin  : docs/<YYMMDD-slug>-zh-hant.md
 
 What it does:
@@ -34,24 +35,52 @@ OPENCC = ["opencc", "-c", "s2twp.json"]
 # between occurrences. Each (from, to) pair is applied in order to the converted
 # Traditional text. Keep this list small and specific; it survives every re-sync.
 OVERRIDES = [
-    ("作者自雲", "作者自云"),  # 云 = "says" (作者自云), not 雲 "cloud"
-    ("幹血之症", "乾血之症"),  # 乾 = dry (干血 = dry blood, a TCM condition); OpenCC picked 幹
-    ("里加", "裡加"),  # 里 = "inside" (…里加), not the unit 里; OpenCC misses 里 after Latin text (e.g. "README.md 里加")
-    ("幹淨", "乾淨"),  # 干 = dry/clean (干净), not 幹 "to do"
-    ("可擴充套件性", "可擴充性"),  # 拡展性 → 擴充性; s2twp leaks 套件 into the term
-    # Note: 分区 → 分割槽 is left as OpenCC renders it, to stay consistent with
-    # the already-published 261002-encrypt-linux-zh-hant.md (re-syncing that
-    # article would otherwise churn it for this one term).
-    ("介面連線", "介面連接"),  # 连接 = "connected by" (not 連線 "online link")
-    ("介面與實現", "介面與實作"),  # 实现 = implementation; Taiwan says 實作, not 實現 "to realize"
-    ("沒有隻向", "沒有只向"),  # 只 = "only", not the classifier 隻 (OpenCC s2twp mispicks)
-    ("還是隻看到", "還是只看到"),  # 只 = "only" (還是只看到了一部分), not the classifier 隻
-    # 261011-baochai (《红楼梦》引文，甲戌 / 庚辰 / 程甲本): meaning-level miscodings
-    ("曬幹", "曬乾"),  # 干 = dry (晒干), not 幹 "to do"
-    ("餘則深知", "余則深知"),  # 余 = "I" in 脂批 (余则深知), not 餘 "remaining"
-    ("餘閱", "余閱"),  # 余 = "I" (余阅送花一回)
-    ("薛姨媽雲", "薛姨媽云"),  # 云 = "says" (薛姨妈云…), not 雲 "cloud"
-    ("麵皮", "面皮"),  # 面 = face (面皮嘴唇烧的紫绛皱裂), not 麵 "noodles"
+    ("嵇喜來吊", "嵇喜來弔"),
+    ("注莊", "註莊"),
+    ("舊注", "舊註"),
+    ("未注完", "未註完"),
+    ("注《莊子》", "註《莊子》"),
+    ("作者自雲", "作者自云"),
+    ("幹血之症", "乾血之症"),
+    ("亂鬨鬨", "亂哄哄"),
+    ("揹著", "背著"),
+    ("都雲作者痴", "都云作者痴"),
+    ("又自雲", "又自云"),
+    ("若雲必因", "若云必因"),
+    ("空雲似桂如蘭", "空云似桂如蘭"),
+    ("哭幹了眼淚", "哭乾了眼淚"),
+    ("曬幹研末", "曬乾研末"),
+    ("生髮出", "生發出"),
+    ("掛珠釵", "挂珠釵"),
+    ("裙邊繫著豆綠宮絛", "裙邊系著豆綠宮絛"),
+    ("片金裡大紅猩猩氈", "片金里大紅猩猩氈"),
+    ("他裡頭穿著", "他里頭穿著"),
+    ("裡面短短的一件水", "里面短短的一件水"),
+    ("腰裡緊緊束著", "腰里緊緊束著"),
+    ("並無避雪之衣", "并無避雪之衣"),
+    ("簪於鬢上", "簪于鬢上"),
+    ("拖在泥裡", "拖在泥里"),
+    ("花甕一甕", "花瓮一瓮"),
+    ("總捨不得吃", "總舍不得吃"),
+    ("高階織法", "高級織法"),
+    ("么四", "幺四"),
+    ("曬幹", "曬乾"),
+    ("制醋柴胡", "製醋柴胡"),
+    ("剋制", "克制"),
+    ("方里", "方裡"),
+    ("寫明瞭", "寫明了"),
+    ("醋制", "醋製"),
+    ("里加", "裡加"),  # ai-thoughts: 里 = "inside" (…里加), not the unit 里 after Latin text
+    ("幹淨", "乾淨"),  # ai-thoughts: 干 = dry/clean (干净), not 幹
+    ("可擴充套件性", "可擴充性"),  # ai-thoughts: 拡展性 → 擴充性; s2twp leaks 套件
+    ("介面連線", "介面連接"),  # ai-thoughts: 连接 = "connected by", not 連線
+    ("介面與實現", "介面與實作"),  # ai-thoughts: 实现 = implementation → 實作
+    ("沒有隻向", "沒有只向"),  # ai-thoughts: 只 = "only", not the classifier 隻
+    ("還是隻看到", "還是只看到"),  # ai-thoughts: 只 = "only" (還是只看到), not 隻
+    ("餘則深知", "余則深知"),
+    ("餘閱", "余閱"),
+    ("薛姨媽雲", "薛姨媽云"),
+    ("麵皮", "面皮"),
 ]
 
 # One-Simplified-to-many-Traditional forms where OpenCC can pick the wrong
@@ -136,8 +165,8 @@ def build(src: Path) -> tuple[str, str, Path, str]:
     src_text = read(src)
     twin = twin_path(src)
 
-    base = github_base(src)
     src_title = h1_title(src_text)
+    base = github_base(src)
     src_link = f"> 繁体版：[{src_title}]({base}{twin.name})"
     src_out = with_link(src_text, src_link)
 
@@ -160,7 +189,7 @@ def report_lint(warnings: list[str]) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("source", help="path to the <YYMMDD-slug>-zh-hans.md Simplified article")
+    ap.add_argument("source", help="path to the -zh-hans.md (or bare .md) Simplified article")
     ap.add_argument("--check", action="store_true", help="report drift; do not write")
     args = ap.parse_args()
 
