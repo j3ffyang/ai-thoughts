@@ -493,6 +493,14 @@ rows:
     desc_en: "How to port an existing Hermes Agent skill to OpenCode — copy the folder, rewrite frontmatter, fix paths, and test the router"
     desc_zh: "将现有 Hermes Agent 技能移植到 OpenCode——复制文件夹、重写 frontmatter、修正路径并测试路由器"
 
+  - section: cross
+    status: published
+    links:
+      - { label: "memory-md-budget", path: "docs/261101-memory-md.md", lang: en }
+      - { label: "memory-md-budget", path: "docs/261101-memory-md-zh-hans.md", lang: zh, label_zh: "MEMORY.md 是预算，不是文档" }
+    desc_en: "Why MEMORY.md is a budget of prompt space rather than a document — what Claude Code, OpenClaw, Codex and Hermes each cap at session start, who enforces it, how to assemble the slot in OpenCode, when not to build one, and why a memory file must never live in a repo that publishes; with a blueprint-style infographic"
+    desc_zh: "为什么 MEMORY.md 是一份提示词预算而不是文档——Claude Code、OpenClaw、Codex 与 Hermes 在会话开始时各自限制了什么、由谁执行、如何在 OpenCode 里自己搭出这个槽位、什么时候不该建，以及为什么记忆文件绝不能放在会公开发布的仓库里；附蓝图风格信息图"
+
   # ------------------------------------------------------------- VIII. drafts
   - section: drafts
     status: draft
