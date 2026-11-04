@@ -500,6 +500,20 @@ rows:
       - { label: "memory-md-budget", path: "docs/261101-memory-md-zh-hans.md", lang: zh, label_zh: "MEMORY.md 是预算，不是文档" }
     desc_en: "Why MEMORY.md is a budget of prompt space rather than a document — what Claude Code, OpenClaw, Codex and Hermes each cap at session start, who enforces it, how to assemble the slot in OpenCode, when not to build one, and why a memory file must never live in a repo that publishes; with a blueprint-style infographic"
     desc_zh: "为什么 MEMORY.md 是一份提示词预算而不是文档——Claude Code、OpenClaw、Codex 与 Hermes 在会话开始时各自限制了什么、由谁执行、如何在 OpenCode 里自己搭出这个槽位、什么时候不该建，以及为什么记忆文件绝不能放在会公开发布的仓库里；附蓝图风格信息图"
+  - section: cross
+    status: published
+    links:
+      - { label: "agent-not-model", path: "docs/261022-agent-not-model.md", lang: en }
+      - { label: "agent-not-model", path: "docs/261022-agent-not-model-zh-hans.md", lang: zh, label_zh: "智能体，而非模型" }
+    desc_en: "Why the model is the least interesting part of the stack — benchmarks as marketing, a twentieth-of-the-price comparison against GPT-5.2, the librarian who hands you five books or a cart of thirty, one turn of the agent loop, and the three files where instruction lives; with a hand-drawn infographic"
+    desc_zh: "为什么模型是整条技术栈里最不有趣的部分——把基准测试当作营销、与 GPT-5.2 相差二十分之一的价格对比、图书管理员递给你五本书还是一车三十本、智能体循环的一轮，以及指令所栖身的三个文件；附手绘风格信息图"
+  - section: cross
+    status: published
+    links:
+      - { label: "what-i-tell-my-team-about-ai", path: "docs/261104-what-i-tell-my-team-about-ai.md", lang: en }
+      - { label: "what-i-tell-my-team-about-ai", path: "docs/261104-what-i-tell-my-team-about-ai-zh-hans.md", lang: zh, label_zh: "我告诉团队关于 AI 的那些话" }
+    desc_en: "The rules I give my team about using AI: the licence is not the problem, explainability is — nothing ships that you cannot explain, stay in control of the harness, write small before large, and keep your own SKILL.md with its three failure modes; with a hand-drawn infographic"
+    desc_zh: "我给团队的 AI 使用规则：许可不是问题，可解释性才是——解释不清的东西不能交付、掌控运行框架、先小后大，以及为自己留一份 SKILL.md 并警惕它的三种失效；附手绘风格信息图"
 
   # ------------------------------------------------------------- VIII. drafts
   - section: drafts

@@ -31,7 +31,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 
 | Platform | Repo | Purpose | Latest | Status |
 |----------|------|---------|--------|--------|
-| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`asd-ste100`](https://clawhub.ai/j3ffyang/skills/asd-ste100) — ASD-STE100 rules for agent instructions, with a linter (`--stats`, `--check`). Auto-published to ClawHub on every push to `j3ffyang`. | `docs: add MEMORY.md budget article` (Nov 2026) | 🔄 Active |
+| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`asd-ste100`](https://clawhub.ai/j3ffyang/skills/asd-ste100) — ASD-STE100 rules for agent instructions, with a linter (`--stats`, `--check`). Auto-published to ClawHub on every push to `j3ffyang`. | `docs: add team-ai-rules article` (Nov 2026) | 🔄 Active |
 | **Hermes** ⚕ | **[hermes-custom-skills](https://github.com/negtivspace/hermes-custom-skills)** | Specialized skills for [Hermes Agent](https://hermes.ai) — autonomous workflows, content generation, task orchestration. | `docs: add README and CONTRIBUTING` (Apr 2026) | 🔄 Active |
 | **OpenClaw** 🦞 | **[openclaw-custom-skills](https://github.com/negtivspace/openclaw-custom-skills)** | Production skills for [OpenClaw](https://openclaw.ai) published to ClawHub. Multilingual blog publishing, media generation. | `add chinese edition` (Apr 2026) | 🔄 Active |
 | **Claude Code** | **[claude-custom-skills](https://github.com/negtivspace/claude-custom-skills)** | Automation skills for [Claude Code](https://claude.ai) — productivity hacks, data export, content workflows. | `add i18n support to README` (Apr 2026) | ✨ Stable |
@@ -41,7 +41,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 
 | Repo | Purpose | Articles |
 |------|---------|----------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 52 articles |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 54 articles |
 
 ### Tools & Extensions
 
@@ -56,6 +56,8 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
+- **Nov 4:** Published "The Agent, Not the Model" — English plus Simplified and Traditional Chinese twins, a hand-drawn infographic and a 5:2 banner; the model priced at a twentieth of GPT-5.2's output cost, the librarian who hands you five books or a cart of thirty, one turn of the agent loop, and the three files where instruction lives
+- **Nov 4:** Published "What I Tell My Team About AI" — English plus Simplified and Traditional twins, a hand-drawn infographic and a 5:2 banner; permission was never the issue, explainability is, and nothing ships without it
 - **Nov 2:** Published "MEMORY.md Is a Budget, Not a Document" — English plus Simplified and Traditional Chinese twins, a 16:9 blueprint infographic, and synced to the Astro blog as a featured post; the four harnesses' session-start caps, who enforces them, when not to build one at all, and why a memory file must never sit in a repo that publishes
 - **Nov 2:** Rewrote the blog's featured-post rules after they misfired — demotion now ranks by reader response instead of genre, the agent only proposes and the human picks, and the cap became `min(20%, 16)`; also fixed the missing `culture` category and banned Chinese posts from the front door
 - **Nov 2:** Rotated two posts off the blog front door ("Unknown Unknowns", "Agent Session Persistence in OpenCode") to hold the featured block at 12
@@ -304,7 +306,7 @@ if args.check:
 ## 🔗 Quick Links
 
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
-- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 52 articles on AI, privacy, and entrepreneurship
+- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 54 articles on AI, privacy, and entrepreneurship
 - **Gists & Experiments:** [Personal gists](https://gist.github.com/j3ffyang)
 
 ---
@@ -313,14 +315,14 @@ if args.check:
 
 From `ai-thoughts` (most recent published articles):
 
-1. **"MEMORY.md Is a Budget, Not a Document"** (Nov 2026) — Why MEMORY.md is a budget of prompt space rather than a document — what Claude Code, OpenClaw, Codex and Hermes each cap at session start, who enforces it, how to assemble the slot in OpenCode, when not to build one, and why a memory file must never live in a repo that publishes; with a blueprint-style infographic
-2. **"Health Records an Agent Can Audit"** (Oct 2026) — A two-layer skill for AI-assisted review of personal and family medical records: append-only data, conflict protocol, change gate, evidence grading — and the honest list of what it still cannot do
-3. **"The Rules, Not the Words: ASD-STE100 for Agent Instructions"** (Oct 2026) — ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed before-and-after measurement of two rule files, and a skill that applies the rules without flattening essay voice; with a visual summary infographic
-4. **"Replace Cursor with a Minimal VSCodium AppImage"** (Oct 2026) — Replacing Cursor with a VSCodium AppImage and three Open VSX extensions — git status tags in the file tree, Vim keys, Mermaid in the built-in preview and local PlantUML; why Cursor's forced agent and backend routing are the real problem, what telemetry surface remains, the settings that make the editor inert, and an honest 795 MiB Electron footprint with a one-step uninstall; with a visual summary infographic
-5. **"Where Does Brave's Leo AI Keep Your Data?"** (Oct 2026) — Inside Brave Leo's local store — the single AIChat SQLite database, its schema for conversations/pages/search sources, why its at-rest OSCrypt encryption falls back to a hardcoded key without a keyring, what that structured local data could be used for, and why harvesting it team-wide is not worth it
-6. **"Unix Is Art"** (Oct 2026) — A personal essay on the Unix philosophy as an aesthetic — its history from 1974 to 2004 (Thompson and Ritchie, McIlroy, Kernighan and Pike, Raymond), the ideas behind it and the critics of it, a remembrance of Dennis Ritchie, and what Unix made me
+1. **"What I Tell My Team About AI"** (Nov 2026) — The rules I give my team about using AI: the licence is not the problem, explainability is — nothing ships that you cannot explain, stay in control of the harness, write small before large, and keep your own SKILL.md with its three failure modes; with a hand-drawn infographic
+2. **"MEMORY.md Is a Budget, Not a Document"** (Nov 2026) — Why MEMORY.md is a budget of prompt space rather than a document — what Claude Code, OpenClaw, Codex and Hermes each cap at session start, who enforces it, how to assemble the slot in OpenCode, when not to build one, and why a memory file must never live in a repo that publishes; with a blueprint-style infographic
+3. **"The Agent, Not the Model"** (Oct 2026) — Why the model is the least interesting part of the stack — benchmarks as marketing, a twentieth-of-the-price comparison against GPT-5.2, the librarian who hands you five books or a cart of thirty, one turn of the agent loop, and the three files where instruction lives; with a hand-drawn infographic
+4. **"Health Records an Agent Can Audit"** (Oct 2026) — A two-layer skill for AI-assisted review of personal and family medical records: append-only data, conflict protocol, change gate, evidence grading — and the honest list of what it still cannot do
+5. **"The Rules, Not the Words: ASD-STE100 for Agent Instructions"** (Oct 2026) — ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed before-and-after measurement of two rule files, and a skill that applies the rules without flattening essay voice; with a visual summary infographic
+6. **"Replace Cursor with a Minimal VSCodium AppImage"** (Oct 2026) — Replacing Cursor with a VSCodium AppImage and three Open VSX extensions — git status tags in the file tree, Vim keys, Mermaid in the built-in preview and local PlantUML; why Cursor's forced agent and backend routing are the real problem, what telemetry surface remains, the settings that make the editor inert, and an honest 795 MiB Electron footprint with a one-step uninstall; with a visual summary infographic
 
-👉 See all 52 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
+👉 See all 54 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
 
 ---
 
@@ -346,7 +348,7 @@ npm run build  # or load the extension manually in Chrome
 ```bash
 git clone https://github.com/negtivspace/ai-thoughts
 cd docs
-# 52 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
+# 54 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
 ```
 
 ---
@@ -357,4 +359,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** November 2, 2026 | Tracking: 6 active repos, 52 published articles, 20+ published skills
+**Last Updated:** November 4, 2026 | Tracking: 6 active repos, 54 published articles, 20+ published skills

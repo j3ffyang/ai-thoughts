@@ -31,7 +31,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 
 | Platform | Repo | Purpose | Latest | Status |
 |----------|------|---------|--------|--------|
-| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`asd-ste100`](https://clawhub.ai/j3ffyang/skills/asd-ste100) — ASD-STE100 rules for agent instructions, with a linter (`--stats`, `--check`). Auto-published to ClawHub on every push to `j3ffyang`. | `docs: add MEMORY.md budget article` (Nov 2026) | 🔄 Active |
+| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`asd-ste100`](https://clawhub.ai/j3ffyang/skills/asd-ste100) — ASD-STE100 rules for agent instructions, with a linter (`--stats`, `--check`). Auto-published to ClawHub on every push to `j3ffyang`. | `docs: add team-ai-rules article` (Nov 2026) | 🔄 Active |
 | **Hermes** ⚕ | **[hermes-custom-skills](https://github.com/negtivspace/hermes-custom-skills)** | Specialized skills for [Hermes Agent](https://hermes.ai) — autonomous workflows, content generation, task orchestration. | `docs: add README and CONTRIBUTING` (Apr 2026) | 🔄 Active |
 | **OpenClaw** 🦞 | **[openclaw-custom-skills](https://github.com/negtivspace/openclaw-custom-skills)** | Production skills for [OpenClaw](https://openclaw.ai) published to ClawHub. Multilingual blog publishing, media generation. | `add chinese edition` (Apr 2026) | 🔄 Active |
 | **Claude Code** | **[claude-custom-skills](https://github.com/negtivspace/claude-custom-skills)** | Automation skills for [Claude Code](https://claude.ai) — productivity hacks, data export, content workflows. | `add i18n support to README` (Apr 2026) | ✨ Stable |
@@ -56,6 +56,8 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
+- **Nov 4:** Published "The Agent, Not the Model" — English plus Simplified and Traditional Chinese twins, a hand-drawn infographic and a 5:2 banner; the model priced at a twentieth of GPT-5.2's output cost, the librarian who hands you five books or a cart of thirty, one turn of the agent loop, and the three files where instruction lives
+- **Nov 4:** Published "What I Tell My Team About AI" — English plus Simplified and Traditional twins, a hand-drawn infographic and a 5:2 banner; permission was never the issue, explainability is, and nothing ships without it
 - **Nov 2:** Published "MEMORY.md Is a Budget, Not a Document" — English plus Simplified and Traditional Chinese twins, a 16:9 blueprint infographic, and synced to the Astro blog as a featured post; the four harnesses' session-start caps, who enforces them, when not to build one at all, and why a memory file must never sit in a repo that publishes
 - **Nov 2:** Rewrote the blog's featured-post rules after they misfired — demotion now ranks by reader response instead of genre, the agent only proposes and the human picks, and the cap became `min(20%, 16)`; also fixed the missing `culture` category and banned Chinese posts from the front door
 - **Nov 2:** Rotated two posts off the blog front door ("Unknown Unknowns", "Agent Session Persistence in OpenCode") to hold the featured block at 12

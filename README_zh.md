@@ -16,7 +16,9 @@
 
 | 文章 | 简介 |
 |---|---|
+| [what-i-tell-my-team-about-ai](docs/261104-what-i-tell-my-team-about-ai.md) · [我告诉团队关于 AI 的那些话](docs/261104-what-i-tell-my-team-about-ai-zh-hans.md) | 我给团队的 AI 使用规则：许可不是问题，可解释性才是——解释不清的东西不能交付、掌控运行框架、先小后大，以及为自己留一份 SKILL.md 并警惕它的三种失效；附手绘风格信息图 |
 | [memory-md-budget](docs/261101-memory-md.md) · [MEMORY.md 是预算，不是文档](docs/261101-memory-md-zh-hans.md) | 为什么 MEMORY.md 是一份提示词预算而不是文档——Claude Code、OpenClaw、Codex 与 Hermes 在会话开始时各自限制了什么、由谁执行、如何在 OpenCode 里自己搭出这个槽位、什么时候不该建，以及为什么记忆文件绝不能放在会公开发布的仓库里；附蓝图风格信息图 |
+| [agent-not-model](docs/261022-agent-not-model.md) · [智能体，而非模型](docs/261022-agent-not-model-zh-hans.md) | 为什么模型是整条技术栈里最不有趣的部分——把基准测试当作营销、与 GPT-5.2 相差二十分之一的价格对比、图书管理员递给你五本书还是一车三十本、智能体循环的一轮，以及指令所栖身的三个文件；附手绘风格信息图 |
 | [ste100-agent-instructions](docs/261019-ste100-agent-instructions.md) · [ASD-STE100：规则，而非词语](docs/261019-ste100-agent-instructions-zh-hans.md) | 面向智能体指令的 ASD-STE100 简化技术英语——标准的历史与规则、三个实例、对两份规则文件所做的 linter 前后测量，以及一个不把散文语感压平的技能；附视觉总结信息图 |
 | [brave-leo-local-data](docs/261013-brave-leo-local-data.md) · [Brave 的 Leo AI 把你的数据存放在哪里？](docs/261013-brave-leo-local-data-zh-hans.md) | 深入 Brave Leo 的本地存储——AIChat 这一个 SQLite 数据库、存放对话/页面/搜索来源的数据表、静止加密为何在缺少密钥环时退回硬编码密钥、这份结构化的本地数据还能拿做什么，以及为什么把它在团队范围内收割并不值得 |
 | [what-to-know-work-with-ai](docs/260922-what-to-know-work-with-ai.md) · [与 AI 智能体高效协作，你应该懂些什么？](docs/260922-what-to-know-work-with-ai-zh-hans.md) | 与 AI 智能体高效协作真正需要知道什么——把期望说清是用户的责任；有用的技能（Markdown、技能、Python、YAML/GitHub Actions、Git、Linux、AGENTS.md/SKILL.md）；为何“补丁摞补丁”的智能体代码会变得无法维护；以及绝不单独交出去的四件事 |
