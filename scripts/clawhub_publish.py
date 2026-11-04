@@ -13,10 +13,6 @@ five, so a successful async publish shows up as a false failure there.)
 Usage:
     python scripts/clawhub_publish.py            # publish all skills
     python scripts/clawhub_publish.py --dry-run  # preview without publishing
-
-A skill whose SKILL.md declares `version:` (top-level or under `metadata`) is
-published with that version passed as `--version`. Bump it whenever you change a
-versioned skill; unversioned skills keep the CLI's automatic patch bump.
 """
 
 from __future__ import annotations
@@ -24,7 +20,6 @@ from __future__ import annotations
 import argparse
 import json
 import os
-import re
 import subprocess
 import sys
 from pathlib import Path
@@ -44,26 +39,6 @@ OK_STATUSES = {"unchanged", "would-publish", "submitted", "published", "pending-
 KNOWN_PENDING = {
     "medical-record-review": "awaiting moderator review; 1.0.0 reserved, not yet public",
 }
-
-# The CLI ignores any version declared in SKILL.md: it uses `--version` when given,
-# otherwise it patch-bumps whatever the registry reports as latest. That auto-bump
-# collides ("Version X already exists") whenever a published version is not yet the
-# registry's latest, so a declared version is passed through explicitly instead.
-FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.S)
-VERSION_RE = re.compile(r"^(?: {0,4})version:[ \t]*[\"']?([0-9]+\.[0-9]+\.[0-9]+)", re.M)
-
-
-def declared_version(skill_dir: Path) -> str | None:
-    """Return the semver declared in SKILL.md frontmatter, top-level or under metadata."""
-    try:
-        text = (skill_dir / "SKILL.md").read_text(encoding="utf-8")
-    except OSError:
-        return None
-    frontmatter = FRONTMATTER_RE.match(text)
-    if not frontmatter:
-        return None
-    found = VERSION_RE.search(frontmatter.group(1))
-    return found.group(1) if found else None
 
 
 def main() -> int:
@@ -107,9 +82,6 @@ def main() -> int:
             "--source-ref", source_ref,
             "--source-path", rel,
         ]
-        version = declared_version(target)
-        if version:
-            cmd += ["--version", version]
         if args.dry_run:
             cmd.append("--dry-run")
         completed = subprocess.run(cmd, cwd=workspace, capture_output=True, text=True)
