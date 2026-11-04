@@ -11,15 +11,15 @@ metadata:
 
 # Infographic Generator
 
-Adapted from [baoyu-infographic](https://github.com/JimLiu/baoyu-skills) v1.56.1 (ported via Hermes Agent) for opencode, then customized by j3ffyang to comply with the opencode standard and this repo's `imgs/` convention. Image generation uses OpenRouter image models through the bundled `scripts/generate_image.py`, which requires `OPENROUTER_API_KEY` in the environment.
+Adapted from [baoyu-infographic](https://github.com/JimLiu/baoyu-skills) v1.56.1 (ported via Hermes Agent) for opencode, then customized by j3ffyang to comply with the opencode standard and this repo's `imgs/` convention. Image generation uses OpenRouter image models through the bundled `scripts/generate_image.py`; the key requirement and its fallback are in Pitfall 6.
 
-Two dimensions: **layout** (information structure) × **style** (visual aesthetics). Freely combine any layout with any style.
+Two dimensions: **layout** (information structure) × **style** (visual aesthetics). Freely combine any layout with any style — but never mix two styles in one image (Pitfall 4).
 
 ## When to Use
 
 Trigger this skill when the user asks to create an infographic, visual summary, information graphic, or uses terms like "信息图", "可视化", or "高密度信息大图". The user provides content (text, file path, URL, or topic) and optionally specifies layout, style, aspect ratio, or language.
 
-*Note*: Image generation needs `OPENROUTER_API_KEY` set and an image-capable model (default `google/gemini-3.1-flash-image`). If the key is missing or the call fails, still produce `analysis.md`, `structured-content.md`, and `prompts/infographic.md` for external use — see `references/workflow-example.md`.
+*Note*: Image generation needs `OPENROUTER_API_KEY` set and an image-capable model (default `google/gemini-3.1-flash-image`). If the key is missing or the call fails, still produce `analysis.md`, `structured-content.md`, and `prompts/infographic.md` for external use — see Pitfall 6 and `references/workflow-example.md`.
 
 ## Options
 
@@ -27,7 +27,7 @@ Trigger this skill when the user asks to create an infographic, visual summary, 
 |--------|--------|
 | Layout | 21 options (see Layout Gallery), default: bento-grid |
 | Style | 21 options (see Style Gallery), default: craft-handmade |
-| Aspect | Named: landscape (16:9), portrait (9:16), square (1:1). Custom: any W:H ratio (e.g., 3:4, 4:3, 2.35:1) |
+| Aspect | Named: landscape (16:9), portrait (9:16), square (1:1). Custom: any W:H ratio (e.g. `3:4`, `4:3`) — one the model cannot take as-is is mapped to the nearest supported preset (Step 5) |
 | Language | en, zh, ja, etc. |
 
 ## Layout Gallery
@@ -125,7 +125,7 @@ If a shortcut has **Prompt Notes**, append them to the generated prompt (Step 5)
 
 ```
 infographic/{topic-slug}/
-├── source-{slug}.{ext}
+├── source.md
 ├── analysis.md
 ├── structured-content.md
 └── prompts/infographic.md
@@ -135,7 +135,7 @@ final image → imgs/<YYMMDD>-<slug>.png
 
 Working files live in `infographic/{topic-slug}/`; the final image always lands in `imgs/` following this repo's `YYMMDD-slug` filename convention (see `ai-thoughts/AGENTS.md`).
 
-- `{topic-slug}`: 2-4 words kebab-case from topic. Conflict: append `-YYYYMMDD-HHMMSS`.
+- `{topic-slug}`: 2-4 words kebab-case from the topic. If that folder already exists, append `-YYYYMMDD-HHMMSS`.
 - Final image name: `imgs/<YYMMDD>-<slug>.png` where `<slug>` is a 2-4 word kebab-case name and `<YYMMDD>` is the current date — or, when the source is an ai-thoughts article, the article's own `YYMMDD` prefix so the image shares it.
 
 ## Core Principles
@@ -169,7 +169,7 @@ Transform content into infographic structure:
 3. Data points (all statistics/quotes copied exactly)
 4. Design instructions from user
 
-**Rules**: Markdown only. No new information. Preserve data faithfully. Strip any credentials or secrets from output.
+**Rules**: Markdown only; no new information. Data fidelity and secret-stripping are governed by Core Principles and Pitfalls 1–2.
 
 See `references/structured-content-template.md` for detailed format.
 
@@ -185,13 +185,13 @@ See `references/structured-content-template.md` for detailed format.
 
 ### Step 4: Confirm Options
 
-Use the `question` tool to confirm options with the user. Ask all three questions in one call:
+Use the `question` tool to confirm options with the user. Ask all three in one call when they apply — skip Q3 when the source language already matches the user's:
 
-**Q1 — Combination**: Present 3+ layout×style combos with rationale. Ask user to pick one.
+**Q1 — Combination**: Present the 3–5 layout×style combos from Step 3 with their rationale. Ask the user to pick one.
 
 **Q2 — Aspect**: Ask for aspect ratio preference (landscape/portrait/square or custom W:H).
 
-**Q3 — Language** (only if source ≠ user language): Ask which language the text content should use.
+**Q3 — Language**: Ask which language the text content should use.
 
 If the user already specified all options, skip Step 4.
 
@@ -215,9 +215,9 @@ Combine:
    - For CJK (Chinese/Japanese/Korean) content the block must ALSO (a) name every rare or look-alike character explicitly with its forbidden substitutes (e.g. 菂 not 药、蔷 not 蓄、茄 not 茹、蕊 not 芯), and (b) state that every string and every card/element appears **exactly once**.
    - Never tell the model to "drop the least important label" without naming the protected lists — it will drop a required chip (this happened: `Markdown` vanished from a stack cell). Protect list cells explicitly instead.
 
-**Aspect ratio resolution** for `{{ASPECT_RATIO}}`:
+**Aspect ratio resolution** for `{{ASPECT_RATIO}}` — the single place this is decided:
 - Named presets → ratio string: landscape→`16:9`, portrait→`9:16`, square→`1:1`
-- Custom W:H ratios → use as-is (e.g., `3:4`, `4:3`, `2.35:1`)
+- A custom W:H ratio passes as-is only if the selected model accepts it (Gemini: `16:9`, `9:16`, `1:1`, `3:4`, `4:3`, `21:9`, `1:4`, `4:1`, `1:8`, `8:1`); otherwise resolve it to the nearest accepted ratio and say so in the report
 
 Save the assembled prompt to `prompts/infographic.md` using `write`.
 
@@ -230,7 +230,7 @@ python .opencode/skills/custom-infographic/scripts/check_prompt_text.py \
   infographic/{topic-slug}/prompts/infographic.md
 ```
 
-It fails (exit 1) when any backticked string appears more than once, when a second label enumeration is present, or — with `--strings <file>` — when an expected string is missing. **Do not generate on failure; fix the prompt and re-run the check.** Strings enumerated twice in the prompt are the leading cause of duplicated text in the image.
+It fails (exit 1) when any backticked string appears more than once, when a second label enumeration is present, or — with `--strings <file>` — when an expected string is missing. **Do not generate on failure; fix the prompt and re-run the check.**
 
 Run the bundled generator with the prompt from Step 5, writing the final image directly to `imgs/` with the repo-convention filename:
 
@@ -242,9 +242,9 @@ python .opencode/skills/custom-infographic/scripts/generate_image.py \
 ```
 
 - The final image goes to `imgs/<YYMMDD>-<slug>.png` (repo convention, see Output Structure) — never to `infographic/{topic-slug}/`.
-- Map aspect ratio to the `--aspect` value: landscape→`16:9`, portrait→`9:16`, square→`1:1`, custom ratios passed as-is (Gemini supports `3:4`, `4:3`, `21:9`, `1:4`, `4:1`, `1:8`, `8:1`; map anything else to the nearest named preset)
-- Requires `OPENROUTER_API_KEY` to be set; the default model is `google/gemini-3.1-flash-image`, override with `--model`
-- On failure, auto-retry once, then report the error to the user
+- `--aspect` takes the value resolved in Step 5 — do not re-derive it here.
+- The default model is `google/gemini-3.1-flash-image`; override with `--model`. The key requirement and its fallback are in Pitfall 6.
+- If the call fails, retry once yourself, then report the error to the user.
 - **Backup rule**: If the target `imgs/<YYMMDD>-<slug>.png` already exists, rename it to `imgs/<YYMMDD>-<slug>-backup-YYYYMMDD-HHMMSS.png` before writing. Never overwrite silently.
 
 ### Step 7: Output Summary
@@ -268,11 +268,12 @@ Report: topic, layout, style, aspect, language, output path (`imgs/<YYMMDD>-<slu
 2. **Strip secrets** — always scan source content for API keys, tokens, or credentials before including in any output file.
 3. **One message per section** — each infographic section should convey one clear concept. Overloading sections reduces readability.
 4. **Style consistency** — the style definition from the references file must be applied consistently across the entire infographic. Don't mix styles.
-5. **Aspect ratio support** — `image_config` aspect ratios are limited to what the selected model supports (Gemini: `16:9`, `9:16`, `1:1`, `3:4`, `4:3`, `21:9`, plus extended `1:4`, `4:1`, `1:8`, `8:1`); map custom ratios outside that set to the nearest named preset.
+5. **Aspect ratio support** — models accept only certain ratios, so an unsupported custom ratio is resolved to the nearest accepted one at Step 5. The generation call does not re-map it.
 6. **API availability** — generation fails without `OPENROUTER_API_KEY` or when the model cannot output images. Verify the key is set before starting; if generation is impossible, deliver the prompt-only outputs (`analysis.md`, `structured-content.md`, `prompts/infographic.md`) and tell the user.
-7. **Text accuracy in image generation** — AI image models frequently garble, misspell, or double text. Every prompt MUST include an explicit "CRITICAL: Text Accuracy" block that (a) lists every exact text string the image must render, (b) spells out common pitfalls to avoid (doubled words, garbled section titles, similar-looking words), and (c) instructs the model to prioritize text accuracy over visual density — shrink the number of labels rather than shrinking font size or misspelling words. After generation, verify all text with a vision model (e.g. `opencode run` with `--model openrouter/z-ai/glm-4.6v --file`) against the expected text list before delivering to the user.
+7. **Verify the render, not just the prompt** — the Text Accuracy block defined in Step 5 is mandatory. After generation, check every rendered string against that list with a vision model (e.g. `opencode run --model openrouter/z-ai/glm-4.6v --file`). Garbled, misspelled, dropped or doubled text means the image is not deliverable — fix the prompt and re-render.
 8. **Chinese/CJK glyphs must be verified strictly, glyph by glyph** — treat CJK rendering as a hard gate, not a nice-to-have. After generation, compare every rendered glyph against the expected text list, character by character, using a vision model or by reading the image directly. Watch especially for: rare characters replaced by a common look-alike (菂→药、蔷→蓄、茄→茹), Simplified/Traditional swaps, dropped or doubled characters, and wrong-but-plausible variants. If any glyph is not exactly correct, the image is NOT deliverable as-is — stop and **discuss with the user**, offering: (a) accept the substitution only if it is a documented, acceptable variant, (b) re-render with a different image model, or (c) drop/rephrase the offending label. Never silently ship a mis-rendered name or character.
 9. **No duplicated data anywhere — text or image** — the final image must not repeat any text string (names, labels, sentences, the title, an arc line) or duplicate any imagery (echoed illustrations, cloned cells). **Prevent it at the prompt, not at the image:** duplication is caused upstream, when the same string is enumerated twice (a text-accuracy block *plus* a trailing label dump) or repeated in the layout/style guidance. Keep exactly one enumeration (Step 5) and gate generation with `scripts/check_prompt_text.py` (Step 6) — it fails the run before any cost is incurred. Then verify after generation (Pitfalls #7, #8): scan for duplicated cells, a title/arc rendered twice, names listed twice, and mirrored/echoed illustrations. If duplicates appear, regenerate or simplify the layout — never deliver with duplicated content.
+10. **Describe cells by geometry, never by content** — the layout section may say *where* a cell sits and *what shape* fills it; it must not say what the picture depicts. A sentence like "a neat stack of five books beside a cart of thirty" is read as content and drawn wherever it fits, often twice — the string gate passes because no string repeated, but the illustration does. Put meaning in the abstract closing paragraph only, and keep the layout section positional: "middle-right card, two halves, left calm, right piled." Observed 2026-11-04 on the `261022-agent-not-model` sheet: two renders duplicated the comparison and the loop card until the layout prose was reduced to pure geometry.
 
 ## Credits
 
