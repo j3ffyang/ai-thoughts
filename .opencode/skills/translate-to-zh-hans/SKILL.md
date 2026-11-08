@@ -45,7 +45,7 @@ Translate one article from `ai-thoughts/docs/` into Simplified Chinese and write
    - Technical terms, commands, flags, config and file names (`AGENTS.md`, `SOUL.md`, `.cursorrules`, `hermes -c`), environment variables, URLs.
    - Code blocks, inline code, CLI keystrokes (`Ctrl+C`, `Alt+Enter`).
    - Existing proper nouns already in Latin script. Only translate the surrounding prose; never translate inside code.
-7. **Preserve everything else exactly**: `../imgs/<file>` image references (keep the path verbatim — Chinese files mirror English per AGENTS.md), links, HTML, tables, frontmatter (if any), and Markdown structure.
+7. **Preserve everything else exactly**: `../imgs/<file>` image references (keep the path verbatim — Chinese files mirror English per AGENTS.md), links, HTML, tables, frontmatter (if any), and Markdown structure. Article cross-links are the exception to "preserve links": rewrite a relative `261108-….md` link to its absolute `j3ffyang` URL, the same rule as the source line.
 8. **Write the output** to `docs/<same-filename>-zh-hans.md` with the source link line followed by the translated body.
 9. **Arch sign-off**: if the source ends with `btw, i use arch`, append the identical line at the bottom of the `-zh-hans.md`. Keep it verbatim English — do not translate.
 10. **Report** `outputPath` to the user. Do not modify the source file, and do not touch `articles.yaml` or the READMEs (out of scope for this skill).
@@ -66,6 +66,7 @@ The verbatim exceptions from Procedure step 6 still apply: code, commands, produ
 - **Avoid hallucination.** If a word, reference, or term is unclear, do not guess — ask the user or flag it in the report. Never invent translations, names, dates, or content that is not in the source.
 - **Ask if anything is unclear** — about the article, an ambiguous phrase, an unknown acronym, or the intended output. Clarify rather than assume.
 - Translate meaning faithfully and naturally in Simplified Chinese; do not perform a word-for-word substitution.
+- **Idioms are not word-for-word.** "What this posture does not buy" became 买不到, which reads as a purchase; the sentence means 做不到. Translate the sense, then read it back against the English before accepting it.
 
 ## Verification
 

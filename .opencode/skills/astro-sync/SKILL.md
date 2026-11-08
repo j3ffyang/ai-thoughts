@@ -24,6 +24,7 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
 - Posts live in `src/data/blog/<category>/` — categories: `tech`, `travel`, `photo`, `philosophy`, `culture`. **Not** `src/content/`.
 - Filenames: `yymmdd-lowercase-slug.md` — 6-digit date prefix, lowercase, hyphens only. No underscores, camelCase, or 10-digit timestamps.
 - URLs derive from the filename; never hardcode `/posts/...` links.
+- **Cross-links to other articles use absolute GitHub URLs on `j3ffyang`.** A relative link such as `261108-hermes-guest-hardening.md` is resolved by the browser against the post URL, producing `/posts/<category>/<slug>/261108-hermes-guest-hardening.md` — a path the build never creates, because `dist` holds `<slug>/index.html` and zero `.md` files. Publishing the target does not fix it; the path itself is wrong. Write `https://github.com/j3ffyang/ai-thoughts/blob/main/docs/<file>` instead.
 - Frontmatter follows the AstroPaper schema (see below).
 - Images live in `src/assets/images/`, referenced by literal relative path `../../../assets/images/<file>` from a post in `src/data/blog/<category>/`.
 - Renaming a **published** post requires adding a redirect (old URL → new URL) to `postRedirects` in `astro.config.ts`.
@@ -88,6 +89,7 @@ Convert a polished Markdown draft into a ready-to-publish AstroPaper post in the
 - Every image reference in the post points to an existing file in `src/assets/images/` (verify with a glob/ls).
 - No `../imgs/` references remain in the post.
 - No hardcoded `/posts/...` links were introduced.
+- No relative cross-links to other articles remain: grep the post for `](` followed by a filename ending in `.md`. Every article link is an absolute `j3ffyang` URL.
 - If committed: the post and new images are staged together, and `origin/main` is up to date.
 - Optional but recommended: run `npx astro build` in the blog repo — it reproduces content-sync/YAML errors (which `astro check` can miss) and confirms the post renders into `dist/`. Use `npx` directly — `pnpm` is not installed on this machine and `pnpm run ...` fails with "command not found"; `npx` resolves the local `astro` binary fine.
 
