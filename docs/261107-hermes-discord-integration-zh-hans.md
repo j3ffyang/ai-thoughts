@@ -266,7 +266,7 @@ DISCORD_IGNORED_CHANNELS=987654321098765432   # optional hard deny
 
 ![五层：服务器、频道、应用、令牌、Agent](../imgs/261107-hermes-discord-private.png)
 
-这套姿态**买不到**什么，直说：
+这套配置**做不到**什么，直说：
 
 - Discord 不是端到端加密的。频道消息、附件和私信都躺在 Discord 的服务器上，而副本躺在 VPS 上的 `~/.hermes/state.db` 里。
 - 每个提示词 (prompt) 都会离开 VPS，去往模型提供方（这里是 OpenRouter 的免费档），并受那家提供方留存政策的约束。
