@@ -222,7 +222,7 @@ hermes gateway status
 
 一個上了允許名單的朋友，摸到的是這臺 VPS 上 Agent 的工具面 (tool surface)，不只是一個聊天視窗——把允許名單當成一個 shell 賬號來對待，它到底意味著什麼見下面的*保持私有*。
 
-**斜槓命令 (slash command) 是第二個面。** 沒配置管理員劃分 (admin split) 時，每個上了允許名單的使用者還會拿到整套斜槓命令——包括 `/learn`，它會把一個技能 (skill) 寫進 `~/.hermes/skills`，還有 `/save`、`/rollback` 和 `/update`。工具和命令是分開把關的：`platform_toolsets` 根本看不到斜槓命令。把 `allow_admin_from` 和 `group_allow_admin_from` 設成你的 ID，再給訪客一份很短的 `user_allowed_commands`。確切的配置塊——以及它為什麼該放在 `platforms.discord` 而不是 `gateway.platforms.discord`——在[加固指南](261108-hermes-guest-hardening.md)裡。
+**斜槓命令 (slash command) 是第二個面。** 沒配置管理員劃分 (admin split) 時，每個上了允許名單的使用者還會拿到整套斜槓命令——包括 `/learn`，它會把一個技能 (skill) 寫進 `~/.hermes/skills`，還有 `/save`、`/rollback` 和 `/update`。工具和命令是分開把關的：`platform_toolsets` 根本看不到斜槓命令。把 `allow_admin_from` 和 `group_allow_admin_from` 設成你的 ID，再給訪客一份很短的 `user_allowed_commands`。確切的配置塊——以及它為什麼該放在 `platforms.discord` 而不是 `gateway.platforms.discord`——在[加固指南](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261108-hermes-guest-hardening.md)裡。
 
 第一次邀請之前，把 **Community** 關掉——沒有發現 (discovery)，沒有虛榮連結 (vanity link)。訪問權來自你授予的角色。
 
@@ -270,7 +270,7 @@ DISCORD_IGNORED_CHANNELS=987654321098765432   # optional hard deny
 
 - Discord 不是端到端加密的。頻道訊息、附件和私信都躺在 Discord 的伺服器上，而副本躺在 VPS 上的 `~/.hermes/state.db` 裡。
 - 每個提示詞 (prompt) 都會離開 VPS，去往模型提供方（這裡是 OpenRouter 的免費檔），並受那家提供方留存政策的約束。
-- 把一個人加進允許名單，就是把這臺 VPS 上 Agent 的工具面交給他——終端、檔案、瀏覽器——**預設如此**。Discord 的隱私設定控制的是*誰能摸到機器人*；`platform_toolsets` 和 `approvals` 控制的是*它被摸到之後能做什麼*。[加固指南](261108-hermes-guest-hardening.md)是本文的後半篇：它把寫工具從 Discord 上拿掉，只留在 CLI 裡。
+- 把一個人加進允許名單，就是把這臺 VPS 上 Agent 的工具面交給他——終端、檔案、瀏覽器——**預設如此**。Discord 的隱私設定控制的是*誰能摸到機器人*；`platform_toolsets` 和 `approvals` 控制的是*它被摸到之後能做什麼*。[加固指南](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261108-hermes-guest-hardening.md)是本文的後半篇：它把寫工具從 Discord 上拿掉，只留在 CLI 裡。
 
 ## 機器人的行為
 
