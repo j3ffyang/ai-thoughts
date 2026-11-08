@@ -12,7 +12,24 @@ Custom OpenCode skills developed here auto-publish to [ClawHub](https://clawhub.
 
 ## Contents
 
-### I. Cross-Platform & Comparative
+### I. Hermes Agent ⚕
+
+| Article | Description |
+|---|---|
+| [hermes-discord-private](docs/261107-hermes-discord-integration.md) | Running a private Hermes Agent on a VPS wired to Discord — why Google Chat needs a Business Workspace account, an app only its owner can install, a private channel with role-granted visibility, the four gates that decide who reaches the bot, and the command surface that tools cannot gate; with a blueprint-style infographic |
+| [hermes-cleanup](docs/260731-hermes-cleanup.md) | List enabled skills, opt out of bundled skills, and revert anytime — debloat your agent |
+| [hermes-backup](docs/260528-hermes-backup.md) | Guide to backing up Hermes Agent data using the built-in CLI — full snapshots, quick backups, and restore procedures |
+| [hermes-perftips](docs/260518-hermes-perftips.md) | Hermes Agent Tips & Best Practices Summary |
+| [hermes-persona-soul](docs/260513-hermes-persona-soul.md) | Practical guide to configuring Hermes Agent's SOUL.md for personality customization |
+| [hermes-connect-models](docs/260506-hermes-connect-models.md) | Treasure hunt: Hermes Agent ⚕ Connects to Free Models |
+| [hermes-SOUL-annotated](docs/260505-hermes-soul.md) | Annotated takeaways from Tony Simons' viral 170-line SOUL.md post — why SOUL.md makes Hermes feel like a teammate |
+| [hermes-github](docs/260504-hermes-github.md) | Hermes Agent: 10 GitHub Repos to Stress-Test It |
+| [hermes-custom-skill-install](docs/260429-custom-skill-hermes.md) | Tested end-to-end workflow: install a custom Hermes SKILL.md from GitHub, with verified commands, examples, and a live installation walkthrough |
+| [hermes-update-err](docs/260423-hermes-update-err.md) | Debugging the Hermes TUI build failure caused by a malformed root package.json |
+| [hermes-connect-nvidiamodel-openrouter](docs/260421-hermes-connect-nvidiamodel-openrouter.md) | Guide to connecting Hermes to Nvidia Nemotron free model via OpenRouter, with primary and fallback model configuration |
+| [hermes-openrouter-elephant-alpha](docs/260414-hermes-elephant-alpha.md) | Practical guide to setting up Hermes with OpenRouter's free Elephant-Alpha model as an alternative to OpenClaw, including WhatsApp integration and multi-user configuration |
+
+### II. Cross-Platform & Comparative
 
 | Article | Description |
 |---|---|
@@ -35,7 +52,7 @@ Custom OpenCode skills developed here auto-publish to [ClawHub](https://clawhub.
 | [choose-between-opencode-and-claude-code](docs/260513-choose-cc-opencode.md) | Comparison of OpenCode vs Claude Code for running Claude Opus and other models |
 | [engageOpenClaw](docs/260420-engage-openclaw.md) | Reflections after 3 months with OpenClaw and Hermes: orchestrating multi-step AI tasks and per-section image generation workflows |
 
-### II. Personal Tech, Privacy & Gaming
+### III. Personal Tech, Privacy & Gaming
 
 | Article | Description |
 |---|---|
@@ -54,28 +71,12 @@ Custom OpenCode skills developed here auto-publish to [ClawHub](https://clawhub.
 | [immutable-os-strategy](docs/260622-immutable-os.md) | Personal strategy on "immutable" OS choices — why a quarter-century Linux power user sticks with native Arch Linux and Debian LTS over Bazzite/Silverblue |
 | [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | Beginner's guide to DCS World with a VKB Gladiator NXT EVO joystick and a no-numpad keyboard — game-mode flying, keybindings, and axis tuning |
 
-### III. History, Culture & Philosophy
+### IV. History, Culture & Philosophy
 
 | Article | Description |
 |---|---|
 | [terminal-is-an-art](docs/260811-terminal-is-an-art.md) | Almost 30 years on Unix/Linux distilled into why the command line is an art — simple, direct, honest, powerful, universal, and still growing as AI agents' natural interface |
 | [unknown-unknowns](docs/260722-unknown-unknowns2.md) | Personal essay on the four types of knowledge — known knowns, known unknowns, unknown knowns, and the unknown unknowns that shape our lives |
-
-### IV. Hermes Agent ⚕
-
-| Article | Description |
-|---|---|
-| [hermes-cleanup](docs/260731-hermes-cleanup.md) | List enabled skills, opt out of bundled skills, and revert anytime — debloat your agent |
-| [hermes-backup](docs/260528-hermes-backup.md) | Guide to backing up Hermes Agent data using the built-in CLI — full snapshots, quick backups, and restore procedures |
-| [hermes-perftips](docs/260518-hermes-perftips.md) | Hermes Agent Tips & Best Practices Summary |
-| [hermes-persona-soul](docs/260513-hermes-persona-soul.md) | Practical guide to configuring Hermes Agent's SOUL.md for personality customization |
-| [hermes-connect-models](docs/260506-hermes-connect-models.md) | Treasure hunt: Hermes Agent ⚕ Connects to Free Models |
-| [hermes-SOUL-annotated](docs/260505-hermes-soul.md) | Annotated takeaways from Tony Simons' viral 170-line SOUL.md post — why SOUL.md makes Hermes feel like a teammate |
-| [hermes-github](docs/260504-hermes-github.md) | Hermes Agent: 10 GitHub Repos to Stress-Test It |
-| [hermes-custom-skill-install](docs/260429-custom-skill-hermes.md) | Tested end-to-end workflow: install a custom Hermes SKILL.md from GitHub, with verified commands, examples, and a live installation walkthrough |
-| [hermes-update-err](docs/260423-hermes-update-err.md) | Debugging the Hermes TUI build failure caused by a malformed root package.json |
-| [hermes-connect-nvidiamodel-openrouter](docs/260421-hermes-connect-nvidiamodel-openrouter.md) | Guide to connecting Hermes to Nvidia Nemotron free model via OpenRouter, with primary and fallback model configuration |
-| [hermes-openrouter-elephant-alpha](docs/260414-hermes-elephant-alpha.md) | Practical guide to setting up Hermes with OpenRouter's free Elephant-Alpha model as an alternative to OpenClaw, including WhatsApp integration and multi-user configuration |
 
 ### V. Second Brain & Knowledge Management
 
@@ -109,6 +110,7 @@ Developed in this repo and auto-published to [ClawHub](https://clawhub.ai/j3ffya
 
 | Skill | Description |
 |---|---|
+| [custom-infographic](https://clawhub.ai/j3ffyang/skills/custom-infographic) | Generate a professional infographic from an article, document, URL, or topic, using the baoyu layout x style system (21 layouts x 21 styles). Original author 宝玉 (JimLiu); ported & customized by j3ffyang. Use when the user asks to create an infographic, 信息图, visual summary, 可视化, or a high-density information image, or wants an article turned into a visual poster. |
 | [simplified-to-traditional](https://clawhub.ai/j3ffyang/skills/simplified-to-traditional) | Convert a Simplified-Chinese article in ai-thoughts/docs/ into its Traditional-Chinese twin, and keep the two in sync. The Simplified article is the source of truth and lives as <YYMMDD-slug>-zh-hans.md; the Traditional twin is generated to <YYMMDD-slug>-zh-hant.md with OpenCC (s2twp) plus a permanent cross-link. Use when the user asks to make, sync, or update the Traditional (繁體) version of a Chinese article — "convert to traditional", "做繁體版", "同步繁简", "zh-hant", "繁體". Never runs automatically; acts only on an explicitly named article. Future articles only — do NOT backfill existing files unless the user explicitly orders it. |
 | [medical-record-review](https://clawhub.ai/j3ffyang/skills/medical-record-review) | Review personal or family health records (lab results, imaging, prescriptions, medication, symptom notes): compare every metric across the full history, draw time trends, report and track data conflicts, grade evidence, and highlight clinical risks. Generic layer — it contains no patient data. The project layer injects the profile and all paths. Triggers: health record, medical record, lab result, bloodtest, imaging, prescription, medication, symptom, trend, review, analysis, intake, index, registry, merge, rename, audit, 健康档案, 化验, 处方, 用药, 趋势, 复阅, 分析, 建档, 整理, 合并, 更名, 审计, 注册表. Never diagnose, never prescribe, never edit source data.  |
 | [unwrap-markdown](https://clawhub.ai/j3ffyang/skills/unwrap-markdown) | Unwrap hard-wrapped Markdown prose into one line per paragraph, while keeping code fences, tables, headings, setext headings, lists, blockquotes, hard line breaks, and YAML frontmatter intact. Use when a Markdown file was written with hard line breaks at a fixed width and needs to become one paragraph per line, when checking a folder of Markdown files for hard-wrapped prose (for CI), or when the user asks to unwrap, reflow, or un-hard-wrap Markdown. Handles CJK text without adding spaces between Chinese or Japanese characters. |
@@ -119,7 +121,6 @@ Developed in this repo and auto-published to [ClawHub](https://clawhub.ai/j3ffya
 | [rental-property-sell-or-hold](https://clawhub.ai/j3ffyang/skills/rental-property-sell-or-hold) | Review and analyze a personal sell-or-hold decision for rental property against a stock or fixed-income alternative. Use when the user asks whether to sell rental condos or houses and move the money into investments, when comparing rent yield with fixed income, when modeling a 3-year sell-or-hold scenario with break-even returns, or when checking a personal investment assessment document. Covers Canadian tax concepts (Capital Cost Allowance (CCA), terminal loss, principal residence, personal-use losses) where the owner is a Canadian resident. Triggers: sell or hold, rental yield, net yield, cash flow, break-even, condo, strata fee, property tax, CCA, fixed income, ETF, concentration, 售房, 持有, 租金收益率, 固定收益. |
 | [asd-ste100](https://clawhub.ai/j3ffyang/skills/asd-ste100) | Apply ASD-STE100 Simplified Technical English to written instructions: one action per sentence, imperative mood, condition first, one name per item, short sentences, no semicolons. Use before writing or when auditing prompts, AGENTS.md, SKILL.md, READMEs, runbooks, checklists, and the technical steps of an article. For articles, enforce structure only and keep the essay voice; never flatten narrative prose. Report contradictions between rule files instead of silently choosing one.  |
 | [arch-sign-off](https://clawhub.ai/j3ffyang/skills/arch-sign-off) | Append the Arch Linux sign-off line `btw, i use arch` to the very bottom of an article in ai-thoughts/docs/ (EN or ZH). This is a standing default for every article: apply it unless the user explicitly says not to. Use when writing or finishing any new article, or when the user asks to add it. |
-| [custom-infographic](https://clawhub.ai/j3ffyang/skills/custom-infographic) | Generate a professional infographic from an article, document, URL, or topic, using the baoyu layout x style system (21 layouts x 21 styles). Original author 宝玉 (JimLiu); ported & customized by j3ffyang. Use when the user asks to create an infographic, 信息图, visual summary, 可视化, or a high-density information image, or wants an article turned into a visual poster. |
 | [security-writeup-bad-effects](https://clawhub.ai/j3ffyang/skills/security-writeup-bad-effects) | Add a plain per-section "Bad effect:" statement to each section of a defensive security or incident-analysis write-up, naming the concrete harm and the failure mode. Use when reviewing or finishing a security/analysis article (e.g. a malware dissection) or when the user asks what the bad effect of a section is or wants each section annotated. |
 | [untrusted-code-safety](https://clawhub.ai/j3ffyang/skills/untrusted-code-safety) | Zero-trust procedure for reviewing or running code from an unknown source. Use when reviewing, vetting, cloning, installing, or running code from an untrusted source (repo invites, packages, scripts, executable config files), when asked whether code is safe or hazardous, when executed code may read secrets/files or reach the network, and when the user says "raise hands", "stop and alert", or "sandbox it". Also trigger on suspicion of malicious, harmful, deceptive, cheating, or stealing behavior. |
 | [rdr2-playthrough](https://clawhub.ai/j3ffyang/skills/rdr2-playthrough) | Use when maintaining RDR2 (Red Dead Redemption 2) playthrough notes — logging an acquisition ("acquired X", "got N gold bars", "finished X"), answering in-game location/crafting questions, or reviewing the notes for duplicate or stale info. Triggers on RDR2, Red Dead Redemption, playthrough, legendary animal, talisman, trinket, valerian root, gold bar, horse, weapon, berry. |

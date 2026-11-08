@@ -41,7 +41,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 
 | Repo | Purpose | Articles |
 |------|---------|----------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 54 articles |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 55 articles |
 
 ### Tools & Extensions
 
@@ -56,6 +56,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
+- **Nov 8:** Published "Running a Private ⚕ Hermes Agent on a VPS, Wired to Discord" — English plus Simplified and Traditional Chinese twins, a 16:9 blueprint infographic and a 5:2 banner; Google Chat needs a Business Workspace account before its API can even be enabled, the app installs only for its owner, the channel stays private, and four gates decide who reaches the bot
 - **Nov 4:** Published "The Agent, Not the Model" — English plus Simplified and Traditional Chinese twins, a hand-drawn infographic and a 5:2 banner; the model priced at a twentieth of GPT-5.2's output cost, the librarian who hands you five books or a cart of thirty, one turn of the agent loop, and the three files where instruction lives
 - **Nov 4:** Published "What I Tell My Team About AI" — English plus Simplified and Traditional twins, a hand-drawn infographic and a 5:2 banner; permission was never the issue, explainability is, and nothing ships without it
 - **Nov 2:** Published "MEMORY.md Is a Budget, Not a Document" — English plus Simplified and Traditional Chinese twins, a 16:9 blueprint infographic, and synced to the Astro blog as a featured post; the four harnesses' session-start caps, who enforces them, when not to build one at all, and why a memory file must never sit in a repo that publishes
@@ -306,7 +307,7 @@ if args.check:
 ## 🔗 Quick Links
 
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
-- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 54 articles on AI, privacy, and entrepreneurship
+- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 55 articles on AI, privacy, and entrepreneurship
 - **Gists & Experiments:** [Personal gists](https://gist.github.com/j3ffyang)
 
 ---
@@ -315,14 +316,14 @@ if args.check:
 
 From `ai-thoughts` (most recent published articles):
 
-1. **"What I Tell My Team About AI"** (Nov 2026) — The rules I give my team about using AI: the licence is not the problem, explainability is — nothing ships that you cannot explain, stay in control of the harness, write small before large, and keep your own SKILL.md with its three failure modes; with a hand-drawn infographic
-2. **"MEMORY.md Is a Budget, Not a Document"** (Nov 2026) — Why MEMORY.md is a budget of prompt space rather than a document — what Claude Code, OpenClaw, Codex and Hermes each cap at session start, who enforces it, how to assemble the slot in OpenCode, when not to build one, and why a memory file must never live in a repo that publishes; with a blueprint-style infographic
-3. **"The Agent, Not the Model"** (Oct 2026) — Why the model is the least interesting part of the stack — benchmarks as marketing, a twentieth-of-the-price comparison against GPT-5.2, the librarian who hands you five books or a cart of thirty, one turn of the agent loop, and the three files where instruction lives; with a hand-drawn infographic
-4. **"Health Records an Agent Can Audit"** (Oct 2026) — A two-layer skill for AI-assisted review of personal and family medical records: append-only data, conflict protocol, change gate, evidence grading — and the honest list of what it still cannot do
-5. **"The Rules, Not the Words: ASD-STE100 for Agent Instructions"** (Oct 2026) — ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed before-and-after measurement of two rule files, and a skill that applies the rules without flattening essay voice; with a visual summary infographic
-6. **"Replace Cursor with a Minimal VSCodium AppImage"** (Oct 2026) — Replacing Cursor with a VSCodium AppImage and three Open VSX extensions — git status tags in the file tree, Vim keys, Mermaid in the built-in preview and local PlantUML; why Cursor's forced agent and backend routing are the real problem, what telemetry surface remains, the settings that make the editor inert, and an honest 795 MiB Electron footprint with a one-step uninstall; with a visual summary infographic
+1. **"Running a Private ⚕ Hermes Agent on a VPS, Wired to Discord"** (Nov 2026) — Running a private Hermes Agent on a VPS wired to Discord — why Google Chat needs a Business Workspace account, an app only its owner can install, a private channel with role-granted visibility, the four gates that decide who reaches the bot, and the command surface that tools cannot gate; with a blueprint-style infographic
+2. **"What I Tell My Team About AI"** (Nov 2026) — The rules I give my team about using AI: the licence is not the problem, explainability is — nothing ships that you cannot explain, stay in control of the harness, write small before large, and keep your own SKILL.md with its three failure modes; with a hand-drawn infographic
+3. **"MEMORY.md Is a Budget, Not a Document"** (Nov 2026) — Why MEMORY.md is a budget of prompt space rather than a document — what Claude Code, OpenClaw, Codex and Hermes each cap at session start, who enforces it, how to assemble the slot in OpenCode, when not to build one, and why a memory file must never live in a repo that publishes; with a blueprint-style infographic
+4. **"The Agent, Not the Model"** (Oct 2026) — Why the model is the least interesting part of the stack — benchmarks as marketing, a twentieth-of-the-price comparison against GPT-5.2, the librarian who hands you five books or a cart of thirty, one turn of the agent loop, and the three files where instruction lives; with a hand-drawn infographic
+5. **"Health Records an Agent Can Audit"** (Oct 2026) — A two-layer skill for AI-assisted review of personal and family medical records: append-only data, conflict protocol, change gate, evidence grading — and the honest list of what it still cannot do
+6. **"The Rules, Not the Words: ASD-STE100 for Agent Instructions"** (Oct 2026) — ASD-STE100 Simplified Technical English for agent instructions — the standard's history and rules, three worked examples, a linter-backed before-and-after measurement of two rule files, and a skill that applies the rules without flattening essay voice; with a visual summary infographic
 
-👉 See all 54 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
+👉 See all 55 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
 
 ---
 
@@ -348,7 +349,7 @@ npm run build  # or load the extension manually in Chrome
 ```bash
 git clone https://github.com/negtivspace/ai-thoughts
 cd docs
-# 54 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
+# 55 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
 ```
 
 ---
@@ -359,4 +360,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** November 4, 2026 | Tracking: 6 active repos, 54 published articles, 20+ published skills
+**Last Updated:** November 8, 2026 | Tracking: 6 active repos, 55 published articles, 20+ published skills

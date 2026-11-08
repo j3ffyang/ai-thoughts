@@ -12,7 +12,31 @@
 
 ## 目录
 
-### 一、跨平台与比较
+### 一、Hermes Agent ⚕
+
+| 文章 | 简介 |
+|---|---|
+| [hermes-discord-private](docs/261107-hermes-discord-integration.md) · [私有 Hermes Agent 接入 Discord](docs/261107-hermes-discord-integration-zh-hans.md) | 在 VPS 上把 Hermes Agent 私有地接入 Discord——Google Chat 为何需要 Business 级 Workspace 账号、只有所有者能安装的应用、按角色授予可见性的私有频道、决定谁能摸到机器人的四道关卡，以及工具管不住的命令面；附蓝图风格信息图 |
+| [hermes-cleanup](docs/260731-hermes-cleanup.md) · [hermes-cleanup_chn](docs/260731-hermes-cleanup-chn.md) | 查看已启用技能、退出内置技能、随时可回退——给 Hermes Agent 减负 |
+| [hermes-backup](docs/260528-hermes-backup.md) | 使用Hermes内置CLI备份数据的操作指南——全量快照、快速备份与恢复流程 |
+| [hermes-backup_chn](docs/260528-hermes-backup-chn.md) | 备份 Hermes Agent 的中文指南，涵盖全量快照、快速备份与恢复步骤（简体中文） |
+| [hermes-perftips](docs/260518-hermes-perftips.md) | Hermes Agent Tips & Best Practices Summary |
+| [hermes-perftips_chn](docs/260518-hermes-perftips-chn.md) | Hermes 使用技巧与最佳实践（简体中文） |
+| [hermes-persona-soul](docs/260513-hermes-persona-soul.md) | 关于配置Hermes Agent的SOUL.md以定义代理身份、语气和边界的实用指南 |
+| [hermes-persona-soul_chn](docs/260513-hermes-persona-soul-chn.md) | Hermes Agent SOUL.md 人格配置实战指南（简体中文） |
+| [hermes-connect-models](docs/260506-hermes-connect-models.md) | 寻宝：Hermes Agent ⚕ 连接免费模型 |
+| [hermes-connect-models_chn](docs/260506-hermes-connect-models-chn.md) | 探索 Hermes Agent 连接免费模型的寻宝之旅（简体中文） |
+| [hermes-SOUL-annotated](docs/260505-hermes-soul.md) | Tony Simons 爆火的 170 行 SOUL.md 深度解读——为何 SOUL.md 让 Hermes 更像一个队友 |
+| [hermes-SOUL-annotated_chn](docs/260505-hermes-soul-chn.md) | Hermes 的 170 行 SOUL.md 深度解读（简体中文） |
+| [hermes-github](docs/260504-hermes-github.md) | Hermes Agent: 10 GitHub Repos to Stress-Test It |
+| [hermes-custom-skill-install](docs/260429-custom-skill-hermes.md) | 从GitHub安装自定义Hermes SKILL.md的端到端验证流程，含实测命令、示例与现场安装演练 |
+| [hermes-custom-skill-install_chn](docs/260429-custom-skill-hermes-chn.md) | 从 GitHub 安装自定义 Hermes SKILL.md 的完整实操流程（简体中文） |
+| [hermes-update-err](docs/260423-hermes-update-err.md) | 排查Hermes TUI构建失败问题：根因为根目录package.json格式错误 |
+| [hermes-connect-nvidiamodel-openrouter](docs/260421-hermes-connect-nvidiamodel-openrouter.md) | 将Hermes接入OpenRouter上的Nvidia Nemotron免费模型，含主备模型配置 |
+| [hermes-openrouter-elephant-alpha](docs/260414-hermes-elephant-alpha.md) | 将Hermes接入OpenRouter免费Elephant-Alpha模型的实操指南（作为OpenClaw的替代方案），含WhatsApp集成与多用户配置 |
+| [hermes-openrouter-elephant-alpha_chn](docs/260414-hermes-elephant-alpha-chn.md) | 使用 Hermes 连接 OpenRouter 免费 Elephant-Alpha 模型的配置指南（简体中文） |
+
+### 二、跨平台与比较
 
 | 文章 | 简介 |
 |---|---|
@@ -38,7 +62,7 @@
 | [opencode-vs-claude-code_chn](docs/260513-choose-cc-opencode-chn.md) | OpenCode 与 Claude Code 对比（简体中文） |
 | [engageOpenClaw](docs/260420-engage-openclaw.md) | 使用OpenClaw与Hermes三个月后的复盘：多步骤AI任务编排与章节配图生成工作流 |
 
-### 二、个人技术、隐私与游戏
+### 三、个人技术、隐私与游戏
 
 | 文章 | 简介 |
 |---|---|
@@ -58,36 +82,13 @@
 | [immutable-os-strategy](docs/260622-immutable-os.md) | "不可变操作系统"选型策略——为何一位使用Linux四分之一世纪的老用户坚持原生Arch与Debian LTS，而非Bazzite/Silverblue |
 | [dcs-joystick-tuning](docs/260620-dcs-joystick-tuning.md) | DCS World新手入门指南：VKB Gladiator NXT EVO摇杆 + 无数字键盘的键位映射、游戏模式飞行与摇杆轴调校 |
 
-### 三、历史、文化与哲思
+### 四、历史、文化与哲思
 
 | 文章 | 简介 |
 |---|---|
 | [terminal-is-an-art](docs/260811-terminal-is-an-art.md) · [terminal-is-an-art](docs/260811-terminal-is-an-art-chn.md) | 近30年Unix/Linux经验凝练：命令行为何是艺术——简单、直接、诚实、强大、通用，且作为AI智能体的原生界面仍在进化 |
 | [unknown-unknowns](docs/260722-unknown-unknowns2.md) | 关于知识四种类型的个人随笔——已知的已知、已知的未知、未知的已知，以及塑造我们人生的"未知的未知" |
 | [unknown-unknowns](docs/260722-unknown-unknowns2-chn.md) | 不知道自己不知道的事——知识的四种类型（简体中文） |
-
-### 四、Hermes Agent ⚕
-
-| 文章 | 简介 |
-|---|---|
-| [hermes-cleanup](docs/260731-hermes-cleanup.md) · [hermes-cleanup_chn](docs/260731-hermes-cleanup-chn.md) | 查看已启用技能、退出内置技能、随时可回退——给 Hermes Agent 减负 |
-| [hermes-backup](docs/260528-hermes-backup.md) | 使用Hermes内置CLI备份数据的操作指南——全量快照、快速备份与恢复流程 |
-| [hermes-backup_chn](docs/260528-hermes-backup-chn.md) | 备份 Hermes Agent 的中文指南，涵盖全量快照、快速备份与恢复步骤（简体中文） |
-| [hermes-perftips](docs/260518-hermes-perftips.md) | Hermes Agent Tips & Best Practices Summary |
-| [hermes-perftips_chn](docs/260518-hermes-perftips-chn.md) | Hermes 使用技巧与最佳实践（简体中文） |
-| [hermes-persona-soul](docs/260513-hermes-persona-soul.md) | 关于配置Hermes Agent的SOUL.md以定义代理身份、语气和边界的实用指南 |
-| [hermes-persona-soul_chn](docs/260513-hermes-persona-soul-chn.md) | Hermes Agent SOUL.md 人格配置实战指南（简体中文） |
-| [hermes-connect-models](docs/260506-hermes-connect-models.md) | 寻宝：Hermes Agent ⚕ 连接免费模型 |
-| [hermes-connect-models_chn](docs/260506-hermes-connect-models-chn.md) | 探索 Hermes Agent 连接免费模型的寻宝之旅（简体中文） |
-| [hermes-SOUL-annotated](docs/260505-hermes-soul.md) | Tony Simons 爆火的 170 行 SOUL.md 深度解读——为何 SOUL.md 让 Hermes 更像一个队友 |
-| [hermes-SOUL-annotated_chn](docs/260505-hermes-soul-chn.md) | Hermes 的 170 行 SOUL.md 深度解读（简体中文） |
-| [hermes-github](docs/260504-hermes-github.md) | Hermes Agent: 10 GitHub Repos to Stress-Test It |
-| [hermes-custom-skill-install](docs/260429-custom-skill-hermes.md) | 从GitHub安装自定义Hermes SKILL.md的端到端验证流程，含实测命令、示例与现场安装演练 |
-| [hermes-custom-skill-install_chn](docs/260429-custom-skill-hermes-chn.md) | 从 GitHub 安装自定义 Hermes SKILL.md 的完整实操流程（简体中文） |
-| [hermes-update-err](docs/260423-hermes-update-err.md) | 排查Hermes TUI构建失败问题：根因为根目录package.json格式错误 |
-| [hermes-connect-nvidiamodel-openrouter](docs/260421-hermes-connect-nvidiamodel-openrouter.md) | 将Hermes接入OpenRouter上的Nvidia Nemotron免费模型，含主备模型配置 |
-| [hermes-openrouter-elephant-alpha](docs/260414-hermes-elephant-alpha.md) | 将Hermes接入OpenRouter免费Elephant-Alpha模型的实操指南（作为OpenClaw的替代方案），含WhatsApp集成与多用户配置 |
-| [hermes-openrouter-elephant-alpha_chn](docs/260414-hermes-elephant-alpha-chn.md) | 使用 Hermes 连接 OpenRouter 免费 Elephant-Alpha 模型的配置指南（简体中文） |
 
 ### 五、第二大脑与知识管理
 
@@ -129,6 +130,7 @@
 
 | 技能 | 简介 |
 |---|---|
+| [custom-infographic](https://clawhub.ai/j3ffyang/skills/custom-infographic) | Generate a professional infographic from an article, document, URL, or topic, using the baoyu layout x style system (21 layouts x 21 styles). Original author 宝玉 (JimLiu); ported & customized by j3ffyang. Use when the user asks to create an infographic, 信息图, visual summary, 可视化, or a high-density information image, or wants an article turned into a visual poster. |
 | [simplified-to-traditional](https://clawhub.ai/j3ffyang/skills/simplified-to-traditional) | Convert a Simplified-Chinese article in ai-thoughts/docs/ into its Traditional-Chinese twin, and keep the two in sync. The Simplified article is the source of truth and lives as <YYMMDD-slug>-zh-hans.md; the Traditional twin is generated to <YYMMDD-slug>-zh-hant.md with OpenCC (s2twp) plus a permanent cross-link. Use when the user asks to make, sync, or update the Traditional (繁體) version of a Chinese article — "convert to traditional", "做繁體版", "同步繁简", "zh-hant", "繁體". Never runs automatically; acts only on an explicitly named article. Future articles only — do NOT backfill existing files unless the user explicitly orders it. |
 | [medical-record-review](https://clawhub.ai/j3ffyang/skills/medical-record-review) | Review personal or family health records (lab results, imaging, prescriptions, medication, symptom notes): compare every metric across the full history, draw time trends, report and track data conflicts, grade evidence, and highlight clinical risks. Generic layer — it contains no patient data. The project layer injects the profile and all paths. Triggers: health record, medical record, lab result, bloodtest, imaging, prescription, medication, symptom, trend, review, analysis, intake, index, registry, merge, rename, audit, 健康档案, 化验, 处方, 用药, 趋势, 复阅, 分析, 建档, 整理, 合并, 更名, 审计, 注册表. Never diagnose, never prescribe, never edit source data.  |
 | [unwrap-markdown](https://clawhub.ai/j3ffyang/skills/unwrap-markdown) | Unwrap hard-wrapped Markdown prose into one line per paragraph, while keeping code fences, tables, headings, setext headings, lists, blockquotes, hard line breaks, and YAML frontmatter intact. Use when a Markdown file was written with hard line breaks at a fixed width and needs to become one paragraph per line, when checking a folder of Markdown files for hard-wrapped prose (for CI), or when the user asks to unwrap, reflow, or un-hard-wrap Markdown. Handles CJK text without adding spaces between Chinese or Japanese characters. |
@@ -139,7 +141,6 @@
 | [rental-property-sell-or-hold](https://clawhub.ai/j3ffyang/skills/rental-property-sell-or-hold) | Review and analyze a personal sell-or-hold decision for rental property against a stock or fixed-income alternative. Use when the user asks whether to sell rental condos or houses and move the money into investments, when comparing rent yield with fixed income, when modeling a 3-year sell-or-hold scenario with break-even returns, or when checking a personal investment assessment document. Covers Canadian tax concepts (Capital Cost Allowance (CCA), terminal loss, principal residence, personal-use losses) where the owner is a Canadian resident. Triggers: sell or hold, rental yield, net yield, cash flow, break-even, condo, strata fee, property tax, CCA, fixed income, ETF, concentration, 售房, 持有, 租金收益率, 固定收益. |
 | [asd-ste100](https://clawhub.ai/j3ffyang/skills/asd-ste100) | Apply ASD-STE100 Simplified Technical English to written instructions: one action per sentence, imperative mood, condition first, one name per item, short sentences, no semicolons. Use before writing or when auditing prompts, AGENTS.md, SKILL.md, READMEs, runbooks, checklists, and the technical steps of an article. For articles, enforce structure only and keep the essay voice; never flatten narrative prose. Report contradictions between rule files instead of silently choosing one.  |
 | [arch-sign-off](https://clawhub.ai/j3ffyang/skills/arch-sign-off) | Append the Arch Linux sign-off line `btw, i use arch` to the very bottom of an article in ai-thoughts/docs/ (EN or ZH). This is a standing default for every article: apply it unless the user explicitly says not to. Use when writing or finishing any new article, or when the user asks to add it. |
-| [custom-infographic](https://clawhub.ai/j3ffyang/skills/custom-infographic) | Generate a professional infographic from an article, document, URL, or topic, using the baoyu layout x style system (21 layouts x 21 styles). Original author 宝玉 (JimLiu); ported & customized by j3ffyang. Use when the user asks to create an infographic, 信息图, visual summary, 可视化, or a high-density information image, or wants an article turned into a visual poster. |
 | [security-writeup-bad-effects](https://clawhub.ai/j3ffyang/skills/security-writeup-bad-effects) | Add a plain per-section "Bad effect:" statement to each section of a defensive security or incident-analysis write-up, naming the concrete harm and the failure mode. Use when reviewing or finishing a security/analysis article (e.g. a malware dissection) or when the user asks what the bad effect of a section is or wants each section annotated. |
 | [untrusted-code-safety](https://clawhub.ai/j3ffyang/skills/untrusted-code-safety) | Zero-trust procedure for reviewing or running code from an unknown source. Use when reviewing, vetting, cloning, installing, or running code from an untrusted source (repo invites, packages, scripts, executable config files), when asked whether code is safe or hazardous, when executed code may read secrets/files or reach the network, and when the user says "raise hands", "stop and alert", or "sandbox it". Also trigger on suspicion of malicious, harmful, deceptive, cheating, or stealing behavior. |
 | [rdr2-playthrough](https://clawhub.ai/j3ffyang/skills/rdr2-playthrough) | Use when maintaining RDR2 (Red Dead Redemption 2) playthrough notes — logging an acquisition ("acquired X", "got N gold bars", "finished X"), answering in-game location/crafting questions, or reviewing the notes for duplicate or stale info. Triggers on RDR2, Red Dead Redemption, playthrough, legendary animal, talisman, trinket, valerian root, gold bar, horse, weapon, berry. |

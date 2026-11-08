@@ -401,6 +401,13 @@ rows:
       - { label: "hermes-cleanup_chn", path: "docs/260731-hermes-cleanup-chn.md", lang: zh }
     desc_en: "List enabled skills, opt out of bundled skills, and revert anytime — debloat your agent"
     desc_zh: "查看已启用技能、退出内置技能、随时可回退——给 Hermes Agent 减负"
+  - section: hermes
+    status: published
+    links:
+      - { label: "hermes-discord-private", path: "docs/261107-hermes-discord-integration.md", lang: en }
+      - { label: "hermes-discord-private", path: "docs/261107-hermes-discord-integration-zh-hans.md", lang: zh, label_zh: "私有 Hermes Agent 接入 Discord" }
+    desc_en: "Running a private Hermes Agent on a VPS wired to Discord — why Google Chat needs a Business Workspace account, an app only its owner can install, a private channel with role-granted visibility, the four gates that decide who reaches the bot, and the command surface that tools cannot gate; with a blueprint-style infographic"
+    desc_zh: "在 VPS 上把 Hermes Agent 私有地接入 Discord——Google Chat 为何需要 Business 级 Workspace 账号、只有所有者能安装的应用、按角色授予可见性的私有频道、决定谁能摸到机器人的四道关卡，以及工具管不住的命令面；附蓝图风格信息图"
 
   # -------------------------------------------------------------- VII. cross
   - section: cross

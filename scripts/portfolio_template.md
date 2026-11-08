@@ -56,6 +56,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
+- **Nov 8:** Published "Running a Private ⚕ Hermes Agent on a VPS, Wired to Discord" — English plus Simplified and Traditional Chinese twins, a 16:9 blueprint infographic and a 5:2 banner; Google Chat needs a Business Workspace account before its API can even be enabled, the app installs only for its owner, the channel stays private, and four gates decide who reaches the bot
 - **Nov 4:** Published "The Agent, Not the Model" — English plus Simplified and Traditional Chinese twins, a hand-drawn infographic and a 5:2 banner; the model priced at a twentieth of GPT-5.2's output cost, the librarian who hands you five books or a cart of thirty, one turn of the agent loop, and the three files where instruction lives
 - **Nov 4:** Published "What I Tell My Team About AI" — English plus Simplified and Traditional twins, a hand-drawn infographic and a 5:2 banner; permission was never the issue, explainability is, and nothing ships without it
 - **Nov 2:** Published "MEMORY.md Is a Budget, Not a Document" — English plus Simplified and Traditional Chinese twins, a 16:9 blueprint infographic, and synced to the Astro blog as a featured post; the four harnesses' session-start caps, who enforces them, when not to build one at all, and why a memory file must never sit in a repo that publishes
