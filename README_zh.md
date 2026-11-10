@@ -16,6 +16,7 @@
 
 | 文章 | 简介 |
 |---|---|
+| [hermes-guest-hardening](docs/261108-hermes-guest-hardening.md) | A member asked the bot for a skill and it wrote one into ~/.hermes — why a messaging bot is not a separate user, the five Discord toolsets, the write gate that stages installs, the DM-versus-channel command split, and the failure that stays silent; with a blueprint-style infographic |
 | [hermes-discord-private](docs/261107-hermes-discord-integration.md) · [私有 Hermes Agent 接入 Discord](docs/261107-hermes-discord-integration-zh-hans.md) | 在 VPS 上把 Hermes Agent 私有地接入 Discord——Google Chat 为何需要 Business 级 Workspace 账号、只有所有者能安装的应用、按角色授予可见性的私有频道、决定谁能摸到机器人的四道关卡，以及工具管不住的命令面；附蓝图风格信息图 |
 | [hermes-skill-index](docs/261105-hermes-skill-index.md) · [在 Hermes 里关掉你永远不会用的技能](docs/261105-hermes-skill-index-zh-hans.md) | 为什么 Hermes 在你开口之前就加载技能描述——3k 词元的索引、停用一个分类到底省下什么（是词元，从来不是兆字节），以及索引让你忽略的两种更大成本：工具 schema 与插件；附蓝图风格信息图 |
 | [hermes-cleanup](docs/260731-hermes-cleanup.md) · [hermes-cleanup_chn](docs/260731-hermes-cleanup-chn.md) | 查看已启用技能、退出内置技能、随时可回退——给 Hermes Agent 减负 |

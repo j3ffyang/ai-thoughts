@@ -16,6 +16,7 @@ Custom OpenCode skills developed here auto-publish to [ClawHub](https://clawhub.
 
 | Article | Description |
 |---|---|
+| [hermes-guest-hardening](docs/261108-hermes-guest-hardening.md) | A member asked the bot for a skill and it wrote one into ~/.hermes — why a messaging bot is not a separate user, the five Discord toolsets, the write gate that stages installs, the DM-versus-channel command split, and the failure that stays silent; with a blueprint-style infographic |
 | [hermes-discord-private](docs/261107-hermes-discord-integration.md) | Running a private Hermes Agent on a VPS wired to Discord — why Google Chat needs a Business Workspace account, an app only its owner can install, a private channel with role-granted visibility, the four gates that decide who reaches the bot, and the command surface that tools cannot gate; with a blueprint-style infographic |
 | [hermes-skill-index](docs/261105-hermes-skill-index.md) | Why a Hermes install loads skill descriptions before you speak — the 3k-token index, what disabling a category actually saves (tokens, never megabytes), and the two larger costs it distracts you from: tool schemas and plugins; with a blueprint-style infographic |
 | [hermes-cleanup](docs/260731-hermes-cleanup.md) | List enabled skills, opt out of bundled skills, and revert anytime — debloat your agent |

@@ -41,7 +41,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 
 | Repo | Purpose | Articles |
 |------|---------|----------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 56 articles |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 57 articles |
 
 ### Tools & Extensions
 
@@ -56,6 +56,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
+- **Nov 10:** Published "The Bot Runs as You: Hardening a ⚕ Hermes Agent for Guests" — five Discord toolsets with the skill writes staged for approval, a command split that now holds in channels as well as DMs, and a corrected warning about what a broken config actually does; the identity layer is still the one this setup cannot buy
 - **Nov 10:** Published "Disable the Skills You Will Never Use in ⚕ Hermes" — English plus Simplified and Traditional twins, a 16:9 blueprint infographic and a 5:2 banner; the skill index costs ~3k tokens before you speak, disabling a category saves tokens and never megabytes, and tool schemas turn out to be the larger lever
 - **Nov 8:** Published "Running a Private ⚕ Hermes Agent on a VPS, Wired to Discord" — English plus Simplified and Traditional Chinese twins, a 16:9 blueprint infographic and a 5:2 banner; Google Chat needs a Business Workspace account before its API can even be enabled, the app installs only for its owner, the channel stays private, and four gates decide who reaches the bot
 - **Nov 4:** Published "The Agent, Not the Model" — English plus Simplified and Traditional Chinese twins, a hand-drawn infographic and a 5:2 banner; the model priced at a twentieth of GPT-5.2's output cost, the librarian who hands you five books or a cart of thirty, one turn of the agent loop, and the three files where instruction lives
@@ -308,7 +309,7 @@ if args.check:
 ## 🔗 Quick Links
 
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
-- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 56 articles on AI, privacy, and entrepreneurship
+- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 57 articles on AI, privacy, and entrepreneurship
 - **Gists & Experiments:** [Personal gists](https://gist.github.com/j3ffyang)
 
 ---
@@ -317,14 +318,14 @@ if args.check:
 
 From `ai-thoughts` (most recent published articles):
 
-1. **"Running a Private ⚕ Hermes Agent on a VPS, Wired to Discord"** (Nov 2026) — Running a private Hermes Agent on a VPS wired to Discord — why Google Chat needs a Business Workspace account, an app only its owner can install, a private channel with role-granted visibility, the four gates that decide who reaches the bot, and the command surface that tools cannot gate; with a blueprint-style infographic
-2. **"Disable the Skills You Will Never Use in Hermes ⚕"** (Nov 2026) — Why a Hermes install loads skill descriptions before you speak — the 3k-token index, what disabling a category actually saves (tokens, never megabytes), and the two larger costs it distracts you from: tool schemas and plugins; with a blueprint-style infographic
-3. **"What I Tell My Team About AI"** (Nov 2026) — The rules I give my team about using AI: the licence is not the problem, explainability is — nothing ships that you cannot explain, stay in control of the harness, write small before large, and keep your own SKILL.md with its three failure modes; with a hand-drawn infographic
-4. **"MEMORY.md Is a Budget, Not a Document"** (Nov 2026) — Why MEMORY.md is a budget of prompt space rather than a document — what Claude Code, OpenClaw, Codex and Hermes each cap at session start, who enforces it, how to assemble the slot in OpenCode, when not to build one, and why a memory file must never live in a repo that publishes; with a blueprint-style infographic
-5. **"The Agent, Not the Model"** (Oct 2026) — Why the model is the least interesting part of the stack — benchmarks as marketing, a twentieth-of-the-price comparison against GPT-5.2, the librarian who hands you five books or a cart of thirty, one turn of the agent loop, and the three files where instruction lives; with a hand-drawn infographic
-6. **"Health Records an Agent Can Audit"** (Oct 2026) — A two-layer skill for AI-assisted review of personal and family medical records: append-only data, conflict protocol, change gate, evidence grading — and the honest list of what it still cannot do
+1. **"The Bot Runs as You: Hardening a ⚕ Hermes Agent for Guests"** (Nov 2026) — A member asked the bot for a skill and it wrote one into ~/.hermes — why a messaging bot is not a separate user, the five Discord toolsets, the write gate that stages installs, the DM-versus-channel command split, and the failure that stays silent; with a blueprint-style infographic
+2. **"Running a Private ⚕ Hermes Agent on a VPS, Wired to Discord"** (Nov 2026) — Running a private Hermes Agent on a VPS wired to Discord — why Google Chat needs a Business Workspace account, an app only its owner can install, a private channel with role-granted visibility, the four gates that decide who reaches the bot, and the command surface that tools cannot gate; with a blueprint-style infographic
+3. **"Disable the Skills You Will Never Use in Hermes ⚕"** (Nov 2026) — Why a Hermes install loads skill descriptions before you speak — the 3k-token index, what disabling a category actually saves (tokens, never megabytes), and the two larger costs it distracts you from: tool schemas and plugins; with a blueprint-style infographic
+4. **"What I Tell My Team About AI"** (Nov 2026) — The rules I give my team about using AI: the licence is not the problem, explainability is — nothing ships that you cannot explain, stay in control of the harness, write small before large, and keep your own SKILL.md with its three failure modes; with a hand-drawn infographic
+5. **"MEMORY.md Is a Budget, Not a Document"** (Nov 2026) — Why MEMORY.md is a budget of prompt space rather than a document — what Claude Code, OpenClaw, Codex and Hermes each cap at session start, who enforces it, how to assemble the slot in OpenCode, when not to build one, and why a memory file must never live in a repo that publishes; with a blueprint-style infographic
+6. **"The Agent, Not the Model"** (Oct 2026) — Why the model is the least interesting part of the stack — benchmarks as marketing, a twentieth-of-the-price comparison against GPT-5.2, the librarian who hands you five books or a cart of thirty, one turn of the agent loop, and the three files where instruction lives; with a hand-drawn infographic
 
-👉 See all 56 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
+👉 See all 57 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
 
 ---
 
@@ -350,7 +351,7 @@ npm run build  # or load the extension manually in Chrome
 ```bash
 git clone https://github.com/negtivspace/ai-thoughts
 cd docs
-# 56 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
+# 57 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
 ```
 
 ---
@@ -361,4 +362,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** November 10, 2026 | Tracking: 6 active repos, 56 published articles, 20+ published skills
+**Last Updated:** November 10, 2026 | Tracking: 6 active repos, 57 published articles, 20+ published skills

@@ -404,6 +404,11 @@ rows:
   - section: hermes
     status: published
     links:
+      - { label: "hermes-guest-hardening", path: "docs/261108-hermes-guest-hardening.md", lang: en }
+    desc_en: "A member asked the bot for a skill and it wrote one into ~/.hermes — why a messaging bot is not a separate user, the five Discord toolsets, the write gate that stages installs, the DM-versus-channel command split, and the failure that stays silent; with a blueprint-style infographic"
+  - section: hermes
+    status: published
+    links:
       - { label: "hermes-discord-private", path: "docs/261107-hermes-discord-integration.md", lang: en }
       - { label: "hermes-discord-private", path: "docs/261107-hermes-discord-integration-zh-hans.md", lang: zh, label_zh: "私有 Hermes Agent 接入 Discord" }
     desc_en: "Running a private Hermes Agent on a VPS wired to Discord — why Google Chat needs a Business Workspace account, an app only its owner can install, a private channel with role-granted visibility, the four gates that decide who reaches the bot, and the command surface that tools cannot gate; with a blueprint-style infographic"
