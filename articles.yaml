@@ -405,7 +405,9 @@ rows:
     status: published
     links:
       - { label: "hermes-guest-hardening", path: "docs/261108-hermes-guest-hardening.md", lang: en }
+      - { label: "hermes-guest-hardening", path: "docs/261108-hermes-guest-hardening-zh-hans.md", lang: zh, label_zh: "机器人以你的身份运作：为访客加固 Hermes Agent" }
     desc_en: "A member asked the bot for a skill and it wrote one into ~/.hermes — why a messaging bot is not a separate user, the five Discord toolsets, the write gate that stages installs, the DM-versus-channel command split, and the failure that stays silent; with a blueprint-style infographic"
+    desc_zh: "一位成员向机器人要技能，它就在 ~/.hermes 里写了一个——为什么消息机器人不是独立用户、Discord 上的五个工具集、把安装暂存起来的写入闸门、私信与频道分开的命令拆分，以及那个不会出声的失败；附蓝图风格信息图"
   - section: hermes
     status: published
     links:
