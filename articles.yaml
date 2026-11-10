@@ -408,6 +408,13 @@ rows:
       - { label: "hermes-discord-private", path: "docs/261107-hermes-discord-integration-zh-hans.md", lang: zh, label_zh: "私有 Hermes Agent 接入 Discord" }
     desc_en: "Running a private Hermes Agent on a VPS wired to Discord — why Google Chat needs a Business Workspace account, an app only its owner can install, a private channel with role-granted visibility, the four gates that decide who reaches the bot, and the command surface that tools cannot gate; with a blueprint-style infographic"
     desc_zh: "在 VPS 上把 Hermes Agent 私有地接入 Discord——Google Chat 为何需要 Business 级 Workspace 账号、只有所有者能安装的应用、按角色授予可见性的私有频道、决定谁能摸到机器人的四道关卡，以及工具管不住的命令面；附蓝图风格信息图"
+  - section: hermes
+    status: published
+    links:
+      - { label: "hermes-skill-index", path: "docs/261105-hermes-skill-index.md", lang: en }
+      - { label: "hermes-skill-index", path: "docs/261105-hermes-skill-index-zh-hans.md", lang: zh, label_zh: "在 Hermes 里关掉你永远不会用的技能" }
+    desc_en: "Why a Hermes install loads skill descriptions before you speak — the 3k-token index, what disabling a category actually saves (tokens, never megabytes), and the two larger costs it distracts you from: tool schemas and plugins; with a blueprint-style infographic"
+    desc_zh: "为什么 Hermes 在你开口之前就加载技能描述——3k 词元的索引、停用一个分类到底省下什么（是词元，从来不是兆字节），以及索引让你忽略的两种更大成本：工具 schema 与插件；附蓝图风格信息图"
 
   # -------------------------------------------------------------- VII. cross
   - section: cross

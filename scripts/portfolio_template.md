@@ -56,6 +56,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
+- **Nov 10:** Published "Disable the Skills You Will Never Use in ⚕ Hermes" — English plus Simplified and Traditional twins, a 16:9 blueprint infographic and a 5:2 banner; the skill index costs ~3k tokens before you speak, disabling a category saves tokens and never megabytes, and tool schemas turn out to be the larger lever
 - **Nov 8:** Published "Running a Private ⚕ Hermes Agent on a VPS, Wired to Discord" — English plus Simplified and Traditional Chinese twins, a 16:9 blueprint infographic and a 5:2 banner; Google Chat needs a Business Workspace account before its API can even be enabled, the app installs only for its owner, the channel stays private, and four gates decide who reaches the bot
 - **Nov 4:** Published "The Agent, Not the Model" — English plus Simplified and Traditional Chinese twins, a hand-drawn infographic and a 5:2 banner; the model priced at a twentieth of GPT-5.2's output cost, the librarian who hands you five books or a cart of thirty, one turn of the agent loop, and the three files where instruction lives
 - **Nov 4:** Published "What I Tell My Team About AI" — English plus Simplified and Traditional twins, a hand-drawn infographic and a 5:2 banner; permission was never the issue, explainability is, and nothing ships without it
