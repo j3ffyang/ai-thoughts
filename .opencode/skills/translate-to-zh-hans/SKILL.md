@@ -31,7 +31,7 @@ Translate one article from `ai-thoughts/docs/` into Simplified Chinese and write
 ## Procedure
 
 1. **Wait for the user to point out the article** to translate. Do not start until they name it explicitly.
-2. **Confirm the plan** with the user: the source file and the output path. Get their go-ahead before writing anything.
+2. **Confirm the plan** with the user: the source file and the output path. Get their go-ahead before writing anything. If the source is about to be renamed, rename it first — the output filename and the `原文：` link both derive from the source name, and a later rename strands them.
 3. **Check for an existing translation.** If `docs/<same>-zh-hans.md` — or the legacy `docs/<same>-chn.md` — already exists, stop and ask whether to overwrite, diff against it, or skip. Never overwrite silently.
 4. **Read the source** article from `source`. Understand the full content before translating.
 5. **Translate the body** into Simplified Chinese:
@@ -67,6 +67,7 @@ The verbatim exceptions from Procedure step 6 still apply: code, commands, produ
 - **Ask if anything is unclear** — about the article, an ambiguous phrase, an unknown acronym, or the intended output. Clarify rather than assume.
 - Translate meaning faithfully and naturally in Simplified Chinese; do not perform a word-for-word substitution.
 - **Idioms are not word-for-word.** "What this posture does not buy" became 买不到, which reads as a purchase; the sentence means 做不到. Translate the sense, then read it back against the English before accepting it.
+- **Glyphs move with word order.** Keep a brand glyph such as ⚕, but place it where the product name falls in the target sentence rather than where it sat in the source. English `…in Hermes ⚕` reads naturally as `在 ⚕ Hermes 里…`; a trailing glyph hangs in Chinese.
 
 ## Verification
 

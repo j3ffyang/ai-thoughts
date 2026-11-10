@@ -74,6 +74,7 @@ Turn one image into a Twitter/X header banner with ImageMagick, keeping the orig
 - Black padding appears on the expected axis and the content is centered.
 - The original file is byte-identical (unchanged `identify` output / git status).
 - The output sits beside the original in the same directory.
+- A re-render matches the existing banner pixel for pixel: `magick compare -metric AE <new> <existing> null:` prints `0`. Do **not** compare renders with `md5sum` — ImageMagick writes per-path metadata, so two identical images hash differently.
 
 ## Error Handling
 

@@ -57,6 +57,7 @@ Convert one Simplified-Chinese article into Traditional Chinese, and keep the pa
 - `--check` regenerates the Traditional in memory and diffs it against the file (ignoring the cross-link lines); non-zero exit means out of sync.
 - **Do not treat the Traditional file as an editable primary.** Edit the Simplified and re-sync. If a term is genuinely mis-converted by OpenCC, tell the user and decide together, then pin it as a `(from, to)` pair in `scripts/sync_tra.py` → `OVERRIDES` — it is applied after OpenCC on every re-sync, so it survives (a hand-edit would not).
 - **If the user says both twins were modified, run `--check` before committing.** A hand-edit that lands on the Traditional alone leaves the pair divergent — the Simplified still carries the old wording. Fix the Simplified (the source of truth) and re-sync; never hand-edit the Traditional to match.
+- **Rename the source before creating the twins.** Both output filenames and each file's `原文：` link derive from the source name, so a slug change afterwards strands four absolute URLs: `繁体版`, `簡體版`, and the two `原文：` lines. If a rename happens later, re-run the sync and fix the two `原文：` links by hand — `--check` diffs the body only, never the filename.
 
 ## OpenCC pitfalls (一简对多繁)
 
