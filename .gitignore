@@ -17,6 +17,11 @@ videos/
 imgs/*-backup-*
 infographic/**/*-backup-*
 
+# LinkedIn upload artefacts from the md-to-linkedin skill (regenerable, uploaded by hand):
+# table screenshots, and the HTML that feeds the clipboard
+imgs/linkedin-tables/
+*-linkedin.html
+
 # Python bytecode from skill scripts (regenerated on every run)
 __pycache__/
 *.pyc
