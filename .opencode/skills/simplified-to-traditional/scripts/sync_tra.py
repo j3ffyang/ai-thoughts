@@ -70,6 +70,11 @@ OVERRIDES = [
     ("方里", "方裡"),
     ("寫明瞭", "寫明了"),
     ("醋制", "醋製"),
+    # 261020-hlm-tiekan-mantou: 布施 = the Buddhist term, not 佈施.
+    ("地畝佈施", "地畝布施"),
+    # 261020-hlm-tiekan-mantou: 裊娜 = the cited 第五回 form, not 嫋娜.
+    ("嫋娜纖巧", "裊娜纖巧"),
+    ("製表符", "制表符"),  # ai-thoughts: tab character (制表符), not 製 (manufacture)
     ("里加", "裡加"),  # ai-thoughts: 里 = "inside" (…里加), not the unit 里 after Latin text
     ("幹淨", "乾淨"),  # ai-thoughts: 干 = dry/clean (干净), not 幹
     ("可擴充套件性", "可擴充性"),  # ai-thoughts: 拡展性 → 擴充性; s2twp leaks 套件
@@ -81,7 +86,6 @@ OVERRIDES = [
     ("餘閱", "余閱"),
     ("薛姨媽雲", "薛姨媽云"),
     ("麵皮", "面皮"),
-    ("製表符", "制表符"),  # ai-thoughts: tab character (制表符), not 製 (manufacture)
 ]
 
 # One-Simplified-to-many-Traditional forms where OpenCC can pick the wrong
