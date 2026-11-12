@@ -38,6 +38,8 @@ Symbols work bare: `AAPL` resolves to `NASDAQ:AAPL`, `BTC` to `BINANCE:BTCUSDT`.
 
 A rating runs −1 to +1. What makes it worth printing side by side is that the three columns disagree: NVDA at one point read `overall −0.51, moving averages −0.93, oscillators −0.09` — the trend is down, the momentum has stopped falling. A single number hides that.
 
+![Three tools around one scanner: quotes, ratings, screens](../imgs/261111-tradingview-mcp.png)
+
 ## Three things the first version got wrong
 
 **Chained filters overwrite each other.** A screen asking for `RSI < 25` returned AAPL at RSI 55. The client's `where()` replaces the filter rather than adding to it, so only the last condition survived; passing them as `where(*conditions)` ANDs them. The lesson generalises: a query builder that quietly keeps one condition produces plausible, wrong results — no error, just the wrong list.
