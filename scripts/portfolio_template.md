@@ -49,6 +49,16 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 
 ---
 
+## 📝 Latest Articles
+
+From `ai-thoughts` (most recent published articles):
+
+{{LATEST_ARTICLES}}
+
+👉 See all {{ARTICLE_COUNT}} articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
+
+---
+
 ## 📈 Activity Timeline
 
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
@@ -310,16 +320,6 @@ if args.check:
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
 - **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — {{ARTICLE_COUNT}} articles on AI, privacy, and entrepreneurship
 - **Gists & Experiments:** [Personal gists](https://gist.github.com/j3ffyang)
-
----
-
-## 📝 Latest Articles
-
-From `ai-thoughts` (most recent published articles):
-
-{{LATEST_ARTICLES}}
-
-👉 See all {{ARTICLE_COUNT}} articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
 
 ---
 
