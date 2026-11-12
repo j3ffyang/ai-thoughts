@@ -411,6 +411,13 @@ rows:
   - section: hermes
     status: published
     links:
+      - { label: "tradingview-mcp", path: "docs/261111-tradingview-mcp.md", lang: en }
+      - { label: "tradingview-mcp", path: "docs/261111-tradingview-mcp-zh-hans.md", lang: zh, label_zh: "一个 TradingView MCP：三个工具，一条没有文档的端点" }
+    desc_en: "Building a TradingView MCP on an undocumented scanner endpoint — three read-only tools, four libraries compared by maintenance, and the three defects that made the first version quietly wrong; with a blueprint infographic"
+    desc_zh: "在一个没有文档的扫描器端点上搭 TradingView MCP——三个只读工具、四个库按维护状态对比，以及让第一版悄悄出错的三处缺陷；附蓝图风格信息图"
+  - section: hermes
+    status: published
+    links:
       - { label: "hermes-discord-private", path: "docs/261107-hermes-discord-integration.md", lang: en }
       - { label: "hermes-discord-private", path: "docs/261107-hermes-discord-integration-zh-hans.md", lang: zh, label_zh: "私有 Hermes Agent 接入 Discord" }
     desc_en: "Running a private Hermes Agent on a VPS wired to Discord — why Google Chat needs a Business Workspace account, an app only its owner can install, a private channel with role-granted visibility, the four gates that decide who reaches the bot, and the command surface that tools cannot gate; with a blueprint-style infographic"
