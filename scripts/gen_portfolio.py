@@ -9,7 +9,7 @@ Template: scripts/portfolio_template.md. PORTFOLIO.md is generated output —
 never edit it by hand. Placeholders filled by this script:
 
     {{ARTICLE_COUNT}}   number of unique published articles (by YYMMDD in articles.yaml)
-    {{LATEST_ARTICLES}} top N published articles (title, month, description). A row
+    {{LATEST_ARTICLES}} top N published articles (linked title, month). A row
                         with `portfolio_latest: false` keeps its article count but
                         is left out of this list until the flag is removed.
     {{LAST_UPDATED}}    today's date
@@ -81,11 +81,12 @@ def latest_articles(data: dict, n: int = LATEST_N) -> str:
         d = datetime.strptime(date_key, "%y%m%d")
         title = doc_title(ROOT / ln["path"], ln["label"])
         desc = row.get("desc_en") or row.get("desc_zh") or ""
-        cands.append((d, title, desc))
+        cands.append((d, title, desc, ln["path"]))
     cands.sort(key=lambda c: c[0], reverse=True)
+    base = "https://github.com/j3ffyang/ai-thoughts/blob/main/"
     return "\n".join(
-        f'{i}. **"{title}"** ({d.strftime("%b %Y")}) — {desc}'
-        for i, (d, title, desc) in enumerate(cands[:n], start=1)
+        f'{i}. **["{title}"]({base}{path})** ({d.strftime("%b %Y")})'
+        for i, (d, title, desc, path) in enumerate(cands[:n], start=1)
     )
 
 

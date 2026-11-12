@@ -87,6 +87,12 @@ python scripts/gen_portfolio.py              # regenerate PORTFOLIO.md
 python scripts/gen_portfolio.py --check      # CI/verification: exit 1 if stale
 ```
 
+**Editorial rules for the template** (learned the hard way, 2026-11-12):
+- Order sections by the question a reader asks, newest content first. *Latest Articles* sits above the *Activity Timeline*, because "what is new" outranks "how did it get here".
+- A timeline entry is a date and a title. Do not append a summary, and never repeat process boilerplate ("twins, infographic, banner") — that is what made the section read like a changelog.
+- A table cell holds one line. A table with a single row is a sentence, not a table.
+- Never edit `README.md` or `PORTFOLIO.md` directly; both are generated.
+
 The generator fills four things automatically. It fills the article count, which is the unique published articles by YYMMDD from `articles.yaml`. It fills the ai-thoughts repo row's latest commit. It fills the "Latest Articles" list: the top N published articles by date, deduped by YYMMDD. It fills the "Last Updated" date. Editorial content (the Activity Timeline, repo tables, tech stack, etc.) lives in the template — edit the template, then regenerate.
 
 ## Repo conventions

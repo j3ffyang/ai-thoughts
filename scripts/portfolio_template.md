@@ -23,11 +23,11 @@ All code prioritizes **clarity over cleverness**: simple, readable, portable, an
 
 **⚡ OpenCode — the growing collection, auto-published to ClawHub**
 
-My OpenCode skills live in `ai-thoughts/.opencode/skills/` and publish to [ClawHub](https://clawhub.ai/j3ffyang) automatically on every push to `j3ffyang` — no local installs, one owner account. The one to open first:
+My OpenCode skills live in [`ai-thoughts/.opencode/skills/`](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills) and publish to [ClawHub](https://clawhub.ai/j3ffyang) automatically on every push to `j3ffyang` — no local installs, one owner account. The one to open first:
 
 - **[`asd-ste100`](https://clawhub.ai/j3ffyang/skills/asd-ste100)** — write and audit agent instructions in ASD-STE100's rules: one action per sentence, condition first, one name per item. Ships a deterministic linter for sentence length, semicolons, banned words, and passive voice.
 
-The rest of the collection — article translation, Traditional-Chinese twin sync, Astro sync, and `resize-for-banner` for Twitter/X headers only (LinkedIn and blog headers take the original image) — is in the repo linked below.
+The rest of the collection — article translation, Traditional-Chinese twin sync, `astro-sync`, and `resize-for-banner` for Twitter/X headers only (LinkedIn and blog headers take the original image) — is in the repo linked below.
 
 | Platform | Repo | Purpose | Latest | Status |
 |----------|------|---------|--------|--------|
@@ -51,8 +51,6 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 
 ## 📝 Latest Articles
 
-From `ai-thoughts` (most recent published articles):
-
 {{LATEST_ARTICLES}}
 
 👉 See all {{ARTICLE_COUNT}} articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
@@ -64,23 +62,23 @@ From `ai-thoughts` (most recent published articles):
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
-- **Nov 12:** Published "A TradingView MCP: Three Tools Over an Endpoint Nobody Documents" — English plus Simplified and Traditional twins, a 16:9 blueprint infographic and a 5:2 banner; three read-only tools over a scanner nobody documents, and the three defects that made the first version produce plausible, wrong answers
-- **Nov 10:** Published "The Bot Runs as You: Hardening a ⚕ Hermes Agent for Guests" — English plus Simplified and Traditional twins and a 16:9 blueprint infographic; five Discord toolsets with the skill writes staged for approval, a command split that now holds in channels as well as DMs, and a corrected warning about what a broken config actually does
-- **Nov 10:** Published "Disable the Skills You Will Never Use in ⚕ Hermes" — English plus Simplified and Traditional twins, a 16:9 blueprint infographic and a 5:2 banner; the skill index costs ~3k tokens before you speak, disabling a category saves tokens and never megabytes, and tool schemas turn out to be the larger lever
-- **Nov 8:** Published "Running a Private ⚕ Hermes Agent on a VPS, Wired to Discord" — English plus Simplified and Traditional Chinese twins, a 16:9 blueprint infographic and a 5:2 banner; Google Chat needs a Business Workspace account before its API can even be enabled, the app installs only for its owner, the channel stays private, and four gates decide who reaches the bot
-- **Nov 4:** Published "The Agent, Not the Model" — English plus Simplified and Traditional Chinese twins, a hand-drawn infographic and a 5:2 banner; the model priced at a twentieth of GPT-5.2's output cost, the librarian who hands you five books or a cart of thirty, one turn of the agent loop, and the three files where instruction lives
-- **Nov 4:** Published "What I Tell My Team About AI" — English plus Simplified and Traditional twins, a hand-drawn infographic and a 5:2 banner; permission was never the issue, explainability is, and nothing ships without it
-- **Nov 2:** Published "MEMORY.md Is a Budget, Not a Document" — English plus Simplified and Traditional Chinese twins, a 16:9 blueprint infographic, and synced to the Astro blog as a featured post; the four harnesses' session-start caps, who enforces them, when not to build one at all, and why a memory file must never sit in a repo that publishes
+- **Nov 12:** Published "A TradingView MCP: Three Tools Over an Endpoint Nobody Documents"
+- **Nov 10:** Published "The Bot Runs as You: Hardening a ⚕ Hermes Agent for Guests"
+- **Nov 10:** Published "Disable the Skills You Will Never Use in ⚕ Hermes"
+- **Nov 8:** Published "Running a Private ⚕ Hermes Agent on a VPS, Wired to Discord"
+- **Nov 4:** Published "The Agent, Not the Model"
+- **Nov 4:** Published "What I Tell My Team About AI"
+- **Nov 2:** Published "MEMORY.md Is a Budget, Not a Document"
 - **Nov 2:** Rewrote the blog's featured-post rules after they misfired — demotion now ranks by reader response instead of genre, the agent only proposes and the human picks, and the cap became `min(20%, 16)`; also fixed the missing `culture` category and banned Chinese posts from the front door
 - **Nov 2:** Rotated two posts off the blog front door ("Unknown Unknowns", "Agent Session Persistence in OpenCode") to hold the featured block at 12
-- **Oct 26:** Published "Replace Cursor with a Minimal VSCodium AppImage" — English plus Simplified and Traditional Chinese twins, a 16:9 infographic, and a 5:2 banner, and synced to the Astro blog; a 3-function editor (git-tagged tree, Vim keys, Mermaid + local PlantUML) in one AppImage, with the honest 795 MiB Electron footprint and a one-step uninstall
-- **Oct 23:** Published "Where Does Brave's Leo AI Keep Your Data?" — English plus Simplified and Traditional Chinese twins, a 16:9 infographic, and a 5:2 banner; the local store turns out to be decryptable with Chromium's public `peanuts` key on a machine with no keyring
+- **Oct 26:** Published "Replace Cursor with a Minimal VSCodium AppImage"
+- **Oct 23:** Published "Where Does Brave's Leo AI Keep Your Data?"
 - **Oct 23:** Restricted `resize-for-banner` to Twitter/X only — LinkedIn and blog headers accept the original image — and codified "register an article only after it is committed and pushed" in AGENTS.md, which removed three uncommitted rows from the manifest
-- **Oct 20:** Published "The Rules, Not the Words: ASD-STE100 for Agent Instructions" — English plus Simplified and Traditional Chinese twins, a 16:9 infographic, and a 5:2 banner
+- **Oct 20:** Published "The Rules, Not the Words: ASD-STE100 for Agent Instructions"
 - **Oct 20:** Added the `asd-ste100` skill and a `--stats` summary mode to its linter; rewrote both working-rule AGENTS.md files to the same standard (18 and 15 linter errors to zero) and logged the diffs
 - **Oct 20:** Added a `portfolio_latest: false` opt-out, so an article whose doc is not committed yet stays counted but off the front-page list; recorded a per-genre precision rule (approximate figures in essays, exactness in code and measurements)
 - **Oct 7:** Refreshed the portfolio timeline and skills list, and dropped the WIP `encrypt-linux` row from the article index until the articles are ready
-- **Oct 7:** Published "What Should You Know to Work Well with an AI Agent?" in three versions — English, Simplified Chinese, and its first Traditional-Chinese `-zh-hant.md` twin
+- **Oct 7:** Published "What Should You Know to Work Well with an AI Agent?"
 - **Oct 7:** Added the `simplified-to-traditional` skill — `-zh-hans` → `-zh-hant` twin sync with OpenCC (s2twp), permanent cross-links, and `--check`; published to ClawHub 1.0.0
 - **Oct 7:** Renamed the translation skill `translate-to-chn` → `translate-to-zh-hans` and published it to ClawHub 1.0.0
 - **Oct 7:** Standardized the Simplified-Chinese suffix as `-zh-hans.md` across AGENTS.md, the skills, and the README generator's `desc_zh` check — legacy `-chn.md` files kept as-is until explicitly migrated
@@ -88,22 +86,22 @@ From `ai-thoughts` (most recent published articles):
 
 ### Q3 2026
 - **Sep 30:** Added the `security-writeup-bad-effects` skill, a `verify_md_boxes.py` box-diagram verifier, and a global AGENTS.md "Host safety" rule; cross-posted the Brisova malware analysis to Medium and X (5:2 banner, plus a platform-filter-safe rewrite of one exploit-describing line)
-- **Sep 29:** Published "Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload" (EN + ZH) with infographic; added the `untrusted-code-safety` skill and its global AGENTS.md "Untrusted code safety" contract
-- **Sep 27:** Published "Choosing a Model for OpenCode via OpenRouter" with infographic and Twitter banner
+- **Sep 29:** Published "Anatomy of a Malicious GitHub Invite — The Brisova Build-Time Payload"
+- **Sep 27:** Published "Choosing a Model for OpenCode via OpenRouter"
 - **Sep 21:** Published the `rdr2-playthrough` skill to ClawHub; reworked the portfolio pipeline so each account self-publishes its own README (no cross-account PAT or mirror)
 - **Sep 21:** Expanded the portfolio Code Highlights with automation tooling (`clawhub_publish.py`, `sync_profile.py`, `gen_readmes.py`)
-- **Sep 20:** Published "Extracting PowerPoint to Markdown Without Losing a Byte" (EN + ZH) with infographic and the `pptx-extract` skill
+- **Sep 20:** Published "Extracting PowerPoint to Markdown Without Losing a Byte"
 - **Sep 17:** Added the `normalize-whitespace` and `sync-config-with-sample` skills
 - **Sep 15:** Added an auto-generated ClawHub skills table and switched READMEs to recency ordering
 - **Sep 15:** Published the Chinese translation of the "create SKILL.md, AGENTS.md, and PERSONA.md on the fly" essay
-- **Sep 14:** Published "Create SKILL.md, AGENTS.md, and PERSONA.md on the fly" with hero infographic and Twitter banner; renamed the ClawHub publish skill to `publish-skills`
+- **Sep 14:** Published "Create SKILL.md, AGENTS.md, and PERSONA.md on the fly"
 - **Sep 14:** Refined the `bold-highlights` skill — sparser bolding, no list bolds
 - **Sep 2:** Reworked the GPD dual-AMD eGPU article with mermaid diagrams, new image assets, and an Arch sign-off
 - **Aug 8:** Added `scripts/unwrap_md.py` — auto-wraps article and skill prose to one-paragraph-per-line, preserving code fences, tables, and list nesting
 - **Aug 8:** Published the AI agent collaboration playbook — what a real multi-repo ClawHub auto-publish project taught about AGENTS.md, SKILL.md, and project boundaries
 - **Aug 7:** Published AMD iGPU + eGPU setup guide for GPD Win4 (bilingual EN/ZH) with verification commands and stable DRM symlinks
 - **Aug 4:** Merged the three Chrome extensions (`sum2chn`, `twitter2md`, `twitter-bookmark-summarizer`) into a single `chrome-extensions` monorepo
-- **Early Aug:** Published "Why OpenCode is the best AI agent setup for me" essay and the Ollama → llama.cpp local-LLM deep-dive (draft)
+- **Early Aug:** Published "Why OpenCode is the best AI agent setup for me"
 - **Jul 31:** Published the Hermes Agent skills/plugins cleanup guide (bilingual)
 - **Jul 21-22:** Published Obsidian + Karpathy LLM Wiki local search guide and the "unknown unknowns" essay (bilingual)
 - **Jul 14:** Added Brave browser privacy analysis (bilingual) to `ai-thoughts`
