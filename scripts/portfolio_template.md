@@ -31,11 +31,11 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 
 | Platform | Repo | Purpose | Latest | Status |
 |----------|------|---------|--------|--------|
-| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`asd-ste100`](https://clawhub.ai/j3ffyang/skills/asd-ste100) — ASD-STE100 rules for agent instructions, with a linter (`--stats`, `--check`). Auto-published to ClawHub on every push to `j3ffyang`. | `docs: add team-ai-rules article` (Nov 2026) | 🔄 Active |
-| **Hermes** ⚕ | **[hermes-custom-skills](https://github.com/negtivspace/hermes-custom-skills)** | Specialized skills for [Hermes Agent](https://hermes.ai) — autonomous workflows, content generation, task orchestration. | `docs: add README and CONTRIBUTING` (Apr 2026) | 🔄 Active |
-| **OpenClaw** 🦞 | **[openclaw-custom-skills](https://github.com/negtivspace/openclaw-custom-skills)** | Production skills for [OpenClaw](https://openclaw.ai) published to ClawHub. Multilingual blog publishing, media generation. | `add chinese edition` (Apr 2026) | 🔄 Active |
-| **Claude Code** | **[claude-custom-skills](https://github.com/negtivspace/claude-custom-skills)** | Automation skills for [Claude Code](https://claude.ai) — productivity hacks, data export, content workflows. | `add i18n support to README` (Apr 2026) | ✨ Stable |
-| **Multi-platform** | **[ai-custom-skills](https://github.com/negtivspace/ai-custom-skills)** | Production-ready skills across platforms (Claude Code, Hermes, OpenClaw) — content creation, data export, workflow automation. | `docs: point all ClawHub links to clawhub.ai/j3ffyang` (Oct 2026) | 🔄 Active |
+| **OpenCode** ⚡ | **[ai-thoughts/.opencode/skills](https://github.com/negtivspace/ai-thoughts/tree/main/.opencode/skills)** | [`asd-ste100`](https://clawhub.ai/j3ffyang/skills/asd-ste100) — ASD-STE100 rules for agent instructions, with a linter. | `docs: add team-ai-rules article` (Nov 2026) | 🔄 Active |
+| **Hermes** ⚕ | **[hermes-custom-skills](https://github.com/negtivspace/hermes-custom-skills)** | Skills for [Hermes Agent](https://hermes.ai) — workflows, content, orchestration. | `docs: add README and CONTRIBUTING` (Apr 2026) | 🔄 Active |
+| **OpenClaw** 🦞 | **[openclaw-custom-skills](https://github.com/negtivspace/openclaw-custom-skills)** | Skills for [OpenClaw](https://openclaw.ai) on ClawHub. | `add chinese edition` (Apr 2026) | 🔄 Active |
+| **Claude Code** | **[claude-custom-skills](https://github.com/negtivspace/claude-custom-skills)** | Claude Code skills — productivity, exports. | `add i18n support to README` (Apr 2026) | ✨ Stable |
+| **Multi-platform** | **[ai-custom-skills](https://github.com/negtivspace/ai-custom-skills)** | Skills across all platforms. | `docs: point ClawHub links to j3ffyang` (Oct 2026) | 🔄 Active |
 
 ### Writing & Documentation
 
@@ -45,9 +45,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 
 ### Tools & Extensions
 
-| Repo | Purpose | Type | Latest |
-|------|---------|------|--------|
-| **[chrome-extensions](https://github.com/negtivspace/chrome-extensions)** | Monorepo of Chrome extensions: [`sum2chn`](https://github.com/negtivspace/chrome-extensions/tree/main/sum2chn) (translate & summarize web pages → Simplified Chinese MD), [`twitter2md`](https://github.com/negtivspace/chrome-extensions/tree/main/twitter2md) (X post → Markdown, ext + Node CLI), [`twitter-bookmark-summarizer`](https://github.com/negtivspace/chrome-extensions/tree/main/twitter-bookmark-summarizer) (summarize tweets via GPT-4o) | Chrome Ext + CLI | `docs: add top-level README and MIT license` (Aug 2026) |
+**[chrome-extensions](https://github.com/negtivspace/chrome-extensions)** — one monorepo: `sum2chn`, `twitter2md`, `twitter-bookmark-summarizer`.
 
 ---
 
