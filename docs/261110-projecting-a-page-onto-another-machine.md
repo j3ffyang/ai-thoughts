@@ -6,6 +6,8 @@
 
 **Status:** verified end to end on both machines, with the proxy cold-start, the browser launch, the fullscreen dispatch and the missing-binary fallback exercised in the failing state rather than merely observed working.
 
+![Hand-drawn infographic of the fault chain: the two machines, the four faults that broke the naive order, the deciding numbers, the silent page with no audio stream, and the three narrow tools that hide it all](../imgs/261110-page-projection-mcp.png)
+
 ## The goal
 
 Two machines on one LAN. The handheld runs the agent; the laptop, `xps`, has the screen. The task: put `watch.plex.tv/live-tv` on that screen, in a browser, fullscreen, on demand.
