@@ -8,9 +8,9 @@ a browser with that proxy, and fullscreens the window through the compositor.
 Why each piece exists:
 
 * **The proxy.** `watch.plex.tv` is unreachable on the target network without
-  it: the resolver answers with 157.240.20.18, a Facebook address. Both browsers
-  need the proxy, but differently — Brave takes `--proxy-server`, Firefox has no
-  such flag and needs it in a profile's prefs.
+  it: the resolver answers with an address that is not Plex (157.240.20.18 when
+  measured, a different one later). Both browsers need the proxy, but
+  differently — Brave takes `--proxy-server`, Firefox needs a profile's prefs.
 * **The restart rule.** Neither browser can be retrofitted with a proxy once
   running, so a browser started without it is restarted.
 * **The compositor.** `--start-fullscreen` is ignored when the launch is

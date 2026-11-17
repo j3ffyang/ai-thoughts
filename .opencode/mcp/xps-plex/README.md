@@ -78,7 +78,7 @@ Override any variable with an `environment` block:
 
 ## How it works, and why each piece is there
 
-**The proxy is not optional on a censored network.** On the network this was built for, `watch.plex.tv` resolves to `157.240.20.18`, a Facebook address. Direct connections hang or reach nothing. Only the proxy path works, so a browser without it renders an error page rather than the site.
+**The proxy is not optional on a censored network.** On the network this was built for, `watch.plex.tv` does not resolve to Plex: the resolver answers with `157.240.20.18` when measured, and with a different address a week later. Direct connections hang or reach nothing. Only the proxy path works, so a browser without it renders an error page rather than the site.
 
 **The two browsers take the proxy differently.** Brave accepts `--proxy-server` on the command line. Firefox has no such flag: the proxy lives in the profile's `prefs`, so the server writes a dedicated profile's `user.js` on every call. The profile is what makes the setting stick, and it is also where the site login persists.
 
