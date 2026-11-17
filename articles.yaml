@@ -543,6 +543,12 @@ rows:
     desc_en: "The rules I give my team about using AI: the licence is not the problem, explainability is — nothing ships that you cannot explain, stay in control of the harness, write small before large, and keep your own SKILL.md with its three failure modes; with a hand-drawn infographic"
     desc_zh: "我给团队的 AI 使用规则：许可不是问题，可解释性才是——解释不清的东西不能交付、掌控运行框架、先小后大，以及为自己留一份 SKILL.md 并警惕它的三种失效；附手绘风格信息图"
 
+  - section: cross
+    status: published
+    links:
+      - { label: "skill-vs-mcp", path: "docs/261111-skill-vs-mcp.md", lang: en }
+    desc_en: "A skill or an MCP server? The same job built both ways — procedure versus capability, what each costs in creation, context and operation, why one server is a packaging choice rather than a security gain, and the four questions that decide it"
+
   # ------------------------------------------------------------- VIII. drafts
   - section: drafts
     status: draft
@@ -617,3 +623,8 @@ rows:
       - { label: "cursor-to-vscodium", path: "docs/261014-cursor-to-vscodium-zh-hans.md", lang: zh, label_zh: "用一个最小化的 VSCodium AppImage 取代 Cursor" }
     desc_en: "Replacing Cursor with a VSCodium AppImage and three Open VSX extensions — git status tags in the file tree, Vim keys, Mermaid in the built-in preview and local PlantUML; why Cursor's forced agent and backend routing are the real problem, what telemetry surface remains, the settings that make the editor inert, and an honest 795 MiB Electron footprint with a one-step uninstall; with a visual summary infographic"
     desc_zh: "用 VSCodium AppImage 加三个 Open VSX 扩展取代 Cursor——文件树里的 git 状态标记、Vim 键位、内置预览中的 Mermaid 与本地 PlantUML；为什么 Cursor 的强制智能体与后端路由才是真正的问题、还剩多少遥测面、让编辑器保持惰性的设置，以及诚实的 795 MiB Electron 体积与一步卸载；附视觉总结信息图"
+  - section: personal
+    status: published
+    links:
+      - { label: "projecting-a-page-onto-another-machine", path: "docs/261110-projecting-a-page-onto-another-machine.md", lang: en }
+    desc_en: "Projecting a Plex page fullscreen onto a second laptop over SSH — the four faults behind a one-line goal (a poisoned DNS answer, Firefox's missing proxy flag, Hyprland's Lua dispatchers, v2rayN's X11 dependency), a fifth silent-page symptom, and the 390-line local MCP that hides them"

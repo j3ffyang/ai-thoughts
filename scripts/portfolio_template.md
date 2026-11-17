@@ -62,6 +62,8 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
+- **Nov 17:** Published "A Skill or an MCP Server? Two Ways to Give an Agent a Trick"
+- **Nov 17:** Published "Projecting a Page Onto Another Machine: a Local MCP Over SSH"
 - **Nov 12:** Published "A TradingView MCP: Three Tools Over an Endpoint Nobody Documents"
 - **Nov 10:** Published "The Bot Runs as You: Hardening a ⚕ Hermes Agent for Guests"
 - **Nov 10:** Published "Disable the Skills You Will Never Use in ⚕ Hermes"

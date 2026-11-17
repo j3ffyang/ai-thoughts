@@ -41,7 +41,7 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 
 | Repo | Purpose | Articles |
 |------|---------|----------|
-| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 58 articles |
+| **[ai-thoughts](https://github.com/negtivspace/ai-thoughts)** | Articles & essays: AI platforms (OpenClaw, Hermes), solo entrepreneurship, privacy, technical deep-dives. Bilingual: English + Simplified/Traditional Chinese | 59 articles |
 
 ### Tools & Extensions
 
@@ -52,13 +52,13 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 ## 📝 Latest Articles
 
 1. **["A TradingView MCP: Three Tools Over an Endpoint Nobody Documents"](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261111-tradingview-mcp.md)** (Nov 2026)
-2. **["The Bot Runs as You: Hardening a ⚕ Hermes Agent for Guests"](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261108-hermes-guest-hardening.md)** (Nov 2026)
-3. **["Running a Private ⚕ Hermes Agent on a VPS, Wired to Discord"](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261107-hermes-discord-integration.md)** (Nov 2026)
-4. **["Disable the Skills You Will Never Use in Hermes ⚕"](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261105-hermes-skill-index.md)** (Nov 2026)
-5. **["What I Tell My Team About AI"](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261104-what-i-tell-my-team-about-ai.md)** (Nov 2026)
-6. **["MEMORY.md Is a Budget, Not a Document"](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261101-memory-md.md)** (Nov 2026)
+2. **["Projecting a Page Onto Another Machine: a Local MCP Over SSH"](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261110-projecting-a-page-onto-another-machine.md)** (Nov 2026)
+3. **["The Bot Runs as You: Hardening a ⚕ Hermes Agent for Guests"](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261108-hermes-guest-hardening.md)** (Nov 2026)
+4. **["Running a Private ⚕ Hermes Agent on a VPS, Wired to Discord"](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261107-hermes-discord-integration.md)** (Nov 2026)
+5. **["Disable the Skills You Will Never Use in Hermes ⚕"](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261105-hermes-skill-index.md)** (Nov 2026)
+6. **["What I Tell My Team About AI"](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261104-what-i-tell-my-team-about-ai.md)** (Nov 2026)
 
-👉 See all 58 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
+👉 See all 59 articles at **[ai-thoughts/docs](https://github.com/negtivspace/ai-thoughts/tree/main/docs)**
 
 ---
 
@@ -67,6 +67,8 @@ The rest of the collection — article translation, Traditional-Chinese twin syn
 *Timeline is editorial — edit it directly in `scripts/portfolio_template.md`, then regenerate.*
 
 ### Q4 2026 (Current)
+- **Nov 17:** Published "A Skill or an MCP Server? Two Ways to Give an Agent a Trick"
+- **Nov 17:** Published "Projecting a Page Onto Another Machine: a Local MCP Over SSH"
 - **Nov 12:** Published "A TradingView MCP: Three Tools Over an Endpoint Nobody Documents"
 - **Nov 10:** Published "The Bot Runs as You: Hardening a ⚕ Hermes Agent for Guests"
 - **Nov 10:** Published "Disable the Skills You Will Never Use in ⚕ Hermes"
@@ -321,7 +323,7 @@ if args.check:
 ## 🔗 Quick Links
 
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
-- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 58 articles on AI, privacy, and entrepreneurship
+- **Blog:** [ai-thoughts](https://github.com/negtivspace/ai-thoughts) — 59 articles on AI, privacy, and entrepreneurship
 - **Gists & Experiments:** [Personal gists](https://gist.github.com/j3ffyang)
 
 ---
@@ -348,7 +350,7 @@ npm run build  # or load the extension manually in Chrome
 ```bash
 git clone https://github.com/negtivspace/ai-thoughts
 cd docs
-# 58 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
+# 59 articles: AI platforms, privacy, solo entrepreneurship, technical deep-dives
 ```
 
 ---
@@ -359,4 +361,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** November 12, 2026 | Tracking: 6 active repos, 58 published articles, 20+ published skills
+**Last Updated:** November 17, 2026 | Tracking: 6 active repos, 59 published articles, 20+ published skills
