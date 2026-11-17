@@ -70,7 +70,7 @@
 
 | 文章 | 简介 |
 |---|---|
-| [projecting-a-page-onto-another-machine](docs/261110-projecting-a-page-onto-another-machine.md) | Projecting a Plex page fullscreen onto a second laptop over SSH — the four faults behind a one-line goal (a poisoned DNS answer, Firefox's missing proxy flag, Hyprland's Lua dispatchers, v2rayN's X11 dependency), a fifth silent-page symptom, and the 390-line local MCP that hides them |
+| [projecting-a-page-onto-another-machine](docs/261110-projecting-a-page-onto-another-machine.md) · [把页面投射到另一台机器](docs/261110-projecting-a-page-onto-another-machine-zh-hans.md) | 把 Plex 页面全屏投射到第二台笔记本、走 SSH——一句话目标背后的四个故障（被污染的 DNS 应答、Firefox 缺少代理开关、Hyprland 的 Lua 派发器、v2rayN 只支持 X11）、第五个静音症状，以及把这些都藏起来的 390 行本地 MCP |
 | [medical-record-review](docs/261021-medical-record-review.md) · [智能体可以审计的健康档案](docs/261021-medical-record-review-zh-hans.md) | 一套两层技能，用于 AI 辅助复阅个人与家庭病历：只追加的数据行、冲突协议、变更闸门、证据分级——以及它仍然做不到什么的诚实清单 |
 | [cursor-to-vscodium](docs/261014-cursor-to-vscodium.md) · [用一个最小化的 VSCodium AppImage 取代 Cursor](docs/261014-cursor-to-vscodium-zh-hans.md) | 用 VSCodium AppImage 加三个 Open VSX 扩展取代 Cursor——文件树里的 git 状态标记、Vim 键位、内置预览中的 Mermaid 与本地 PlantUML；为什么 Cursor 的强制智能体与后端路由才是真正的问题、还剩多少遥测面、让编辑器保持惰性的设置，以及诚实的 795 MiB Electron 体积与一步卸载；附视觉总结信息图 |
 | [unix-is-art](docs/261011-unix-is-art.md) · [Unix 是艺术](docs/261011-unix-is-art-zh-hans.md) | 一篇把 Unix 哲学当作美学的个人随笔——它从 1974 到 2004 年的历史（Thompson 与 Ritchie、McIlroy、Kernighan 与 Pike、Raymond）、它背后的思想与对它的批评、对 Dennis Ritchie 的纪念，以及 Unix 如何塑造了我 |

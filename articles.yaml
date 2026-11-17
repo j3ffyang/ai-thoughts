@@ -627,4 +627,6 @@ rows:
     status: published
     links:
       - { label: "projecting-a-page-onto-another-machine", path: "docs/261110-projecting-a-page-onto-another-machine.md", lang: en }
+      - { label: "projecting-a-page-onto-another-machine", path: "docs/261110-projecting-a-page-onto-another-machine-zh-hans.md", lang: zh, label_zh: "把页面投射到另一台机器" }
     desc_en: "Projecting a Plex page fullscreen onto a second laptop over SSH — the four faults behind a one-line goal (a poisoned DNS answer, Firefox's missing proxy flag, Hyprland's Lua dispatchers, v2rayN's X11 dependency), a fifth silent-page symptom, and the 390-line local MCP that hides them"
+    desc_zh: "把 Plex 页面全屏投射到第二台笔记本、走 SSH——一句话目标背后的四个故障（被污染的 DNS 应答、Firefox 缺少代理开关、Hyprland 的 Lua 派发器、v2rayN 只支持 X11）、第五个静音症状，以及把这些都藏起来的 390 行本地 MCP"
