@@ -54,6 +54,8 @@ Use `edit` with exact unique `oldString` matches. Take wording **verbatim** from
 
 ## Example: hyprland.lua (2026-09, updated 2026-11)
 
+Sample source: <https://github.com/hyprwm/Hyprland/blob/main/example/hyprland.lua> (`raw.githubusercontent.com/hyprwm/Hyprland/main/example/hyprland.lua`). Fetch it, then confirm provenance with `md5sum` against a second fetch before diffing — a corrupted download manufactures hunks that upstream never wrote.
+
 Concrete classification from a real run:
 
 - **Reference (applied verbatim from sample)**: wiki URLs restructured from `Configuring/Basics/...` and `Configuring/Advanced-and-Cool/...` to lowercase `configuring/core/...` etc. — 15 comment hunks (monitors, autostart, env-vars, permissions, variables, tearing, animations, workspace-rules, dwindle/master/scrolling layouts, devices, binds, window/workspace-rules).
