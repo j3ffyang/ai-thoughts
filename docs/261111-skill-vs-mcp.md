@@ -4,7 +4,9 @@
 
 **Thesis:** they are not two answers to one question. **A skill teaches the agent a procedure it can run with the tools it already has; an MCP server gives it a tool it did not have.** Mixing the two up makes both feel arbitrary — you end up writing a server when a paragraph would do, or a paragraph where a tool was needed.
 
-**Status:** both built. The same job — put a Plex page fullscreen on a second laptop over SSH — now exists as an MCP server and as a skill, and every claim below is measured against that pair rather than argued in the abstract. The server is described in [the projection article](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261110-projecting-a-page-onto-another-machine.md).
+**Status:** both built. The same job — put a Plex page fullscreen on a second laptop over SSH — now exists as an MCP server and as a skill, and every claim below is grounded in that pair rather than argued in the abstract. The server is described in [the projection article](https://github.com/j3ffyang/ai-thoughts/blob/main/docs/261110-projecting-a-page-onto-another-machine.md).
+
+![Blueprint-style infographic of the comparison: a procedure on the left as a thin document resting on a script, a capability on the right as a sealed module with connectors and a status lamp, and one slab underneath both — the same job, two fronts on it](../imgs/261111-skill-vs-mcp.png)
 
 ## What this was for
 
@@ -37,10 +39,10 @@ The MCP version:
 ```
 .opencode/mcp/xps-plex/
 ├── server.py           15.5 KB, three tools
-└── README.md           5.2 KB
+└── README.md           5.3 KB
 ```
 
-Registered in OpenCode's config, spawned at startup, one process per session:
+One server per client instance, spawned at startup from OpenCode's config:
 
 ```jsonc
 "mcp": {
@@ -58,7 +60,7 @@ The skill version is a directory of prose and one script:
 
 ```
 .opencode/skills/xps-plex/
-├── SKILL.md              when to use it, the arguments, the four ways it breaks
+├── SKILL.md              when to use it, the arguments, the four faults it dodges
 └── scripts/xps-plex.sh   the same logic, callable by hand
 ```
 
@@ -80,7 +82,7 @@ description: >
   on the other machine's screen, …
 ```
 
-121 words for this one. Across the 27 skills in this repo the always-on descriptions total about 1,900 words — roughly 2.7k tokens before a single body is loaded. That is cheap, and it stops being cheap the moment every description grows into a paragraph.
+121 words for this one. Across the skills in this repo — about twenty of them — the always-on descriptions total a little over 1,400 words, roughly two thousand tokens before a single body is loaded. That is cheap, and it stops being cheap the moment every description grows into a paragraph.
 
 Then it loads the body, reads your procedure, and does the work by calling the tools it already had. `ssh`, `bash`, `magick` — whatever the procedure asks for. If the body says "run `scripts/xps-plex.sh open --browser firefox`", the result is deterministic. If the body is prose with no script, the model composes the shell itself each time, and that is exactly where behaviour drifts.
 
@@ -92,7 +94,9 @@ open_page(browser: string = "firefox", fullscreen: boolean = true)
 xps_start_proxy()
 ```
 
-No shell is involved. The client spawns the process, asks `tools/list`, and calls by name. `browser: "chrome"` is refused at the boundary instead of being guessed at — here by a check inside the tool, because the schema still types the argument as a plain string. A `Literal["firefox", "brave"]` would turn that courtesy into a guarantee.
+No shell is involved on the model's side. The client spawns the process, asks `tools/list`, and calls by name. `browser: "chrome"` is refused rather than guessed at — but not by MCP, which knows nothing about browsers, and not by the schema, which still types the argument as a plain string. The same `case` check sits in the skill's script and exits 2 on the same input: Firefox is the standard here, and the refusal enforces it. Chrome is left out by policy, not by impossibility — wiring it to the same discipline would be fine.
+
+So what the typed surface actually buys is *when* the refusal happens. A `Literal["firefox", "brave"]` lets the client reject the call before anything runs; the script can only refuse after being asked.
 
 The interface has a cost you can see. This is what "call the server" actually looks like underneath:
 
@@ -110,11 +114,11 @@ Five messages before the first tool call — those three requests and the two re
 |---|---|---|
 | **Creation** | one file, minutes. `resize-for-banner` is 4.8 KB and was written in a sitting | a program, a transport, a README, and a config entry — hours |
 | **Simplicity** | editable prose; the logic is readable by anyone | readable code, but the interface is a protocol; debugging means building frames by hand |
-| **Effectiveness** | deterministic when it ships a script, and only then — prose alone is a suggestion the model re-interprets every time | the same call every time, with argument validation at the boundary |
-| **Operation** | nothing to start, nothing to crash, no process, no port | one process per session, spawned at startup, restarted after every edit |
-| **Management** | files under `skills.paths`; publishable as a file; 27 of them live in this repo | an entry in every client's config on every machine, in the shape that client's own docs may have deprecated; today that cost one write into the global config when the project one was meant |
-| **Maintenance** | edit and save; the next session reads it | edit and restart the client — six iterations of the server, and the running session saw none of them without one |
-| **Context cost** | name and description always, body only on use — scales to dozens as long as descriptions stay short | every tool schema is in the tool list whenever the client is connected |
+| **Effectiveness** | deterministic when it ships a script, and only then — prose alone is a suggestion the model re-interprets every time | the same call every time, with argument validation at the boundary — though on this pair the logic was shell either way, so reliability did not move |
+| **Operation** | nothing to start, nothing to crash, no process, no port | one server per client instance, spawned at startup, restarted after every edit |
+| **Management** | files under `skills.paths`; publishable as a file; about twenty of them live in this repo | an entry in every client's config on every machine, in the shape that client's own docs may have deprecated; today that cost one write into the global config when the project one was meant |
+| **Maintenance** | edit and save; the next session reads it | edit and restart the client — six edits of the server, and the running session saw none of them without one |
+| **Context cost** | name and description always, body only on use — scales to dozens as long as descriptions stay short | every tool schema is in the tool list whenever the client is connected — these three serialize to 1.4 KB of JSON, about four hundred tokens |
 | **Safety surface** | needs `bash` or `terminal`; once it has a shell, the skill cannot constrain the command — only the harness can, and only by pattern | three narrow tools cannot be talked into `rm -rf` |
 | **Team use** | easy to share, but each teammate's agent re-reads and re-interprets it | one reviewed artifact deployed from a central copy — the same behaviour for everyone, and one trust decision instead of N |
 
@@ -127,13 +131,13 @@ Five messages before the first tool call — those three requests and the two re
 
 ## What the build measured
 
-The server's logic is almost entirely shell. `ensure_proxy`, the orphaned `xray` core, the window-count test, the workspace move — all of it is `ssh … bash -s`, with Python only carrying the string. Wrapping it in MCP added a process, a protocol, a config entry, and six restarts; it did not make the work more reliable.
+The server's logic is almost entirely shell. `ensure_proxy`, the orphaned `xray` core, the window-count test, the workspace move — all of it is `ssh … bash -s`, with Python only carrying the string. Wrapping it in MCP added a process per client — two in this build, because the launch line is `uv run`, which wraps the interpreter it spawns — a protocol, a config entry, and six restarts; it did not make the work more reliable.
 
 What it did make possible is a client without a shell calling `open_page()`. That is the whole return on the investment, and it is worth it only if that client exists.
 
 It does not exist yet. The client in front of me — OpenCode — has a shell, so every one of these three tools can be done by the skill, and the skill is the one I reach for. The server was worth building once, to learn what the protocol actually costs and to have the other half of this comparison. It is not worth building a second one for the same reason.
 
-The skill shape carries the same logic as a 276-line bash script, with none of the ceremony, and it is runnable by hand, which matters more than it sounds: the fastest way to debug today's window logic was to run the commands directly, not to speak JSON-RPC at a subprocess. The prose in front of it is about 140 lines. The server needed 390 lines of Python, a 5.2 KB README, a runtime, and six restarts; the skill needed the script and a restart-free save.
+The skill shape carries the same logic as a 276-line bash script, with none of the ceremony, and it is runnable by hand, which matters more than it sounds: the fastest way to debug today's window logic was to run the commands directly, not to speak JSON-RPC at a subprocess. The prose in front of it is about 140 lines. The server needed 390 lines of Python, a 5.3 KB README, a runtime, and six restarts; the skill needed the script and a restart-free save.
 
 And that is where this pair breaks its own rule. The server does not call the skill's script; it carries its own copy of the same bash inside its heredocs. The rule below says to wrap the script. What I actually built was two copies of it, and keeping them in step is the part of this pair I would not repeat — the next server starts as a thin `subprocess.run` around `scripts/xps-plex.sh`, with a schema in front.
 
@@ -141,7 +145,7 @@ And that is where this pair breaks its own rule. The server does not call the sk
 
 > Write the logic as a **script** first — runnable by hand, testable, no runtime. Put a **SKILL.md** in front of it that says when to call it and with what. Wrap that same script in an **MCP server** only when a shell-less client needs it, or when several clients must share one typed surface.
 
-The ratio in this repo is 27 skills to 2 servers, and that is roughly what the rule predicts: skills are the default, servers are the exception with a reason.
+The ratio in this repo is about twenty skills to two servers, and that is roughly what the rule predicts: skills are the default, servers are the exception with a reason.
 
 ## What does not change
 
