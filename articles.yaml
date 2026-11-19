@@ -547,7 +547,9 @@ rows:
     status: published
     links:
       - { label: "skill-vs-mcp", path: "docs/261111-skill-vs-mcp.md", lang: en }
+      - { label: "skill-vs-mcp", path: "docs/261111-skill-vs-mcp-zh-hans.md", lang: zh, label_zh: "技能还是 MCP 服务器" }
     desc_en: "A skill or an MCP server? The same job built both ways — procedure versus capability, what each costs in creation, context and operation, why one server is a packaging choice rather than a security gain, and the four questions that decide it"
+    desc_zh: "技能还是 MCP 服务器？同一件事用两种方式各建一遍——流程对能力，各自在创建、上下文和运行上要付什么代价，为什么把一个服务器打包起来只是部署上的选择而不是安全收益，以及决定它的四个问题"
 
   # ------------------------------------------------------------- VIII. drafts
   - section: drafts
