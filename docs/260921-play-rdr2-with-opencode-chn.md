@@ -24,7 +24,7 @@
 
 自动化的核心是两个文件：一个规则文件 (`AGENTS.md`) 和一个技能 (`SKILL.md`)。目的是在游玩的同时自动完成记录。
 
-这个技能是 `rdr2-playthrough`——发布在 ClawHub：[clawhub.ai/j3ffyang/skills/rdr2-playthrough](https://clawhub.ai/j3ffyang/skills/rdr2-playthrough)，源码在仓库里：[`.opencode/skills/rdr2-playthrough/`](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/rdr2-playthrough)。它维护第二章的通关笔记：记录一次获取、回答位置或制作问题，以及检查笔记里重复或过时的信息。它的规则在关键之处很严格——写入前先核实游戏事实、提出确切的修改并等我批准后才动笔记、一个事实只放一处。
+这个技能是 `rdr2-playthrough`——发布在 ClawHub：[clawhub.ai/j3ffyang/skills/rdr2-playthrough](https://clawhub.ai/j3ffyang/skills/rdr2-playthrough)，源码在仓库里：[`.opencode/skills/rdr2-playthrough/`](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/library/rdr2-playthrough)。它维护第二章的通关笔记：记录一次获取、回答位置或制作问题，以及检查笔记里重复或过时的信息。它的规则在关键之处很严格——写入前先核实游戏事实、提出确切的修改并等我批准后才动笔记、一个事实只放一处。
 
 `AGENTS.md` 是笔记文件夹的本地宪章 (constitution)（它同样管辖 GPD Win4 知识库的其余部分）。它最重要的规则正是让它安全的那条：没有明确请求，任何东西都不提交、不推送、不发布。两个文件都刻意地无聊——重点在于工作流能在我游玩时自己跑起来，而不是配置有多聪明。
 

@@ -58,7 +58,7 @@ The project also carries a skill, `pptx-extract`, that codifies the entire proce
 It is available in two places:
 
 - **Published (ClawHub):** [https://clawhub.ai/j3ffyang/skills/pptx-extract](https://clawhub.ai/j3ffyang/skills/pptx-extract)
-- **Source (GitHub):** [https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/pptx-extract](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/pptx-extract)
+- **Source (GitHub):** [https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/library/pptx-extract](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/library/pptx-extract)
 
 (The published copy is a genericized duplicate kept in the host repository, so its publish pipeline can see it.)
 

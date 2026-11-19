@@ -6,7 +6,7 @@
 
 *一套两层技能 (skill)，用于让 AI 辅助复阅 (review) 个人与家庭的病历 (medical record)：通用流程加项目本地事实，不宣称任何临床权威。*
 
-**来源：** [`medical-record-review`](https://github.com/j3ffyang/ai-thoughts/blob/main/.opencode/skills/medical-record-review/SKILL.md) 技能，首次于 2026 年 10 月 21 日抽出，于 2026 年 10 月 27 日更新到 1.5.3 版，来自一个私有档案集 (record set)。该档案集积累了数年的化验 (lab)、处方 (prescription)、影像 (imaging) 和冲突 (conflict)。技能是「怎么做」，本文是「为什么」。
+**来源：** [`medical-record-review`](https://github.com/j3ffyang/ai-thoughts/blob/main/.opencode/library/medical-record-review/SKILL.md) 技能，首次于 2026 年 10 月 21 日抽出，于 2026 年 10 月 27 日更新到 1.5.3 版，来自一个私有档案集 (record set)。该档案集积累了数年的化验 (lab)、处方 (prescription)、影像 (imaging) 和冲突 (conflict)。技能是「怎么做」，本文是「为什么」。
 
 **论点：** 智能体 (agent) 在这个领域里的价值，不是更聪明的分析，而是一套**拒绝猜测 (refuse to guess)** 的流程 (procedure)——遇到冲突就停下，引用所用的来源，把记录与推断分开，并且无法悄悄改写任何一行数据。
 
@@ -36,7 +36,7 @@ AGENTS.md (AUTHORITY)         ← project constitution: privacy, egress, evidenc
 
 - **通用层 (generic layer)** 持有工作流：入库 (intake)、画像 (profile)、注册表 (registry)、比较、冲突协议、证据分级、输出骨架、合并与改名、压缩，以及一个中医 (Traditional Chinese Medicine, TCM) 子流程。它不携带任何病人数值、病人路径或姓名——这正是它能被公开的原因。
 - **项目层 (project layer)** 只持有一个档案集才成立的东西：九个配置键 (config key)（无论是在项目层里，还是在 `AUTHORITY` 指名的 `AGENTS.md` 小节里）、语言约定，以及一张记录真实错误及其裁定的**判例表 (precedent table)**。
-- **`AGENTS.md` 高于这两者。** 它是 `AUTHORITY` 指名的那个规则文件——通常是采用者自己的 `AGENTS.md`，绝不是本流程附带的一个生效中的权威文件。技能旁边附带了一个不含病人数据的起点模板 [`references/AGENTS.example.md`](https://github.com/j3ffyang/ai-thoughts/blob/main/.opencode/skills/medical-record-review/references/AGENTS.example.md)：复制它，或者把 `AUTHORITY` 指向智能体已经在加载的规则文件。通用层把隐私和外传交给它，而不是自己重述一遍，因为重述的规则会偏离源头。
+- **`AGENTS.md` 高于这两者。** 它是 `AUTHORITY` 指名的那个规则文件——通常是采用者自己的 `AGENTS.md`，绝不是本流程附带的一个生效中的权威文件。技能旁边附带了一个不含病人数据的起点模板 [`references/AGENTS.example.md`](https://github.com/j3ffyang/ai-thoughts/blob/main/.opencode/library/medical-record-review/references/AGENTS.example.md)：复制它，或者把 `AUTHORITY` 指向智能体已经在加载的规则文件。通用层把隐私和外传交给它，而不是自己重述一遍，因为重述的规则会偏离源头。
 
 这次拆分也是被一次具体失败逼出来的。拆之前，通用技能一旦为项目特化，就把病人人口学信息 (demographics) 硬编码进了一条分析规则——违反了它自己的「不含病人数据」条款。把一条规则通用化，逼着这个锚点从流程里移出去、落到配置里，而它本来就该在那里。
 
@@ -77,7 +77,7 @@ AGENTS.md (AUTHORITY)         ← project constitution: privacy, egress, evidenc
 **从一个只放这一件事的文件夹开始。** 不放代码，不放无关笔记，不放第二个项目——智能体自己的技能目录除外，那是基础设施，不是项目内容。把规则文件放在根目录，把记录放在它下面。混杂的文件夹会以三种方式失败：智能体读到它本不该看到的文件，注册表把不是记录的文件吸收进来，另一个项目的指令和你刚写下的隐私规则打架。让这个文件夹远离任何会推送的仓库，或者在 git 里忽略记录目录和画像目录。
 
 1. **原样复制通用技能**到你的智能体加载技能的目录——OpenCode 是 `<project>/.opencode/skills/medical-record-review/SKILL.md`。不要为迁就你的记录去改流程；那是项目层的职责。
-2. **从规则模板开始。** 把 [`references/AGENTS.example.md`](https://github.com/j3ffyang/ai-thoughts/blob/main/.opencode/skills/medical-record-review/references/AGENTS.example.md)（与 `SKILL.md` 放在一起随技能附带）复制为 `<project>/AGENTS.md`（如果还没有这个文件）；如果已经有，就把缺的小节补进去。按这个顺序填写：
+2. **从规则模板开始。** 把 [`references/AGENTS.example.md`](https://github.com/j3ffyang/ai-thoughts/blob/main/.opencode/library/medical-record-review/references/AGENTS.example.md)（与 `SKILL.md` 放在一起随技能附带）复制为 `<project>/AGENTS.md`（如果还没有这个文件）；如果已经有，就把缺的小节补进去。按这个顺序填写：
    - **先设九个键。** `AUTHORITY` 指向这个文件。`PROFILE` 指明画像文件。`DOCS_DIR` 和 `IMGS_DIR` 指明记录目录和扫描件目录。`REGISTRY` 指明趋势注册表，首次运行时创建。`INDEX` / `INDEX_CMD` 指明索引和它的生成器；没有生成器时，把索引标为 `hand-maintained: true`。`LANG` 设定写作语言。`MODULES` 启用分析模块；先只开 `western`。`UNWRAP_CMD` 是可选项。未解析的必需键意味着停下，而不是取默认值；可选的键也要显式设置，因为技能表把 `DOCS_DIR` 默认成 `docs/`，那可能是个混杂文件夹。
    - **把画像放到规则之外。** 模板只装规则和配置。年龄、性别、诊断及病程、带服药时间的用药、测量条件，写进 `PROFILE` 指名的文件。
    - **保留五个规则小节不动。** 隐私、外传、证据、测量条件、数据变更，是这套技能能跑起来的原因。不要为了省篇幅删减它们。
@@ -114,8 +114,8 @@ AGENTS.md (AUTHORITY)         ← project constitution: privacy, egress, evidenc
 
 ## 文件
 
-- [`medical-record-review/SKILL.md`](https://github.com/j3ffyang/ai-thoughts/blob/main/.opencode/skills/medical-record-review/SKILL.md) — 通用流程：配置键、工作流、证据分级、趋势图、frontmatter、判例、边界、地区配置 (locale profile)，以及文章对齐的附录。文章讲为什么，技能定义怎么做。
-- [`references/AGENTS.example.md`](https://github.com/j3ffyang/ai-thoughts/blob/main/.opencode/skills/medical-record-review/references/AGENTS.example.md) — 不含病人数据的 `AUTHORITY` 起点模板：隐私红线、外传政策、证据标准、数据变更规则、测量条件，以及九个键，全部是占位符。
+- [`medical-record-review/SKILL.md`](https://github.com/j3ffyang/ai-thoughts/blob/main/.opencode/library/medical-record-review/SKILL.md) — 通用流程：配置键、工作流、证据分级、趋势图、frontmatter、判例、边界、地区配置 (locale profile)，以及文章对齐的附录。文章讲为什么，技能定义怎么做。
+- [`references/AGENTS.example.md`](https://github.com/j3ffyang/ai-thoughts/blob/main/.opencode/library/medical-record-review/references/AGENTS.example.md) — 不含病人数据的 `AUTHORITY` 起点模板：隐私红线、外传政策、证据标准、数据变更规则、测量条件，以及九个键，全部是占位符。
 - 项目层——不公开。它是一个小技能，提供——或指向——九个键、语言约定、判例表，以及每人一份画像。
 - [`LICENSE`](https://github.com/j3ffyang/ai-thoughts/blob/main/LICENSE) — MIT。复制这套流程，保留版权声明。
 

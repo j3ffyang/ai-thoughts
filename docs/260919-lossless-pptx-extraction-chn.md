@@ -60,7 +60,7 @@ joey/
 它在两个地方可以拿到：
 
 - **已发布 (ClawHub)：** [https://clawhub.ai/j3ffyang/skills/pptx-extract](https://clawhub.ai/j3ffyang/skills/pptx-extract)
-- **源码 (GitHub)：** [https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/pptx-extract](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/skills/pptx-extract)
+- **源码 (GitHub)：** [https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/library/pptx-extract](https://github.com/j3ffyang/ai-thoughts/tree/main/.opencode/library/pptx-extract)
 
 （发布出去的那份是做了泛化 (genericized) 处理的副本，放在宿主仓库里，好让它的发布流水线能发现它。）
 
