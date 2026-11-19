@@ -36,9 +36,9 @@ OK_STATUSES = {"unchanged", "would-publish", "submitted", "published", "pending-
 # A run that hits this exact condition is not a regression, so it is reported as
 # pending-moderation instead of failing the job. Delete an entry once the skill
 # is public; anything else on the slug still fails loudly.
-KNOWN_PENDING = {
-    "medical-record-review": "awaiting moderator review; 1.0.0 reserved, not yet public",
-}
+# Empty since 2026-11-19: medical-record-review became public (v1.5.3), so its
+# entry was removed. Keep the mechanism for the next skill that gets parked.
+KNOWN_PENDING = {}
 
 
 def main() -> int:
