@@ -28,17 +28,20 @@ ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
 CN_NUM = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"]
 
 SKILLS_DIR = ROOT / ".opencode" / "skills"
+LIBRARY_DIR = ROOT / ".opencode" / "library"
 CLAWHUB_SKILL_URL = "https://clawhub.ai/j3ffyang/skills/{slug}"
 
 SKILLS_TITLE_EN = "Published Skills on ClawHub"
 SKILLS_TITLE_ZH = "已发布技能（ClawHub）"
 SKILLS_NOTE_EN = (
     "Developed in this repo and auto-published to "
-    "[ClawHub](https://clawhub.ai/j3ffyang) on every push."
+    "[ClawHub](https://clawhub.ai/j3ffyang) on every push. Skills retired to "
+    "`.opencode/library/` stay listed here — their ClawHub pages remain live."
 )
 SKILLS_NOTE_ZH = (
     "在本仓库中开发，每次推送时自动发布到 "
-    "[ClawHub](https://clawhub.ai/j3ffyang) 上。"
+    "[ClawHub](https://clawhub.ai/j3ffyang) 上。归档到 `.opencode/library/` 的技能"
+    "同样列出，其 ClawHub 页面仍然有效。"
 )
 
 INTRO_EN = """\
@@ -156,10 +159,10 @@ def cell(text: str) -> str:
     return text.replace("|", "\\|").replace("\n", " ")
 
 
-def skill_mtime(slug: str) -> int:
+def skill_mtime(rel: str) -> int:
     try:
         proc = subprocess.run(
-            ["git", "log", "-1", "--format=%ct", "--", f".opencode/skills/{slug}"],
+            ["git", "log", "-1", "--format=%ct", "--", rel],
             capture_output=True, text=True, cwd=ROOT, timeout=10,
         )
         return int(proc.stdout.strip()) if proc.returncode == 0 and proc.stdout.strip() else 0
@@ -167,14 +170,49 @@ def skill_mtime(slug: str) -> int:
         return 0
 
 
+def tracked_skill_dirs():
+    """slug -> relative directory, for every skill whose SKILL.md git tracks.
+
+    Both roots count. `.opencode/skills/` holds active skills and `.opencode/library/`
+    holds retired ones, but retired is not unpublished: the ClawHub copy stays live and
+    keeps its audience, so it belongs in the table. An untracked skill is a local draft
+    that the sync workflow never sees, so it is excluded. Returns None when git cannot
+    answer, in which case no filtering happens.
+    """
+    try:
+        proc = subprocess.run(
+            ["git", "ls-files", "--", ".opencode/skills", ".opencode/library"],
+            capture_output=True, text=True, cwd=ROOT, timeout=10,
+        )
+        if proc.returncode != 0:
+            return None
+    except Exception:
+        return None
+    dirs = {}
+    for line in proc.stdout.splitlines():
+        parts = line.split("/")
+        if (
+            len(parts) == 4
+            and parts[0] == ".opencode"
+            and parts[1] in ("skills", "library")
+            and parts[3] == "SKILL.md"
+        ):
+            dirs[parts[2]] = "/".join(parts[:3])
+    return dirs
+
+
 def load_skills() -> list[dict]:
     skills = []
-    if not SKILLS_DIR.is_dir():
-        return skills
-    for folder in sorted(SKILLS_DIR.iterdir()):
-        if not folder.is_dir():
-            continue
-        md = folder / "SKILL.md"
+    tracked = tracked_skill_dirs()
+    if tracked is None:
+        tracked = {}
+        for base in (SKILLS_DIR, LIBRARY_DIR):
+            if base.is_dir():
+                for folder in sorted(base.iterdir()):
+                    if folder.is_dir() and (folder / "SKILL.md").is_file():
+                        tracked[folder.name] = f".opencode/{base.name}/{folder.name}"
+    for slug, rel in tracked.items():
+        md = ROOT / rel / "SKILL.md"
         if not md.is_file():
             continue
         text = md.read_text(encoding="utf-8")
@@ -183,12 +221,13 @@ def load_skills() -> list[dict]:
         front = front or {}
         skills.append(
             {
-                "slug": folder.name,
-                "name": front.get("name") or folder.name,
+                "slug": slug,
+                "name": front.get("name") or slug,
                 "description": front.get("description") or "",
+                "_rel": rel,
             }
         )
-    skills.sort(key=lambda s: (-skill_mtime(s["slug"]), s["slug"]))
+    skills.sort(key=lambda s: (-skill_mtime(s["_rel"]), s["slug"]))
     return skills
 
 
