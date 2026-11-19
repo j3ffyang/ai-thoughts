@@ -49,7 +49,7 @@ tv_quote("BINANCE:BTCUSDT", market="crypto")
       "type": "local",
       "command": [
         "uv", "run",
-        "/home/jeff/pool/git/negtivSpace/ai-thoughts/.opencode/mcp/tradingview/server.py"
+        "/home/jeff/pool/git/ai-thoughts/.opencode/mcp/tradingview/server.py"
       ],
       "enabled": true
     }

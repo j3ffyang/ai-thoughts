@@ -245,7 +245,7 @@ else:
 
 ### Example (legacy): Keep the Profile README's Numbers Honest with Python
 **Status:** legacy. The `PORTFOLIO.md` pipeline superseded this script; kept as a record.
-**Repo:** `negtivSpace` | **Language:** Python | **Purpose:** Recompute every derived number in the profile README (skills, repos, articles, Quick Links) from the nested repos
+**Repo:** `negtivSpace` | **Language:** Python | **Purpose:** Recompute every derived number in the profile README (skills, repos, articles, Quick Links) from the project repos in `~/pool/git/`
 
 ```python
 def apply(pattern: str, repl: str, desc: str, flags: int = 0) -> None:
@@ -361,4 +361,4 @@ Most repos are **MIT License** — see individual repos for details.
 
 ---
 
-**Last Updated:** November 17, 2026 | Tracking: 6 active repos, 59 published articles, 20+ published skills
+**Last Updated:** November 19, 2026 | Tracking: 6 active repos, 59 published articles, 20+ published skills
