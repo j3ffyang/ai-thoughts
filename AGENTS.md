@@ -95,6 +95,17 @@ python scripts/gen_portfolio.py --check      # CI/verification: exit 1 if stale
 
 The generator fills four things automatically. It fills the article count, which is the unique published articles by YYMMDD from `articles.yaml`. It fills the ai-thoughts repo row's latest commit. It fills the "Latest Articles" list: the top N published articles by date, deduped by YYMMDD. It fills the "Last Updated" date. Editorial content (the Activity Timeline, repo tables, tech stack, etc.) lives in the template — edit the template, then regenerate.
 
+## Skills
+
+`SKILL.md` files live in two places under `.opencode/`:
+
+- **`.opencode/skills/<slug>/`** — active. Loaded in every session, published to ClawHub on every push, and the only place `gen_readmes.py` reads for the "Published Skills" table.
+- **`.opencode/library/<slug>/`** — retired. Kept on disk and in git, but not loaded, not advertised and not published. ClawHub keeps the last version it saw; the library copy and the registry copy then drift independently.
+
+Switching is a plain `mv` between the two directories. Moving back into `skills/` re-registers the skill (OpenCode notices without a restart); moving out stops it from being published by the next push.
+
+**Retiring is the user's decision, by name.** Never move a skill to the library, or out of it, on your own initiative — an unused skill is still a shipped one, and a retired one is invisible to the routing table.
+
 ## Repo conventions
 
 - Docs-only repository: no build or test pipeline. Scripts are utilities, and several expose `--check` for CI (`gen_readmes.py`, `gen_portfolio.py`, `unwrap_md.py`, `verify_md_boxes.py`). Skills ship their own scripts too.
