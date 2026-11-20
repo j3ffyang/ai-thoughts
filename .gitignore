@@ -17,10 +17,16 @@ videos/
 imgs/*-backup-*
 infographic/**/*-backup-*
 
-# LinkedIn upload artefacts from the md-to-linkedin skill (regenerable, uploaded by hand):
-# table screenshots, and the HTML that feeds the clipboard
+# LinkedIn table screenshots are throwaway artefacts — uploaded by hand, never
+# fetched by URL — so they stay on local disk. The HTML payloads feed the
+# clipboard and are regenerable too. Medium's table PNGs are the exception: they
+# are committed, because Medium fetches them by URL and drops anything it cannot.
+# The X thread text is regenerable as well, and the thread itself lives on X.
 imgs/linkedin-tables/
+imgs/twitter-blocks/
 *-linkedin.html
+*-medium.html
+*-twitter.txt
 
 # Python bytecode from skill scripts (regenerated on every run)
 __pycache__/
