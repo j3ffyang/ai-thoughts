@@ -34,7 +34,7 @@ Everything machine-specific comes from the environment, so the committed file st
 | Variable | Default | Meaning |
 |---|---|---|
 | `XPS_SSH_HOST` | `xps` | ssh destination, normally an alias from `~/.ssh/config` |
-| `XPS_URL` | `https://watch.plex.tv/live-tv` | page to open |
+| `XPS_URL` | `https://watch.plex.tv/live-tv/channel/newsworld` | page to open (the NewsWorld channel; `…/live-tv` opens the guide) |
 | `XPS_PROXY_ADDR` | `127.0.0.1:10808` | where `ss` looks for the proxy |
 | `XPS_PROXY_URL` | `http://127.0.0.1:10808` | what Brave is given as `--proxy-server` |
 | `XPS_V2RAY_DIR` | `$HOME/pool/Downloads/rog_drive/v2rayN-linux-64` | directory holding the `v2rayN` binary |
