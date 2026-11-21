@@ -64,7 +64,7 @@ We collaborate through an 8-stage loop. Keep it in mind for every task: INTENT �
 
 - **OpenCode capitalization.** Use `OpenCode` (capital O/C) when referring to the product, company, or brand. Keep `opencode` all-lowercase for the command/binary and in code and config.
 - **Brand glyph icons.** Hermes Agent → `⚕` (U+2695). The `hermes` command gets no glyph. OpenClaw → `🦞` (U+1F99E). OpenCode → `◧` (U+25E7, temporary). The `opencode` command gets no glyph. Arch Linux → `` (U+F303, `nf-linux-archlinux`).
-- **Prose wrapping is per-repo.** Read the target repo's own `AGENTS.md` before writing prose there. The convention is stated there, not here; a list in this file would only go stale.
+- **Prose wrapping is per-repo.** Read the target repo's own `AGENTS.md` before writing prose there. The convention is stated there, not here; a list in this file would only go stale. With no stated convention — a repository you are creating, or one that never said — use **one paragraph per line**: never break a paragraph at a fixed column, and never reflow a paragraph you did not change. Check what you wrote with `unwrap_md.py --check` from the `unwrap-markdown` skill before committing Markdown.
 
 ## OpenCode permissions
 
