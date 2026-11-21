@@ -1,22 +1,23 @@
 name: ClawHub Skill Sync
 
+# Manual only, by standing rule: a skill is never published without explicit
+# approval. A push must not reach ClawHub on its own, so there is no push: or
+# pull_request: trigger here. Run it from the Actions tab with dry_run=false
+# when the change has been approved.
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".opencode/skills/**"
-      - ".github/workflows/clawhub-skill-sync.yml"
-  pull_request:
-    paths:
-      - ".opencode/skills/**"
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Preview only — do not publish to ClawHub"
+        type: boolean
+        default: true
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
 jobs:
   dry-run:
-    if: github.event_name == 'pull_request' && github.repository_owner == 'j3ffyang'
+    if: github.repository_owner == 'j3ffyang' && inputs.dry_run
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -46,7 +47,7 @@ jobs:
         run: python3 scripts/clawhub_publish.py --dry-run
 
   publish:
-    if: github.event_name != 'pull_request' && github.repository_owner == 'j3ffyang'
+    if: github.repository_owner == 'j3ffyang' && !inputs.dry_run
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
