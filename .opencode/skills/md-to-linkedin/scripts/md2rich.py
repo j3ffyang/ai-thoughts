@@ -162,9 +162,14 @@ def render_table_png(table: Tag, out: Path) -> None:
         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
         timeout=120, check=True,
     )
+    # Trim, cap the long edge at twice the widest display width, drop metadata
+    # and palette-reduce: a table is flat colour, so 64 colours is visually free.
+    # The filename never changes — LinkedIn inlines the bytes, so only the size
+    # changes.
     subprocess.run(
         ["magick", str(png_path), "-trim", "+repage",
-         "-bordercolor", "white", "-border", "12", str(out)],
+         "-bordercolor", "white", "-border", "12",
+         "-resize", "1600x>", "-strip", "-colors", "64", str(out)],
         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
         timeout=60, check=True,
     )

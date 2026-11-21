@@ -226,9 +226,13 @@ def render_block_png(tag: Tag, out: Path, kind: str) -> None:
         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
         timeout=120, check=True,
     )
+    # Trim, cap the long edge at twice the widest display width, drop metadata
+    # and palette-reduce: a table or code block is flat colour, so 64 colours is
+    # visually free. The filename never changes — the bytes are uploaded.
     subprocess.run(
         ["magick", str(shot), "-trim", "+repage",
-         "-bordercolor", "white", "-border", "12", str(out)],
+         "-bordercolor", "white", "-border", "12",
+         "-resize", "1600x>", "-strip", "-colors", "64", str(out)],
         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
         timeout=60, check=True,
     )

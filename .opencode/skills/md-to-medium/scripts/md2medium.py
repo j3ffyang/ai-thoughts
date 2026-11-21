@@ -117,8 +117,11 @@ def _same_pixels(a: Path, b: Path) -> bool:
     hosted. Pixels are the honest comparison.
     """
     try:
+        # -fuzz 2% because the encoder is palette-reducing: an older file made by
+        # the same pipeline compares exactly, but one made before that step would
+        # otherwise read as changed and be regenerated on every run.
         done = subprocess.run(
-            ["magick", "compare", "-metric", "AE", str(a), str(b), "null:"],
+            ["magick", "compare", "-metric", "AE", "-fuzz", "2%", str(a), str(b), "null:"],
             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=60,
         )
     except (OSError, subprocess.SubprocessError):
@@ -152,9 +155,15 @@ def render_table_png(table: Tag, out: Path) -> None:
         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
         timeout=120, check=True,
     )
+    # Keep the file small as well as crisp: trim to content, cap the long edge at
+    # twice the widest display width the images are pasted at, then drop metadata
+    # and palette-reduce. A table is flat colour, so 64 colours is visually free
+    # at this size. The filename and directory never change, because the hosted
+    # URL is this path and published posts keep pointing at it.
     subprocess.run(
         ["magick", str(png_path), "-trim", "+repage",
-         "-bordercolor", "white", "-border", "12", str(new_path)],
+         "-bordercolor", "white", "-border", "12",
+         "-resize", "1600x>", "-strip", "-colors", "64", str(new_path)],
         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
         timeout=60, check=True,
     )
