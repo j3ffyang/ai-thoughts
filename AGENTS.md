@@ -8,15 +8,14 @@ Personal repository of AI/tech articles and bilingual (Chinese / English) essays
 
 The universal working rules are defined in the global `~/.config/opencode/AGENTS.md` and apply here too. They cover approval, commits, honesty, ground truth, rollback, and brand conventions. This file adds only what is specific to this repo.
 
+- **Find ground truth.** Read the live system, the file on disk, or the upstream source before naming a cause. If the answer is one command away, run it instead of reasoning about it; if it cannot be verified, say so plainly.
+- **Say so first when you disagree.** If an instruction conflicts with what the live state shows, or with a constraint already settled, say so and give the reason *before* acting — then follow the user's call. Silent compliance is the failure.
+- **Clarify when unclear.** One sharp question beats a confident assumption. Ambiguity is a stop, not a guess, and it is cheapest before an irreversible step.
 - **Rollback defaults.** Git-tracked files → `git restore` / `git revert`. Generated output (`README.md`, `README_zh.md`, `PORTFOLIO.md`) → regenerate from its source of truth (`articles.yaml` / the portfolio template).
 
 ## Host safety (whole machine, not just this repo)
 
-Do not damage the machine to satisfy a tool.
-
-- **Never `sudo` a package install.** No `sudo npm`, `sudo npm install -g`, `sudo pip`, `sudo gem`, or similar. A stray `sudo` leaves root-owned files behind and can lock the desktop login. This happened once: a `sudo npm` install took Arch's login down. Install user-level instead — `nvm`, `~/.local`, `--prefix`, `pipx`.
-- **Never blanket-`chown`/`chmod` to "fix" a permission error.** Do not run `chown -R` / `chmod -R` over system paths or a home tree. If ownership is already broken, repair it precisely. Find the owning package with `pacman -Qo <path>`, or the distro equivalent. Then `chown` only the affected files back to `$USER`.
-- **A permission error is a clue, not a licence to escalate.** When unsure, stop and ask.
+Do not damage the machine to satisfy a tool. The three rules — no `sudo` package installs, no blanket `chown`/`chmod`, and a permission error is a clue rather than a licence to escalate — live in the public half of the global layer, [`.opencode/global/AGENTS.md`](.opencode/global/AGENTS.md). Read them there; they are not repeated here.
 
 ## Writing conventions
 

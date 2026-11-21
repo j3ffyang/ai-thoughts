@@ -17,6 +17,7 @@ This file is the **public half** of the global layer. The **private half** — m
 - **Find ground truth when possible.** Verify claims against the actual source of truth, not memory or inference. Sources include installed system state, files on disk, and upstream docs, wiki, or source code. When verification isn't possible, say so explicitly.
 - **Make sure all changes can be rolled back.** If the change is wrong, there must be a clear way to revert it.
 - **Ask for a whole-project review before calling non-trivial work done.** Left alone, the agent keeps fixing the one issue in front of it. It never sweeps the project. Patches stack on patches, and nothing surfaces the drift until the work is hard to review or debug. On anything bigger than a single file, ask it to "review and analyze" the whole project or article. Read the findings before you end the session.
+- **Never merge a rule conflict silently.** If this file and a project's `AGENTS.md` disagree, raise it and say which one you are following before you act.
 
 ## Untrusted code safety
 
@@ -61,8 +62,8 @@ We collaborate through an 8-stage loop. Keep it in mind for every task: INTENT �
 
 - **OpenCode capitalization.** Use `OpenCode` (capital O/C) when referring to the product, company, or brand. Keep `opencode` all-lowercase for the command/binary and in code and config.
 - **Brand glyph icons.** Hermes Agent → `⚕` (U+2695). The `hermes` command gets no glyph. OpenClaw → `🦞` (U+1F99E). OpenCode → `◧` (U+25E7, temporary). The `opencode` command gets no glyph. Arch Linux → `` (U+F303, `nf-linux-archlinux`).
-- **Prose wrapping is per-repo.** Follow each repo's AGENTS.md — `ai-thoughts` requires no hard-wrap (one paragraph per line, verified with its `scripts/unwrap_md.py`), `history` auto-wraps. Never assume a global wrapping rule.
+- **Prose wrapping is per-repo.** Read the target repo's own `AGENTS.md` before writing prose there. The convention is stated there, not here; a list in this file would only go stale.
 
 ## OpenCode permissions
 
-Permission rules live in `~/.config/opencode/opencode.jsonc`. That file is a symlink to `~/pool/git/gpd/global/opencode.jsonc` — the private half, local-only, never pushed. Read-only shell/git/gh commands are pre-approved and run silently. Destructive or state-changing commands prompt (`ask`). Everything else falls through to OpenCode's permissive defaults and runs without prompting. `edit` prompts. The TUI's "Accept always" only lasts for the current session — permanent rules go in that config file. Restart opencode after you change the config.
+Permission rules live in `~/.config/opencode/opencode.jsonc`. That file is a symlink to `~/pool/git/gpd/global/opencode.jsonc` — the private half, local-only, never pushed. Read-only shell/git/gh commands are pre-approved and run silently. Only the commands named in the config's `ask` list prompt: `rm`, `mv`, `cp`, `ln`, `chmod`/`chown`, `sudo`, package managers, editors, `tee`, `sed -i`, and the write-side `git` and `gh` verbs. Everything else falls through to OpenCode's permissive defaults and runs silently — including `mkdir`, `touch`, `curl -o`, `wget`, `rsync`, and a bare `python3 script.py`. The approval rule above, not the config, is therefore the only gate in front of a write through an unlisted command. `edit` prompts. The TUI's "Accept always" only lasts for the current session — permanent rules go in that config file. Restart opencode after you change the config.

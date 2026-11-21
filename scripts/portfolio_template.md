@@ -315,6 +315,18 @@ if args.check:
 
 ---
 
+## 🤝 How I Work with Agents
+
+Every repo here carries an `AGENTS.md`, and the same three rules load into every session. They are the ones that visibly changed the output:
+
+- **Ground truth before conclusions.** Read the live system, the file on disk, or the upstream source. A command that costs two seconds beats a confident guess.
+- **Disagreement first, compliance second.** An agent that silently follows a bad instruction is the expensive failure. State the objection in one line, then follow the call.
+- **Unclear is a stop.** Ambiguity is not a licence to invent. One sharp question is cheaper than a wrong deliverable.
+
+The rule set is public: [`ai-thoughts/AGENTS.md`](https://github.com/j3ffyang/ai-thoughts/blob/main/AGENTS.md).
+
+---
+
 ## 🔗 Quick Links
 
 - **GitHub:** [@negtivspace](https://github.com/negtivspace)
